@@ -219,6 +219,7 @@ var app = new Vue({
           "/images/imgHackathon/DSC02740.jpg",
           "/images/imgHackathon/DSC02776.jpg",
           "/images/imgHackathon/DSC02825.jpg",
+          "/images/imgHackathon/unnamed.jpg",
         ]
       },
       {
@@ -235,7 +236,10 @@ var app = new Vue({
         "time": "5/2",
         "content": "1. Enhance trading matching rate.<br/> 2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.",
         "link": [],
-        "photo": []
+        "photo": [
+          "/images/imgDeep/a1.png",
+          "/images/imgDeep/a2.png"
+        ]
       },
       {
         "title": "Ethereum Improvement Proposal, EIP-1062",

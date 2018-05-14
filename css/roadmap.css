@@ -764,6 +764,7 @@ html, body {
   height: auto;
   float: left;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1000px) {
