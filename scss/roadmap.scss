@@ -215,6 +215,9 @@ html, body{
                         margin-top: 10px;
                     }
                     ul{
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
                         margin: 20px 0;
                         @media screen and (max-width: 1000px) {
                             margin: 0 0;
@@ -229,7 +232,7 @@ html, body{
                             margin-right: 30px;
                             @media screen and (max-width: 1000px) {
                                 float: right;
-                                margin-right: 0px;
+                                margin-right: 5px;
                                 margin-left: 30px;
                             }
                             >a{
@@ -244,8 +247,53 @@ html, body{
                             }
                         }
                     }
+                    .photo{
+                        width: 100%;
+                        height: auto;
+                        overflow: hidden;
+                        @media screen and (max-width: 1000px) {
+                            margin-top: 10px;
+                        }
+                        >a{
+                            display: block;
+                            width: 80px;
+                            height: auto;
+                            float: left;
+                            margin-right: 5px;
+                            @media screen and (max-width: 1000px) {
+                                float: right;
+                            }
+                            >img{
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
                 }
             }
+        }
+    }
+    .photoPop{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(#000000,0.8);
+        z-index: 20;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a.closeBtn{
+            position: absolute;
+            right: 20%;
+            top: 20%;
+            color: #fff;
+        }
+        >img{
+            width: 50%;
+            height: auto;
         }
     }
 }

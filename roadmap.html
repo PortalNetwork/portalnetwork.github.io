@@ -46,8 +46,12 @@
                     <li>decentralized data storage (Bluzelle)</li>
                     <li>decentralized identity</li>
                     <li>decentralized applications</li>
+                    <li>Browser Extension</li>
                 </ul>
-                <p>Portal Network is a decentralized, on-demand, scalable domain name registrar for dApps. It fulfills a crucial role in an effort to make the decentralized Internet complete. Portal Network makes engaging with domain name services extremely easy, as users can simply and quickly search for their favourite domain names across multiple blockchains. The company’s goal is to assist with making the decentralized network an easier and scalable place for the average daily user by decentralizing domain name services and other value-added web hosting services. Similarly to how decentralized services such as Bluzelle are needed for data storage and management, and IPFS for file storage & management, Portal Network will tap into the evident need for a world-class decentralized domain name registrar. Both Bluzelle and IPFS, in fact, will play important roles in Portal Network’s operations. Bluzelle's Swarm database is set to become the defacto database for companies looking to establish a decentralized web site hosted by Portal Network's platform, while IPFS will provide file storage on the platform.</p>
+                <p>Portal Network is a decentralized, on-demand, scalable domain name registrar for dApps. It fulfills a crucial role in an effort to make the decentralized Internet complete. Portal Network makes engaging with domain name services extremely easy, as users can simply and quickly search for their favourite domain names across multiple blockchains. The company’s goal is to assist with making the decentralized network an easier and scalable place for the average daily user by decentralizing domain name services and other value-added web hosting services.</p>
+                <p>Similarly to how decentralized services such as Bluzelle are needed for data storage and management, and IPFS for file storage & management, Portal Network will tap into the evident need for a world-class decentralized domain name registrar. Both Bluzelle and IPFS, in fact, will play important roles in Portal Network’s operations. Bluzelle's Swarm database is set to become the defacto database for companies looking to establish a decentralized web site hosted by Portal Network's platform, while IPFS will provide file storage on the platform.</p>
+                <p>Furthermore, in order to allow users can easily visit the decentralized website and use the service, we provide the browser extension to lower normal users’ entry barrier.</p>
+                <p>Portal Network provides the total ecosystem and solution, and play a unique and key role of this decentralized revolution, to let developers, communities, SaaS, and more to transform to the next generation.</p>
             </div>
         </div>
         <div class="map">
@@ -70,9 +74,16 @@
                                 </a>
                             </li>
                         </ul>
+                        <div v-if="obj.photo.length != 0" class="photo">
+                            <a @click="popOpenFn(t, obj.photo)" v-for="(pic, t) in obj.photo" :key="t"><img :src="pic"></a>
+                        </div>
                     </div>
                 </li>
             </ul>
+        </div>
+        <div v-if="isOpenPop" class="photoPop">
+            <a @click="closePopFn" class="closeBtn"><i class="fas fa-times fa-2x"></i></a>
+            <img :src="picUrl" alt="">
         </div>
     </div>
     <script src="js/roadmap.js"></script>

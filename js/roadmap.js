@@ -1,6 +1,9 @@
 var app = new Vue({
   el: '#roadmap',
   data: {
+    isOpenPop: false,
+    photoPopUrl:[],
+    nowidx: 0,
     mapData: [
       {
         "title": "eToro X Mr. Block",
@@ -20,7 +23,8 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1808005792551210/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Blockshow Cointelegraph x Mr.Block 區塊先生",
@@ -36,7 +40,8 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1822744367744019/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Money 20/20 Asia",
@@ -48,7 +53,8 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.youtube.com/watch?v=Ubd09OoVP0M&list=PLh7yM-DPEDYisiTsCAWhDFN_0TgXasg39"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Token2049",
@@ -60,7 +66,8 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.youtube.com/watch?v=AmNQa7JvwB0&list=PLh7yM-DPEDYjtXO1EkwMerV2EJ8Bcbe4F"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Cafe & Crypto",
@@ -72,14 +79,16 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1846505082034614/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Deconomy",
         "open": false,
         "time": "4/2-4 / Seoul, South Korea",
         "content": "Media Team Sponsor",
-        "link": []
+        "link": [],
+        "photo": []
       },
       {
         "title": "Beyond Block Tokyo Summit",
@@ -103,7 +112,8 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1852659514752504/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "[product] Portal Network Marketplace",
@@ -115,7 +125,8 @@ var app = new Vue({
             "className": "fas fa-link fa-2x",
             "url": "https://beta.portal.network"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Education Platform",
@@ -127,6 +138,11 @@ var app = new Vue({
             "className": "fas fa-images fa-2x",
             "url": "https://drive.google.com/drive/u/1/folders/19KGjy5Qbc-TT4J0DxxnVd5BFX4i9iO5L"
           }
+        ],
+        "photo": [
+          "/images/imgEducationPlatform/DSC02625.jpg",
+          "/images/imgEducationPlatform/DSC02634.jpg",
+          "/images/imgEducationPlatform/DSC02679.jpg"
         ]
       },
       {
@@ -139,7 +155,8 @@ var app = new Vue({
             "className": "fas fa-link fa-2x",
             "url": "https://hackathon.portal.network"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Blockchain Universe",
@@ -155,6 +172,11 @@ var app = new Vue({
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1875961702422285/"
           }
+        ],
+        "photo": [
+          "/images/imgBlockchain/p1.jpg",
+          "/images/imgBlockchain/p2.jpg",
+          "/images/imgBlockchain/p3.jpg"
         ]
       },
       {
@@ -165,13 +187,14 @@ var app = new Vue({
         "link": [
           {
             "className": "far fa-file fa-2x",
-            "url": "https://docs.google.com/document/d/1088KhjBFgtg77w12i3PDP0mxhu9pbbFHSSyloEK-zRs/edit"
+            "url": "https://drive.google.com/file/d/1IjiDTu8vXqWUjbjICllfz_Lf-97Vgiwq/view"
           },
           {
             "className": "fas fa-video fa-2x",
             "url": "https://www.facebook.com/mrblock.tw/videos/1877831622235293/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Portal.Network Hackathon",
@@ -181,7 +204,7 @@ var app = new Vue({
         "link": [
           {
             "className": "fas fa-file-pdf fa-2x",
-            "url": "https://docs.google.com/document/d/15EdNiPJUPi0rPzJm4OKKxpEvtPKZwX2xukAir7QteMs/edit "
+            "url": "https://drive.google.com/file/d/1l1GxD0SF5NQKeLqhOCWqQUYHPRAoBfHn/view"
           },
           {
             "className": "fas fa-terminal fa-2x",
@@ -191,6 +214,11 @@ var app = new Vue({
             "className": "fas fa-images fa-2x",
             "url": "https://drive.google.com/drive/u/1/folders/1vpM64T87RfHbNCiHFCR1F3lnT5bC1PVR"
           }
+        ],
+        "photo": [
+          "/images/imgHackathon/DSC02740.jpg",
+          "/images/imgHackathon/DSC02776.jpg",
+          "/images/imgHackathon/DSC02825.jpg",
         ]
       },
       {
@@ -198,14 +226,16 @@ var app = new Vue({
         "open": false,
         "time": "5/2",
         "content": "1. Paring and cleaning all the domains on Ethereum.<br/> 2. Begin to build up Ethereum Classic WHOIS system and collect datas on it.",
-        "link": []
+        "link": [],
+        "photo": []
       },
       {
         "title": "[product] Deep learning model",
         "open": false,
         "time": "5/2",
         "content": "1. Enhance trading matching rate.<br/> 2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.",
-        "link": []
+        "link": [],
+        "photo": []
       },
       {
         "title": "Ethereum Improvement Proposal, EIP-1062",
@@ -221,7 +251,8 @@ var app = new Vue({
             "className": "fab fa-ethereum fa-2x",
             "url": "https://eips.ethereum.org/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Metamask Enhancement",
@@ -233,7 +264,8 @@ var app = new Vue({
             "className": "fab fa-github fa-2x",
             "url": "https://github.com/PortalNetwork/metamask-extension"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "ENS public resolver smart contract contribution",
@@ -249,7 +281,8 @@ var app = new Vue({
             "className": "fab fa-ethereum fa-2x",
             "url": "https://eips.ethereum.org/"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Ethereum Classic Improvement Proposal, ECIP-1044",
@@ -261,7 +294,8 @@ var app = new Vue({
             "className": "fab fa-github fa-2x",
             "url": "https://github.com/ethereumproject/ECIPs/pull/94"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "Propose multihash functions to support ECNS Public Resolver smart contract",
@@ -273,7 +307,8 @@ var app = new Vue({
             "className": "fab fa-github fa-2x",
             "url": "https://github.com/EthereumCommonwealth/ECNS/pull/3"
           }
-        ]
+        ],
+        "photo": []
       },
       {
         "title": "[product] Protal Network Chrome Extension Enhancement",
@@ -285,13 +320,30 @@ var app = new Vue({
             "className": "fab fa-github fa-2x",
             "url": "https://github.com/PortalNetwork/portal-network-browser-extension"
           }
-        ]
+        ],
+        "photo": []
       }
     ]
+  },
+  computed: {
+    picUrl: function() {
+      return this.photoPopUrl[this.nowidx];
+    }
   },
   methods: {
     openContentFn: function (idx) {
       this.mapData[idx].open = !this.mapData[idx].open;
+    },
+    popOpenFn: function(idx, photoObj) {
+      this.isOpenPop = !this.isOpenPop;
+      this.nowidx = idx;
+      this.photoPopUrl = photoObj;
+    },
+    closePopFn: function() {
+      this.isOpenPop = false;
     }
+  },
+  created: function () {
+    
   }
 })

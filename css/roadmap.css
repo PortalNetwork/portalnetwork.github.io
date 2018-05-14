@@ -704,6 +704,9 @@ html, body {
 }
 
 #roadmap .map > ul > li .maplink ul {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
   margin: 20px 0;
 }
 
@@ -726,7 +729,7 @@ html, body {
 @media screen and (max-width: 1000px) {
   #roadmap .map > ul > li .maplink ul li {
     float: right;
-    margin-right: 0px;
+    margin-right: 5px;
     margin-left: 30px;
   }
 }
@@ -741,5 +744,70 @@ html, body {
 
 #roadmap .map > ul > li .maplink ul li > a > svg {
   margin: 0 auto;
+}
+
+#roadmap .map > ul > li .maplink .photo {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  #roadmap .map > ul > li .maplink .photo {
+    margin-top: 10px;
+  }
+}
+
+#roadmap .map > ul > li .maplink .photo > a {
+  display: block;
+  width: 80px;
+  height: auto;
+  float: left;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  #roadmap .map > ul > li .maplink .photo > a {
+    float: right;
+  }
+}
+
+#roadmap .map > ul > li .maplink .photo > a > img {
+  width: 100%;
+  height: auto;
+}
+
+#roadmap .photoPop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#roadmap .photoPop a.closeBtn {
+  position: absolute;
+  right: 20%;
+  top: 20%;
+  color: #fff;
+}
+
+#roadmap .photoPop > img {
+  width: 50%;
+  height: auto;
 }
 /*# sourceMappingURL=roadmap.css.map */
