@@ -334,16 +334,19 @@ var app = new Vue({
     openContentFn: function (idx) {
       this.mapData[idx].open = !this.mapData[idx].open;
     },
-    popOpenFn: function(idx, photoObj) {
+    popOpenFn: function(idx, photoArr) {
       this.isOpenPop = !this.isOpenPop;
       this.nowidx = idx;
-      this.photoPopUrl = photoObj;
+      this.photoPopUrl = photoArr;
     },
     closePopFn: function() {
       this.isOpenPop = false;
+    },
+    nextPhotoFn: function() {
+      this.nowidx++;
+      if (this.nowidx > this.photoPopUrl.length - 1) {
+        this.nowidx = 0;
+      }
     }
-  },
-  created: function () {
-    
   }
 })

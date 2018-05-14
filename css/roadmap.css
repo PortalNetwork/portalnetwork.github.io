@@ -806,8 +806,14 @@ html, body {
   color: #fff;
 }
 
-#roadmap .photoPop > img {
+#roadmap .photoPop > a.picNext {
+  display: block;
   width: 50%;
+  height: auto;
+}
+
+#roadmap .photoPop > a.picNext > img {
+  width: 100%;
   height: auto;
 }
 /*# sourceMappingURL=roadmap.css.map */

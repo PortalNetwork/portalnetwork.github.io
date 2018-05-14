@@ -291,9 +291,14 @@ html, body{
             top: 20%;
             color: #fff;
         }
-        >img{
+        >a.picNext{
+            display: block;
             width: 50%;
             height: auto;
+            >img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

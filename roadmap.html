@@ -82,7 +82,9 @@
         </div>
         <div v-if="isOpenPop" class="photoPop">
             <a @click="closePopFn" class="closeBtn"><i class="fas fa-times fa-2x"></i></a>
-            <img :src="picUrl" alt="">
+            <a @click="nextPhotoFn" class="picNext">    
+                <img :src="picUrl" alt="">
+            </a>
         </div>
     </div>
     <script src="js/roadmap.js"></script>
