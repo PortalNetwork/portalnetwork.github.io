@@ -290,11 +290,18 @@ html, body{
             right: 20%;
             top: 20%;
             color: #fff;
+            @media screen and (max-width: 1000px) {
+                right: 30px;
+                top: 30px;
+            }
         }
         >a.picNext{
             display: block;
             width: 50%;
             height: auto;
+            @media screen and (max-width: 1000px) {
+                width: 90%;
+            }
             >img{
                 width: 100%;
                 height: auto;

@@ -806,10 +806,23 @@ html, body {
   color: #fff;
 }
 
+@media screen and (max-width: 1000px) {
+  #roadmap .photoPop a.closeBtn {
+    right: 30px;
+    top: 30px;
+  }
+}
+
 #roadmap .photoPop > a.picNext {
   display: block;
   width: 50%;
   height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  #roadmap .photoPop > a.picNext {
+    width: 90%;
+  }
 }
 
 #roadmap .photoPop > a.picNext > img {
