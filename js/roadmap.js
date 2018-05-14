@@ -339,14 +339,14 @@ var app = new Vue({
       this.nowidx = idx;
       this.photoPopUrl = photoArr;
     },
-    closePopFn: function() {
-      this.isOpenPop = false;
-    },
     nextPhotoFn: function() {
       this.nowidx++;
       if (this.nowidx > this.photoPopUrl.length - 1) {
         this.nowidx = 0;
       }
+    },
+    closePopFn: function() {
+      this.isOpenPop = false;
     }
   }
 })
