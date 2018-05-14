@@ -27,7 +27,7 @@ var app = new Vue({
         "photo": []
       },
       {
-        "title": "Blockshow Cointelegraph x Mr.Block 區塊先生",
+        "title": "Blockshow Cointelegraph x Mr.Block",
         "open": false,
         "time": "3/9 / Taipei, Taiwan",
         "content": "Portal Network pitch - Vincent Tu, Co-founder of Portal Network",
@@ -180,7 +180,7 @@ var app = new Vue({
         ]
       },
       {
-        "title": "Mr.Block X Malaysia - 跨國際區塊鏈分享會",
+        "title": "Mr.Block X Malaysia",
         "open": false,
         "time": "4/29 Malaysia",
         "content": "Portal Network pitch - Phyrex",
