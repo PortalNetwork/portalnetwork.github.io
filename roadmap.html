@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Portal Network | Roadmap</title>
+    <meta name="viewport" content="width=640, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="og:site_name" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:image:url" content="" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="css/roadmap.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <div id="roadmap">
+        <h1 class="title">Portal Network roadmap</h1>
+        <div class="introduction">
+            <h2>INTRODUCTION</h2>
+            <div class="left_intro">
+                <h3>The Problem: Blockchain’s Potential is Not Being Fully Harnessed in the Real-World</h3>
+                <p>Blockchain technologies are single-handedly leading us towards the next generation of the Internet. Moreover, they are also slowly, but surely, transforming the way we conduct real-world business. However, even as blockchain operations scale up and user numbers increase, there is one fundamental issue which remains unaddressed: the relative lack of blockchain technology usage in the real-world. </p>
+                <p>At present, there are limited cases of the tremendous power and potential of blockchain technologies being harnessed in the real-world. Take, for example, the deficit of widely-used dApps on the blockchain. Although there are clearly individuals and businesses who would benefit from using blockchain technologies to make some form of transaction – whether it be money, information, or data – the shortage of reliable and trustworthy dApps has lead to hesitation with adoption.</p>
+                <p>The cause of this issue is multifold. It is in part due to the difficulties companies confront in their attempts to merge their original real-world services with those of the blockchain. It is also a consequence of the blockchain facing multiple scalability issues, such as software updates and user adoption, and the fact that blockchains that like QTUM and Ethereum are not in themselves built to support mass file storage, data storage, and total management. The blockchain ecosystem thus is in need of a more robust solution to support the mass adoption of blockchain technologies.</p>
+            </div>
+            <div class="right_intro">
+                <h3>The Solution: Portal Network</h3>
+                <p>In order to be a driving force for encouraging more people and businesses to embrace blockchain technologies, Portal Network offers the following four major features:</p>
+                <ul>
+                    <li>decentralized file storage (IPFS)</li>
+                    <li>decentralized data storage (Bluzelle)</li>
+                    <li>decentralized identity</li>
+                    <li>decentralized applications</li>
+                </ul>
+                <p>Portal Network is a decentralized, on-demand, scalable domain name registrar for dApps. It fulfills a crucial role in an effort to make the decentralized Internet complete. Portal Network makes engaging with domain name services extremely easy, as users can simply and quickly search for their favourite domain names across multiple blockchains. The company’s goal is to assist with making the decentralized network an easier and scalable place for the average daily user by decentralizing domain name services and other value-added web hosting services. Similarly to how decentralized services such as Bluzelle are needed for data storage and management, and IPFS for file storage & management, Portal Network will tap into the evident need for a world-class decentralized domain name registrar. Both Bluzelle and IPFS, in fact, will play important roles in Portal Network’s operations. Bluzelle's Swarm database is set to become the defacto database for companies looking to establish a decentralized web site hosted by Portal Network's platform, while IPFS will provide file storage on the platform.</p>
+            </div>
+        </div>
+        <div class="map">
+            <ul>
+                <li v-for="(obj, idx) in mapData" :key="idx">
+                    <div class="maptitle">
+                        <h3>{{obj.title}}</h3>
+                        <h4>{{obj.time}}</h4>
+                        <div :class="{content:true, open: obj.open}">
+                            <p v-html="obj.content"></p>
+                        </div>
+                        <a v-show="!obj.open" @click="openContentFn(idx)"><i class="fas fa-angle-down"></i></a>
+                        <a v-show="obj.open" @click="openContentFn(idx)"><i class="fas fa-angle-up"></i></a>
+                    </div>
+                    <div class="maplink">
+                        <ul>
+                            <li v-for="(icon, s) in obj.link" :key="s">
+                                <a target="_blank" :href="icon.url">
+                                    <i :class="icon.className"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/roadmap.js"></script>
+</body>
+</html>
