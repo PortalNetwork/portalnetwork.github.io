@@ -326,6 +326,21 @@ var app = new Vue({
           }
         ],
         "photo": []
+      },
+      {
+        "title": "Partnership with Wanchain",
+        "open": false,
+        "time": "5/14",
+        "content": "Portal Network is honor to announce the partnership with Wanchain",
+        "link": [
+          {
+            "className": "fab fa-medium fa-2x",
+            "url": "https://medium.com/wanchain-foundation/wanchain-progress-update-13-may-2018-7a539671627d"
+          }
+        ],
+        "photo": [
+          "/images/imgPartnership/p1.png"
+        ]
       }
     ]
   },
