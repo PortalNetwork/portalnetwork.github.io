@@ -116,7 +116,7 @@ var app = new Vue({
         "photo": []
       },
       {
-        "title": "[product] Portal Network Marketplace",
+        "title": "Portal Network Marketplace",
         "open": false,
         "time": "4/16",
         "content": "1. User registration improvement Refactoring the usability Refactoring and Integration with ethereum UI/UX design enhancement Constructing the backend architecture Security Enhancement<br/>2. Constructing user profile dashboard",
@@ -146,7 +146,7 @@ var app = new Vue({
         ]
       },
       {
-        "title": "[product] Online Decentralized Website Builder ",
+        "title": "Online Decentralized Website Builder ",
         "open": false,
         "time": "4/19",
         "content": "1. Personal profile builder. <br/>2. Customized website deployment. <br/>3. Backend contrucstion",
@@ -222,7 +222,7 @@ var app = new Vue({
         ]
       },
       {
-        "title": "[product] WHOIS",
+        "title": "WHOIS",
         "open": false,
         "time": "5/2",
         "content": "1. Paring and cleaning all the domains on Ethereum.<br/> 2. Begin to build up Ethereum Classic WHOIS system and collect datas on it.",
@@ -230,7 +230,7 @@ var app = new Vue({
         "photo": []
       },
       {
-        "title": "[product] Deep learning model",
+        "title": "Deep learning model",
         "open": false,
         "time": "5/2",
         "content": "1. Enhance trading matching rate.<br/> 2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.",
@@ -311,7 +311,7 @@ var app = new Vue({
         "photo": []
       },
       {
-        "title": "[product] Protal Network Chrome Extension Enhancement",
+        "title": "Protal Network Chrome Extension Enhancement",
         "open": false,
         "time": "5/12",
         "content": "1. Support .eth and .etc domains, .wan is under development.<br/> 2. Use multihash function to convert ENS and ECNS Public Resolver data 3. Let users can directly visit decentralized website",
