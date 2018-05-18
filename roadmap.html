@@ -21,8 +21,10 @@
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
   <link href="css/roadmap.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
+  <script src="js/scrollTo.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 </head>
 
@@ -30,83 +32,121 @@
   <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
+  <div class="header">
+    <div class="header-container">
+
+      <img src="images/roadmap/logo.svg" />
+      
+
+      <ul class="outline">
+        <li>Lastest</li>
+        <li>About</li>
+        <li>Blog</li>
+        <li>Roadmap</li>
+      </ul>
+
+    </div>
+  </div>
+
   <div id="roadmap">
     <div class="nav">
-      <div class="nav-item">
+      <div class="nav-item" @click="scrollToChapter(0)">
         <span class="title">Chapter 1</span>
         <span class="chapter-name">Education</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" @click="scrollToChapter(1)">
         <span class="title">Chapter 2</span>
         <span class="chapter-name">Event</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" @click="scrollToChapter(2)">
         <span class="title">Chapter 3</span>
         <span class="chapter-name">Documentation</span>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" @click="scrollToChapter(3)">
         <span class="title">Chapter 4</span>
         <span class="chapter-name">Application</span>
       </div>
     </div>
 
-
     <div class="main">
-      <div class="chapter">
-        <div class="banner"></div>
-        <div class="flag">
-          <h1 class="headline">Portal.Network - Education Platform </h1>
+
+
+      <div class="chapter" v-for="(chapter, chapterIdx) in roadmapData" :key="chapterIdx">
+        <div class="banner">
+          <div class="icon">
+            <img :src="chapter.icon" />
+          </div>
+          <span class="title">{{ chapter.title }}</span>
+        </div>
+
+        <div class="flag" v-for="(flag, flagIdx) in chapter.flags" :key="flagIdx">
+          <div class="headline-container">
+            <h1 class="headline">{{ flag.title }}</h1>
+            <div class="icons-container">
+              <a v-for="(link, linkIdx) in flag.links" :key="linkIdx" :href="link.url" :class="{icon: true, link: true, expand: flag.links.length >= 2 }" target="_blank">
+                {{ flag.links.length >= 2 ? link.title: '' }}
+              </a>
+
+              <a v-for="(video, videoIdx) in flag.videos" :key="videoIdx" :href="video.url" :class="{icon: true, video: true, expand: flag.videos.length >= 2 }" target="_blank">
+                {{ flag.videos.length >= 2 ? video.title: '' }}
+              </a>
+
+              <a v-for="(file, fileIdx) in flag.files" :key="fileIdx" :href="file.url" :class="{icon: true, file: true, expand: flag.files.length >= 2 }" target="_blank">
+                {{ flag.files.length >= 2 ? file.title: '' }}
+              </a>
+
+              <a v-for="(github, githubIdx) in flag.githubs" :key="githubIdx" :href="github.url" :class="{icon: true, github: true, expand: flag.githubs.length >= 2 }" target="_blank">
+                {{ flag.githubs.length >= 2 ? github.title: '' }}
+              </a>
+            </div>
+          </div>
+
+          <div class="time-location">
+            {{ `${flag.time}, ${flag.location}` }}
+          </div>
+
           <div class="content">
-              Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. 
-              It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.
-          </div>
-        </div>
-
-        <div class="flag">
-            <h1 class="headline">Portal.Network - Education Platform </h1>
-            <div class="content">
-                Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. 
-                It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.
-            </div>
-          </div>
-      </div>
-
-
-
-      <div class="chapter">
-          <div class="banner"></div>
-          <div class="flag">
-            <h1 class="headline">Portal.Network - Education Platform </h1>
-            <div class="content">
-                Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. 
-                It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.
-            </div>
-          </div>
-  
-          <div class="flag">
-              <h1 class="headline">Portal.Network - Education Platform </h1>
-              <div class="content">
-                  Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. 
-                  It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.
+              <div :class="{description: true, 'has-photos': flag.photos.length > 0}" v-html="flag.content">
+                
               </div>
+              <div class="photos" v-if="flag.photos.length > 0">
+                <div @click="openModal(flag.photos)" :class="{ cover: flag.photos.length > 2 && photoIdx === 1}" v-for="(photo, photoIdx) in flag.photos" :key="photoIdx" v-if="photoIdx < 2">
+                  <img :src="photo" />
+                  <span class="number">+2</span>
+                </div>
+              </div>
+          </div>
+
+          <div class="progress-container" v-if="flag.progress > 0">
+            <div class="progress-bar">
+              <div class="progress" :style="{ width: flag.progress + '%'}"></div>
             </div>
+            <span class="number">{{ `${flag.progress}%` }}</span>
+          </div>
         </div>
+
+      </div>
     </div>
 
 
 
     <div v-show="isOpenPop" class="photoPop">
-      <a @click="closePopFn" class="closeBtn">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p2.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p3.jpg" alt="" /></div>
+          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p1.jpg" alt="" /></div>
+        </div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+      </div>
+      <a @click="closeModal" class="closeBtn">
         <i class="fas fa-times fa-2x"></i>
-      </a>
-      <a @click="nextPhotoFn" class="picNext">
-        <img :src="picUrl" alt="">
       </a>
     </div>
   </div>
-
-  <div class="clean"></div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
   <script src="js/roadmap.js?2132132121"></script>
 </body>
 
