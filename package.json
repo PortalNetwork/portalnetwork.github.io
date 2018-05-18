@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "private": true,
   "devDependencies": {
+    "animated-scroll-to": "^1.2.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-async-to-generator": "^6.24.1",

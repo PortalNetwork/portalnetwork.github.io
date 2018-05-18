@@ -44,6 +44,7 @@ gulp.task('html', () => {
 gulp.task('js', () => {
     let files = [
         'index.js',
+        'roadmap.js',
     ];
     files.map((obj, idx) => {
         browserify({ debug: true })
