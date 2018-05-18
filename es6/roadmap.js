@@ -23,7 +23,7 @@ var app = new Vue({
             photos: [],
             location: 'Singapore',
             time: '4/17-18',
-            progress: 0,
+            progress: 50,
             links: [],
             githubs: [],
             files: [],
@@ -41,14 +41,14 @@ var app = new Vue({
             photos: [],
             location: 'Canada',
             time: '4/29.30',
-            progress: 0,
+            progress: 100,
             links: [
               {
                 title: 'pdf',
                 url: 'https://drive.google.com/file/d/1l1GxD0SF5NQKeLqhOCWqQUYHPRAoBfHn/view',
               },
               {
-                title: '活動頁',
+                title: 'event',
                 url: 'http://hackathon.portal.network',
               },
             ],
@@ -56,14 +56,13 @@ var app = new Vue({
             files: [],
             videos: [],
           },
-
           {
-            title: 'Mr.Block X Malaysia - 跨國際區塊鏈分享會',
+            title: 'Mr.Block X Malaysia',
             content: 'Portal Network pitch - Phyrex',
             photos: [],
             location: 'Malaysia',
             time: '4/29',
-            progress: 0,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -85,7 +84,7 @@ var app = new Vue({
             photos: [],
             location: 'Taiwan',
             time: '4/27',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -102,7 +101,7 @@ var app = new Vue({
             photos: [],
             location: 'Tokyo, Japan',
             time: '4/3-5',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -131,7 +130,7 @@ var app = new Vue({
             photos: [],
             location: 'Seoul, South Korea',
             time: '4/2-4',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -143,7 +142,7 @@ var app = new Vue({
             photos: [],
             location: 'Taipei, Taiwan',
             time: '3/30',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -160,7 +159,7 @@ var app = new Vue({
             photos: [],
             location: 'HongKong',
             time: '3/20-21',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -177,7 +176,7 @@ var app = new Vue({
             photos: [],
             location: 'Singapore',
             time: '3/12-14',
-            progress: 0,
+            progress: 100,
             links: [],
             githubs: [],
             files: [],
@@ -194,7 +193,7 @@ var app = new Vue({
             photos: [],
             location: 'Taipei, Taiwan',
             time: '3/9',
-            progress: 0,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -216,7 +215,7 @@ var app = new Vue({
             photos: [],
             location: 'Taipei',
             time: '2/24',
-            progress: 0,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -248,7 +247,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/12',
-            progress: 0,
+            progress: 50,
             links: [],
             githubs: [
               {
@@ -265,7 +264,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/12',
-            progress: 0,
+            progress: 50,
             links: [],
             githubs: [
               {
@@ -282,7 +281,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/10',
-            progress: 0,
+            progress: 50,
             links: [
               {
                 title: '',
@@ -304,7 +303,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/7',
-            progress: 0,
+            progress: 50,
             links: [
               {
                 title: '',
@@ -327,12 +326,91 @@ var app = new Vue({
         icon: './images/roadmap/documentation.svg',
         flags: [
           {
+            title: '[product] Protal Network Chrome Extension Enhancement',
+            content: '1. Support .eth and .etc domains, .wan is under development<br>2. Use multihash function to convert ENS and ECNS Public Resolver data<>3. Let users can directly visit decentralized website',
+            photos: [],
+            location: '',
+            time: '5/12',
+            progress: 0,
+            links: [
+            ],
+            githubs: [
+              {
+                title: '',
+                url: 'https://github.com/PortalNetwork/portal-network-browser-extension'
+              }
+            ],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Metamask Enhancement',
+            content: 'Enhancement MetaMask to integrate with ENS resolver to redirect to decentralize web',
+            photos: [],
+            location: '',
+            time: '5/9',
+            progress: 50,
+            links: [
+            ],
+            githubs: [
+              {
+                title: '',
+                url: 'https://github.com/PortalNetwork/metamask-extension'
+              }
+            ],
+            files: [],
+            videos: [],
+          },
+          {
+            title: '[product] Deep learning model',
+            content: '1. Enhance trading matching rate <br>2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.',
+            photos: [],
+            location: '',
+            time: '5/2',
+            progress: 50,
+            links: [
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: '[product] WHOIS',
+            content: '1. Paring and cleaning all the domains on Ethereum.<br>2. Begin to build up Ethereum Classic WHOIS system and collect datas on it.',
+            photos: [],
+            location: '',
+            time: '5/2',
+            progress: 50,
+            links: [
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: '[product] Online Decentralized Website Builder',
+            content: '1. Personal profile builder<br>2. Customized website deployment<br>3. Backend contrucstion',
+            photos: [],
+            location: '',
+            time: '4/19',
+            progress: 50,
+            links: [
+              {
+                title: '',
+                url: ' https://hackathon.portal.network',
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: '[product] Portal Network Marketplace',
             content: '1. User registration improvement Refactoring the usability Refactoring and Integration with ethereum UI/UX design enhancement Constructing the backend architecture Security Enhancement<br>2. Constructing user profile dashboard',
             photos: [],
             location: '',
             time: '4/16',
-            progress: 0,
+            progress: 50,
             links: [
               {
                 title: '',
@@ -379,15 +457,20 @@ var app = new Vue({
     },
   },
   mounted: function() {
-    this.swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    }); 
+
+      window.Intercom("boot", {
+          app_id: "an50zjec"
+      });
+      window.Intercom("update");
+      this.swiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      }); 
   }
 })
