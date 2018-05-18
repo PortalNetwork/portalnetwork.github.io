@@ -32,10 +32,10 @@
 					<img src="./images/logo/Page1@3x.svg" alt="">
 				</h1>
 				<ul :class="['menu_list',{open: isMenuOpen}]">
-					<li><a>Latest</a></li>
-					<li><a>About</a></li>
-					<li><a>Blog</a></li>
-					<li><a>Roadmap</a></li>
+					<li><a @click="comingsoonFn">Latest</a></li>
+					<li><a @click="comingsoonFn">About</a></li>
+					<li><a @click="comingsoonFn">Blog</a></li>
+					<li><a href="roadmap.html" target="_blank">Roadmap</a></li>
 				</ul>
 			</nav>
 		</header>
