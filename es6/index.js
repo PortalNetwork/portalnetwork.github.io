@@ -7,6 +7,9 @@
         methods: {
             toggleMenuFn() {
                 this.isMenuOpen = !this.isMenuOpen;
+            },
+            comingsoonFn() {
+                alert("coming soon");
             }
         },
         mounted() { 
