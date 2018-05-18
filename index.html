@@ -4,244 +4,165 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 	<title>Portal Network</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href="css/slick.css" rel="stylesheet">
-	<link href="css/slick-theme.css" rel="stylesheet">
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-	<link href="css/youtubeBlock.css" rel="stylesheet">
-	<link href="css/eventBlock.css" rel="stylesheet">
-	<script src="js/jquery.js"></script> 
-	<script src="js/bootstrap.min.js"></script> 
-	<script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script> 
-	<script src="js//intercom.js"></script>
+	<link rel="stylesheet" href="./css/index.css">
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="./js/intercom.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+  <script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/an50zjec';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+  </script>
 </head>
 <body>
-	<header>
-		<div class="navigation_section">
-			<nav class="navbar navbar-default">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-						<a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo" /></a> </div>
-					<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav ">
-							<li><a href="#Products">Products</a></li>
-							<li><a href="https://medium.com/portal-network" target="_blank">Blog</a></li>
-							<li><a href="#Team">Team</a></li>
-							<li><a href="roadmap.html" target="_blank">Roadmap</a></li>
-						</ul>
-					</div>
-				</div>
+	<div id="app">
+		<header>
+			<nav>
+				<a class="menu" @click="toggleMenuFn">
+					<span v-show="!isMenuOpen">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span v-show="isMenuOpen">
+						<i class="fas fa-times"></i>
+					</span>
+				</a>
+				<h1 class="logo">
+					<img src="./images/logo/Page1@3x.svg" alt="">
+				</h1>
+				<ul :class="['menu_list',{open: isMenuOpen}]">
+					<li><a @click="comingsoonFn">Latest</a></li>
+					<li><a @click="comingsoonFn">About</a></li>
+					<li><a @click="comingsoonFn">Blog</a></li>
+					<li><a href="roadmap.html">Roadmap</a></li>
+				</ul>
 			</nav>
+		</header>
+		<div class="header_content" data-aos="fade-down" data-aos-easing="ease-out-back">
+			<h2>Click & Enter the Next<br/>Generation Internet.</h2>
+			<p>Join the decentralized ecosystem by easy-to-use tools.</p>
+			<a>LEARN MORE</a>
 		</div>
-	</header>
-	<div class="top_left_bg"></div>
-	<div class="btm_header_bg"></div>
-	<div class="top_right_bg"></div>
-	<section class="lazy slider" data-sizes="100vw">
-		<div>
-			<div class="left_content">
-				<h2>Portal.Network </h2>
-				<p>A gateway to<br>
-					decentralized world</p>
-				<a class="btn btn-primary" href="https://t.me/portalofficial" target="_blank">Join Telegram</a> </div>
-			<div class="light_up_img"> <img src="images/right_img.png" alt="" /> <img class="hover_img" src="images/right_img_hover.png" alt="" /></div>
+		<div class="hero"  data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back"></div>
+		<div class="what">
+			<h3>WHAT IS PORTAL<br/> NETWORK?</h3>
+			<p>Portal Network dedicates to unite advanced technologies to create your<br/>non-removable and stunning website. </p>
 		</div>
-	</section>
-	<section id="Products" class="product_section">
-		<div class="container">
-			<h2 class="title_style">Products</h2>
-			<div class="row">
-				<div class="col-md-4"> <a href="https://ens.domains/" target="_blank">
-					<div class="icon_box"> <img class="icon_img" src="images/product_images/img1.png" alt="" />
-						<div class="icon_base"></div>
-						<div class="icon_base_shadow"></div>
+		<div class="youtube">
+			<iframe width="633" height="370" src="https://www.youtube.com/embed/tnI6obLVPqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<div class="works">
+			<h3>HOW IT WORKS?</h3>
+			<img src="./images/bg/itemList.png" alt="">
+		</div>
+		<div class="product">
+			<h3>PRODUCT</h3>
+			<ul>
+				<li data-aos="fade-right" data-aos-delay="0" data-aos-easing="ease-out-back">
+					<img src="./images/products/idicon.png" alt="">
+					<div class="text_content">
+						<h3>READABILILTY<br/>IDENTITY</h3>
+						<p>You will get a readable blockchain-based domain address instead of 16 bit hash containing alphanumeric characters (A–Z, 0–9).</p>
 					</div>
-					<h3>Readability
-						Identity</h3>
-					</a> </div>
-				<div class="col-md-4 mid_box_style">
-					<div class="left_line_style"></div>
-					<div class="right_line_style"></div>
-					<a href="#">
-					<div class="icon_box"> <img class="icon_img" src="images/product_images/img2.png" alt="" />
-						<div class="icon_base"></div>
-						<div class="icon_base_shadow"></div>
+				</li>
+				<li data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
+					<img src="./images/products/storageicon.png" alt="">
+					<div class="text_content">
+						<h3>DECENTRALIZED<br/>STORAGE</h3>
+						<p>Store your data securely over a reliable and unhackable database.</p>
 					</div>
-					<h3>Decentralized
-						Application</h3>
-					</a> </div>
-				<div class="col-md-4"> <a href="https://bluzelle.com/" target="_blank">
-					<div class="icon_box"> <img  class="icon_img" src="images/product_images/img3.png" alt="" />
-						<div class="icon_base"></div>
-						<div class="icon_base_shadow"></div>
+				</li>
+				<li data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
+					<img src="./images/products/appicon.png" alt="">
+					<div class="text_content">
+						<h3>DECENTRALIZED<br/>APPLICATION</h3>
+						<p>Manage website through your smart phone. Just like Apps.</p>
 					</div>
-					<h3>Decentralized
-						Storage</h3>
-					</a> </div>
-			</div>
+				</li>
+			</ul>
 		</div>
-	</section>
-	<div class="youtubeBlock">
-		<div class="ybox">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/tnI6obLVPqc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-	</div>
-	<section class="glob_section2">
-		<div class="system">
-			<div class="sun2"></div>
-			<div class="mer-path"></div>
-			<a href="https://ethereum.org/">
-			<div class="mer"></div>
-			</a> 
-			<!--<div class="ven-path"></div>--> 
-			<a href="https://ubiqsmart.com/">
-			<div class="ven"></div>
-			</a> 
-			<!--<div class="ear-path"></div>--> 
-			<a href="https://qtum.org/">
-			<div class="ear"> 
-				<!--<div class="lune"></div>--> 
-			</div>
-			</a> 
-			<!--<div class="mar-path"></div>--> 
-			<a href="https://www.cardano.org/en/home/" target="_blank">
-			<div class="mar"></div>
-			</a>
-			<div class="jup-path"></div>
-			<a href="https://eos.io/" target="_blank">
-			<div class="jup"> 
-				<!--<div class="spot"></div>
-				<div class="jove io"></div>
-				<div class="jove eur"></div>
-				<div class="jove gan"></div>
-				<div class="jove cal"></div>--> 
-			</div>
-			</a> 
-			<!--<div class="sat-path"></div>--> 
-			<a href="https://neo.org/">
-			<div class="sat"> 
-				<!--<div class="f-ring"></div>
-				<div class="a-ring"></div>
-				<div class="b-ring"></div>
-				<div class="c-ring"></div>--> 
-			</div>
-			</a> 
-			<!--<div class="ura-path"></div>
-			<div class="ura">
-				<div class="e-ring"></div>
-			</div>
-			<div class="nep-path"></div>
-			<div class="nep">
-				<div class="spot"></div>
-			</div>
-			<div class="plu-path"></div>
-			<div class="plu"></div>--> 
-		</div>
-	</section>
-	<section id="Team" class="team_section">
-		<div class="container">
-			<h2 class="title_style">Team</h2>
-			<div class="regular slider">
-				<div class="slick_item"> <a href="https://www.linkedin.com/in/phyrextsai" target="_blank">
-					<div class="poly_bg"><img class="hover_img" src="images/Team/phyrex.jpg" alt="" /></div>
-					<div class="nameDetail">
-						<h3>Phyrex Tsai</h3>
-						<strong>Founder</strong></div>
-					</a> </div>
-				<div class="slick_item"> <a href="https://www.linkedin.com/in/shenchristw/" target="_blank">
-					<div class="poly_bg"><img class="hover_img" src="images/Team/chris.jpg" alt="" /></div>
-					<div class="nameDetail">
-						<h3>Christopher Shen</h3>
-						<strong>Co-Founder</strong></div>
-					</a> </div>
-				<div class="slick_item"> <a href="https://www.linkedin.com/in/johnnyhsiehtw" target="_blank">
-					<div class="poly_bg"><img class="hover_img" src="images/Team/johnny.jpg" alt="" /></div>
-					<div class="nameDetail">
-						<h3>Johnny Hsieh</h3>
-						<strong>Co-Founder</strong></div>
-					</a> </div>
-				<div class="slick_item"> <a href="https://www.linkedin.com/in/vincenttuTW" target="_blank">
-					<div class="poly_bg"><img class="hover_img" src="images/Team/vincent.jpg" alt="" /></div>
-					<div class="nameDetail">
-						<h3>Vincent Tu</h3>
-						<strong>Co-Founder</strong></div>
-					</a> </div>
-			</div>
-		</div>
-	</section>
-	
-	<div class="eventBlock">
-		<h2 class="title_style">Events</h2>
-		<div class="ebox">
-			<h2>Bluzelle Hackathon</h2>
-			<img src="images/events/bluzelle_hackathon/1.jpg" alt=""/>
-			<img src="images/events/bluzelle_hackathon/2.jpg" alt=""/>
-			<p>Date: April 28-29</p>
-			<p>Portal Network works closely with Bluzelle and helped co-hosted the first hackathon in Canada Vancouver.</p>
-		</div>
-		<div class="ebox">
-			<h2>Malaysia Blockchain Event</h2>
-			<img src="images/events/malaysia_event/1.jpg" alt=""/>
-			<img src="images/events/malaysia_event/2.jpg" alt=""/>
-			<p>Date: April 29</p>
-			<p>Mr.Block, Portal Network and Malaysia local community co-hosted the first event in Malaysia Kuala Lumpur to share the blockchain knowledge with Malaysia local comminity.</p>
-		</div>
-	</div>
 
-	<div class="youtubeBlock">
-		<h2 class="title_style">Media</h2>
-		<div class="ybox">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/CUdZIFPkbp8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-		<div class="ybox">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/edu235Cytks" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-		<div class="ybox">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/ORYoBeOeEkI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-		</div>
-	</div>
-
-	<section class="Connect_section">
-		<div class="container">
-			<h2 class="title_style">Connect With Us</h2>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="join_us_box">
-						<p>Speak directly with our team and get first access 
-							to announcement on <strong>#Telegram</strong></p>
-						<a class="join_btn" href="https://t.me/portalofficial" target="_blank"> <strong><i class="fa  fa-paper-plane"></i></strong></a> </div>
+		<div class="item_list ecosystem">
+			<h3>ECOSYSTEM</h3>
+			<div class="ecosystem_item">
+				<div class="item">
+					<img src="./images/ecosystem/ethereum.png" alt="">
 				</div>
-				<div class="col-md-6">
-					<div class="social_bg"> 
-						<a class="twitter_icon" href="https://twitter.com/portalnetworkhq" traget="_blank">
-							<img src="images/social_icon/twitter.png" alt="" />
-						</a> 
-						<a class="github_icon" href="https://github.com/portalnetwork" target="_blank">
-							<img src="images/social_icon/githhub.png" alt="" />
-						</a> 
-						<a class="message_icon" href="#">
-							<img src="images/social_icon/message.png" alt="" />
-						</a> 
-						<a class="facebook_icon" href="https://www.facebook.com/portalnetworkhq/" target="_blank">
-							<img src="images/social_icon/facebook.png" alt="" />
-						</a> 
-					</div>
+				<div class="item">
+					<img src="./images/ecosystem/ethereumclassic.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./images/ecosystem/WANCHAIN.png" alt="">
+				</div>
+				<div class="item">	
+					<img src="./images/ecosystem/qtum.png" alt="">
 				</div>
 			</div>
 		</div>
-	</section>
-	<footer>
-		<p>&copy; 2018 Portal.Network</p>
-	</footer>
-	<script src="./js/main.js"></script> 
+
+		<div class="item_list partnersh">
+			<h3>PARTNERSHIP</h3>
+
+			<div class="ecosystem_item">
+				<!-- <div class="item">
+					<img src="./images/partnerLogo/qtum.png" alt="">
+				</div>
+				<div class="item">
+					<img src="./images/partnerLogo/Metamask.png" alt="">
+				</div> -->
+				<div class="item">
+					<img class="Bluzelle" src="./images/partnerLogo/BluzelleLogo.png" alt="">
+				</div>
+			</div>
+		</div>
+
+		<div class="item_list contact">
+			<h3>CONTACT US</h3>
+			<div class="contact_item">
+				<a class="item" href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
+					<img src="./images/socialMedia/fb.png" alt="">
+				</a>
+				<a class="item" href="https://github.com/portalnetwork" target="_blank">
+					<img src="./images/socialMedia/g.png" alt="">
+				</a>
+				<a class="item" href="https://medium.com/@portalnetwork.official" target="_blank">
+					<img src="./images/socialMedia/M.png" alt="">
+				</a>
+				<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
+					<img src="./images/socialMedia/reddit.png" alt="">
+				</a>
+				<a class="item" href="https://twitter.com/Portal_Network_" target="_blank">
+					<img src="./images/socialMedia/t.png" alt="">
+				</a>
+				<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
+					<img src="./images/socialMedia/Te.png" alt="">
+				</a>
+			</div>
+		</div>
+		<footer>
+			<p>© 2018 Portal.Network.</p>
+			<a><img src="./images/mcafee.png" alt=""></a>
+		</footer>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+	<script src="./js/index.js"></script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KKLX3T6');
+	</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
