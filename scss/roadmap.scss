@@ -79,7 +79,6 @@ $MAIN_WIDTH: 1051px;
 .nav {
   position: fixed;
   width: 203px;
-  overflow-x: scroll;
 
   @media screen and (max-width: 1000px) {
     position: initial;
@@ -146,6 +145,7 @@ $MAIN_WIDTH: 1051px;
 }
 
 .main {
+  margin-bottom: 140px;
   margin-left: 247px;
   padding-bottom: 100px;
   width: 893px;
