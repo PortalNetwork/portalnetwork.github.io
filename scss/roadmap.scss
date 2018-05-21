@@ -42,6 +42,16 @@ $MAIN_WIDTH: 1051px;
   align-items: center;
   width: $MAIN_WIDTH;
   height: 100px;
+
+  img {
+    max-width: 166px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding-right: 25px;
+    padding-left: 25px;
+    width: 100%;
+  }
 }
 
 .outline {
@@ -81,15 +91,15 @@ $MAIN_WIDTH: 1051px;
   width: 203px;
 
   @media screen and (max-width: 1000px) {
-    position: initial;
+    z-index: 1490;
+    top: 100px;
     display: flex;
-    margin-top: 14px;
-    margin-bottom: 14px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     width: 100%;
     height: initial;
-    border: 0;
+    border-bottom: 1px solid #939393;
+    background-color: white;
   }
 }
 
@@ -119,12 +129,14 @@ $MAIN_WIDTH: 1051px;
   }
 
   @media screen and (max-width: 1000px) {
-    margin-right: 25px;
-    margin-left: 25px;
-    padding: 0 25px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
     border-right: 1px solid #939393;
     border-bottom: 0;
-
+    
     &:first-child {
       margin-left: 0;
     }
@@ -153,7 +165,10 @@ $MAIN_WIDTH: 1051px;
   background-repeat: repeat-y;
 
   @media screen and (max-width: 1000px) {
+    margin-bottom: 0;
     margin-left: 0;
+    padding-top: 71px;
+    width: 100%;
     background-image: url(../images/roadmap/flag-road-mobile.png);
   }
 }
@@ -290,7 +305,7 @@ $MAIN_WIDTH: 1051px;
     
     &.has-photos {
       margin-right: 39px;
-      width: calc(100% - 346px);
+      max-width: 381px;
     }
   }
 
@@ -301,7 +316,6 @@ $MAIN_WIDTH: 1051px;
     img {
       display: inline-block;
       max-width: 156px;
-      max-height: 116px;
       cursor: pointer;
 
       &:first-child {
@@ -346,8 +360,23 @@ $MAIN_WIDTH: 1051px;
   }
 
   @media screen and (max-width: 1000px) {
+    padding-right: 25px;
+
+    & .content {
+      flex-direction: column;
+    }
+    
     &:before {
       left: 11px;
+    }
+
+    & .photos {
+      flex-direction: column;
+      max-width: calc(100vw - 80px);
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -375,19 +404,6 @@ $MAIN_WIDTH: 1051px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .photoPop {
   position: fixed;
   z-index: 1500;
@@ -400,7 +416,7 @@ $MAIN_WIDTH: 1051px;
   height: 100%;
   background-color: rgba(#000000,0.8);
 
-  a.closeBtn{
+  a.closeBtn {
     position: absolute;
     z-index: 1510;
     right: 17px;
@@ -414,10 +430,13 @@ $MAIN_WIDTH: 1051px;
     }
   }
 
-  img{
-    width: 100%;
-    height: auto;
-    max-width: 835px;
+  img {
+    max-height:85%;
+
+    @media screen and (max-width: 1000px) {
+      max-width: 85%;
+      max-height: none;
+    }
   }
 }
 
