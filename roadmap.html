@@ -24,7 +24,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
-  <script src="js/scrollTo.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
   <script>
       (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/an50zjec';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
@@ -40,7 +39,6 @@
       <a href="/">
         <img src="images/roadmap/logo.svg" />
       </a>
-      
 
       <ul class="outline">
         <li onClick="alert('coming soon');">Lastest</li>
@@ -73,8 +71,6 @@
     </div>
 
     <div class="main">
-
-
       <div class="chapter" v-for="(chapter, chapterIdx) in roadmapData" :key="chapterIdx">
         <div class="banner">
           <div class="icon">
@@ -110,13 +106,11 @@
           </div>
 
           <div class="content">
-              <div :class="{description: true, 'has-photos': flag.photos.length > 0}" v-html="flag.content">
-                
-              </div>
+              <div :class="{description: true, 'has-photos': flag.photos.length > 0}" v-html="flag.content"></div>
               <div class="photos" v-if="flag.photos.length > 0">
                 <div @click="openModal(flag.photos)" :class="{ cover: flag.photos.length > 2 && photoIdx === 1}" v-for="(photo, photoIdx) in flag.photos" :key="photoIdx" v-if="photoIdx < 2">
-                  <img :src="photo" />
-                  <span class="number">+2</span>
+                  <img :src="`/images/roadmap/${photo}`" />
+                  <span class="number">{{`+${flag.photos.length}`}}</span>
                 </div>
               </div>
           </div>
@@ -128,18 +122,15 @@
             <span class="number">{{ `${flag.progress}%` }}</span>
           </div>
         </div>
-
       </div>
     </div>
-
-
 
     <div v-show="isOpenPop" class="photoPop">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p2.jpg" alt="" /></div>
-          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p3.jpg" alt="" /></div>
-          <div class="swiper-slide"><img src="https://www.portal.network/images/imgBlockchain/p1.jpg" alt="" /></div>
+          <div class="swiper-slide" v-for="(photo, photoIdx) in nowPhotos">
+            <img :src="`/images/roadmap/${photo}`" alt="" />
+          </div>
         </div>
         <div class="swiper-button-prev swiper-button-white"></div>
         <div class="swiper-button-next swiper-button-white"></div>

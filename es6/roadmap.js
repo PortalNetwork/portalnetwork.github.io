@@ -20,7 +20,12 @@ var app = new Vue({
           {
             title: 'Education Platform',
             content: 'Our co-founder, Christopher Shen, was presenting at the "Young Entrepreneur" Panel during the event. Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
-            photos: [],
+            photos: [
+              'education/1.jpg', 'education/2.jpg', 'education/3.jpg', 'education/4.jpg', 
+              'education/5.jpg', 'education/6.jpg', 'education/7.jpg', 'education/8.jpg', 
+              'education/9.jpg', 'education/10.jpg', 'education/11.jpg', 'education/12.jpg', 
+              'education/13.jpg',
+            ],
             location: 'Singapore',
             time: '4/17-18',
             progress: 50,
@@ -31,6 +36,7 @@ var app = new Vue({
           },
         ],
       },
+
       {
         title: 'Event',
         icon: './images/roadmap/event.svg',
@@ -44,16 +50,17 @@ var app = new Vue({
             progress: 100,
             links: [
               {
-                title: 'pdf',
-                url: 'https://drive.google.com/file/d/1l1GxD0SF5NQKeLqhOCWqQUYHPRAoBfHn/view',
-              },
-              {
-                title: 'event',
+                title: '',
                 url: 'http://hackathon.portal.network',
               },
             ],
             githubs: [],
-            files: [],
+            files: [
+              {
+                title: '',
+                url: 'https://drive.google.com/file/d/1l1GxD0SF5NQKeLqhOCWqQUYHPRAoBfHn/view',
+              },
+            ],
             videos: [],
           },
           {
@@ -63,14 +70,14 @@ var app = new Vue({
             location: 'Malaysia',
             time: '4/29',
             progress: 100,
-            links: [
+            links: [],
+            githubs: [],
+            files: [
               {
                 title: '',
                 url: 'https://drive.google.com/file/d/1IjiDTu8vXqWUjbjICllfz_Lf-97Vgiwq/view',
               },
             ],
-            githubs: [],
-            files: [],
             videos: [
               {
                 title: '',
@@ -81,7 +88,16 @@ var app = new Vue({
           {
             title: 'Blockchain Universe',
             content: 'Co-hosted Blockchain Universe Event with Mr. Block',
-            photos: [],
+            photos: [
+              'event/event1.jpg', 'event/event2.jpg', 'event/event3.jpg', 'event/event4.jpg',
+              'event/event5.jpg', 'event/event6.jpg', 'event/event7.jpg', 'event/event8.jpg',
+              'event/event9.jpg', 'event/event10.jpg', 'event/event11.jpg', 'event/event12.jpg',
+              'event/event13.jpg', 'event/event14.jpg', 'event/event15.jpg', 'event/event16.jpg',
+              'event/event17.jpg', 'event/event18.jpg', 'event/event19.jpg', 'event/event20.jpg',
+              'event/event21.jpg', 'event/event22.jpg', 'event/event23.jpg', 'event/event24.jpg',
+              'event/event25.jpg', 'event/event26.jpg', 'event/event27.jpg', 'event/event28.jpg',
+              'event/event29.jpg', 'event/event30.jpg', 'event/event31.jpg', 'event/event32.jpg',
+            ],
             location: 'Taiwan',
             time: '4/27',
             progress: 100,
@@ -237,6 +253,7 @@ var app = new Vue({
           },
         ],
       },
+
       {
         title: 'Documentation',
         icon: './images/roadmap/documentation.svg',
@@ -321,6 +338,7 @@ var app = new Vue({
           },
         ],
       },
+
       {
         title: 'Application',
         icon: './images/roadmap/documentation.svg',
