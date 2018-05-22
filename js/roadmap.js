@@ -21,7 +21,7 @@ var app = new Vue({
     isOpenPop: false,
     nowPhotos: [],
     roadmapData: [{
-      title: 'Education',
+      title: 'Education and Partnership',
       icon: './images/roadmap/education.svg',
       flags: [{
         title: 'Education Platform',
@@ -34,6 +34,16 @@ var app = new Vue({
         githubs: [],
         files: [],
         videos: []
+      }, {
+        title: "Partnership with Wanchain",
+        open: false,
+        time: "5/14",
+        content: "Portal Network is honor to announce the partnership with Wanchain",
+        progress: 70,
+        link: [{
+          title: "Blog",
+          url: "https://medium.com/wanchain-foundation/wanchain-progress-update-13-may-2018-7a539671627d"
+        }]
       }]
     }, {
       title: 'Event',
