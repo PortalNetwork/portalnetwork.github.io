@@ -34,6 +34,20 @@ var app = new Vue({
         githubs: [],
         files: [],
         videos: []
+      }, {
+        title: "Partnership with Wanchain",
+        content: "Portal Network is honor to announce the partnership with Wanchain",
+        photos: [],
+        location: '',
+        time: "5/14",
+        progress: 100,
+        links: [{
+          title: "Blog",
+          url: "https://medium.com/wanchain-foundation/wanchain-progress-update-13-may-2018-7a539671627d"
+        }],
+        githubs: [],
+        files: [],
+        videos: []
       }]
     }, {
       title: 'Event',
