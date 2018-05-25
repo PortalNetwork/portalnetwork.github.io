@@ -14,10 +14,6 @@ function GetOffset(el) {
             isMenuOpen : false
         },
         methods: {
-            learnFn() {
-                const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
-                animateScrollTo(elementTop.top);
-            },
             toggleMenuFn() {
                 this.isMenuOpen = !this.isMenuOpen;
             },
@@ -34,3 +30,9 @@ function GetOffset(el) {
         }
     });
 })();
+
+
+document.getElementById("learn").addEventListener("click", () => {
+    const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
+    animateScrollTo(elementTop.top);
+})
