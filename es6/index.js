@@ -1,3 +1,12 @@
+import animateScrollTo from 'animated-scroll-to';
+function GetOffset(el) {
+  const box = el.getBoundingClientRect();
+  return {
+      top: box.top + window.pageYOffset - document.documentElement.clientTop,
+      left: box.left + window.pageXOffset - document.documentElement.clientLeft
+  }
+}
+
 (() => {
     new Vue({
         el: '#app',
@@ -10,6 +19,10 @@
             },
             comingsoonFn() {
                 alert("coming soon");
+            },
+            learnFn() {
+                const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
+                animateScrollTo(elementTop.top);
             }
         },
         mounted() { 

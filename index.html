@@ -47,7 +47,7 @@
 				<ul :class="['menu_list',{open: isMenuOpen}]">
 					<!-- <li><a @click="comingsoonFn">Latest</a></li>
 					<li><a @click="comingsoonFn">About</a></li> -->
-					<li><a @click="comingsoonFn">Blog</a></li>
+					<li><a href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a></li>
 					<li><a href="roadmap.html">Roadmap</a></li>
 				</ul>
 			</nav>
@@ -55,7 +55,7 @@
 		<div class="header_content" data-aos="fade-down" data-aos-easing="ease-out-back">
 			<h2>Click & Enter the Next<br/>Generation Internet.</h2>
 			<p>Join the decentralized ecosystem by easy-to-use tools.</p>
-			<a>LEARN MORE</a>
+			<a id="learn" @click="learnFn">LEARN MORE</a>
 		</div>
 		<div class="hero"  data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back"></div>
 		<div class="what">
@@ -99,18 +99,18 @@
 		<div class="item_list ecosystem">
 			<h3>ECOSYSTEM</h3>
 			<div class="ecosystem_item">
-				<div class="item">
+				<a class="item" href="https://www.ethereum.org/" target="_blank">
 					<img src="./images/ecosystem/ethereum.png" alt="">
-				</div>
-				<div class="item">
+				</a>
+				<a class="item" href="https://ethereumclassic.org/" target="_blank">
 					<img src="./images/ecosystem/ethereumclassic.png" alt="">
-				</div>
-				<div class="item">
+				</a>
+				<a class="item" href="https://wanchain.org/" target="_blank">
 					<img src="./images/ecosystem/WANCHAIN.png" alt="">
-				</div>
-				<div class="item">	
+				</a>
+				<a class="item" href="https://qtum.org/en/" target="_blank">	
 					<img src="./images/ecosystem/qtum.png" alt="">
-				</div>
+				</a>
 			</div>
 		</div>
 
@@ -118,15 +118,15 @@
 			<h3>PARTNERSHIP</h3>
 
 			<div class="ecosystem_item">
-				<!-- <div class="item">
-					<img src="./images/partnerLogo/Metamask.png" alt="">
-				</div> -->
-				<div class="item">
+				<a class="item" href="https://bluzelle.com/" target="_blank">
 					<img class="Bluzelle" src="./images/partnerLogo/BluzelleLogo.png" alt="">
-				</div>
-				<div class="item">
+				</a>
+				<a class="item" href="https://www.coingecko.com/en" target="_blank">
+					<img class="Bluzelle" src="./images/partnerLogo/coingecko.png" alt="">
+				</a>
+				<a class="item" href="https://wanchain.org/" target="_blank">
 					<img src="./images/ecosystem/WANCHAIN.png" alt="">
-				</div>
+				</a>
 			</div>
 		</div>
 
@@ -139,16 +139,16 @@
 				<a class="item" href="https://github.com/portalnetwork" target="_blank">
 					<img src="./images/socialMedia/g.png" alt="">
 				</a>
-				<a class="item" href="https://medium.com/@portalnetwork.official" target="_blank">
+				<a class="item" href="https://medium.com/portalnetworkofficial" target="_blank">
 					<img src="./images/socialMedia/M.png" alt="">
 				</a>
 				<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
 					<img src="./images/socialMedia/reddit.png" alt="">
 				</a>
-				<a class="item" href="https://twitter.com/Portal_Network_" target="_blank">
+				<a class="item" href="https://twitter.com/itisportal" target="_blank">
 					<img src="./images/socialMedia/t.png" alt="">
 				</a>
-				<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
+				<a class="item" href="https://t.me/portalnetworkofficial" target="_blank">
 					<img src="./images/socialMedia/Te.png" alt="">
 				</a>
 			</div>
