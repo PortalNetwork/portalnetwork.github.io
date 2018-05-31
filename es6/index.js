@@ -1,11 +1,3 @@
-// import animateScrollTo from 'animated-scroll-to';
-// function GetOffset(el) {
-//   const box = el.getBoundingClientRect();
-//   return {
-//       top: box.top + window.pageYOffset - document.documentElement.clientTop,
-//       left: box.left + window.pageXOffset - document.documentElement.clientLeft
-//   }
-// }
 window.onload = function(){
     new Vue({
         el: '#app',
@@ -18,6 +10,9 @@ window.onload = function(){
             },
             comingsoonFn() {
                 alert("coming soon");
+            },
+            gaSeedPageView(name) {
+                ga('send', 'event', name, 'click',);
             }
         },
         mounted() { 

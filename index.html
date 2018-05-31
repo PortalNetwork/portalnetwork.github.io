@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./css/index.css?88888888">
+	<link rel="stylesheet" href="./css/index.css?321312312">
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="./js/intercom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
@@ -49,8 +49,8 @@
 				<ul :class="['menu_list',{open: isMenuOpen}]">
 					<!-- <li><a @click="comingsoonFn">Latest</a></li>
 					<li><a @click="comingsoonFn">About</a></li> -->
-					<li><a href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a></li>
-					<li><a href="roadmap.html">Roadmap</a></li>
+					<li><a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a></li>
+					<li><a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -62,7 +62,7 @@
 					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
 					<input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
 					<div class="clearbox">
-						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button">
+						<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button" @click="gaSeedPageView('subscribe')">
 					</div>
 				</div>
 			</form>
@@ -150,22 +150,22 @@
 		<div class="item_list contact">
 			<h3>CONTACT US</h3>
 			<div class="contact_item">
-				<a class="item" href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
+				<a @click="gaSeedPageView('fbicon')" class="item" href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
 					<img src="./images/socialMedia/fb.png" alt="">
 				</a>
-				<a class="item" href="https://github.com/portalnetwork" target="_blank">
+				<a @click="gaSeedPageView('github')" class="item" href="https://github.com/portalnetwork" target="_blank">
 					<img src="./images/socialMedia/g.png" alt="">
 				</a>
-				<a class="item" href="https://medium.com/portalnetworkofficial" target="_blank">
+				<a @click="gaSeedPageView('medium')" class="item" href="https://medium.com/portalnetworkofficial" target="_blank">
 					<img src="./images/socialMedia/M.png" alt="">
 				</a>
 				<!--<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
 					<img src="./images/socialMedia/reddit.png" alt="">
 				</a>-->
-				<a class="item" href="https://twitter.com/itisportal" target="_blank">
+				<a @click="gaSeedPageView('twitter')" class="item" href="https://twitter.com/itisportal" target="_blank">
 					<img src="./images/socialMedia/t.png" alt="">
 				</a>
-				<a class="item" href="https://t.me/portalnetworkofficial" target="_blank">
+				<a @click="gaSeedPageView('telegram')" class="item" href="https://t.me/portalnetworkofficial" target="_blank">
 					<img src="./images/socialMedia/Te.png" alt="">
 				</a>
 			</div>
@@ -175,7 +175,8 @@
 			<a><img src="./images/mcafee.png" alt=""></a>
 		</footer>
 	</div>
-	<script src="./js/index.js?88888888"></script>
+	<script src="./js/index.js?2312321"></script>
+	
 	<!-- Google Tag Manager -->
 	<script>
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
