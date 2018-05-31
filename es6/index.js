@@ -30,7 +30,7 @@ window.onload = function () {
             gaSeedPageView(name) {
                 ga('send', 'event', name, 'click', );
                 let debug = getUrl();
-                if(debug["debug"]=="true") console.log("debug ->",val);
+                if(debug["debug"]=="true") console.log("GA PageView -> ",name);
             }
         },
         mounted() { 
