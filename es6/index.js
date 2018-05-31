@@ -1,11 +1,11 @@
-import animateScrollTo from 'animated-scroll-to';
-function GetOffset(el) {
-  const box = el.getBoundingClientRect();
-  return {
-      top: box.top + window.pageYOffset - document.documentElement.clientTop,
-      left: box.left + window.pageXOffset - document.documentElement.clientLeft
-  }
-}
+// import animateScrollTo from 'animated-scroll-to';
+// function GetOffset(el) {
+//   const box = el.getBoundingClientRect();
+//   return {
+//       top: box.top + window.pageYOffset - document.documentElement.clientTop,
+//       left: box.left + window.pageXOffset - document.documentElement.clientLeft
+//   }
+// }
 
 (() => {
     new Vue({
@@ -27,10 +27,6 @@ function GetOffset(el) {
                 app_id: "an50zjec"
             });
             window.Intercom("update");
-            // document.getElementById("learn").addEventListener("click", () => {
-            //     const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
-            //     animateScrollTo(elementTop.top);
-            // })
         }
     });
 })();
