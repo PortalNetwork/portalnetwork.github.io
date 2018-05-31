@@ -6,8 +6,7 @@
 //       left: box.left + window.pageXOffset - document.documentElement.clientLeft
 //   }
 // }
-
-(() => {
+window.onload = function(){
     new Vue({
         el: '#app',
         data: {
@@ -29,5 +28,4 @@
             window.Intercom("update");
         }
     });
-})();
-
+}
