@@ -27,10 +27,10 @@ function GetOffset(el) {
                 app_id: "an50zjec"
             });
             window.Intercom("update");
-            document.getElementById("learn").addEventListener("click", () => {
-                const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
-                animateScrollTo(elementTop.top);
-            })
+            // document.getElementById("learn").addEventListener("click", () => {
+            //     const elementTop = GetOffset(document.getElementsByClassName("product")[0]);
+            //     animateScrollTo(elementTop.top);
+            // })
         }
     });
 })();
