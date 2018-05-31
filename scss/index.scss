@@ -153,6 +153,10 @@ header{
         height: auto;
         overflow: hidden;
         margin-top: 20px;
+        @media screen and (max-width: 760px) {
+          width: 70%;
+          margin: 95px auto 0 auto;
+        }
         input.email{
             width: 300px;
             height: 50px;
@@ -162,10 +166,18 @@ header{
             border-bottom-left-radius: 30px;
             float: left;
             padding-left: 15px;
+            @media screen and (max-width: 760px) {
+                width: 70%;
+                height: 30px;
+                font-size: 12px;
+            }
         }
         .clearbox{
             display: block;
             float: left;
+            @media screen and (max-width: 760px) {
+              width: 30%;
+            }
             >input{
                 display:block;
                 font-size: 20px;
@@ -177,6 +189,11 @@ header{
                 border: 0;
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
+                @media screen and (max-width: 760px) {
+                  width: 100%;
+                  height: 30px;
+                  font-size: 12px;
+                }
             }
         }
     }
@@ -229,6 +246,7 @@ header{
     background-image: url("../images/heroimage/Hero.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
+    
     @media screen and (max-width: 1441px) {
         top: pxtovw(335);
         width: pxtovw(625);
