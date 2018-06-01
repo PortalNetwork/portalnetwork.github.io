@@ -22,7 +22,7 @@ const gulp = require('gulp'),
 gulp.task('connect',()=>{
 	connect.server({
 		root: './',
-		port: 3000,
+		port: 3001,
 		livereload: true,
         middleware: (connect, opt)=> {
             opt.route = '/api';
