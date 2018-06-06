@@ -18,23 +18,6 @@ var app = new Vue({
         icon: './images/roadmap/education.svg',
         flags: [
           {
-            title: 'Education Platform',
-            content: 'Our co-founder, Christopher Shen, was presenting at the "Young Entrepreneur" Panel during the event. Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
-            photos: [
-              'education/1.jpg', 'education/2.jpg', 'education/3.jpg', 'education/4.jpg', 
-              'education/5.jpg', 'education/6.jpg', 'education/7.jpg', 'education/8.jpg', 
-              'education/9.jpg', 'education/10.jpg', 'education/11.jpg', 'education/12.jpg', 
-              'education/13.jpg',
-            ],
-            location: 'Singapore',
-            time: '4/17-18',
-            progress: 50,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
             title: 'IT Seed',
             content: 'Portal Network and Mr. Block team were very honored to get invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community that let graduating students learn various trends around the world, so they can be well prepared for their career path in the future. Basic concept of Blockchain & Application of Blockchain & Future development of Blockchain',
             photos: [
@@ -61,6 +44,23 @@ var app = new Vue({
             ],
             location: 'Taipei, Taiwan',
             time: '5/19',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Education Platform',
+            content: 'Our co-founder, Christopher Shen, was presenting at the "Young Entrepreneur" Panel during the event. Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
+            photos: [
+              'education/1.jpg', 'education/2.jpg', 'education/3.jpg', 'education/4.jpg', 
+              'education/5.jpg', 'education/6.jpg', 'education/7.jpg', 'education/8.jpg', 
+              'education/9.jpg', 'education/10.jpg', 'education/11.jpg', 'education/12.jpg', 
+              'education/13.jpg',
+            ],
+            location: 'Singapore',
+            time: '4/17-18',
             progress: 100,
             links: [],
             githubs: [],
