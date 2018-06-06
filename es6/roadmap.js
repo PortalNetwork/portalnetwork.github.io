@@ -42,7 +42,7 @@ var app = new Vue({
         icon: './images/roadmap/event.svg',
         flags: [
           {
-            title: 'Portal.Network Hackathon',
+            title: 'Bluzelle x Portal.Network Hackathon',
             content: 'Co-hosted hackathon with Bluzelle at Canada Vancouver',
             photos: [],
             location: 'Canada',
@@ -51,7 +51,7 @@ var app = new Vue({
             links: [
               {
                 title: '',
-                url: 'http://hackathon.portal.network',
+                url: 'http://h1.portal.network',
               },
             ],
             githubs: [],
@@ -259,12 +259,29 @@ var app = new Vue({
         icon: './images/roadmap/documentation.svg',
         flags: [
           {
+            title: 'Propose a pull request for MetaMask to integration ENS with IPFS',
+            content: 'MetaMask browser extension is great project helps users to interact with Ethereum, and furthermore can be more powerful by add content resolve by ENS, so Portal Network build a way to resolves ENS domains (.eth) to IPFS hash and redirects to url content.',
+            photos: [],
+            location: '',
+            time: '5/29',
+            progress: 50,
+            links: [],
+            githubs: [
+              {
+                title: '',
+                url: 'https://github.com/MetaMask/metamask-extension/pull/4405',
+              }
+            ],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'Propose multihash functions to support ECNS Public Resolver smart contract',
             content: 'Propose multihash functions to support ECNS Public Resolver smart contract Implementation of ECIP - 1044',
             photos: [],
             location: '',
             time: '5/12',
-            progress: 50,
+            progress: 100,
             links: [],
             githubs: [
               {
@@ -298,7 +315,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/10',
-            progress: 50,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -320,7 +337,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/7',
-            progress: 50,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -344,12 +361,46 @@ var app = new Vue({
         icon: './images/roadmap/documentation.svg',
         flags: [
           {
-            title: '[product] Protal Network Chrome Extension Enhancement',
-            content: '1. Support .eth and .etc domains, .wan is under development<br>2. Use multihash function to convert ENS and ECNS Public Resolver data<>3. Let users can directly visit decentralized website',
+            title: 'Portal Network Decetentralized Web Builder',
+            content: '1. User registration flow.<br>2. Personal profile builder.<br>3. Decentralized website deploy history.',
+            photos: [],
+            location: '',
+            time: '5/30',
+            progress: 50,
+            links: [
+              {
+                title: '',
+                url: ' https://web.portal.network',
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Portal Network Marketplace',
+            content: 'Design an user dashboard for user settings, domain manager, domain purchase history',
+            photos: [],
+            location: '',
+            time: '5/30',
+            progress: 35,
+            links: [
+              {
+                title: '',
+                url: ' https://beta.portal.network',
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Protal Network Chrome Extension Enhancement',
+            content: '1. Support .eth and .etc domains, .wan is under development<br>2. Use multihash function to convert ENS, ECNS, WNS Public Resolver data<>3. Let users can directly visit decentralized website',
             photos: [],
             location: '',
             time: '5/12',
-            progress: 0,
+            progress: 80,
             links: [
             ],
             githubs: [
@@ -367,7 +418,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/9',
-            progress: 50,
+            progress: 90,
             links: [
             ],
             githubs: [
@@ -380,7 +431,7 @@ var app = new Vue({
             videos: [],
           },
           {
-            title: '[product] Deep learning model',
+            title: 'Deep learning model',
             content: '1. Enhance trading matching rate <br>2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.',
             photos: [],
             location: '',
@@ -393,7 +444,7 @@ var app = new Vue({
             videos: [],
           },
           {
-            title: '[product] WHOIS',
+            title: 'WHOIS',
             content: '1. Paring and cleaning all the domains on Ethereum.<br>2. Begin to build up Ethereum Classic WHOIS system and collect datas on it.',
             photos: [],
             location: '',
@@ -406,16 +457,16 @@ var app = new Vue({
             videos: [],
           },
           {
-            title: '[product] Online Decentralized Website Builder',
+            title: 'Online Decentralized Website Builder',
             content: '1. Personal profile builder<br>2. Customized website deployment<br>3. Backend contrucstion',
             photos: [],
             location: '',
             time: '4/19',
-            progress: 50,
+            progress: 100,
             links: [
               {
                 title: '',
-                url: ' https://hackathon.portal.network',
+                url: ' http://h1.portal.network',
               }
             ],
             githubs: [],
@@ -423,12 +474,12 @@ var app = new Vue({
             videos: [],
           },
           {
-            title: '[product] Portal Network Marketplace',
+            title: 'Portal Network Marketplace',
             content: '1. User registration improvement Refactoring the usability Refactoring and Integration with ethereum UI/UX design enhancement Constructing the backend architecture Security Enhancement<br>2. Constructing user profile dashboard',
             photos: [],
             location: '',
             time: '4/16',
-            progress: 50,
+            progress: 100,
             links: [
               {
                 title: '',
