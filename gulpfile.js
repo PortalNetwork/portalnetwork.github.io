@@ -80,7 +80,7 @@ gulp.task('sass',()=> {
 
 /*Images*/
 gulp.task('images', ()=>{
-    let src = 'images-src/**/*.{jpg,png,gif,ico}';
+    let src = 'images-src/**/*.{jpg,png,gif,ico, JPG}';
     let tar = 'images';
     const imagemin = require('gulp-imagemin');
     return gulp.src(src)
