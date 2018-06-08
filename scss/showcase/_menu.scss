@@ -1,0 +1,42 @@
+.menu_bar{
+    width: 100%;
+    height: 120px;
+    background-color: #A9FBF2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .mid{
+        width: 95%;
+        height: 100%;
+        max-width: 1355px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a.logo{
+            display: block;
+            width: 300px;
+            height: 39px;
+            background-image: url("../../images/Showcase/logo@3x.svg");
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+        }
+        nav{
+            >a{
+                float: left;
+                display: block;
+                line-height: 120px;
+                font-family: Avenir;
+                font-weight: 500;
+                letter-spacing: 0.1px;
+                color: #000000;
+                margin-right: 47px;
+                transition: color .2s;
+                &:hover{
+                    color:#1d3533;
+                }
+            }
+        }
+    }
+}
