@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Portal Network | Show Case</title>
-    <meta name="viewport" content="width=640, user-scalable=no, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="Keywords" content="" />
     <meta property="og:title" content="Portal Network Roadmap" />
@@ -42,66 +42,73 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
     
-        <div class="showcase">
-            <header class="menu_bar">
-                <div class="mid">
-                    <a class="logo"></a>
-                    <nav>
-                        <a target="_blank" href="https://hackathon.portal.network/" >Hackathon</a>
-                        <a target="_blank" href="https://portalnetwork.blog/">Blog</a>
-                        <a href="roadmap.html" >Roadmap</a>
-                    </nav>
-                </div>
-            </header>
-            <article class="banner">
-                <div class="b_img"></div>
-                <div class="b_content">
-                    <h2>Portal.network</h2>
-                    <p>Build your own decentralized website.</p>
-                    <a>Get a free one now</a>
-                </div>
-            </article>
-            <div class="select_bar">
-                <div class="mid">
-                    <nav>
-                        <a :class="{active: selectidx === 0}" @click="handActive(0)">About me</a>
-                        <a :class="{active: selectidx === 1}" @click="handActive(1)">Hackathon</a>
-                        <a :class="{active: selectidx === 2}" @click="handActive(2)">Dapp</a>
-                        <a :class="{active: selectidx === 3}" @click="handActive(3)">RISE</a>
-                    </nav>
-                    <div class="input_bar">
-                        <input type="text" name="" id="" placeholder="Your  domain  name">
-                        <i class="fas fa-search"></i>
+    <div class="showcase">
+        <header class="menu_bar">
+            <div class="mid">
+                <a class="logo"></a>
+                <a id="openMenuBtn"></a>
+                <nav>
+                    <a id="closeMenuBtn"></a>
+                    <a target="_blank" href="https://hackathon.portal.network/" >Hackathon</a>
+                    <a target="_blank" href="https://portalnetwork.blog/">Blog</a>
+                    <a href="roadmap.html" >Roadmap</a>
+                    <div class="mobil_product">
+                        <a><img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt=""><p>Martketplace</p></a>
+                        <a><img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt=""><p>Extension</p></a>
+                        <a><img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt=""><p>Web Builder</p></a>
                     </div>
+                    <div class="mobil_communities">
+                        <a><img src="./images/Showcase/Mobile/sm_telegtam@2x.svg" alt=""></a>
+                        <a><img src="./images/Showcase/Mobile/sm_github@2x.svg" alt=""></a>
+                        <a><img src="./images/Showcase/Mobile/sm_medium@3x.svg" alt=""></a>
+                        <a><img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt=""></a>
+                        <a><img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt=""></a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <article class="banner">
+            <div class="b_img"></div>
+            <div class="b_content">
+                <h2>Portal.network</h2>
+                <p>Build your own decentralized website.</p>
+                <a>Get a free one now</a>
+            </div>
+        </article>
+        <div class="select_bar">
+            <div class="mid">
+                <nav>
+                    <a :class="{active: selectidx === 0}" @click="handActive(0)">About me</a>
+                    <a :class="{active: selectidx === 1}" @click="handActive(1)">Hackathon</a>
+                    <a :class="{active: selectidx === 2}" @click="handActive(2)">Dapp</a>
+                    <a :class="{active: selectidx === 3}" @click="handActive(3)">RISE</a>
+                </nav>
+                <div class="input_bar">
+                    <input type="text" name="" id="" placeholder="Your  domain  name">
+                    <i class="fas fa-search"></i>
                 </div>
             </div>
-
-            <div class="show_item">
-                <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
-                    <a class="case_item">
-                        <div class="case_demo">
-                            <div class="case_photo" 
-                                :style="demophoto(idx)"
-                            ></div>
-                        </div>
-                        <div class="info">
-                            <img src="./images/Showcase/user-icon.svg" alt="">
-                            <div>
-                                <h2>{{item.name}}</h2>
-                                <p>{{item.doman}}</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-
-
-
         </div>
 
-
+        <div class="show_item">
+            <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
+                <a class="case_item">
+                    <div class="case_demo">
+                        <div class="case_photo" 
+                            :style="demophoto(idx)"
+                        ></div>
+                    </div>
+                    <div class="info">
+                        <img src="./images/Showcase/user-icon.svg" alt="">
+                        <div>
+                            <h2>{{item.name}}</h2>
+                            <p>{{item.doman}}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
     <script src="js/showcase.js"></script>
 </body>
 </html>

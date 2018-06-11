@@ -20,18 +20,32 @@ html, body{
     font-family: 'Roboto', sans-serif;
 }
 
-@function pxtovw($number, $vw){ 
-    @return $number * 100 / $vw + vw;
+.showcase{
+    width: 100%;
+    margin-bottom: 300px;
 }
+
+@function pxtovw($number, $width : 1366){ 
+    @return $number * 100 / $width + vw;
+}
+@function pxtovh($number, $height : 540){ 
+    @return $number * 100 / $height + vh;
+}
+
 // @function pxtopercent($number, $baseline){ 
 //     @return ($number / $baseline) * 100 + %;
 // }
-.showcase{
-    width: 100%;
-    // height: auto;
-    // overflow: hidden;
-    margin-bottom: 300px;
+@mixin media-1366() {
+    @media screen and (max-width: 1366px){
+        @content;
+    }  
 }
+@mixin media-375() {
+    @media screen and (max-width: 414px){
+        @content;
+    }  
+}
+
 @import "./showcase/_header.scss";
 @import "./showcase/_menu.scss";
 @import "./showcase/_selectBar.scss";
