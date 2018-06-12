@@ -1,4 +1,5 @@
 @import "_reset.scss";
+@import "./showcase/_mixin.scss";
 *{
     padding: 0px;
     margin: 0px;
@@ -22,31 +23,10 @@ html, body{
 
 .showcase{
     width: 100%;
-    margin-bottom: 300px;
+    margin-bottom: 0px;
 }
-
-@function pxtovw($number, $width : 1366){ 
-    @return $number * 100 / $width + vw;
-}
-@function pxtovh($number, $height : 540){ 
-    @return $number * 100 / $height + vh;
-}
-
-// @function pxtopercent($number, $baseline){ 
-//     @return ($number / $baseline) * 100 + %;
-// }
-@mixin media-1366() {
-    @media screen and (max-width: 1366px){
-        @content;
-    }  
-}
-@mixin media-375() {
-    @media screen and (max-width: 414px){
-        @content;
-    }  
-}
-
 @import "./showcase/_header.scss";
 @import "./showcase/_menu.scss";
 @import "./showcase/_selectBar.scss";
 @import "./showcase/_showItem.scss";
+@import "./showcase/_fixedbtn.scss";

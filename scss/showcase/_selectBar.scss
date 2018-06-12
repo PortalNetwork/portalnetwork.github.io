@@ -2,56 +2,55 @@
     width: 100%;
     height: 80px;
     box-shadow: 0px 1px 10px 5px rgba(#000, 0.1);
-    @include media-375() {
-        height: 138px;
+    @include media-740() {
+        height: auto;
+        padding-bottom: 15px;
     }
     .mid{
         width: 95%;
         height: 100%;
         max-width: 1355px;
         margin: 0 auto;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include media-375() {
-            display: flex;
-	        flex-direction: column;
-            width: 100%;
+        padding-top: 30px;
+        @include media-740(){
+            padding-top: 20px;
         }
         nav{
-            @include media-375() {
+            height: auto;
+            float: left;
+            @include media-740(){
+                float: none;
                 width: 90%;
                 margin: 0 auto;
-                height: 60px;
-                display: flex;
-                align-items: baseline;
-                overflow-x: scroll;
+                overflow-x: auto;
             }
-            a{
-                color: #c8c8c8;
-                font-family: Avenir;
-                font-size: 16px;
-                font-weight: 500;
-                margin-right: 38px;
-                transition: color .2s;
-                @include media-375() {
-                    padding: 8px 8px;
-                    font-size: pxtovw(16);
+            .bar_width{
+                height: auto;
+                overflow: hidden;
+                @include media-740() {
+                    width: 350px;
+                    height: 50px;
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
-                    margin-right: 5px;
-                    margin-top: 15px;
                 }
-                &.active, &:hover{
-                    color: #232323;
-                    @include media-375() {
-                        padding: 8px 8px;
-                        border-radius: 16.5px;
-                        background-color: #d8d8d8;
-                        padding: 5px 10px;
+                a{
+                    color: #c8c8c8;
+                    font-family: Avenir;
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-right: 38px;
+                    transition: color .2s;
+                    @include media-740() {
+                        margin-right: 0px;
+                        padding: 8px 10px;
+                    }
+                    &.active, &:hover{
+                        color: #232323;
+                        @include media-740() {
+                            border-radius: 16.5px;
+                            background-color: #d8d8d8;
+                        }
                     }
                 }
             }
@@ -59,9 +58,13 @@
         .input_bar{
             width: 300px;
             height: 30px;
+            float: right;
             border-bottom: solid 1px #979797;
-            @include media-375() {
-                margin-bottom: 14px;
+            @include media-740(){
+                float: none;
+                width: 90%;
+                height: 30px;
+                margin: 40px auto 0 auto;
             }
             input{
                 outline: none;

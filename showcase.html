@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Portal Network | Show Case</title>
+    <title>Portal Network | ShowCase</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="Keywords" content="" />
@@ -23,6 +23,8 @@
     <link href="css/showcase.css" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
     <script>
         (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/an50zjec';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
     </script>
@@ -46,23 +48,23 @@
         <header class="menu_bar">
             <div class="mid">
                 <a class="logo"></a>
-                <a id="openMenuBtn"></a>
-                <nav>
-                    <a id="closeMenuBtn"></a>
+                <a id="openMenuBtn" @click="menuOpen"></a>
+                <nav :class="{open: m_open}">
+                    <a id="closeMenuBtn" @click="menuOpen"></a>
                     <a target="_blank" href="https://hackathon.portal.network/" >Hackathon</a>
                     <a target="_blank" href="https://portalnetwork.blog/">Blog</a>
                     <a href="roadmap.html" >Roadmap</a>
                     <div class="mobil_product">
-                        <a><img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt=""><p>Martketplace</p></a>
-                        <a><img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt=""><p>Extension</p></a>
-                        <a><img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt=""><p>Web Builder</p></a>
+                        <a href="https://beta.portal.network/" target="_blank"><img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt=""><p>Martketplace</p></a>
+                        <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank"><img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt=""><p>Extension</p></a>
+                        <a href="https://web.portal.network/" target="_blank"><img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt=""><p>Web Builder</p></a>
                     </div>
                     <div class="mobil_communities">
-                        <a><img src="./images/Showcase/Mobile/sm_telegtam@2x.svg" alt=""></a>
-                        <a><img src="./images/Showcase/Mobile/sm_github@2x.svg" alt=""></a>
-                        <a><img src="./images/Showcase/Mobile/sm_medium@3x.svg" alt=""></a>
-                        <a><img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt=""></a>
-                        <a><img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt=""></a>
+                        <a href="https://t.me/portalnetworkofficial" target="_blank"><img src="./images/Showcase/Mobile/sm_telegtam@2x.svg" alt=""></a>
+                        <a href="https://github.com/portalnetwork" target="_blank"><img src="./images/Showcase/Mobile/sm_github@2x.svg" alt=""></a>
+                        <a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="./images/Showcase/Mobile/sm_medium@3x.svg" alt=""></a>
+                        <a href="https://twitter.com/itisportal" target="_blank"><img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt=""></a>
+                        <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank"><img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt=""></a>
                     </div>
                 </nav>
             </div>
@@ -70,7 +72,11 @@
         <article class="banner">
             <div class="b_img"></div>
             <div class="b_content">
-                <h2>Portal.network</h2>
+                <h2>
+                    <span id="txt">
+                        {{arrjoin}}  
+                    </span>
+                </h2>
                 <p>Build your own decentralized website.</p>
                 <a>Get a free one now</a>
             </div>
@@ -78,21 +84,23 @@
         <div class="select_bar">
             <div class="mid">
                 <nav>
-                    <a :class="{active: selectidx === 0}" @click="handActive(0)">About me</a>
-                    <a :class="{active: selectidx === 1}" @click="handActive(1)">Hackathon</a>
-                    <a :class="{active: selectidx === 2}" @click="handActive(2)">Dapp</a>
-                    <a :class="{active: selectidx === 3}" @click="handActive(3)">RISE</a>
+                    <div class="bar_width">
+                        <a :class="{active: selectidx === 2}" @click="handActive(2)">Dapp</a>
+                        <a :class="{active: selectidx === 0}" @click="handActive(0)">About me</a>
+                        <a :class="{active: selectidx === 1}" @click="handActive(1)">Hackathon</a>
+                        <a :class="{active: selectidx === 3}" @click="handActive(3)">RISE</a>
+                    </div>
                 </nav>
-                <div class="input_bar">
+                <!-- <div class="input_bar">
                     <input type="text" name="" id="" placeholder="Your  domain  name">
                     <i class="fas fa-search"></i>
-                </div>
+                </div> -->
             </div>
         </div>
 
         <div class="show_item">
             <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
-                <a class="case_item">
+                <a :href="item.url" class="case_item" target="_blank">
                     <div class="case_demo">
                         <div class="case_photo" 
                             :style="demophoto(idx)"
@@ -102,12 +110,38 @@
                         <img src="./images/Showcase/user-icon.svg" alt="">
                         <div>
                             <h2>{{item.name}}</h2>
-                            <p>{{item.doman}}</p>
+                            <p>{{item.domain}}</p>
                         </div>
                     </div>
                 </a>
             </div>
         </div>
+
+        <a class="gotoTopbtn" @click="gotoPageTop"></a>
+
+        <div class="share_box">
+            <!-- open -->
+            <a :class="['share_btn', {open: shareOpen}]" @click="fixedPopOpen"></a>
+            <!-- open -->
+            <div :class="['share_bg', {open: shareOpen}]">
+                <div class="content">
+                    <nav>
+                        <a href="https://beta.portal.network/" target="_blank"><img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt=""><p>Martketplace</p></a>
+                        <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank"><img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt=""><p>Extension</p></a>
+                        <a href="https://web.portal.network/" target="_blank"><img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt=""><p>Web Builder</p></a>
+                    </nav>
+                    <div class="share_item">
+                        <a href="https://t.me/portalnetworkofficial" target="_blank"><img src="./images/Showcase/Mobile/sm_telegtam@2x.svg" alt=""></a>
+                        <a href="https://github.com/portalnetwork" target="_blank"><img src="./images/Showcase/Mobile/sm_github@2x.svg" alt=""></a>
+                        <a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="./images/Showcase/Mobile/sm_medium@3x.svg" alt=""></a>
+                        <a href="https://twitter.com/itisportal" target="_blank"><img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt=""></a>
+                        <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank"><img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <script src="js/showcase.js"></script>
 </body>

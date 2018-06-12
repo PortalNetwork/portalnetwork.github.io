@@ -1,74 +1,54 @@
-[
+[   
     {
-        "demophoto": "./images/Showcase/demo1.png",
+
+        "demophoto": "./images/Showcase/demolocal/HOZT.png",
+        "name": "HOZT",
+        "domain": "hozt.portalnetworkweb.eth",
+        "tag": ["dapp"],
+        "url": "https://ipfs.infura.io/ipfs/QmUm2i9tg69RvB4SCdKMF35m9JoKu7kMp4Y78qwfsSzL8D/" 
+    },
+    {
+
+        "demophoto": "./images/Showcase/demolocal/AnswerPorduction.png",
+        "name": "Answer Porduction",
+        "domain": "answer.portalnetworkweb.eth",
+        "tag": ["dapp"],
+        "url": "https://ipfs.infura.io/ipfs/QmcrCz9kLeBg1n3D6vYZfwC4YorhgTGoe4EEDuSkw11xPK/" 
+    },
+    {
+
+        "demophoto": "./images/Showcase/demolocal/WIZE.png",
+        "name": "WIZE",
+        "domain": "wize.portalnetworkweb.eth",
+        "tag": ["dapp"],
+        "url": "https://ipfs.infura.io/ipfs/QmRVCSosZzqDVwpJZAXrJbhYbHZFQ4kuZbwg6Z5RBc7iFu/" 
+    },
+    {
+        "demophoto": "./images/Showcase/demolocal/phyrex.png",
         "name": "Phyrex Tsai",
-        "doman": "phyrextsai.eth",
-        "tag": ["aboutme"]
+        "domain": "phyrextsai.eth",
+        "tag": ["aboutme"],
+        "url": "https://ipfs.infura.io/ipfs/QmTJGSRPwpgBCDnv2VvP8dUYYUNAgoKTVEH7kHgzKsqrHo/" 
     },
     {
-        "demophoto": "./images/Showcase/demo2.png",
-        "name": "Mike Cheng",
-        "doman": "mikecheng.eth",
-        "tag": ["aboutme"]
+        "demophoto": "./images/Showcase/demolocal/chirs.png",
+        "name": "Chirs",
+        "domain": "christophershen.eth",
+        "tag": ["aboutme"],
+        "url": "https://ipfs.infura.io/ipfs/QmYUXKQG86g2bJi6W32eT31C8h5PWkVQNpoWhPoegXvY3a/" 
     },
     {
-        "demophoto": "./images/Showcase/demo3.png",
-        "name": "Alex Wow",
-        "doman": "alexwow.eth",
-        "tag": ["aboutme"]
+        "demophoto": "./images/Showcase/demolocal/TeamNull.png",
+        "name": "Team Null",
+        "domain": "TeamNull.bluzellehackathon.eth",
+        "tag": ["hackathon"],
+        "url": "https://gateway.ipfs.io/ipfs/QmeTgxhQ5Z8yUZ8eHvvLXRZtjXidXbYq8u5suhADsJyQb9/" 
     },
     {
-        "demophoto": "./images/Showcase/demo4.png",
-        "name": "vincent",
-        "doman": "vincent.eth",
-        "tag": ["aboutme"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo1.png",
-        "name": "Phyrex Tsai - Hackathon",
-        "doman": "phyrextsai.eth",
-        "tag": ["hackathon"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo2.png",
-        "name": "Mike Cheng - hackathon",
-        "doman": "mikecheng.eth",
-        "tag": ["hackathon"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo3.png",
-        "name": "Alex Wow - dapp",
-        "doman": "alexwow.eth",
-        "tag": ["dapp"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo4.png",
-        "name": "vincent - rise",
-        "doman": "vincent.eth",
-        "tag": ["rise"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo1.png",
-        "name": "Phyrex Tsai - rise",
-        "doman": "phyrextsai.eth",
-        "tag": ["rise"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo2.png",
-        "name": "Mike Cheng - rise",
-        "doman": "mikecheng.eth",
-        "tag": ["rise"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo3.png",
-        "name": "Alex Wow",
-        "doman": "alexwow.eth",
-        "tag": ["aboutme"]
-    },
-    {
-        "demophoto": "./images/Showcase/demo4.png",
-        "name": "vincent",
-        "doman": "vincent.eth",
-        "tag": ["aboutme"]
+        "demophoto": "./images/Showcase/demolocal/Cosmos.png",
+        "name": "Cosmos",
+        "domain": "Cosmos.bluzellehackathon.eth",
+        "tag": ["hackathon"],
+        "url": "https://gateway.ipfs.io/ipfs/QmcvpYRiw2ReaZp5GRK25fSQ6wCuqjjwpegSL5Bsm2AYaf/" 
     }
 ]

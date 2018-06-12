@@ -6,9 +6,11 @@ article.banner{
     @include media-1366(){
         height: pxtovw(768);
     }
-    @include media-375(){
+    @include media-740(){
         padding-top: 83px;
-        height: pxtovw(621, 375);
+        height: auto;
+        overflow: hidden;
+        padding-bottom: 55px;
     }
     >.b_img{
         position: absolute;
@@ -24,7 +26,7 @@ article.banner{
             width: pxtovw(704);
             height: pxtovw(528);
         }
-        @include media-375(){ 
+        @include media-740(){ 
             position: static;
             width: 100%;
             height: pxtovw(295, 375);
@@ -45,13 +47,15 @@ article.banner{
             top: pxtovw(310);
             right: pxtovw(123);
         }
-        @include media-375(){ 
+        @include media-740(){ 
             position: static;
-            width: 82%;
+            width: 90%;
             margin: 0 auto;
         }
         >h2{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             height: 80px;
             font-family: PingFangTC;
@@ -64,7 +68,7 @@ article.banner{
                 height: pxtovw(80);
                 font-size: pxtovw(50);
             }
-            @include media-375(){ 
+            @include media-740(){ 
                 display: none;
             }
         }
@@ -79,7 +83,7 @@ article.banner{
                 padding-top: pxtovw(52);
                 font-size: pxtovw(30);
             }
-            @include media-375(){ 
+            @include media-740(){ 
                 padding-top: 10px;
                 font-size: 30px;
             }
@@ -103,7 +107,7 @@ article.banner{
                 line-height: pxtovw(60);
                 font-size: pxtovw(17);
             }
-            @include media-375(){ 
+            @include media-740(){ 
                 width: 260px;
                 line-height: 60px;
                 font-size: 17px;

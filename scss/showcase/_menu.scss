@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     z-index: 10;
-    @include media-375(){
+    @include media-740(){
         height: 83px;
     }
     .mid{
@@ -24,7 +24,7 @@
             background-image: url("../../images/Showcase/logo@3x.svg");
             background-size: 100% auto;
             background-repeat: no-repeat;
-            @include media-375(){
+            @include media-740(){
                 width: 50%;
                 height: 40px;
                 background-position: 0 50%;
@@ -33,7 +33,7 @@
         }
         a#openMenuBtn{
             display: none;
-            @include media-375(){
+            @include media-740(){
                 position: absolute;
                 width: 83px;
                 height: 83px;
@@ -49,7 +49,7 @@
             }
         }
         nav{
-            @include media-375(){
+            @include media-740(){
                 position: fixed;
                 top: 0;
                 left: 0;
@@ -57,9 +57,10 @@
                 height: 100%;
                 background-color: #A9FBF2;
                 padding-top: pxtovh(65);
-                display: none;
+                transition: top .3s;
+                top: -120%;
                 &.open{
-                    display: block;
+                    top: 0;
                 }
                 &::before{
                     position: absolute;
@@ -75,7 +76,7 @@
             }
             .mobil_product{
                 display: none;
-                @include media-375(){
+                @include media-740(){
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -104,7 +105,7 @@
             }
             .mobil_communities{
                 display: none;
-                @include media-375(){
+                @include media-740(){
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -134,7 +135,7 @@
                 transition: color .2s;
                 &#closeMenuBtn{
                     display: none;
-                    @include media-375(){
+                    @include media-740(){
                         position: absolute;
                         width: 60px;
                         height: 60px;
@@ -149,7 +150,7 @@
                         background-position: 50% 50%;
                     }
                 }
-                @include media-375(){
+                @include media-740(){
                     float: none;
                     margin-right: 0px;
                     text-align: center;
