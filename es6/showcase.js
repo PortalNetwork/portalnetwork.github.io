@@ -58,7 +58,7 @@ new Vue({
         this.showtext = this.hash;
     },
     mounted() {
-        axios.get("../api/showcaseitem.json").then(this.caseSuccess).catch(this.caseFatch);
+        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
         window.Intercom("boot", {
             app_id: "an50zjec"
         });
