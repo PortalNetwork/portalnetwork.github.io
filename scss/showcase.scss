@@ -1,0 +1,32 @@
+@import "_reset.scss";
+@import "./showcase/_mixin.scss";
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a,h1,h2,h3,h4,h5,h6,span,p,a,input,button,div,span{
+    font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+}
+img{
+	display: block;
+}
+a{
+    cursor: pointer;
+}
+html, body{
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.showcase{
+    width: 100%;
+    margin-bottom: 0px;
+}
+@import "./showcase/_header.scss";
+@import "./showcase/_menu.scss";
+@import "./showcase/_selectBar.scss";
+@import "./showcase/_showItem.scss";
+@import "./showcase/_fixedbtn.scss";

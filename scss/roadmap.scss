@@ -63,6 +63,13 @@ $MAIN_WIDTH: 1051px;
     letter-spacing: 0.1px;
     color: gray;
     cursor: pointer;
+    >a{
+      color: gray;
+      transition: color .2s;
+      &:hover{
+        color: #000;
+      }
+    }
   }
 }
 
