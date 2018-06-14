@@ -517,6 +517,14 @@ nav {
     }
 }
 
+.slide {
+    width: 800px;
+    height: 400px;
+    img {
+        // width: 510px;
+    }
+}
+
 .service {
     max-width: $container;
     width: 90%;

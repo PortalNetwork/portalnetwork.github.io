@@ -39,6 +39,23 @@ window.onload = function () {
                 app_id: "an50zjec"
             });
             window.Intercom("update");
+            var slideShow = new ImageFlow();
+            slideShow.init({
+                ImageFlowID: 'slideShow',
+                // circular: true,
+                // reflections: false,
+                // reflectionP: 0.4,
+                // slider: false,
+                // captions: false,
+                // opacity: true,
+                // xStep: 250,
+                // imageFocusM: 1.5,
+                // startID: 3,
+                reflections: false,
+                reflectionP: 0.0,
+                slider: false,
+                captions: false
+            });
         }
     });
 }
