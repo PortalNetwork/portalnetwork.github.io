@@ -15,11 +15,12 @@ new Vue({
         domain: ["p", "o", "r", "t", "a", "l", "n", "e", "t", "w", "o", "r", "k", "w", "e", "b", ".", "e", "t", "h"],
         hash: ["0", "x", "d", "a", "3", "b", "4", "0", "1", "f", "9", "9", "0", "7", "9", "6", "2", "8", "a", "4"],
         showtext: [],
+        isLoad: true,
     },
     computed: {
         caseInfoArr() {
             const CASE = this.showcaseInfo.filter((item, index, array) => {
-                return item.tag === this.selectState[this.selectidx];
+                return item.tag[0] === this.selectState[this.selectidx];
             });
             return CASE;
         },
@@ -33,17 +34,17 @@ new Vue({
         },
         caseSuccess(res) {
             this.showcaseInfo = res.data.result;
-            console.log(res.data.result);
+            this.isLoad = false;
         },
         caseFatch(err) {
             console.error(err);
         },
         demophoto(idx) {
-            if(this.caseInfoArr[idx].demophoto === ""){
-                return `background-image:url('./images/Showcase/WIP.png')`;
-            }else {
-                return `background-image:url('${this.caseInfoArr[idx].demophoto}')`;
-            }
+            const demophoto =  this.caseInfoArr[idx].demophoto === "";
+            const urldefault = `background-image:url('./images/Showcase/WIP.png')`;
+            const url = `background-image:url('${this.caseInfoArr[idx].demophoto}')`;
+            
+            return demophoto ? urldefault : url;
         },
         fixedPopOpen() {
             this.shareOpen = !this.shareOpen;
@@ -59,7 +60,9 @@ new Vue({
         this.showtext = this.hash;
     },
     mounted() {
-        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
+        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase")
+        .then(this.caseSuccess)
+        .catch(this.caseFatch);
         window.Intercom("boot", {
             app_id: "an50zjec"
         });
