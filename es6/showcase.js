@@ -19,7 +19,7 @@ new Vue({
     computed: {
         caseInfoArr() {
             const CASE = this.showcaseInfo.filter((item, index, array) => {
-                return item.tag === this.selectState[this.selectidx]
+                return item.tag === this.selectState[this.selectidx];
             });
             return CASE;
         },
@@ -33,13 +33,13 @@ new Vue({
         },
         caseSuccess(res) {
             this.showcaseInfo = res.data.result;
+            console.log(res.data.result);
         },
         caseFatch(err) {
             console.error(err);
         },
         demophoto(idx) {
-            console.log(this.caseInfoArr[idx].demophoto)
-            if(this.caseInfoArr[idx].demophoto===""){
+            if(this.caseInfoArr[idx].demophoto === ""){
                 return `background-image:url('./images/Showcase/WIP.png')`;
             }else {
                 return `background-image:url('${this.caseInfoArr[idx].demophoto}')`;
