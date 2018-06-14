@@ -1,7 +1,8 @@
 import axios from 'axios';
 import animateScrollTo from 'animated-scroll-to';
+
 function GetRandom(minNum, maxNum) {
-	return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
+    return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 }
 new Vue({
     el: '.showcase',
@@ -18,7 +19,7 @@ new Vue({
     computed: {
         caseInfoArr() {
             const CASE = this.showcaseInfo.filter((item, index, array) => {
-                return item.tag[0] === this.selectState[this.selectidx]
+                return item.tag === this.selectState[this.selectidx]
             });
             return CASE;
         },
@@ -31,18 +32,23 @@ new Vue({
             this.selectidx = idx;
         },
         caseSuccess(res) {
-            this.showcaseInfo = res.data;
+            this.showcaseInfo = res.data.result;
         },
         caseFatch(err) {
             console.error(err);
         },
         demophoto(idx) {
-            return `background-image:url('${this.caseInfoArr[idx].demophoto}')`
+            console.log(this.caseInfoArr[idx].demophoto)
+            if(this.caseInfoArr[idx].demophoto===""){
+                return `background-image:url('./images/Showcase/WIP.png')`;
+            }else {
+                return `background-image:url('${this.caseInfoArr[idx].demophoto}')`;
+            }
         },
         fixedPopOpen() {
             this.shareOpen = !this.shareOpen;
         },
-        menuOpen(){
+        menuOpen() {
             this.m_open = !this.m_open;
         },
         gotoPageTop() {
@@ -52,13 +58,17 @@ new Vue({
     created() {
         this.showtext = this.hash;
     },
-    mounted() { 
-        axios.get("../api/showcaseitem.json").then(this.caseSuccess).catch(this.caseFatch);
+    mounted() {
+        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
         window.Intercom("boot", {
             app_id: "an50zjec"
         });
         window.Intercom("update");
 
-        TweenMax.to("#txt", 3, {text:"portalnetworkweb.eth", delay: 0.4, ease: Power1.easeOut});
+        TweenMax.to("#txt", 3, {
+            text: "portalnetworkweb.eth",
+            delay: 0.4,
+            ease: Power1.easeOut
+        });
     }
 });
