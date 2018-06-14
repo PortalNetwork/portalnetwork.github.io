@@ -74,21 +74,23 @@
 </head>
 
 <body>
-	<div id="app">
-		<div class="header_content" data-aos="fade-down" data-aos-easing="ease-out-back">
-			<h1 class="logo">
+	<div id="app" :class="{active: isMenuOpen}">
+		<a class="menu_btn" @click="toggleMenuFn">
+			<span></span>
+			<!-- <span v-show="!isMenuOpen">
+				<i class="fas fa-bars"></i>
+			</span>
+			<span v-show="isMenuOpen">
+				<i class="fas fa-times"></i>
+			</span> -->
+		</a>
+		<div class="header_content">
+			<h1 class="logo" data-aos="fade-down" data-aos-easing="ease-out-back">
 				<img src="./images/logo/logo@2x.svg" alt="">
 			</h1>
 			<nav>
-				<a class="menu" @click="toggleMenuFn">
-					<span v-show="!isMenuOpen">
-						<i class="fas fa-bars"></i>
-					</span>
-					<span v-show="isMenuOpen">
-						<i class="fas fa-times"></i>
-					</span>
-				</a>
-				<ul :class="['menu_list',{active: isMenuOpen}]">
+				<!-- <ul :class="['menu_list',{active: isMenuOpen}]"> -->
+					<ul class="menu">
 					<li>
 						<a @click="gaSeedPageView('blog')" href="https://blog.portal.network" target="_blank">Blog</a>
 					</li>
@@ -211,100 +213,100 @@
 					<div class="comparison_title">
 						<div class="figure domainregister">
 							<img src="./images/comparison/domainregister.png" alt="">
+							<p class="title_text">Domain Register</p>
 						</div>
-						<p class="title_text">Domain Register</p>
 					</div>
 					<div class="comparison_left">
 						<div class="figure godaddy">
 							<img src="./images/comparison/godaddy.png" alt="">
+							<p class="greenText">GoDaddy</p>
 						</div>
-						<p class="greenText">GoDaddy</p>
 					</div>
-					<div class="comparison_right">
+					<div class="comparison_right">`
 						<div class="figure pnlogo">
 							<img src="./images/comparison/pnlogo.png" alt="">
+							<p>Portal Network</p>
 						</div>
-						<p>Portal Network</p>
 					</div>
 				</li>
 				<li class="comparison_list">
 					<div class="comparison_title">
 						<div class="figure system">
 							<img src="./images/comparison/OS.png" alt="">
+							<p class="title_text">Operating System</p>
 						</div>
-						<p class="title_text">Operating System</p>
 					</div>
 					<div class="comparison_left">
 						<div class="figure windows">
 							<img src="./images/comparison/windows.png" alt="">
+							<p class="greenText">Windows</p>
 						</div>
-						<p class="greenText">Windows</p>
 					</div>
 					<div class="comparison_right">
 						<div class="figure qtum">
 							<img src="./images/comparison/qtu.png" alt="">
+							<p>Qtum</p>
 						</div>
-						<p>Qtum</p>
 					</div>
 				</li>
 				<li class="comparison_list">
 					<div class="comparison_title">
 						<div class="figure storage">
 							<img src="./images/comparison/filestorage.png" alt="">
+							<p class="title_text">File Storage</p>
 						</div>
-						<p class="title_text">File Storage</p>
 					</div>
 					<div class="comparison_left">
 						<div class="figure amazo">
 							<img src="./images/comparison/AWS.png" alt="">
+							<p class="greenText">Amazon Web Services S3</p>
 						</div>
-						<p class="greenText">Amazon Web Services S3</p>
 					</div>
 					<div class="comparison_right">
 						<div class="figure ipfs">
 							<img src="./images/comparison/ipfs.png" alt="">
+							<p>IPFS</p>
 						</div>
-						<p>IPFS</p>
 					</div>
 				</li>
 				<li class="comparison_list">
 					<div class="comparison_title">
 						<div class="figure data">
 							<img src="./images/comparison/data.png" alt="">
+							<p class="title_text">Data Storage & Management</p>
 						</div>
-						<p class="title_text">Data Storage & Management</p>
 					</div>
 					<div class="comparison_left">
 						<div class="figure oracle">
 							<img src="./images/comparison/oracle.png" alt="">
+							<p class="greenText">Oracle</p>
 						</div>
-						<p class="greenText">Oracle</p>
 					</div>
 					<div class="comparison_right">
 						<div class="figure bluzelle">
 							<img src="./images/comparison/bluzelle.png" alt="">
+							<p>Bluzelle</p>
 						</div>
-						<p>Bluzelle</p>
 					</div>
 				</li>
 				<li class="comparison_list">
 					<div class="comparison_title">
 						<div class="figure appweb">
 							<img src="./images/comparison/app_web.png" alt="">
+							<p class="title_text">Social Platform</p>
 						</div>
-						<p class="title_text">Social Platform</p>
 					</div>
 					<div class="comparison_left">
 						<div class="figure facebook">
 							<img src="./images/comparison/facebook.png" alt="">
+							<p class="greenText">Facebook</p>
 						</div>
-						<p class="greenText">Facebook</p>
 					</div>
 					<div class="comparison_right">
 						<div class="figure status">
 							<img src="./images/comparison/status.png" alt="">
+							<p>Status</p>
 						</div>
-						<p>Status</p>
 					</div>
 				</li>
 			</ul>
