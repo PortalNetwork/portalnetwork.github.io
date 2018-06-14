@@ -23,6 +23,7 @@ a.gotoTopbtn{
         height: 68px;
         background-image: url("../../images/Showcase/menu_btn@2x.svg");
         background-size: 100% 100%;
+        border-radius: 50%;
         &.open{
             background-image: url("../../images/Showcase/menu_btn_x@1x.svg");
         }
@@ -76,11 +77,14 @@ a.gotoTopbtn{
                 align-items: center; 
                 >a{
                     color: #000;
+                    &.fb {
+                        img {
+                            height: 15px;
+                        }
+                    }
                     >img{
                         margin: 0 auto;
-                        width: 16px;
-                        height: auto;
-                        height: auto;
+                        height: 10px;
                     }
                 }
             }
