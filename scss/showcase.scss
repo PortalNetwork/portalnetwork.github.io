@@ -23,6 +23,7 @@ html, body{
 
 .showcase{
     width: 100%;
+    height: 100%;
     margin-bottom: 0px;
 }
 @import "./showcase/_header.scss";
@@ -30,3 +31,35 @@ html, body{
 @import "./showcase/_selectBar.scss";
 @import "./showcase/_showItem.scss";
 @import "./showcase/_fixedbtn.scss";
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+  
+    margin: 20px auto;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+  }
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }
+  .loading_page{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000000,0.9);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: #fff;
+    }
+  }

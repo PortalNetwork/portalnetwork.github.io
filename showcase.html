@@ -45,6 +45,14 @@
     <![endif]-->
     
     <div class="showcase">
+        <div class="loading_page" v-if="isLoad">
+            <div>
+                <div class="spinner"></div>
+                <p>loading...</p>
+            </div>
+        </div>
+
+
         <header class="menu_bar">
             <div class="mid">
                 <a class="logo"></a>
