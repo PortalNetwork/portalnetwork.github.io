@@ -8,6 +8,7 @@ article.banner{
         height: 768px;
         @include media-1366(){
             height: pxtovw(768);
+            max-width: 980px;
         }
         @include media-740(){
             padding-top: 83px;
@@ -30,6 +31,7 @@ article.banner{
             top: pxtovw(167);
             width: pxtovw(704);
             height: pxtovw(528);
+            left: pxtovw(-430);
         }
         @include media-740(){ 
             position: static;
@@ -49,7 +51,6 @@ article.banner{
         @include media-1366(){
             width: pxtovw(594);
             top: pxtovw(310);
-            right: pxtovw(0);
         }
         @include media-740(){ 
             position: static;
@@ -105,7 +106,6 @@ article.banner{
             color: #ffffff;
             margin: 48px auto 0 auto;
             border: 2px solid transparent;
-            transition: all .5s;
             &:hover {
                 color: #F76B1C;
                 border: 2px solid #F76B1C;
