@@ -33,6 +33,7 @@
     "hoek": "^5.0.3",
     "imagemin-pngquant": "^5.0.1",
     "vinyl-source-stream": "^2.0.0",
+    "vue-carousel-3d": "^0.1.20",
     "watchify": "^3.9.0"
   }
 }

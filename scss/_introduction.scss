@@ -1,0 +1,43 @@
+@import "_var.scss";
+
+.introduction {
+	max-width: $container;
+	width: 90%;
+	margin: 0 auto 80px auto;
+}
+
+.introduction_info {
+	text-align: center;
+	h3 {
+		font-size: 30px;
+		line-height: 38px;
+		text-align: center;
+		color: #00D5BF;
+		margin-bottom: 32px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		letter-spacing: 1px;
+		margin-bottom: 47px;
+	}
+	a {
+		display: inline-block;
+		width: 200px;
+		height: 60px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #3442B0;
+		line-height: 60px;
+		border-radius: 100px;
+		background: linear-gradient(-208deg, #00F7CB 0%, #00D7EC 100%);
+		transition: all .3s;
+		border: solid 2px transparent;
+		&:hover {
+			border-color: #fff;
+			color: #fff;
+			background: transparent;
+		}
+	}
+}

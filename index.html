@@ -14,11 +14,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./css/imageflow.css">
 	<link rel="stylesheet" href="./css/index.css?321312312">
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="./js/intercom.js"></script>
-	<script src="./js/imageflow.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
 	  crossorigin="anonymous"></script>
@@ -87,12 +85,12 @@
 			</span> -->
 		</a>
 		<div class="header_content">
-			<h1 class="logo" data-aos="fade-down" data-aos-easing="ease-out-back">
+			<h1 class="logo">
 				<img src="./images/logo/logo@2x.svg" alt="">
 			</h1>
 			<nav>
 				<!-- <ul :class="['menu_list',{active: isMenuOpen}]"> -->
-					<ul class="menu">
+				<ul class="menu">
 					<li>
 						<a @click="gaSeedPageView('blog')" href="https://blog.portal.network" target="_blank">Blog</a>
 					</li>
@@ -159,16 +157,20 @@
 				</li>
 			</ul>
 		</div>
-		<div class="banner">
-			<div class="banner_info">
+		<div class="introduction">
+			<div class="introduction_info">
 				<h3>Build your own decentralized website.</h3>
 				<p>There are more decentralized websites, check more use cases at our gallery.</p>
 				<a href="javascript:;">Learn more</a>
-				<div id="slideShow" class="slide">
-					<img src="/images/sildeShow/showcase1.png" alt="">
-					<img src="/images/sildeShow/showcase2.png" alt="">
-					<img src="/images/sildeShow/showcase3.png" alt="">
-				</div>
+			</div>
+			<div class="introduction_slider">
+				<!-- <carousel-3d>
+					<slide v-for="(slide, i) in slides" :index="i" :key="i">
+						<template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
+							<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
+						</template>
+					</slide>
+				</carousel-3d> -->
 			</div>
 		</div>
 		<div class="service">
@@ -209,19 +211,18 @@
 				<div class="comparison_header_left">
 					<img src="./images/comparison/Centralized.png" alt="">
 					<h4>Centralized</h4>
+					<span class="arrow"></span>
 				</div>
 				<div class="comparison_header_right">
 					<img src="./images/comparison/Decentralized.png" alt="">
 					<h4>Decentralized</h4>
+					<span class="arrow"></span>
 				</div>
 			</div>
 			<ul>
 				<li class="comparison_list">
-					<div class="comparison_title">
-						<div class="figure domainregister">
-							<img src="./images/comparison/domainregister.png" alt="">
-							<p class="title_text">Domain Register</p>
-						</div>
+					<div class="comparison_caption domainregister">
+						<img src="./images/comparison/domainregister.png" alt="">
 					</div>
 					<div class="comparison_left">
 						<div class="figure godaddy">
@@ -237,11 +238,8 @@
 					</div>
 				</li>
 				<li class="comparison_list">
-					<div class="comparison_title">
-						<div class="figure system">
-							<img src="./images/comparison/OS.png" alt="">
-							<p class="title_text">Operating System</p>
-						</div>
+					<div class="comparison_caption system">
+						<img src="./images/comparison/OS.png" alt="">
 					</div>
 					<div class="comparison_left">
 						<div class="figure windows">
@@ -250,18 +248,23 @@
 						</div>
 					</div>
 					<div class="comparison_right">
-						<div class="figure qtum">
+						<div class="wan">
+							<img src="./images/comparison/wan.png" alt="">
+							<p>Wanchain</p>
+						</div>
+						<div class="qtum">
 							<img src="./images/comparison/qtu.png" alt="">
 							<p>Qtum</p>
+						</div>
+						<div class="eth">
+							<img src="./images/comparison/eth.png" alt="">
+							<p>Ethereum</p>
 						</div>
 					</div>
 				</li>
 				<li class="comparison_list">
-					<div class="comparison_title">
-						<div class="figure storage">
-							<img src="./images/comparison/filestorage.png" alt="">
-							<p class="title_text">File Storage</p>
-						</div>
+					<div class="comparison_caption storage">
+						<img src="./images/comparison/filestorage.png" alt="">
 					</div>
 					<div class="comparison_left">
 						<div class="figure amazo">
@@ -277,11 +280,8 @@
 					</div>
 				</li>
 				<li class="comparison_list">
-					<div class="comparison_title">
-						<div class="figure data">
-							<img src="./images/comparison/data.png" alt="">
-							<p class="title_text">Data Storage & Management</p>
-						</div>
+					<div class="comparison_caption storage">
+						<img src="./images/comparison/data.png" alt="">
 					</div>
 					<div class="comparison_left">
 						<div class="figure oracle">
@@ -297,11 +297,8 @@
 					</div>
 				</li>
 				<li class="comparison_list">
-					<div class="comparison_title">
-						<div class="figure appweb">
-							<img src="./images/comparison/app_web.png" alt="">
-							<p class="title_text">Social Platform</p>
-						</div>
+					<div class="comparison_caption appweb">
+						<img src="./images/comparison/app_web.png" alt="">
 					</div>
 					<div class="comparison_left">
 						<div class="figure facebook">

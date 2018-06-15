@@ -1,4 +1,9 @@
 @import "_reset.scss";
+@import "_var.scss";
+
+@import "_hero.scss";
+@import "_introduction.scss";
+
 * {
     padding: 0px;
     margin: 0px;
@@ -22,26 +27,6 @@ html,
 body {
     width: 100%;
     height: 100%;
-    min-height: 100%;
-}
-
-@function pxtovw($number) {
-    @return $number * 100 / 1441+vw;
-}
-
-@function pxtopercent($number, $baseline) {
-    @return ($number / $baseline) * 100+'%';
-}
-
-$container: 1100px;
-$pad: 980px;
-$mob: 768px;
-%clear {
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
 }
 
 #app {
@@ -187,196 +172,6 @@ nav {
     }
 }
 
-.hero {
-    max-width: $container;
-    padding: 0 20px;
-    margin: 200px auto 400px auto;
-    box-sizing: border-box;
-    position: relative;
-    @media screen and (max-width: $mob) {
-        width: 100%;
-        padding-bottom: 0;
-        margin: 60px auto 80px auto;
-    }
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-}
-
-.hero_info {
-    max-width: 546px;
-    float: left;
-    position: relative;
-    @media screen and (max-width: $mob) {
-        max-width: 100%;
-        width: 90%;
-        margin: 0 auto;
-        float: none;
-        text-align: center;
-    }
-    h2 {
-        font-size: 50px;
-        line-height: 80px;
-        color: #fff;
-        margin-bottom: 15px;
-        @media screen and (max-width: $mob) {
-            width: 80%;
-            margin: 0 auto 30px auto;
-            font-size: 35px;
-            line-height: 45px;
-        }
-        span {
-            display: block;
-            font-size: 50px;
-            line-height: 80px;
-            color: #fff;
-            @media screen and (max-width: $mob) {
-                font-size: 35px;
-                line-height: 45px;
-            }
-        }
-    }
-    p {
-        font-size: 20px;
-        line-height: 30px;
-        color: #fff;
-        margin-bottom: 45px;
-        @media screen and (max-width: $mob) {
-            width: 80%;
-            margin: 0 auto;
-            font-size: 22px;
-            line-height: 30px;
-            margin-bottom: 20px;
-        }
-    }
-    >span {
-        display: block;
-        font-size: 14px;
-        line-height: 19px;
-        color: #4A4A4A;
-        padding-left: 17px;
-    }
-}
-
-#mc_embed_signup_scroll {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin-bottom: 20px;
-    @media screen and (max-width: $mob) {
-        width: 100%;
-    }
-    input.email {
-        width: 300px;
-        height: 60px;
-        font-size: 20px;
-        border: 0;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        float: left;
-        padding-left: 15px;
-        @media screen and (max-width: $mob) {
-            width: 70%;
-            font-size: 15px;
-        }
-    }
-    .clearbox {
-        display: block;
-        float: left;
-        @media screen and (max-width: $mob) {
-            width: 30%;
-        }
-        >input {
-            display: block;
-            font-size: 16px;
-            width: 150px;
-            height: 60px;
-            float: left;
-            color: #fff;
-            transition: color .5s;
-            background: linear-gradient(204.32deg, #00D7F7 0%, #0027EC 100%);
-            border: 0;
-            border-top-right-radius: 30px;
-            border-bottom-right-radius: 30px;
-            &:hover {
-                color: #00D5BF;
-            }
-            @media screen and (max-width: 760px) {
-                width: 100%;
-                font-size: 15px;
-            }
-        }
-    }
-    p {
-        font-family: Gotham;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.67;
-        letter-spacing: 2px;
-        color: #ffffff;
-        padding-top: 44px; // @media screen and (max-width: 1441px) {
-        //     font-size: pxtovw(18);
-        //     padding-top: pxtovw(44);
-        // }
-    }
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 192px;
-        height: 56px;
-        object-fit: contain;
-        border-radius: 100px;
-        background-color: #324c9a;
-        font-family: Gotham;
-        font-size: 16px;
-        letter-spacing: 1px;
-        color: #ffffff;
-        margin-top: 48px; // @media screen and (max-width: 1441px) {
-        //     width: pxtovw(192);
-        //     height: pxtovw(56);
-        //     margin-top: pxtovw(48);
-        //     font-size: pxtovw(16);
-        // }
-        @media screen and (max-width: $mob) {
-            width: 34%;
-            height: 36px;
-        }
-    }
-}
-
-.hero_img {
-    max-width: 785px; // width: 785px;
-    // height: 574px;
-    // background-image: url('../images/heroimage/heroimg.png');
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    position: absolute;
-    top: -77px;
-    right: -247px;
-    z-index: 0;
-    @media screen and (max-width: $mob) {
-        position: relative;
-        top: auto;
-        right: auto;
-        width: 90%;
-        margin: 0 auto 40px auto;
-    }
-    img {
-        width: 100%;
-    } // @media screen and (max-width: $mob) {
-    //     position: relative;
-    //     top: auto;
-    //     right: auto;
-    //     background-size: auto 100%;
-    //     width: 100%;
-    //     margin: 0 auto 40px auto;
-    //     background-position: top center;
-    // }
-}
-
 .products {
     max-width: $container;
     width: 90%;
@@ -472,56 +267,6 @@ nav {
                 }
             }
         }
-    }
-}
-
-.banner {
-    max-width: $container;
-    width: 90%;
-    margin: 0 auto 80px auto;
-}
-
-.banner_info {
-    text-align: center;
-    h3 {
-        font-size: 30px;
-        line-height: 38px;
-        text-align: center;
-        color: #00D5BF;
-        margin-bottom: 32px;
-    }
-    p {
-        font-size: 20px;
-        line-height: 30px;
-        color: #fff;
-        letter-spacing: 1px;
-        margin-bottom: 47px;
-    }
-    a {
-        display: inline-block;
-        width: 200px;
-        height: 60px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #3442B0;
-        line-height: 60px;
-        border-radius: 100px;
-        background: linear-gradient(-208deg, #00F7CB 0%, #00D7EC 100%);
-        transition: all .3s;
-        border: solid 2px transparent;
-        &:hover {
-            border-color: #fff;
-            color: #fff;
-            background: transparent;
-        }
-    }
-}
-
-.slide {
-    width: 800px;
-    height: 400px;
-    img {
-        // width: 510px;
     }
 }
 
@@ -623,38 +368,59 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 83.8%;
-        margin: 0 auto;
+        width: 88%;
+        margin: 0 auto 60px auto;
     }
     .comparison_header_left {
-        width: 24%;
+        width: 312px;
         order: -1;
-        &:after {
-            content: "";
-            display: block;
-            background-image: url("/images/comparison/arrow1.png");
-            width: 34px;
-            height: 20px;
-        }
         img {
             width: 147px;
             margin: 0 auto 20px auto;
         }
     }
     .comparison_header_right {
-        width: 24%;
+        width: 312px;
         img {
             width: 195px;
             margin: 0 auto 20px auto;
         }
     }
+    .arrow {
+        display: block;
+        background: url("/images/comparison/arrow2.png") top left no-repeat;
+        background-size: 100% auto;
+        width: 17px;
+        height: 10px;
+        position: relative;
+        margin: 40px auto 0 auto;
+        &:before {
+            content: "";
+            display: block;
+            background: url("/images/comparison/arrow3.png") top left no-repeat;
+            background-size: 100% auto;
+            width: 17px;
+            height: 10px;
+            position: absolute;
+            top: -10px;
+        }
+        &:after {
+            content: "";
+            display: block;
+            background: url("/images/comparison/arrow1.png") top left no-repeat;
+            background-size: 100% auto;
+            width: 17px;
+            height: 10px;
+            position: absolute;
+            bottom: -10px;
+        }
+    }
     h3 {
         font-size: 23px;
         font-weight: bold;
-        line-height: 31px;
         text-align: center;
         color: #00D5BF;
-        padding-top: 170px;
+        padding-top: 123px;
     }
     h4 {
         font-size: 16px;
@@ -664,7 +430,7 @@ nav {
         text-align: center;
     }
     >ul {
-        width: 83.8%;
+        width: 88%;
         margin: 0 auto;
         @media screen and (max-width: $mob) {
             width: 100%;
@@ -674,6 +440,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 40px;
         @media screen and (max-width: $mob) {
             display: block;
             &:after {
@@ -683,209 +450,19 @@ nav {
             }
         }
     }
-    .comparison_left {
-        background: url('../images/comparison/oval_base.png') center center no-repeat;
-        width: 28.3%;
-        height: 187px;
-        background-size: 100% auto;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        position: relative;
-        order: -1;
-        @media screen and (max-width: $mob) {
-            width: 48%;
-            float: left;
-            height: 119px;
-        }
-        .figure {
-            position: absolute;
-            top: 30px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            @media screen and (max-width: $mob) {
-                top: -40px;
-            }
-        }
-    }
-    .comparison_right {
-        background: url('../images/comparison/polygon_base.png') center center no-repeat;
-        width: 28.3%;
-        height: 187px;
-        background-size: 100% auto;
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        position: relative;
-        @media screen and (max-width: $mob) {
-            width: 48%;
-            float: right;
-            height: 119px;
-        }
-        .figure {
-            position: absolute;
-            top: 50px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            @media screen and (max-width: $mob) {
-                top: -60px;
-            }
-        }
-    }
-    .comparison_title {
-        width: 21.4%;
-        height: 187px;
-        position: relative;
-        @media screen and (max-width: $mob) {
-            max-width: 236px;
-            width: 100%;
-            margin: 0 auto 65px auto;
-        }
-        .figure {
-            margin-top: 40px;
-            @media screen and (max-width: $mob) {
-                margin-top: 0;
-                position: relative;
-            }
-            &:before {
-                display: none;
-                @media screen and (max-width: $mob) {
-                    content: "Domain Register";
-                    display: block;
-                    font-size: 14px;
-                    font-weight: bold;
-                    line-height: 23px;
-                    color: #fff;
-                    text-align: center;
-                    bottom: 40px;
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                }
-            }
-        }
-        p {
-            @media screen and (max-width: $mob) {
-                display: none;
-            }
-        }
-    }
     .figure {
-        &.godaddy {
-            top: 8px;
-            img {
-                width: 68px;
-                margin: 0 auto 18px auto;
-            }
-        }
-        &.domainregister {
-            &:before {
-                content: "Domain Register";
-            }
-            img {
-                width: 236px;
-            }
-        }
-        &.pnlogo {
-            top: 20px;
-            img {
-                width: 105px;
-                margin: 0 auto 16px auto;
-            }
-        }
-        &.windows {
-            top: 40px;
-            img {
-                width: 75px;
-                margin: 0 auto 20px auto;
-            }
-        }
-        &.system {
-            &:before {
-                content: "Operating System";
-            }
-            img {
-                width: 236px;
-            }
-        }
-        &.qtum {
-            img {
-                width: 85px;
-            }
-        }
-        &.amazo {
-            top: 40px;
-            img {
-                width: 89px;
-                margin: 0 auto 29px auto;
-            }
-        }
-        &.storage {
-            &:before {
-                content: "File Storage";
-            }
-            img {
-                width: 236px;
-            }
-        }
-        &.ipfs {
-            top: 26px;
-            img {
-                width: 75px;
-                margin: 0 auto 18px auto;
-            }
-        }
-        &.oracle {
-            top: 86px;
-            img {
-                width: 157px;
-                margin: 0 auto 26px auto;
-            }
-        }
-        &.data {
-            &:before {
-                content: "Data Storage & Management Oracle";
-            }
-            img {
-                width: 236px;
-            }
-        }
-        &.bluzelle {
-            top: 22px;
-            img {
-                width: 89px;
-                margin: 0 auto 14px auto;
-            }
-        }
-        &.facebook {
-            top: 50px;
-            img {
-                width: 63px;
-                margin: 0 auto 24px auto;
-            }
-        }
-        &.appweb {
-            &:before {
-                content: "Social Platform";
-            }
-            img {
-                width: 236px;
-            }
-        }
-        &.status {
-            top: 46px;
-            img {
-                width: 64px;
-                margin: 0 auto 22px auto;
-            }
-        }
-        img {
-            max-width: 100%;
-            margin: 0 auto;
-        }
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+		margin: auto;
+		img {
+			max-width: 100%;
+		}
     }
     p {
         font-size: 12px;
+        line-height: 1;
         font-weight: bold;
         color: #fff;
         text-align: center;
@@ -893,18 +470,199 @@ nav {
     .greenText {
         color: #11EBD4;
     }
-    .title_text {
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 23px;
-        color: #fff;
-        text-align: center;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 68px;
-        @media screen and (max-width: $mob) {
-            font-size: 17px;
+}
+
+/* comparison caption */
+.comparison_caption {
+	position: relative;
+	margin-top: -55px;
+	&:before {
+		content: "";
+		font-size: 14px;
+		line-height: 1;
+		font-weight: bold;
+		color: #fff;
+		text-align: center;
+		position: absolute;
+		left: 13px;
+		right: 0;
+		top: 80px;
+		margin: auto;
+	}
+	&.domainregister {
+		&:before {
+			content: "Domain Register";
+		}
+		img {
+			width: 236px;
+		}
+	}
+	&.system {
+		&:before {
+			content: "Operating System";
+		}
+		img {
+			width: 236px;
+		}
+	}
+	&.storage {
+		&:before {
+			content: "File Storage";
+		}
+		img {
+			width: 236px;
+		}
+	}
+	&.data {
+		&:before {
+			content: "Data Storage & Management Oracle";
+		}
+		img {
+			width: 236px;
+		}
+	}
+	&.appweb {
+		&:before {
+			content: "Social Platform";
+		}
+		img {
+			width: 236px;
+		}
+	}
+}
+
+.comparison_caption_text {
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	@media screen and (max-width: $mob) {
+		font-size: 17px;
+	}
+}
+
+/* comparison left area */
+.comparison_left {
+    position: relative;
+    order: -1;
+    &:before {
+        content: "";
+        display: block;
+        width: 312px;
+        height: 110px;
+        background: url('../images/comparison/oval_base.png') bottom center no-repeat;
+        background-size: 100% auto;
+        padding-top: 70px;
+    }
+    @media screen and (max-width: $mob) {
+        width: 48%;
+        float: left;
+        height: 119px;
+    }
+    .godaddy {
+        top: 8px;
+        img {
+            width: 68px;
+            margin: 0 auto 18px auto;
+        }
+    }
+    .windows {
+        top: 9px;
+        img {
+            width: 75px;
+            margin: 0 auto 20px auto;
+        }
+    }
+    .amazo {
+        top: 30px;
+        img {
+            width: 89px;
+            margin: 0 auto 29px auto;
+        }
+    }
+    .oracle {
+        top: 60px;
+        img {
+            width: 157px;
+            margin: 0 auto 26px auto;
+        }
+    }
+    .facebook {
+        top: 24px;
+        img {
+            width: 63px;
+            margin: 0 auto 24px auto;
+        }
+    }
+}
+
+/* comparison right area */
+.comparison_right {
+	position: relative;
+	max-height: 180px;
+    &:before {
+        content: "";
+        display: block;
+        width: 313px;
+        height: 120px;
+        background: url('../images/comparison/polygon_base.png') bottom center no-repeat;
+        background-size: 100% auto;
+        padding-top: 60px;
+	}
+    .pnlogo {
+        top: 14px;
+        img {
+            width: 105px;
+            margin: 0 auto 16px auto;
+        }
+	}
+	.wan {
+		position: absolute;
+		top: 16px;
+		left: 37px;
+		img {
+			width: 66px;
+			margin: 0 auto 20px auto;
+		}
+	}
+	.qtum {
+		position: absolute;
+		top: 13px;
+		left: 0;
+		right: 0;
+		img {
+			width: 85px;
+			margin: 0 auto 22px auto;
+		}
+	}
+    .eth {
+		position: absolute;
+		top: 15px;
+		right: 55px;
+        img {
+			height: 82px;
+			margin: 0 auto 16px auto;
+        }
+    }
+    .ipfs {
+        top: 16px;
+        img {
+            width: 75px;
+            margin: 0 auto 18px auto;
+        }
+    }
+    .bluzelle {
+        top: 8px;
+        img {
+            width: 89px;
+            margin: 0 auto 14px auto;
+        }
+    }
+    .status {
+        top: 36px;
+        img {
+            width: 64px;
+            margin: 0 auto 22px auto;
         }
     }
 }

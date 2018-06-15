@@ -1,3 +1,5 @@
+
+
 function getUrl(params) {
 	var strUrl = location.search;
 	var getPara, ParaVal;
@@ -19,7 +21,7 @@ window.onload = function () {
         el: '#app',
         data: {
             isMenuOpen : false
-        },
+        },   
         methods: {
             toggleMenuFn() {
                 this.isMenuOpen = !this.isMenuOpen;
@@ -35,27 +37,11 @@ window.onload = function () {
         },
         mounted() { 
             AOS.init();
+            Vue.use(Carousel3d);
             window.Intercom("boot", {
                 app_id: "an50zjec"
             });
             window.Intercom("update");
-            var slideShow = new ImageFlow();
-            slideShow.init({
-                ImageFlowID: 'slideShow',
-                // circular: true,
-                // reflections: false,
-                // reflectionP: 0.4,
-                // slider: false,
-                // captions: false,
-                // opacity: true,
-                // xStep: 250,
-                // imageFocusM: 1.5,
-                // startID: 3,
-                reflections: false,
-                reflectionP: 0.0,
-                slider: false,
-                captions: false
-            });
         }
     });
 }
