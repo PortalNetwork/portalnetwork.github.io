@@ -1,5 +1,3 @@
-
-
 function getUrl(params) {
 	var strUrl = location.search;
 	var getPara, ParaVal;
@@ -16,12 +14,18 @@ function getUrl(params) {
 	return aryPara;
 }
 
+import { Carousel3d, Slide } from 'vue-carousel-3d';
+Vue.use(Carousel3d);
 window.onload = function () {
     new Vue({
         el: '#app',
         data: {
             isMenuOpen : false
-        },   
+        },
+        components: {
+            Carousel3d,
+            Slide
+        },
         methods: {
             toggleMenuFn() {
                 this.isMenuOpen = !this.isMenuOpen;
