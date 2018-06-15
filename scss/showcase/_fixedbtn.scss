@@ -14,6 +14,7 @@ a.gotoTopbtn{
     bottom: 170px;
     width: 68px;
     height: 68px;
+    z-index: 11;
     @include media-740(){
         display: none;
     }
@@ -77,14 +78,8 @@ a.gotoTopbtn{
                 align-items: center; 
                 >a{
                     color: #000;
-                    &.fb {
-                        img {
-                            height: 15px;
-                        }
-                    }
                     >img{
                         margin: 0 auto;
-                        height: 10px;
                     }
                 }
             }

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="23px" height="19px" viewBox="0 0 23 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>sm_medium@3x</title>
+    <title>sm_medium@2x</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Showcase" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="popup-menu" transform="translate(-190.000000, -159.000000)">
-            <g id="menu" transform="translate(11.500000, 43.000000)">
-                <g id="socialm" transform="translate(58.000000, 115.892857)">
+        <g id="popup-menu" transform="translate(-189.000000, -244.000000)">
+            <g id="menu" transform="translate(11.500000, 71.000000)">
+                <g id="socialm" transform="translate(58.000000, 172.892857)">
                     <g id="Group-15" transform="translate(0.000000, 0.037243)">
                         <g id="Group" transform="translate(0.384766, 0.000000)">
-                            <g id="sm_medium" transform="translate(119.132518, 0.779489)">
+                            <g id="sm_medium" transform="translate(119.132518, 0.482614)">
+                                <rect id="Rectangle-4" fill="#FFFFFF" x="0.468931234" y="0" width="22" height="18"></rect>
                                 <path d="M3.48288619,3.49472762 C3.50893982,3.22985956 3.41093436,2.9680028 3.21894105,2.78970933 L1.26394514,0.362609515 L1.26394514,0 L7.33419647,0 L12.0261623,10.6048854 L16.1511574,0 L21.9378625,0 L21.9378625,0.362609515 L20.2662911,2.01430213 C20.1222656,2.12747645 20.0508008,2.31354908 20.0806285,2.49761419 L20.0806285,14.6333642 C20.0508008,14.8175548 20.1222656,15.0035019 20.2662911,15.1166763 L21.898782,16.7684943 L21.898782,17.1309784 L13.6878723,17.1309784 L13.6878723,16.7684943 L15.378923,15.0764002 C15.5451062,14.9052586 15.5451062,14.854945 15.5451062,14.5930882 L15.5451062,4.78381072 L10.8434007,17.0907024 L10.2080088,17.0907024 L4.73406896,4.78381072 L4.73406896,13.0319852 C4.68841424,13.3787855 4.80017699,13.7279696 5.03709454,13.9786595 L7.2364345,16.7280929 L7.2364345,17.0907024 L1,17.0907024 L1,16.7280929 L3.1994617,13.9786595 C3.43467481,13.7274678 3.53986328,13.3760251 3.48288619,13.0319852 L3.48288619,3.49472762 Z" id="Fill-1" fill="#000000"></path>
-                                <rect id="Rectangle-4" x="0.468931234" y="0" width="22" height="18"></rect>
                             </g>
                         </g>
                     </g>
