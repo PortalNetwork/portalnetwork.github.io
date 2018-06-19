@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="380px" height="159px" viewBox="0 0 380 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>menu_bar@1x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M365.498878,120.730315 L375.698918,128.843702 L365.498878,134.393409 L365.498878,144.18511 C365.498878,149.707957 361.021725,154.18511 355.498878,154.18511 L15.7035945,154.18511 C10.180747,154.18511 5.70359453,149.707957 5.70359453,144.18511 L5.70359453,15.1851096 C5.70359453,9.66226211 10.180747,5.18510961 15.7035945,5.18510961 L355.498878,5.18510961 C361.021725,5.18510961 365.498878,9.66226211 365.498878,15.1851096 L365.498878,120.730315 Z" id="path-1"></path>
+        <filter x="-2.0%" y="-5.0%" width="104.1%" height="110.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Showcase" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="popup-menu" transform="translate(-13.000000, -128.000000)">
+            <g id="menu" transform="translate(11.500000, 71.000000)">
+                <g id="Group-11" transform="translate(0.921875, 56.000000)">
+                    <g id="menu_bar" transform="translate(0.000000, 0.703125)">
+                        <g id="Combined-Shape">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <rect id="Rectangle" x="0.703594533" y="0.185109608" width="380" height="159"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

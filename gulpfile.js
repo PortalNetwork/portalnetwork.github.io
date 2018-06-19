@@ -1,21 +1,13 @@
 "use strict";
 const gulp = require('gulp'),
-    path = require('path'),
-    fs = require("fs"),
-    concat = require('gulp-concat'),
     changed = require('gulp-changed'),
-    rename = require("gulp-rename"),
     sass = require('gulp-sass'),
-    notify = require("gulp-notify"),
     connect = require('gulp-connect'),
-    livereload = require('gulp-livereload'),
-    uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     source = require('vinyl-source-stream'),    
     gutil = require('gulp-util'),
     browserify = require('browserify'),
     babelify = require('babelify'),
-    watchify = require('watchify'),
     Proxy = require('gulp-api-proxy');
 
 /* Server無法重新整理時改 port 試試看 */
@@ -45,6 +37,7 @@ gulp.task('js', () => {
     let files = [
         'index.js',
         'roadmap.js',
+        'showcase.js',
     ];
     files.map((obj, idx) => {
         browserify({ debug: true })
@@ -78,21 +71,21 @@ gulp.task('sass',()=> {
 	.pipe(connect.reload())
 });
 
-/*Images*/
-gulp.task('images', ()=>{
-    let src = 'images-src/**/*.{jpg,png,gif,ico, JPG}';
-    let tar = 'images';
-    const imagemin = require('gulp-imagemin');
-    return gulp.src(src)
-    .pipe(changed(tar))
-    .pipe(imagemin([
-        require('imagemin-pngquant')(),
-        require('imagemin-jpegtran')({quality:70}),
-        require('imagemin-gifsicle')({optimizationLevel:2}),
-    ]))
-    .pipe(gulp.dest(tar))
-	.pipe(connect.reload())
-});
+// /*Images*/
+// gulp.task('images', ()=>{
+//     let src = 'images-src/**/*.{jpg, png, gif, ico}';
+//     let tar = 'images';
+//     const imagemin = require('gulp-imagemin');
+//     return gulp.src(src)
+//     .pipe(changed(tar))
+//     .pipe(imagemin([
+//         require('imagemin-pngquant')(),
+//         require('imagemin-jpegtran')({quality:70}),
+//         require('imagemin-gifsicle')({optimizationLevel:2}),
+//     ]))
+//     .pipe(gulp.dest(tar))
+// 	.pipe(connect.reload())
+// });
 
 
 
@@ -100,9 +93,9 @@ gulp.task('images', ()=>{
 gulp.task('watch',()=> {
     gulp.watch('./*.html', ['html']);
     gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('images-src/**/*.{jpg,png,gif,ico}', ['images']);
+    // gulp.watch('images-src/**/*.{jpg,png,gif,ico}', ['images']);
     gulp.watch('es6/**/*.js', ['js']);
 });
 
 
-gulp.task('default', ['connect','html' , 'js', 'sass', 'images' , 'watch']);
+gulp.task('default', ['connect','html' , 'js', 'sass' , 'watch']);

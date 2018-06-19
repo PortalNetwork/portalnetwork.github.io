@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="19px" viewBox="0 0 23 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>sm_facebook@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Showcase" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="popup-menu" transform="translate(-307.000000, -244.000000)">
+            <g id="menu" transform="translate(11.500000, 71.000000)">
+                <g id="socialm" transform="translate(58.000000, 172.892857)">
+                    <g id="Group-15" transform="translate(0.000000, 0.037243)">
+                        <g id="Group" transform="translate(0.384766, 0.000000)">
+                            <g id="sm_facebook" transform="translate(236.842207, 0.482614)">
+                                <g id="fb">
+                                    <rect id="Rectangle-4" fill="#FFFFFF" x="0.683469236" y="0" width="22" height="18"></rect>
+                                    <path d="M12.8759766,17.6505094 L12.8759766,9.83037114 L15.5002228,9.83037114 L15.8934428,6.78211448 L12.8785424,6.78211448 L12.8785424,4.83782451 C12.8785424,3.95259846 13.1203759,3.35539161 14.3911243,3.35539161 L16.0024923,3.35539161 L16.0024923,0.633000772 C15.2211841,0.548968444 14.4360271,0.507914483 13.6502286,0.511121823 C11.3204163,0.511121823 9.73214115,1.93325672 9.73214115,4.53569301 L9.73214115,6.78083154 L7.10212173,6.78083154 L7.10212173,9.8290882 L9.73214115,9.8290882 L9.73214115,17.6505094 L12.8759766,17.6505094 Z" id="Fill-21" fill="#000000"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
