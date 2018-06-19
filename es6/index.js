@@ -15,14 +15,14 @@ function getUrl() {
 }
 
 import { Carousel3d, Slide } from 'vue-carousel-3d';
+import { CLIENT_RENEG_WINDOW } from 'tls';
 
 Vue.use(Carousel3d);
 new Vue({
     el: '#app',
     data: {
         isMenuOpen: false,
-        slides: 
-        [
+        slides: [
             {src: "/images/sildeShow/showcase1.png"},
             {src: "/images/sildeShow/showcase2.png"},
             {src: "/images/sildeShow/showcase3.png"},
@@ -50,6 +50,7 @@ new Vue({
         }
     },
     mounted() { 
+        console.log("slides:", this.slides);
         AOS.init();
         // window.Intercom("boot", {
         //     app_id: "an50zjec"
