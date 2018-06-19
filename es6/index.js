@@ -20,7 +20,13 @@ window.onload = function () {
     new Vue({
         el: '#app',
         data: {
-            isMenuOpen : false
+            isMenuOpen : false,
+            slides: 
+            [
+                {src: "/images/sildeShow/showcase1.png"},
+                {src: "/images/sildeShow/showcase2.png"},
+                {src: "/images/sildeShow/showcase3.png"},
+            ]
         },
         components: {
             Carousel3d,
@@ -41,11 +47,10 @@ window.onload = function () {
         },
         mounted() { 
             AOS.init();
-            Vue.use(Carousel3d);
-            window.Intercom("boot", {
-                app_id: "an50zjec"
-            });
-            window.Intercom("update");
+            // window.Intercom("boot", {
+            //     app_id: "an50zjec"
+            // });
+            // window.Intercom("update");
         }
     });
 }

@@ -1,13 +1,23 @@
-@import "_var.scss";
+@import "../_var.scss";
 
 .introduction {
-	max-width: $container;
-	width: 90%;
-	margin: 0 auto 80px auto;
+	padding: 200px 0 180px 0;
+	background-color: #3442b0;
+	@media screen and (max-width: $mob) {
+			padding: 58px 0 120px 0;
+	}
+	.section {
+		@include section();
+	}
 }
 
 .introduction_info {
 	text-align: center;
+	padding-bottom: 30px;
+	@media screen and (max-width: $mob) {
+			width: 90%;
+			margin: 0 auto;
+	}
 	h3 {
 		font-size: 30px;
 		line-height: 38px;
@@ -32,8 +42,8 @@
 		line-height: 60px;
 		border-radius: 100px;
 		background: linear-gradient(-208deg, #00F7CB 0%, #00D7EC 100%);
-		transition: all .3s;
 		border: solid 2px transparent;
+		transition: all .3s;
 		&:hover {
 			border-color: #fff;
 			color: #fff;

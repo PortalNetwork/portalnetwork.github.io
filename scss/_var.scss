@@ -11,6 +11,13 @@ $mob: 768px;
 	}
 }
 
+@mixin section($marginTop:0, $marginBottom:0) {
+	max-width: $container;
+    margin: $marginTop auto $marginBottom auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 @function pxtovw($number) {
     @return $number * 100 / 1441+vw;
 }

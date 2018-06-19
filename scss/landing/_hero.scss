@@ -1,20 +1,24 @@
-@import "_var.scss";
-
+@import "../_var.scss";
 .hero {
-	max-width: $container;
-	padding: 0 20px;
-	margin: 200px auto 400px auto;
-	box-sizing: border-box;
+	background-color: #00d5bf;
 	position: relative;
-	@media screen and (max-width: $mob) {
-		width: 100%;
-		padding-bottom: 0;
-		margin: 60px auto 80px auto;
-	}
 	&:after {
 		content: "";
 		display: block;
-		clear: both;
+		border-style: solid;
+		border-width: 0 0 350px 100vw;
+		border-color: transparent transparent #fff transparent;
+		background-color: #00d5bf;
+		margin-top: -95px;
+		@media screen and (max-width: $mob) {
+			border-width: 0 0 160px 100vw;
+			margin-top: 0;
+		}
+	}
+	.section {
+		@extend %clear;
+		@include section();
+		position: relative;
 	}
 }
 
@@ -22,9 +26,8 @@
 	max-width: 546px;
 	float: left;
 	position: relative;
-	@media screen and (max-width: $mob) {
+	@media screen and (max-width: $pad) {
 		max-width: 100%;
-		width: 90%;
 		margin: 0 auto;
 		float: none;
 		text-align: center;
@@ -33,10 +36,9 @@
 		font-size: 50px;
 		line-height: 80px;
 		color: #fff;
-		margin-bottom: 15px;
-		@media screen and (max-width: $mob) {
-			width: 80%;
-			margin: 0 auto 30px auto;
+		padding-bottom: 30px;
+		@media screen and (max-width: $pad) {
+			padding-bottom: 30px;
 			font-size: 35px;
 			line-height: 45px;
 		}
@@ -45,7 +47,7 @@
 			font-size: 50px;
 			line-height: 80px;
 			color: #fff;
-			@media screen and (max-width: $mob) {
+			@media screen and (max-width: $pad) {
 				font-size: 35px;
 				line-height: 45px;
 			}
@@ -55,13 +57,13 @@
 		font-size: 20px;
 		line-height: 30px;
 		color: #fff;
-		margin-bottom: 45px;
-		@media screen and (max-width: $mob) {
+		padding-bottom: 45px;
+		@media screen and (max-width: $pad) {
 			width: 80%;
 			margin: 0 auto;
 			font-size: 22px;
 			line-height: 30px;
-			margin-bottom: 20px;
+			padding-bottom: 20px;
 		}
 	}
 	>span {
@@ -70,16 +72,20 @@
 		line-height: 19px;
 		color: #4A4A4A;
 		padding-left: 17px;
+		@media screen and (max-width: $pad) {
+			font-size: 16px;
+			line-height: 22px;
+		}
 	}
 }
 
 #mc_embed_signup_scroll {
 	width: 100%;
-	height: auto;
 	overflow: hidden;
-	margin-bottom: 20px;
-	@media screen and (max-width: $mob) {
-		width: 100%;
+	padding-bottom: 20px;
+	@media screen and (max-width: $pad) {
+		width: 600px;
+		margin: 0 auto;
 	}
 	input.email {
 		width: 300px;
@@ -90,7 +96,7 @@
 		border-bottom-left-radius: 30px;
 		float: left;
 		padding-left: 20px;
-		@media screen and (max-width: $mob) {
+		@media screen and (max-width: $pad) {
 			width: 70%;
 			font-size: 15px;
 		}
@@ -98,7 +104,7 @@
 	.clearbox {
 		display: block;
 		float: left;
-		@media screen and (max-width: $mob) {
+		@media screen and (max-width: $pad) {
 			width: 30%;
 		}
 		>input {
@@ -116,7 +122,7 @@
 			&:hover {
 				color: #00D5BF;
 			}
-			@media screen and (max-width: 760px) {
+			@media screen and (max-width: $pad) {
 				width: 100%;
 				font-size: 15px;
 			}
@@ -153,7 +159,7 @@
 		//     margin-top: pxtovw(48);
 		//     font-size: pxtovw(16);
 		// }
-		@media screen and (max-width: $mob) {
+		@media screen and (max-width: $pad) {
 			width: 34%;
 			height: 36px;
 		}
@@ -163,15 +169,14 @@
 .hero_img {
 	max-width: 785px;
 	position: absolute;
-	top: -77px;
+	top: -60px;
 	right: -247px;
-	z-index: 0;
-	@media screen and (max-width: $mob) {
+	margin: 0 auto;
+	@media screen and (max-width: $pad) {
 		position: relative;
 		top: auto;
 		right: auto;
-		width: 90%;
-		margin: 0 auto 40px auto;
+		padding-bottom: 46px;
 	}
 	img {
 		width: 100%;
