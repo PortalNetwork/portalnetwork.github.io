@@ -1,0 +1,187 @@
+@import "../_var.scss";
+.hero {
+	background-color: #00d5bf;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 0 0 350px 100vw;
+		border-color: transparent transparent #fff transparent;
+		background-color: #00d5bf;
+		margin-top: -95px;
+		@media screen and (max-width: $mob) {
+			border-width: 0 0 160px 100vw;
+			margin-top: 0;
+		}
+	}
+	.section {
+		@extend %clear;
+		@include section();
+		position: relative;
+	}
+}
+
+.hero_info {
+	max-width: 546px;
+	float: left;
+	position: relative;
+	@media screen and (max-width: $pad) {
+		max-width: 100%;
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+	}
+	h2 {
+		font-size: 50px;
+		line-height: 80px;
+		color: #fff;
+		padding-bottom: 30px;
+		@media screen and (max-width: $pad) {
+			padding-bottom: 30px;
+			font-size: 35px;
+			line-height: 45px;
+		}
+		span {
+			display: block;
+			font-size: 50px;
+			line-height: 80px;
+			color: #fff;
+			@media screen and (max-width: $pad) {
+				font-size: 35px;
+				line-height: 45px;
+			}
+		}
+	}
+	p {
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		padding-bottom: 45px;
+		@media screen and (max-width: $pad) {
+			width: 80%;
+			margin: 0 auto;
+			font-size: 22px;
+			line-height: 30px;
+			padding-bottom: 20px;
+		}
+	}
+	>span {
+		display: block;
+		font-size: 14px;
+		line-height: 19px;
+		color: #4A4A4A;
+		padding-left: 17px;
+		@media screen and (max-width: $pad) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+}
+
+#mc_embed_signup_scroll {
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 20px;
+	@media screen and (max-width: $pad) {
+		width: 80%;
+		margin: 0 auto;
+	}
+	@media screen and (max-width: $mob) {
+		width: 100%;
+	}
+	input.email {
+		width: 300px;
+		height: 60px;
+		font-size: 20px;
+		border: 0;
+		border-top-left-radius: 30px;
+		border-bottom-left-radius: 30px;
+		float: left;
+		padding-left: 20px;
+		@media screen and (max-width: $pad) {
+			width: 70%;
+			font-size: 15px;
+		}
+	}
+	.clearbox {
+		display: block;
+		float: left;
+		@media screen and (max-width: $pad) {
+			width: 30%;
+		}
+		>input {
+			display: block;
+			font-size: 16px;
+			width: 150px;
+			height: 60px;
+			float: left;
+			color: #fff;
+			transition: color .5s;
+			background: linear-gradient(204.32deg, #0084F2 0%, #0027EC 100%);
+			border: 0;
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+			&:hover {
+				color: #00D5BF;
+			}
+			@media screen and (max-width: $pad) {
+				width: 100%;
+				font-size: 15px;
+			}
+		}
+	}
+	p {
+		font-family: Gotham;
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.67;
+		letter-spacing: 2px;
+		color: #ffffff;
+		padding-top: 44px; // @media screen and (max-width: 1441px) {
+		//     font-size: pxtovw(18);
+		//     padding-top: pxtovw(44);
+		// }
+	}
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 192px;
+		height: 56px;
+		object-fit: contain;
+		border-radius: 100px;
+		background-color: #324c9a;
+		font-family: Gotham;
+		font-size: 16px;
+		letter-spacing: 1px;
+		color: #ffffff;
+		margin-top: 48px; // @media screen and (max-width: 1441px) {
+		//     width: pxtovw(192);
+		//     height: pxtovw(56);
+		//     margin-top: pxtovw(48);
+		//     font-size: pxtovw(16);
+		// }
+		@media screen and (max-width: $pad) {
+			width: 34%;
+			height: 36px;
+		}
+	}
+}
+
+.hero_img {
+	max-width: 785px;
+	position: absolute;
+	top: -60px;
+	right: -247px;
+	margin: 0 auto;
+	@media screen and (max-width: $pad) {
+		position: relative;
+		top: auto;
+		right: auto;
+		padding-bottom: 46px;
+	}
+	img {
+		width: 100%;
+	}
+}

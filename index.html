@@ -2,24 +2,25 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-  <title>Portal Network</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./css/index.css?321312312">
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script src="./js/intercom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-    crossorigin="anonymous"></script>
-  <script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<title>Portal Network</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./css/index.css?321312312">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<!-- <script src="./js/intercom.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+	  crossorigin="anonymous"></script>
+	  <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
 
@@ -35,174 +36,338 @@
 </head>
 
 <body>
-  <noscript>
+    <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <div id="app">
-    <header>
-      <nav>
-        <a class="menu" @click="toggleMenuFn">
-          <span v-show="!isMenuOpen">
-            <i class="fas fa-bars"></i>
-          </span>
-          <span v-show="isMenuOpen">
-            <i class="fas fa-times"></i>
-          </span>
-        </a>
-        <h1 class="logo">
-          <img src="./images/logo/Page1@3x.svg" alt="">
-        </h1>
-        <ul :class="['menu_list',{open: isMenuOpen}]">
-          <!-- <li><a @click="comingsoonFn">Latest</a></li>
-					<li><a @click="comingsoonFn">About</a></li> -->
-          <li>
-            <a @click="gaSeedPageView('hackathon')" target="_blank" href="https://hackathon.portal.network/">Hackathon</a>
-          </li>
-          <li>
-            <a @click="gaSeedPageView('showcase')" target="_blank" href="showcase.html">Showcase</a>
-          </li>
-          <li>
-            <a @click="gaSeedPageView('blog')" href="https://portalnetwork.blog/" target="_blank">Blog</a>
-          </li>
-          <li>
-            <a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="header_content" data-aos="fade-down" data-aos-easing="ease-out-back">
-      <h2>Click & Enter the Next
-        <br/>Generation Internet.</h2>
-      <p>Join the decentralized ecosystem by easy-to-use tools.</p>
-      <form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
-        id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" data-aos="fade-down" data-aos-easing="ease-out-back">
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-          <input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
-          <div class="clearbox">
-            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button" @click="gaSeedPageView('subscribe')">
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="hero" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back"></div>
-    <div class="what">
-      <h3>WHAT IS PORTAL
-        <br/> NETWORK?</h3>
-      <p>Portal Network dedicates to unite advanced technologies to create your
-        <br/>non-removable and stunning website. </p>
-    </div>
-    <div class="youtube">
-      <iframe width="633" height="370" src="https://www.youtube.com/embed/fVysKlr711o" frameborder="0" allow="autoplay; encrypted-media"
-        allowfullscreen></iframe>
-    </div>
-    <div class="works">
-      <h3>HOW IT WORKS?</h3>
-      <img src="./images/bg/itemList.png" alt="">
-    </div>
-    <div class="product">
-      <h3>PRODUCT</h3>
-      <ul>
-        <li data-aos="fade-right" data-aos-delay="0" data-aos-easing="ease-out-back" @click="gaSeedPageView('identity')">
-          <img src="./images/products/idicon.png" alt="">
-          <div class="text_content">
-            <h3>READABILILTY
-              <br/>IDENTITY</h3>
-            <p>You will get a readable blockchain-based domain address instead of 16 bit hash containing alphanumeric characters
-              (A–Z, 0–9).</p>
-          </div>
-        </li>
-        <li data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back" @click="gaSeedPageView('storage')">
-          <img src="./images/products/storageicon.png" alt="">
-          <div class="text_content">
-            <h3>DECENTRALIZED
-              <br/>STORAGE</h3>
-            <p>Store your data securely over a reliable and unhackable database.</p>
-          </div>
-        </li>
-        <li data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back" @click="gaSeedPageView('application')">
-          <img src="./images/products/appicon.png" alt="">
-          <div class="text_content">
-            <h3>DECENTRALIZED
-              <br/>APPLICATION</h3>
-            <p>Manage website through your smart phone. Just like Apps.</p>
-          </div>
-        </li>
-      </ul>
-    </div>
 
-    <div class="item_list ecosystem">
-      <h3>ECOSYSTEM</h3>
-      <div class="ecosystem_item">
-        <a class="item" href="https://www.ethereum.org/" target="_blank">
-          <img src="./images/ecosystem/ethereum.png" alt="">
-        </a>
-        <a class="item" href="https://ethereumclassic.org/" target="_blank">
-          <img src="./images/ecosystem/ethereumclassic.png" alt="">
-        </a>
-        <a class="item" href="https://wanchain.org/" target="_blank">
-          <img src="./images/ecosystem/WANCHAIN.png" alt="">
-        </a>
-        <a class="item" href="https://qtum.org/en/" target="_blank">
-          <img src="./images/ecosystem/qtum.png" alt="">
-        </a>
-      </div>
-    </div>
+	<div id="app" :class="{active: isMenuOpen}">
+		<a class="menu_btn" @click="toggleMenuFn">
+			<span></span>
+			<!-- <span v-show="!isMenuOpen">
+				<i class="fas fa-bars"></i>
+			</span>
+			<span v-show="isMenuOpen">
+				<i class="fas fa-times"></i>
+			</span> -->
+		</a>
+		<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a>
+		<div class="header">
+			<div class="section">
+				<h1 class="logo">
+					<img src="./images/logo/logo@2x.svg" alt="">
+				</h1>
+				<nav>
+					<!-- <ul :class="['menu_list',{active: isMenuOpen}]"> -->
+					<ul class="menu">
+						<li>
+							<a @click="gaSeedPageView('blog')" href="https://blog.portal.network" target="_blank">Blog</a>
+						</li>
+						<li>
+							<a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
+						</li>
+						<li>
+							<a @click="gaSeedPageView('hackathon')" href="https://www.portal.network/showcase.html" target="_blank">Showcase</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="section">
+				<div class="hero_img" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back">
+					<img src="./images/heroimage/Hero.png" alt="">
+				</div>
+				<div class="hero_info" data-aos="fade-down" data-aos-easing="ease-out-back">
+					<h2>Click & Enter the Next
+						<span>Generation Internet.</span>
+					</h2>
+					<p>Join the decentralized ecosystem via our user-friendly tools.</p>
+					<form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
+					  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email" required>
+							<input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
+							<div class="clearbox">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button" @click="gaSeedPageView('subscribe')">
+							</div>
+						</div>
+					</form>
+					<span>Subscribe now and be the first to receive our latest updates.</span>
+				</div>
+			</div>
+		</div>
+		<div class="products">
+			<div class="section">
+				<h3>PRODUCTS</h3>
+				<ul>
+					<li class="item" data-aos="fade-right" data-aos-delay="0" data-aos-easing="ease-out-back">
+						<h4>Marketplace</h4>
+						<div class="figure">
+							<img src="./images/products/MP.png" alt="">
+						</div>
+						<p>Portal Network provides buying, selling, and trading of domains on blockchain, users will have access to a number of
+							well-known blockchain-based top-level domains.</p>
+						<a href="https://beta.portal.network/">Learn more</a>
+					</li>
+					<li class="item" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
+						<h4>Web Builder</h4>
+						<div class="figure">
+							<img src="./images/products/WB.png" alt="">
+						</div>
+						<p>Portal Network helps users build their decentralized websites and dApps with drag and drop tool, through IPFS and the
+							Bluzelle data storage service.</p>
+						<a href="https://web.portal.network/">Learn more</a>
+					</li>
+					<li class="item" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
+						<h4>Browser Extension</h4>
+						<div class="figure">
+							<img src="./images/products/BE.png" alt="">
+						</div>
+						<p>Portal Network builds browser extensions in order to help users to easily browse a decentralized website which is hosted
+							on the IPFS blockchain network.</p>
+						<a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf">Learn more</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="introduction">
+			<div class="section">
+				<div class="introduction_info">
+					<h3>Build your own decentralized website.</h3>
+					<p>There are more decentralized websites, check more use cases at our gallery.</p>
+					<a href="https://web.portal.network/">Learn more</a>
+				</div>
+				<div class="introduction_slider">
+					<carousel-3d :autoplay="true" :autoplay-timeout="3000" :perspective="0" :border="0" :width="510" :height="378" :autoplay-hover-pause="true"
+					  :controls-visible="true">
+						<slide v-for="(slide, i) in slides" :index="i" :key="i">
+							<template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
+								<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
+							</template>
+						</slide>
+					</carousel-3d>
+				</div>
+			</div>
+		</div>
+		<div class="service">
+			<div class="section">
+				<h3>SERVICE</h3>
+				<ul>
+					<li class="item" data-aos="fade-left" data-aos-delay="0" data-aos-easing="ease-out-back">
+						<img src="./images/service/humanreadable.png" alt="">
+						<h4>Human-Readable Identity</h4>
+						<p>Your decentralized domain address can be used as a human-readable alternative to a standard hexadecimal cryptocurrency
+							address.
+						</p>
+					</li>
+					<li class="item" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-out-back">
+						<img src="./images/service/decentralized.png" alt="">
+						<h4>Decentralized Storage</h4>
+						<p>Our reliable and unhackable decentralized database ensures that your precious data remains safe and secure. </p>
+					</li>
+					<li class="item" data-aos="fade-left" data-aos-delay="400" data-aos-easing="ease-out-back">
+						<img src="./images/service/app.png" alt="">
+						<h4>Decentralized Application</h4>
+						<p>You can simply and conveniently access your decentralized website using our Portal Network DApp on your smartphone.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="what">
+			<div class="section" v-show="!isYoutubeShow">
+				<h3>WHAT IS PORTAL NETWORK?</h3>
+				<p>Portal Network dedicates to unite advanced technologies to create your
+					<br/>non-removable and stunning website. </p>
+				<div class="play" @click="youtubeShow"></div>
+			</div>
+			<iframe src="https://www.youtube.com/embed/fVysKlr711o" frameborder="0" allow="autoplay; encrypted-media"
+			  allowfullscreen v-show="isYoutubeShow"></iframe>
+		</div>
+		<div class="comparison">
+			<div class="section">
+				<div class="comparison_header">
+					<h3>COMPARISON</h3>
+					<div class="comparison_header_left">
+						<img src="./images/comparison/Centralized.png" alt="">
+						<h4>Centralized</h4>
+						<span class="arrow"></span>
+						<span class="arrow num2"></span>
+						<span class="arrow num3"></span>
+					</div>
+					<div class="comparison_header_right">
+						<img src="./images/comparison/Decentralized.png" alt="">
+						<h4>Decentralized</h4>
+						<span class="arrow"></span>
+						<span class="arrow num2"></span>
+						<span class="arrow num3"></span>
+					</div>
+				</div>
+				<ul>
+					<li class="comparison_list">
+						<div class="comparison_caption domainregister">
+							<img src="./images/comparison/domainregister.png" alt="">
+						</div>
+						<div class="comparison_left">
+							<div class="comparisonBox godaddy">
+								<div class="figure">
+									<img src="./images/comparison/godaddy.png" alt="">
+								</div>
+								<p class="greenText">GoDaddy</p>
+							</div>
+						</div>
+						<div class="comparison_right">`
+							<div class="comparisonBox pnlogo">
+								<div class="figure">
+									<img src="./images/comparison/pnlogo.png" alt="">
+								</div>
+								<p>Portal Network</p>
+							</div>
+						</div>
+					</li>
+					<li class="comparison_list">
+						<div class="comparison_caption system">
+							<img src="./images/comparison/OS.png" alt="">
+						</div>
+						<div class="comparison_left">
+							<div class="comparisonBox windows">
+								<div class="figure"><img src="./images/comparison/windows.png" alt=""></div>
+								<p class="greenText">Windows</p>
+							</div>
+						</div>
+						<div class="comparison_right">
+							<div class="comparisonbox_col3"> 
+									<div class="wan">
+											<div class="figure"><img src="./images/comparison/wan.png" alt=""></div>
+											<p>Wanchain</p>
+										</div>
+										<div class="qtum">
+												<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
+											<p>Qtum</p>
+										</div>
+										<div class="eth">
+												<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
+											<p>Ethereum</p>
+										</div>
+							</div>
+						</div>
+					</li>
+					<li class="comparison_list">
+						<div class="comparison_caption storage">
+							<img src="./images/comparison/filestorage.png" alt="">
+						</div>
+						<div class="comparison_left">
+							<div class="comparisonBox amazo">
+									<div class="figure"><img src="./images/comparison/AWS.png" alt=""></div>
+								<p class="greenText">Amazon Web Services S3</p>
+							</div>
+						</div>
+						<div class="comparison_right">
+							<div class="comparisonBox ipfs">
+									<div class="figure"><img src="./images/comparison/ipfs.png" alt=""></div>
+								<p>IPFS</p>
+							</div>
+						</div>
+					</li>
+					<li class="comparison_list">
+						<div class="comparison_caption storage">
+							<img src="./images/comparison/data.png" alt="">
+						</div>
+						<div class="comparison_left">
+							<div class="comparisonBox oracle">
+									<div class="figure"><img src="./images/comparison/oracle.png" alt=""></div>
+								<p class="greenText">Oracle</p>
+							</div>
+						</div>
+						<div class="comparison_right">
+							<div class="comparisonBox bluzelle">
+									<div class="figure"><img src="./images/comparison/bluzelle.png" alt=""></div>
+								<p>Bluzelle</p>
+							</div>
+						</div>
+					</li>
+					<li class="comparison_list">
+						<div class="comparison_caption appweb">
+							<img src="./images/comparison/app_web.png" alt="">
+						</div>
+						<div class="comparison_left">
+							<div class="comparisonBox facebook">
+									<div class="figure"><img src="./images/comparison/facebook.png" alt=""></div>
+								<p class="greenText">Facebook</p>
+							</div>
+						</div>
+						<div class="comparison_right">
+							<div class="comparisonBox status">
+									<div class="figure"><img src="./images/comparison/status.png" alt=""></div>
+								<p>Status</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ecosystem">
+			<div class="section">
+				<h3 class="partner_title">ECOSYSTEM</h3>
+				<div class="partner_area">
+					<a href="https://www.ethereum.org/" target="_blank" class="eth">
+						<img src="./images/ecosystem/ethereum.png" alt="">
+					</a>
+					<a href="https://ethereumclassic.org/" target="_blank" class="num2">
+						<img src="./images/ecosystem/ethereumclassic.png" alt="">
+					</a>
+					<a href="https://wanchain.org/" target="_blank" class="wan">
+						<img src="./images/ecosystem/WANCHAIN.png" alt="">
+					</a>
+					<a href="https://qtum.org/en/" target="_blank" class="qtum">
+						<img src="./images/ecosystem/qtum.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="partnership">
+			<h3 class="partner_title">PARTNERSHIP</h3>
+			<div class="partner_area">
+				<a href="https://bluzelle.com/" target="_blank" class="bluzelle">
+					<img src="./images/partnerLogo/BluzelleLogo.png" alt="">
+				</a>
+				<a href="https://wanchain.org/" target="_blank" class="wan">
+					<img src="./images/ecosystem/WANCHAIN.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="mediapartner">
+			<h3 class="partner_title">MEDIA PARTNER</h3>
+			<div class="partner_area">
+				<a href="https://www.coingecko.com/en" target="_blank">
+					<img class="Bluzelle" src="./images/partnerLogo/coingecko.png" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer_content">
+				<div class="item_list">
+					<a class="telegram" @click="gaSeedPageView('telegram')" href="https://t.me/portalnetworkofficial" target="_blank">
+						<img src="./images/socialMedia/Te.png" alt="">
+					</a>
+					<a class="github" @click="gaSeedPageView('github')" href="https://github.com/portalnetwork" target="_blank">
+						<img src="./images/socialMedia/g.png" alt="">
+					</a>
+					<a class="twitter" @click="gaSeedPageView('twitter')" href="https://twitter.com/itisportal" target="_blank">
+						<img src="./images/socialMedia/t.png" alt="">
+					</a>
+					<a class="fb" @click="gaSeedPageView('fbicon')" href="https://www.facebook.com/portalnetworkofficial" target="_blank">
+						<img src="./images/socialMedia/fb.png" alt="">
+					</a>
+					<a class="medium" @click="gaSeedPageView('medium')" href="https://medium.com/portalnetworkofficial" target="_blank">
+						<img src="./images/socialMedia/M.png" alt="">
+					</a>
+				</div>
+				<p class="copyright">© 2018 Portal.Network.</p>
+			</div>
+		</div>
+	</div>
+	<script src="./js/index.js?2312321"></script>
 
-    <div class="item_list partnersh">
-      <h3>PARTNERSHIP</h3>
-
-      <div class="ecosystem_item">
-        <a class="item" href="https://bluzelle.com/" target="_blank">
-          <img class="Bluzelle" src="./images/partnerLogo/BluzelleLogo.png" alt="">
-        </a>
-        <a class="item" href="https://wanchain.org/" target="_blank">
-          <img src="./images/ecosystem/WANCHAIN.png" alt="">
-        </a>
-      </div>
-    </div>
-
-    <div class="item_list mediapartner">
-      <h3>MEDIA PARTNER</h3>
-
-      <div class="ecosystem_item">
-        <a class="item" href="https://www.coingecko.com/en" target="_blank">
-          <img class="Bluzelle" src="./images/partnerLogo/coingecko.png" alt="">
-        </a>
-      </div>
-    </div>
-
-    <div class="item_list contact">
-      <h3>CONTACT US</h3>
-      <div class="contact_item">
-        <a @click="gaSeedPageView('fbicon')" class="item" href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
-          <img src="./images/socialMedia/fb.png" alt="">
-        </a>
-        <a @click="gaSeedPageView('github')" class="item" href="https://github.com/portalnetwork" target="_blank">
-          <img src="./images/socialMedia/g.png" alt="">
-        </a>
-        <a @click="gaSeedPageView('medium')" class="item" href="https://medium.com/portalnetworkofficial" target="_blank">
-          <img src="./images/socialMedia/M.png" alt="">
-        </a>
-        <!--<a class="item" href="javascript:;" target="_blank" @click="comingsoonFn">
-					<img src="./images/socialMedia/reddit.png" alt="">
-				</a>-->
-        <a @click="gaSeedPageView('twitter')" class="item" href="https://twitter.com/itisportal" target="_blank">
-          <img src="./images/socialMedia/t.png" alt="">
-        </a>
-        <a @click="gaSeedPageView('telegram')" class="item" href="https://t.me/portalnetworkofficial" target="_blank">
-          <img src="./images/socialMedia/Te.png" alt="">
-        </a>
-      </div>
-    </div>
-    <footer>
-      <p>© 2018 Portal.Network.</p>
-      <a>
-        <img src="./images/mcafee.png" alt="">
-      </a>
-    </footer>
-  </div>
-  <script src="./js/index.js?2312321"></script>
 </body>
 
 </html>
