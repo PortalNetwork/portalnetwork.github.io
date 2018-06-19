@@ -14,11 +14,24 @@ function getUrl() {
 	return aryPara;
 }
 
+import { Carousel3d, Slide } from 'vue-carousel-3d';
+Vue.use(Carousel3d);
 window.onload = function () {
     new Vue({
         el: '#app',
         data: {
-            isMenuOpen : false
+            isMenuOpen: false,
+            slides: 
+            [
+                {src: "/images/sildeShow/showcase1.png"},
+                {src: "/images/sildeShow/showcase2.png"},
+                {src: "/images/sildeShow/showcase3.png"},
+            ],
+            isYoutubeShow: false,
+        },
+        components: {
+            Carousel3d,
+            Slide
         },
         methods: {
             toggleMenuFn() {
@@ -31,14 +44,17 @@ window.onload = function () {
                 ga('send', 'event', name, 'click', );
                 let debug = getUrl();
                 if(debug["debug"]=="true") console.log("GA PageView -> ",name);
+            },
+            youtubeShow(){
+                this.isYoutubeShow = !this.isYoutubeShow;
             }
         },
         mounted() { 
             AOS.init();
-            window.Intercom("boot", {
-                app_id: "an50zjec"
-            });
-            window.Intercom("update");
+            // window.Intercom("boot", {
+            //     app_id: "an50zjec"
+            // });
+            // window.Intercom("update");
         }
     });
 }

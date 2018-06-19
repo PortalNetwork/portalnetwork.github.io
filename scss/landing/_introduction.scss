@@ -1,0 +1,53 @@
+@import "../_var.scss";
+
+.introduction {
+	padding: 200px 0 180px 0;
+	background-color: #3442b0;
+	@media screen and (max-width: $mob) {
+			padding: 58px 0 120px 0;
+	}
+	.section {
+		@include section();
+	}
+}
+
+.introduction_info {
+	text-align: center;
+	padding-bottom: 30px;
+	@media screen and (max-width: $mob) {
+			width: 90%;
+			margin: 0 auto;
+	}
+	h3 {
+		font-size: 30px;
+		line-height: 38px;
+		text-align: center;
+		color: #00D5BF;
+		margin-bottom: 32px;
+	}
+	p {
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		letter-spacing: 1px;
+		margin-bottom: 47px;
+	}
+	a {
+		display: inline-block;
+		width: 200px;
+		height: 60px;
+		font-size: 16px;
+		font-weight: bold;
+		color: #3442B0;
+		line-height: 60px;
+		border-radius: 100px;
+		background: linear-gradient(-208deg, #00F7CB 0%, #00D7EC 100%);
+		border: solid 2px transparent;
+		transition: all .3s;
+		&:hover {
+			border-color: #fff;
+			color: #fff;
+			background: transparent;
+		}
+	}
+}
