@@ -15,46 +15,45 @@ function getUrl() {
 }
 
 import { Carousel3d, Slide } from 'vue-carousel-3d';
+
 Vue.use(Carousel3d);
-window.onload = function () {
-    new Vue({
-        el: '#app',
-        data: {
-            isMenuOpen: false,
-            slides: 
-            [
-                {src: "/images/sildeShow/showcase1.png"},
-                {src: "/images/sildeShow/showcase2.png"},
-                {src: "/images/sildeShow/showcase3.png"},
-            ],
-            isYoutubeShow: false,
+new Vue({
+    el: '#app',
+    data: {
+        isMenuOpen: false,
+        slides: 
+        [
+            {src: "/images/sildeShow/showcase1.png"},
+            {src: "/images/sildeShow/showcase2.png"},
+            {src: "/images/sildeShow/showcase3.png"},
+        ],
+        isYoutubeShow: false,
+    },
+    components: {
+        Carousel3d,
+        Slide
+    },
+    methods: {
+        toggleMenuFn() {
+            this.isMenuOpen = !this.isMenuOpen;
         },
-        components: {
-            Carousel3d,
-            Slide
+        comingsoonFn() {
+            alert("coming soon");
         },
-        methods: {
-            toggleMenuFn() {
-                this.isMenuOpen = !this.isMenuOpen;
-            },
-            comingsoonFn() {
-                alert("coming soon");
-            },
-            gaSeedPageView(name) {
-                ga('send', 'event', name, 'click', );
-                let debug = getUrl();
-                if(debug["debug"]=="true") console.log("GA PageView -> ",name);
-            },
-            youtubeShow(){
-                this.isYoutubeShow = !this.isYoutubeShow;
-            }
+        gaSeedPageView(name) {
+            ga('send', 'event', name, 'click', );
+            let debug = getUrl();
+            if(debug["debug"]=="true") console.log("GA PageView -> ",name);
         },
-        mounted() { 
-            AOS.init();
-            // window.Intercom("boot", {
-            //     app_id: "an50zjec"
-            // });
-            // window.Intercom("update");
+        youtubeShow(){
+            this.isYoutubeShow = !this.isYoutubeShow;
         }
-    });
-}
+    },
+    mounted() { 
+        AOS.init();
+        // window.Intercom("boot", {
+        //     app_id: "an50zjec"
+        // });
+        // window.Intercom("update");
+    }
+});
