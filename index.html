@@ -84,6 +84,7 @@
 				<i class="fas fa-times"></i>
 			</span> -->
 		</a>
+		<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a>
 		<div class="header">
 			<div class="section">
 				<h1 class="logo">
@@ -99,7 +100,7 @@
 							<a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
 						</li>
 						<li>
-							<a @click="gaSeedPageView('hackathon')" href="javascript:;" target="_blank">Showcase</a>
+							<a @click="gaSeedPageView('hackathon')" href="https://www.portal.network/showcase.html" target="_blank">Showcase</a>
 						</li>
 					</ul>
 				</nav>
@@ -140,7 +141,7 @@
 						</div>
 						<p>Portal Network provides buying, selling, and trading of domains on blockchain, users will have access to a number of
 							well-known blockchain-based top-level domains.</p>
-						<a href="javascript:;">Learn more</a>
+						<a href="https://beta.portal.network/">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
 						<h4>Web Builder</h4>
@@ -149,7 +150,7 @@
 						</div>
 						<p>Portal Network helps users build their decentralized websites and dApps with drag and drop tool, through IPFS and the
 							Bluzelle data storage service.</p>
-						<a href="javascript:;">Learn more</a>
+						<a href="https://web.portal.network/">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
 						<h4>Browser Extension</h4>
@@ -158,7 +159,7 @@
 						</div>
 						<p>Portal Network builds browser extensions in order to help users to easily browse a decentralized website which is hosted
 							on the IPFS blockchain network.</p>
-						<a href="javascript:;">Learn more</a>
+						<a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf">Learn more</a>
 					</li>
 				</ul>
 			</div>
@@ -168,7 +169,7 @@
 				<div class="introduction_info">
 					<h3>Build your own decentralized website.</h3>
 					<p>There are more decentralized websites, check more use cases at our gallery.</p>
-					<a href="javascript:;">Learn more</a>
+					<a href="https://web.portal.network/">Learn more</a>
 				</div>
 				<div class="introduction_slider">
 					<carousel-3d :autoplay="true" :autoplay-timeout="3000" :perspective="0" :border="0" :width="510" :height="378" :autoplay-hover-pause="true"
@@ -207,14 +208,14 @@
 			</div>
 		</div>
 		<div class="what">
-			<div class="section">
+			<div class="section" v-show="!isYoutubeShow">
 				<h3>WHAT IS PORTAL NETWORK?</h3>
 				<p>Portal Network dedicates to unite advanced technologies to create your
 					<br/>non-removable and stunning website. </p>
-				<div class="play"></div>
+				<div class="play" @click="youtubeShow"></div>
 			</div>
 			<iframe src="https://www.youtube.com/embed/fVysKlr711o" frameborder="0" allow="autoplay; encrypted-media"
-			  allowfullscreen  style="display: none"></iframe>
+			  allowfullscreen v-show="isYoutubeShow"></iframe>
 		</div>
 		<div class="comparison">
 			<div class="section">
@@ -268,17 +269,19 @@
 							</div>
 						</div>
 						<div class="comparison_right">
-							<div class="wan">
-								<div class="figure"><img src="./images/comparison/wan.png" alt=""></div>
-								<p>Wanchain</p>
-							</div>
-							<div class="qtum">
-									<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
-								<p>Qtum</p>
-							</div>
-							<div class="eth">
-									<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
-								<p>Ethereum</p>
+							<div class="comparisonbox_col3"> 
+									<div class="wan">
+											<div class="figure"><img src="./images/comparison/wan.png" alt=""></div>
+											<p>Wanchain</p>
+										</div>
+										<div class="qtum">
+												<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
+											<p>Qtum</p>
+										</div>
+										<div class="eth">
+												<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
+											<p>Ethereum</p>
+										</div>
 							</div>
 						</div>
 					</li>

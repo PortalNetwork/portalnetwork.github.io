@@ -8,7 +8,7 @@
     >ul {
         width: 88%;
         margin: 0 auto;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             width: 100%;
         }
     }
@@ -29,7 +29,7 @@
     margin: 0 auto 40px auto;
     position: relative;
     @extend %clear;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         display: block;
         width: 95%;
         margin: 0 auto 50px auto;
@@ -44,7 +44,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             position: relative;
         }
     }
@@ -126,16 +126,22 @@
     height: 200px;
     position: relative;
     float: left;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         width: 50%;
         float: left;
         height: 160px;
     }
     img {
+        max-width: 147px;
         width: 147px;
         margin: 0 auto;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             width: 70%;
+        }
+    }
+    h4 {
+        @media screen and (max-width: $pad) {
+            bottom: -14px;
         }
     }
 }
@@ -145,16 +151,22 @@
     height: 200px;
     position: relative;
     float: right;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         width: 50%;
         float: left;
         height: 160px;
     }
     img {
+        max-width: 195px;
         width: 195px;
         margin: 0 auto;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             width: 70%;
+        }
+    }
+    h4 {
+        @media screen and (max-width: $pad) {
+            bottom: -14px;
         }
     }
 }
@@ -164,7 +176,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         display: block;
         margin-bottom: 60px;
         &:after {
@@ -182,7 +194,7 @@
 .comparison_caption {
     position: relative;
     margin-top: -55px;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         margin-top: 0;
     }
     &:before {
@@ -258,8 +270,14 @@
     right: 0;
     bottom: 60px;
     margin: auto;
+    @media screen and (max-width: $pad) {
+        bottom: 50px;
+    }
     @media screen and (max-width: $mob) {
         bottom: 30px;
+    }
+    @media screen and (max-width: 450px) {
+        bottom: 28px;
     }
     img {
         max-width: 100%;
@@ -270,7 +288,7 @@
 .comparison_left {
     position: relative;
     order: -1;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         width: 50%;
         float: left;
         height: auto;
@@ -284,9 +302,15 @@
         background-size: 100% auto;
         padding-top: 70px;
         margin: 0 auto;
+        @media screen and (max-width: $pad) {
+            background-size: auto 50%;
+        }
         @media screen and (max-width: $mob) {
             width: 90%;
             padding-top: 20px;
+        }
+        @media screen and (max-width: 450px) {
+            background-size: auto 34%;
         }
     }
     .godaddy {
@@ -294,7 +318,7 @@
             max-width: 68px;
             margin: 0 auto 18px auto;
             @media screen and (max-width: $mob) {
-                width: 25%;
+                max-width: 45px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -304,7 +328,7 @@
             width: 75px;
             margin: 0 auto 20px auto;
             @media screen and (max-width: $mob) {
-                width: 25%;
+                max-width: 50px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -314,7 +338,7 @@
             width: 89px;
             margin: 0 auto 29px auto;
             @media screen and (max-width: $mob) {
-                width: 40%;
+                max-width: 59px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -324,7 +348,7 @@
             width: 157px;
             margin: 0 auto 26px auto;
             @media screen and (max-width: $mob) {
-                width: 66%;
+                max-width: 104px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -334,7 +358,7 @@
             width: 63px;
             margin: 0 auto 24px auto;
             @media screen and (max-width: $mob) {
-                width: 25%;
+                max-width: 42px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -344,7 +368,7 @@
 .comparison_right {
     position: relative;
     max-height: 180px;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         width: 50%;
         float: left;
         height: 130px;
@@ -358,9 +382,45 @@
         background-size: 100% auto;
         padding-top: 60px;
         margin: 0 auto;
+        @media screen and (max-width: $pad) {
+            background-size: auto 50%;
+        }
         @media screen and (max-width: $mob) {
             width: 90%;
+            height: 110px;
             padding-top: 20px;
+        }
+        @media screen and (max-width: 450px) {
+            background-size: auto 37%;
+        }
+    }
+    .comparisonBox {
+        @media screen and (max-width: $pad) {
+            bottom: -8px;
+        }
+        @media screen and (max-width: $mob) {
+            bottom: 30px;
+        }
+        @media screen and (max-width: 450px) {
+            bottom: 20px;
+        }
+    }
+    .comparisonbox_col3 {
+        width: 220px;
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        @media screen and (max-width: $pad) {
+            width: 213px;
+            bottom: 30px;
+        }
+        @media screen and (max-width: $mob) {
+            width: 180px;
+        }
+        @media screen and (max-width: $mob) {
+            left: -10px;
         }
     }
     .pnlogo {
@@ -368,25 +428,22 @@
             width: 105px;
             margin: 0 auto 16px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 70px;
                 margin: 0 auto 6px auto;
             }
         }
     }
     .wan {
-        position: absolute;
-        bottom: 65px;
-        left: 38px;
-        @media screen and (max-width: $mob) {
-            bottom: 30px;
-            left: -39px;
-        }
+        display: inline-block;
         .figure {
             width: 66px;
             margin: 0 auto 20px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 44px;
                 margin: 0 auto 6px auto;
+            }
+            @media screen and (max-width: 365px) {
+                max-width: 44px;
             }
             img {
                 max-width: 100%;
@@ -395,20 +452,16 @@
         }
     }
     .qtum {
-        position: absolute;
-        bottom: 65px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        @media screen and (max-width: $mob) {
-            bottom: 30px;
-        }
+        display: inline-block;
         .figure {
             width: 85px;
             margin: 0 auto 22px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 56px;
                 margin: 0 auto 6px auto;
+            }
+            @media screen and (max-width: 365px) {
+                max-width: 48px;
             }
             img {
                 max-width: 100%;
@@ -417,19 +470,16 @@
         }
     }
     .eth {
-        position: absolute;
-        bottom: 65px;
-        right: 55px;
-        @media screen and (max-width: $mob) {
-            bottom: 30px;
-            right: 0;
-        }
+        display: inline-block;
         .figure {
             height: 82px;
             margin: 0 auto 16px auto;
             @media screen and (max-width: $mob) {
                 height: 54px;
                 margin: 0 auto 6px auto;
+            }
+            @media screen and (max-width: 365px) {
+                height: 46px;
             }
             img {
                 max-width: 100%;
@@ -443,7 +493,7 @@
             width: 75px;
             margin: 0 auto 18px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 50px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -453,7 +503,7 @@
             width: 89px;
             margin: 0 auto 14px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 59px;
                 margin: 0 auto 6px auto;
             }
         }
@@ -463,7 +513,7 @@
             width: 64px;
             margin: 0 auto 22px auto;
             @media screen and (max-width: $mob) {
-                width: 35%;
+                max-width: 42px;
                 margin: 0 auto 6px auto;
             }
         }

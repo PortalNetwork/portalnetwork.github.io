@@ -84,7 +84,11 @@
 	overflow: hidden;
 	padding-bottom: 20px;
 	@media screen and (max-width: $pad) {
+		width: 80%;
 		margin: 0 auto;
+	}
+	@media screen and (max-width: $mob) {
+		width: 100%;
 	}
 	input.email {
 		width: 300px;

@@ -20,13 +20,14 @@ window.onload = function () {
     new Vue({
         el: '#app',
         data: {
-            isMenuOpen : false,
+            isMenuOpen: false,
             slides: 
             [
                 {src: "/images/sildeShow/showcase1.png"},
                 {src: "/images/sildeShow/showcase2.png"},
                 {src: "/images/sildeShow/showcase3.png"},
-            ]
+            ],
+            isYoutubeShow: false,
         },
         components: {
             Carousel3d,
@@ -43,6 +44,9 @@ window.onload = function () {
                 ga('send', 'event', name, 'click', );
                 let debug = getUrl();
                 if(debug["debug"]=="true") console.log("GA PageView -> ",name);
+            },
+            youtubeShow(){
+                this.isYoutubeShow = !this.isYoutubeShow;
             }
         },
         mounted() { 

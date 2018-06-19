@@ -46,6 +46,18 @@ body {
     }
 }
 
+.telegramBtn {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 98;
+    img {
+        max-width: 80px;
+        width: 100%;
+    }
+}
+
 .logo {
     display: block;
     float: left;
@@ -64,7 +76,7 @@ nav {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
+        width: 100%;
         height: 100%;
         background-color: #3442b0;
         z-index: 1;
@@ -80,7 +92,7 @@ nav {
 .menu_btn {
     display: none;
     position: fixed;
-    top: 50px;
+    top: 36px;
     right: 20px;
     z-index: 99;
     color: #fff;
@@ -90,13 +102,13 @@ nav {
     &:after {
         content: "";
         display: block;
-        width: 15px;
+        width: 20px;
         height: 2px;
         background-color: #fff;
     }
     span {
         display: block;
-        width: 25px;
+        width: 20px;
         height: 2px;
         background-color: transparent;
         margin: 3px 0;
@@ -151,6 +163,15 @@ nav {
     .active {
         nav {
             right: 0;
+            &:before {
+                content: "";
+                display: block;
+                width: 200px;
+                height: 26px;
+                background: url('../images/logo/blue_logo.png') left top no-repeat;
+                background-size: 100% auto;
+                margin: 30px 0 0 20px;
+            }
         }
         .menu_btn {
             right: 20px;
@@ -247,12 +268,12 @@ nav {
     align-items: center;
     width: 90%;
     margin: 0 auto;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         flex-wrap: wrap;
         width: 80%;
     }
     a {
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             margin-bottom: 50px;
         }
         img {
@@ -269,7 +290,7 @@ nav {
         border-style: solid;
         border-width: 470px 100vw 0 0;
         border-color: #00d5bf transparent transparent transparent;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             border-width: 156px 100vw 0 0;
         }
     }
@@ -281,13 +302,13 @@ nav {
         border-color: transparent #3442b0 transparent transparent;
         position: absolute;
         top: 0;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             border-width: 0 100vw 156px 0;
         }
     }
     .section {
-        @include section();
-        @media screen and (max-width: $mob) {
+        @include section(0,100px);
+        @media screen and (max-width: $pad) {
             margin: 22px auto 0 auto;
         }
     }
@@ -326,23 +347,30 @@ nav {
     margin: 0 auto 165px auto;
     padding: 0 20px;
     box-sizing: border-box;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         margin: 0 auto 50px auto;
     }
     .partner_title {
         margin-bottom: 54px;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             margin-bottom: 38px;
         }
     }
     .partner_area {
+        justify-content: center;
+        a+a {
+            margin-left: 58px;
+            @media screen and (max-width: $pad) {
+                margin-left: 30px;
+            }
+        }
         .bluzelle {
-            @media screen and (max-width: $mob) {
+            @media screen and (max-width: $pad) {
                 max-width: 136px;
             }
         }
         .wan {
-            @media screen and (max-width: $mob) {
+            @media screen and (max-width: $pad) {
                 max-width: 84px;
             }
         }
@@ -354,19 +382,19 @@ nav {
     margin: 0 auto 165px auto;
     padding: 0 20px;
     box-sizing: border-box;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
         margin: 0 auto 50px auto;
     }
     .partner_title {
         margin-bottom: 94px;
-        @media screen and (max-width: $mob) {
+        @media screen and (max-width: $pad) {
             margin-bottom: 60px;
         }
     }
     .partner_area {
         justify-content: center;
         a {
-            @media screen and (max-width: $mob) {
+            @media screen and (max-width: $pad) {
                 max-width: 138px;
             }
         }
@@ -391,6 +419,9 @@ nav {
     .item_list {
         float: left;
         padding-top: 52px;
+        @media screen and (max-width: $pad) {
+            margin-bottom: 40px;
+        }
         @media screen and (max-width: $mob) {
             float: none;
             padding-top: 42px;
@@ -407,6 +438,7 @@ nav {
             height: 44px;
             border-radius: 50%;
             background-color: #232F88;
+            transition: background-color .5s;
             float: left;
             position: relative;
             @media screen and (max-width: 440px) {
