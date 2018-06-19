@@ -1,4 +1,4 @@
-function getUrl(params) {
+function getUrl() {
 	var strUrl = location.search;
 	var getPara, ParaVal;
 	var aryPara = [];
