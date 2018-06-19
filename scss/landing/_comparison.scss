@@ -1,64 +1,89 @@
 @import "../_var.scss";
 .comparison {
     background-color: #3442b0;
-    padding-top: 114px;
+    padding-top: 100px;
+    @media screen and (max-width: $pad) {
+        padding-top: 36px;
+    }
     .section {
         @include section();
-    }
-    >ul {
-        width: 88%;
-        margin: 0 auto;
-        @media screen and (max-width: $pad) {
-            width: 100%;
+        >ul {
+            padding-top: 126px;
+            @media screen and (max-width: $pad) {
+                padding-top: 80px;
+            }
+            @media screen and (max-width: $mob) {
+                padding-top: 50px;
+            }
         }
-    }
-    p {
-        font-size: 12px;
-        line-height: 1;
-        font-weight: bold;
-        color: #fff;
-        text-align: center;
-    }
-    .greenText {
-        color: #11EBD4;
     }
 }
 
 .comparison_header {
-    padding-bottom: 80px;
-    margin: 0 auto 40px auto;
-    position: relative;
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
     @extend %clear;
-    @media screen and (max-width: $pad) {
-        display: block;
-        width: 95%;
-        margin: 0 auto 50px auto;
+    @media screen and (max-width: $mob) {
+        max-width: 100%;
     }
     h3 {
         font-size: 23px;
         font-weight: bold;
         text-align: center;
         color: #00D5BF;
-        position: absolute;
-        bottom: 78px;
-        left: 0;
-        right: 0;
-        margin: auto;
+        transform: translateY(193px);
         @media screen and (max-width: $pad) {
-            position: relative;
+            transform: none;
+            margin-bottom: 50px;
         }
     }
     h4 {
         font-size: 16px;
         font-weight: bold;
-        line-height: 19px;
         color: #fff;
         text-align: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
+        margin-bottom: 20px;
+    }
+    .figure {
+        margin: 0 auto 20px auto;
+        img {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    .left {
+        position: relative;
+        float: left;
+        @media screen and (max-width: $mob) {
+            width: 50%;
+        }
+        .figure {
+            max-width: 147px;
+            @media screen and (max-width: $mob) {
+                max-width: 98px;
+            }
+        }
+    }
+    .right {
+        position: relative;
+        float: right;
+        @media screen and (max-width: $mob) {
+            width: 50%;
+            float: left;
+        }
+        .figure {
+            max-width: 195px;
+            @media screen and (max-width: $mob) {
+                max-width: 130px;
+            }
+        }
+    }
+    .arraw_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .arrow {
         display: inline-block;
@@ -68,18 +93,11 @@
         border-top: none;
         border-left: none;
         transform: rotate(45deg);
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -30px;
-        margin: auto;
         animation: arrow 2s infinite;
         &.num2 {
-            bottom: -45px;
             animation: arrow2 2s infinite;
         }
         &.num3 {
-            bottom: -60px;
             animation: arrow3 2s infinite;
         }
     }
@@ -120,401 +138,310 @@
     }
 }
 
-.comparison_header_left {
-    width: 312px;
-    order: -1;
-    height: 200px;
-    position: relative;
-    float: left;
-    @media screen and (max-width: $pad) {
-        width: 50%;
-        float: left;
-        height: 160px;
-    }
-    img {
-        max-width: 147px;
-        width: 147px;
-        margin: 0 auto;
-        @media screen and (max-width: $pad) {
-            width: 70%;
-        }
-    }
-    h4 {
-        @media screen and (max-width: $pad) {
-            bottom: -14px;
-        }
-    }
-}
-
-.comparison_header_right {
-    width: 312px;
-    height: 200px;
-    position: relative;
-    float: right;
-    @media screen and (max-width: $pad) {
-        width: 50%;
-        float: left;
-        height: 160px;
-    }
-    img {
-        max-width: 195px;
-        width: 195px;
-        margin: 0 auto;
-        @media screen and (max-width: $pad) {
-            width: 70%;
-        }
-    }
-    h4 {
-        @media screen and (max-width: $pad) {
-            bottom: -14px;
-        }
-    }
-}
-
 .comparison_list {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    padding-bottom: 100px;
+    @extend %clear;
     @media screen and (max-width: $pad) {
         display: block;
-        margin-bottom: 60px;
-        &:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
     }
-    &:last-child {
-        margin-bottom: 0;
-        padding-bottom: 76px;
+    @media screen and (max-width: $mob) {
+        padding-bottom: 40px;
     }
 }
 
-.comparison_caption {
-    position: relative;
-    margin-top: -55px;
+.comparison_title {
+    transform: translateY(-74px);
     @media screen and (max-width: $pad) {
-        margin-top: 0;
+        transform: none;
+        padding-bottom: 100px;
     }
-    &:before {
-        content: "";
-        font-size: 14px;
-        line-height: 1;
-        font-weight: bold;
-        color: #fff;
+    @media screen and (max-width: $mob) {
+        padding-bottom: 20px;
+    }
+    .figure {
+        position: relative;
         text-align: center;
-        position: absolute;
-        left: 13px;
-        right: 0;
-        top: 80px;
-    }
-    img {
-        margin: 0 auto;
-    }
-    &.domainregister {
-        &:before {
-            content: "Domain Register";
+        max-width: 236px;
+        @media screen and (max-width: $pad) {
+            margin: 0 auto;
+        }
+        &:after {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            position: absolute;
+            bottom: 43px;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
         img {
-            width: 236px;
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+    &.domainregister {
+        .figure {
+            &:after {
+                content: "Domain Register";
+            }
         }
     }
     &.system {
-        &:before {
-            content: "Operating System";
-        }
-        img {
-            width: 236px;
+        .figure {
+            &:after {
+                content: "Operating System";
+            }
         }
     }
     &.storage {
-        &:before {
-            content: "File Storage";
-        }
-        img {
-            width: 236px;
+        .figure {
+            &:after {
+                content: "File Storage";
+            }
         }
     }
     &.data {
-        &:before {
-            content: "Data Storage & Management Oracle";
-        }
-        img {
-            width: 236px;
+        .figure {
+            &:after {
+                content: "Data Storage & Management Oracle";
+            }
         }
     }
     &.appweb {
-        &:before {
-            content: "Social Platform";
+        .figure {
+            &:after {
+                content: "Social Platform";
+            }
         }
-        img {
-            width: 236px;
-        }
-    }
-}
-
-.comparison_caption_text {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    @media screen and (max-width: $mob) {
-        font-size: 17px;
-    }
-}
-
-.comparisonBox {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 60px;
-    margin: auto;
-    @media screen and (max-width: $pad) {
-        bottom: 50px;
-    }
-    @media screen and (max-width: $mob) {
-        bottom: 30px;
-    }
-    @media screen and (max-width: 450px) {
-        bottom: 28px;
-    }
-    img {
-        max-width: 100%;
-        width: 100%;
     }
 }
 
 .comparison_left {
+    width: 313px;
+    background: url('../images/comparison/oval_base.png') bottom center no-repeat;
+    background-size: 100% 100%;
     position: relative;
     order: -1;
     @media screen and (max-width: $pad) {
         width: 50%;
         float: left;
-        height: auto;
+        background-size: auto 100%;
+        height: 111px;
     }
-    &:before {
-        content: "";
-        display: block;
-        width: 312px;
-        height: 110px;
-        background: url('../images/comparison/oval_base.png') bottom center no-repeat;
-        background-size: 100% auto;
-        padding-top: 70px;
+    @media screen and (max-width: $mob) {
+        background-size: auto 52%;
+    }
+    @media screen and (max-width: $smob) {
+        background-size: auto 43%;
+    }
+    .figure {
         margin: 0 auto;
-        @media screen and (max-width: $pad) {
-            background-size: auto 50%;
-        }
-        @media screen and (max-width: $mob) {
-            width: 90%;
-            padding-top: 20px;
-        }
-        @media screen and (max-width: 450px) {
-            background-size: auto 34%;
+        img {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
         }
     }
     .godaddy {
         .figure {
             max-width: 68px;
-            margin: 0 auto 18px auto;
             @media screen and (max-width: $mob) {
                 max-width: 45px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .windows {
         .figure {
-            width: 75px;
-            margin: 0 auto 20px auto;
+            max-width: 75px;
             @media screen and (max-width: $mob) {
                 max-width: 50px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .amazo {
         .figure {
-            width: 89px;
-            margin: 0 auto 29px auto;
+            max-width: 89px;
             @media screen and (max-width: $mob) {
                 max-width: 59px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .oracle {
         .figure {
-            width: 157px;
-            margin: 0 auto 26px auto;
+            max-width: 157px;
             @media screen and (max-width: $mob) {
                 max-width: 104px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .facebook {
         .figure {
-            width: 63px;
-            margin: 0 auto 24px auto;
+            max-width: 63px;
             @media screen and (max-width: $mob) {
                 max-width: 42px;
-                margin: 0 auto 6px auto;
             }
         }
     }
 }
 
 .comparison_right {
+    width: 313px;
+    background: url('../images/comparison/polygon_base.png') bottom center no-repeat;
+    background-size: 100% 100%;
     position: relative;
-    max-height: 180px;
+    text-align: center;
     @media screen and (max-width: $pad) {
         width: 50%;
-        float: left;
-        height: 130px;
+        float: right;
+        height: 123px;
+        background-size: auto 100%;
+        transform: translateY(-12px);
     }
-    &:before {
-        content: "";
-        display: block;
-        width: 313px;
-        height: 120px;
-        background: url('../images/comparison/polygon_base.png') bottom center no-repeat;
-        background-size: 100% auto;
-        padding-top: 60px;
+    @media screen and (max-width: $mob) {
+        background-size: auto 52%;
+    }
+    @media screen and (max-width: $smob) {
+        background-size: auto 43%;
+    }
+    .figure {
         margin: 0 auto;
-        @media screen and (max-width: $pad) {
-            background-size: auto 50%;
-        }
-        @media screen and (max-width: $mob) {
-            width: 90%;
-            height: 110px;
-            padding-top: 20px;
-        }
-        @media screen and (max-width: 450px) {
-            background-size: auto 37%;
-        }
-    }
-    .comparisonBox {
-        @media screen and (max-width: $pad) {
-            bottom: -8px;
-        }
-        @media screen and (max-width: $mob) {
-            bottom: 30px;
-        }
-        @media screen and (max-width: 450px) {
-            bottom: 20px;
-        }
-    }
-    .comparisonbox_col3 {
-        width: 220px;
-        position: absolute;
-        bottom: 60px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        @media screen and (max-width: $pad) {
-            width: 213px;
-            bottom: 30px;
-        }
-        @media screen and (max-width: $mob) {
-            width: 180px;
-        }
-        @media screen and (max-width: $mob) {
-            left: -10px;
+        img {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
         }
     }
     .pnlogo {
         .figure {
-            width: 105px;
-            margin: 0 auto 16px auto;
+            max-width: 105px;
             @media screen and (max-width: $mob) {
                 max-width: 70px;
-                margin: 0 auto 6px auto;
-            }
-        }
-    }
-    .wan {
-        display: inline-block;
-        .figure {
-            width: 66px;
-            margin: 0 auto 20px auto;
-            @media screen and (max-width: $mob) {
-                max-width: 44px;
-                margin: 0 auto 6px auto;
-            }
-            @media screen and (max-width: 365px) {
-                max-width: 44px;
-            }
-            img {
-                max-width: 100%;
-                width: 100%;
-            }
-        }
-    }
-    .qtum {
-        display: inline-block;
-        .figure {
-            width: 85px;
-            margin: 0 auto 22px auto;
-            @media screen and (max-width: $mob) {
-                max-width: 56px;
-                margin: 0 auto 6px auto;
-            }
-            @media screen and (max-width: 365px) {
-                max-width: 48px;
-            }
-            img {
-                max-width: 100%;
-                width: 100%;
-            }
-        }
-    }
-    .eth {
-        display: inline-block;
-        .figure {
-            height: 82px;
-            margin: 0 auto 16px auto;
-            @media screen and (max-width: $mob) {
-                height: 54px;
-                margin: 0 auto 6px auto;
-            }
-            @media screen and (max-width: 365px) {
-                height: 46px;
-            }
-            img {
-                max-width: 100%;
-                height: 100%;
-                margin: 0 auto;
             }
         }
     }
     .ipfs {
         .figure {
-            width: 75px;
-            margin: 0 auto 18px auto;
+            max-width: 75px;
             @media screen and (max-width: $mob) {
                 max-width: 50px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .bluzelle {
         .figure {
-            width: 89px;
-            margin: 0 auto 14px auto;
+            max-width: 89px;
             @media screen and (max-width: $mob) {
                 max-width: 59px;
-                margin: 0 auto 6px auto;
             }
         }
     }
     .status {
         .figure {
-            width: 64px;
-            margin: 0 auto 22px auto;
+            max-width: 64px;
             @media screen and (max-width: $mob) {
                 max-width: 42px;
-                margin: 0 auto 6px auto;
+            }
+        }
+    }
+}
+
+.comparison_box {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 65px;
+    transform: translateX(-50%) scale(0.9);
+    transition: scale .5s;
+    @media screen and (max-width: $mob) {
+        bottom: 24px;
+        white-space: nowrap;
+    }
+    &:hover {
+        transform: translateX(-50%) scale(1);
+    }
+    p {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 18px;
+        @media screen and (max-width: $mob) {
+            margin-top: 10px;
+        }
+    }
+    .green_text {
+        color: #00D5BF;
+    }
+}
+
+.comparison_box_col3 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 65px;
+    margin: auto;
+    width: 205px;
+    @extend %clear;
+    @media screen and (max-width: $mob) {
+        width: 167px;
+        bottom: 26px;
+    }
+    @media screen and (max-width: $smob) {
+        left: -12px;
+    }
+    p {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 18px;
+        @media screen and (max-width: $mob) {
+            margin-top: 10px;
+        }
+    }
+    .wan {
+        float: left;
+        transform: scale(0.9);
+        transition: scale .5s;
+        &:hover {
+            transform: scale(1);
+        }
+        .figure {
+            max-width: 66px;
+            @media screen and (max-width: $mob) {
+                max-width: 44px;
+            }
+        }
+    }
+    .qtum {
+        float: left;
+        transform: scale(0.9);
+        transition: scale .5s;
+        &:hover {
+            transform: scale(1);
+        }
+        .figure {
+            max-width: 85px;
+            @media screen and (max-width: $mob) {
+                max-width: 56px;
+            }
+        }
+    }
+    .eth {
+        float: left;
+        transform: scale(0.9);
+        transition: scale .5s;
+        &:hover {
+            transform: scale(1);
+        }
+        .figure {
+            max-width: 50px;
+            @media screen and (max-width: $mob) {
+                max-width: 33px;
             }
         }
     }
