@@ -1,14 +1,14 @@
 article.banner{
     background-color: #A9FBF2;
     .banner_info {
-        max-width: 1100px;
+        // max-width: 1100px;
         margin: 0 auto;
         position: relative;
         width: 100%;
         height: 768px;
         @include media-1366(){
             height: pxtovw(768);
-            max-width: 980px;
+            // max-width: 980px;
         }
         @include media-740(){
             padding-top: 83px;
@@ -22,16 +22,18 @@ article.banner{
         width: 704px;
         height: 528.2px;
         background-image: url("../images/Showcase/Hero_img.png");
-        background-size: 125% auto;
+        background-size: 140% auto;
         background-repeat: no-repeat;
         background-position: top right;
-        left: -255px;
-        top: 245px;
+        left: 0px;
+        top: 167px;
         @include media-1366(){
             top: pxtovw(167);
             width: pxtovw(704);
             height: pxtovw(528);
-            left: pxtovw(-430);
+            background-size: 140% auto;
+            // left: -46px;
+            // left: pxtovw(-130);
         }
         @include media-740(){ 
             position: static;
@@ -44,13 +46,14 @@ article.banner{
     }
     .b_content{
         position: absolute;
-        top: 310px;
-        right: 123px;
+        top: 270px;
+        right: 138px;
         width: 594px;
         height: auto;
         @include media-1366(){
             width: pxtovw(594);
-            top: pxtovw(310);
+            top: pxtovw(270);
+            right: pxtovw(135);
         }
         @include media-740(){ 
             position: static;
@@ -68,6 +71,8 @@ article.banner{
             font-weight: 500;
             text-align: center;
             color: #524040;
+            border-bottom: 1px solid #979797;
+    
             @include media-1366(){
                 height: pxtovw(80);
                 font-size: pxtovw(50);
