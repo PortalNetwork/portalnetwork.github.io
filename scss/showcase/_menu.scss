@@ -6,8 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: auto;
-    z-index: 10;
+    z-index: 98;
     @include media-740(){
         height: 83px;
     }
@@ -48,6 +47,7 @@
                 background-size: 23px 23px;
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
+                z-index: 1;
             }
         }
         nav{
@@ -61,6 +61,7 @@
                 padding-top: pxtovh(65);
                 transition: top .3s;
                 top: -120%;
+                z-index: 2;
                 &.open{
                     top: 0;
                 }
@@ -100,7 +101,8 @@
                         >p{
                             text-align: center;
                             margin-top: 9px;
-                            font-size: pxtovw(14);
+                            font-size: 14px;
+                            color: #000;
                         }
                     }
                 }
