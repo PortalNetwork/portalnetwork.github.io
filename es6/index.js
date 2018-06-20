@@ -62,6 +62,8 @@ new Vue({
             this.scroll = document.documentElement.scrollTop;
             if(this.scroll > 150){
                 this.isheaderFix = true;
+            }else {
+                this.isheaderFix = false;
             }
         }
     },
