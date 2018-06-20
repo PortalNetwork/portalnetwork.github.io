@@ -37,11 +37,6 @@ new Vue({
         caseSuccess(res) {
             this.showcaseInfo = res.data.result;
             this.isLoad = false;
-            TweenMax.to("#txt", 3, {
-                text: "portalnetworkweb.eth",
-                delay: 0.4,
-                ease: Power1.easeOut
-            });
         },
         caseFatch(err) {
             console.error(err);
@@ -80,9 +75,10 @@ new Vue({
     },
     mounted() {
         window.addEventListener('scroll', this.scrollFn);
-        // window.Intercom("boot", {
-        //     app_id: "an50zjec"
-        // });
-        // window.Intercom("update");
+        TweenMax.to("#txt", 3, {
+            text: "portalnetworkweb.eth",
+            delay: 0.4,
+            ease: Power1.easeOut
+        });
     }
 });
