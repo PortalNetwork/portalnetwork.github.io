@@ -39,22 +39,14 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-	<div id="app" :class="{active: isMenuOpen}">
+	<div id="app" :class="{active: isMenuOpen}" v-model="">
 		<a class="menu_btn" @click="toggleMenuFn">
 			<span></span>
-			<!-- <span v-show="!isMenuOpen">
-				<i class="fas fa-bars"></i>
-			</span>
-			<span v-show="isMenuOpen">
-				<i class="fas fa-times"></i>
-			</span> -->
 		</a>
 		<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a>
-		<div class="header">
+		<div :class="['header',{fixed: isheaderFix}]">
 			<div class="section">
-				<h1 class="logo">
-					<img src="./images/logo/logo@2x.svg" alt="">
-				</h1>
+				<h1 class="logo"></h1>
 				<nav>
 					<!-- <ul :class="['menu_list',{active: isMenuOpen}]"> -->
 					<ul class="menu">
@@ -211,16 +203,16 @@
 							<div class="figure"><img src="./images/comparison/domainregister.png" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<a class="comparison_box godaddy" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link godaddy">
 								<div class="figure"><img src="./images/comparison/godaddy.png" alt=""></div>
 								<p class="green_text">GoDaddy</p>
-							</a>
+							</div>
 						</div>
 						<div class="comparison_right">
-							<a class="comparison_box pnlogo" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link pnlogo">
 								<div class="figure"><img src="./images/comparison/pnlogo.png" alt=""></div>
 								<p>Portal Network</p>
-							</a>
+							</div>
 						</div>
 					</li>
 					<li class="comparison_list">
@@ -228,25 +220,25 @@
 							<div class="figure"><img src="./images/comparison/OS.png" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<a class="comparison_box windows" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link windows">
 								<div class="figure"><img src="./images/comparison/windows.png" alt=""></div>
 								<p class="green_text">Windows</p>
-							</a>
+							</div>
 						</div>
 						<div class="comparison_right">
 							<div class="comparison_box_col3"> 
-									<a class="wan" href="javascript:;" target="_blank">
+									<a class="wan" href="https://wanchain.org/" target="_blank">
 											<div class="figure"><img src="./images/comparison/wan.png" alt=""></div>
 											<p>Wanchain</p>
 									</a>
-										<a class="qtum" href="javascript:;" target="_blank">
-												<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
-											<p>Qtum</p>
-										</a>
-										<a class="eth" href="javascript:;" target="_blank">
-												<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
-											<p>Ethereum</p>
-										</a>
+									<a class="qtum" href="https://qtum.org/en/" target="_blank">
+											<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
+										<p>Qtum</p>
+									</a>
+									<a class="eth" href="https://www.ethereum.org/" target="_blank">
+											<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
+										<p>Ethereum</p>
+									</a>
 							</div>
 						</div>
 					</li>
@@ -255,13 +247,13 @@
 							<div class="figure"><img src="./images/comparison/filestorage.png" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<a class="comparison_box amazo" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link amazo">
 								<div class="figure"><img src="./images/comparison/AWS.png" alt=""></div>
 								<p class="green_text">Amazon Web Services S3</p>
-							</a>
+							</div>
 						</div>
 						<div class="comparison_right">
-							<a class="comparison_box ipfs" href="javascript:;" target="_blank">
+							<a class="comparison_box ipfs" href="https://ipfs.io/" target="_blank">
 								<div class="figure"><img src="./images/comparison/ipfs.png" alt=""></div>
 								<p>IPFS</p>
 							</a>
@@ -272,13 +264,13 @@
 							<div class="figure"><img src="./images/comparison/data.png" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<a class="comparison_box oracle" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link oracle">
 								<div class="figure"><img src="./images/comparison/oracle.png" alt=""></div>
 								<p class="greenText">Oracle</p>
-							</a>
+							</div>
 						</div>
 						<div class="comparison_right">
-							<a class="comparison_box bluzelle" href="javascript:;" target="_blank">
+							<a class="comparison_box bluzelle" href="https://bluzelle.com/" target="_blank">
 								<div class="figure"><img src="./images/comparison/bluzelle.png" alt=""></div>
 								<p>Bluzelle</p>
 							</a>
@@ -289,16 +281,16 @@
 							<div class="figure"><img src="./images/comparison/app_web.png" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<a class="comparison_box facebook" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link facebook">
 								<div class="figure"><img src="./images/comparison/facebook.png" alt=""></div>
 								<p class="greenText">Facebook</p>
-							</a>
+							</div>
 						</div>
 						<div class="comparison_right">
-							<a class="comparison_box status" href="javascript:;" target="_blank">
+							<div class="comparison_box no_link status">
 								<div class="figure"><img src="./images/comparison/status.png" alt=""></div>
 								<p>Status</p>
-							</a>
+							</div>
 						</div>
 					</li>
 				</ul>

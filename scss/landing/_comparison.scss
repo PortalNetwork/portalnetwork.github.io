@@ -152,6 +152,8 @@
 }
 
 .comparison_title {
+    width: 313px;
+    margin: 0 auto;
     transform: translateY(-74px);
     @media screen and (max-width: $pad) {
         transform: none;
@@ -164,6 +166,7 @@
         position: relative;
         text-align: center;
         max-width: 236px;
+        margin: 0 auto;
         @media screen and (max-width: $pad) {
             margin: 0 auto;
         }
@@ -364,6 +367,12 @@
     }
     &:hover {
         transform: translateX(-50%) scale(1);
+    }
+    &.no_link {
+        transform: translateX(-50%) scale(0.9);
+        &:hover {
+            transform: translateX(-50%) scale(0.9);
+        }
     }
     p {
         font-size: 12px;

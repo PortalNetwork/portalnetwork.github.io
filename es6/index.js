@@ -16,6 +16,7 @@ function getUrl() {
 
 import { Carousel3d, Slide } from 'vue-carousel-3d';
 import { CLIENT_RENEG_WINDOW } from 'tls';
+import animateScrollTo from 'animated-scroll-to';
 
 Vue.use(Carousel3d);
 new Vue({
@@ -28,6 +29,9 @@ new Vue({
             {src: "/images/sildeShow/showcase3.png"},
         ],
         isYoutubeShow: false,
+        shareOpen: false,
+        isheaderFix: false,
+        scroll: 0,
     },
     components: {
         Carousel3d,
@@ -47,14 +51,22 @@ new Vue({
         },
         youtubeShow(){
             this.isYoutubeShow = !this.isYoutubeShow;
+        },
+        fixedPopOpen() {
+            this.shareOpen = !this.shareOpen;
+        },
+        gotoPageTop() {
+            animateScrollTo(0);
+        },
+        scrollFn() {
+            this.scroll = document.documentElement.scrollTop;
+            if(this.scroll > 150){
+                this.isheaderFix = true;
+            }
         }
     },
     mounted() { 
-        console.log("slides:", this.slides);
         AOS.init();
-        // window.Intercom("boot", {
-        //     app_id: "an50zjec"
-        // });
-        // window.Intercom("update");
+        window.addEventListener('scroll', this.scrollFn);
     }
 });

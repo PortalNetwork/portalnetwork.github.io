@@ -2,6 +2,7 @@
 .hero {
 	background-color: #00d5bf;
 	position: relative;
+	padding-top: 182px;
 	&:after {
 		content: "";
 		display: block;
@@ -173,8 +174,9 @@
 	max-width: 785px;
 	position: absolute;
 	top: -60px;
-	right: -247px;
+	right: 0px;
 	margin: 0 auto;
+	width: 50%;
 	@media screen and (max-width: $pad) {
 		position: relative;
 		top: auto;
