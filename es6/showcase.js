@@ -15,7 +15,9 @@ new Vue({
         domain: ["p", "o", "r", "t", "a", "l", "n", "e", "t", "w", "o", "r", "k", "w", "e", "b", ".", "e", "t", "h"],
         hash: ["0", "x", "d", "a", "3", "b", "4", "0", "1", "f", "9", "9", "0", "7", "9", "6", "2", "8", "a", "4"],
         showtext: [],
-        isLoad: true,
+        isLoad: false,
+        scroll: 0,
+        isScallBack: false
     },
     computed: {
         caseInfoArr() {
@@ -60,17 +62,27 @@ new Vue({
         gotoPageTop() {
             animateScrollTo(0);
         },
+        scrollFn(){
+            const bannerHeight = document.querySelector(".banner").offsetHeight;
+            this.scroll = document.documentElement.scrollTop;
+        
+            if(!this.isScallBack && this.scroll > bannerHeight/2){
+                this.isScallBack = true;
+                this.isLoad = true;
+                axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase")
+                .then(this.caseSuccess)
+                .catch(this.caseFatch);
+            }
+        }
     },
     created() {
         this.showtext = this.hash;
     },
     mounted() {
-        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase")
-        .then(this.caseSuccess)
-        .catch(this.caseFatch);
-        window.Intercom("boot", {
-            app_id: "an50zjec"
-        });
-        window.Intercom("update");
+        window.addEventListener('scroll', this.scrollFn);
+        // window.Intercom("boot", {
+        //     app_id: "an50zjec"
+        // });
+        // window.Intercom("update");
     }
 });
