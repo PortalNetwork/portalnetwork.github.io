@@ -14,31 +14,47 @@ function getUrl() {
 	return aryPara;
 }
 
-window.onload = function () {
-    new Vue({
-        el: '#app',
-        data: {
-            isMenuOpen : false
+import { Carousel3d, Slide } from 'vue-carousel-3d';
+import { CLIENT_RENEG_WINDOW } from 'tls';
+
+Vue.use(Carousel3d);
+new Vue({
+    el: '#app',
+    data: {
+        isMenuOpen: false,
+        slides: [
+            {src: "/images/sildeShow/showcase1.png"},
+            {src: "/images/sildeShow/showcase2.png"},
+            {src: "/images/sildeShow/showcase3.png"},
+        ],
+        isYoutubeShow: false,
+    },
+    components: {
+        Carousel3d,
+        Slide
+    },
+    methods: {
+        toggleMenuFn() {
+            this.isMenuOpen = !this.isMenuOpen;
         },
-        methods: {
-            toggleMenuFn() {
-                this.isMenuOpen = !this.isMenuOpen;
-            },
-            comingsoonFn() {
-                alert("coming soon");
-            },
-            gaSeedPageView(name) {
-                ga('send', 'event', name, 'click', );
-                let debug = getUrl();
-                if(debug["debug"]=="true") console.log("GA PageView -> ",name);
-            }
+        comingsoonFn() {
+            alert("coming soon");
         },
-        mounted() { 
-            AOS.init();
-            window.Intercom("boot", {
-                app_id: "an50zjec"
-            });
-            window.Intercom("update");
+        gaSeedPageView(name) {
+            ga('send', 'event', name, 'click', );
+            let debug = getUrl();
+            if(debug["debug"]=="true") console.log("GA PageView -> ",name);
+        },
+        youtubeShow(){
+            this.isYoutubeShow = !this.isYoutubeShow;
         }
-    });
-}
+    },
+    mounted() { 
+        console.log("slides:", this.slides);
+        AOS.init();
+        // window.Intercom("boot", {
+        //     app_id: "an50zjec"
+        // });
+        // window.Intercom("update");
+    }
+});
