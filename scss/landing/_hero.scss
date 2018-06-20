@@ -3,6 +3,9 @@
 	background-color: #00d5bf;
 	position: relative;
 	padding-top: 182px;
+	@media screen and (max-width: $pad) {
+		padding-top: 60px;
+	}
 	&:after {
 		content: "";
 		display: block;

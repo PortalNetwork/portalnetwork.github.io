@@ -133,8 +133,10 @@
 					  :controls-visible="true">
 						<slide v-for="(slide, i) in slides" :index="i" :key="i">
 							<template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-								<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
-							</template>
+								<a :href="slide.url" target="_blank">
+									<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
+								</a>
+								</template>
 						</slide>
 					</carousel-3d>
 				</div>
