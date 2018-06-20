@@ -171,10 +171,11 @@
           }
       }
       .itemBox {
+          display: inline-block;
           width: 25%;
           height: auto;
           margin-bottom: 50px;
-          float: left;
+        //   float: left;
           @media screen and (max-width: 1230px) {
               width: (100% / 3);
           }
