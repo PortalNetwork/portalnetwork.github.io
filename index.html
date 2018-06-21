@@ -14,9 +14,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./css/index.css?63537464">
+	<link rel="stylesheet" href="./css/index.css?2732737273">
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-	<!-- <script src="./js/intercom.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
 	  crossorigin="anonymous"></script>
@@ -40,24 +39,16 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-	<div id="app" :class="{active: isMenuOpen}">
+	<div id="app" :class="{active: isMenuOpen}" v-model="">
 		<a class="menu_btn" @click="toggleMenuFn">
 			<span></span>
-			<!-- <span v-show="!isMenuOpen">
-				<i class="fas fa-bars"></i>
-			</span>
-			<span v-show="isMenuOpen">
-				<i class="fas fa-times"></i>
-			</span> -->
 		</a>
 		<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a>
-		<div class="header">
+			<div :class="['header',{fixed: isheaderFix}]">
+			<!-- <div class="header fixed"> -->
 			<div class="section">
-				<h1 class="logo">
-					<img src="./images/logo/logo@2x.svg" alt="">
-				</h1>
+				<h1 class="logo"></h1>
 				<nav>
-					<!-- <ul :class="['menu_list',{active: isMenuOpen}]"> -->
 					<ul class="menu">
 						<li>
 							<a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
@@ -68,6 +59,9 @@
 						<li>
 							<a @click="gaSeedPageView('hackathon')" href="./showcase.html" target="_blank">Showcase</a>
 						</li>
+						<li>
+							<a @click="gaSeedPageView('showcase')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -75,13 +69,12 @@
 		<div class="hero">
 			<div class="section">
 				<div class="hero_img" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back">
-					<img src="./images/heroimage/Hero.png" alt="">
+					<img src="./images/landing/hero/heroimg.png" alt="">
 				</div>
 				<div class="hero_info" data-aos="fade-down" data-aos-easing="ease-out-back">
-					<h2>Click & Enter the Next
-						<span>Generation Internet.</span>
+					<h2>Connect, enhance existing<span>blockchain technologies.</span>
 					</h2>
-					<p>Join the decentralized ecosystem via our user-friendly tools.</p>
+					<p>Decentralized Domain Name for the New Internet.</p>
 					<form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
 					  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
@@ -102,30 +95,28 @@
 				<ul>
 					<li class="item" data-aos="fade-right" data-aos-delay="0" data-aos-easing="ease-out-back">
 						<h4>Marketplace</h4>
-						<div class="figure">
-							<img src="./images/products/MP.png" alt="">
-						</div>
-						<p>Portal Network provides buying, selling, and trading of domains on blockchain, users will have access to a number of
-							well-known blockchain-based top-level domains.</p>
-						<a href="https://beta.portal.network/">Learn more</a>
+						<a class="figure" href="https://beta.portal.network/" target="_blank">
+							<img src="./images/landing/products/MP@2x.svg" alt="">
+						</a>
+						<p>Allows users to easily buy/sell/bid domains across multiple blockchains. And manage, transfer, and deploy their domains on Portal Network's DNS manager.</p>
+						<a class="more" href="https://beta.portal.network/" target="_blank">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
 						<h4>Web Builder</h4>
-						<div class="figure">
-							<img src="./images/products/WB.png" alt="">
-						</div>
-						<p>Portal Network helps users build their decentralized websites and dApps with drag and drop tool, through IPFS and the
-							Bluzelle data storage service.</p>
-						<a href="https://web.portal.network/">Learn more</a>
+						<a class="figure" href="https://web.portal.network/" target="_blank">
+							<img src="./images/landing/products/WB@2x.svg" alt="">
+						</a>
+						<p>Enables both technical and non-technical users to easily deploy, host, and manage their websites on IPFS, Bluzelle, and Noia Network.</p>
+						<a class="more" href="https://web.portal.network/" target="_blank">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
 						<h4>Browser Extension</h4>
-						<div class="figure">
-							<img src="./images/products/BE.png" alt="">
-						</div>
-						<p>Portal Network builds browser extensions in order to help users to easily browse a decentralized website which is hosted
-							on the IPFS blockchain network.</p>
-						<a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf">Learn more</a>
+						<a class="figure" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
+							<img src="./images/landing/products/BE@2x.svg" alt="">
+						</a>
+						<p>Supports any users to easily view decentralized websites with their browsers.</p>
+						<span>(Portal Network will soon release it's iOS & Android browser and app.)</span>
+						<a class="more" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Learn more</a>
 					</li>
 				</ul>
 			</div>
@@ -134,19 +125,22 @@
 			<div class="section">
 				<div class="introduction_info">
 					<h3>Build your own decentralized website.</h3>
-					<p>There are more decentralized websites, check more use cases at our gallery.</p>
-					<a href="https://web.portal.network/">Build now</a>
+					<p>A simple tool for any users to easily build their first decentralized website.</p>
+					<a href="https://web.portal.network/">Build Now</a>
 				</div>
 				<div class="introduction_slider">
 					<carousel-3d :autoplay="true" :autoplay-timeout="3000" :perspective="0" :border="0" :width="510" :height="378" :autoplay-hover-pause="true"
 					  :controls-visible="true">
 						<slide v-for="(slide, i) in slides" :index="i" :key="i">
 							<template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-								<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
-							</template>
+								<a :href="slide.url" target="_blank">
+									<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
+								</a>
+								</template>
 						</slide>
 					</carousel-3d>
 				</div>
+				<p>View your own decentralized website on showcase.<a href="https://www.portal.network/showcase.html" target="_blank" class="green_text">Visit our showcase</a></p>
 			</div>
 		</div>
 		<div class="service">
@@ -154,19 +148,17 @@
 				<h3>SERVICE</h3>
 				<ul>
 					<li class="item" data-aos="fade-left" data-aos-delay="0" data-aos-easing="ease-out-back">
-						<img src="./images/service/humanreadable.png" alt="">
+						<img src="./images/landing/service/humanreadable@2x.svg" alt="">
 						<h4>Human-Readable Identity</h4>
-						<p>Your decentralized domain address can be used as a human-readable alternative to a standard hexadecimal cryptocurrency
-							address.
-						</p>
+						<p>Your decentralized domain address can be used as a human-readable alternative to a standard hexadecimal cryptocurrency address.</p>
 					</li>
 					<li class="item" data-aos="fade-left" data-aos-delay="200" data-aos-easing="ease-out-back">
-						<img src="./images/service/decentralized.png" alt="">
+						<img src="./images/landing/service/decentralized@2x.svg" alt="">
 						<h4>Decentralized Storage</h4>
-						<p>Our reliable and unhackable decentralized database ensures that your precious data remains safe and secure. </p>
+						<p>Our reliable and unhackable decentralized database ensures that your precious data remains safe and secure.</p>
 					</li>
 					<li class="item" data-aos="fade-left" data-aos-delay="400" data-aos-easing="ease-out-back">
-						<img src="./images/service/app.png" alt="">
+						<img src="./images/landing/service/app@2x.svg" alt="">
 						<h4>Decentralized Application</h4>
 						<p>You can simply and conveniently access your decentralized website using our Portal Network DApp on your smartphone.</p>
 					</li>
@@ -176,8 +168,7 @@
 		<div class="what">
 			<div class="section" v-show="!isYoutubeShow">
 				<h3>WHAT IS PORTAL NETWORK?</h3>
-				<p>Portal Network dedicates to unite advanced technologies to create your
-					<br/>non-removable and stunning website. </p>
+				<p>Portal Network is the decentralized DNS solution for the new internet, designed to utilize existing blockchains by deploying smart contracts on multiple platforms.</p>
 				<div class="play" @click="youtubeShow"></div>
 			</div>
 			<iframe src="https://www.youtube.com/embed/fVysKlr711o" frameborder="0" allow="autoplay; encrypted-media"
@@ -187,117 +178,138 @@
 			<div class="section">
 				<div class="comparison_header">
 					<h3>COMPARISON</h3>
-					<div class="comparison_header_left">
-						<img src="./images/comparison/Centralized.png" alt="">
+					<div class="left">
+						<div class="figure"><img src="./images/landing/comparison/centralized@1x.svg" alt=""></div>
 						<h4>Centralized</h4>
-						<span class="arrow"></span>
-						<span class="arrow num2"></span>
-						<span class="arrow num3"></span>
+						<div class="arraw_box">
+							<span class="arrow"></span>
+							<span class="arrow num2"></span>
+							<span class="arrow num3"></span>
+						</div>
 					</div>
-					<div class="comparison_header_right">
-						<img src="./images/comparison/Decentralized.png" alt="">
+					<div class="right">
+						<div class="figure"><img src="./images/landing/comparison/decentralized@2x.svg" alt=""></div>
 						<h4>Decentralized</h4>
-						<span class="arrow"></span>
-						<span class="arrow num2"></span>
-						<span class="arrow num3"></span>
+						<div class="arraw_box">
+							<span class="arrow"></span>
+							<span class="arrow num2"></span>
+							<span class="arrow num3"></span>
+						</div>
 					</div>
 				</div>
 				<ul>
 					<li class="comparison_list">
-						<div class="comparison_caption domainregister">
-							<img src="./images/comparison/domainregister.png" alt="">
+						<div class="comparison_title domainregister">
+							<div class="figure"><img src="./images/landing/comparison/domainregister@2x.svg" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<div class="comparisonBox godaddy">
-								<div class="figure">
-									<img src="./images/comparison/godaddy.png" alt="">
-								</div>
-								<p class="greenText">GoDaddy</p>
+							<div class="comparison_box no_link godaddy">
+								<div class="figure"><img src="./images/landing/comparison/centralized/godaddy@2x.svg" alt=""></div>
+								<p class="green_text">GoDaddy</p>
 							</div>
 						</div>
-						<div class="comparison_right">`
-							<div class="comparisonBox pnlogo">
-								<div class="figure">
-									<img src="./images/comparison/pnlogo.png" alt="">
-								</div>
+						<div class="comparison_right">
+							<div class="comparison_box no_link pnlogo">
+								<div class="figure"><img src="./images/landing/comparison/decentralized/pnlogo@2x.svg" alt=""></div>
 								<p>Portal Network</p>
 							</div>
 						</div>
 					</li>
 					<li class="comparison_list">
-						<div class="comparison_caption system">
-							<img src="./images/comparison/OS.png" alt="">
+						<div class="comparison_title system">
+							<div class="figure"><img src="./images/landing/comparison/OS@2x.svg" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<div class="comparisonBox windows">
-								<div class="figure"><img src="./images/comparison/windows.png" alt=""></div>
-								<p class="greenText">Windows</p>
+							<div class="comparison_box no_link windows">
+								<div class="figure"><img src="./images/landing/comparison/centralized/windows@2x.svg" alt=""></div>
+								<p class="green_text">Windows</p>
 							</div>
 						</div>
 						<div class="comparison_right">
-							<div class="comparisonbox_col3"> 
-									<div class="wan">
-											<div class="figure"><img src="./images/comparison/wan.png" alt=""></div>
+							<div class="comparison_box_col3"> 
+									<a class="wan" href="https://wanchain.org/" target="_blank">
+											<div class="figure"><img src="./images/landing/comparison/decentralized/wan@2x.svg" alt=""></div>
 											<p>Wanchain</p>
-										</div>
-										<div class="qtum">
-												<div class="figure"><img src="./images/comparison/qtu.png" alt=""></div>
-											<p>Qtum</p>
-										</div>
-										<div class="eth">
-												<div class="figure"><img src="./images/comparison/eth.png" alt=""></div>
-											<p>Ethereum</p>
-										</div>
+									</a>
+									<a class="qtum" href="https://qtum.org/en/" target="_blank">
+											<div class="figure"><img src="./images/landing/comparison/decentralized/qtu@2x.svg" alt=""></div>
+										<p>Qtum</p>
+									</a>
+									<a class="eth" href="https://www.ethereum.org/" target="_blank">
+											<div class="figure"><img src="./images/landing/comparison/decentralized/eth@2x.svg" alt=""></div>
+										<p>Ethereum</p>
+									</a>
 							</div>
 						</div>
 					</li>
 					<li class="comparison_list">
-						<div class="comparison_caption storage">
-							<img src="./images/comparison/filestorage.png" alt="">
+						<div class="comparison_title storage">
+							<div class="figure"><img src="./images/landing/comparison/filestorage@2x.svg" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<div class="comparisonBox amazo">
-									<div class="figure"><img src="./images/comparison/AWS.png" alt=""></div>
-								<p class="greenText">Amazon Web Services S3</p>
+							<div class="comparison_box no_link amazo">
+								<div class="figure"><img src="./images/landing/comparison/centralized/AWS@2x.svg" alt=""></div>
+								<p class="green_text">Amazon Web Services S3</p>
 							</div>
 						</div>
 						<div class="comparison_right">
-							<div class="comparisonBox ipfs">
-									<div class="figure"><img src="./images/comparison/ipfs.png" alt=""></div>
+							<a class="comparison_box ipfs" href="https://ipfs.io/" target="_blank">
+								<div class="figure"><img src="./images/landing/comparison/decentralized/ipfs@2x.svg" alt=""></div>
 								<p>IPFS</p>
-							</div>
+							</a>
 						</div>
 					</li>
 					<li class="comparison_list">
-						<div class="comparison_caption storage">
-							<img src="./images/comparison/data.png" alt="">
+						<div class="comparison_title data">
+							<div class="figure"><img src="./images/landing/comparison/data@2x.svg" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<div class="comparisonBox oracle">
-									<div class="figure"><img src="./images/comparison/oracle.png" alt=""></div>
-								<p class="greenText">Oracle</p>
+							<div class="comparison_box no_link oracle">
+								<div class="figure"><img src="./images/landing/comparison/centralized/oracle@2x.svg" alt=""></div>
+								<p class="green_text">Oracle</p>
 							</div>
 						</div>
 						<div class="comparison_right">
-							<div class="comparisonBox bluzelle">
-									<div class="figure"><img src="./images/comparison/bluzelle.png" alt=""></div>
+							<a class="comparison_box bluzelle" href="https://bluzelle.com/" target="_blank">
+								<div class="figure"><img src="./images/landing/comparison/decentralized/bluzelle@2x.svg" alt=""></div>
 								<p>Bluzelle</p>
+							</a>
+						</div>
+					</li>
+					<li class="comparison_list">
+						<div class="comparison_title cdn">
+							<div class="figure"><img src="./images/landing/comparison/CDN@2x.svg" alt=""></div>
+						</div>
+						<div class="comparison_left">
+							<div class="comparison_box no_link cloudflare">
+								<div class="figure"><img src="./images/landing/comparison/centralized/cloudflare@2x.svg" alt=""></div>
+								<p class="green_text">Cloudflare</p>
+							</div>
+						</div>
+						<div class="comparison_right">
+							<div class="comparison_box noia">
+								<a class="figure" href="https://noia.network/" target="_blank">
+									<img src="./images/landing/comparison/decentralized/noia@2x.svg" alt="">
+								</a>
+								<p>NOIA</p>
 							</div>
 						</div>
 					</li>
 					<li class="comparison_list">
-						<div class="comparison_caption appweb">
-							<img src="./images/comparison/app_web.png" alt="">
+						<div class="comparison_title appweb">
+							<div class="figure"><img src="./images/landing/comparison/app_web@2x.svg" alt=""></div>
 						</div>
 						<div class="comparison_left">
-							<div class="comparisonBox facebook">
-									<div class="figure"><img src="./images/comparison/facebook.png" alt=""></div>
-								<p class="greenText">Facebook</p>
+							<div class="comparison_box no_link facebook">
+								<div class="figure"><img src="./images/landing/comparison/centralized/facebook@2x.svg" alt=""></div>
+								<p class="green_text">Facebook</p>
 							</div>
 						</div>
 						<div class="comparison_right">
-							<div class="comparisonBox status">
-									<div class="figure"><img src="./images/comparison/status.png" alt=""></div>
+							<div class="comparison_box status">
+								<a class="figure" href="https://status.im/" target="_blank">
+									<img src="./images/landing/comparison/decentralized/status@2x.svg" alt="">
+								</a>
 								<p>Status</p>
 							</div>
 						</div>
@@ -309,17 +321,21 @@
 			<div class="section">
 				<h3 class="partner_title">ECOSYSTEM</h3>
 				<div class="partner_area">
-					<a href="https://www.ethereum.org/" target="_blank" class="eth">
-						<img src="./images/ecosystem/ethereum.png" alt="">
+					<a href="https://www.ethereum.org/" target="_blank">
+						<img src="./images/landing/ecosystem/eth.png" alt="">
+						<p>Ethereum</p>
 					</a>
-					<a href="https://ethereumclassic.org/" target="_blank" class="num2">
-						<img src="./images/ecosystem/ethereumclassic.png" alt="">
+					<a href="https://ethereumclassic.org/" target="_blank">
+						<img src="./images/landing/ecosystem/ethclassic.png" alt="">
+						<p>Ethereum classic</p>
 					</a>
-					<a href="https://wanchain.org/" target="_blank" class="wan">
-						<img src="./images/ecosystem/WANCHAIN.png" alt="">
+					<a href="https://wanchain.org/" target="_blank">
+						<img src="./images/landing/ecosystem/wan.png" alt="">
+						<p>Wanchain</p>
 					</a>
-					<a href="https://qtum.org/en/" target="_blank" class="qtum">
-						<img src="./images/ecosystem/qtum.png" alt="">
+					<a href="https://qtum.org/en/" target="_blank">
+						<img src="./images/landing/ecosystem/qtum.png" alt="">
+						<p>Qtum</p>
 					</a>
 				</div>
 			</div>
@@ -347,26 +363,26 @@
 			<div class="footer_content">
 				<div class="item_list">
 					<a class="telegram" @click="gaSeedPageView('telegram')" href="https://t.me/portalnetworkofficial" target="_blank">
-						<img src="./images/socialMedia/Te.png" alt="">
+						<img src="./images/landing/shared/Te@2x.svg" alt="">
 					</a>
 					<a class="github" @click="gaSeedPageView('github')" href="https://github.com/portalnetwork" target="_blank">
-						<img src="./images/socialMedia/g.png" alt="">
+						<img src="./images/landing/shared/g@2x.svg" alt="">
 					</a>
 					<a class="twitter" @click="gaSeedPageView('twitter')" href="https://twitter.com/itisportal" target="_blank">
-						<img src="./images/socialMedia/t.png" alt="">
+						<img src="./images/landing/shared/t@2x.svg" alt="">
 					</a>
 					<a class="fb" @click="gaSeedPageView('fbicon')" href="https://www.facebook.com/portalnetworkofficial" target="_blank">
-						<img src="./images/socialMedia/fb.png" alt="">
+						<img src="./images/landing/shared/fb@2x.svg" alt="">
 					</a>
 					<a class="medium" @click="gaSeedPageView('medium')" href="https://medium.com/portalnetworkofficial" target="_blank">
-						<img src="./images/socialMedia/M.png" alt="">
+						<img src="./images/landing/shared/M@2x.svg" alt="">
 					</a>
 				</div>
 				<p class="copyright">© 2018 Portal.Network.</p>
 			</div>
 		</div>
 	</div>
-	<script src="./js/index.js?636272626"></script>
+	<script src="./js/index.js?47347745"></script>
 
 </body>
 
