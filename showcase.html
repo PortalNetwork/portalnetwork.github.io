@@ -20,7 +20,7 @@
   <meta property="og:image:url" content="" />
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="css/showcase.css" rel="stylesheet">
+  <link href="./css/showcase.css?12334" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
@@ -45,14 +45,6 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <div class="showcase">
-    <div class="loading_page" v-if="isLoad">
-      <div>
-        <div class="spinner"></div>
-        <p>loading...</p>
-      </div>
-    </div>
-
-
     <header class="menu_bar">
       <div class="mid">
         <a class="logo"></a>
@@ -129,6 +121,25 @@
     </div>
 
     <div class="show_item">
+      <div class="loading_page" v-if="isLoad">
+        <div>
+          <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+          </div>
+          <p>loading...</p>
+        </div>
+      </div>
       <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
         <a :href="item.url" class="case_item" target="_blank">
           <div class="case_demo">
@@ -187,12 +198,13 @@
         </div>
       </div>
     </div>
-
+    <a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank">
+      <img src="./images/Showcase/tel.png" alt="">
+    </a>
 
   </div>
-  <script src="js/showcase.js"></script>
+  <script src="./js/showcase.js?123321"></script>
 
 
 </body>
-
 </html>
