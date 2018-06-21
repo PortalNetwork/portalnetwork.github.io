@@ -63,8 +63,9 @@ body {
     @media screen and (max-width: $mob) {
         background-size: 80% 100%;
     }
-    img {
-        width: 100%;
+    a {
+        display: block;
+        height: 100%;
     }
 }
 
