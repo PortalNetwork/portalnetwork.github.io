@@ -1,19 +1,28 @@
 @import "../_var.scss";
 .hero {
-	background-color: #00d5bf;
+	background-color: #00D5BF;
 	position: relative;
-	padding-top: 182px;
+	padding-top: 125px;
+	margin-top: 100px;
 	@media screen and (max-width: $pad) {
 		padding-top: 60px;
+		margin-top: 0;
+	}
+	@media screen and (max-width: $mob) {
+		padding-top: 20px;
 	}
 	&:after {
 		content: "";
 		display: block;
 		border-style: solid;
-		border-width: 0 0 350px 100vw;
+		border-width: 0 0 538px 100vw;
 		border-color: transparent transparent #fff transparent;
-		background-color: #00d5bf;
+		background-color: #00D5BF;
 		margin-top: -95px;
+		@media screen and (max-width: 1200px) {
+			border-width: 0 0 260px 100vw;
+			margin-top: 0;
+		}
 		@media screen and (max-width: $mob) {
 			border-width: 0 0 160px 100vw;
 			margin-top: 0;
@@ -38,13 +47,17 @@
 	}
 	h2 {
 		font-size: 50px;
-		line-height: 80px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		line-height: 65px;
 		color: #fff;
-		padding-bottom: 30px;
+		padding-bottom: 20px;
+		white-space: nowrap;
 		@media screen and (max-width: $pad) {
 			padding-bottom: 30px;
 			font-size: 35px;
 			line-height: 45px;
+			white-space: normal;
 		}
 		span {
 			display: block;
@@ -58,21 +71,23 @@
 		}
 	}
 	p {
-		font-size: 20px;
+		font-size: 23px;
 		line-height: 30px;
 		color: #fff;
-		padding-bottom: 45px;
+		padding-bottom: 35px;
+		white-space: nowrap;
 		@media screen and (max-width: $pad) {
 			width: 80%;
 			margin: 0 auto;
 			font-size: 22px;
 			line-height: 30px;
 			padding-bottom: 20px;
+			white-space: normal;
 		}
 	}
 	>span {
 		display: block;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 19px;
 		color: #4A4A4A;
 		padding-left: 17px;
@@ -91,18 +106,22 @@
 		width: 80%;
 		margin: 0 auto;
 	}
-	@media screen and (max-width: $mob) {
+	@media screen and (max-width: 600px) {
 		width: 100%;
 	}
 	input.email {
 		width: 300px;
 		height: 60px;
 		font-size: 20px;
+		color: #B8B8B8;
 		border: 0;
 		border-top-left-radius: 30px;
 		border-bottom-left-radius: 30px;
 		float: left;
-		padding-left: 20px;
+		padding-left: 32px;
+		&:focus {
+			outline: none;
+		}
 		@media screen and (max-width: $pad) {
 			width: 70%;
 			font-size: 15px;
@@ -174,19 +193,25 @@
 }
 
 .hero_img {
-	max-width: 785px;
 	position: absolute;
-	top: -60px;
-	right: 0px;
+	top: 70px;
+	right: -85px;
 	margin: 0 auto;
-	width: 50%;
+	@media screen and (max-width: 1180px) {
+		width: 52vw;
+	}
 	@media screen and (max-width: $pad) {
+		width: 100%;
 		position: relative;
 		top: auto;
 		right: auto;
 		padding-bottom: 46px;
 	}
 	img {
-		width: 100%;
+		width: 623px;
+		@media screen and (max-width: $pad) {
+			width: 60%;
+			margin: 0 auto;
+		}
 	}
 }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="313px" height="111px" viewBox="0 0 313 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>oval_base@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M155.56556,0.156953642 C69.642903,0.156953642 0,18.3374172 0,40.758245 L0,69.2688742 C0,91.6870861 69.642903,109.86755 155.56556,109.86755 C241.493419,109.86755 311.131119,91.6870861 311.131119,69.2688742 L311.131119,40.758245 C311.131119,18.3374172 241.493419,0.156953642 155.56556,0.156953642 Z" id="path-1"></path>
+        <linearGradient x1="49.9999911%" y1="50%" x2="49.9999898%" y2="123.830743%" id="linearGradient-3">
+            <stop stop-color="#11EBD4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <path d="M0.00520286153,40.8314901 C0.00520286153,63.2601656 69.6533087,81.4406291 155.570762,81.4406291 C241.488216,81.4406291 311.136322,63.2601656 311.136322,40.8314901 C311.136322,18.4054305 241.488216,0.222350993 155.570762,0.222350993 C69.6533087,0.222350993 0.00520286153,18.4054305 0.00520286153,40.8314901" id="path-4"></path>
+        <linearGradient x1="49.9999017%" y1="-16.0652047%" x2="49.9999017%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#11EBD4" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Official-Landing-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.25">
+        <g id="Landing-Page-1366" transform="translate(-238.000000, -4008.000000)">
+            <g id="Comparison" transform="translate(226.569531, 3625.008394)">
+                <g id="godaddy" transform="translate(11.000000, 312.091060)">
+                    <g id="Group-30-Copy-4" transform="translate(0.962703, 0.808878)">
+                        <g id="oval_base" transform="translate(0.000000, 70.405629)">
+                            <g id="Group-3" transform="translate(0.371108, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M155.56556,0.156953642 C69.642903,0.156953642 0,18.3374172 0,40.758245 L0,69.2688742 C0,91.6870861 69.642903,109.86755 155.56556,109.86755 C241.493419,109.86755 311.131119,91.6870861 311.131119,69.2688742 L311.131119,40.758245 C311.131119,18.3374172 241.493419,0.156953642 155.56556,0.156953642 Z" id="Fill-1" fill="url(#linearGradient-3)" mask="url(#mask-2)"></path>
+                            </g>
+                            <g id="Group-6" transform="translate(0.371108, 0.000000)">
+                                <mask id="mask-5" fill="white">
+                                    <use xlink:href="#path-4"></use>
+                                </mask>
+                                <g id="Clip-5"></g>
+                                <path d="M0.00520286153,40.8314901 C0.00520286153,63.2601656 69.6533087,81.4406291 155.570762,81.4406291 C241.488216,81.4406291 311.136322,63.2601656 311.136322,40.8314901 C311.136322,18.4054305 241.488216,0.222350993 155.570762,0.222350993 C69.6533087,0.222350993 0.00520286153,18.4054305 0.00520286153,40.8314901" id="Fill-4" fill="url(#linearGradient-6)" mask="url(#mask-5)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

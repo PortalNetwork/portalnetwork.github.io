@@ -3,16 +3,19 @@
     background-color: #3442b0;
     padding-top: 100px;
     @media screen and (max-width: $pad) {
-        padding-top: 36px;
+        padding-top: 50px;
     }
     .section {
         @include section();
         >ul {
-            padding-top: 126px;
+            padding-top: 95px;
+            width: 95%;
+            margin: 0 auto;
             @media screen and (max-width: $pad) {
                 padding-top: 80px;
             }
             @media screen and (max-width: $mob) {
+                width: 100%;
                 padding-top: 50px;
             }
         }
@@ -39,11 +42,14 @@
         }
     }
     h4 {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
         color: #fff;
         text-align: center;
         margin-bottom: 20px;
+        @media screen and (max-width: $mob) {
+          font-size: 17px;
+        }
     }
     .figure {
         margin: 0 auto 20px auto;
@@ -141,7 +147,8 @@
 .comparison_list {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
+    align-items: flex-end;
+    padding-bottom: 70px;
     @extend %clear;
     @media screen and (max-width: $pad) {
         display: block;
@@ -154,12 +161,13 @@
 .comparison_title {
     width: 313px;
     margin: 0 auto;
-    transform: translateY(-74px);
+    transform: translateY(-45px);
     @media screen and (max-width: $pad) {
         transform: none;
         padding-bottom: 100px;
     }
     @media screen and (max-width: $mob) {
+        width: 80%;
         padding-bottom: 20px;
     }
     .figure {
@@ -171,14 +179,19 @@
             margin: 0 auto;
         }
         &:after {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
+            line-height: 23px;
+            letter-spacing: 0.8px;
             color: #fff;
             position: absolute;
-            bottom: 43px;
+            bottom: 40px;
             left: 0;
             right: 0;
             margin: auto;
+            @media screen and (max-width: $mob) {
+              font-size: 17px;
+            }
         }
         img {
             max-width: 100%;
@@ -211,6 +224,18 @@
         .figure {
             &:after {
                 content: "Data Storage & Management Oracle";
+                left: -32px;
+                white-space: nowrap;
+                @media screen and (max-width: $smob) {
+                  font-size: 14px;
+                }
+            }
+        }
+    }
+    &.cdn {
+        .figure {
+            &:after {
+                content: "CDN";
             }
         }
     }
@@ -225,8 +250,9 @@
 
 .comparison_left {
     width: 313px;
-    background: url('../images/comparison/oval_base.png') bottom center no-repeat;
-    background-size: 100% 100%;
+    height: 111px;
+    background: url('../images/landing/comparison/centralized/oval_base@2x.svg') bottom center no-repeat;
+    background-size: 100% 90%;
     position: relative;
     order: -1;
     @media screen and (max-width: $pad) {
@@ -281,6 +307,14 @@
             }
         }
     }
+    .cloudflare {
+        .figure {
+            max-width: 157px;
+            @media screen and (max-width: $mob) {
+                max-width: 104px;
+            }
+        }
+    }
     .facebook {
         .figure {
             max-width: 63px;
@@ -293,8 +327,9 @@
 
 .comparison_right {
     width: 313px;
-    background: url('../images/comparison/polygon_base.png') bottom center no-repeat;
-    background-size: 100% 100%;
+    height: 123px;
+    background: url('../images/landing/comparison/decentralized/polygon_base@2x.svg') bottom center no-repeat;
+    background-size: 100% 90%;
     position: relative;
     text-align: center;
     @media screen and (max-width: $pad) {
@@ -358,7 +393,7 @@
     text-align: center;
     position: absolute;
     left: 50%;
-    bottom: 65px;
+    bottom: 45px;
     transform: translateX(-50%) scale(0.9);
     transition: scale .5s;
     @media screen and (max-width: $mob) {
@@ -375,16 +410,21 @@
         }
     }
     p {
-        font-size: 12px;
+        font-size: 16px;
         font-weight: bold;
+        letter-spacing: 1px;
         color: #fff;
-        margin-top: 18px;
+        margin-top: 15px;
+        white-space: nowrap;
         @media screen and (max-width: $mob) {
+            font-size: 12px;
+            line-height: 15px;
             margin-top: 10px;
+            white-space: normal;
         }
     }
     .green_text {
-        color: #00D5BF;
+        color: #11EBD4;
     }
 }
 
@@ -392,9 +432,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 65px;
+    bottom: 45px;
     margin: auto;
-    width: 205px;
+    width: 210px;
     @extend %clear;
     @media screen and (max-width: $mob) {
         width: 167px;
@@ -444,6 +484,7 @@
         float: left;
         transform: scale(0.9);
         transition: scale .5s;
+        margin-top: -4px;
         &:hover {
             transform: scale(1);
         }

@@ -2,6 +2,7 @@
 .service {
 	background-color: #3442b0;
 	padding-bottom: 120px;
+	margin-top: -1px;
 	.section {
 		@include section();
 	}
@@ -23,8 +24,11 @@
 		width: 23.6%;
 		text-align: center;
 		@media screen and (max-width: $mob) {
+			width: 70%;
+			margin: 0 auto 50px auto;
+		}
+		@media screen and (max-width: 600px) {
 			width: 100%;
-			margin-bottom: 30px;
 		}
 		h4 {
 			font-size: 20px;
@@ -34,8 +38,7 @@
 			margin: 34px 0 22px 0;
 		}
 		img {
-			max-width: 200px;
-			width: 100%;
+			width: 200px;
 			margin: 0 auto;
 		}
 		p {
