@@ -7,6 +7,7 @@ a.gotoTopbtn{
     height: 68px;
     background-image: url("../../images/Showcase/arrow_top@1x.svg");
     background-size: 100% 100%;
+    z-index: 2;
 }
 .share_box{
     position: fixed;
@@ -14,7 +15,7 @@ a.gotoTopbtn{
     bottom: 170px;
     width: 68px;
     height: 68px;
-    z-index: 11;
+    z-index: 98;
     @include media-740(){
         display: none;
     }
