@@ -16,7 +16,8 @@ new Vue({
         showtext: [],
         isLoad: false,
         scroll: 0,
-        isScallBack: false
+        isScallBack: false,
+        isFixed: false
     },
     computed: {
         caseInfoArr() {
@@ -65,6 +66,17 @@ new Vue({
                 this.isLoad = true;
                 axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
             }
+        },
+        fixedFn(){
+            const userScroll = document.documentElement.scrollTop;
+            const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight;
+            console.log(userScroll,66);
+            console.log(offsetHeight,77);
+            if(userScroll > offsetHeight){
+                this.isFixed = true;
+            }else{
+                this.isFixed = false;
+            }
         }
     },
     created() {
@@ -77,5 +89,6 @@ new Vue({
             delay: 0.4,
             ease: Power1.easeOut
         });
+        window.addEventListener('scroll', this.fixedFn);
     }
 });
