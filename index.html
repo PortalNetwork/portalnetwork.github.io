@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./css/index.css?737612312223">
+	<link rel="stylesheet" href="./css/index.css?38363874">
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
@@ -95,28 +95,28 @@
 				<ul>
 					<li class="item" data-aos="fade-right" data-aos-delay="0" data-aos-easing="ease-out-back">
 						<h4>Marketplace</h4>
-						<a class="figure" href="https://beta.portal.network/" target="_blank">
+						<a id="pd_market_images" class="figure" href="https://beta.portal.network/" target="_blank">
 							<img src="./images/landing/products/MP@2x.svg" alt="">
 						</a>
 						<p>Allows users to easily buy/sell/bid domains across multiple blockchains. And manage, transfer, and deploy their domains on Portal Network's DNS manager.</p>
-						<a class="more" href="https://beta.portal.network/" target="_blank">Learn more</a>
+						<a id="pd_market_link" class="more" href="https://beta.portal.network/" target="_blank">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="200" data-aos-easing="ease-out-back">
 						<h4>Web Builder</h4>
-						<a class="figure" href="https://web.portal.network/" target="_blank">
+						<a id="pd_web_build_images" class="figure" href="https://web.portal.network/" target="_blank">
 							<img src="./images/landing/products/WB@2x.svg" alt="">
 						</a>
 						<p>Enables both technical and non-technical users to easily deploy, host, and manage their websites on IPFS, Bluzelle, and Noia Network.</p>
-						<a class="more" href="https://web.portal.network/" target="_blank">Learn more</a>
+						<a id="pd_web_build_link" class="more" href="https://web.portal.network/" target="_blank">Learn more</a>
 					</li>
 					<li class="item" data-aos="fade-right" data-aos-delay="400" data-aos-easing="ease-out-back">
 						<h4>Browser Extension</h4>
-						<a class="figure" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
+						<a id="pd_extension_images" class="figure" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
 							<img src="./images/landing/products/BE@2x.svg" alt="">
 						</a>
 						<p>Supports any users to easily view decentralized websites with their browsers.</p>
 						<span>(Portal Network will soon release it's iOS & Android browser and app.)</span>
-						<a class="more" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Learn more</a>
+						<a id="pd_extension_link" class="more" href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Learn more</a>
 					</li>
 				</ul>
 			</div>
@@ -126,21 +126,22 @@
 				<div class="introduction_info">
 					<h3>Build your own decentralized website.</h3>
 					<p>A simple tool for any users to easily build their first decentralized website.</p>
-					<a href="https://web.portal.network/">Build Now</a>
+					<a id="build_website_link" href="https://web.portal.network/">Build Now</a>
 				</div>
 				<div class="introduction_slider">
-					<carousel-3d :autoplay="true" :autoplay-timeout="3000" :perspective="0" :border="0" :width="510" :height="378" :autoplay-hover-pause="true"
+						<!-- :autoplay="true" -->
+					<carousel-3d :autoplay-timeout="3000" :perspective="0" :border="0" :width="510" :height="378" :autoplay-hover-pause="true"
 					  :controls-visible="true">
 						<slide v-for="(slide, i) in slides" :index="i" :key="i">
 							<template slot-scope="{ index, isCurrent, leftIndex, rightIndex }">
-								<a :href="slide.url" target="_blank">
+								<a :id="slide.id" :href="slide.url" target="_blank">
 									<img :data-index="index" :class="{ current: isCurrent, onLeft: (leftIndex >= 0), onRight: (rightIndex >= 0) }" :src="slide.src">
 								</a>
 								</template>
 						</slide>
 					</carousel-3d>
 				</div>
-				<p>View your own decentralized website on showcase.<a href="https://www.portal.network/showcase.html" target="_blank" class="green_text">Visit our showcase</a></p>
+				<p>View your own decentralized website on showcase.<a id="visit_showcase_link" href="https://www.portal.network/showcase.html" target="_blank" class="green_text">Visit our showcase</a></p>
 			</div>
 		</div>
 		<div class="service">
@@ -384,7 +385,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="./js/index.js?4738361231211"></script>
+	<script src="./js/index.js?3742937274"></script>
 
 </body>
 
