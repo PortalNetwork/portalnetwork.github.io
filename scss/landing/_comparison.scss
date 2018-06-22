@@ -309,9 +309,9 @@
     }
     .cloudflare {
         .figure {
-            max-width: 157px;
+            max-width: 121px;
             @media screen and (max-width: $mob) {
-                max-width: 104px;
+                max-width: 80px;
             }
         }
     }
@@ -374,6 +374,14 @@
             max-width: 89px;
             @media screen and (max-width: $mob) {
                 max-width: 59px;
+            }
+        }
+    }
+    .noia {
+        .figure {
+            max-width: 90px;
+            @media screen and (max-width: $mob) {
+                max-width: 60px;
             }
         }
     }
