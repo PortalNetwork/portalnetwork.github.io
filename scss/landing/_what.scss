@@ -29,6 +29,7 @@
         width: 65%;
         margin: 0 auto 39px auto;
         @media screen and (max-width: $mob) {
+            width: 100%;
             margin: 0 auto 30px auto;
         }
     }
