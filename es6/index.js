@@ -25,14 +25,17 @@ new Vue({
         isMenuOpen: false,
         slides: [
             {
+                id: "slides_answer_link",
                 src: "/images/landing/introduction/showcase1.png",
-                url:"https://ipfs.infura.io/ipfs/QmcrCz9kLeBg1n3D6vYZfwC4YorhgTGoe4EEDuSkw11xPK/"
+                url: "https://ipfs.infura.io/ipfs/QmcrCz9kLeBg1n3D6vYZfwC4YorhgTGoe4EEDuSkw11xPK/"
             },{
+                id: "slides_hozt_link",
                 src: "/images/landing/introduction/showcase2.png",
-                url:"https://ipfs.infura.io/ipfs/QmUm2i9tg69RvB4SCdKMF35m9JoKu7kMp4Y78qwfsSzL8D/"
+                url: "https://ipfs.infura.io/ipfs/QmUm2i9tg69RvB4SCdKMF35m9JoKu7kMp4Y78qwfsSzL8D/"
             },{
+                id: "slides_wize_link",
                 src: "/images/landing/introduction/showcase3.png",
-                url:"https://ipfs.infura.io/ipfs/QmRVCSosZzqDVwpJZAXrJbhYbHZFQ4kuZbwg6Z5RBc7iFu/"
+                url: "https://ipfs.infura.io/ipfs/QmRVCSosZzqDVwpJZAXrJbhYbHZFQ4kuZbwg6Z5RBc7iFu/"
             },
         ],
         isYoutubeShow: false,
@@ -73,5 +76,12 @@ new Vue({
     mounted() { 
         AOS.init();
         window.addEventListener('scroll', this.scrollFn);
+        document.getElementsByClassName("next")[0].addEventListener("click",()=>{
+            this.gaSeedPageView("slides_next_button");
+        });
+        document.getElementsByClassName("prev")[0].addEventListener("click",()=>{
+            this.gaSeedPageView("slides_prev_button");
+        });
+
     }
 });
