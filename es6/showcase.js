@@ -70,11 +70,7 @@ new Vue({
         fixedFn(){
             const userScroll = document.documentElement.scrollTop;
             const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight;
-            if(userScroll > offsetHeight) {
-                this.isFixed = true;
-            }else {
-                this.isFixed = false;
-            }
+            this.isFixed = userScroll > offsetHeight;
         }
     },
     created() {
