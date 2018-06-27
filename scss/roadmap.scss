@@ -93,6 +93,17 @@ $MAIN_WIDTH: 1051px;
   }
 }
 
+.telegramBtn {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 21px;
+  z-index: 6;
+  img {
+      width: 60px;
+  }
+}
+
 .nav {
   position: fixed;
   width: 203px;
@@ -309,6 +320,10 @@ $MAIN_WIDTH: 1051px;
     font-size: 16px;
     line-height: 1.88;
     color: #000;
+
+    .link_text {
+      color: #3b77ac;
+    }
     
     &.has-photos {
       margin-right: 39px;

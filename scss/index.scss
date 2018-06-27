@@ -47,7 +47,7 @@ body {
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 17px;
+    right: 21px;
     z-index: 6;
     img {
         width: 60px;
@@ -475,6 +475,7 @@ nav {
                 right: 0;
                 bottom: 0;
                 margin: auto;
+                backface-visibility: hidden;
             }
         }
         .back {
@@ -494,6 +495,7 @@ nav {
                 right: 0;
                 bottom: 0;
                 margin: auto;
+                backface-visibility: hidden;
             }
         }
         &:hover {
