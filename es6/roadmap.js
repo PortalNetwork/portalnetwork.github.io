@@ -373,7 +373,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/29',
-            progress: 50,
+            progress: 100,
             links: [],
             githubs: [
               {
@@ -407,7 +407,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/12',
-            progress: 50,
+            progress: 100,
             links: [],
             githubs: [
               {
@@ -470,12 +470,70 @@ var app = new Vue({
         icon: './images/roadmap/documentation.svg',
         flags: [
           {
+            title: 'Portal Network Marketplace',
+            content: '1. Support domain bidding',
+            photos: [],
+            location: '',
+            time: '6/22',
+            progress: 25,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Portalnetwork intergration with Wanchain',
+            content: '1. Deploy wanchain public resolver <a href="https://explorer.wanchain.org/block/addr/0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014" target="_blank" class="link_text">0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014</span>',
+            photos: [],
+            location: '',
+            time: '6/20',
+            progress: 25,
+            links: [
+              {
+                title: '',
+                url: 'https://explorer.wanchain.org/block/addr/0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014',
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Portal Network Marketplace',
+            content: '1. Support wanchain domain name searching',
+            photos: [],
+            location: '',
+            time: '6/13',
+            progress: 25,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Portalnetwork intergration with Wanchain',
+            content: '1. Deploy wanchain infura <a href="http://wanchain.portal.network/" target="_blank" class="link_text">wanchain.portal.network</a>',
+            photos: [],
+            location: '',
+            time: '6/12',
+            progress: 25,
+            links: [
+              {
+                title: '',
+                url: 'http://wanchain.portal.network/',
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'Portal Network Decetentralized Web Builder',
             content: '1. User registration flow.<br>2. Personal profile builder.<br>3. Decentralized website deploy history.',
             photos: [],
             location: '',
             time: '5/30',
-            progress: 50,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -492,7 +550,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/30',
-            progress: 35,
+            progress: 100,
             links: [
               {
                 title: '',
@@ -509,7 +567,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/12',
-            progress: 80,
+            progress: 100,
             links: [
             ],
             githubs: [
@@ -527,7 +585,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/9',
-            progress: 90,
+            progress: 100,
             links: [
             ],
             githubs: [
@@ -545,7 +603,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/2',
-            progress: 50,
+            progress: 100,
             links: [
             ],
             githubs: [],
@@ -558,7 +616,7 @@ var app = new Vue({
             photos: [],
             location: '',
             time: '5/2',
-            progress: 50,
+            progress: 100,
             links: [
             ],
             githubs: [],
@@ -636,10 +694,10 @@ var app = new Vue({
   },
   mounted: function() {
 
-      window.Intercom("boot", {
-          app_id: "an50zjec"
-      });
-      window.Intercom("update");
+      // window.Intercom("boot", {
+      //     app_id: "an50zjec"
+      // });
+      // window.Intercom("update");
       this.swiper = new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',

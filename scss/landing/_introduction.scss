@@ -63,12 +63,54 @@
 		line-height: 60px;
 		border-radius: 100px;
 		background: linear-gradient(-208deg, #00F7CB 0%, #00D7EC 100%);
+		position: relative;
+		overflow: hidden;
 		border: solid 2px transparent;
-		transition: all .3s;
+		transition: all .5s;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			background: rgba(255,255,255,0.8);
+			width: 60px;
+			height: 100%;
+			border-radius: 100px;
+			left: 0;
+			top: 0;
+			opacity: .5;
+			filter: blur(30px);
+			overflow: hidden;
+			transform: translateX(-100px)  skewX(-15deg);
+		}
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			background: rgba(255,255,255,0.8);
+			width: 30px;
+			height: 100%;
+			border-radius: 100px;
+			left: 30px;
+			top: 0;
+			opacity: 0;
+			filter: blur(5px);
+			overflow: hidden;
+			transform: translateX(-100px) skewX(-15deg);
+		}
 		&:hover {
 			border-color: #fff;
 			color: #fff;
 			background: transparent;
+			&:before{
+				transform: translateX(300px)  skewX(-15deg);  
+				opacity: 0.6;
+				transition: .7s;
+			}
+			&:after{
+				transform: translateX(300px) skewX(-15deg);  
+				opacity: 1;
+				transition: .7s;
+			}
 		}
 	}
 }

@@ -47,7 +47,7 @@ body {
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 17px;
+    right: 21px;
     z-index: 6;
     img {
         width: 60px;
@@ -414,33 +414,6 @@ nav {
         @media screen and (max-width: 440px) {
             flex-wrap: wrap;
         }
-        a {
-            display: block;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background-color: #232F88;
-            transition: background-color .5s;
-            float: left;
-            position: relative;
-            @media screen and (max-width: 440px) {
-                margin-bottom: 46px;
-            }
-            &+a {
-                margin-left: 20px;
-            }
-            &:hover {
-                background-color: #00D5BF;
-            }
-            img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-            }
-        }
         .telegram {
             img {
                 width: 28px;
@@ -465,6 +438,68 @@ nav {
             img {
                 width: 23px;
             }
+        }
+    }
+    .item {
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        z-index: 1;
+        float: left;
+        perspective: 1000px;
+        & + .item {
+            margin-left: 20px;
+        }
+        @media screen and (max-width: 440px) {
+            margin-bottom: 46px;
+        }
+    }
+    .turn {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform-style: preserve-3d;
+        transition: all .8s linear;
+        .face {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #232F88;
+            backface-visibility: hidden;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                backface-visibility: hidden;
+            }
+        }
+        .back {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #00D5BF;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                backface-visibility: hidden;
+            }
+        }
+        &:hover {
+            transform: rotateY(-180deg);
         }
     }
 }
