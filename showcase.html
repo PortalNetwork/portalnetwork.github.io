@@ -47,7 +47,7 @@
   <div class="showcase">
     <header class="menu_bar">
       <div class="mid">
-        <a class="logo"></a>
+        <a class="logo" href="https://www.portal.network/"></a>
         <a id="openMenuBtn" @click="menuOpen"></a>
         <nav :class="{open: m_open}">
           <a id="closeMenuBtn" @click="menuOpen"></a>
@@ -102,7 +102,7 @@
         </div>
       </div>
     </article>
-    <div class="select_bar">
+    <div :class="['select_bar',{fixed: isFixed}]">
       <div class="mid">
         <nav>
           <div class="bar_width">
