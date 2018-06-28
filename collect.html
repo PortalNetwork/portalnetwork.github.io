@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portal Network | Collect</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="Keywords" content="" />
+  <meta property="og:title" content="Portal Network Roadmap" />
+  <meta property="og:description" content="The launch of Portal Network makes " />
+  <meta property="og:url" content="https://www.portal.network/collect" />
+  <meta property="og:image" content="https://imgur.com/a/UA5bumd" />
+  <meta property="og:image:url" content="" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="./css/collect.css?31323" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script> -->
+
+</head>
+
+<body>
+  <div class="collect">
+    <a class="menu_btn" @click="toggleMenuFn">
+      <span></span>
+    </a>
+    <div class="header">
+      <h1 class="logo"><a href="https://www.portal.network/" target="_blank"><img src="./images/landing/logo/logo_b@2x.svg" alt=""></a></h1>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main">
+      <div class="form_box">
+        <ul>
+          <li class="row">
+            <label class="label">Name*</label>
+            <input type="text" class="input" v-model="name" />
+          </li>
+          <li class="row">
+            <label for="email" class="label">Email*</label>
+            <input type="text" class="input" v-model="email" />
+          </li>
+          <li class="row">
+            <label for="hash" class="label">IPFS Hash*</label>
+            <input type="text" class="input" v-model="hash"/>
+          </li>
+          <!-- <li class="row">
+            <label for="template" class="label">Domain Name</label>
+            <input type="text" class="input" value="portalnetworkweb.eth" disabled/>
+          </li> -->
+          <li class="row">
+            <div class="tag_box">
+              <label class="label">Tag*</label>
+              <div class="md_tag">
+                <input type="radio" id="dapp" value="dapp" v-model="tag">
+                <label for="dapp">Dapp</label>
+              </div>
+              <div class="md_tag">
+                <input type="radio" id="aboutme" value="aboutme" v-model="tag">
+                <label for="aboutme">About me</label>
+              </div>
+              <div class="md_tag">
+                <input type="radio" id="hackathon" value="hackathon" v-model="tag">
+                <label for="hackathon">Hackathon</label>
+              </div>
+              <div class="md_tag">
+                <input type="radio" id="rise" value="rise" v-model="tag">
+                <label for="rise">Rise</label>
+              </div>
+              <div class="md_tag">
+                <input type="radio" id="otherdweb" value="otherdweb" v-model="tag">
+                <label for="otherdweb">Other Dweb</label>
+              </div>
+            </div>
+          </li>
+          <li class="row">
+            <label for="description" class="label">Description*</label>
+            <textarea class="textarea" v-model="description"></textarea>
+          </li>
+        </ul>
+        <button type="button" class="submit" @click="validator">Submit</button>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="copyRight">© 2018 Portal.Network.</p>
+    </div>
+  </div>
+  <script src="./js/collect.js?82731"></script>
+</body>
+</html>
