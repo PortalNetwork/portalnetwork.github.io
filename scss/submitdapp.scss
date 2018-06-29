@@ -21,27 +21,34 @@ body {
   width: 100%;
   height: 100%;
   font-size: 14px;
-  color: 000;
+  color: #000;
   line-height: 1;
   font-family: 'Avenir', sans-serif, 'Arial', 'Microsoft JhengHei';
 }
 
+.create_dapp {
+  position: relative;
+}
+
 .menu_btn {
   display: none;
-  position: fixed;
-  top: 51px;
+  position: absolute;
+  top: 64px;
   right: 20px;
   z-index: 99;
   color: #fff;
   transition: right .5s;
   cursor: pointer;
+  @media screen and (max-width: $mob) {
+    top: 42px;
+  }
   &:before,
   &:after {
     content: "";
     display: block;
     width: 20px;
     height: 2px;
-    background-color: #fff;
+    background-color: #333333;
     transition: all .5s;
   }
   span {
@@ -52,7 +59,7 @@ body {
     margin: 3px 0;
   }
   @media screen and (max-width: $pad) {
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -60,17 +67,26 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 38px;
+  padding: 38px 20px 0px 20px;
   @extend %clear;
+  @media screen and (max-width: $smob) {
+    padding: 38px 0px 0px 10px;
+  }
 }
 
 .logo {
-  width: 300px;
-  height: 38px;
   float: left;
   a {
     display: block;
     text-decoration: none;
+    width: 300px;
+    height: 38px;
+    @media screen and (max-width: $mob) {
+      width: 70%;
+    }
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -143,6 +159,7 @@ nav {
       }
     }
     .menu_btn {
+      position: fixed;
       right: 20px;
       &:before {
         transform: translateY(4px) rotate(45deg);
@@ -164,13 +181,28 @@ nav {
   margin: 60px auto;
   padding: 0 20px;
   box-sizing: border-box;
+  @media screen and (max-width: $smob) {
+    padding: 0px;
+  }
 }
 
 .form_box {
-  h3 {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 25px;
+  width: $input_width;
+  margin: 0 auto;
+  @media screen and (max-width: $mob) {
+    width: 300px;
+  }
+  .content {
+    margin-bottom: 40px;
+    h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #333333;
+      line-height: 1.5;
+    }
   }
   .row {
     &+.row {
@@ -187,7 +219,7 @@ nav {
     margin-bottom: 3px;
   }
   .input {
-    width: $input_width;
+    width: 100%;
     height: 38px;
     font-size: 14px;
     line-height: 38px;
@@ -205,10 +237,11 @@ nav {
     }
   }
   .textarea {
-    width: $input_width;
+    width: 100%;
     height: 280px;
     padding: 10px;
     resize: none;
+    border: solid 1px #d6d6d6;
     &:focus {
       border: 1px solid $blue;
       outline: none;
@@ -219,15 +252,67 @@ nav {
       margin-bottom: 10px;
     }
     .md_tag {
+      margin-bottom: 10px;
       &+.md_tag {
         margin-top: 20px;
       }
     }
   }
+  .custom_radio {
+		display: none;
+		&+label {
+			display: inline-block;
+			cursor: pointer;
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+				width: 16px;
+				height: 16px;
+				border: 1px solid #C6CCCC;
+				border-radius: 50%;
+				box-sizing: border-box;
+				position: relative;
+				&:before {
+					content: "";
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: transparent;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					bottom: auto;
+					right: auto;
+					transform: translate(-50%, -50%);
+					opacity: 0;
+					transition: opacity 0.2s;
+				}
+			}
+		}
+		&:checked+label span {
+			border-color: $blue;
+			&:before {
+				background-color: $blue;
+				opacity: 1;
+			}
+		}
+		&:disabled+label {
+			opacity: 0.5;
+			&,span {
+				cursor: default;
+			}
+		}
+  }
+  .warning {
+    color: #FF2525;
+    margin-top: 8px;
+  }
   .submit {
     width: 200px;
-    height: 30px;
-    line-height: 30px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 19px;
     font-size: 16px;
     text-align: center;
     color: #fff;
@@ -235,6 +320,9 @@ nav {
     background-color: $blue;
     outline: none;
     margin-top: 40px;
+    @media screen and (max-width: $mob) {
+      width: 100%;
+    }
   }
 }
 

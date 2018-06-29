@@ -1,14 +1,17 @@
 import axios from "axios";
 
 new Vue({
-  el: '.collect',
+  el: '.create_dapp',
   data: {
     isMenuOpen: false,
     name: '',
     email: '',
     hash: '',
     tag: '',
-    description: ''
+    description: '',
+    emailError: false,
+    hashError: false,
+    requiredError: false
   },
   methods: {
     toggleMenuFn() {
@@ -20,22 +23,10 @@ new Vue({
       if (debug["debug"] == "true") console.log("GA PageView -> ", name);
     },
     validator() {
-      let msg = '';
-      if(this.name.trim() === ""){
-        msg = 'name unfilled';
-      }else if(this.hash.trim() === ""){
-        msg = 'hash unfilled';
-      }else if(this.tag.trim() === ""){
-        msg = 'tag unfilled';
-      }else if(this.email.trim() === ""){
-        msg = 'email unfilled';
-      }else if(this.description.trim() === ""){
-        msg = 'description unfilled';
-      }
-      if(msg.length === 0){
+      let condition = this.name === ""||this.email === ""||this.hash === ""||this.description === ""||this.tag === "";
+      this.requiredError = condition;
+      if(this.requiredError === false){
         this.onSubmit();
-      }else {
-        alert(msg);
       }
     },
     onSubmit(){
@@ -51,9 +42,27 @@ new Vue({
       .then(function (response) {
         alert('Successful');
       }).catch(function (error) {
-        console.log(error);
         alert('Network error.');
       });
+    }
+  },
+  watch: {
+    email(){
+      const isText = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+      this.emailError = !isText.test(this.email);
+    },
+    hash(){
+      const isQm = /^Qm/;
+      const hasText = /0|O|I|l|\/|\+/;
+      if(this.hash.length !== 46){
+        this.hashError = true;
+      }else if(isQm.test(this.hash) === false){
+        this.hashError = true;
+      }else if(hasText.test(this.hash)){
+        this.hashError = true;
+      }else {
+        this.hashError = false;
+      }
     }
   }
 });

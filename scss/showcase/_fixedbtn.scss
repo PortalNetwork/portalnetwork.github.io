@@ -16,7 +16,7 @@ a.gotoTopbtn{
     width: 68px;
     height: 68px;
     z-index: 98;
-    @include media-740(){
+    @include media-980(){
         display: none;
     }
     a.share_btn{
