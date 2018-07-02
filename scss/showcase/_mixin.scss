@@ -14,6 +14,11 @@
         @content;
     }  
 }
+@mixin media-980() {
+    @media screen and (max-width: 980px){
+        @content;
+    }  
+}
 @mixin media-740() {
     @media screen and (max-width: 740px){
         @content;

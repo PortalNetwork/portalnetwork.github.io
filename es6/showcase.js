@@ -68,9 +68,9 @@ new Vue({
             }
         },
         fixedFn(){
-            const userScroll = document.documentElement.scrollTop;
-            const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight;
-            this.isFixed = userScroll > offsetHeight;
+            // const userScroll = document.documentElement.scrollTop;
+            // const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight + 500;
+            // this.isFixed = userScroll > offsetHeight;
         }
     },
     created() {
