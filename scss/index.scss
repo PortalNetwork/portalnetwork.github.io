@@ -340,10 +340,22 @@ nav {
     }
     .partner_area {
         justify-content: center;
-        a+a {
-            margin-left: 58px;
-            @media screen and (max-width: $pad) {
-                margin-left: 30px;
+        @media screen and (max-width: 360px) {
+            display: block;
+        }
+        a {
+            display: block;
+            @media screen and (max-width: 360px) {
+                margin: 0px auto 30px auto;
+            }
+            &+a{
+                margin-left: 58px;
+                @media screen and (max-width: $pad) {
+                    margin-left: 30px;
+                }
+                @media screen and (max-width: 360px) {
+                    margin: 0px auto 30px auto;
+                }
             }
         }
         .bluzelle {
@@ -395,24 +407,40 @@ nav {
 .footer_content {
     max-width: $container;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 52px 20px 20px 20px;
     box-sizing: border-box;
     @extend %clear;
     .item_list {
         float: left;
-        padding-top: 52px;
-        @media screen and (max-width: $pad) {
-            margin-bottom: 40px;
-        }
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
         @media screen and (max-width: $mob) {
             float: none;
-            padding-top: 42px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            margin: 0px auto 40px auto;
         }
         @media screen and (max-width: 440px) {
-            flex-wrap: wrap;
+            width: auto;
+        }
+        .item {
+            display: block;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #232F88;
+            transition: background-color .5s;
+            position: relative;
+            &:hover {
+                background-color: #00D5BF;
+            }
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
         }
         .telegram {
             img {
@@ -440,78 +468,15 @@ nav {
             }
         }
     }
-    .item {
-        display: block;
-        position: relative;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        z-index: 1;
-        float: left;
-        perspective: 1000px;
-        & + .item {
-            margin-left: 20px;
-        }
-        @media screen and (max-width: 440px) {
-            margin-bottom: 46px;
-        }
-    }
-    .turn {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        transform-style: preserve-3d;
-        transition: all .8s linear;
-        .face {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #232F88;
-            backface-visibility: hidden;
-            img {
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                backface-visibility: hidden;
-            }
-        }
-        .back {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-color: #00D5BF;
-            transform: rotateY(180deg);
-            backface-visibility: hidden;
-            position: absolute;
-            left: 0;
-            top: 0;
-            img {
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                margin: auto;
-                backface-visibility: hidden;
-            }
-        }
-        &:hover {
-            transform: rotateY(-180deg);
-        }
-    }
 }
 
 .copyright {
-    padding-top: 96px;
+    padding-top: 44px;
     font-size: 13px;
     line-height: 18px;
     color: #3442B0;
     @media screen and (max-width: $mob) {
         text-align: center;
         padding-top: 0;
-        padding-bottom: 25px;
     }
 }
