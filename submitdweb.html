@@ -9,11 +9,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Portal Network | Submit a ÐApp</title>
+  <title>Portal Network | Submit a ÐWEB</title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
   <meta name="description" content="" />
   <meta name="Keywords" content="" />
-  <meta property="og:title" content="Portal Network Submit a ÐApp" />
+  <meta property="og:title" content="Portal Network Submit a ÐWEB" />
   <meta property="og:description" content="The launch of Portal Network makes " />
   <meta property="og:url" content="https://www.portal.network/collect" />
   <meta property="og:image" content="https://imgur.com/a/UA5bumd" />
@@ -52,25 +52,23 @@
     <div class="main">
       <div class="form_box">
         <div class="content">
-            <h3>Submit a ÐApp</h3>
-            <p>Use this form to submit a new Ethereum decentralized app.</p>
+            <h3>Submit a ÐWEB</h3>
+            <p>Fill up this form in order to build a ÐWEB and show on our showcase.</p>
         </div>
         <ul>
           <li class="row">
-            <label class="label">Website Name*</label>
+            <label class="label">Website Name</label>
             <input type="text" class="input" v-model.trim="name" />
-            <p class="warning" v-if="name.length === 0 && requiredError">Required field.</p>
           </li>
           <li class="row">
-            <label for="email" class="label">Email*</label>
+            <label for="email" class="label">Email</label>
             <input type="text" :class="['input', {invalid: emailError}]" v-model.trim="email" />
-            <p class="warning" v-if="email.length > 0 && emailError">Email type error.</p>
-            <p class="warning" v-if="email.length === 0 && requiredError">Required field.</p>
+            <p class="warning" v-if="email.length > 0 && emailError">Incorrect Email.</p>
           </li>
           <li class="row">
             <label for="hash" class="label">IPFS Hash*</label>
             <input type="text" class="input" maxlength="46" v-model.trim="hash"/>
-            <p class="warning" v-if="hash.length > 0 && hashError">IPFS Hash type error.</p>
+            <p class="warning" v-if="hash.length > 0 && hashError">Incorrect IPFS Hash.</p>
             <p class="warning" v-if="hash.length === 0 && requiredError">Required field.</p>
           </li>
           <!-- <li class="row">
@@ -79,7 +77,7 @@
           </li> -->
           <li class="row">
             <div class="tag_box">
-              <label class="label">Tag*</label>
+              <label class="label">Tag</label>
               <div class="md_tag">
                 <input type="radio" id="dapp" class="custom_radio" value="dapp" v-model="tag">
                 <label for="dapp"><span></span>Dapp</label>
@@ -101,12 +99,10 @@
                 <label for="otherdweb"><span></span>Other Dweb</label>
               </div>
             </div>
-            <p class="warning" v-if="tag.length === 0 && requiredError">Required field.</p>
           </li>
           <li class="row">
-            <label for="description" class="label">Description*</label>
+            <label for="description" class="label">Description</label>
             <textarea class="textarea" v-model.trim="description"></textarea>
-            <p class="warning" v-if="description.length === 0 && requiredError">Required field.</p>
           </li>
         </ul>
         <button type="button" class="submit" @click="validator">Submit</button>

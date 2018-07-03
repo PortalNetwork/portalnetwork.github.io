@@ -23,7 +23,7 @@ new Vue({
       if (debug["debug"] == "true") console.log("GA PageView -> ", name);
     },
     validator() {
-      let condition = this.name === ""||this.email === ""||this.hash === ""||this.description === ""||this.tag === "";
+      let condition = this.hash === "";
       this.requiredError = condition;
       if(this.requiredError === false){
         this.onSubmit();
@@ -37,12 +37,16 @@ new Vue({
         tag: this.tag,
         email: this.email
       };
-
+      console.log(data,'data');
       axios.post('https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/insert-shortcase', data)
       .then(function (response) {
         alert('Successful');
       }).catch(function (error) {
-        alert('Network error.');
+        if(error.response && error.response.status){
+          alert(error.response.data.message);
+        }else{
+          alert('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        }
       });
     }
   },
