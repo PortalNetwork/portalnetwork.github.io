@@ -11,7 +11,8 @@ new Vue({
     description: '',
     emailError: false,
     hashError: false,
-    requiredError: false
+    hashRequiredError: false,
+    tagRequiredError: false
   },
   methods: {
     toggleMenuFn() {
@@ -23,9 +24,10 @@ new Vue({
       if (debug["debug"] == "true") console.log("GA PageView -> ", name);
     },
     validator() {
-      let condition = this.name === ""||this.email === ""||this.hash === ""||this.description === ""||this.tag === "";
-      this.requiredError = condition;
-      if(this.requiredError === false){
+      this.hashRequiredError = this.hash === "";
+      this.tagRequiredError = this.tag === "";
+
+      if(this.hashRequiredError === false && this.tagRequiredError === false){
         this.onSubmit();
       }
     },
@@ -42,7 +44,11 @@ new Vue({
       .then(function (response) {
         alert('Successful');
       }).catch(function (error) {
-        alert('Network error.');
+        if(error.response && error.response.status){
+          alert(error.response.data.message);
+        }else{
+          alert('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        }
       });
     }
   },

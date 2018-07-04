@@ -198,6 +198,7 @@
                   background-size: 100% 100%;
                   box-shadow: 0 0 5px rgba(#000, 0.3);
                   padding-top: 15px;
+                  margin-bottom: 20px;
                   @media screen and (max-width: 630px) {
                       height: pxtovw(200, 630);
                   }
@@ -211,10 +212,6 @@
               }
               >.info {
                   width: 100%;
-                  display: flex;
-                  justify-content: space-around;
-                  align-items: center;
-                  margin-top: 20px;
                   >div {
                       width: 100%;
                       >h2 {
@@ -222,6 +219,10 @@
                           font-size: 16px;
                           font-weight: 500;
                           color: #000000;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          height: 22px;
                       }
                       >p {
                           font-family: Avenir;
@@ -231,6 +232,7 @@
                           text-overflow: ellipsis;
                           overflow: hidden;
                           white-space: nowrap;
+                          height: 22px;
                       }
                   }
               }
