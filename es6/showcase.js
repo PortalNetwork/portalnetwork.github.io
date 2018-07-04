@@ -9,7 +9,7 @@ new Vue({
     data: {
         showcaseInfo: [],
         selectidx: 2,
-        selectState: ["aboutme", "hackathon", "dapp", "rise", "otherdweb"],
+        selectState: ["aboutme", "hackathon", "dapp", "rise", "otherdweb","wanchain","wbc"],
         shareOpen: false,
         m_open: false,
         hash: [ "0","x","d","a","3","b","4","0","1","f","9","9","0","7","9","6","2","8", "a", "4"],
