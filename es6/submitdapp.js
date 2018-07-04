@@ -11,7 +11,8 @@ new Vue({
     description: '',
     emailError: false,
     hashError: false,
-    requiredError: false
+    hashRequiredError: false,
+    tagRequiredError: false
   },
   methods: {
     toggleMenuFn() {
@@ -23,9 +24,10 @@ new Vue({
       if (debug["debug"] == "true") console.log("GA PageView -> ", name);
     },
     validator() {
-      let condition = this.hash === "";
-      this.requiredError = condition;
-      if(this.requiredError === false){
+      this.hashRequiredError = this.hash === "";
+      this.tagRequiredError = this.tag === "";
+
+      if(this.hashRequiredError === false && this.tagRequiredError === false){
         this.onSubmit();
       }
     },

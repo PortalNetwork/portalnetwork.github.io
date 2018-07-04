@@ -69,7 +69,7 @@
             <label for="hash" class="label">IPFS Hash*</label>
             <input type="text" class="input" maxlength="46" v-model.trim="hash"/>
             <p class="warning" v-if="hash.length > 0 && hashError">Incorrect IPFS Hash.</p>
-            <p class="warning" v-if="hash.length === 0 && requiredError">Required field.</p>
+            <p class="warning" v-if="hash.length === 0 && hashRequiredError">Required field.</p>
           </li>
           <!-- <li class="row">
             <label for="template" class="label">Domain Name</label>
@@ -98,7 +98,7 @@
                 <input type="radio" id="otherdweb" class="custom_radio" value="otherdweb" v-model="tag">
                 <label for="otherdweb"><span></span>Other Dweb</label>
               </div>
-              <p class="warning" v-if="tag.length === 0 && requiredError">Required field.</p>
+              <p class="warning" v-if="tag.length === 0 && tagRequiredError">Required field.</p>
             </div>
           </li>
           <li class="row">
