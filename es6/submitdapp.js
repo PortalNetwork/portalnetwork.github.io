@@ -37,7 +37,7 @@ new Vue({
         tag: this.tag,
         email: this.email
       };
-      console.log(data,'data');
+
       axios.post('https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/insert-shortcase', data)
       .then(function (response) {
         alert('Successful');
