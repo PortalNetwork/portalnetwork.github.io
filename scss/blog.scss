@@ -1,0 +1,344 @@
+@import "_reset.scss";
+@import "_var.scss";
+$green: #00A89D;
+$mob: 720px;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif, 'Arial', 'Microsoft JhengHei';
+}
+
+.logo {
+  display: block;
+  float: left;
+  width: 300px;
+  height: 38px;
+  background: url("../images/landing/logo/logo_w@2x.svg") top left no-repeat;
+  @media screen and (max-width: $pad) {
+    float: none;
+  }
+  @media screen and (max-width: $mob) {
+    background-size: 80% 100%;
+  }
+  a {
+    display: block;
+    height: 100%;
+  }
+}
+
+nav {
+  @extend %clear;
+  @media screen and (max-width: $pad) {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #3442b0;
+    z-index: 5;
+    transition: right .5s;
+  }
+}
+
+.menu_btn {
+  display: none;
+  position: fixed;
+  top: 51px;
+  right: 20px;
+  z-index: 99;
+  color: #fff;
+  transition: right .5s;
+  cursor: pointer;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: all .5s;
+  }
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: transparent;
+    margin: 3px 0;
+  }
+  @media screen and (max-width: $pad) {
+    display: block;
+  }
+}
+
+.menu {
+  float: right;
+  @extend %clear;
+  @media screen and (max-width: $pad) {
+    float: none;
+    margin-top: 66px;
+  }
+  li {
+    display: inline-block;
+    @media screen and (max-width: $pad) {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    &+li {
+      margin-left: 50px;
+      @media screen and (max-width: $pad) {
+        margin-left: 0px;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 16px;
+      letter-spacing: 0.08px;
+      line-height: 38px;
+      color: rgba(256, 256, 256, 0.8);
+      transition: color .5s;
+      &:hover {
+        color: rgba(256, 256, 256, 1);
+      }
+      @media screen and (max-width: $pad) {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        padding: 30px;
+        color: #00D5BF;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $pad) {
+  .active {
+    nav {
+      right: 0;
+      &:before {
+        content: "";
+        display: block;
+        width: 200px;
+        height: 26px;
+        background: url('../images/logo/blue_logo.png') left top no-repeat;
+        background-size: 100% auto;
+        margin: 44px 0 0 20px;
+      }
+    }
+    .menu_btn {
+      right: 20px;
+      &:before {
+        transform: translateY(4px) rotate(45deg);
+        background-color: #00D5BF;
+      }
+      &:after {
+        transform: translateY(-6px) rotate(-45deg);
+        background-color: #00D5BF;
+      }
+      span {
+        background-color: transparent;
+      }
+    }
+    .fixed {
+      .menu {
+        li {
+          a {
+            color: #00D5BF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 1;
+  width: 100%;
+  background-color: $green;
+  padding: 38px 0px 10px 0px;
+  @media screen and (max-width: $pad) {
+    position: relative;
+  }
+  .section {
+    @include section();
+    @extend %clear;
+  }
+}
+
+.fixed {
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: $pad) {
+    position: relative;
+    background-color: $green;
+  }
+  .logo {
+    background: url("../images/landing/logo/logo_b@2x.svg") top left no-repeat;
+  }
+  .menu {
+    li {
+      a {
+        color: rgba(0, 0, 0, 0.8);
+        transition: color .5s;
+        &:hover {
+          color: rgba(0, 0, 0, 1);
+        }
+      }
+    }
+  }
+}
+
+.bar {
+  margin-top: 60px;
+  @media screen and (max-width: $pad) {
+    width: 100%;
+  }
+  ul {
+    margin-left: -15px;
+    @media screen and (max-width: $mob) {
+      overflow-x: scroll;
+      width: 100%;
+      white-space: nowrap;
+    }
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        font-size: 16px;
+        color: rgba(256,256,256,0.8);
+        transition: color .5s;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        &:hover {
+          color: rgba(256,256,256,1);
+        }
+      }
+    }
+  }
+}
+
+.main {
+  @include section();
+}
+
+.summary {
+  margin: 40px 0px 60px 0px;
+  ul {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @media screen and (max-width: $mob) {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
+    li {
+      display: inline-block;
+      width: 33%;
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 60px;
+      @media screen and (max-width: $pad) {
+        width: 50%;
+      }
+      @media screen and (max-width: $mob) {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.summary_box {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  @media screen and (max-width: $pad) {
+    width: 330px;
+  }
+  @media screen and (max-width: $mob) {
+    width: 100%;
+  }
+  >.figure {
+    width: 100%;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 15px;
+    border: solid 1px #bebebe;
+    @media screen and (max-width: $pad) {
+      height: 220px;
+    }
+  }
+  .info {
+    h4 {
+      font-size: 26px;
+      color: #000000;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      color: #333333;
+      line-height: 1.5;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+    }
+  }
+  .author {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    @extend %clear;
+    .figure {
+      width: 20%;
+      float: left;
+      @media screen and (max-width: $pad) {
+        width: 66px;
+      }
+      img {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    .author_content {
+      width: 80%;
+      float: left;
+      padding: 0px 0px 0px 10px;
+      .title {
+        overflow : hidden;
+        text-overflow : ellipsis;
+        white-space : nowrap;
+        color: $green;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: #333333;
+      }
+    }
+  }
+}
+
