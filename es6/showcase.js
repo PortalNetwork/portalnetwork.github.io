@@ -66,11 +66,6 @@ new Vue({
                 this.isLoad = true;
                 axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
             }
-        },
-        fixedFn(){
-            // const userScroll = document.documentElement.scrollTop;
-            // const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight + 500;
-            // this.isFixed = userScroll > offsetHeight;
         }
     },
     created() {

@@ -1,6 +1,7 @@
 @import "_reset.scss";
 @import "_var.scss";
 $green: #00A89D;
+$text: #333333;
 $mob: 720px;
 * {
   padding: 0px;
@@ -50,7 +51,7 @@ nav {
     right: -100%;
     width: 100%;
     height: 100%;
-    background-color: #3442b0;
+    background-color: $green;
     z-index: 5;
     transition: right .5s;
   }
@@ -112,7 +113,7 @@ nav {
       font-size: 16px;
       letter-spacing: 0.08px;
       line-height: 38px;
-      color: rgba(256, 256, 256, 0.8);
+      color: rgba(256, 256, 256, 0.6);
       transition: color .5s;
       &:hover {
         color: rgba(256, 256, 256, 1);
@@ -122,7 +123,7 @@ nav {
         line-height: 30px;
         text-align: center;
         padding: 30px;
-        color: #00D5BF;
+        color: #fff;
       }
     }
   }
@@ -137,7 +138,7 @@ nav {
         display: block;
         width: 200px;
         height: 26px;
-        background: url('../images/logo/blue_logo.png') left top no-repeat;
+        background: url('../images/landing/logo/logo_w@2x.svg') left top no-repeat;
         background-size: 100% auto;
         margin: 44px 0 0 20px;
       }
@@ -146,25 +147,25 @@ nav {
       right: 20px;
       &:before {
         transform: translateY(4px) rotate(45deg);
-        background-color: #00D5BF;
+        background-color: #fff;
       }
       &:after {
         transform: translateY(-6px) rotate(-45deg);
-        background-color: #00D5BF;
+        background-color: #fff;
       }
       span {
         background-color: transparent;
       }
     }
-    .fixed {
-      .menu {
-        li {
-          a {
-            color: #00D5BF;
-          }
-        }
-      }
-    }
+    // .fixed {
+    //   .menu {
+    //     li {
+    //       a {
+    //         color: #00D5BF;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -225,11 +226,14 @@ nav {
       a {
         display: block;
         font-size: 16px;
-        color: rgba(256,256,256,0.8);
+        color: rgba(256,256,256,0.6);
         transition: color .5s;
         text-transform: uppercase;
         padding: 10px 15px;
         &:hover {
+          color: rgba(256,256,256,1);
+        }
+        &.active {
           color: rgba(256,256,256,1);
         }
       }
@@ -238,6 +242,10 @@ nav {
 }
 
 .main {
+  @include section();
+}
+
+main {
   @include section();
 }
 
@@ -306,39 +314,106 @@ nav {
       margin-bottom: 20px;
     }
   }
-  .author {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    @extend %clear;
-    .figure {
-      width: 20%;
-      float: left;
-      @media screen and (max-width: $pad) {
-        width: 66px;
-      }
-      img {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  @extend %clear;
+  .figure {
+    width: 20%;
+    float: left;
+    @media screen and (max-width: $pad) {
+      width: 66px;
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .author_content {
+    width: 80%;
+    float: left;
+    padding: 0px 0px 0px 10px;
+    .title {
+      overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+      color: $green;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: #333333;
+    }
+  }
+}
+
+.content {
+  h3 {
+    font-size: 42px;
+    line-height: 1.3;
+    font-weight: bold;
+    color: $text;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  figure {
+    margin: 40px auto 38px auto;
+    &.main_figure {
+      margin-bottom: 50px;
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+    figcaption {
+      font-size: 16px;
+      font-weight: 400;
+      color: #6c6c6c;
+      text-align: center;
+      margin-top: 15px;
+      a {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #6c6c6c;
+        text-decoration: underline;
       }
     }
-    .author_content {
-      width: 80%;
-      float: left;
-      padding: 0px 0px 0px 10px;
-      .title {
-        overflow : hidden;
-        text-overflow : ellipsis;
-        white-space : nowrap;
-        color: $green;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 14px;
-        color: #333333;
-      }
+  }
+  p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: $text;
+    margin-bottom: 30px;
+    >a {
+      display: inline-block;
     }
+  }
+  a {
+    display: inline-block;
+    text-decoration: underline;
+    line-height: 1.5;
+    color: $text;
+  }
+  strong {
+    color: $text;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 1.5;
+    color: $text;
+    margin-bottom: 8px;
+  }
+  article {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

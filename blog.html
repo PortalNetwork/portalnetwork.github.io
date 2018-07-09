@@ -26,12 +26,10 @@
 </head>
 
 <body>
-  <div class="blog">
+  <div class="blog" :class="{active: isMenuOpen}">
     <a class="menu_btn" @click="toggleMenuFn">
       <span></span>
     </a>
-    <!-- <a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a> -->
-    <!-- <div :class="['header',{fixed: isheaderFix}]"> -->
     <div class="header">
       <div class="section">
         <h1 class="logo">
@@ -56,19 +54,19 @@
         <div class="bar">
           <ul>
             <li>
-              <a href="javascript:;">PRODUCT</a>
+              <a href="javascript:;" :class="{active: selectidx === 0}" @click="currentActive(0)">product</a>
             </li>
             <li>
-              <a href="javascript:;">EVENTS</a>
+              <a href="javascript:;" :class="{active: selectidx === 1}" @click="currentActive(1)">events</a>
             </li>
             <li>
-              <a href="javascript:;">LATEST</a>
+              <a href="javascript:;" :class="{active: selectidx === 2}" @click="currentActive(2)">LATEST</a>
             </li>
             <li>
-              <a href="javascript:;">GUIDE</a>
+              <a href="javascript:;" :class="{active: selectidx === 3}" @click="currentActive(3)">GUIDE</a>
             </li>
             <li>
-              <a href="javascript:;">NEW INTERNET</a>
+              <a href="javascript:;" :class="{active: selectidx === 4}" @click="currentActive(4)">NEW INTERNET</a>
             </li>
           </ul>
         </div>
@@ -77,78 +75,21 @@
     <div class="main">
       <div class="summary">
         <ul>
-          <li>
-            <a class="summary_box" href="javascript:;" target="_blank">
-              <div class="figure" style="background-image: url('https://cdn-images-1.medium.com/max/800/1*cE2smQ6JuBrVxrLzV06Qfg.jpeg')">
+          <li v-for="(item,idx) in summaryList" :key="idx">
+            <a class="summary_box" :href="item.url" target="_blank">
+              <div class="figure" :style="getImgUrl(idx)">
               </div>
               <div class="info">
-                <h4>What is ENS & Ｗhat problem it solved?</h4>
-                <p>Ever since blockchain and cryptocurrency become a trending topic, people began transferring their digital assets through their crypto…</p>
+                <h4>{{item.title}}</h4>
+                <p>{{item.content}}</p>
               </div>
               <div class="author">
                 <div class="figure">
-                  <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+                  <img :src="item.authorImg" alt="">
                 </div>
                 <div class="author_content">
-                  <p class="title">Portal Network</p>
-                  <p>Jul 6</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="summary_box" href="javascript:;" target="_blank">
-              <div class="figure" style="background-image: url('https://cdn-images-1.medium.com/max/800/1*Ao-djtQaf8k2KKKvFoe6fQ@2x.jpeg')"></div>
-              <div class="info">
-                <h4>Portal Network in Wanchain Asia Tour 2018 Indonesia / Malaysia / South Korea</h4>
-                <p>Portal Network is excited to announce that we will be part of Wanchain Asia Tour 2018 in Indonesia, Malaysia
-                  and South Korea! We believe…</p>
-              </div>
-              <div class="author">
-                <div class="figure">
-                  <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
-                </div>
-                <div class="author_content">
-                  <p class="title">Portal Network</p>
-                  <p>Jul 6</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="summary_box" href="javascript:;" target="_blank">
-              <div class="figure" style="background-image: url('https://cdn-images-1.medium.com/max/800/1*_DBMTTB-kD_ot8M7hzz0Ig.jpeg')">
-              </div>
-              <div class="info">
-                <h4>Portal Network Hackathon Korea 2018 — Protal Network Announcement</h4>
-                <p>Portal Network is proud to announce that we are organizing a Hackathon from July 14th to 15th in Korea together with our partners …</p>
-              </div>
-              <div class="author">
-                <div class="figure">
-                  <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
-                </div>
-                <div class="author_content">
-                  <p class="title">Portal Network</p>
-                  <p>Jul 6</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="summary_box" href="javascript:;" target="_blank">
-              <div class="figure" style="background-image: url('https://cdn-images-1.medium.com/max/800/1*_DBMTTB-kD_ot8M7hzz0Ig.jpeg')">
-              </div>
-              <div class="info">
-                <h4>Portal Network Hackathon Korea 2018 — Protal Network Announcement</h4>
-                <p>Portal Network is proud to announce that we are organizing a Hackathon from July 14th to 15th in Korea together with our partners …</p>
-              </div>
-              <div class="author">
-                <div class="figure">
-                  <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
-                </div>
-                <div class="author_content">
-                  <p class="title">Portal Network</p>
-                  <p>Jul 6</p>
+                  <p class="title">{{item.author}}</p>
+                  <p>{{item.date}}</p>
                 </div>
               </div>
             </a>

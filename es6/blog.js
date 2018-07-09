@@ -1,20 +1,36 @@
+import axios from "axios";
+import { CLIENT_RENEG_WINDOW } from "tls";
+
 new Vue({
   el: '.blog',
   data: {
     isMenuOpen: false,
-    isheaderFix: false,
-    scroll: 0,
+    summaryInfo: [],
+    selectidx: 0,
+    selectedTag: ["product","events","latest","guide","newinternet"]
+  },
+  computed: {
+    summaryList(){
+      let selected = this.selectedTag[this.selectidx];
+      return this.summaryInfo.filter(item => item.tag.indexOf(selected)!== -1);
+    }
   },
   methods: {
     toggleMenuFn() {
       this.isMenuOpen = !this.isMenuOpen;
     },
-    scrollFn() {
-      this.scroll = document.documentElement.scrollTop;
-      this.isheaderFix = this.scroll > 150;
+    currentActive(idx){
+      this.selectidx = idx;
+    },
+    getImgUrl(idx){
+      const url = `background-image: url('${this.summaryList[idx].img}')`;
+      return url;
     }
   },
   mounted(){
-    window.addEventListener('scroll', this.scrollFn);
+    axios.get("../blogs/api/summary.json")
+    .then((response)=>{
+      this.summaryInfo = response.data;
+    });
   }
 });
