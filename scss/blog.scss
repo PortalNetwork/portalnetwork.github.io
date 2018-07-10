@@ -322,11 +322,8 @@ main {
   height: 60px;
   @extend %clear;
   .figure {
-    width: 20%;
+    width: 66px;
     float: left;
-    @media screen and (max-width: $pad) {
-      width: 66px;
-    }
     img {
       max-width: 100%;
       width: 100%;
@@ -354,7 +351,7 @@ main {
 .content {
   h3 {
     font-size: 42px;
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: bold;
     color: $text;
     text-align: center;
