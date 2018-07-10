@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portal Network | Blog</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="description" content="" />
+  <meta name="Keywords" content="" />
+  <meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="https://www.portal.network/blogs" />
+  <meta property="og:image" content="https://imgur.com/a/UA5bumd" />
+  <meta property="og:image:url" content="" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="../css/blog.css?17223" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
+</head>
+
+<body>
+  <div class="blog" :class="{active: isMenuOpen}">
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="section">
+        <h1 class="logo">
+          <a href="https://www.portal.network/"></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+          <ul>
+            <li>
+              <a href="javascript:;" :class="{active: selectidx === 0}" @click="currentActive(0)">product</a>
+            </li>
+            <li>
+              <a href="javascript:;" :class="{active: selectidx === 1}" @click="currentActive(1)">events</a>
+            </li>
+            <li>
+              <a href="javascript:;" :class="{active: selectidx === 2}" @click="currentActive(2)">LATEST</a>
+            </li>
+            <li>
+              <a href="javascript:;" :class="{active: selectidx === 3}" @click="currentActive(3)">GUIDE</a>
+            </li>
+            <li>
+              <a href="javascript:;" :class="{active: selectidx === 4}" @click="currentActive(4)">NEW INTERNET</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="main_article">
+      <header>
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5 class="title">Portal Network</h5>
+          <time>Jul 6</time>
+        </div>
+      </header>
+      <h3>Portal Network in Wanchain Asia Tour 2018 Indonesia / Malaysia / South Korea</h3>
+      <figure class="main_figure">
+        <img src="https://cdn-images-1.medium.com/max/2000/1*cE2smQ6JuBrVxrLzV06Qfg.jpeg" alt="">
+        <figcaption>Photo by <a href="https://unsplash.com/@le_buzz?utm_source=medium&utm_medium=referral" target="_blank">Le Buzz</a> on Unsplash</figcaption>
+      </figure>
+      <article>
+        <p>Portal Network is excited to announce that we will be part of Wanchain Asia Tour 2018 in Indonesia, Malaysia and South Korea! We believe that this will be a crucial milestone and we highly appreciate this opportunity that Wanchain provide. This Asia tour will be celebrating the launch of WANCHAIN MAIN NET 2.0 together with many other partners and Portal Network will be there to reveal our latest update on WNS (Wanchain Name Service).</p>
+        <section class="blockquote">
+          <p>One <a href="https://www.portal.network/" target="_blank">crucial</a> thing Portal Network build is the decentralized Domain Name Service (DDNS), and we hereby proudly present WNS (Wanchain Name Service).</p>
+        </section>
+        <h4>What is ENS?</h4>
+        <p>ENS is the abbreviation for Ethereum Name Service. By registering this open, extensible decentralized Domain Name Service based on Ethereum blockchain, users can interact with smart contract and buy a unique, customized, human-readable domain name for their crypto wallet address.</p>
+        <p>The goal of DNS, the centralized Internet Domain Name Service, is to provide human-readable identifiers that can be used to specify servers. DNS is like a phonebook for the Internet. People access the information online through domain name, like “<a href="https://www.portal.network/" target="_blank">www.portal.network</a>” or “<a href="https://web.portal.network/" target="_blank">web.portal.network</a>”. Then browsers interact through Internet Protocol addresses (IP address) such as “69.89.31.226” (in IPv4) or “2001:0db8:85a3:0000:0000:8a2e:0370:7334” (in IPv6).</p>
+        <figure>
+          <img src="https://cdn-images-1.medium.com/max/1600/1*OLle6F0J_xbNiYdDub1oRQ.jpeg" alt="">
+          <figcaption>DNS translates domain names to IP addresses.</figcaption>
+        </figure>
+        <p>DNS translates domain names to IP addresses so browsers can reach and load Internet resources. Each device connected to the Internet has unique IP address that machines use to locate the device. The main evolution of DNS servers is that eliminating the need of memorizing IP addresses.</p>
+        <h4>Portal Network focuses on 3 different area:</h4>
+        <ul class="list">
+          <li>
+            <div class="title">Domain Marketplace</div>
+            <figure>
+              <img src="https://cdn-images-1.medium.com/max/1600/1*tE9L-kNGfGIi0df0Moijhg.png" alt="">
+            </figure>
+            <p>Marketplace is the platform where you can buy, sell and bid WNS. We have noticed that the current ENS bidding system can be sometimes be confusing for the users, so we have take that into consideration and made WNS bidding system straightforward.</p>
+          </li>
+          <li>
+            <div class="title">Domain Marketplace</div>
+            <figure>
+              <img src="https://cdn-images-1.medium.com/max/1600/1*eMS--bW4y5OslHOzhJVzjQ.png" alt="">
+            </figure>
+            <p>Marketplace is the platform where you can buy, sell and bid WNS. We have noticed that the current ENS bidding system can be sometimes be confusing for the users, so we have take that into consideration and made WNS bidding system straightforward.</p>
+          </li>
+        </ul>
+        <p>DNS translates domain names to IP addresses so browsers can reach and load Internet resources. Each device connected to the Internet has unique IP address that machines use to locate the device. The main evolution of DNS servers is that eliminating the need of memorizing IP addresses.</p>
+        <p>In order to begin my analysis, there were three things I first needed to identify:</p>
+        <ol class="list num">
+          <li>The <strong>price</strong> of the domain</li>
+          <li>The character length of the domain, and</li>
+          <li>The last the registrant of the domain.</li>
+        </ol>
+        <figure>
+          <img src="https://cdn-images-1.medium.com/max/1600/1*OLle6F0J_xbNiYdDub1oRQ.jpeg" alt="">
+          <figcaption>DNS translates domain names to IP addresses.</figcaption>
+        </figure>
+      </article>
+    </main>
+  </div>
+  <script src="../js/blog.js?381741"></script>
+</body>
+
+</html>
