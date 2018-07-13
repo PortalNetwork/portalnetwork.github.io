@@ -37,9 +37,28 @@ new Vue({
         caseSuccess(res) {
             this.showcaseInfo = res.data.result;
             this.isLoad = false;
-            res.data.result.map((obj)=>{
-                console.log(obj.tag[0]);
-            })
+
+            /**
+             * 如果網址來自 share 複製出來的內容 (帶有參數的)
+             * 參數跟 response 回來的 tag, domain 有匹配到的話
+             * 將網站導至 ipfs url
+             */
+            if(!window.location.search) {
+                return;
+            }
+
+            const string = window.location.search.substring(1);
+            const parameters = string.split('&').reduce((acc, cur) => {
+                const item = cur.split('=');
+                acc[item[0]] = item[1];
+                return acc;
+            }, {});
+
+            const currentItem = this.showcaseInfo.find(x => x.tag.includes(parameters.tag) && x.domain === parameters.domain);
+            if(!currentItem) {
+                return;
+            }
+            window.location.href = currentItem.url;
         },
         caseFatch(err) {
             console.error(err);
@@ -52,7 +71,7 @@ new Vue({
             return demophoto ? urldefault : url;
         },
         fixedPopOpen() {
-        this.shareOpen = !this.shareOpen;
+            this.shareOpen = !this.shareOpen;
         },
         menuOpen() {
             this.m_open = !this.m_open;
@@ -60,29 +79,38 @@ new Vue({
         gotoPageTop() {
             animateScrollTo(0);
         },
-        scrollFn() {
-            if (!this.isScallBack) {
-                this.isScallBack = true;
-                this.isLoad = true;
-                axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase").then(this.caseSuccess).catch(this.caseFatch);
+        transferLink(link) {
+            window.open(link);
+        },
+        shareLink(e, tag, domain) {
+            e.stopPropagation();
+            const target = document.querySelector('#copyedVal');
+            target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
+            target.select();
+
+            try {
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                alert('Copying text command was ' + msg);
+            } catch (err) {
+                alert('Oops, unable to copy');
             }
         },
-        fixedFn(){
-            // const userScroll = document.documentElement.scrollTop;
-            // const offsetHeight = document.getElementsByClassName("banner")[0].offsetHeight + document.getElementsByClassName("select_bar")[0].offsetHeight + 500;
-            // this.isFixed = userScroll > offsetHeight;
-        }
     },
     created() {
         this.showtext = this.hash;
     },
     mounted() {
-        this.scrollFn();
+        this.isLoad = true;
+        axios.get("https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/list-all-shortcase")
+        .then(this.caseSuccess)
+        .catch(this.caseFatch);
+
         TweenMax.to("#txt", 3, {
             text: "portalnetworkweb.eth",
             delay: 0.4,
             ease: Power1.easeOut
         });
-        window.addEventListener('scroll', this.fixedFn);
+        window.addEventListener('scroll', this.fixedFn);  
     }
 });
