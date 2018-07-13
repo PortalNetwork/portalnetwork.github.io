@@ -85,7 +85,7 @@ new Vue({
         shareLink(e, tag, domain) {
             e.stopPropagation();
             const target = document.querySelector('#copyedVal');
-            target.value = `${window.location.href}?tag=${tag[0]}&domain=${domain}`;
+            target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
             target.select();
 
             try {
