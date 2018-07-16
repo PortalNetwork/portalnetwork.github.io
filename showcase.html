@@ -103,7 +103,7 @@
         </div>
       </div>
     </article>
-    <div :class="['select_bar',{fixed: isFixed}]">
+    <div class="select_bar">
       <div class="mid">
         <nav>
           <div class="bar_width">
@@ -125,7 +125,7 @@
     </div>
 
     <!-- share btn 真正抓取資料的 dom 元素 -->
-    <textarea id="copyedVal"></textarea>
+    <input type="text" readonly id="copyedVal" value=""/>
 
     <div class="show_item">
       <div class="loading_page" v-if="isLoad">
@@ -213,7 +213,7 @@
     </a>
 
   </div>
-  <script src="./js/showcase.js?9384"></script>
+  <script src="./js/showcase.js?82912"></script>
 
 
 </body>
