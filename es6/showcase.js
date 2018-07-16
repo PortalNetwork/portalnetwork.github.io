@@ -52,6 +52,15 @@ new Vue({
                 return acc;
             }, {});
 
+
+            if(parameters.action) {
+                //FIXME: 目前只抓屬性而沒有判斷值, 之後要改掉
+                const { tag, } = parameters;
+                const indexOf = this.selectState.indexOf(tag);
+                this.selectidx = indexOf >= 0 ? indexOf : 2;
+                return;
+            }
+
             const currentItem = this.showcaseInfo.find(x => x.tag.includes(parameters.tag) && x.domain === parameters.domain);
             if(!currentItem) {
                 return;
