@@ -1,5 +1,6 @@
 import axios from "axios";
 import animateScrollTo from "animated-scroll-to";
+import copy from "copy-text-to-clipboard";
 
 function GetRandom(minNum, maxNum) {
   return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
@@ -14,10 +15,7 @@ new Vue({
         m_open: false,
         hash: [ "0","x","d","a","3","b","4","0","1","f","9","9","0","7","9","6","2","8", "a", "4"],
         showtext: [],
-        isLoad: false,
-        scroll: 0,
-        isScallBack: false,
-        isFixed: false
+        isLoad: false
     },
     computed: {
         caseInfoArr() {
@@ -86,17 +84,18 @@ new Vue({
             e.stopPropagation();
             const target = document.querySelector('#copyedVal');
             target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
-            target.select();
+            copy(target.value);
 
-            try {
-                var successful = document.execCommand('copy');
-                var msg = successful ? 'successful' : 'unsuccessful';
-                alert('Copying text command was ' + msg);
-            } catch (err) {
-                alert('Oops, unable to copy');
-            }
-        },
+            //target.select();
+            // try {
+            //     var successful = document.execCommand('copy');
+            //     alert('copied');
+            // } catch (err) {
+            //     alert('Oops, unable to copy');
+            // }
+        }
     },
+
     created() {
         this.showtext = this.hash;
     },
@@ -111,6 +110,5 @@ new Vue({
             delay: 0.4,
             ease: Power1.easeOut
         });
-        window.addEventListener('scroll', this.fixedFn);  
     }
 });
