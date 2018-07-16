@@ -85,14 +85,7 @@ new Vue({
             const target = document.querySelector('#copyedVal');
             target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
             copy(target.value);
-
-            //target.select();
-            // try {
-            //     var successful = document.execCommand('copy');
-            //     alert('copied');
-            // } catch (err) {
-            //     alert('Oops, unable to copy');
-            // }
+            alert('The share link has copied in clipboard');
         }
     },
 
