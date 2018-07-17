@@ -11,16 +11,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Portal Network | ShowCase</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="Keywords" content="" />
-  <meta property="og:title" content="Portal Network Roadmap" />
-  <meta property="og:description" content="The launch of Portal Network makes " />
-  <meta property="og:url" content="https://www.portal.network/roadmap" />
-  <meta property="og:image" content="https://imgur.com/a/UA5bumd" />
-  <meta property="og:image:url" content="" />
+  <meta name="description" content="Portal Network Showcase" />
+  <meta name="Keywords" content="Portal Network Showcase" />
+  <meta property="og:title" content="Portal Network Showcase" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Build your own decentralized website" />
+  <meta property="og:url" content="https://www.portal.network/showcase" />
+  <meta property="og:image" content="https://www.portal.network/images/meta_share.png" />
+  <meta property="og:image:url" content="https://www.portal.network/images/meta_share.png" />
+
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="./css/showcase.css?92833" rel="stylesheet">
+  <link href="./css/showcase.css?17282" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
@@ -156,8 +158,11 @@
           <div class="info">
             <div>
               <h2>{{item.name}}
-                <button type="button" @click="shareLink($event,item.tag, item.domain)" class="copy_link_btn">
-                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
+                  <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                </button>
+                <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
+                  <i class="fa fa-copy" aria-hidden="true"></i>
                 </button>
               </h2>
               <p>{{item.domain}}</p>
@@ -214,7 +219,7 @@
     </a>
 
   </div>
-  <script src="./js/showcase.js?18262"></script>
+  <script src="./js/showcase.js?1972"></script>
 
 
 </body>

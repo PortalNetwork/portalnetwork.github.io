@@ -229,17 +229,19 @@
                           overflow: hidden;
                           white-space: nowrap;
                           height: 22px;
-                          .fa-share-alt {
-                              margin-left: 5px;
-                              color: #b0b0b0;
-                          }
                       }
-                      .copy_link_btn {
+                      .share_default_btn {
                           display: inline-block;
                           border: 0px;
                           background-color: transparent;
                           outline: none;
                           padding: 0px 3px;
+                          &+.share_default_btn{
+                            margin-left: 5px;
+                          }
+                          svg {
+                            color: #b0b0b0;
+                          }
                       }
                       >p {
                           font-family: Avenir;

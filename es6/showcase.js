@@ -95,6 +95,11 @@ new Vue({
             target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
             copy(target.value);
             alert('The share link has copied in clipboard');
+        },
+        shareFb(e, tag){
+            const url = `https://www.portal.network/showcase.html?tag=${tag[0]}`;
+            window.open('http://www.facebook.com/share.php?u=' + url,"_blank",
+            "toolbar=yes,location=yes,directories=no,status=no, menubar=yes, scrollbars=yes,resizable=no, copyhistory=yes, width=600, height=400");
         }
     },
 
