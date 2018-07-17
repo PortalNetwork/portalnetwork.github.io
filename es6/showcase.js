@@ -97,7 +97,7 @@ new Vue({
             alert('The share link has copied in clipboard');
         },
         shareFb(e, tag){
-            const url = `https://www.portal.network/showcase.html?tag=${tag[0]}`;
+            const url = `https://www.portal.network/showcase.html?tag=${tag[0]}&id=${Math.random() * 1000000 | 0}`;
             window.open('http://www.facebook.com/share.php?u=' + url,"_blank",
             "toolbar=yes,location=yes,directories=no,status=no, menubar=yes, scrollbars=yes,resizable=no, copyhistory=yes, width=600, height=400");
         }
