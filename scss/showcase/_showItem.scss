@@ -24,6 +24,12 @@
       }
   }
 
+  #copyedVal {
+      opacity: 0;
+      width: 0px;
+      height: 0px;
+  }
+
   .show_item {
       width: 95%;
       height: auto;
@@ -223,6 +229,17 @@
                           overflow: hidden;
                           white-space: nowrap;
                           height: 22px;
+                          .fa-share-alt {
+                              margin-left: 5px;
+                              color: #b0b0b0;
+                          }
+                      }
+                      .copy_link_btn {
+                          display: inline-block;
+                          border: 0px;
+                          background-color: transparent;
+                          outline: none;
+                          padding: 0px 3px;
                       }
                       >p {
                           font-family: Avenir;
