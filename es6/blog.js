@@ -7,7 +7,7 @@ new Vue({
     isMenuOpen: false,
     summaryInfo: [],
     selectidx: 0,
-    selectedTag: ["product","events","latest","guide","newinternet"]
+    selectedTag: ["events","product","latest","guide","newinternet"]
   },
   computed: {
     summaryList(){
