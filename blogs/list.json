@@ -26,5 +26,32 @@
     "author": "Portal Network",
     "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
     "date": "May 25"
+  },{
+    "url": "./blogs/announcement.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*_DBMTTB-kD_ot8M7hzz0Ig.jpeg",
+    "title": "Portal Network Hackathon Korea 2018 — Protal Network Announcement",
+    "content": "Portal Network is proud to announce that we are organizing a Hackathon from July 14th to 15th in Korea together with our partners …",
+    "tag": ["all"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jun 29"
+  },{
+    "url": "./blogs/decentralized.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*dn5GhwFDt3omUaacUhxPtQ.png",
+    "title": "Decentralized Database Hackathon Takeaways : Bluzelle X Portal Network",
+    "content": "Portal Network brought three students (one university student, one master’s student, and one PHD candidate), along with our core team…",
+    "tag": ["all"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "May 23"
+  },{
+    "url": "./blogs/metaMask.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/0*rS6gZzoR0fgOsRNM",
+    "title": "How to use MetaMask Extension?",
+    "content": "What is MetaMask Extension?",
+    "tag": ["all"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jun 21"
   }
 ]
