@@ -1,0 +1,141 @@
+@import "_reset.scss";
+@import "_var.scss";
+$green: #00A89D;
+$article-width: 960px;
+// $article-h3: #00000;
+$article-h4: #3c3c3c;
+$article-text: #616161;
+$mob: 720px;
+
+.article {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0px 20px 60px 20px;
+  box-sizing: border-box;
+}
+
+/* 主章節 */
+.article_top {
+  margin-bottom: 40px;
+  h3 {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    margin: 0px auto 50px auto;
+    @media screen and (max-width: $pad) {
+      max-width: 700px;
+      font-size: 30px;
+      margin: 0px auto 30px auto;
+    }
+  }
+  .figure {
+    margin: 0px auto 40px auto;
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+    &+p {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* 章節 */
+.article_section {
+  max-width: 960px;
+  width: 100%;
+  margin: 0px auto 50px auto;
+  .figure {
+    margin: 0px auto 40px auto;
+    img {
+      width: 100%;
+    }
+  }
+  h4 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: $article-h4;
+    margin-bottom: 10px;
+    @media screen and (max-width: $mob) {
+      font-size: 24px;
+    }
+  }
+  p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+    margin-bottom: 30px;
+  }
+  a {
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+  }
+}
+
+/* 包在figure裡面的字 */
+.figure_text {
+  font-size: 16px;
+  line-height: 1.2;
+  color: $article-text;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.blockquote {
+  border-left: solid 3px $article-text;
+  padding-left: 25px;
+  margin-left: 20px;
+  p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+    text-align: left;
+    font-style: italic;
+  }
+}
+
+.article_ul {
+  h5 {
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+    margin-bottom: 15px;
+  }
+  .figure {
+    margin: 0px auto 40px auto;
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: $article-text;
+  }
+  ul {
+    list-style-type: inherit;
+    margin-left: 20px;
+    &.num {
+      list-style-type: decimal;
+    }
+    li {
+      strong {
+        font-size: 21px;
+        line-height: 1.5;
+        color: $article-text;
+      }
+    }
+  }
+}

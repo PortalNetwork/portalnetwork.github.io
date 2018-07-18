@@ -39,6 +39,7 @@ gulp.task('js', () => {
         'roadmap.js',
         'showcase.js',
         'submitdapp.js',
+        'blog.js'
     ];
     files.map((obj, idx) => {
         browserify({ debug: true })
