@@ -1,5 +1,4 @@
 import axios from "axios";
-import { CLIENT_RENEG_WINDOW } from "tls";
 
 new Vue({
   el: '.blog',
@@ -7,7 +6,7 @@ new Vue({
     isMenuOpen: false,
     summaryInfo: [],
     selectidx: 0,
-    selectedTag: ["events","product","latest","guide","newinternet"]
+    selectedTag: ["all","event","tech","guide"]
   },
   computed: {
     summaryList(){
