@@ -28,7 +28,7 @@ new Vue({
     }
   },
   mounted(){
-    axios.get("../blogs/json/summary.json")
+    axios.get("../blogs/list.json")
     .then((response)=>{
       this.summaryInfo = response.data;
     });

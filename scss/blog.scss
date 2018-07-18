@@ -1,5 +1,7 @@
 @import "_reset.scss";
 @import "_var.scss";
+@import "./blog/_article.scss";
+
 $green: #00A89D;
 $text: #3c3c3c;
 $mob: 720px;
@@ -337,58 +339,8 @@ nav {
   margin: 0 auto;
   padding: 0px 20px 60px 20px;
   box-sizing: border-box;
-  header {
-    padding: 25px 0px 40px 0px;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    @extend %clear;
-    @media screen and (max-width: $pad) {
-      max-width: 700px;
-    }
-    .figure {
-      width: 40px;
-      float: left;
-      img {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-      }
-    }
-    .author_content {
-      float: left;
-      padding-left: 10px;
-      .title {
-        font-size: 16px;
-        font-weight: 400;
-        overflow : hidden;
-        text-overflow : ellipsis;
-        white-space : nowrap;
-        margin-bottom: 5px;
-        color: #000000;
-      }
-      time {
-        font-size: 14px;
-        font-weight: 400;
-        color:#7b7b7b;
-      }
-    }
-  }
-  >h3 {
-    font-size: 42px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: $text;
-    text-align: left;
-    max-width: 800px;
-    width: 100%;
-    margin: 0px auto 50px auto;
-    @media screen and (max-width: $pad) {
-      max-width: 700px;
-      font-size: 30px;
-      margin: 0px auto 30px auto;
-    }
-  }
+
+
   .blockquote {
     font-style: italic;
     border-left: solid 3px #000000;
@@ -483,19 +435,49 @@ nav {
     color: $text;
     font-weight: 700;
   }
-  h4 {
-    font-size: 26px;
-    line-height: 1.5;
-    color: $text;
-    margin-bottom: 8px;
-    @media screen and (max-width: $mob) {
-      font-size: 24px;
-    }
-  }
+  
   article {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+  }
+}
+
+.article_author {
+  padding: 25px 0px 40px 0px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  @extend %clear;
+  @media screen and (max-width: $pad) {
+    max-width: 700px;
+  }
+  .figure {
+    width: 40px;
+    float: left;
+    img {
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .author_content {
+    float: left;
+    padding-left: 10px;
+    .title {
+      font-size: 16px;
+      font-weight: 400;
+      overflow : hidden;
+      text-overflow : ellipsis;
+      white-space : nowrap;
+      margin-bottom: 5px;
+      color: #000000;
+    }
+    time {
+      font-size: 14px;
+      font-weight: 400;
+      color:#7b7b7b;
+    }
   }
 }
 
