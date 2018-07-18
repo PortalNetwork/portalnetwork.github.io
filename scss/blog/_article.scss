@@ -45,6 +45,13 @@ $mob: 720px;
     &+p {
       margin-bottom: 30px;
     }
+    a {
+      display: inline-block;
+      font-size: 21px;
+      line-height: 1.5;
+      color: $article-text;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -97,12 +104,14 @@ $mob: 720px;
   border-left: solid 3px $article-text;
   padding-left: 25px;
   margin-left: 20px;
-  p {
+  margin-bottom: 30px;
+  >p {
     font-size: 21px;
     line-height: 1.5;
     color: $article-text;
     text-align: left;
     font-style: italic;
+    margin: 0px;
   }
 }
 
@@ -110,7 +119,7 @@ $mob: 720px;
   h5 {
     font-size: 21px;
     line-height: 1.5;
-    color: $article-text;
+    color: $article-h4;
     margin-bottom: 15px;
   }
   .figure {
@@ -141,5 +150,23 @@ $mob: 720px;
 }
 
 strong.big_text {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #3c3c3c;
+}
+
+strong.mid_text {
   font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #3c3c3c;
+}
+
+.mg_b30 {
+  margin-bottom: 30px !important;
+}
+
+.mg_t20 {
+  margin-top: 20px !important;
 }
