@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+  <title>Key Findings of Our Data Analysis of ENS | Blog</title>
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+  <link href="../css/blog.css?17223" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
+</head>
+
+<body>
+  <div class="blog" :class="{active: isMenuOpen}">
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="section">
+        <h1 class="logo">
+          <a href="https://www.portal.network/blog.html"></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+            <ul>
+              <li>
+                <a href="https://www.portal.network/blog.html" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5 class="title">Portal Network</h5>
+          <time>May 25</time>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_top">
+          <h3>Portal Network Hackathon Korea 2018 — Protal Network Announcement</h3>
+
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*_DBMTTB-kD_ot8M7hzz0Ig.jpeg" alt="">
+          </figure>
+
+          <p>Portal Network is proud to announce that we are organizing a Hackathon from July 14th to 15th in Korea together with our partners : teamw.e, SOPT, D. Camp, Wanchain, Bluzelle, Noia Network, DNEXT, Pledgecamp and Merkle Tree Venture.</p>
+
+          <div class="blockquote">
+            <p>Portal Network welcomes everyone to participate and enjoy problem solving by utilizing the decentralized technology and economy..</p>
+          </div>
+
+          <p>For more information, visit our <a href="https://hackathon.portal.network/" target="_blank">Hackathon Official Website</a>!</p>
+        </section>
+
+        <section class="article_section">
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*__dlzrHWh92MwRM0toxsLg.jpeg" alt="">
+            <figcaption class="figure_text">DNS translates domain names to IP addresses.</figcaption>
+          </figure>
+
+          <h4><strong>Hackathon Description</strong></h4>
+
+          <h4>What is this Hackathon about?</h4>
+
+          <p>Cryptocurrency and blockchain technology has definitely become one of the top trending topics last year. However, more than 90% of the people in this industry are traders and investors. It seems that most of the people are ignoring the technology behind that made bitcoin and all other cryptocurrency possible. Portal Network values the efforts and technology behind the scene, so to foster this decentralized technology, Portal Network and its partners welcome anyone to join this Hackathon.</p>
+
+          <p>Participants will solve the challenges by utilizing different techs provided in the event. People who have been in blockchain might have noticed that decentralized technology still has lots of challenges to overcome, such as scalability, security and so on. This Hackathon will be the time to try out different decentralized technologies that we provide to test its limit.</p>
+
+          <p>*By participating the Hackathon Korea by Portal Network, you are agreeing to all the terms and rules stated below.</p>
+
+          <div class="article_ul">
+            <h5>Rules</h5>
+            <p><strong>During the Hackathon, 3 technologies will be used:</strong> </p>
+            <ul class="num">
+              <li>
+                <p>Portal Network — decentralized domain name service and web builder</p>
+              </li>
+
+              <li>
+                <p>Bluzelle — decentralized database</p>
+              </li>
+
+              <li>
+                <p>Noia Network — decentralized content delivery network (CDN)</p>
+              </li>
+            </ul>
+
+            <p><strong>Additionally, 3 different smart contract platform will be used:</strong></p>
+
+            <ul class="num">
+              <li>
+                <p>Ethereum</p>
+              </li>
+
+              <li>
+                <p>Ethereum Classic</p>
+              </li>
+
+              <li>
+                <p>Wanchain</p>
+              </li>
+            </ul>
+
+          </div>
+
+          <p>There will be one major challenge, which the participants will solve by utilizing the relevant technology. At the end of the event, each team will have to prepare a pitch on stage to demonstrate their idea or product, which will be scored by the judges.</p>
+
+          <p>Participants can work as an individual (team of 1 person) or in a group (team of 2–5 people).</p>
+
+          <p>For more information, visit our <a href="https://hackathon.portal.network/" target="_balnk">Hackathon Official Website</a>!</p>
+
+          <p><strong class="big_text">Challenges, Tech Manual and Judging Criteria</strong></p>
+
+          <p>Please refer to our <a href="https://github.com/PortalNetwork/hackathon" target="_balnk">github</a>.</p>
+
+          <p><strong class="big_text">Prize</strong></p>
+
+          <p>We are offering tokens equivalent to 6,000 USD for the winning teams in the Hackathon. Tokens worth of 3,000 USD are to be distributed to the Top 1 team, 2,000 USD to the Top 2, and 1,000 USD to the Top 3.</p>
+
+          <p>*Please note, prize are to be adjusted depending on the sponsors.</p>
+
+          <div class="article_ul">
+            <p>Additionaly we are offering an opportunity to be recruited in Portal Network. We are currently looking for:</p>
+            <ul class="num">
+              <li>
+                <p>Senior engineer</p>
+              </li>
+
+              <li>
+                <p>Blockchain engineer</p>
+              </li>
+
+              <li>
+                <p>Community manager (KR)</p>
+              </li>
+
+              <li>
+                <p>Telegram manager (KR)</p>
+              </li>
+            </ul>
+
+            <em>*Note: It is also important for us to find the right person. We will make the decision internally and announce it afterward. Portal Network reserves all rights for the final decision.</em>
+
+          </div>
+        </section>
+    </main>
+  </div>
+  <script src="../js/blog.js?381741"></script>
+</body>
+
+</html>
