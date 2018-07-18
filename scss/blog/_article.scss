@@ -235,3 +235,44 @@ strong.mid_text {
     margin-bottom: 30px;
   }
 }
+
+.article_blockquote {
+  border-left: solid 3px $article-text;
+  padding-left: 20px;
+  margin-left: -35px;
+  @media screen and (max-width: $pad) {
+    margin-left: 0px;
+  }
+  p {
+    font-size: 21px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5;
+    color: $article-text;
+    word-break: break-word;
+    margin-bottom: 30px;
+  }
+}
+
+.article_box {
+  header {
+    font-size: 21px;
+    color: $article-text;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .figure {
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  p {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $article-text;
+    word-break: break-word;
+    margin-bottom: 30px;
+  }
+}
