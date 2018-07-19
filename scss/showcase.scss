@@ -62,3 +62,21 @@ body {
         width: 100%;
     }
 }
+
+
+.page_box {
+  display: flex;
+  justify-content: center;
+
+  & a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  & a.active {
+    background-color: #aafbf2;
+    color: #514040;
+    border-radius: 5px;
+  }
+}

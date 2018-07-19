@@ -170,6 +170,17 @@
           </div>
         </a>
       </div>
+
+      <div class="page_box" v-if="!isLoad">
+        <a @click="handlePrevPage($event)">&laquo;</a>
+        <a :class="{active: pageIndex === idx}" 
+          @click="handlePageClick($event, page)"
+           v-for="(page, idx) in getPages" 
+           :key="idx">
+          {{page}}
+        </a>
+        <a @click="handleNextPage($event)">&raquo;</a>
+      </div>
     </div>
 
     <a class="gotoTopbtn" @click="gotoPageTop"></a>
@@ -219,7 +230,7 @@
     </a>
 
   </div>
-  <script src="./js/showcase.js?97123"></script>
+  <script src="./js/showcase.js?34534436"></script>
 
 
 </body>
