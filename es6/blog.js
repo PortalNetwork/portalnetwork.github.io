@@ -30,6 +30,22 @@ new Vue({
     axios.get("../blogs/list.json?21321312")
     .then((response)=>{
       this.summaryInfo = response.data;
+
+      const string = window.location.search.substring(1);
+   
+      const parameters = string.split('&').reduce((acc, cur) => {
+        const item = cur.split('=');
+        acc[item[0]] = item[1];
+        return acc;
+      }, {});
+
+      if(parameters.tag) {
+        const { tag, } = parameters;
+        const indexOf = this.selectedTag.indexOf(tag);
+        this.selectidx = indexOf >= 0 ? indexOf : 2;
+        return;
+      }
+
     });
   }
 });
