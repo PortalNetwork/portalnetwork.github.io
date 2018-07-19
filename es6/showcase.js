@@ -1,6 +1,7 @@
 import axios from "axios";
 import animateScrollTo from "animated-scroll-to";
 import copy from "copy-text-to-clipboard";
+const PAGE_NUMBER = 20; // items per page
 
 function GetRandom(minNum, maxNum) {
   return Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
@@ -15,26 +16,54 @@ new Vue({
         m_open: false,
         hash: [ "0","x","d","a","3","b","4","0","1","f","9","9","0","7","9","6","2","8", "a", "4"],
         showtext: [],
-        isLoad: false
+        isLoad: false,
+        tagCount: {}, // count number of every single tag
+        pageIndex: 0, // page index that user selected
     },
     computed: {
         caseInfoArr() {
+            const startIndex = this.pageIndex * PAGE_NUMBER;
+            const endIndex = (this.pageIndex + 1) * PAGE_NUMBER;
             const CASE = this.showcaseInfo.filter((item, index, array) => {
                 return item.tag[0] === this.selectState[this.selectidx];
-            });
+            }).slice(startIndex, endIndex);
             return CASE;
         },
         arrjoin() {
             return this.showtext.join("");
+        },
+        getPages() {
+          const selectedTag = this.selectState[this.selectidx];
+          const totalCount = this.tagCount[selectedTag] || 0;
+          const pages = Math.floor(totalCount / PAGE_NUMBER) + 1;
+          return pages;
         }
     },
     methods: {
         handActive(idx) {
             this.selectidx = idx;
+            this.pageIndex = 0;
         },
         caseSuccess(res) {
             this.showcaseInfo = res.data.result;
             this.isLoad = false;
+
+            /**
+             * initialize pagination setting
+             */
+            const rawTagCount = this.selectState.reduce((acc, cur) => {
+              acc[cur] = 0;
+              return acc;
+            }, {});
+            this.tagCount = this.showcaseInfo.reduce((acc, cur) => {
+              this.selectState.forEach(label => {
+                if(!cur.tag.includes(label)) {
+                  return;
+                }
+                acc[label] += 1;
+              });
+              return acc;
+            }, { ...rawTagCount });
 
             /**
              * 如果網址來自 share 複製出來的內容 (帶有參數的)
@@ -96,10 +125,25 @@ new Vue({
             copy(target.value);
             alert('The share link has copied in clipboard');
         },
-        shareFb(e, tag){
+        shareFb(e, tag) {
             const url = `https://www.portal.network/showcase.html?tag=${tag[0]}&id=${Math.random() * 1000000 | 0}`;
             window.open('http://www.facebook.com/share.php?u=' + url,"_blank",
             "toolbar=yes,location=yes,directories=no,status=no, menubar=yes, scrollbars=yes,resizable=no, copyhistory=yes, width=600, height=400");
+        },
+        handlePrevPage(e) {
+          e.preventDefault();
+          const prevIndex = this.pageIndex - 1;
+          this.pageIndex = prevIndex < 0 ? 0 : prevIndex;
+        },
+        handlePageClick(e, pageNumber) {
+          e.preventDefault();
+          this.pageIndex = pageNumber - 1;
+        },
+        handleNextPage(e) {
+          e.preventDefault();
+          const nextIndex = this.pageIndex + 1;
+          const topIndex = this.getPages - 1;
+          this.pageIndex = nextIndex > topIndex ? topIndex : nextIndex;
         }
     },
 
