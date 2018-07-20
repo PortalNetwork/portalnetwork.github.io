@@ -398,7 +398,9 @@ var app = new Vue({
           {
             title: 'World Blockchain Conference',
             content: 'Vincent Tu, Co-founder of Portal Network',
-            photos: [],
+            photos: [
+              'event/event37.jpg',
+            ],
             location: 'Singapore',
             time: '7/17 - 18',
             progress: 100,
