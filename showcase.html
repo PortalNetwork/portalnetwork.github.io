@@ -150,36 +150,65 @@
           <p>loading...</p>
         </div>
       </div>
-      <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
-        <a @click="transferLink(item.url)" class="case_item" target="_blank">
-          <div class="case_demo">
-            <div class="case_photo" :style="demophoto(idx)"></div>
-          </div>
-          <div class="info">
-            <div>
-              <h2>{{item.name}}
-                <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
-                  <i class="fab fa-facebook-square" aria-hidden="true"></i>
-                </button>
-                <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
-                  <i class="fa fa-copy" aria-hidden="true"></i>
-                </button>
-              </h2>
-              <p>{{item.domain}}</p>
+
+      <!-- 有 Group 用這裡 render -->
+      <div v-if="getTagGroup.length >= 2" v-for="(tg, tgIdx) in getTagGroup" :key="tgIdx">
+        <h1 style="margin-bottom: 10px">{{ tg }}</h1>
+        <div class="itemBox" v-for="(item, idx) in caseInfoArrForGroup(tg)" :key="idx">
+          <a @click="transferLink(item.url)" class="case_item" target="_blank">
+            <div class="case_demo">
+              <div class="case_photo" :style="demophotoForGroup(item)"></div>
             </div>
-          </div>
-        </a>
+            <div class="info">
+              <div>
+                <h2>{{item.name}}
+                  <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
+                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
+                    <i class="fa fa-copy" aria-hidden="true"></i>
+                  </button>
+                </h2>
+                <p>{{item.domain}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
 
-      <div class="page_box" v-if="!isLoad">
-        <a @click="handlePrevPage($event)">&laquo;</a>
-        <a :class="{active: pageIndex === idx}" 
-          @click="handlePageClick($event, page)"
-           v-for="(page, idx) in getPages" 
-           :key="idx">
-          {{page}}
-        </a>
-        <a @click="handleNextPage($event)">&raquo;</a>
+
+      <!-- 沒 Group 用這裡 render -->
+      <div v-if="getTagGroup && getTagGroup.length < 2">
+        <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
+          <a @click="transferLink(item.url)" class="case_item" target="_blank">
+            <div class="case_demo">
+              <div class="case_photo" :style="demophoto(idx)"></div>
+            </div>
+            <div class="info">
+              <div>
+                <h2>{{item.name}}
+                  <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
+                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
+                    <i class="fa fa-copy" aria-hidden="true"></i>
+                  </button>
+                </h2>
+                <p>{{item.domain}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="page_box" v-if="!isLoad">
+          <a @click="handlePrevPage($event)">&laquo;</a>
+          <a :class="{active: pageIndex === idx}" 
+            @click="handlePageClick($event, page)"
+            v-for="(page, idx) in getPages" 
+            :key="idx">
+            {{page}}
+          </a>
+          <a @click="handleNextPage($event)">&raquo;</a>
+        </div>
       </div>
     </div>
 
