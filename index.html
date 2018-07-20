@@ -14,6 +14,13 @@
 	<title>Portal Network</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<meta name="Keywords" content="Portal Network" />
+	<meta property="og:title" content="Portal Network" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Connect, enhance existing blockchain technologies." />
+  <meta property="og:url" content="https://www.portal.network" />
+  <meta property="og:image" content="https://www.portal.network/images/meta_share.png" />
+  <meta property="og:image:url" content="https://www.portal.network/images/meta_share.png" />
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
@@ -48,9 +55,7 @@
 		<a class="menu_btn" @click="toggleMenuFn">
 			<span></span>
 		</a>
-		<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="./images/tel.png" alt=""></a>
-			<div :class="['header',{fixed: isheaderFix}]">
-			<!-- <div class="header fixed"> -->
+		<div :class="['header',{fixed: isheaderFix}]">
 			<div class="section">
 				<h1 class="logo"><a href="https://www.portal.network/"></a></h1>
 				<nav>
@@ -80,17 +85,8 @@
 					<h2>Connect, enhance existing<span>blockchain technologies.</span>
 					</h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
-					<form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
-					  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<div id="mc_embed_signup_scroll">
-							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email" required>
-							<input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
-							<div class="clearbox">
-								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button" @click="gaSeedPageView('subscribe')">
-							</div>
-						</div>
-					</form>
-					<span>Subscribe now and be the first to receive our latest updates.</span>
+					<a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank">
+						<span><img src="./images/landing/hero/telegram.png" alt=""></span><p>Join our telegram</p></a>
 				</div>
 			</div>
 		</div>
@@ -383,6 +379,19 @@
 					<a class="item medium" href="https://medium.com/portalnetworkofficial" target="_blank" @click="gaSeedPageView('medium')">
 						<img src="./images/landing/shared/M@2x.svg" alt="">
 					</a>
+				</div>
+				<div class="subscribe_box">
+					<form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
+					id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Your email" required>
+							<input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
+							<div class="clearbox">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button" @click="gaSeedPageView('subscribe')">
+							</div>
+						</div>
+					</form>
+					<p>Subscribe now and get our latest updates.</p>
 				</div>
 				<p class="copyright">© 2018 Portal.Network.</p>
 			</div>
