@@ -1,0 +1,40 @@
+@import "_reset.scss";
+@import "_var.scss";
+
+@import "./roadmap/_header.scss";
+@import "./roadmap/_introduction.scss";
+@import "./roadmap/_filter.scss";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif, 'Arial', 'Microsoft JhengHei';
+}
+
+body {
+  background-color: #121327;
+}
+
+.main {
+  max-width: $container;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,166 @@
+@import "_var.scss";
+
+.introduction {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    background: url('/images/newroadmap/timeline.svg') repeat-y center;
+    padding-bottom: 200px;
+  }
+}
+
+.introduction_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  h3 {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #eee;
+    padding-right: 10px;
+  }
+  i {
+    display: block;
+    width: 66%;
+    height: 1px;
+    background-color: #aaa;
+    opacity: 0.3;
+  }
+  .timestamp {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 12px;
+      color: $blue;
+      padding-left: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      display: inline-block;
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+}
+
+.summary {
+  width: 50%;
+  padding: 0px 50px 0px 0px;
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #eee;
+    margin-bottom: 10px;
+  }
+  .show_btn {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 12px;
+      color: $blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.event {
+  width: 50%;
+  padding: 0px 0px 0px 50px;
+}
+
+.event_box {
+  margin-bottom: 40px;
+  h4 {
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #eee;
+    margin-bottom: 15px;
+    .c_dot {
+      display: inline-block;
+      width: 40px;
+      border-top: 1px solid #fff;
+      position: absolute;
+      margin: 8px 0 0 -50px;
+      &:after {
+        content: "•";
+        font-size: 12px;
+        color: #ddd;
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        margin: 0 0 0 35px;
+        top: -8px;
+      }
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    color: $blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  >ul {
+    >li {
+      & +li {
+        margin-top: 10px;
+      }
+    }
+  }
+  .c_arrow {
+    display: inline-block;
+    width: 15px;
+    height: 11px;
+    background: url('/images/newroadmap/link-arrow.svg') top left no-repeat;
+    margin-left: 5px;
+  }
+}
+
+.time_table {
+  display: flex;
+  align-items: flex-start;
+}
+
+.separator {
+  width: calc(20% / 3);
+  text-align: center;
+  font-size: 28px;
+  float: left;
+  color: #32a4a9;
+  font-weight: 200;
+  margin-top: 5px;
+}
+
+.time_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .time_text {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 7px;
+    color: #32a4a9;
+    font-weight: 200;
+    text-shadow: #1dd2d4 0px 0px 3px, #000 0px 0px 5px;
+  }
+  .time_unit {
+    color: #b5bbbf;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 300;
+  }
+}

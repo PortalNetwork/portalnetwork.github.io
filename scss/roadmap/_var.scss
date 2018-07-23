@@ -1,0 +1,16 @@
+$container: 1160px;
+
+$pad: 980px;
+$mob: 768px;
+$smob: 340px;
+
+%clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+$blue: #1dd2d4;
+$b_t: #eee;
