@@ -1,11 +1,13 @@
 @import "_var.scss";
-
 .introduction {
   .content {
     display: flex;
     justify-content: space-between;
-    background: url('/images/newroadmap/timeline.svg') repeat-y center;
     padding-bottom: 200px;
+    @media screen and (max-width: $pad) {
+      display: block;
+      border-left: dotted 3px $b_t;
+    }
   }
 }
 
@@ -19,7 +21,7 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #eee;
+    color: $b_t;
     padding-right: 10px;
   }
   i {
@@ -33,7 +35,7 @@
     a {
       display: inline-block;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 14px;
       color: $blue;
       padding-left: 10px;
       &:hover {
@@ -42,8 +44,8 @@
     }
     p {
       display: inline-block;
-      font-size: 12px;
-      color: #fff;
+      font-size: 14px;
+      color: $b_t;
     }
   }
 }
@@ -51,18 +53,23 @@
 .summary {
   width: 50%;
   padding: 0px 50px 0px 0px;
+  @media screen and (max-width: $pad) {
+    width: 100%;
+    padding: 0px 0px 0px 20px;
+    margin-bottom: 40px;
+  }
   p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 300;
-    color: #eee;
+    color: $b_t;
     margin-bottom: 10px;
   }
   .show_btn {
     a {
       display: inline-block;
       text-decoration: none;
-      font-size: 12px;
+      font-size: 14px;
       color: $blue;
       &:hover {
         text-decoration: underline;
@@ -74,6 +81,11 @@
 .event {
   width: 50%;
   padding: 0px 0px 0px 50px;
+  border-left: dotted 3px $b_t;
+  @media screen and (max-width: $pad) {
+    width: 100%;
+    border-left: 0px;
+  }
 }
 
 .event_box {
@@ -83,30 +95,33 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #eee;
+    color: $b_t;
     margin-bottom: 15px;
     .c_dot {
       display: inline-block;
       width: 40px;
-      border-top: 1px solid #fff;
+      border-top: 1px solid $b_t;
       position: absolute;
       margin: 8px 0 0 -50px;
       &:after {
-        content: "•";
-        font-size: 12px;
-        color: #ddd;
-        position: relative;
+        content: "";
+        display: block;
+        position: absolute;
         z-index: 3;
-        display: inline-block;
-        margin: 0 0 0 35px;
-        top: -8px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        background-color: $b_t;
+        border-radius: 50%;
       }
     }
   }
   a {
     display: inline-block;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
     color: $blue;
     &:hover {
@@ -115,7 +130,7 @@
   }
   >ul {
     >li {
-      & +li {
+      &+li {
         margin-top: 10px;
       }
     }
@@ -139,7 +154,7 @@
   text-align: center;
   font-size: 28px;
   float: left;
-  color: #32a4a9;
+  color: $blue;
   font-weight: 200;
   margin-top: 5px;
 }
@@ -152,12 +167,11 @@
     font-size: 28px;
     text-align: center;
     margin-top: 7px;
-    color: #32a4a9;
+    color: $blue;
     font-weight: 200;
-    text-shadow: #1dd2d4 0px 0px 3px, #000 0px 0px 5px;
   }
   .time_unit {
-    color: #b5bbbf;
+    color: $b_t;
     text-align: center;
     margin-top: 10px;
     font-size: 10px;

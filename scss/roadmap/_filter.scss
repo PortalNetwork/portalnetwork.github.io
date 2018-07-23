@@ -1,5 +1,4 @@
 @import "_var.scss";
-
 .c_bell {
   width: 45px;
   height: 45px;
@@ -12,9 +11,16 @@
 }
 
 .filter {
+  padding-bottom: 80px;
   .content {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: $pad) {
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: $mob) {
+      display: block;
+    }
   }
 }
 
@@ -47,11 +53,11 @@
   background: url('/images/newroadmap/triangle-down.svg') 95% 50% no-repeat;
   outline: none;
   font-size: 15px;
-  color: rgba(255,255,255,.7);
+  color: $b_t;
   text-transform: uppercase;
   letter-spacing: 1px;
   appearance: none;
-  border: #36385f 1px solid;
+  border: $b_t 1px solid;
   padding: 0px 50px 0px 25px;
   border-radius: 0px;
   margin-right: 30px;
@@ -86,92 +92,107 @@
   }
 }
 
-.info {
-  text-align: center;
-  padding: 50px 0px 80px 0px;
-  h3 {
-    font-size: 18px;
-    color:$b_t;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-  }
-  p {
-    font-size: 12px;
-    line-height: 1.5;
-    color:$b_t;
-    width: 80%;
-    margin: 0px auto;
-  }
-}
-
-%h4 {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
+// .info {
+//   text-align: center;
+//   padding: 50px 0px 80px 0px;
+//   h3 {
+//     font-size: 18px;
+//     color:$b_t;
+//     font-weight: 500;
+//     text-transform: uppercase;
+//     letter-spacing: 1px;
+//     margin-bottom: 15px;
+//   }
+//   p {
+//     font-size: 12px;
+//     line-height: 1.5;
+//     color:$b_t;
+//     width: 80%;
+//     margin: 0px auto;
+//   }
+// }
 %h3 {
   font-size: 16px;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color:$b_t;
+  color: $b_t;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-.c_arrow2 {
-  margin-left: 5px;
-  svg {
-    color: $blue;
-  }
-}
-
+// .c_arrow2 {
+//   margin-left: 5px;
+//   svg {
+//     color: $blue;
+//   }
+// }
 .c_github {
-  svg {
-    color: $blue;
-  }
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #979797;
+  border-radius: 50%;
+  background: url('/images/newroadmap/github.svg') center center no-repeat;
+  background-size: 60% auto;
 }
 
 .c_link {
-  svg {
-    color: $blue;
-  }
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #979797;
+  border-radius: 50%;
+  background: url('/images/newroadmap/share.svg') center center no-repeat;
+  background-size: 60% auto;
+}
+
+.c_file {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #979797;
+  border-radius: 50%;
+  background: url('/images/newroadmap/paperfile.svg') center center no-repeat;
+  background-size: 60% auto;
 }
 
 .c_youtube {
-  svg {
-    color: $blue;
-  }
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #979797;
+  border-radius: 50%;
+  background: url('/images/newroadmap/video.svg') center center no-repeat;
+  background-size: 40% auto;
 }
 
 .c_tack {
+  content: '';
   display: block;
-  width: 35px;
-  height: 30px;
-  background: url('/images/newroadmap/tick.svg') center center no-repeat;
   position: absolute;
-  margin: -6px 0 0 -36px;
-  background-color: #121327;
+  top: 5px;
+  left: -27px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  border: 1px solid #979797;
+  box-sizing: border-box;
 }
 
 .progress_box {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   .progress_bar {
     display: inline-block;
     width: 100px;
     height: 3px;
-    background: rgba(30,195,195,.4);
+    background-color: #f5f5f5;
     .progress {
       height: inherit;
-      background: linear-gradient(to right, #007486 0%,#c9c738 100%);
-      filter: blur(1px);
+      background-color: $blue;
     }
   }
   .progress_number {
@@ -195,16 +216,22 @@
 .article {
   time {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    color:$b_t;
+    color: $b_t;
+    margin-bottom: 15px;
+  }
+  .site {
+    font-size: 14px;
+    font-weight: 400;
+    color: $b_t;
     margin-bottom: 15px;
   }
   p {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
-    color:$b_t;
+    color: $b_t;
     margin-bottom: 10px;
     a {
       display: inline-block;
@@ -217,33 +244,54 @@
   }
 }
 
+%h4 {
+  font-size: 16px;
+  color: $b_t;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
 .completed {
   width: 33.2%;
+  @media screen and (max-width: $pad) {
+    width: 50%;
+  }
+  @media screen and (max-width: $mob) {
+    width: 100%;
+  }
   h4 {
     @extend %h4;
-    color: #2dbb65;
   }
 }
 
 .update {
   width: 33.2%;
+  @media screen and (max-width: $pad) {
+    width: 50%;
+  }
+  @media screen and (max-width: $mob) {
+    width: 100%;
+  }
   h4 {
     @extend %h4;
-    color: #6f9bf4;
   }
 }
 
 .commit {
   width: 33.2%;
+  @media screen and (max-width: $pad) {
+    width: 100%;
+  }
   h4 {
     @extend %h4;
-    color: #832ec7;
   }
 }
 
 %list {
-  border-left: 1px solid rgba(255,255,255,0.1);
-  padding: 0px 0px 0px 20px;
+  border-left: 1px solid $b_t;
+  padding: 0px 20px 0px 20px;
   box-sizing: border-box;
 }
 
@@ -258,10 +306,11 @@
     padding-top: 0px;
   }
   &+.completed_item {
-    border-top: 2px dotted rgba(255,255,255,0.1);
+    border-top: 2px dotted $b_t;
   }
   h3 {
     @extend %h3;
+    position: relative;
   }
 }
 
@@ -276,7 +325,7 @@
     padding-top: 0px;
   }
   &+.update_item {
-    border-top: 2px dotted rgba(255,255,255,0.1);
+    border-top: 2px dotted $b_t;
   }
   h3 {
     @extend %h3;
@@ -294,7 +343,7 @@
     padding-top: 0px;
   }
   &+.commit_item {
-    border-top: 2px dotted rgba(255,255,255,0.1);
+    border-top: 2px dotted $b_t;
   }
   p {
     font-size: 12px;
