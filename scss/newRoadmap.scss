@@ -4,6 +4,7 @@
 @import "./roadmap/_header.scss";
 @import "./roadmap/_introduction.scss";
 @import "./roadmap/_filter.scss";
+@import "./roadmap/_news.scss";
 
 * {
   padding: 0px;
@@ -17,6 +18,10 @@ img {
 
 html {
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  // background-color: #232f88;
 }
 
 html,
