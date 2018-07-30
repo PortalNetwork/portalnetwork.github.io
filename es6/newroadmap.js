@@ -3,6 +3,7 @@ new Vue({
   el: "#newRoadmap",
   data: {
     swiper: null,
+    isMenuOpen: false,
     isOpenPop: false,
     nowPhotos: [],
     selectidx: 0,
@@ -785,6 +786,11 @@ new Vue({
     ],
     newData: [
       {
+        time: 'Jul 23, 2018',
+        title: 'Portal Network at NIFTY Hackathon & Conference — Hong Kong',
+        url: './blogs/nifty.html'
+      },
+      {
         time: 'Jul 06, 2018',
         title: 'What is ENS & What problem it solved ?',
         url: './blogs/what-is-ens-What-problem-it-solved.html'
@@ -833,6 +839,9 @@ new Vue({
     },
   },
   methods: {
+    toggleMenuFn() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
     handActive(idx) {
       this.selectidx = idx;
     },

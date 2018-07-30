@@ -86,11 +86,30 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
   <![endif]-->
 
-  <div id="newRoadmap">
+  <div id="newRoadmap" :class="{active: isMenuOpen}">
+    <a class="menu_btn" @click="toggleMenuFn">
+      <span></span>
+    </a>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="./blog.html" target="_blank">Blog</a>
+        </li>
+        <li>
+          <a href="./roadmap.html">Roadmap</a>
+        </li>
+        <li>
+          <a href="./showcase.html" target="_blank">Showcase</a>
+        </li>
+        <li>
+          <a href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+        </li>
+      </ul>
+    </nav>
     <div class="twinkling"></div>
     <div class="header">
       <h1>
-        <a href="javascript:;">
+        <a href="./index.html">
           <img src="./images/newroadmap/Portal_logo_white.svg" alt="">
         </a>
       </h1>
