@@ -20,7 +20,7 @@
   <meta property="og:image:url" content="" />
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="./css/submitdapp.css?18723" rel="stylesheet">
+  <link href="./css/submitdapp.css?28723" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 
 </head>
@@ -71,10 +71,11 @@
             <p class="warning" v-if="hash.length > 0 && hashError">Incorrect IPFS Hash.</p>
             <p class="warning" v-if="hash.length === 0 && hashRequiredError">Required field.</p>
           </li>
-          <!-- <li class="row">
-            <label for="template" class="label">Domain Name</label>
-            <input type="text" class="input" value="portalnetworkweb.eth" disabled/>
-          </li> -->
+          <li class="row">
+            <label for="domain" class="label">Domain Name*</label>
+            <input type="text" class="input" v-model.trim="domain"/>
+            <p class="warning" v-if="domain.length === 0 && domainRequiredError">Required field.</p>
+          </li>
           <li class="row">
             <div class="tag_box">
               <label class="label">Tag*</label>
@@ -113,6 +114,6 @@
       <p class="copyRight">© 2018 Portal.Network.</p>
     </div>
   </div>
-  <script src="./js/submitdapp.js?978123"></script>
+  <script src="./js/submitdapp.js?81723"></script>
 </body>
 </html>

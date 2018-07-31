@@ -6,13 +6,15 @@ new Vue({
     isMenuOpen: false,
     name: '',
     email: '',
+    domain: '',
     hash: '',
     tag: '',
     description: '',
     emailError: false,
     hashError: false,
     hashRequiredError: false,
-    tagRequiredError: false
+    tagRequiredError: false,
+    domainRequiredError: false
   },
   methods: {
     toggleMenuFn() {
@@ -26,8 +28,9 @@ new Vue({
     validator() {
       this.hashRequiredError = this.hash === "";
       this.tagRequiredError = this.tag === "";
+      this.domainRequiredError = this.domain === "";
 
-      if(this.hashRequiredError === false && this.tagRequiredError === false){
+      if(this.hashRequiredError === false && this.tagRequiredError === false && this.domainRequiredError === false){
         this.onSubmit();
       }
     },
@@ -36,6 +39,7 @@ new Vue({
         name: this.name,
         hash: this.hash,
         description: this.description,
+        domain: this.domain,
         tag: this.tag,
         email: this.email
       };
