@@ -1,8 +1,18 @@
 [
   {
+    "url": "./blogs/nifty.html",
+    "img": "https://cdn-images-1.medium.com/max/2000/1*sjB0f6uTUbP-b264szWUfw.jpeg",
+    "title": "Portal Network at NIFTY Hackathon & Conference — Hong Kong",
+    "content": "On July 24th — 26th, Portal Network will be joining the NIFTY event in Hong Kong to reveal the latest updates on our company products and…",
+    "tag": ["all","event"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jul 23"
+  },
+  {
     "url": "./blogs/what-is-ens-What-problem-it-solved.html",
     "img": "https://cdn-images-1.medium.com/max/2000/1*cE2smQ6JuBrVxrLzV06Qfg.jpeg",
-    "title": "What is ENS & What problem it solved?",
+    "title": "What is ENS & What problem it solved ?",
     "content": "Ever since blockchain and cryptocurrency become a trending topic, people began transferring their digital assets through their crypto…",
     "tag": ["all","guide"],
     "author": "Portal Network",
@@ -32,7 +42,7 @@
   {
     "url": "./blogs/metaMask.html",
     "img": "https://cdn-images-1.medium.com/max/1600/0*rS6gZzoR0fgOsRNM",
-    "title": "How to use MetaMask Extension?",
+    "title": "How to use MetaMask Extension ?",
     "content": "What is MetaMask Extension?",
     "tag": ["all","guide"],
     "author": "Portal Network",
