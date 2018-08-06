@@ -66,16 +66,16 @@
 				<nav>
 					<ul class="menu">
 						<li>
-							<a id="ga_blog" @click="gaSeedPageView('blog')" href="blog.html" target="_blank">Blog</a>
+							<a id="nav_blog" @click="gaSeedPageView('blog')" href="blog.html" target="_blank">Blog</a>
 						</li>
 						<li>
-							<a id="ga_roadmap" @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
+							<a id="nav_roadmap" @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
 						</li>
 						<li>
-							<a id="ga_showcase" @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+							<a id="nav_showcase" @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
 						</li>
 						<li>
-							<a id="ga_hackathon" @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+							<a id="nav_hackthon" @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
 						</li>
 					</ul>
 				</nav>
@@ -90,7 +90,7 @@
 					<h2>Connect, enhance existing<span>blockchain technologies.</span>
 					</h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
-					<a id="ga_join_telegram" class="telegramBtn" href="https://t.me/portalnetworkofficial" target="_blank">
+					<a id="hero_jointelegram" class="telegramBtn" href="https://t.me/portalnetworkofficial" target="_blank">
 						<span><img src="./images/landing/hero/telegram.png" alt=""></span><p>Join our telegram</p></a>
 				</div>
 			</div>
@@ -175,7 +175,7 @@
 			<div class="section" v-show="!isYoutubeShow">
 				<h3>WHAT IS PORTAL NETWORK?</h3>
 				<p>Portal Network is the decentralized DNS solution for the new internet, designed to utilize existing blockchains by deploying smart contracts on multiple platforms.</p>
-				<div id="ga_play_vedio" class="play" @click="youtubeShow"></div>
+				<div id="middle_vediopalyer" class="play" @click="youtubeShow"></div>
 			</div>
 			<iframe src="https://www.youtube.com/embed/ja5QtbHVM7U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen v-show="isYoutubeShow"></iframe>
 		</div>
@@ -369,22 +369,22 @@
 		<div class="footer">
 			<div class="footer_content">
 				<div class="item_list">
-					<a id="ga_telegram" class="item telegram" href="https://t.me/portalnetworkofficial" target="_blank" @click="gaSeedPageView('telegram')">
+					<a id="footer_telegram" class="item telegram" href="https://t.me/portalnetworkofficial" target="_blank" @click="gaSeedPageView('telegram')">
 						<img src="./images/landing/shared/Te@2x.svg" alt="">
 					</a>
-					<a id="ga_github" class="item github" href="https://github.com/portalnetwork" target="_blank" @click="gaSeedPageView('github')">
+					<a id="footer_github" class="item github" href="https://github.com/portalnetwork" target="_blank" @click="gaSeedPageView('github')">
 						<img src="./images/landing/shared/g@2x.svg" alt="">
 					</a>
-					<a id="ga_twitter" class="item twitter" href="https://twitter.com/itisportal" target="_blank" @click="gaSeedPageView('twitter')">
+					<a id="footer_twitter" class="item twitter" href="https://twitter.com/itisportal" target="_blank" @click="gaSeedPageView('twitter')">
 						<img src="./images/landing/shared/t@2x.svg" alt="">
 					</a>
-					<a id="ga_fb" class="item fb" href="https://www.facebook.com/portalnetworkofficial" target="_blank" @click="gaSeedPageView('fbicon')">
+					<a id="footer_facebook" class="item fb" href="https://www.facebook.com/portalnetworkofficial" target="_blank" @click="gaSeedPageView('fbicon')">
 						<img src="./images/landing/shared/fb@2x.svg" alt="">
 					</a>
-					<a id="ga_medium" class="item medium" href="https://medium.com/portalnetworkofficial" target="_blank" @click="gaSeedPageView('medium')">
+					<a id="footer_medium" class="item medium" href="https://medium.com/portalnetworkofficial" target="_blank" @click="gaSeedPageView('medium')">
 						<img src="./images/landing/shared/M@2x.svg" alt="">
 					</a>
-					<a id="ga_reddit" class="item reddit" href="https://www.reddit.com/r/portalnetwork" target="_blank" @click="gaSeedPageView('reddit')">
+					<a id="footer_reddit" class="item reddit" href="https://www.reddit.com/r/portalnetwork" target="_blank" @click="gaSeedPageView('reddit')">
 						<img src="./images/landing/shared/reddit.png" alt="">
 					</a>
 				</div>
