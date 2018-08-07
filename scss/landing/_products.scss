@@ -1,0 +1,136 @@
+@import "../_var.scss";
+.products {
+	background-color: #3442b0;
+	margin-bottom: -1px;
+	&:before {
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 0 100vw 570px 0;
+		border-color: transparent #fff transparent transparent;
+		@media screen and (max-width: 1200px) {
+			border-width: 0 100vw 360px 0;
+		}
+		@media screen and (max-width: $mob) {
+			border-width: 0 100vw 160px 0;
+		}
+	}
+	.section {
+		@include section(-567px, 0);
+		@media screen and (max-width: $mob) {
+			margin: -160px auto 0 auto;
+		}
+	}
+	h3 {
+		font-size: 25px;
+		font-weight: bold;
+		letter-spacing: 5px;
+		color: #000;
+		text-align: center;
+		margin-bottom: 64px;
+		@media screen and (max-width: $mob) {
+			margin-bottom: 34px;
+		}
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: $mob) {
+			display: block;
+			padding-bottom: 20px;
+		}
+	}
+	.item {
+		width: 26.3%;
+		height: auto;
+		border-radius: 10px;
+		background-color: #FFFFFF;
+		padding: 37px 34px;
+		box-shadow: 0 3px 10px 0 rgba(0,0,0,0.2);
+		position: relative;
+		@media screen and (max-width: $mob) {
+			width: 70%;
+			margin: 0 auto 30px auto;
+			@media screen and (max-width: 600px) {
+				width: 90%;
+			}
+		}
+		.figure {
+			display: block;
+			height: 145px;
+			margin-bottom: 35px;
+			position: relative;
+			transform: scale(0.95);
+			transition: transform .5s;
+			&:hover {
+				transform: scale(1);
+			}
+			img {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				@media screen and (max-width: $mob) {
+					width: 208px;
+				}
+			}
+		}
+		h4 {
+			font-size: 20px;
+			line-height: 27px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		p {
+			font-size: 16px;
+			line-height: 22px;
+			color: #616161;
+			text-align: center;
+			padding-bottom: 25px;
+		}
+		span {
+			display: block;
+			font-size: 12px;
+			line-height: 16px;
+			color: #616161;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.more {
+			display: inline-block;
+			width: 100px;
+			font-size: 16px;
+			font-weight: bold;
+			text-decoration: none;
+			color: #23D6A3;
+			transition: color .5s;
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 6px;
+				height: 6px;
+				border: solid 2px #23D6A3;
+				transition: border-color .5s;
+				border-top: none;
+				border-left: none;
+				margin-left: 4px;
+				transform: rotate(-45deg);
+			}
+			&:hover {
+				color: #3442B0;
+				&:after {
+					border-color: #3442B0;
+				}
+			}
+		}
+	}
+}

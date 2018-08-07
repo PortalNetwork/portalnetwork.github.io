@@ -7,40 +7,41 @@
 <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=no">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-	<title>Portal Network | Blog</title>
-	<meta name="description" content="Portal Network Blog">
-	<meta name="author" content="Portal Network">
-	<meta name="keywords" content="Portal Network Blog" />
-	<meta property="og:title" content="Portal Network Blog" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="Portal Network Blog" />
-  <meta property="og:url" content="https://www.portal.network/blog.html" />
-  <meta property="og:image" content="./assets/meta_share.png" />
-  <meta property="og:image:url" content="./assets/meta_share.png" />
-  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Portal Network | Blog</title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="description" content="" />
+  <meta name="Keywords" content="" />
+  <meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="https://www.portal.network/blogs" />
+  <meta property="og:image" content="https://imgur.com/a/UA5bumd" />
+  <meta property="og:image:url" content="" />
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="./css/blog.css?82731" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+
 </head>
 
 <body>
-	<div id="blog" :class="{active: isMenuOpen}">
+  <div class="blog" :class="{active: isMenuOpen}">
     <div class="header">
       <a class="menu_btn" @click="toggleMenuFn">
         <span></span>
       </a>
-      <div class="header_content">
+      <div class="section">
         <h1 class="logo">
-          <a href="./blog.html"><img src="images/logo/logo_w.png" alt=""></a>
+          <a href="./blog.html"></a>
         </h1>
         <nav>
           <ul class="menu">
             <li>
-              <a @click="gaSeedPageView('roadmap')" href="./roadmap.html" target="_blank">Roadmap</a>
+              <a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="roadmap.html">Roadmap</a>
             </li>
             <li>
               <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
@@ -68,12 +69,13 @@
         </div>
       </div>
     </div>
-    <div class="main">
-      <div class="blog_list">
+    <main class="main">
+      <div class="summary">
         <ul>
-          <li v-for="(item,idx) in blogList" :key="idx">
-            <a class="blog_box" :href="item.url">
-              <div class="figure" :style="getImgUrl(idx)"></div>
+          <li v-for="(item,idx) in summaryList" :key="idx">
+            <a class="summary_box" :href="item.url" target="_blank">
+              <div class="figure" :style="getImgUrl(idx)">
+              </div>
               <div class="info">
                 <h4>{{item.title}}</h4>
                 <p>{{item.content}}</p>
@@ -91,8 +93,9 @@
           </li>
         </ul>
       </div>
-    </div>
+    </main>
   </div>
-<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/blog.js?1e656d20&1e656d20673d77616bdc"></script></body>
+  <script src="./js/blog.js?97233"></script>
+</body>
 
 </html>
