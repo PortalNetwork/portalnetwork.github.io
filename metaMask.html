@@ -25,10 +25,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="blog" :class="{active: isMenuOpen}">
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
     <div class="header">
       <a class="menu_btn" @click="toggleMenuFn">
         <span></span>
@@ -367,6 +372,6 @@
 
     </main>
   </div>
-<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/blog.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/vendor.js?5cfa2629&5cfa26291748460f0b94"></script><script type="text/javascript" src="./js/blog.js?5cfa2629&5cfa26291748460f0b94"></script></body>
+<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/blog.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/vendor.js?dd446791&dd446791eaf6a931248c"></script><script type="text/javascript" src="./js/blog.js?dd446791&dd446791eaf6a931248c"></script></body>
 
 </html>
