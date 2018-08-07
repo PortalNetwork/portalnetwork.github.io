@@ -25,10 +25,15 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-	<div id="submitdweb" :class="{active: isMenuOpen}">
+	<div id="submitdweb" :class="{active: isMenuOpen}" v-cloak>
     <a class="menu_btn" @click="toggleMenuFn">
       <span></span>
     </a>
@@ -116,6 +121,6 @@
       <p class="copyRight">© 2018 Portal.Network.</p>
     </div>
   </div>
-<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/submitdweb.js?1e656d20&1e656d20673d77616bdc"></script></body>
+<script type="text/javascript" src="./js/vendor.js?8d650abc&8d650abc8f0bee40290b"></script><script type="text/javascript" src="./js/submitdweb.js?8d650abc&8d650abc8f0bee40290b"></script></body>
 
 </html>

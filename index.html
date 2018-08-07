@@ -39,14 +39,18 @@
       j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
-  </script>
+	</script>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
 </head>
-
 <body>
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <div id="app" :class="{active: isMenuOpen}">
+  <div id="app" :class="{active: isMenuOpen}" v-cloak>
 		<a class="menu_btn" @click="toggleMenuFn">
 			<span></span>
 		</a>
@@ -395,6 +399,6 @@
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/index.js?1e656d20&1e656d20673d77616bdc"></script></body>
+<script type="text/javascript" src="./js/vendor.js?8d650abc&8d650abc8f0bee40290b"></script><script type="text/javascript" src="./js/index.js?8d650abc&8d650abc8f0bee40290b"></script></body>
 
 </html>
