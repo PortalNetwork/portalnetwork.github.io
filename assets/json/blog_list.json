@@ -1,6 +1,6 @@
 [
   {
-    "url": "./nifty-hackathon-hong-kong.html",
+    "url": "nifty.html",
     "img": "https://cdn-images-1.medium.com/max/2000/1*sjB0f6uTUbP-b264szWUfw.jpeg",
     "title": "Portal Network at NIFTY Hackathon & Conference — Hong Kong",
     "content": "On July 24th — 26th, Portal Network will be joining the NIFTY event in Hong Kong to reveal the latest updates on our company products and…",
@@ -10,7 +10,7 @@
     "date": "Jul 23"
   },
   {
-    "url": "./what-is-ens.html",
+    "url": "ens.html",
     "img": "https://cdn-images-1.medium.com/max/2000/1*cE2smQ6JuBrVxrLzV06Qfg.jpeg",
     "title": "What is ENS & What problem it solved ?",
     "content": "Ever since blockchain and cryptocurrency become a trending topic, people began transferring their digital assets through their crypto…",
@@ -20,7 +20,7 @@
     "date": "Jul 6"
   },
   {
-    "url": "./hackathon-korea-announcement.html",
+    "url": "hackathonkorea.html",
     "img": "https://cdn-images-1.medium.com/max/1600/1*_DBMTTB-kD_ot8M7hzz0Ig.jpeg",
     "title": "Portal Network Hackathon Korea 2018 — Protal Network Announcement",
     "content": "Portal Network is proud to announce that we are organizing a Hackathon from July 14th to 15th in Korea together with our partners …",
@@ -30,7 +30,7 @@
     "date": "Jun 29"
   },
   {
-    "url": "./wanchain-asia-tour.html",
+    "url": "wanchain.html",
     "img": "https://cdn-images-1.medium.com/max/2000/1*Ao-djtQaf8k2KKKvFoe6fQ@2x.jpeg",
     "title": "Portal Network in Wanchain Asia Tour 2018 Indonesia / Malaysia / South Korea",
     "content": "Portal Network is excited to announce that we will be part of Wanchain Asia Tour 2018 in Indonesia, Malaysia and South Korea! We believe…",
@@ -40,7 +40,7 @@
     "date": "Jun 29"
   },
   {
-    "url": "./how-to-use-metaMask-extension.html",
+    "url": "metaMask.html",
     "img": "https://cdn-images-1.medium.com/max/1600/0*rS6gZzoR0fgOsRNM",
     "title": "How to use MetaMask Extension ?",
     "content": "What is MetaMask Extension?",
@@ -50,7 +50,7 @@
     "date": "Jun 21"
   },
   {
-    "url": "./data-analysis-of-ens.html",
+    "url": "analysis.html",
     "img": "https://cdn-images-1.medium.com/max/1600/0*RLiCvY1ReZaACvCr.",
     "title": "Key Findings of Our Data Analysis of ENS",
     "content": "By Johnny Hsieh & Monica M on Portal Network",
@@ -60,7 +60,7 @@
     "date": "May 25"
   },
   {
-    "url": "./decentralized-database.html",
+    "url": "decentralized.html",
     "img": "https://cdn-images-1.medium.com/max/1600/1*dn5GhwFDt3omUaacUhxPtQ.png",
     "title": "Decentralized Database Hackathon Takeaways : Bluzelle X Portal Network",
     "content": "Portal Network brought three students (one university student, one master’s student, and one PHD candidate), along with our core team…",
