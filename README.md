@@ -1,4 +1,8 @@
-## 🔨 Run on localhost
+ # Landing Page
+ 
+ 因為GitHub的資料夾指向根目錄，所以將deploy後的檔案打包至根目錄
+
+## Run on localhost
 
 #### Install Dependencies
 
@@ -6,14 +10,16 @@
 npm install
 ```
 
-#### Build project
+#### Development project
 
 ```
 npm run dev
 ```
 
-#### Publish / Deploy
+#### Build project
 
 ```
 npm run deploy
 ```
+
+

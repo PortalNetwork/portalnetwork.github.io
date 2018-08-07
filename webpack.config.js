@@ -14,7 +14,7 @@ module.exports = {
     roadmap: 'roadmap'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname),
     filename: 'js/[name].js?[hash:8]',
     publicPath: process.env.NODE_ENV === "development" ? "/" : "./",
   },

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>Portal Network | ShowCase</title>
+	<meta name="description" content="Build your own decentralized website">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Showcase" />
+	<meta property="og:title" content="Portal Network Showcase" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Build your own decentralized website" />
+  <meta property="og:url" content="https://www.portal.network/showcase.html" />
+  <meta property="og:image" content="./assets/meta_share.png" />
+  <meta property="og:image:url" content="./assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <script>
+    (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
+  </script>
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
+  </script>
+</head>
+
+<body>
+	<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <div id="showcase">
+    <header class="menu_bar">
+      <div class="mid">
+        <a class="logo" href="./index.html"></a>
+        <a id="openMenuBtn" @click="menuOpen"></a>
+        <nav :class="{open: m_open}">
+          <a id="closeMenuBtn" @click="menuOpen"></a>
+          <a target="_blank" href="https://hackathon.portal.network/">Hackathon</a>
+          <a target="_blank" href="./blog.html">Blog</a>
+          <a href="./roadmap.html" target="_blank">Roadmap</a>
+          <a href="./submitdweb.html" class="top_style" target="_blank">Submit a ÐWEB</a>
+          <div class="mobil_product">
+            <a href="https://beta.portal.network/" target="_blank">
+              <img src="./images/showcase/mb_menu_marketplace.png" alt="">
+              <p>Martketplace</p>
+            </a>
+            <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
+              <img src="./images/showcase/mb_menu_extension.png" alt="">
+              <p>Extension</p>
+            </a>
+            <a href="https://web.portal.network/" target="_blank">
+              <img src="./images/showcase/mb_menu_webbuilder.png" alt="">
+              <p>Web Builder</p>
+            </a>
+          </div>
+          <div class="mobil_communities">
+            <a href="https://t.me/portalnetworkofficial" target="_blank">
+              <img src="./images/showcase/sm_telegtam.png" alt="">
+            </a>
+            <a href="https://github.com/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_github.png" alt="">
+            </a>
+            <a href="https://medium.com/portalnetworkofficial" target="_blank">
+              <img src="./images/showcase/sm_medium.png" alt="">
+            </a>
+            <a href="https://twitter.com/itisportal" target="_blank">
+              <img src="./images/showcase/sm_twitter.png" alt="">
+            </a>
+            <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
+              <img src="./images/showcase/sm_facebook.png" alt="">
+            </a>
+            <a href="https://www.reddit.com/r/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_reddit.png" alt="">
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <article class="banner">
+      <div class="banner_info">
+        <div class="b_img"></div>
+        <div class="b_content">
+          <h2>
+            <span id="txt">
+              {{arrjoin}}
+            </span>
+          </h2>
+          <p>Build your own decentralized website.</p>
+          <a id="ga_link_to_webbuilder" href="https://web.portal.network/" target="_blank">Get a free one now</a>
+        </div>
+      </div>
+    </article>
+    <div class="select_bar">
+      <div class="mid">
+        <nav>
+          <div class="bar_width">
+            <a :class="{active: selectidx === 2}" @click="handActive(2)">Dapp</a>
+            <a :class="{active: selectidx === 0}" @click="handActive(0)">About me</a>
+            <a :class="{active: selectidx === 8}" @click="handActive(8)">Dappcon</a>
+            <a :class="{active: selectidx === 5}" @click="handActive(5)">WanChain Attandee</a>
+            <a :class="{active: selectidx === 6}" @click="handActive(6)">WanChain Speaker</a>
+            <a :class="{active: selectidx === 7}" @click="handActive(7)">WBC</a>
+            <a :class="{active: selectidx === 1}" @click="handActive(1)">Hackathon</a>
+            <a :class="{active: selectidx === 3}" @click="handActive(3)">RISE</a>
+            <a :class="{active: selectidx === 4}" @click="handActive(4)">Other Dweb</a>
+          </div>
+        </nav>
+        <!-- <div class="input_bar">
+                    <input type="text" name="" id="" placeholder="Your  domain  name">
+                    <i class="fas fa-search"></i>
+                </div> -->
+      </div>
+    </div>
+
+    <!-- share btn 真正抓取資料的 dom 元素 -->
+    <input type="text" readonly id="copyedVal" value=""/>
+
+    <div class="show_item">
+      <div class="loading_page" v-if="isLoad">
+        <div>
+          <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+          </div>
+          <p>loading...</p>
+        </div>
+      </div>
+
+      <!-- 有 Group 用這裡 render -->
+      <div v-if="getTagGroup.length >= 2" v-for="(tg, tgIdx) in getTagGroup" :key="tgIdx">
+        <h1 style="margin-bottom: 10px">{{ tg }}</h1>
+        <div class="itemBox" v-for="(item, idx) in caseInfoArrForGroup(tg)" :key="idx">
+          <a @click="transferLink(item.url)" class="case_item" target="_blank">
+            <div class="case_demo">
+              <div class="case_photo" :style="demophotoForGroup(item)"></div>
+            </div>
+            <div class="info">
+              <div>
+                <h2>{{item.name}}
+                  <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
+                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
+                    <i class="fa fa-copy" aria-hidden="true"></i>
+                  </button>
+                </h2>
+                <p>{{item.domain}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 沒 Group 用這裡 render -->
+      <div v-if="getTagGroup && getTagGroup.length < 2">
+        <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
+          <a @click="transferLink(item.url)" class="case_item" target="_blank">
+            <div class="case_demo">
+              <div class="case_photo" :style="demophoto(idx)"></div>
+            </div>
+            <div class="info">
+              <div>
+                <h2>{{item.name}}
+                  <button type="button" @click.stop="shareFb($event,item.tag)" class="share_default_btn">
+                    <i class="fab fa-facebook-square" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" @click.stop="shareLink($event,item.tag, item.domain)" class="share_default_btn">
+                    <i class="fa fa-copy" aria-hidden="true"></i>
+                  </button>
+                </h2>
+                <p>{{item.domain}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="page_box" v-if="!isLoad">
+          <a @click="handlePrevPage($event)">&laquo;</a>
+          <a :class="{active: pageIndex === idx}" 
+            @click="handlePageClick($event, page)"
+            v-for="(page, idx) in getPages" 
+            :key="idx">
+            {{page}}
+          </a>
+          <a @click="handleNextPage($event)">&raquo;</a>
+        </div>
+      </div>
+    </div>
+
+    <a class="gotoTopbtn" @click="gotoPageTop"></a>
+
+    <div class="share_box">
+      <!-- open -->
+      <a :class="['share_btn', {open: shareOpen}]" @click="fixedPopOpen"></a>
+      <!-- open -->
+      <div :class="['share_bg', {open: shareOpen}]">
+        <div class="content">
+          <nav>
+            <a href="https://beta.portal.network/" target="_blank">
+              <img src="./images/showcase/mb_menu_marketplace.png" alt="">
+              <p>Martketplace</p>
+            </a>
+            <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
+              <img src="./images/showcase/mb_menu_extension.png" alt="">
+              <p>Extension</p>
+            </a>
+            <a href="https://web.portal.network/" target="_blank">
+              <img src="./images/showcase/mb_menu_webbuilder.png" alt="">
+              <p>Web Builder</p>
+            </a>
+          </nav>
+          <div class="share_item">
+            <a href="https://t.me/portalnetworkofficial" target="_blank">
+              <img src="./images/showcase/sm_telegtam.png" alt="">
+            </a>
+            <a href="https://github.com/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_github.png" alt="">
+            </a>
+            <a href="https://medium.com/portalnetworkofficial" target="_blank">
+              <img src="./images/showcase/sm_medium.png" alt="">
+            </a>
+            <a href="https://twitter.com/itisportal" target="_blank">
+              <img src="./images/showcase/sm_twitter.png" alt="">
+            </a>
+            <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
+              <img src="./images/showcase/sm_facebook.png" alt="">
+            </a>
+            <a href="https://www.reddit.com/r/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_reddit.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank">
+      <img src="./images/showcase/tel.png" alt="">
+    </a>
+  </div>
+
+<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/showcase.js?1e656d20&1e656d20673d77616bdc"></script></body>
+
+</html>
