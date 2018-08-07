@@ -1,0 +1,111 @@
+@import "../_var.scss";
+.hero {
+	background-color: #00D5BF;
+	position: relative;
+	padding-top: 125px;
+	margin-top: 100px;
+	@media screen and (max-width: $pad) {
+		padding-top: 60px;
+		margin-top: 0;
+	}
+	@media screen and (max-width: $mob) {
+		padding-top: 20px;
+	}
+	&:after {
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 0 0 538px 100vw;
+		border-color: transparent transparent #fff transparent;
+		background-color: #00D5BF;
+		margin-top: -95px;
+		@media screen and (max-width: 1200px) {
+			border-width: 0 0 260px 100vw;
+			margin-top: 0;
+		}
+		@media screen and (max-width: $mob) {
+			border-width: 0 0 160px 100vw;
+			margin-top: 0;
+		}
+	}
+	.section {
+		@extend %clear;
+		@include section();
+		position: relative;
+	}
+}
+
+.hero_info {
+	max-width: 546px;
+	float: left;
+	position: relative;
+	@media screen and (max-width: $pad) {
+		max-width: 100%;
+		margin: 0 auto;
+		float: none;
+		text-align: center;
+	}
+	h2 {
+		font-size: 50px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		line-height: 65px;
+		color: #fff;
+		padding-bottom: 20px;
+		white-space: nowrap;
+		@media screen and (max-width: $pad) {
+			padding-bottom: 30px;
+			font-size: 35px;
+			line-height: 45px;
+			white-space: normal;
+		}
+		span {
+			display: block;
+			font-size: 50px;
+			line-height: 80px;
+			color: #fff;
+			@media screen and (max-width: $pad) {
+				font-size: 35px;
+				line-height: 45px;
+			}
+		}
+	}
+	>p {
+		font-size: 23px;
+		line-height: 30px;
+		color: #fff;
+		padding-bottom: 35px;
+		white-space: nowrap;
+		@media screen and (max-width: $pad) {
+			width: 80%;
+			margin: 0 auto;
+			font-size: 22px;
+			line-height: 30px;
+			white-space: normal;
+		}
+	}
+}
+
+.hero_img {
+	position: absolute;
+	top: 70px;
+	right: -85px;
+	margin: 0 auto;
+	@media screen and (max-width: 1180px) {
+		width: 52vw;
+	}
+	@media screen and (max-width: $pad) {
+		width: 100%;
+		position: relative;
+		top: auto;
+		right: auto;
+		padding-bottom: 46px;
+	}
+	img {
+		width: 623px;
+		@media screen and (max-width: $pad) {
+			width: 60%;
+			margin: 0 auto;
+		}
+	}
+}

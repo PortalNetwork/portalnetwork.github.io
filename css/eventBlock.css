@@ -1,0 +1,23 @@
+.eventBlock{
+  width: 100%;
+  max-width: 640px;
+  margin: 100px auto 0 auto;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+.ebox {
+  position: relative;
+  color: #fc8dff;
+}
+.ebox > h2 {
+  color: #ffdbfc;
+}
+.ebox > img {
+  margin: 2.5px;
+  max-width: 310px;
+  width: 100%;
+}
+.ebox > p {
+  text-align: left;
+}

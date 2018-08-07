@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="74px" viewBox="0 0 75 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>windows@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Official-Landing-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-1366" transform="translate(-355.000000, -4169.000000)" fill="#11EBD4" fill-rule="nonzero">
+            <g id="Comparison" transform="translate(226.569531, 3625.008394)">
+                <g id="windows" transform="translate(11.564570, 542.695364)">
+                    <g transform="translate(117.294702, 0.699193)" id="windows-logo-silhouette">
+                        <g transform="translate(0.055004, 0.240797)">
+                            <polygon id="Shape" points="0.25668719 64.0964694 30.3604073 68.2454013 30.3604073 39.5102289 0.25668719 39.5102289"></polygon>
+                            <polygon id="Shape" points="0.25668719 35.8020707 30.3604073 35.8020707 30.3604073 6.71378454 0.25668719 10.8627165"></polygon>
+                            <polygon id="Shape" points="33.670926 68.6871027 73.705893 74.2039639 73.705893 39.5102289 73.705893 39.5097651 33.670926 39.5097651"></polygon>
+                            <polygon id="Shape" points="33.6713898 6.27223775 33.6713898 35.8020707 73.705893 35.8020707 73.705893 0.754758123"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
