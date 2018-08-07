@@ -5,7 +5,7 @@ a.gotoTopbtn{
     display: block;
     width: 68px;
     height: 68px;
-    background-image: url("~images/showcase/arrow_top.png");
+    background-image: url("~images/show/arrow_top.png");
     background-size: 100% 100%;
     z-index: 2;
 }
@@ -23,18 +23,18 @@ a.gotoTopbtn{
         display: block;
         width: 68px;
         height: 68px;
-        background-image: url("~images/showcase/menu_btn.png");
+        background-image: url("~images/show/menu_btn.png");
         background-size: 100% 100%;
         border-radius: 50%;
         &.open{
-            background-image: url("~images/showcase/menu_btn_x.png");
+            background-image: url("~images/show/menu_btn_x.png");
         }
     }
     .share_bg{
         position: absolute;
         width: 380px;
         height: 159px;
-        background-image: url("~images/showcase/menu_bar.png");
+        background-image: url("~images/show/menu_bar.png");
         background-size: 100% 100%;
         right: 75px;
         bottom: 0px;
