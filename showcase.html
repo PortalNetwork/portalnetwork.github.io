@@ -7,85 +7,90 @@
 <!--<![endif]-->
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Portal Network | ShowCase</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=no" />
-  <meta name="description" content="Portal Network Showcase" />
-  <meta name="Keywords" content="Portal Network Showcase" />
-  <meta property="og:title" content="Portal Network Showcase" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>Portal Network | ShowCase</title>
+	<meta name="description" content="Build your own decentralized website">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Showcase" />
+	<meta property="og:title" content="Portal Network Showcase" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Build your own decentralized website" />
-  <meta property="og:url" content="https://www.portal.network/showcase?fb" />
-  <meta property="og:image" content="https://www.portal.network/images/meta_share.png?213213" />
-  <meta property="og:image:url" content="https://www.portal.network/images/meta_share.png?213123" />
-
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="./css/showcase.css?987123" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-    crossorigin="anonymous"></script>
+  <meta property="og:url" content="https://www.portal.network/showcase.html" />
+  <meta property="og:image" content="./assets/meta_share.png" />
+  <meta property="og:image:url" content="./assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
   <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
   <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || []; w[l].push({
-          'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
-        }); var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
   </script>
 </head>
 
 <body>
-  <noscript>
+	<noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <div class="showcase">
+
+  <div id="showcase">
     <header class="menu_bar">
       <div class="mid">
-        <a class="logo" href="https://www.portal.network/"></a>
+        <a class="logo" href="./index.html"></a>
         <a id="openMenuBtn" @click="menuOpen"></a>
         <nav :class="{open: m_open}">
           <a id="closeMenuBtn" @click="menuOpen"></a>
           <a target="_blank" href="https://hackathon.portal.network/">Hackathon</a>
-          <a target="_blank" href="blog.html">Blog</a>
-          <a href="roadmap.html" target="_blank">Roadmap</a>
-          <a href="submitdweb.html" class="top_style" target="_blank">Submit a ÐWEB</a>
+          <a target="_blank" href="./blog.html">Blog</a>
+          <a href="./roadmap.html" target="_blank">Roadmap</a>
+          <a href="./submitdweb.html" class="top_style" target="_blank">Submit a ÐWEB</a>
           <div class="mobil_product">
             <a href="https://beta.portal.network/" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_marketplace.png" alt="">
               <p>Martketplace</p>
             </a>
             <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_extension.png" alt="">
               <p>Extension</p>
             </a>
             <a href="https://web.portal.network/" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_webbuilder.png" alt="">
               <p>Web Builder</p>
             </a>
           </div>
           <div class="mobil_communities">
             <a href="https://t.me/portalnetworkofficial" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_telegtam.png" alt="">
+              <img src="./images/showcase/sm_telegtam.png" alt="">
             </a>
             <a href="https://github.com/portalnetwork" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_github@2x.svg" alt="">
+              <img src="./images/showcase/sm_github.png" alt="">
             </a>
             <a href="https://medium.com/portalnetworkofficial" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_medium@3x.svg" alt="">
+              <img src="./images/showcase/sm_medium.png" alt="">
             </a>
             <a href="https://twitter.com/itisportal" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt="">
+              <img src="./images/showcase/sm_twitter.png" alt="">
             </a>
             <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt="">
+              <img src="./images/showcase/sm_facebook.png" alt="">
+            </a>
+            <a href="https://www.reddit.com/r/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_reddit.png" alt="">
             </a>
           </div>
         </nav>
@@ -101,7 +106,7 @@
             </span>
           </h2>
           <p>Build your own decentralized website.</p>
-          <a href="https://web.portal.network/" target="_blank">Get a free one now</a>
+          <a id="ga_link_to_webbuilder" href="https://web.portal.network/" target="_blank">Get a free one now</a>
         </div>
       </div>
     </article>
@@ -176,7 +181,6 @@
         </div>
       </div>
 
-
       <!-- 沒 Group 用這裡 render -->
       <div v-if="getTagGroup && getTagGroup.length < 2">
         <div class="itemBox" v-for="(item, idx) in caseInfoArr" :key="idx">
@@ -222,45 +226,46 @@
         <div class="content">
           <nav>
             <a href="https://beta.portal.network/" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_marketplace@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_marketplace.png" alt="">
               <p>Martketplace</p>
             </a>
             <a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_extension@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_extension.png" alt="">
               <p>Extension</p>
             </a>
             <a href="https://web.portal.network/" target="_blank">
-              <img src="./images/Showcase/Mobile/menu_webbuilder@2x.svg" alt="">
+              <img src="./images/showcase/mb_menu_webbuilder.png" alt="">
               <p>Web Builder</p>
             </a>
           </nav>
           <div class="share_item">
             <a href="https://t.me/portalnetworkofficial" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_telegtam@2x.svg" alt="">
+              <img src="./images/showcase/sm_telegtam.png" alt="">
             </a>
             <a href="https://github.com/portalnetwork" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_github@2x.svg" alt="">
+              <img src="./images/showcase/sm_github.png" alt="">
             </a>
             <a href="https://medium.com/portalnetworkofficial" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_medium@2x.svg" alt="">
+              <img src="./images/showcase/sm_medium.png" alt="">
             </a>
             <a href="https://twitter.com/itisportal" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_twitter@2x.svg" alt="">
+              <img src="./images/showcase/sm_twitter.png" alt="">
             </a>
             <a href="https://www.facebook.com/portalnetworkofficial/" target="_blank">
-              <img src="./images/Showcase/Mobile/sm_facebook@2x.svg" alt="">
+              <img src="./images/showcase/sm_facebook.png" alt="">
+            </a>
+            <a href="https://www.reddit.com/r/portalnetwork" target="_blank">
+              <img src="./images/showcase/sm_reddit.png" alt="">
             </a>
           </div>
         </div>
       </div>
     </div>
     <a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank">
-      <img src="./images/Showcase/tel.png" alt="">
+      <img src="./images/showcase/tel.png" alt="">
     </a>
-
   </div>
-  <script src="./js/showcase.js?340389247824"></script>
 
+<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/showcase.js?1e656d20&1e656d20673d77616bdc"></script></body>
 
-</body>
 </html>
