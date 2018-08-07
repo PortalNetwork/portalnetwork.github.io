@@ -4,6 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 function GetRandom(minNum, maxNum) {
 	return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
 }
+
+console.log(path);
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
@@ -157,49 +159,49 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'What is ENS & What problem it solved? – Portal Network | Blog',
       filename: 'blogs/what-is-ens.html',
-      template: 'html/blogs/what-is-ens.html',
+      template: 'html/what-is-ens.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'Portal Network at NIFTY Hackathon & Conference — Hong Kong – Portal Network | Blog',
       filename: 'blogs/nifty-hackathon-hong-kong.html',
-      template: 'html/blogs/nifty-hackathon-hong-kong.html',
+      template: 'html/nifty-hackathon-hong-kong.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'Portal Network Hackathon Korea 2018 — Protal Network Announcement | Blog',
       filename: 'blogs/hackathon-korea-announcement.html',
-      template: 'html/blogs/hackathon-korea-announcement.html',
+      template: 'html/hackathon-korea-announcement.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'Portal Network in Wanchain Asia Tour 2018 Indonesia / Malaysia / South Korea | Blog',
       filename: 'blogs/wanchain-asia-tour.html',
-      template: 'html/blogs/wanchain-asia-tour.html',
+      template: 'html/wanchain-asia-tour.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'How to use MetaMask Extension? | Blog',
       filename: 'blogs/how-to-use-metaMask-extension.html',
-      template: 'html/blogs/how-to-use-metaMask-extension.html',
+      template: 'html/how-to-use-metaMask-extension.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'Key Findings of Our Data Analysis of ENS | Blog',
       filename: 'blogs/data-analysis-of-ens.html',
-      template: 'html/blogs/data-analysis-of-ens.html',
+      template: 'html/data-analysis-of-ens.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
       title: 'Decentralized Database Hackathon Takeaways : Bluzelle X Portal Network',
       filename: 'blogs/decentralized-database.html',
-      template: 'html/blogs/decentralized-database.html',
+      template: 'html/decentralized-database.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
