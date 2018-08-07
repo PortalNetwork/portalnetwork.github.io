@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta name="description" content="Portal Network Blog">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Blog" />
+	<meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Portal Network Blog" />
+  <meta property="og:url" content="https://www.portal.network/blogs/decentralized-database.html" />
+  <meta property="og:image" content="../assets/meta_share.png" />
+  <meta property="og:image:url" content="../assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="header_content">
+        <h1 class="logo">
+          <a href="../blog.html"><img src="../images/logo/logo_w.png" alt=""></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('blog')" href="https://medium.com/portalnetworkofficial" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="./roadmap.html" target="_blank">Roadmap</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+            <ul>
+              <li>
+                <a href="../blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=event" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=tech" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=guide" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5>Portal Network</h5>
+          <div class="date">May 23</div>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_title">
+          <h3>Decentralized Database Hackathon Takeaways : Bluzelle X Portal Network</h3>
+
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/800/1*dn5GhwFDt3omUaacUhxPtQ.png" alt="">
+            <figcaption class="figure_text">Participants from Kenetic, Bluzelle and Portal Network.</figcaption>
+          </figure>
+
+        </section>
+
+        <section class="article_content">
+          <p><a class="text_link" href="https://www.portal.network/" target="_blank" title="">Portal Network</a> brought three students (one university student, one master’s student, and one PHD candidate), along with our core team members, to participate and support <a class="text_link" href="https://hackathon.portal.network/?utm_source=google&utm_medium=blog_medium&utm_campaign=post_hackathon_bluzelle#team" target="_blank" title="">the second-ever Bluzelle Decentralized Database Hackathon</a>. The <a class="text_link" href="https://hackathon.portal.network/?utm_source=google&utm_medium=blog_medium&utm_campaign=post_hackathon_bluzelle#team" target="_blank" title="">hackathon</a> was held on April 28 and 29 in Vancouver SFU VentureLabs.</p>
+
+          <p>There were more than 30 developers and other specialists who joined the event. Ten groups worked to transform their amazing ideas into real prototypes — each integrated with Bluzelle’s new Lovelace release. All of the projects also used Portal Network’s decentralized hosting solution to bring their ideas to life.</p>
+
+          <p>It was a fantastic opportunity to bring together members of the blockchain community to share their knowledge, expertise, and experience. Moreover, it was fascinating to learn about the range of industries and fields which can benefit greatly from decentralized technology.</p>
+
+          <p>We were so inspired and excited to see how people from different backgrounds could join together to create innovative projects and compete in teams against one another — all in less than two days.</p>
+
+          <p>We noticed that not only did everyone contribute in their own way by coding, creating slides, or establishing a business model, everyone also worked in a collaborative and positive way to enhance their group’s overall creativity and efficiency.</p>
+
+          <figure class="figure img_xl_full">
+            <img src="https://cdn-images-1.medium.com/max/800/1*EBXXVA8tF1Ay4oCPC8ISyQ.jpeg" alt="">
+          </figure>
+          
+          <p>Another notable prototype was a decentralized blog system, which provided a new system for posting blogs as well as advertising. Given the increasing amount of criticism about the media being controlled by big interest or investment groups, there is an urgent need for everyday people to have the means to freely broadcast and receive messages, instead of these messages being controlled by some single source or algorithm. In this way, people would be better supported to voice their opinions without censorship. We were therefore very excited to see a prototype of this idea presented at the hackathon.</p>
+
+          <p>Reflecting on the event, we at <a class="text_link" href="https://www.portal.network/" target="_blank" title="">Portal Network</a> believe that it was a unique opportunity to show the world what we are trying to achieve, and the potential of our technology.</p>
+
+          <p>It was also a chance for people to challenge themselves, be creative, and develop their skills. Participants were able to learn many things from each other, and just enjoy engaging in the workshop to develop their understanding of what decentralized technology is all about. We believe that it was a truly valuable experience, and look forward to hosting more events like this in the near future.</p>
+        </section>
+      </article>
+
+    </main>
+  </div>
+</body>
+
+</html>

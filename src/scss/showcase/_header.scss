@@ -1,0 +1,132 @@
+article.banner{
+    background-color: #A9FBF2;
+    .banner_info {
+        // max-width: 1100px;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 768px;
+        @include media-1366(){
+            height: pxtovw(768);
+            // max-width: 980px;
+        }
+        @include media-740(){
+            padding-top: 83px;
+            height: auto;
+            overflow: hidden;
+            padding-bottom: 55px;
+        }
+    }
+    .b_img{
+        position: absolute;
+        width: 704px;
+        height: 528.2px;
+        background-image: url("~images/showcase/Hero_img.png");
+        background-size: 140% auto;
+        background-repeat: no-repeat;
+        background-position: top right;
+        left: 0px;
+        top: 167px;
+        @include media-1366(){
+            top: pxtovw(167);
+            width: pxtovw(704);
+            height: pxtovw(528);
+            background-size: 140% auto;
+            // left: -46px;
+            // left: pxtovw(-130);
+        }
+        @include media-740(){ 
+            position: static;
+            width: 100%;
+            height: pxtovw(295, 375);
+            background-position: 120% 0;
+            background-size: 125% auto;
+            margin: 0 auto
+        }
+    }
+    .b_content{
+        position: absolute;
+        top: 270px;
+        right: 138px;
+        width: 594px;
+        height: auto;
+        @include media-1366(){
+            width: pxtovw(594);
+            top: pxtovw(270);
+            right: pxtovw(135);
+        }
+        @include media-740(){ 
+            position: static;
+            width: 90%;
+            margin: 0 auto;
+        }
+        >h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            font-family: PingFangTC;
+            font-size: 50px;
+            font-weight: 500;
+            text-align: center;
+            color: #524040;
+            border-bottom: 1px solid #979797;
+    
+            @include media-1366(){
+                height: pxtovw(80);
+                font-size: pxtovw(50);
+            }
+            @include media-740(){ 
+                display: none;
+            }
+        }
+        >p{
+            font-family: Avenir;
+            font-size: 30px;
+            font-weight: 500;
+            color: #524040;
+            text-align: center;
+            padding-top: 52px;
+            @include media-1366(){
+                padding-top: pxtovw(52);
+                font-size: pxtovw(30);
+            }
+            @include media-740(){ 
+                padding-top: 10px;
+                font-size: 30px;
+            }
+        }
+        >a{
+            display: block;
+            width: 260px;
+            height: auto;
+            line-height: 60px;
+            border-radius: 30px;
+            background: linear-gradient(55deg, #ff4a4a, #f76b1c);
+            font-family: Avenir;
+            font-size: 17px;
+            font-weight: 500;
+            text-align: center;
+            color: #ffffff;
+            margin: 48px auto 0 auto;
+            border: 2px solid transparent;
+            &:hover {
+                color: #F76B1C;
+                border: 2px solid #F76B1C;
+                background: transparent;
+            }
+            @include media-1366(){
+                width: pxtovw(260);
+                line-height: pxtovw(60);
+                font-size: pxtovw(17);
+            }
+            @include media-740(){ 
+                width: 260px;
+                line-height: 60px;
+                font-size: 17px;
+                margin: 33px auto 0 auto;
+            }
+        }
+    }
+}
