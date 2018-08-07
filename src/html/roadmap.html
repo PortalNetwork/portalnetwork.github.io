@@ -41,6 +41,11 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
   </script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -68,7 +73,7 @@
     </div>
   </div>
 
-  <div id="roadmap">
+  <div id="roadmap" v-cloak>
       <a href="https://t.me/portalnetworkofficial" class="telegramBtn" target="_blank"><img src="images/roadmap/tel.png" alt=""></a>
     <div class="nav">
       <div class="nav-item" @click="scrollToChapter(0)">

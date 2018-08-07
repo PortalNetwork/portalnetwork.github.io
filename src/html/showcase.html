@@ -41,6 +41,11 @@
         'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
   </script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -48,7 +53,7 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <div id="showcase">
+  <div id="showcase" v-cloak>
     <header class="menu_bar">
       <div class="mid">
         <a class="logo" href="./index.html"></a>
