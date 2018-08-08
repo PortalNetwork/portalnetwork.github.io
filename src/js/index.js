@@ -18,25 +18,7 @@ new Vue({
     onePhotos: [],
     isOpenPop: false,
     isOpenPopMore: false,
-    morePhotos: [
-      "./images/index/dom_01.png",
-      "./images/index/dom_02.png",
-      "./images/index/dom_03.png",
-      "./images/index/dom_04.png",
-      "./images/index/dom_05.png",
-    ]
-  },
-  watch:{
-    isOpenPop(){
-      setTimeout(() => {
-        this.swipers[0].update();
-      }, 0);
-    },
-    isOpenPopMore(){
-      setTimeout(() => {
-        this.swipers[1].update();
-      }, 0);
-    }
+    morePhotos: [],
   },
   methods: {
     toggleMenuFn() {
@@ -67,31 +49,58 @@ new Vue({
     },
     openModal(name) {
       this.isOpenPop = true;
-      let pic = "";
+      let photo = [];
       switch(name){
-        case "cli":
-          pic = `./images/index/cli.png`;
-          break;
         case "deploy":
-          pic = `./images/index/deploy.png`;
+          photo = ["./images/index/deploys.png"];
           break;
         case "toolkits":
-          pic = `./images/index/toolkits.png`;
+          photo = ["./images/index/toolkits.png"];
           break;
       }
-      this.onePhotos.push(pic);
-
+      this.onePhotos = photo;
+      $("body").addClass("fixBody");
     },
     closeModal() {
       this.isOpenPop = false;
       this.onePhotos = [];
+      $("body").removeClass("fixBody");
     },
-    openMoreModal() {
+    openMoreModal(name) {
       this.isOpenPopMore = true;
+      let photo = [];
+      switch(name){
+        case "cli":
+          photo = [
+            "./images/index/CLI_1.png",
+            "./images/index/CLI_2.png",
+            "./images/index/CLI_3.png",
+            "./images/index/CLI_4.png",
+          ];
+          break;
+        case "domain":
+          photo = [
+            "./images/index/dom_01.png",
+            "./images/index/dom_02.png",
+            "./images/index/dom_03.png",
+            "./images/index/dom_04.png",
+            "./images/index/dom_05.png",
+          ];
+          break;
+      }
+      this.morePhotos = photo;
+
+      setTimeout(() => {
+        this.swipers[0].update();
+        this.swipers[1].update();
+      }, 500);
+
+      $("body").addClass("fixBody");
     },
     closeModalMore() {
       this.isOpenPopMore = false;
       this.morePhotos = [];
+      $("body").removeClass("fixBody");
     },
     coming () {
       alert('coming soon');
@@ -103,10 +112,10 @@ new Vue({
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
 
     this.swipers = new Swiper('.swiper-container', {
+      loop: false,
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
-        width: '100%'
       },
       navigation: {
         nextEl: '.swiper-button-next',
