@@ -114,9 +114,39 @@
 
 
 		<!-- mike -->
-		<div class="chain">
+		<div :class="{chain:true, open:isOpenChainHeight}">
 			<div class="content">
-				
+				<header>
+					<div class="portal">
+						<img :src="logoObj.icon" alt="">
+						<h3>{{logoObj.title}}</h3>
+					</div>
+					<ul>
+						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj)"><img :src="obj.icon"></a></li>
+						<li><a @click="resetBlock"><img src="./images/icon/comingsoon@2x.png" alt=""></a></li>
+					</ul>
+				</header>
+				<div class="item_schedule">
+					<ul>
+						<li></li>
+						<li v-for="(obj, idx) in detailItem">
+
+							<div class="item_title">
+								<h1>{{obj.name}}</h1>
+							</div>
+
+							<p class="description">{{obj.description}}</p>
+
+							<div class="percentage_box" v-if="obj.percentage !== null">
+								<div class="percentage_bg">
+									<div class="percentage_bar" v-bind:style="{width: obj.percentage + '%' }"></div>
+								</div>
+								<h2>{{obj.percentage}}%</h2>
+							</div>
+
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 

@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 function GetRandom(minNum, maxNum) {
 	return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
 }
-
-console.log(path);
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
