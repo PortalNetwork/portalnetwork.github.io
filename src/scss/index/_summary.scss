@@ -8,6 +8,9 @@
       padding: 90px 0px;
       background: url(/images/index/whatIs_bg.png?5f4518e0) center right no-repeat;
       background-size: 960px auto;
+      p {
+        width: 70%;
+      }
     }
   }
   &.proof {
@@ -16,6 +19,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      h3 {
+        text-align: left;
+      }
     }
     .link {
       display: block;
@@ -47,7 +53,7 @@
     box-sizing: border-box;
     h3 {
       font-size: 40px;
-      font-weight: 500;
+      font-weight: 600;
       color: $text;
       letter-spacing: 1px;
       text-align: center;
@@ -55,11 +61,10 @@
     }
     p {
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       color: $text;
       line-height: 1.5;
       text-align: center;
-      width: 85%;
       margin: 0 auto;
       &+p {
         margin-top: 20px;
