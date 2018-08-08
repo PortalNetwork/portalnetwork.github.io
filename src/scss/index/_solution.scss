@@ -1,1 +1,12 @@
 @import "_var.scss";
+
+.solution {
+  .content {
+    @extend %clear;
+    max-width: $container;
+    margin: 0px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
