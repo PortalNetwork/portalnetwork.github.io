@@ -98,12 +98,14 @@
         display: inline-block;
         margin-top: 10px;
         width: inherit;
+        min-height: 200px;
         font-family: 'Avenir';
         font-size: 16px;
         font-weight: 500;
         line-height: 1.56;
         letter-spacing: 0.5px;
         color: #141e6a;
+        text-align: center;
         white-space: normal;
       }
     }
@@ -117,10 +119,17 @@
     padding-right: 300px;
     padding-left: 300px;
     min-height: 100px;
+
+    & img {
+      width: 21px;
+      height: 25px;
+      margin-right: 18px;
+    }
   }
 
   & .roadmap_button {
     display: inline-flex;
+    min-width: 243px;
     padding: 22px 22px 19px;
     font-family: 'Avenir';
     font-size: 20px;
