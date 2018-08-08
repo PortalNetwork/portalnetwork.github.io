@@ -2,8 +2,15 @@
 @import "./index/_var.scss";
 @import "./index/_header.scss";
 @import "./index/_hero.scss";
-@import "./index/_summary.scss";
 @import "./index/_chain.scss";
+@import "./index/_summary.scss";
+@import "./index/_solution.scss";
+@import "./index/_roadmap.scss";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 a,
 h1,
 h2,
@@ -24,23 +31,12 @@ span {
   line-height: 1;
   color: #000;
 }
-
 img {
   display: block;
 }
-
-figure {
-  margin: 0px;
-}
-
 html,
 body {
-  width: 100%;
-  height: 100%;
-  * {
-    padding: 0px;
-    margin: 0px;
-  }
+  width: 100%; height: 100%;
 }
 
 #app {
