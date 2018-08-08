@@ -1,85 +1,15 @@
 @import "_var.scss";
 .footer {
-  background-color: #F4F4F4;
+  background-color: #141E6A;
 }
 
 .footer_content {
-  display: flex;
-  justify-content: space-between;
   max-width: $container;
-  margin: 0 auto;
-  padding: 54px 20px 80px 20px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 20px;
   box-sizing: border-box;
-  @extend %clear;
-  @media screen and (max-width: $pad) {
-    display: block;
-    padding: 54px 20px 30px 20px;
-  }
-  .item_list {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: $pad) {
-      margin: 0px auto 50px auto;
-    }
-    @media screen and (max-width: $mob) {
-      float: none;
-      margin: 0px auto 40px auto;
-    }
-    @media screen and (max-width: 440px) {
-      width: auto;
-    }
-    .item {
-      display: block;
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background-color: #232F88;
-      transition: background-color .5s;
-      position: relative;
-      &:hover {
-        background-color: $green;
-      }
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-      }
-    }
-    .telegram {
-      img {
-        width: 28px;
-      }
-    }
-    .github {
-      img {
-        width: 22px;
-      }
-    }
-    .twitter {
-      img {
-        width: 25px;
-      }
-    }
-    .fb {
-      img {
-        height: 27px;
-      }
-    }
-    .medium {
-      img {
-        width: 23px;
-      }
-    }
-    .reddit {
-      img {
-        width: 30px;
-      }
-    }
-  }
+  display: flex;
 }
 
 .subscribe_box {
@@ -182,6 +112,29 @@
     @media screen and (max-width: $pad) {
       width: 34%;
       height: 36px;
+    }
+  }
+}
+
+.footer_map {
+
+}
+
+.map_item {
+  h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  ul {
+    li {
+      a {
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
     }
   }
 }
