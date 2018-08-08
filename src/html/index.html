@@ -164,16 +164,42 @@
 
 		<!--   -->
 		<div class="solution">
-			<div class="contnet">
-				<h3>Solution</h3>
-				<div class="left">
-					123
-				</div>
-				<div class="right">
-					456
+			<h3><img src="images/index/Solution_word.png" alt=""></h3>
+			<div class="left">
+				<div class="section">
+					<h4>Non-technical Users Adaption</h4>
+					<div class="shodo">
+						<h5>shodo</h5>
+						<ul>
+							<li><a href="./showcase.html" target="_blank">Showcase<span class="sh"></span></a></li>
+							<li><a href="https://web.portal.network/" target="_blank">Web builder<span class="we"></span></a></li>
+							<li><a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Browser Extension<span class="be"></span></a></li>
+						</ul>
+					</div>
+					<div class="kokuno">
+						<h5>KOKUNO</h5>
+						<ul>
+							<li><a href="https://beta.portal.network/" target="_blank">Marketplace<span class="mp"></span></a></li>
+							<li><a href="javascript:;" target="_blank" @click="openMoreModal()">Domain manager<span class="dm"></span></a></li>
+							<li><a href="http://wns.portal.network/" target="_blank">BNS explorer<span class="bnsex"></span></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			
+			<div class="right">
+				<div class="section">
+					<h4>Technical Users Adaption</h4>
+					<div class="kaizen">
+						<h5>Kaizen</h5>
+						<p>Kaizen lets user learn, deploy, run and manage decentralized applications utilized in languages and frameworks such as Solidity, LLL, Node.js, IPFS, swarmDB, Golem, orbitDB, and many more. User can easily deploy and use decentralized application code with Kaizen CLI by utilizing developer tools like Truffle, Ganache, Web3, open zeppline, git, and Docker. </p>
+						<ul>
+							<li><a href="javascript:;" @click="openModal('cli')">Command Line Interface (CLI)</a></li>
+							<li><a href="javascript:;" @click="openModal('deploy')">Deploy Management System</a></li>
+							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Menu & Guideline</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 
 
@@ -272,20 +298,33 @@
 			<p class="copyright">© 2018 Portal.Network.</p>
 		</div>
 
-		<!-- <div v-show="isOpenPop" class="photoPop">
+		<div v-show="isOpenPop" class="photoPop">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(photo, photoIdx) in nowPhotos">
+					<div class="swiper-slide" v-for="(photo, photoIdx) in onePhotos">
 						<img :src="photo" alt="" />
+					</div>
+				</div>
+			</div>
+			<a @click="closeModal" class="closeBtn">
+				<img src="images/index/multiply.png" alt="">
+			</a>
+		</div>
+
+		<div v-show="isOpenPopMore" class="photoPop">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="(morePhoto, photoIdx) in morePhotos">
+						<img :src="morePhoto" alt="" />
 					</div>
 				</div>
 				<div class="swiper-button-prev swiper-button-white"></div>
 				<div class="swiper-button-next swiper-button-white"></div>
 			</div>
-			<a @click="closeModal" class="closeBtn">
-				<i class="fas fa-times fa-2x"></i>
+			<a @click="closeModalMore" class="closeBtn">
+				<img src="images/index/multiply.png" alt="">
 			</a>
-		</div> -->
+		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 </body>
