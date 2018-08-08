@@ -1,0 +1,10 @@
+.chain {
+  background-color: #141E6A;
+  .content {
+    max-width: $container;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+  }
+}

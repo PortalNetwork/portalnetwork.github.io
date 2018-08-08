@@ -1,9 +1,12 @@
 @import "_var.scss";
+
 .hero {
-	background-color: $green;
-	position: relative;
-	padding-top: 125px;
-	margin-top: 100px;
+	background-color: #2436B9;
+  position: relative;
+  margin-top: 114px;
+  padding: 60px 0px 174px 0px;
+	box-sizing: border-box;
+	/*
 	@media screen and (max-width: $pad) {
 		padding-top: 60px;
 		margin-top: 0;
@@ -11,24 +14,8 @@
 	@media screen and (max-width: $mob) {
 		padding-top: 20px;
 	}
-	&:after {
-		content: "";
-		display: block;
-		border-style: solid;
-		border-width: 0 0 538px 100vw;
-		border-color: transparent transparent #fff transparent;
-		background-color: $green;
-		margin-top: -95px;
-		@media screen and (max-width: 1200px) {
-			border-width: 0 0 260px 100vw;
-			margin-top: 0;
-		}
-		@media screen and (max-width: $mob) {
-			border-width: 0 0 160px 100vw;
-			margin-top: 0;
-		}
-	}
-	.section {
+	*/
+	.content {
 		@extend %clear;
 		max-width: $container;
     margin: 0px auto;
@@ -42,43 +29,51 @@
 	max-width: 546px;
 	float: left;
 	position: relative;
+	/*
 	@media screen and (max-width: $pad) {
 		max-width: 100%;
 		margin: 0 auto;
 		float: none;
 		text-align: center;
 	}
+	*/
 	h2 {
 		font-size: 50px;
-		font-weight: normal;
+    line-height: 1.2;
+		font-weight: 500;
 		letter-spacing: 1px;
-		line-height: 65px;
 		color: #fff;
-		padding-bottom: 20px;
+		margin-bottom: 15px;
 		white-space: nowrap;
+		/*
 		@media screen and (max-width: $pad) {
 			padding-bottom: 30px;
 			font-size: 35px;
 			line-height: 45px;
 			white-space: normal;
 		}
+		*/
 		span {
 			display: block;
-			font-size: 50px;
-			line-height: 80px;
+      font-size: 50px;
+      font-weight: 500;
+			line-height: 1.2;
 			color: #fff;
+			/*
 			@media screen and (max-width: $pad) {
 				font-size: 35px;
 				line-height: 45px;
 			}
+			*/
 		}
 	}
 	>p {
-		font-size: 23px;
+		font-size: 20px;
 		line-height: 30px;
 		color: #fff;
-		padding-bottom: 35px;
+		margin-bottom: 35px;
 		white-space: nowrap;
+		/*
 		@media screen and (max-width: $pad) {
 			width: 80%;
 			margin: 0 auto;
@@ -86,6 +81,7 @@
 			line-height: 30px;
 			white-space: normal;
 		}
+		*/
 	}
 }
 
@@ -94,6 +90,7 @@
 	top: 70px;
 	right: -85px;
 	margin: 0 auto;
+	/*
 	@media screen and (max-width: 1180px) {
 		width: 52vw;
 	}
@@ -104,12 +101,15 @@
 		right: auto;
 		padding-bottom: 46px;
 	}
+	*/
 	img {
 		width: 623px;
+		/*
 		@media screen and (max-width: $pad) {
 			width: 60%;
 			margin: 0 auto;
 		}
+		*/
 	}
 }
 
@@ -119,11 +119,13 @@
   justify-content: center;
   width: 286px;
   height: 60px;
-  background: linear-gradient(204.32deg, $blue_l 0%, $blue_d 100%);
-  border-radius: 30px;
+  background-color: $green;
+	border-radius: 30px;
+	/*
   @media screen and (max-width: $pad) {
     margin: 0px auto;
-  }
+	}
+	*/
   &:hover {
     span {
       img {
