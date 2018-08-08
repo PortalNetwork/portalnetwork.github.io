@@ -26,6 +26,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,500,600,400,700" rel="stylesheet">
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script>
@@ -51,9 +52,20 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <div id="app" :class="{active: isMenuOpen}" v-cloak>
-		<a class="menu_btn" @click="toggleMenuFn">
+		<a class="menu_btn">
+		<!-- <a class="menu_btn" @click="toggleMenuFn"> -->
 			<span></span>
 		</a>
+		<div class="social_media">
+			<ul>
+				<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+				<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+				<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+				<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+				<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+				<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+			</ul>
+		</div>
 		<div :class="['header',{fixed: isheaderFix}]">
 			<div class="header_content">
 				<h1><a href="./index.html" class="logo"></a></h1>
@@ -68,6 +80,9 @@
 						<li>
 							<a id="nav_showcase" href="./showcase.html" target="_blank">Showcase</a>
 						</li>
+						<li>
+							<a id="nav_hackthon" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -75,22 +90,25 @@
 
 		<div class="hero">
 			<div class="content">
-				<div class="hero_img" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back">
-					<img src="images/index/heroimg.png" alt="">
+				<div class="hero_img">
+					<img src="images/index/hero.png" alt="">
 				</div>
-				<div class="hero_info" data-aos="fade-down" data-aos-easing="ease-out-back">
+				<div class="hero_info">
 					<h2>Connect, Enhance<span>Existing Blockchain</span><span>Technologies.</span></h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
-					<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
-						<span><img src="images/index/telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
+					<div class="btn_list">
+						<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
+							<span><img src="images/index/join_telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
+						<a class="play_video" href="https://www.youtube.com/watch?v=ja5QtbHVM7U" target="_blank"><img src="images/index/play.png" alt=""></a>
+					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="summary">
+		<div class="summary what">
 			<div class="content">
 				<h3>What is Portal Network</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				<p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
 			</div>
 		</div>
 
@@ -103,16 +121,28 @@
 		</div>
 
 
-		<div class="summary">
+		<div class="summary proof">
 			<div class="content">
-				<h3>Proof of Adaption</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				<a class="link" href="javascript:;" target="_blank">Register New Proof</a>
+				<div class="section">
+					<h3>What is Proof of Adoption</h3>
+					<p>Portal Network’s mission is to enable both technical & non-technical user to easily deploy/host/connect/user DWeb & DApp so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.</p>
+					<p>Proof of Adoption provides both blockchain and crypto community a series of tools to easily interact and contribute their unique talents to the decentralized world.</p>
+				</div>
 			</div>
 		</div>
 
 		<!--   -->
 		<div class="solution">
-
+			<div class="contnet">
+				<h3>Solution</h3>
+				<div class="left">
+					123
+				</div>
+				<div class="right">
+					456
+				</div>
+			</div>
 			
 		</div>
 
@@ -147,22 +177,26 @@
 			</div>
 		</div>
 		<div class="partnership">
-			<h3 class="partner_title">PARTNERSHIP</h3>
-			<div class="partner_area">
-				<a href="https://bluzelle.com/" target="_blank" class="bluzelle">
-					<img src="images/index/partner_bluzelleLogo.png" alt="">
-				</a>
-				<a href="https://wanchain.org/" target="_blank" class="wan">
-					<img src="images/index/partner_wanchain.png" alt="">
-				</a>
+			<div class="content">
+				<h3 class="partner_title">PARTNERSHIP</h3>
+				<div class="partner_area">
+					<a href="https://bluzelle.com/" target="_blank" class="bluzelle">
+						<img src="images/index/partner_bluzelleLogo.png" alt="">
+					</a>
+					<a href="https://wanchain.org/" target="_blank" class="wan">
+						<img src="images/index/partner_wanchain.png" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="mediapartner">
-			<h3 class="partner_title">MEDIA PARTNER</h3>
-			<div class="partner_area">
-				<a href="https://www.coingecko.com/en" target="_blank">
-					<img class="Bluzelle" src="images/index/partner_coingecko.png" alt="">
-				</a>
+			<div class="content">
+				<h3 class="partner_title">MEDIA PARTNER</h3>
+				<div class="partner_area">
+					<a href="https://www.coingecko.com/en" target="_blank">
+						<img class="Bluzelle" src="images/index/partner_coingecko.png" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="footer">
@@ -184,9 +218,9 @@
 					<div class="map_item">
 						<h4>News</h4>
 						<ul>
-							<li><a href="javascript:;" target="_blank">Blog</a></li>
-							<li><a href="javascript:;" target="_blank">Event</a></li>
-							<li><a href="javascript:;" target="_blank">Press</a></li>
+							<li><a href="./blog.html" target="_blank">Blog</a></li>
+							<li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
+							<!-- <li><a href="javascript:;" target="_blank">Press</a></li> -->
 						</ul>
 					</div>
 					<div class="map_item">
@@ -199,7 +233,6 @@
 					<div class="map_item">
 						<h4>Help Center</h4>
 						<ul>
-							<li><a href="javascript:;" target="_blank">Help Center</a></li>
 							<li><a href="javascript:;" target="_blank">FAQ</a></li>
 							<li><a href="javascript:;" target="_blank">Contact Us</a></li>
 						</ul>
@@ -208,7 +241,23 @@
 			</div>
 			<p class="copyright">© 2018 Portal.Network.</p>
 		</div>
+
+		<!-- <div v-show="isOpenPop" class="photoPop">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="(photo, photoIdx) in nowPhotos">
+						<img :src="photo" alt="" />
+					</div>
+				</div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+			</div>
+			<a @click="closeModal" class="closeBtn">
+				<i class="fas fa-times fa-2x"></i>
+			</a>
+		</div> -->
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
 </body>
 
 </html>

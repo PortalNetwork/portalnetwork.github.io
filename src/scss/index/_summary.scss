@@ -1,7 +1,44 @@
 @import "_var.scss";
 .summary {
-  padding: 90px 0px;
-  box-sizing: border-box;
+  background-color: #F7F6F4;
+  &.what {
+    .content {
+      width: 100%;
+      height: 100%;
+      padding: 90px 0px;
+      background: url(/images/index/whatIs_bg.png?5f4518e0) center right no-repeat;
+      background-size: 960px auto;
+    }
+  }
+  &.proof {
+    padding: 90px 0px;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .link {
+      display: block;
+      width: 242px;
+      height: 68px;
+      line-height: 68px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $text;
+      letter-spacing: 1px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #fff;
+      border-right: solid 2px #141E6A;
+      border-bottom: solid 2px #141E6A;
+    }
+    .section {
+      width: 580px;
+      p {
+        text-align: left;
+      }
+    }
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -10,7 +47,7 @@
     box-sizing: border-box;
     h3 {
       font-size: 40px;
-      font-weight: 600;
+      font-weight: 500;
       color: $text;
       letter-spacing: 1px;
       text-align: center;
@@ -18,10 +55,15 @@
     }
     p {
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 500;
       color: $text;
       line-height: 1.5;
       text-align: center;
+      width: 85%;
+      margin: 0 auto;
+      &+p {
+        margin-top: 20px;
+      }
     }
   }
 }
