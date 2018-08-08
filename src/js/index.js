@@ -55,7 +55,7 @@ new Vue({
           photo = ["./images/index/deploys.png"];
           break;
         case "toolkits":
-          photo = ["./images/index/toolkits.png"];
+          photo = ["./images/index/toolkit.png"];
           break;
       }
       this.onePhotos = photo;
