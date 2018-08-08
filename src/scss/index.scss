@@ -41,6 +41,12 @@ html, body {
 a{
   cursor: pointer;
 }
+
+body {
+  &.fixBody {
+    overflow: hidden;
+  }
+}
 #app {
   width: 100%;
   overflow: hidden;

@@ -3,6 +3,7 @@ import axios from 'axios';
 new Vue({
   el: '#app',
   data: {
+    swiper: null,
     isMenuOpen: false,
     isheaderFix: false,
     scroll: 0,
@@ -17,13 +18,10 @@ new Vue({
     onePhotos: [],
     isOpenPop: false,
     isOpenPopMore: false,
-    morePhotos: [
-      "./images/index/dom_01.png",
-      "./images/index/dom_02.png",
-      "./images/index/dom_03.png",
-      "./images/index/dom_04.png",
-      "./images/index/dom_05.png",
-    ]
+    morePhotos: [],
+  },
+  watch: {
+    
   },
   methods: {
     toggleMenuFn() {
@@ -54,30 +52,53 @@ new Vue({
     },
     openModal: function(name) {
       this.isOpenPop = true;
-      let pic = "";
+      let photo = [];
       switch(name){
-        case "cli":
-          pic = `./images/index/cli.png`;
-          break;
         case "deploy":
-          pic = `./images/index/deploy.png`;
+          photo = ["./images/index/deploys.png"];
           break;
         case "toolkits":
-          pic = `./images/index/toolkits.png`;
+          photo = ["./images/index/toolkits.png"];
           break;
       }
-      this.onePhotos.push(pic);
+      this.onePhotos = photo;
+      debugger;
+      $("body").addClass("fixBody");
     },
     closeModal: function() {
       this.isOpenPop = false;
       this.onePhotos = [];
+      $("body").removeClass("fixBody");
     },
-    openMoreModal: function() {
+    openMoreModal: function(name) {
       this.isOpenPopMore = true;
+      let photo = [];
+      switch(name){
+        case "cli":
+        photo = [
+          "./images/index/CLI_1.png",
+          "./images/index/CLI_2.png",
+          "./images/index/CLI_3.png",
+          "./images/index/CLI_4.png",
+        ];
+        break;
+        case "domain":
+        photo = [
+          "./images/index/dom_01.png",
+          "./images/index/dom_02.png",
+          "./images/index/dom_03.png",
+          "./images/index/dom_04.png",
+          "./images/index/dom_05.png",
+        ];
+        break;
+      }
+      this.morePhotos = photo;
+      $("body").addClass("fixBody");
     },
     closeModalMore: function() {
       this.isOpenPopMore = false;
       this.morePhotos = [];
+      $("body").removeClass("fixBody");
     },
     coming: function () {
       alert('coming soon');
@@ -92,7 +113,6 @@ new Vue({
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
-        width: '100%'
       },
       navigation: {
         nextEl: '.swiper-button-next',

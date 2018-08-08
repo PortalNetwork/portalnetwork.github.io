@@ -30,6 +30,10 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
@@ -181,7 +185,7 @@
 						<h5>KOKUNO</h5>
 						<ul>
 							<li><a href="https://beta.portal.network/" target="_blank">Marketplace<span class="mp"></span></a></li>
-							<li><a href="javascript:;" target="_blank" @click="openMoreModal()">Domain manager<span class="dm"></span></a></li>
+							<li><a href="javascript:;" target="_blank" @click="openMoreModal('domain')">Domain manager<span class="dm"></span></a></li>
 							<li><a href="http://wns.portal.network/" target="_blank">BNS explorer<span class="bnsex"></span></a></li>
 						</ul>
 					</div>
@@ -194,7 +198,7 @@
 						<h5>Kaizen</h5>
 						<p>Kaizen lets user learn, deploy, run and manage decentralized applications utilized in languages and frameworks such as Solidity, LLL, Node.js, IPFS, swarmDB, Golem, orbitDB, and many more. User can easily deploy and use decentralized application code with Kaizen CLI by utilizing developer tools like Truffle, Ganache, Web3, open zeppline, git, and Docker. </p>
 						<ul>
-							<li><a href="javascript:;" @click="openModal('cli')">Command Line Interface (CLI)</a></li>
+							<li><a href="javascript:;" @click="openMoreModal('cli')">Command Line Interface (CLI)</a></li>
 							<li><a href="javascript:;" @click="openModal('deploy')">Deploy Management System</a></li>
 							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Menu & Guideline</a></li>
 						</ul>
