@@ -1,6 +1,7 @@
 @import "_var.scss";
 .footer {
   background-color: #141E6A;
+  padding: 50px 20px;
 }
 
 .footer_content {
@@ -8,132 +9,171 @@
   width: 100%;
   margin: 0px auto;
   padding: 0px 20px;
-  box-sizing: border-box;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+// .subscribe_box {
+//   width: 450px;
+//   @media screen and (max-width: $pad) {
+//     margin: 0px auto;
+//   }
+//   @media screen and (max-width: $mob) {
+//     width: 100%;
+//   }
+//   >p {
+//     display: block;
+//     font-size: 16px;
+//     line-height: 19px;
+//     color: #4A4A4A;
+//     padding-left: 17px;
+//     text-align: left;
+//     @media screen and (max-width: $pad) {
+//       font-size: 16px;
+//       line-height: 22px;
+//       text-align: center;
+//       padding-left: 0px;
+//     }
+//   }
+// }
+
+// #mc_embed_signup_scroll {
+//   width: 100%;
+//   overflow: hidden;
+//   padding-bottom: 20px;
+//   input.email {
+//     width: 300px;
+//     height: 60px;
+//     font-size: 20px;
+//     color: #B8B8B8;
+//     border: 0;
+//     border-top-left-radius: 30px;
+//     border-bottom-left-radius: 30px;
+//     float: left;
+//     padding-left: 32px;
+//     box-sizing: border-box;
+//     &:focus {
+//       outline: none;
+//     }
+//     @media screen and (max-width: $pad) {
+//       width: 70%;
+//       font-size: 15px;
+//     }
+//   }
+//   .clearbox {
+//     display: block;
+//     float: left;
+//     @media screen and (max-width: $pad) {
+//       width: 30%;
+//     }
+//     >input {
+//       display: block;
+//       font-size: 16px;
+//       width: 150px;
+//       height: 60px;
+//       float: left;
+//       color: #fff;
+//       transition: color .5s;
+//       background: linear-gradient(204.32deg, $blue_l 0%, $blue_d 100%);
+//       border: 0;
+//       border-top-right-radius: 30px;
+//       border-bottom-right-radius: 30px;
+//       &:hover {
+//         color: $green;
+//       }
+//       @media screen and (max-width: $pad) {
+//         width: 100%;
+//         font-size: 15px;
+//       }
+//     }
+//   }
+//   p {
+//     font-family: Gotham;
+//     font-size: 18px;
+//     font-weight: 500;
+//     line-height: 1.67;
+//     letter-spacing: 2px;
+//     color: #ffffff;
+//     padding-top: 44px;
+//   }
+//   a {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 192px;
+//     height: 56px;
+//     object-fit: contain;
+//     border-radius: 100px;
+//     background-color: #324c9a;
+//     font-family: Gotham;
+//     font-size: 16px;
+//     letter-spacing: 1px;
+//     color: #ffffff;
+//     margin-top: 48px;
+//     @media screen and (max-width: $pad) {
+//       width: 34%;
+//       height: 36px;
+//     }
+//   }
+// }
 
 .subscribe_box {
   width: 450px;
-  @media screen and (max-width: $pad) {
-    margin: 0px auto;
-  }
-  @media screen and (max-width: $mob) {
+  .input_email {
     width: 100%;
-  }
-  >p {
-    display: block;
-    font-size: 16px;
-    line-height: 19px;
-    color: #4A4A4A;
-    padding-left: 17px;
-    text-align: left;
-    @media screen and (max-width: $pad) {
-      font-size: 16px;
-      line-height: 22px;
-      text-align: center;
-      padding-left: 0px;
-    }
-  }
-}
-
-#mc_embed_signup_scroll {
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 20px;
-  input.email {
-    width: 300px;
     height: 60px;
-    font-size: 20px;
+    line-height: 60px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
     color: #B8B8B8;
-    border: 0;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    float: left;
-    padding-left: 32px;
-    box-sizing: border-box;
+    outline: none;
+    border: none;
+    padding: 0px 40px 0px 25px;
+    &::-webkit-input-placeholder {
+      color: #B8B8B8;
+    }
+    &::-moz-placeholder{
+      color: #B8B8B8;
+    }
     &:focus {
       outline: none;
     }
-    @media screen and (max-width: $pad) {
-      width: 70%;
-      font-size: 15px;
-    }
   }
-  .clearbox {
-    display: block;
-    float: left;
-    @media screen and (max-width: $pad) {
-      width: 30%;
-    }
-    >input {
-      display: block;
-      font-size: 16px;
-      width: 150px;
-      height: 60px;
-      float: left;
-      color: #fff;
-      transition: color .5s;
-      background: linear-gradient(204.32deg, $blue_l 0%, $blue_d 100%);
-      border: 0;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      &:hover {
-        color: $green;
-      }
-      @media screen and (max-width: $pad) {
-        width: 100%;
-        font-size: 15px;
-      }
-    }
-  }
-  p {
-    font-family: Gotham;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.67;
-    letter-spacing: 2px;
-    color: #ffffff;
-    padding-top: 44px;
-  }
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 192px;
-    height: 56px;
-    object-fit: contain;
-    border-radius: 100px;
-    background-color: #324c9a;
-    font-family: Gotham;
-    font-size: 16px;
-    letter-spacing: 1px;
-    color: #ffffff;
-    margin-top: 48px;
-    @media screen and (max-width: $pad) {
-      width: 34%;
-      height: 36px;
-    }
-  }
+}
+
+.submit_btn {
+
 }
 
 .footer_map {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .map_item {
+  &+.map_item {
+    margin-left: 60px;
+  }
   h4 {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   ul {
     li {
+      margin-bottom: 10px;
       a {
         display: block;
         font-size: 16px;
-        font-weight: 400;
-        color: #fff;
+        font-weight: 300;
+        color: rgba(#fff,0.8);
+        transition: color .5s;
+        &:hover {
+          color: rgba(#fff,1);
+        }
       }
     }
   }
