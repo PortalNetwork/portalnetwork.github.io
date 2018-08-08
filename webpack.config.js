@@ -4,8 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 function GetRandom(minNum, maxNum) {
 	return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
 }
-
-console.log(path);
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
@@ -209,6 +207,18 @@ module.exports = {
       filename: 'decentralized.html',
       template: 'html/decentralized.html',
       chunks: [ 'vendor', 'blog' ],
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Technical Paper',
+      filename: 'tp.html',
+      template: 'html/tp.html',
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'White Paper',
+      filename: 'wp.html',
+      template: 'html/wp.html',
       hash: true,
     }),
   ]

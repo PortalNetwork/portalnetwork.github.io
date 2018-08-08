@@ -1,10 +1,140 @@
 .chain {
-  background-color: #141E6A;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  transition: height .3s;
+  &.open{
+    height: 700px;
+  }
+  background-color: #141e6a;
   .content {
-    max-width: $container;
     width: 100%;
+    max-width: 873px;
     margin: 0px auto;
-    padding: 0px 20px;
-    box-sizing: border-box;
+    >header{
+      width: 100%;
+      height: 264px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .portal{
+        width: 148px;
+        height: 100%;
+        padding-top: 46px;
+        >img{
+          width: 100%;
+          height: auto;
+        }
+        >h3{
+          font-family: Avenir;
+          font-size: 20px;
+          font-weight: 500;
+          text-align: center;
+          color: #f7f6f4;
+          padding-top: 28px;
+        }
+      }
+      ul{
+        width: 410px;
+        height: auto;
+        >li{
+          width: 20%;
+          height: 76px;
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          >a{
+            display: block;
+            width: 52px;
+            height: 57px;
+            >img{
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .item_schedule{
+      width: 100%;
+      height: 436px;
+      // background-color: rgba(#fff, 0.5);
+      ul{
+        width: 100%;
+        li{
+          display: block;
+          width: 50%;
+          height: 75px;
+          float: left;
+          padding: 0 40px;
+          margin-top: 23px;
+          .item_title{
+            width: 100%;
+            height: 30px;
+            >h1{
+              position: relative;
+              font-family: Avenir;
+              font-size: 20px;
+              font-weight: 500;
+              color: #15dacb;
+              padding-left: 30px;
+              padding-top: 4px;
+              float: left;
+              &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                content:"";
+                width: 22px;
+                height: 24px;
+                background-image: url("~bullet@2x.png");
+                background-size: 100% 100%;
+              }
+            }
+            >a{
+              display: block;
+              width: 19px;
+              height: 19px;
+              float: left;
+              background-color: red;
+              margin-top: 4px;
+              margin-left: 8px;
+            }
+          }
+          p.description{
+            color: #fff;
+            padding-left: 32px;
+          }
+          .percentage_box{
+            width: 100%;
+            height: 15px;
+            margin-top: 15px;
+            >.percentage_bg{
+              position: relative;
+              width: 75%;
+              height: 6px;
+              background-color: #0c1346;
+              float: left;
+              margin-left: 34px;
+              margin-top: 4px;
+              .percentage_bar{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background-color: #15dacb;
+              }
+            }
+            h2{
+              float: right;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
   }
 }

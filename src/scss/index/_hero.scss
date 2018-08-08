@@ -4,7 +4,7 @@
 	background-color: #2436B9;
   position: relative;
   margin-top: 114px;
-  padding: 60px 0px 174px 0px;
+  padding: 60px 0px 200px 0px;
 	box-sizing: border-box;
 	/*
 	@media screen and (max-width: $pad) {
@@ -29,6 +29,7 @@
 	max-width: 546px;
 	float: left;
 	position: relative;
+	margin-top: 20px;
 	/*
 	@media screen and (max-width: $pad) {
 		max-width: 100%;
@@ -43,7 +44,7 @@
 		font-weight: 500;
 		letter-spacing: 1px;
 		color: #fff;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		white-space: nowrap;
 		/*
 		@media screen and (max-width: $pad) {
@@ -87,9 +88,9 @@
 
 .hero_img {
 	position: absolute;
-	top: 70px;
-	right: -85px;
-	margin: 0 auto;
+	top: -40px;
+	right: 0px;
+	// margin: 0 auto;
 	/*
 	@media screen and (max-width: 1180px) {
 		width: 52vw;
@@ -103,7 +104,9 @@
 	}
 	*/
 	img {
-		width: 623px;
+		width: 400px;
+		transform: translate3d(0px, -10px, 0px);
+		animation: run 4s infinite alternate;
 		/*
 		@media screen and (max-width: $pad) {
 			width: 60%;
@@ -111,6 +114,21 @@
 		}
 		*/
 	}
+}
+
+@keyframes run {
+  0% {
+    transform: translate3d(0px, -10px, 0px);
+	}
+	50% {
+		transform: translate3d(0px, 6px, 0px);
+	}
+}
+
+.btn_list {
+	display: flex;
+	justify-content: space-between;
+	width: 82%;
 }
 
 .telegram_btn {
@@ -135,16 +153,17 @@
   }
   span {
     display: inline-block;
-    padding-right: 20px;
+    padding-right: 15px;
     img {
       width: 27px;
       transform: translate3d(-5px, 0px, 0px);
     }
   }
   p {
-    font-size: 20px;
+		font-size: 18px;
+		font-weight: 500;
     line-height: 60px;
-    color: #fff;
+    color: #141E6A;
   }
 }
 
@@ -155,4 +174,13 @@
   100% {
     transform: translate3d(6px, 0px, 0px);
   }
+}
+
+.play_video {
+	display: block;
+	width: 61px;
+	height: 61px;
+	img {
+		width: 100%;
+	}
 }

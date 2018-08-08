@@ -1,87 +1,126 @@
-// import {Carousel3d,Slide} from 'vue-carousel-3d';
-// import {CLIENT_RENEG_WINDOW} from 'tls';
-import animateScrollTo from 'animated-scroll-to';
 import '../scss/index.scss';
-
-function getUrl() {
-  var strUrl = location.search;
-  var getPara, ParaVal;
-  var aryPara = [];
-  if (strUrl.indexOf("?") != -1) {
-    var getSearch = strUrl.split("?");
-    getPara = getSearch[1].split("&");
-    for (var i = 0; i < getPara.length; i++) {
-      ParaVal = getPara[i].split("=");
-      aryPara.push(ParaVal[0]);
-      aryPara[ParaVal[0]] = ParaVal[1];
-    }
-  }
-  return aryPara;
-}
-
-// Vue.use(Carousel3d);
-
+import axios from 'axios';
 new Vue({
   el: '#app',
   data: {
+    swipers: null,
     isMenuOpen: false,
-    // slides: [{
-    //   id: "slides_answer_link",
-    //   src: "images/index/showcase01.png",
-    //   url: "https://ipfs.infura.io/ipfs/QmcrCz9kLeBg1n3D6vYZfwC4YorhgTGoe4EEDuSkw11xPK/"
-    // }, {
-    //   id: "slides_hozt_link",
-    //   src: "images/index/showcase02.png",
-    //   url: "https://ipfs.infura.io/ipfs/QmUm2i9tg69RvB4SCdKMF35m9JoKu7kMp4Y78qwfsSzL8D/"
-    // }, {
-    //   id: "slides_wize_link",
-    //   src: "images/index/showcase03.png",
-    //   url: "https://ipfs.infura.io/ipfs/QmRVCSosZzqDVwpJZAXrJbhYbHZFQ4kuZbwg6Z5RBc7iFu/"
-    // }, ],
-    // isYoutubeShow: false,
-    // shareOpen: false,
     isheaderFix: false,
     scroll: 0,
+    nowIdx: 0,
+    blockchain:[],
+    detailItem: [],
+    logoObj: {
+      "title": "PORTAL",
+      "icon": "./images/icon/portal@2x.png",
+    },
+    isOpenChainHeight: false,
+    onePhotos: [],
+    isOpenPop: false,
+    isOpenPopMore: false,
+    morePhotos: [],
   },
-  // components: {
-  //   Carousel3d,
-  //   Slide
-  // },
   methods: {
     toggleMenuFn() {
       this.isMenuOpen = !this.isMenuOpen;
     },
-    // comingsoonFn() {
-    //   alert("coming soon");
-    // },
-    gaSeedPageView(name) {
-      ga('send', 'event', name, 'click', );
-      let debug = getUrl();
-      if (debug["debug"] == "true") console.log("GA PageView -> ", name);
-    },
-    youtubeShow() {
-      this.isYoutubeShow = !this.isYoutubeShow;
-    },
-    // fixedPopOpen() {
-    //   this.shareOpen = !this.shareOpen;
-    // },
-    // gotoPageTop() {
-    //   animateScrollTo(0);
-    // },
     scrollFn() {
       this.scroll = document.documentElement.scrollTop;
       this.isheaderFix = this.scroll > 150;
+    },
+    blockchainData(res){
+      this.blockchain = res.data;
+    },
+    onChaeckBlock(obj){
+      this.detailItem = obj.detail;
+      this.isOpenChainHeight = true;
+      this.logoObj = {
+        "title": obj.title,
+        "icon": obj.icon,
+      }
+    },
+    resetBlock(){
+      this.isOpenChainHeight = false;
+      this.detailItem = [];
+      this.logoObj = {
+        "title": "PORTAL",
+        "icon": "./images/icon/portal@2x.png",
+      }
+    },
+    openModal(name) {
+      this.isOpenPop = true;
+      let photo = [];
+      switch(name){
+        case "deploy":
+          photo = ["./images/index/deploys.png"];
+          break;
+        case "toolkits":
+          photo = ["./images/index/toolkits.png"];
+          break;
+      }
+      this.onePhotos = photo;
+      $("body").addClass("fixBody");
+    },
+    closeModal() {
+      this.isOpenPop = false;
+      this.onePhotos = [];
+      $("body").removeClass("fixBody");
+    },
+    openMoreModal(name) {
+      this.isOpenPopMore = true;
+      let photo = [];
+      switch(name){
+        case "cli":
+          photo = [
+            "./images/index/CLI_1.png",
+            "./images/index/CLI_2.png",
+            "./images/index/CLI_3.png",
+            "./images/index/CLI_4.png",
+          ];
+          break;
+        case "domain":
+          photo = [
+            "./images/index/dom_01.png",
+            "./images/index/dom_02.png",
+            "./images/index/dom_03.png",
+            "./images/index/dom_04.png",
+            "./images/index/dom_05.png",
+          ];
+          break;
+      }
+      this.morePhotos = photo;
+
+      setTimeout(() => {
+        this.swipers[0].update();
+        this.swipers[1].update();
+      }, 500);
+
+      $("body").addClass("fixBody");
+    },
+    closeModalMore() {
+      this.isOpenPopMore = false;
+      this.morePhotos = [];
+      $("body").removeClass("fixBody");
+    },
+    coming () {
+      alert('coming soon');
     }
   },
   mounted() {
-    // AOS.init();
+    AOS.init();
     window.addEventListener('scroll', this.scrollFn);
-    // document.getElementsByClassName("next")[0].addEventListener("click", () => {
-    //   this.gaSeedPageView("slides_next_button");
-    // });
-    // document.getElementsByClassName("prev")[0].addEventListener("click", () => {
-    //   this.gaSeedPageView("slides_prev_button");
-    // });
+    axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
 
+    this.swipers = new Swiper('.swiper-container', {
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
 });
