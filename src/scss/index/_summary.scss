@@ -1,0 +1,27 @@
+@import "_var.scss";
+.summary {
+  padding: 90px 0px;
+  box-sizing: border-box;
+  .content {
+    max-width: $container;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    h3 {
+      font-size: 40px;
+      font-weight: 600;
+      color: $text;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      color: $text;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+}

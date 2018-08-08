@@ -1,11 +1,11 @@
-$container: 1100px;
-$pad: 980px;
+$container: 960px;
+$pad: 960px;
 $mob: 720px;
 $smob: 340px;
 $blue_d: #0027EC;
 $blue_l: #0084F2;
 $indigo: #3442b0;
-$green: #00D5BF;
+// $green: #00D5BF;
 /*product*/
 $green_text: #23D6A3;
 $gray_text: #616161;
@@ -17,3 +17,6 @@ $gray_text: #616161;
 		clear: both;
 	}
 }
+/*新版landing page東西加在以下好整理*/
+$green: #15DACB;
+$text: #141E6A;

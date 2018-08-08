@@ -55,40 +55,61 @@
 			<span></span>
 		</a>
 		<div :class="['header',{fixed: isheaderFix}]">
-			<div class="section">
+			<div class="header_content">
 				<h1><a href="./index.html" class="logo"></a></h1>
 				<nav>
 					<ul class="menu">
 						<li>
-							<a id="nav_blog" @click="gaSeedPageView('blog')" href="./blog.html" target="_blank">Blog</a>
+							<a id="nav_blog" href="./blog.html" target="_blank">Blog</a>
 						</li>
 						<li>
-							<a id="nav_roadmap" @click="gaSeedPageView('roadmap')" href="./roadmap.html" target="_blank">Roadmap</a>
+							<a id="nav_roadmap" href="./roadmap.html" target="_blank">Roadmap</a>
 						</li>
 						<li>
-							<a id="nav_showcase" @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
-						</li>
-						<li>
-							<a id="nav_hackthon" @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+							<a id="nav_showcase" href="./showcase.html" target="_blank">Showcase</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
+
 		<div class="hero">
-			<div class="section">
-				<div class="hero_img" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back">
+			<div class="content">
+				<!-- <div class="hero_img" data-aos="fade-down" data-aos-delay="400" data-aos-easing="ease-out-back"> -->
+				<div class="hero_img">
 					<img src="images/index/heroimg.png" alt="">
 				</div>
-				<div class="hero_info" data-aos="fade-down" data-aos-easing="ease-out-back">
-					<h2>Connect, enhance existing<span>blockchain technologies.</span>
-					</h2>
+				<!-- <div class="hero_info" data-aos="fade-down" data-aos-easing="ease-out-back"></div> -->
+				<div class="hero_info">
+					<h2>Connect, Enhance<span>Existing Blockchain</span><span>Technologies.</span></h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
 					<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
-						<span><img src="images/index/telegram.png" alt=""></span><p>Join our telegram</p></a>
+						<span><img src="images/index/telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
 				</div>
 			</div>
 		</div>
+
+		<div class="summary">
+			<div class="content">
+				<h3>What is Portal Network</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			</div>
+		</div>
+
+		<div class="chain">
+			<div class="content">
+				<p style="color: #fff">12333</p>
+			</div>
+		</div>
+
+		<div class="summary">
+			<div class="content">
+				<h3>Proof of Adaption</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+			</div>
+		</div>
+
+		<!---
 		<div class="products">
 			<div class="section">
 				<h3>PRODUCTS</h3>
@@ -318,8 +339,9 @@
 				</ul>
 			</div>
 		</div>
+		-->
 		<div class="ecosystem">
-			<div class="section">
+			<div class="content">
 				<h3 class="partner_title">ECOSYSTEM</h3>
 				<div class="partner_area">
 					<a href="https://www.ethereum.org/" target="_blank">
