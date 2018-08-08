@@ -79,11 +79,15 @@ new Vue({
       this.isOpenPopMore = false;
       this.morePhotos = [];
     },
+    coming: function () {
+      alert('coming soon');
+    }
   },
   mounted() {
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
+
     this.swiper = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
