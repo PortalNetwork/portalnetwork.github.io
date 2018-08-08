@@ -3,6 +3,7 @@ import axios from 'axios';
 new Vue({
   el: '#app',
   data: {
+    swipers: null,
     isMenuOpen: false,
     isheaderFix: false,
     scroll: 0,
@@ -24,6 +25,18 @@ new Vue({
       "./images/index/dom_04.png",
       "./images/index/dom_05.png",
     ]
+  },
+  watch:{
+    isOpenPop(){
+      setTimeout(() => {
+        this.swipers[0].update();
+      }, 0);
+    },
+    isOpenPopMore(){
+      setTimeout(() => {
+        this.swipers[1].update();
+      }, 0);
+    }
   },
   methods: {
     toggleMenuFn() {
@@ -52,7 +65,7 @@ new Vue({
         "icon": "./images/icon/portal@2x.png",
       }
     },
-    openModal: function(name) {
+    openModal(name) {
       this.isOpenPop = true;
       let pic = "";
       switch(name){
@@ -67,19 +80,20 @@ new Vue({
           break;
       }
       this.onePhotos.push(pic);
+
     },
-    closeModal: function() {
+    closeModal() {
       this.isOpenPop = false;
       this.onePhotos = [];
     },
-    openMoreModal: function() {
+    openMoreModal() {
       this.isOpenPopMore = true;
     },
-    closeModalMore: function() {
+    closeModalMore() {
       this.isOpenPopMore = false;
       this.morePhotos = [];
     },
-    coming: function () {
+    coming () {
       alert('coming soon');
     }
   },
@@ -88,7 +102,7 @@ new Vue({
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
 
-    this.swiper = new Swiper('.swiper-container', {
+    this.swipers = new Swiper('.swiper-container', {
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',

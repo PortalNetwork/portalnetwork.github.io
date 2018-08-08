@@ -209,5 +209,17 @@ module.exports = {
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
+    new HtmlWebpackPlugin({
+      title: 'Technical Paper',
+      filename: 'tp.html',
+      template: 'html/tp.html',
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'White Paper',
+      filename: 'wp.html',
+      template: 'html/wp.html',
+      hash: true,
+    }),
   ]
 }
