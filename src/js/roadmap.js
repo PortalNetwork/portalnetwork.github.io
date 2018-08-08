@@ -158,7 +158,7 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Portalnetwork intergration with Wanchain',
+            title: 'Portal Network intergration with Wanchain',
             content: '1. Deploy wanchain public resolver <a href="https://explorer.wanchain.org/block/addr/0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014" target="_blank" class="link_text">0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014</span>',
             photos: null,
             location: '',
@@ -187,7 +187,7 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Portalnetwork intergration with Wanchain',
+            title: 'Portal Network intergration with Wanchain',
             content: '1. Deploy wanchain infura <a href="http://wanchain.portal.network/" target="_blank" class="link_text">wanchain.portal.network</a>',
             photos: null,
             location: '',
