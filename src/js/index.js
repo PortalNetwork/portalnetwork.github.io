@@ -92,6 +92,7 @@ new Vue({
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
+        width: '100%'
       },
       navigation: {
         nextEl: '.swiper-button-next',
