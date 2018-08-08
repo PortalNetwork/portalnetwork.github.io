@@ -74,7 +74,7 @@ new Vue({
     }
   },
   mounted() {
-    // AOS.init();
+    AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     // document.getElementsByClassName("next")[0].addEventListener("click", () => {
     //   this.gaSeedPageView("slides_next_button");

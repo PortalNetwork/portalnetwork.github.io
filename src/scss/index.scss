@@ -4,14 +4,6 @@
 @import "./index/_hero.scss";
 @import "./index/_summary.scss";
 @import "./index/_chain.scss";
-/*
-@import "./index/_products.scss";
-@import "./index/_service.scss";
-@import "./index/_what.scss";
-@import "./index/_comparison.scss";
-@import "./index/_introduction.scss";
-*/
-@import "./index/_footer.scss";
 a,
 h1,
 h2,
@@ -111,7 +103,7 @@ body {
       border-width: 0 100vw 156px 0;
     }
   }
-  .section {
+  .content {
     max-width: $container;
     margin: 0px auto 100px auto;
     padding: 0 20px;
@@ -216,18 +208,5 @@ body {
         max-width: 138px;
       }
     }
-  }
-}
-
-/* 輪播套件style */
-.carousel-3d-slide {
-  background-color: transparent !important;
-}
-
-.prev,
-.next {
-  span {
-    color: #fff !important;
-    font-size: 60px !important;
   }
 }
