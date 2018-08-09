@@ -328,3 +328,28 @@ nav {
     }
   }
 }
+
+.footer {
+  max-width: $container;
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  ul {
+    li {
+      display: inline-block;
+      margin: 0px 10px;
+      a {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #222;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
