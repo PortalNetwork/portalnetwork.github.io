@@ -20,7 +20,7 @@
   }
 
   & .big_issues_container {
-    width: 70%;
+    width: 71%;
     margin: 0 auto;
     overflow-x: auto;
     overflow-y: hidden;
@@ -114,6 +114,9 @@
           font-size: 12px;
           line-height: 1.66;
           color: #141e6a;
+          &+p {
+            margin-top: 10px;
+          }
         }
       }
     }
