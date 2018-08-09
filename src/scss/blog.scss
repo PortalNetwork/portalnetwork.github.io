@@ -337,6 +337,7 @@ nav {
   box-sizing: border-box;
   text-align: center;
   ul {
+      margin-bottom: 20px;
     li {
       display: inline-block;
       margin: 0px 10px;
@@ -351,5 +352,10 @@ nav {
         }
       }
     }
+  }
+  .copyright {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
   }
 }
