@@ -275,7 +275,7 @@ new Vue({
           },
           {
             title: 'Deep learning model',
-            content: '1. Enhance trading matching rate <br>2. We collect over 1m top value domains from centralize domains and all the Ethereum domains. With deep learning we are able to make AI systems which can predict the domains value. We have two kinds of systems, one is to find high value domains , the other is to predict the possible price of the domains.',
+            content: '1. Enhance trading matching rate <br>2. We collect over 1m top value domains from both centralized and Ethereum Domain Name Systems. Through deeping learning, we were able to establish an AI system which can predict domain value. There are currenlty two systems: one for targeting valuable domains, the other for possible price perdiction.',
             photos: null,
             location: '',
             time: '5/2',
@@ -288,7 +288,7 @@ new Vue({
           },
           {
             title: 'WHOIS',
-            content: '1. Paring and cleaning all the domains on Ethereum.<br>2. Begin to build up Ethereum Classic WHOIS system and collect data on it.',
+            content: '1. Pairing and cleaning all the domains on Ethereum.<br>2. Begin to build up Ethereum Classic WHOIS system and collect data on it.',
             photos: null,
             location: '',
             time: '5/2',
@@ -301,7 +301,7 @@ new Vue({
           },
           {
             title: 'Online Decentralized Website Builder',
-            content: '1. Personal profile builder<br>2. Customized website deployment<br>3. Backend contrucstion',
+            content: '1. Personal profile builder<br>2. Customized website deployment<br>3. Backend construction',
             photos: null,
             location: '',
             time: '4/19',
@@ -318,7 +318,7 @@ new Vue({
           },
           {
             title: 'Portal Network Marketplace',
-            content: '1. User registration improvement Refactoring the usability Refactoring and Integration with ethereum UI/UX design enhancement Constructing the backend architecture Security Enhancement<br>2. Constructing user profile dashboard',
+            content: '1. User registration improvement Refactoring the usability and Integration with ethereum.<br/> UI/UX design enhancement.<br/> Construct the backend architecture and Security Enhancement<br/>2. Construct user profile dashboard',
             photos: null,
             location: '',
             time: '4/16',
@@ -342,7 +342,7 @@ new Vue({
         flags: [
           {
             title: 'IT Seed',
-            content: 'Portal Network and Mr. Block team were very honored to get invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community that let graduating students learn various trends around the world, so they can be well prepared for their career path in the future. Basic concept of Blockchain & Application of Blockchain & Future development of Blockchain',
+            content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Basic concept of Blockchain & Application of Blockchain & Future development of Blockchain.',
             photos: [
               'images/roadmap/event/ITSeed/IMG_0939.jpg',
               'images/roadmap/event/ITSeed/IMG_0941.jpg',
@@ -375,7 +375,7 @@ new Vue({
           },
           {
             title: 'Education Platform',
-            content: 'Our co-founder, Christopher Shen, was presenting at the "Young Entrepreneur" Panel during the event. Assist university students to join the international SUSS events, to not only bring the blockchain trends to Taiwan, but also educate more students to have the ability to develop blockchain technology. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
+            content: 'Our co-founder, Christopher Shen, gave a speech at the "Young Entrepreneur" Panel during the event. Portal Nework is honored to assist university students for international SUSS events. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
             photos: [
               'images/roadmap/event/education/1.jpg', 'images/roadmap/event/education/2.jpg', 'images/roadmap/event/education/3.jpg', 'images/roadmap/event/education/4.jpg', 
               'images/roadmap/event/education/5.jpg', 'images/roadmap/event/education/6.jpg', 'images/roadmap/event/education/7.jpg', 'images/roadmap/event/education/8.jpg', 
