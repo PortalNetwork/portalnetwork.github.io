@@ -37,8 +37,8 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Propose multihash functions to support ECNS Public Resolver smart contract',
-            content: 'Propose multihash functions to support ECNS Public Resolver smart contract Implementation of ECIP - 1044',
+            title: 'Propose multihash functions to support ECNS Public Resolver smart contracts',
+            content: 'Propose multihash functions to support ECNS Public Resolver smart contracts Implementation of ECIP - 1044',
             photos: null,
             location: '',
             time: '5/12',
@@ -71,8 +71,8 @@ new Vue({
             videos: [],
           },
           {
-            title: 'ENS public resolver smart contract contribution',
-            content: 'Propose multihash functions to support ENS Public Resolver smart contract Implementation of EIP - 1062',
+            title: 'ENS public resolver smart contracts contribution',
+            content: 'Propose multihash functions to support ENS Public Resolver smart contracts Implementation of EIP - 1062',
             photos: null,
             location: '',
             time: '5/10',
@@ -205,7 +205,7 @@ new Vue({
           },
           {
             title: 'Portal Network Decetentralized Web Builder',
-            content: '1. User registration flow.<br>2. Personal profile builder.<br>3. Decentralized website deploy history.',
+            content: '1. User registration flow.<br>2. Personal profile builder.<br>3. Decentralized websites deploy history.',
             photos: null,
             location: '',
             time: '5/30',
@@ -301,7 +301,7 @@ new Vue({
           },
           {
             title: 'Online Decentralized Website Builder',
-            content: '1. Personal profile builder<br>2. Customized website deployment<br>3. Backend construction',
+            content: '1. Personal profile builder<br>2. Customized websites deployment<br>3. Backend construction',
             photos: null,
             location: '',
             time: '4/19',
