@@ -18,10 +18,15 @@ a {
   cursor: pointer;
 }
 
+$green: #15DACB;
+$blue_d: #0C1346;
+$blue_l: #2436B9;
+
 html, body {
   width: 100%;
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  background-color: $blue_d;
 }
 
 $MOB_MOVE_INSIDE_DISTANCE_IN_CHAPTER: 13px;
@@ -32,7 +37,7 @@ $MAIN_WIDTH: 1051px;
   position: fixed;
   z-index: 1490;
   width: 100%;
-  background-color: white;
+  background-color: $green;
 }
 
 .header-container {
@@ -65,13 +70,12 @@ $MAIN_WIDTH: 1051px;
     font-size: 16px;
     font-family: Gotham;
     letter-spacing: 0.1px;
-    color: gray;
     cursor: pointer;
     >a{
-      color: gray;
+      color: rgba($blue_d,0.7);
       transition: color .2s;
       &:hover{
-        color: #000;
+        color: rgba($blue_d,1);
       }
     }
   }
@@ -81,7 +85,7 @@ $MAIN_WIDTH: 1051px;
   margin-top: 14px;
   margin-bottom: 10px;
   font-size: 14px;
-  color: #000;
+  color: #fff;
 }
 
 #roadmap {
@@ -139,15 +143,14 @@ $MAIN_WIDTH: 1051px;
     padding-bottom: 8px;
     font-size: 14px;
     font-weight: 700;
-    color: #000;
-    opacity: .5;
+    color: $green;
   }
 
   & .chapter-name {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
   }
 
   @media screen and (max-width: 1000px) {
@@ -183,8 +186,7 @@ $MAIN_WIDTH: 1051px;
   margin-left: 247px;
   padding-bottom: 100px;
   width: 893px;
-  background-image: url('~images/roadmap/flag-road.png');
-  background-repeat: repeat-y;
+  border-left: solid 1px rgba(#fff,0.3);
 
   @media screen and (max-width: 1000px) {
     margin-bottom: 0;
@@ -209,9 +211,6 @@ $MAIN_WIDTH: 1051px;
   align-items: center;
   margin-bottom: 40px;
   height: 218px;
-  background-image: url('~images/roadmap/chapter-story-bar.png');
-  background-position: left top;
-  background-repeat: no-repeat;
 
   .icon {
     display: flex;
@@ -220,7 +219,7 @@ $MAIN_WIDTH: 1051px;
     width: 102px;
     height: 102px;
     border-radius: 50%;
-    background-color: #3b77ac;
+    background-color: $blue_l;
     margin-right: 46px;
     margin-left: 92px;
     img {
@@ -260,7 +259,7 @@ $MAIN_WIDTH: 1051px;
     padding-right: 15px;
     font-size: 20px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
   }
 
   & .icons-container {
@@ -336,10 +335,10 @@ $MAIN_WIDTH: 1051px;
     width: 100%;
     font-size: 16px;
     line-height: 1.88;
-    color: #000;
+    color: #fff;
 
     .link_text {
-      color: #3b77ac;
+      color: $green;
     }
     
     &.has-photos {
@@ -394,7 +393,6 @@ $MAIN_WIDTH: 1051px;
     height: 14px;
     border-radius: 50%;
     background-color: #d8d8d8;
-    border: 1px solid #979797;
     content: '';
   }
 
@@ -424,11 +422,11 @@ $MAIN_WIDTH: 1051px;
   display: inline-block;
   width: 164px;
   height: 9px;
-  background-color: #f5f5f5;
+  background-color: rgba(#f5f5f5,0.2);
 
   & .progress {
     height: inherit;
-    background-color: #23d6a3;
+    background-color: $green;
   }
 }
 
@@ -439,7 +437,7 @@ $MAIN_WIDTH: 1051px;
     margin-left: 10px;
     font-size: 14px;
     font-weight: 400;
-    color: #23d6a3;
+    color: $green;
   }
 }
 
