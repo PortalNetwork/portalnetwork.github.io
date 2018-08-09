@@ -79,6 +79,9 @@
         font-size: 20px;
         font-weight: 400;
         color: #F7F6F4;
+        &.no_link {
+          cursor: default;
+        }
         .sh {
           display: block;
           width: 30px;
