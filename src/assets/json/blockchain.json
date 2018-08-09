@@ -324,7 +324,7 @@
             {
                 "name": "INS",
                 "percentage": 50,
-                "description": "Aelf name service",
+                "description": "Icon name service",
                 "urlItem": [
                     {
                         "img": "",
@@ -377,7 +377,7 @@
             {
                 "name": "BCNS",
                 "percentage": 25,
-                "description": "Aelf name service",
+                "description": "Bitcoin Cash name service",
                 "urlItem": [
                     {
                         "img": "",
