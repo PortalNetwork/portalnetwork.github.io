@@ -96,6 +96,7 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 38px 20px 0px 20px;
+  box-sizing: border-box;
   @extend %clear;
   @media screen and (max-width: $smob) {
     padding: 38px 0px 0px 10px;
@@ -359,9 +360,14 @@ nav {
 }
 
 .footer {
-  padding: 50px 0px 30px 0px;
+  max-width: $container;
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px;
   box-sizing: border-box;
+  text-align: center;
   ul {
+      margin-bottom: 20px;
     li {
       display: inline-block;
       margin: 0px 10px;
@@ -377,7 +383,9 @@ nav {
       }
     }
   }
-  .copyRight {
-    text-align: center;
+  .copyright {
+    font-size: 14px;
+    font-weight: 400;
+    color: #222;
   }
 }
