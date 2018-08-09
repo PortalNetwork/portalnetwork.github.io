@@ -2,6 +2,7 @@
     {
         "title": "Wanchain",
         "icon": "./images/icon/wan@2x.png",
+        "url": "https://wanchain.org",
         "detail": [
             {
                 "name": "WNS",
@@ -55,6 +56,7 @@
     {
         "title": "Ethereum",
         "icon": "./images/icon/eth@2x.png",
+        "url": "https://www.ethereum.org",
         "detail": [
             {
                 "name": "ENS",
@@ -108,6 +110,7 @@
     {
         "title": "Ethereum Classic",
         "icon": "./images/icon/etc@2x.png",
+        "url": "https://ethereumclassic.org/",
         "detail": [
             {
                 "name": "ECNS",
@@ -161,6 +164,7 @@
     {
         "title": "Qtum",
         "icon": "./images/icon/qtum@2x.png",
+        "url": "https://qtum.org/en",
         "detail": [
             {
                 "name": "QNS",
@@ -214,6 +218,7 @@
     {
         "title": "Neo",
         "icon": "./images/icon/neo@2x.png",
+        "url": "https://neo.org",
         "detail": [
             {
                 "name": "NNS",
@@ -267,6 +272,7 @@
     {
         "title": "Aelf",
         "icon": "./images/icon/aelf@2x.png",
+        "url": "https://aelf.io",
         "detail": [
             {
                 "name": "AENS",
@@ -320,6 +326,7 @@
     {
         "title": "ICON",
         "icon": "./images/icon/icon@2x.png",
+        "url": "https://icon.foundation/?lang=en",
         "detail": [
             {
                 "name": "INS",
@@ -373,6 +380,7 @@
     {
         "title": "Bitcoin Cash",
         "icon": "./images/icon/bc@2x.png",
+        "url": "https://explorer.bitcoin.com/bch",
         "detail": [
             {
                 "name": "BCNS",

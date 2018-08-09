@@ -21,9 +21,12 @@
         width: 148px;
         height: 100%;
         padding-top: 46px;
-        >img{
-          width: 100%;
-          height: auto;
+        >a {
+          display: inline-block;
+          img{
+            width: 100%;
+            height: auto;
+          }
         }
         >h3{
           font-family: Avenir;

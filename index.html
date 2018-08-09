@@ -123,7 +123,7 @@
 			<div class="content">
 				<header>
 					<div class="portal">
-						<img :src="logoObj.icon" alt="">
+						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
 						<h3>{{logoObj.title}}</h3>
 					</div>
 					<ul>
@@ -186,7 +186,20 @@
 						<ul>
 							<li><a href="https://beta.portal.network/" target="_blank">Marketplace<span class="mp"></span></a></li>
 							<li><a href="javascript:;" target="_blank" @click="openMoreModal('domain')">Domain manager<span class="dm"></span></a></li>
-							<li><a href="http://wns.portal.network/" target="_blank">BNS explorer<span class="bnsex"></span></a></li>
+							<li>
+								<a href="http://wns.portal.network/" target="_blank">BNS explorer<span class="bnsex"></span></a>
+								<div class="sub_list">
+									<div class="sub_item">
+										<a href="https://ens.portal.network/" target="_blank">ens,</a>
+									</div>
+									<div class="sub_item">
+										<a href="https://ecns.portal.network/" target="_blank">ecns,</a>
+									</div>
+									<div class="sub_item">
+										<a href="http://wns.portal.network/" target="_blank">wns</a>
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -198,7 +211,10 @@
 						<h5>Kaizen</h5>
 						<p>Kaizen empowers users to learn, deploy, run and manage decentralized applications utilizing languages and frameworks such as Solidity, LLL, Node.js, IPFS, swarmDB, Golem, orbitDB, and many more. Users can easily deploy and use decentralized application code with Kaizen CLI by developer tools like Truffle, Ganache, Web3, open zeppline, git, and Docker. </p>
 						<ul>
-							<li><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank">Command Line Interface (CLI)</a></li>
+							<li>
+								<a href="javascript:;" @click="openMoreModal('cli')" target="_blank">Command Line Interface (CLI)</a>
+								<div class="github"><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/github_green.png" alt=""></a></div>
+							</li>
 							<li><a href="javascript:;" @click="openModal('deploy')">Deploy Management System</a></li>
 							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Menu & Guideline</a></li>
 						</ul>
@@ -416,6 +432,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?64b0883a&64b0883a3a247e3ffd24"></script><script type="text/javascript" src="./js/index.js?64b0883a&64b0883a3a247e3ffd24"></script></body>
+<script type="text/javascript" src="./js/vendor.js?46980f8e&46980f8e04d8dac9a77e"></script><script type="text/javascript" src="./js/index.js?46980f8e&46980f8e04d8dac9a77e"></script></body>
 
 </html>
