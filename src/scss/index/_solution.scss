@@ -79,6 +79,9 @@
         font-size: 20px;
         font-weight: 400;
         color: #F7F6F4;
+        &.no_link {
+          cursor: default;
+        }
         .sh {
           display: block;
           width: 30px;
@@ -153,11 +156,37 @@
         margin-top: 60px;
       }
       a {
-        display: block;
+        display: inline-block;
         font-size: 20px;
         font-weight: 400;
         color: #F7F6F4;
       }
+    }
+  }
+}
+
+.github {
+  margin-top: 10px;
+  a {
+    width: 22px;
+  }
+  img {
+    width: 100%;
+    margin: 0px auto;
+  }
+}
+
+.sub_list {
+  text-align: right;
+  padding-right: 45px;
+  .sub_item {
+    display: inline-block;
+    a {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: #19F4E4;
+      letter-spacing: 0.8px;
     }
   }
 }

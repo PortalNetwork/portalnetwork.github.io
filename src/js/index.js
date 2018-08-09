@@ -13,6 +13,7 @@ new Vue({
     logoObj: {
       "title": "PORTAL",
       "icon": "./images/icon/portal@2x.png",
+      "url": "https://www.portal.network/"
     },
     isOpenChainHeight: false,
     onePhotos: [],
@@ -37,6 +38,7 @@ new Vue({
       this.logoObj = {
         "title": obj.title,
         "icon": obj.icon,
+        "url": obj.url
       }
     },
     resetBlock(){
@@ -45,6 +47,7 @@ new Vue({
       this.logoObj = {
         "title": "PORTAL",
         "icon": "./images/icon/portal@2x.png",
+        "url": "https://www.portal.network/"
       }
     },
     openModal(name) {
