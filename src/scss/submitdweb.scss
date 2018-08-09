@@ -361,6 +361,22 @@ nav {
 .footer {
   padding: 50px 0px 30px 0px;
   box-sizing: border-box;
+  ul {
+    li {
+      display: inline-block;
+      margin: 0px 10px;
+      a {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #222;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   .copyRight {
     text-align: center;
   }
