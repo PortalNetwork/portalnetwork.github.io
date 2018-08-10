@@ -8,18 +8,20 @@ new Vue({
     isheaderFix: false,
     scroll: 0,
     nowIdx: 0,
-    blockchain:[],
+    blockchain:[
+    ],
     detailItem: [],
     logoObj: {
       "title": "PORTAL",
       "icon": "./images/icon/portal@2x.png",
       "url": "https://www.portal.network/"
     },
-    isOpenChainHeight: false,
+    isOpenChainHeight: true,
     onePhotos: [],
     isOpenPop: false,
     isOpenPopMore: false,
     morePhotos: [],
+    chainSelectidx: 0
   },
   methods: {
     toggleMenuFn() {
@@ -31,6 +33,7 @@ new Vue({
     },
     blockchainData(res){
       this.blockchain = res.data;
+      this.onChaeckBlock(res.data[0]);
     },
     onChaeckBlock(obj){
       this.detailItem = obj.detail;
@@ -42,13 +45,14 @@ new Vue({
       }
     },
     resetBlock(){
-      this.isOpenChainHeight = false;
-      this.detailItem = [];
-      this.logoObj = {
-        "title": "PORTAL",
-        "icon": "./images/icon/portal@2x.png",
-        "url": "https://www.portal.network/"
-      }
+      this.chainSelectidx = null;
+      // this.isOpenChainHeight = false;
+      // this.detailItem = [];
+      // this.logoObj = {
+      //   "title": "PORTAL",
+      //   "icon": "./images/icon/portal@2x.png",
+      //   "url": "https://www.portal.network/"
+      // }
     },
     openModal(name) {
       this.isOpenPop = true;
@@ -58,7 +62,7 @@ new Vue({
           photo = ["./images/index/deploys.png"];
           break;
         case "toolkits":
-          photo = ["./images/index/toolkit.png"];
+          photo = ["./images/index/toolkits.png"];
           break;
       }
       this.onePhotos = photo;
@@ -107,7 +111,10 @@ new Vue({
     },
     coming () {
       alert('coming soon');
-    }
+    },
+    handActive(idx) {
+      this.chainSelectidx = idx;
+    },
   },
   mounted() {
     AOS.init();

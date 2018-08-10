@@ -12,15 +12,7 @@ module.exports = {
     submitdweb: 'submitdweb',
     blog: 'blog',
     roadmap: 'roadmap',
-    newroadmap: 'newroadmap',
     privacy: 'privacy',
-    terms: 'privacy',
-    analysis: 'blog',
-    decentralized: 'blog',
-    hackathon: 'blog',
-    metaMask: 'blog',
-    wanchain: 'blog',
-    ens: 'blog'
   },
   output: {
     path: path.resolve(__dirname),
@@ -163,13 +155,13 @@ module.exports = {
       chunks: [ 'vendor', 'roadmap' ],
       hash: true,
     }),
-    new HtmlWebpackPlugin({
-      title: 'Portal Network | Roadmap',
-      filename: 'newroadmap.html',
-      template: 'html/newroadmap.html',
-      chunks: [ 'vendor', 'newroadmap' ],
-      hash: true,
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Portal Network | Roadmap',
+    //   filename: 'newroadmap.html',
+    //   template: 'html/newroadmap.html',
+    //   chunks: [ 'vendor', 'newroadmap' ],
+    //   hash: true,
+    // }),
     new HtmlWebpackPlugin({
       title: 'Portal Network | Privacy Policy',
       filename: 'privacy_policy.html',
@@ -237,13 +229,23 @@ module.exports = {
       title: 'Technical Paper',
       filename: 'tp.html',
       template: 'html/tp.html',
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      title: 'White Paper',
-      filename: 'wp.html',
-      template: 'html/wp.html',
-      hash: true,
-    }),
+      excludeChunks: [
+        "index",
+        "showcase",
+        "blog",
+        "roadmap",
+        "newroadmap",
+        "privacy",
+        "terms",
+        "analysis",
+        "decentralized",
+        "hackathon",
+        "metaMask",
+        "wanchain",
+        "ens",
+        "vendor",
+        "submitdweb"
+      ]
+    })
   ]
 }
