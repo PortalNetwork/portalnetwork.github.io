@@ -39,7 +39,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 100,
+                "percentage": null,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -50,7 +50,7 @@
             },
             {
                 "name": "Mobile App",
-                "percentage": 50,
+                "percentage": null,
                 "description": "BNS Wallet & Domain Manager on phone",
                 "urlItem": [
                     {
@@ -61,7 +61,7 @@
             },
             {
                 "name": "Web Builder",
-                "percentage": 100,
+                "percentage": null,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
