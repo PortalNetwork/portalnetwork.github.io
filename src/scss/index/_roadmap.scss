@@ -130,6 +130,13 @@
     padding-right: 300px;
     padding-left: 300px;
     min-height: 100px;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #141E6A;
+    }
 
     & img {
       width: 21px;
@@ -140,9 +147,8 @@
 
   & .roadmap_button {
     display: inline-flex;
-    min-width: 243px;
-    padding: 22px 22px 19px;
-    font-family: 'Avenir';
+    // min-width: 243px;
+    padding: 20px 35px 20px 35px;
     font-size: 20px;
     font-weight: 500;
     font-style: normal;
@@ -153,7 +159,15 @@
     background-color: white;
     color: #141e6a;
     box-shadow: 2px 2px #15dacb;
-    cursor: pointer;
+    &:before {
+      content: "";
+      display: block;
+      width: 21px;
+      height: 25px;
+      background: url('~images/index/technical_icon@2x.png') top left no-repeat;
+      background-size: 100% auto;
+      margin-right: 20px;
+    }
   }
 
   & .hexagon {

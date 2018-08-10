@@ -117,27 +117,31 @@
 			</div>
 		</div>
 
-
 		<!-- mike -->
 		<div :class="{chain:true, open:isOpenChainHeight}">
 			<div class="content">
 				<header>
 					<div class="portal">
+						<i class="deliver"></i>
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
 						<h3>{{logoObj.title}}</h3>
 					</div>
 					<ul>
-						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj)"><img :src="obj.icon"></a></li>
-						<li><a @click="resetBlock"><img src="./images/icon/comingsoon@2x.png" alt=""></a></li>
+						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
+						<!-- <li><a @click="resetBlock"><img src="./images/icon/comingsoon@2x.png" alt=""></a></li> -->
 					</ul>
 				</header>
 				<div class="item_schedule">
 					<ul>
 						<li></li>
 						<li v-for="(obj, idx) in detailItem">
-
 							<div class="item_title">
 								<h1>{{obj.name}}</h1>
+								<ul class="urlItem">
+									<li v-for="(url, idx) in obj.urlItem">
+										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt=""></a>
+									</li>
+								</ul>
 							</div>
 
 							<p class="description">{{obj.description}}</p>
@@ -216,7 +220,7 @@
 								<div class="github"><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/github_green.png" alt=""></a></div>
 							</li>
 							<li><a href="javascript:;" @click="openModal('deploy')">Deploy Management System</a></li>
-							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Menu & Guideline</a></li>
+							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Manual & Guideline</a></li>
 						</ul>
 					</div>
 				</div>
@@ -236,7 +240,7 @@
             <a class="hexagon small"></a>
           </span>
           <div class="content">
-            <p>EIP 1062 ECIP 1044 MetaMask Contribution.</p>
+            <p>EIP 1062, ECIP 1044 MetaMask Contribution.</p>
           </div>
         </div>
 
@@ -271,7 +275,7 @@
             <a class="hexagon small"></a>
           </span>
           <div class="content">
-            <p>Proposed IIP-7 on ICON Multi-chains BNS Marketplace Beta Launch.</p>
+            <p>Proposed IIP-6 on ICON Multi-chains BNS Marketplace Beta Launch.</p>
           </div>
         </div>
 
@@ -302,14 +306,8 @@
 
       </div>
       <div class="buttons_container">
-        <a href="./tp.html" class="roadmap_button" target="_blank">
-          <img src="images/index/technical_icon@2x.png" alt="white paper" />
-          Technical Paper
-        </a>
-        <a href="./wp.html" class="roadmap_button" target="_blank">
-          <img src="images/index/Whitepaper_icon@2x.png" alt="white paper" />
-          White Paper
-        </a>
+				<p>Request for Whitepaper and Technical Paper.</p>
+				<a href="./tp.html" class="roadmap_button" target="_blank">Requests</a>
       </div>
     </div>
 
@@ -432,6 +430,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?b221b789&b221b789fd96b50d6f29"></script><script type="text/javascript" src="./js/index.js?b221b789&b221b789fd96b50d6f29"></script></body>
+<script type="text/javascript" src="./js/vendor.js?f9ce0e85&f9ce0e85084ca63da997"></script><script type="text/javascript" src="./js/index.js?f9ce0e85&f9ce0e85084ca63da997"></script></body>
 
 </html>

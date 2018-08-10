@@ -97,14 +97,18 @@ body {
   align-items: center;
   width: 90%;
   margin: 0 auto;
+  /*
   @media screen and (max-width: $pad) {
     flex-wrap: wrap;
     width: 80%;
   }
+  */
   a {
+    /*
     @media screen and (max-width: $pad) {
       margin-bottom: 50px;
     }
+    */
     img {
       width: 100%;
     }
