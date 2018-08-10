@@ -12,6 +12,7 @@ module.exports = {
     submitdweb: 'submitdweb',
     blog: 'blog',
     roadmap: 'roadmap',
+    newroadmap: 'newroadmap',
     privacy: 'privacy',
     terms: 'privacy',
     analysis: 'blog',
@@ -160,6 +161,13 @@ module.exports = {
       filename: 'roadmap.html',
       template: 'html/roadmap.html',
       chunks: [ 'vendor', 'roadmap' ],
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Portal Network | Roadmap',
+      filename: 'newroadmap.html',
+      template: 'html/newroadmap.html',
+      chunks: [ 'vendor', 'newroadmap' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({
