@@ -5,11 +5,65 @@
     .content {
       width: 100%;
       height: 100%;
-      padding: 90px 0px;
-      background: url(/images/index/whatIs_bg.png?5f4518e0) center right no-repeat;
+      padding: 100px 0px;
+      background: url("~images/index/whatIs_bg.png") center right no-repeat;
       background-size: 960px auto;
+      h3 {
+        text-align: center;
+      }
       p {
-        width: 70%;
+        width: 60%;
+      }
+    }
+  }
+  &.bns {
+    background-color: $purple;
+    padding: 75px 0px;
+    position: relative;
+    .anchor {
+      position: absolute;
+      top: -100px;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .left {
+      width: 23.4%;
+      h3 {
+        font-size: 36px;
+        font-weight: 500;
+        color: $green;
+        text-align: left;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: 1.2px;
+        text-align: left;
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: $green;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+    .right {
+      width: 49.2%;
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        text-align: left;
       }
     }
   }
@@ -19,8 +73,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      h3 {
-        text-align: left;
+    }
+    .left {
+      width: 59.3%;
+    }
+    .right {
+      width: 27.5%;
+      .figure {
+        width: 263px;
+        margin-bottom: 25px;
+        img {
+          width: 100%;
+          margin: 0px auto;
+        }
       }
     }
     .link {
@@ -30,7 +95,7 @@
       line-height: 68px;
       font-size: 20px;
       font-weight: 500;
-      color: $text;
+      color: $purple_d;
       letter-spacing: 1px;
       text-align: center;
       border-radius: 5px;
@@ -38,10 +103,43 @@
       border-right: solid 2px #141E6A;
       border-bottom: solid 2px #141E6A;
     }
-    .section {
-      width: 580px;
+  }
+  &.request {
+    padding: 77px 0px;
+    background-color: $purple_d;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
       p {
-        text-align: left;
+        display: inline-block;
+        color: $gray_l;
+        letter-spacing: 1px;
+        margin: 0px;
+      }
+      a {
+        display: block;
+        width: 243px;
+        height: 68px;
+        line-height: 68px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $purple_d;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #fff;
+        border-right: solid 2px $green;
+        border-bottom: solid 2px $green;
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 21px;
+          height: 25px;
+          background: url('~images/index/Whitepaper_icon.png') top left no-repeat;
+          background-size: 100% auto;
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -53,21 +151,29 @@
     box-sizing: border-box;
     h3 {
       font-size: 40px;
-      font-weight: 600;
-      color: $text;
+      font-weight: 500;
+      color: $purple_d;
       letter-spacing: 1px;
-      text-align: center;
       margin-bottom: 20px;
     }
     p {
       font-size: 16px;
-      font-weight: 600;
-      color: $text;
+      font-weight: 500;
+      color: $purple_d;
       line-height: 1.5;
-      text-align: center;
       margin: 0 auto;
       &+p {
         margin-top: 20px;
+      }
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: $purple_d;
+        line-height: 1.5;
+        transition: color .5s;
+        &:hover {
+          color: $green;
+        }
       }
     }
   }

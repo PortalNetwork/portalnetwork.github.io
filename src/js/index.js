@@ -46,6 +46,7 @@ new Vue({
     },
     resetBlock(){
       this.chainSelectidx = null;
+      alert("coming soon");
       // this.isOpenChainHeight = false;
       // this.detailItem = [];
       // this.logoObj = {
@@ -59,7 +60,7 @@ new Vue({
       let photo = [];
       switch(name){
         case "deploy":
-          photo = ["./images/index/deploys.png"];
+          photo = ["./images/index/kaizen_bitcoincash.png"];
           break;
         case "toolkits":
           photo = ["./images/index/toolkits.png"];
