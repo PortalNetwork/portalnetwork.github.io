@@ -1,13 +1,13 @@
 [
     {
-        "title": "Potal Network",
+        "title": "Blockchain Platform<br/> Name Service",
         "icon": "./images/icon/portal@2x.png",
         "url": "https://www.portal.network/",
         "detail": [
             {
-                "name": "BNS",
+                "name": "Explorer",
                 "percentage": null,
-                "description": "BNS name service",
+                "description": "EWHOIS for BNS",
                 "urlItem": [
                     {
                         "img": "",
@@ -16,20 +16,9 @@
                 ]
             },
             {
-                "name": "Marketplace",
+                "name": "BNS Deployment",
                 "percentage": null,
-                "description": "Buy / sell / bid domain name easily ",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": null,
-                "description": "EWHOIS for BNS",
+                "description": "Blockchain Name Service",
                 "urlItem": [
                     {
                         "img": "",
@@ -45,6 +34,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": null,
+                "description": "Buy/sell/bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -62,7 +62,7 @@
             {
                 "name": "Web Builder",
                 "percentage": null,
-                "description": "Building your brand on ÐWeb",
+                "description": "Simply deploy your ÐWeb on blockchain",
                 "urlItem": [
                     {
                         "img": "./images/index/link.png",
@@ -77,39 +77,6 @@
         "icon": "./images/icon/eth@2x.png",
         "url": "https://www.ethereum.org",
         "detail": [
-            {
-                "name": "ENS",
-                "percentage": 100,
-                "description": "Ethereum name service",
-                "urlItem": [
-                    {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/ens"
-                    }
-                ]
-            },
-            {
-                "name": ".eth",
-                "percentage": null,
-                "description": ".eth is the top level domain of ENS",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Marketplace",
-                "percentage": 100,
-                "description": "Buy / sell / bid domain name easily ",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
             {
                 "name": "Explorer",
                 "percentage": 100,
@@ -126,6 +93,28 @@
                 ]
             },
             {
+                "name": ".eth",
+                "percentage": null,
+                "description": ".eth is the top level domain of ENS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "ENS",
+                "percentage": 100,
+                "description": "Ethereum name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/ens"
+                    }
+                ]
+            },
+            {
                 "name": "Browser Extension",
                 "percentage": 100,
                 "description": "Turn your browser into ÐWeb browser",
@@ -133,6 +122,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -166,39 +166,6 @@
         "url": "https://wanchain.org",
         "detail": [
             {
-                "name": "WNS",
-                "percentage": 100,
-                "description": "Wanchain name service",
-                "urlItem": [
-                    {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/wns"
-                    }
-                ]
-            },
-            {
-                "name": ".wan",
-                "percentage": null,
-                "description": ".wan is the top level domain of WNS",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Marketplace",
-                "percentage": 100,
-                "description": "Buy / sell / bid domain name easily ",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
                 "name": "Explorer",
                 "percentage": 100,
                 "description": "EWHOIS for domain name service",
@@ -214,6 +181,28 @@
                 ]
             },
             {
+                "name": ".wan",
+                "percentage": null,
+                "description": ".wan is the top level domain of WNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "WNS",
+                "percentage": 100,
+                "description": "Wanchain name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/wns"
+                    }
+                ]
+            },
+            {
                 "name": "Browser Extension",
                 "percentage": 100,
                 "description": "Turn your browser into ÐWeb browser",
@@ -221,6 +210,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -254,13 +254,16 @@
         "url": "https://ethereumclassic.org/",
         "detail": [
             {
-                "name": "ECNS",
+                "name": "Explorer",
                 "percentage": 100,
-                "description": "Ethereum Classic name service",
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
+                        "img": "./images/index/link.png",
+                        "link": "https://ecns.portal.network/"
+                    },{
                         "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/ECNS"
+                        "link": "https://github.com/PortalNetwork/ethereum-classic-explorer"
                     }
                 ]
             },
@@ -276,27 +279,13 @@
                 ]
             },
             {
-                "name": "Marketplace",
+                "name": "ECNS",
                 "percentage": 100,
-                "description": "Buy / sell / bid domain name easily ",
+                "description": "Ethereum Classic name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 100,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link.png",
-                        "link": "https://ecns.portal.network/"
-                    },{
                         "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/ethereum-classic-explorer"
+                        "link": "https://github.com/PortalNetwork/ECNS"
                     }
                 ]
             },
@@ -308,6 +297,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -341,13 +341,13 @@
         "url": "https://icon.foundation/?lang=en",
         "detail": [
             {
-                "name": "INS",
-                "percentage": 50,
-                "description": "Icon name service",
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/ins"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -363,24 +363,13 @@
                 ]
             },
             {
-                "name": "Marketplace",
-                "percentage": 0,
-                "description": "Buy / sell / bid domain name easily ",
+                "name": "INS",
+                "percentage": 50,
+                "description": "Icon name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/ins"
                     }
                 ]
             },
@@ -392,6 +381,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -425,13 +425,13 @@
         "url": "https://qtum.org/en",
         "detail": [
             {
-                "name": "QNS",
-                "percentage": 100,
-                "description": "Qtum name service",
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/qns"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -447,24 +447,13 @@
                 ]
             },
             {
-                "name": "Marketplace",
-                "percentage": 25,
-                "description": "Buy / sell / bid domain name easily ",
+                "name": "QNS",
+                "percentage": 100,
+                "description": "Qtum name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/qns"
                     }
                 ]
             },
@@ -476,6 +465,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 25,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -509,13 +509,13 @@
         "url": "https://neo.org",
         "detail": [
             {
-                "name": "NNS",
-                "percentage": 50,
-                "description": "Neo name service",
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/nns"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -531,24 +531,13 @@
                 ]
             },
             {
-                "name": "Marketplace",
-                "percentage": 0,
-                "description": "Buy / sell / bid domain name easily ",
+                "name": "NNS",
+                "percentage": 50,
+                "description": "Neo name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/nns"
                     }
                 ]
             },
@@ -560,6 +549,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -593,9 +593,9 @@
         "url": "https://aelf.io",
         "detail": [
             {
-                "name": "AENS",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Aelf name service",
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
                         "img": "",
@@ -615,20 +615,9 @@
                 ]
             },
             {
-                "name": "Marketplace",
+                "name": "AENS",
                 "percentage": 0,
-                "description": "Buy / sell / bid domain name easily ",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Aelf name service",
                 "urlItem": [
                     {
                         "img": "",
@@ -644,6 +633,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },
@@ -677,13 +677,13 @@
         "url": "https://explorer.bitcoin.com/bch",
         "detail": [
             {
-                "name": "BCNS",
-                "percentage": 25,
-                "description": "Bitcoin Cash name service",
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/github_green.png",
-                        "link": "https://github.com/PortalNetwork/bcns"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -699,24 +699,13 @@
                 ]
             },
             {
-                "name": "Marketplace",
-                "percentage": 0,
-                "description": "Buy / sell / bid domain name easily ",
+                "name": "BCNS",
+                "percentage": 25,
+                "description": "Bitcoin Cash name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link.png",
-                        "link": "https://beta.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github_green.png",
+                        "link": "https://github.com/PortalNetwork/bcns"
                     }
                 ]
             },
@@ -728,6 +717,17 @@
                     {
                         "img": "./images/index/link.png",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link.png",
+                        "link": "https://beta.portal.network/"
                     }
                 ]
             },

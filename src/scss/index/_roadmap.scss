@@ -145,31 +145,6 @@
     }
   }
 
-  & .roadmap_button {
-    display: inline-flex;
-    // min-width: 243px;
-    padding: 20px 35px 20px 35px;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: 0.7px;
-    border-radius: 5px;
-    background-color: white;
-    color: #141e6a;
-    box-shadow: 2px 2px #15dacb;
-    &:before {
-      content: "";
-      display: block;
-      width: 21px;
-      height: 25px;
-      background: url('~images/index/technical_icon@2x.png') top left no-repeat;
-      background-size: 100% auto;
-      margin-right: 20px;
-    }
-  }
-
   & .hexagon {
     position: relative;
     display: inline-block;

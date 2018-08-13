@@ -82,6 +82,88 @@ body {
   }
 }
 
+%h3 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 7px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.ecosystem {
+  padding: 80px 0px 40px 0px;
+  .content {
+    max-width: $container;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+  }
+  h3 {
+    @extend %h3;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        .figure {
+          width: 120px;
+          margin-bottom: 15px;
+          img {
+            width: 100%;
+            margin: 0px auto;
+          }
+        }
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          color: #3442B0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.partnership {
+  padding: 40px 0px;
+  .content {
+    max-width: $container;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+  }
+  h3 {
+    @extend %h3;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        &.blu {
+          width: 240px;
+        }
+        &.wan {
+          width: 119px;
+        }
+        img {
+          width: 100%;
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+}
+
 .partner_title {
   font-size: 25px;
   font-weight: 700;
@@ -111,49 +193,6 @@ body {
     */
     img {
       width: 100%;
-    }
-  }
-}
-
-.ecosystem {
-  padding: 80px 0px 40px 0px;
-  .content {
-    max-width: $container;
-    margin: 0px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-    .partner_title {
-      margin-bottom: 30px;
-    }
-  }
-  .partner_area {
-    /*
-    @media screen and (max-width: 560px) {
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-    */
-    a {
-      display: block;
-      max-width: 200px;
-      /*
-      @media screen and (max-width: $pad) {
-        max-width: 150px;
-      }
-      */
-      p {
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 22px;
-        letter-spacing: 0.8px;
-        text-align: center;
-        color: $indigo;
-        white-space: nowrap;
-      }
-      img {
-        width: 100%;
-        margin: 0 auto;
-      }
     }
   }
 }

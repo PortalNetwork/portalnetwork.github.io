@@ -113,24 +113,36 @@
 		<div class="summary what">
 			<div class="content">
 				<h3>What is Portal Network</h3>
-				<p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
+				<p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying <a href="#bns">BNS</a> standard across multiple blockchain protocols.</p>
 			</div>
 		</div>
 
-		<!-- mike -->
+		<div class="summary bns">
+			<span class="anchor" id="bns"></span>
+			<div class="content">
+				<div class="left">
+					<h3>BNS</h3>
+					<p><span>B</span>lockchain <span>N</span>ame <span>S</span>ervice</p>
+				</div>
+				<div class="right">
+					<h4>What is BNS?</h4>
+					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
+				</div>
+			</div>
+		</div>
+
 		<div :class="{chain:true, open:isOpenChainHeight}">
 			<div class="content">
-				<header>
+				<div class="chain_header">
 					<div class="portal">
-						<i class="deliver"></i>
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
-						<h3>{{logoObj.title}}</h3>
+						<h3 v-html="logoObj.title"></h3>
 					</div>
 					<ul>
 						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
-						<!-- <li><a @click="resetBlock"><img src="./images/icon/comingsoon@2x.png" alt=""></a></li> -->
+						<li><a @click="resetBlock"><img src="./images/icon/vote.png" alt=""></a></li>
 					</ul>
-				</header>
+				</div>
 				<div class="item_schedule">
 					<ul>
 						<li></li>
@@ -159,19 +171,20 @@
 			</div>
 		</div>
 
-
 		<div class="summary proof">
 			<div class="content">
-				<a class="link" href="javascript:;" target="_blank" @click="coming">Learn More</a>
-				<div class="section">
+				<div class="left">
 					<h3>Proof of Adoption</h3>
 					<p>Portal Network’s mission is to enable both technical & non-technical users to easily deploy/host/connect/use ÐWebs & ÐApps so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.</p>
 					<p>Proof of Adoption provides both blockchain and crypto community a series of tools to effortlessly interact and contribute their unique talents to the decentralized world.</p>
 				</div>
+				<div class="right">
+					<div class="figure"><img src="images/index/poa.png" alt=""></div>
+					<a class="link" href="javascript:;" target="_blank" @click="coming">Learn More</a>
+				</div>
 			</div>
 		</div>
 
-		<!--   -->
 		<div class="solution">
 			<h3><img src="images/index/Solution_word.png" alt=""></h3>
 			<div class="left">
@@ -227,8 +240,6 @@
 			</div>
 		</div>
 
-
-		<!--  jacky -->
     <div class="roadmap">
       <div class="roadmap_header">Roadmap</div>
       <div class="big_issues_container">
@@ -275,7 +286,8 @@
             <a class="hexagon small"></a>
           </span>
           <div class="content">
-            <p>Proposed IIP-6 on ICON Multi-chains BNS Marketplace Beta Launch.</p>
+						<p>Proposed IIP-6 on ICON Multi-chains BNS.</p>
+						<p>Marketplace Beta Launch.</p>
           </div>
         </div>
 
@@ -303,50 +315,72 @@
 						<p>IDE integration / Developer Environment.</p>
           </div>
         </div>
-
       </div>
-      <div class="buttons_container">
-				<p>Request for Whitepaper and Technical Paper.</p>
-				<a href="./tp.html" class="roadmap_button" target="_blank">Requests</a>
-      </div>
-    </div>
+		</div>
+		
+		<div class="summary request">
+			<div class="content">
+				<p>Our White Paper and Technical Paper requestion form.</p>
+				<a href="./tp.html" target="_blank">Request</a>
+			</div>
+		</div>
 
 		<div class="ecosystem">
 			<div class="content">
-				<h3 class="partner_title">ECOSYSTEM</h3>
-				<div class="partner_area">
-					<a href="https://www.ethereum.org/" target="_blank">
-						<img src="images/index/eth.png" alt="">
-						<p>Ethereum</p>
-					</a>
-					<a href="https://ethereumclassic.org/" target="_blank">
-						<img src="images/index/ethclassic.png" alt="">
-						<p>Ethereum classic</p>
-					</a>
-					<a href="https://wanchain.org/" target="_blank">
-						<img src="images/index/wan.png" alt="">
-						<p>Wanchain</p>
-					</a>
-					<a href="https://qtum.org/en/" target="_blank">
-						<img src="images/index/qtum.png" alt="">
-						<p>Qtum</p>
-					</a>
-				</div>
+				<h3>ECOSYSTEM</h3>
+				<ul>
+					<li>
+						<a href="https://www.ethereum.org/" target="_blank">
+							<div class="figure"><img src="images/index/eth.png" alt=""></div>
+							<p>Ethereum</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://ethereumclassic.org/" target="_blank">
+							<div class="figure"><img src="images/index/ethclassic.png" alt=""></div>
+							<p>Ethereum Classic</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://wanchain.org/" target="_blank">
+							<div class="figure"><img src="images/index/wan.png" alt=""></div>
+							<p>Wanchain</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://qtum.org/en/" target="_blank">
+							<div class="figure"><img src="images/index/qtum.png" alt=""></div>
+							<p>Qtum</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://icon.foundation/?lang=en" target="_blank">
+							<div class="figure"><img src="images/index/icon.png" alt=""></div>
+							<p>ICON</p>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+
 		<div class="partnership">
 			<div class="content">
-				<h3 class="partner_title">PARTNERSHIP</h3>
-				<div class="partner_area">
-					<a href="https://bluzelle.com/" target="_blank" class="bluzelle">
-						<img src="images/index/partner_bluzelleLogo.png" alt="">
-					</a>
-					<a href="https://wanchain.org/" target="_blank" class="wan">
-						<img src="images/index/partner_wanchain.png" alt="">
-					</a>
-				</div>
+				<h3>PARTNERSHIP</h3>
+				<ul>
+					<li>
+						<a class="blu" href="https://bluzelle.com/" target="_blank">
+							<img src="images/index/partner_bluzelleLogo.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a class="wan" href="https://wanchain.org/" target="_blank">
+							<img src="images/index/partner_wanchain.png" alt="">
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+
 		<div class="mediapartner">
 			<div class="content">
 				<h3 class="partner_title">MEDIA PARTNER</h3>
@@ -357,6 +391,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="footer">
 			<div class="footer_content">
 				<div class="subscribe_box">
