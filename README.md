@@ -22,7 +22,6 @@ npm run deploy
 ```
 
 #### Blog
- - 部落格的文章存放在 `blogs` 資料夾，`blog.html`為其列表頁。
  - `blog.html`的資料是讀取 `assets/json/blog_list.json`這支 json 檔
  - 結構如下
  ```
