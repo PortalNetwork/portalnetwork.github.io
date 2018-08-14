@@ -171,7 +171,7 @@
 								<h1>{{obj.name}}</h1>
 								<ul class="urlItem">
 									<li v-for="(url, idx) in obj.urlItem">
-										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt=""></a>
+										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt="" v-show="url.img !== ''"></a>
 									</li>
 								</ul>
 							</div>
@@ -485,6 +485,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?737adb36&737adb3608d86b9ce815"></script><script type="text/javascript" src="./js/index.js?737adb36&737adb3608d86b9ce815"></script></body>
+<script type="text/javascript" src="./js/vendor.js?4c22506d&4c22506da77848f47d91"></script><script type="text/javascript" src="./js/index.js?4c22506d&4c22506da77848f47d91"></script></body>
 
 </html>

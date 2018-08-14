@@ -171,7 +171,7 @@
 								<h1>{{obj.name}}</h1>
 								<ul class="urlItem">
 									<li v-for="(url, idx) in obj.urlItem">
-										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt=""></a>
+										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt="" v-show="url.img !== ''"></a>
 									</li>
 								</ul>
 							</div>
