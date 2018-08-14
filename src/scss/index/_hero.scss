@@ -6,15 +6,10 @@
   margin-top: 114px;
   padding: 60px 0px 200px 0px;
 	box-sizing: border-box;
-	/*
 	@media screen and (max-width: $pad) {
-		padding-top: 60px;
-		margin-top: 0;
+		margin-top: 0px;
+		padding: 20px 0px 60px 0px;
 	}
-	@media screen and (max-width: $mob) {
-		padding-top: 20px;
-	}
-	*/
 	.content {
 		@extend %clear;
 		max-width: $container;
@@ -30,14 +25,12 @@
 	float: left;
 	position: relative;
 	margin-top: 20px;
-	/*
 	@media screen and (max-width: $pad) {
-		max-width: 100%;
-		margin: 0 auto;
 		float: none;
-		text-align: center;
+		margin: 0px auto;
+		padding-bottom: 20px;
+    text-align: center;
 	}
-	*/
 	h2 {
 		font-size: 50px;
     line-height: 1.2;
@@ -46,26 +39,18 @@
 		color: #fff;
 		margin-bottom: 20px;
 		white-space: nowrap;
-		/*
-		@media screen and (max-width: $pad) {
-			padding-bottom: 30px;
-			font-size: 35px;
-			line-height: 45px;
-			white-space: normal;
+		@media screen and (max-width: $mob) {
+			font-size: 30px;
 		}
-		*/
 		span {
 			display: block;
       font-size: 50px;
       font-weight: 500;
 			line-height: 1.2;
 			color: #fff;
-			/*
-			@media screen and (max-width: $pad) {
-				font-size: 35px;
-				line-height: 45px;
+			@media screen and (max-width: $mob) {
+				font-size: 30px;
 			}
-			*/
 		}
 	}
 	>p {
@@ -74,15 +59,11 @@
 		color: #fff;
 		margin-bottom: 35px;
 		white-space: nowrap;
-		/*
-		@media screen and (max-width: $pad) {
-			width: 80%;
-			margin: 0 auto;
-			font-size: 22px;
-			line-height: 30px;
+		@media screen and (max-width: $mob) {
 			white-space: normal;
+			width: 92%;
+			margin: 0px auto;
 		}
-		*/
 	}
 }
 
@@ -90,29 +71,24 @@
 	position: absolute;
 	top: -40px;
 	right: 0px;
-	// margin: 0 auto;
-	/*
-	@media screen and (max-width: 1180px) {
-		width: 52vw;
-	}
 	@media screen and (max-width: $pad) {
-		width: 100%;
+		width: 60%;
 		position: relative;
-		top: auto;
-		right: auto;
-		padding-bottom: 46px;
+    top: 0px;
+    left: 50%;
+		transform: translateX(-50%);
+		margin: 0px 0px 30px 0px;
 	}
-	*/
 	img {
 		width: 400px;
 		transform: translate3d(0px, -10px, 0px);
 		animation: run 4s infinite alternate;
-		/*
 		@media screen and (max-width: $pad) {
-			width: 60%;
-			margin: 0 auto;
+			margin: 0px auto;
 		}
-		*/
+		@media screen and (max-width: $mob) {
+			width: 100%;
+		}
 	}
 }
 
@@ -127,8 +103,11 @@
 
 .btn_list {
 	display: flex;
-	justify-content: space-between;
-	width: 82%;
+	width: 100%;
+	@media screen and (max-width: $pad) {
+		justify-content: center;
+		margin: 0px auto;
+	}
 }
 
 .telegram_btn {
@@ -139,11 +118,12 @@
   height: 60px;
   background-color: $green;
 	border-radius: 30px;
-	/*
-  @media screen and (max-width: $pad) {
-    margin: 0px auto;
+	margin-right: 20px;
+	@media screen and (max-width: $mob) {
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
 	}
-	*/
   &:hover {
     span {
       img {
@@ -153,7 +133,10 @@
   }
   span {
     display: inline-block;
-    padding-right: 15px;
+		padding-right: 15px;
+		@media screen and (max-width: $mob) {
+			padding-right: 8px;
+		}
     img {
       width: 27px;
       transform: translate3d(-5px, 0px, 0px);
@@ -163,7 +146,10 @@
 		font-size: 18px;
 		font-weight: 500;
     line-height: 60px;
-    color: #141E6A;
+		color: #141E6A;
+		@media screen and (max-width: $mob) {
+			font-size: 14px;
+		}
   }
 }
 
@@ -177,9 +163,13 @@
 }
 
 .play_video {
-	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 61px;
-	height: 61px;
+	@media screen and (max-width: $mob) {
+		width: 40px;
+	}
 	img {
 		width: 100%;
 	}

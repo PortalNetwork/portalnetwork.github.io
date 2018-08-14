@@ -11,7 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=no">
-	<meta name='viewport' content='width=1440, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 	<title>Portal Network</title>
 	<meta name="description" content="Portal Network">
 	<meta name="author" content="Portal Network">
@@ -57,10 +57,22 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
   <div id="app" :class="{active: isMenuOpen}" v-cloak>
-		<a class="menu_btn">
-		<!-- <a class="menu_btn" @click="toggleMenuFn"> -->
+		<a class="menu_btn" href="javascript:;" @click="toggleMenuFn">
 			<span></span>
 		</a>
+		<!-- <div class="mob_social_media">
+			<a class="media_btn" href="javascript:;" @click="toggleMedia">
+				<span :class="{open: !isMediaOpen,close: isMediaOpen}"></span>
+			</a>
+			<ul class="media_list" v-show="isMediaOpen">
+				<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+				<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+				<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+				<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+				<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+				<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+			</ul>
+		</div> -->
 		<div class="social_media">
 			<ul>
 				<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
@@ -89,23 +101,31 @@
 							<a id="nav_hackthon" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
 						</li>
 					</ul>
+					<ul class="media_list">
+						<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+						<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+						<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+						<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+						<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+						<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+					</ul>
 				</nav>
 			</div>
 		</div>
 
 		<div class="hero">
 			<div class="content">
-				<div class="hero_img">
-					<img src="images/index/hero.png" alt="">
-				</div>
 				<div class="hero_info">
 					<h2>Connect, Enhance<span>Existing Blockchain</span><span>Technologies.</span></h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
-					<div class="btn_list">
-						<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
-							<span><img src="images/index/join_telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
-						<a class="play_video" href="https://www.youtube.com/watch?v=ja5QtbHVM7U" target="_blank"><img src="images/index/play.png" alt=""></a>
-					</div>
+				</div>
+				<div class="hero_img">
+					<img src="images/index/hero.png" alt="">
+				</div>
+				<div class="btn_list">
+					<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
+						<span><img src="images/index/join_telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
+					<a class="play_video" href="https://www.youtube.com/watch?v=ja5QtbHVM7U" target="_blank"><img src="images/index/play.png" alt=""></a>
 				</div>
 			</div>
 		</div>
@@ -383,12 +403,12 @@
 
 		<div class="mediapartner">
 			<div class="content">
-				<h3 class="partner_title">MEDIA PARTNER</h3>
-				<div class="partner_area">
-					<a href="https://www.coingecko.com/en" target="_blank">
+				<h3>MEDIA PARTNER</h3>
+				<ul>
+					<li><a href="https://www.coingecko.com/en" target="_blank">
 						<img class="Bluzelle" src="images/index/partner_coingecko.png" alt="">
-					</a>
-				</div>
+					</a></li>
+				</ul>
 			</div>
 		</div>
 
@@ -413,7 +433,7 @@
 						<ul>
 							<li><a href="./blog.html" target="_blank">Blog</a></li>
 							<li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
-							<!-- <li><a href="javascript:;" target="_blank">Press</a></li> -->
+							<li><a href="https://projects.invisionapp.com/boards/K53P6SNW843/" target="_blank">Press</a></li>
 						</ul>
 					</div>
 					<div class="map_item">
@@ -465,6 +485,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?eefddde3&eefddde367eba27fa547"></script><script type="text/javascript" src="./js/index.js?eefddde3&eefddde367eba27fa547"></script></body>
+<script type="text/javascript" src="./js/vendor.js?737adb36&737adb3608d86b9ce815"></script><script type="text/javascript" src="./js/index.js?737adb36&737adb3608d86b9ce815"></script></body>
 
 </html>
