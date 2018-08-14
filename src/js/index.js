@@ -21,11 +21,16 @@ new Vue({
     isOpenPop: false,
     isOpenPopMore: false,
     morePhotos: [],
-    chainSelectidx: 0
+    chainSelectidx: 0,
+    isMediaOpen: false,
+    chainStyle: ["default","eth","wan","etc","icon","qtum","neo","aelf","bch"]
   },
   methods: {
     toggleMenuFn() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    toggleMedia(){
+      this.isMediaOpen = !this.isMediaOpen;
     },
     scrollFn() {
       this.scroll = document.documentElement.scrollTop;

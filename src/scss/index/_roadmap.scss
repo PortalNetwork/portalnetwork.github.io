@@ -1,10 +1,12 @@
 .roadmap {
   display: flex;
   flex-direction: column;
-  padding-top: 55px;
-  padding-bottom: 55px;
-  min-height: 500px;
+  padding: 55px 0px;
+  // min-height: 500px;
   background-color: #f7f6f4;
+  @media screen and (max-width: $mob) {
+    padding: 40px 0px;
+  }
 
   & .roadmap_header {
     margin-bottom: 32px;
@@ -25,6 +27,7 @@
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
+    padding-bottom: 20px;
 
     /* road map issue */
     & .big_issue {
@@ -33,7 +36,7 @@
       flex-flow: column nowrap;
       align-items: center;
       width: 170px;
-      min-height: 200px;
+      // min-height: 200px;
 
       /* 虛線 */
       &:before {
@@ -100,7 +103,7 @@
         padding-right: 10px;
         padding-left: 10px;
         width: inherit;
-        min-height: 200px;
+        // min-height: 200px;
         font-family: 'Avenir';
         font-size: 12px;
         font-weight: 500;

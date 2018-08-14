@@ -52,7 +52,53 @@ body {
   overflow: hidden;
   position: relative;
 }
+/*
+.mob_social_media {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 4;
+  @media screen and (max-width: $pad) {
+    display: block;
+  }
+  .media_list {
+    width: 40px;
+    background-color: $purple_d;
+    padding: 20px 0px;
+    position: fixed;
+    right: 20px;
+    bottom: 60px;
+  }
+}
 
+.media_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: $purple_d;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4;
+  .open {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('~images/index/squared_menu.png') center center no-repeat;
+    background-size: 80% auto;
+  }
+  .close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url('~images/index/multiply.png') center center no-repeat;
+    background-size: 80% auto;
+  }
+}
+*/
 .social_media {
   width: 80px;
   background-color: #141E6A;
@@ -64,15 +110,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 0px;
-  ul {
-    li {
+  padding: 20px 0px;
+  @media screen and (max-width: $pad) {
+    display: none;
+  }
+  >ul {
+    >li {
       &+li {
         margin-top: 20px;
       }
-      a {
+      >a {
         display: block;
         height: 20px;
+        @media screen and (max-width: $pad) {
+          height: 16px;
+        }
         img {
           height: 100%;
           margin: 0 auto;
@@ -90,10 +142,17 @@ body {
   text-align: center;
   color: #000;
   margin-bottom: 40px;
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .ecosystem {
   padding: 80px 0px 40px 0px;
+  @media screen and (max-width: $mob) {
+    padding: 40px 0px 20px 0px;
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -107,13 +166,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: $mob) {
+      display: block;
+    }
     li {
       display: inline-block;
-      a {
+      &+li {
+        @media screen and (max-width: $mob) {
+          margin-top: 30px;
+        }
+      }
+      @media screen and (max-width: $mob) {
         display: block;
+        text-align: center;
+      }
+      a {
+        display: inline-block;
         .figure {
           width: 120px;
-          margin-bottom: 15px;
+          margin: 0px 0px 15px 0px;
+          @media screen and (max-width: $mob) {
+            margin: 0px auto 15px auto;
+          }
           img {
             width: 100%;
             margin: 0px auto;
@@ -121,6 +195,7 @@ body {
         }
         p {
           font-size: 16px;
+          line-height: 1.3;
           font-weight: 500;
           color: #3442B0;
           text-align: center;
@@ -145,15 +220,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @media screen and (max-width: $mob) {
+      display: block;
+      text-align: center;
+    }
     li {
       display: inline-block;
+      &+li {
+        @media screen and (max-width: $mob) {
+          margin-left: 20px;
+        }
+      }
       a {
-        display: block;
+        display: inline-block;
         &.blu {
           width: 240px;
+          @media screen and (max-width: $mob) {
+            width: 190px;
+          }
         }
         &.wan {
           width: 119px;
+          @media screen and (max-width: $mob) {
+            width: 100px;
+          }
         }
         img {
           width: 100%;
@@ -164,120 +254,34 @@ body {
   }
 }
 
-.partner_title {
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 7px;
-  text-align: center;
-  color: #000;
-}
-
-.partner_area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  /*
-  @media screen and (max-width: $pad) {
-    flex-wrap: wrap;
-    width: 80%;
-  }
-  */
-  a {
-    /*
-    @media screen and (max-width: $pad) {
-      margin-bottom: 50px;
-    }
-    */
-    img {
-      width: 100%;
-    }
-  }
-}
-
-.partnership {
-  padding: 40px 0px;
-  .content {
-    max-width: $container;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  .partner_title {
-    margin-bottom: 30px;
-  }
-  .partner_area {
-    justify-content: center;
-    /*
-    @media screen and (max-width: 360px) {
-      display: block;
-    }
-    */
-    a {
-      display: block;
-      /*
-      @media screen and (max-width: 360px) {
-        margin: 0px auto 30px auto;
-      }
-      */
-      &+a {
-        margin-left: 58px;
-        /*
-        @media screen and (max-width: $pad) {
-          margin-left: 30px;
-        }
-        @media screen and (max-width: 360px) {
-          margin: 0px auto 30px auto;
-        }
-        */
-      }
-    }
-    /*
-    .bluzelle {
-      @media screen and (max-width: $pad) {
-        max-width: 136px;
-      }
-    }
-    .wan {
-      @media screen and (max-width: $pad) {
-        max-width: 84px;
-      }
-    }
-    */
-  }
-}
-
 .mediapartner {
   padding: 40px 0px 80px 0px;
+  @media screen and (max-width: $mob) {
+    padding: 20px 0px 40px 0px;
+  }
   .content {
     max-width: $container;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
   }
-  /*
-  @media screen and (max-width: $pad) {
-    margin: 0 auto 50px auto;
+  h3 {
+    @extend %h3;
   }
-  */
-  .partner_title {
-    margin-bottom: 30px;
-    /*
-    @media screen and (max-width: $pad) {
-      margin-bottom: 60px;
-    }
-    */
-  }
-  .partner_area {
-    justify-content: center;
-    a {
-      /*
-      @media screen and (max-width: $pad) {
-        max-width: 138px;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        @media screen and (max-width: $mob) {
+          width: 200px;
+        }
+        img {
+          width: 100%;
+          margin: 0px auto;
+        }
       }
-      */
     }
   }
 }

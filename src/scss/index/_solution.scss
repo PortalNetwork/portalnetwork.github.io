@@ -5,12 +5,22 @@
   align-items: stretch;
   justify-content: space-between;
   position: relative;
+  @media screen and (max-width: $mob) {
+    display: block;
+    background-color: #0C1346;
+    padding: 40px 0px 0px 0px;
+  }
   h3 {
     width: 121px;
     position: absolute;
     top: 43px;
     left: 50%;
     transform: translateX(-50%);
+    @media screen and (max-width: $mob) {
+      position: relative;
+      top: 0;
+      margin-bottom: 30px;
+    }
     img {
       width: 100%;
       margin: 0px auto;
@@ -22,8 +32,19 @@
     display: flex;
     justify-content: flex-end;
     padding: 90px 0px;
+    @media screen and (max-width: $mob) {
+      width: 100%;
+      display: block;
+      padding: 0px 20px 50px 0px;
+    }
     .section {
-      padding-right: 140px;
+      padding: 0px 140px 0px 20px;
+      @media screen and (max-width: $pad) {
+        padding: 0px 70px 0px 20px;
+      }
+      @media screen and (max-width: $mob) {
+        padding: 0px 20px 0px 20px;
+      }
     }
   }
   .right {
@@ -32,22 +53,46 @@
     display: flex;
     justify-content: flex-start;
     padding: 90px 0px;
+    @media screen and (max-width: $mob) {
+      width: 100%;
+      padding: 40px 0px;
+    }
     .section {
-      padding-left: 140px;
+      padding: 0px 20px 0px 140px;
+      @media screen and (max-width: $pad) {
+        padding: 0px 20px 0px 70px;
+      }
+      @media screen and (max-width: $mob) {
+        padding: 0px 20px 0px 20px;
+      }
       h4 {
         text-align: left;
+        @media screen and (max-width: $pad) {
+          min-height: 52px;
+        }
+        @media screen and (max-width: $mob) {
+          min-height: auto;
+          text-align: center;
+        }
       }
     }
   }
   .section {
     width: 480px;
+    @media screen and (max-width: $mob) {
+      width: auto;
+    }
     h4 {
       font-size: 20px;
+      line-height: 1.3;
       font-weight: 500;
       color: #19F4E4;
       text-align: center;
       letter-spacing: 1px;
       margin-bottom: 100px;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 40px;
+      }
     }
   }
 }
@@ -59,6 +104,10 @@
   letter-spacing: 1px;
   color: #F7F6F4;
   margin-bottom: 50px;
+  @media screen and (max-width: $mob) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 .shodo,.kokuno {
@@ -66,6 +115,9 @@
   h5 {
     @extend %h5;
     padding-right: 42px;
+    @media screen and (max-width: $mob) {
+      padding-right: 0px;
+    }
   }
   ul {
     li {
@@ -79,6 +131,9 @@
         font-size: 20px;
         font-weight: 400;
         color: #F7F6F4;
+        @media screen and (max-width: $mob) {
+          justify-content: center;
+        }
         &.no_link {
           cursor: default;
         }
@@ -137,6 +192,9 @@
 
 .kokuno {
   margin-top: 100px;
+  @media screen and (max-width: $mob) {
+    margin-top: 50px;
+  }
 }
 
 .kaizen {
@@ -149,11 +207,20 @@
     font-weight: 400;
     color: #09FFEC;
     margin-bottom: 80px;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 40px;
+    }
   }
   ul {
     li {
+      @media screen and (max-width: $mob) {
+        text-align: center;
+      }
       &+li {
         margin-top: 60px;
+        @media screen and (max-width: $mob) {
+          margin-top: 30px;
+        }
       }
       a {
         display: inline-block;
@@ -167,6 +234,9 @@
 
 .github {
   margin-top: 10px;
+  @media screen and (max-width: $mob) {
+    text-align: center;
+  }
   a {
     width: 22px;
   }
@@ -179,6 +249,10 @@
 .sub_list {
   text-align: right;
   padding-right: 45px;
+  @media screen and (max-width: $mob) {
+    text-align: center;
+    padding-right: 0px;
+  }
   .sub_item {
     display: inline-block;
     a {
