@@ -151,10 +151,10 @@
 			</div>
 		</div>
 
-		<div :class="{chain:true, open:isOpenChainHeight}">
+		<div :class="chainStyle">
 			<div class="content">
 				<div class="chain_header">
-					<div class="portal">
+					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
 						<h3 v-html="logoObj.title"></h3>
 					</div>
@@ -171,7 +171,9 @@
 								<h1>{{obj.name}}</h1>
 								<ul class="urlItem">
 									<li v-for="(url, idx) in obj.urlItem">
-										<a class="light" :href="url.link" target="_blank"><img :src="url.img" alt="" v-show="url.img !== ''"></a>
+										<a class="light" :href="url.link" target="_blank">
+											<img :src="url.img" alt="" v-if="url.img !== ''">
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -485,6 +487,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?4c22506d&4c22506da77848f47d91"></script><script type="text/javascript" src="./js/index.js?4c22506d&4c22506da77848f47d91"></script></body>
+<script type="text/javascript" src="./js/vendor.js?ebb24559&ebb2455970ac57fa806f"></script><script type="text/javascript" src="./js/index.js?ebb24559&ebb2455970ac57fa806f"></script></body>
 
 </html>
