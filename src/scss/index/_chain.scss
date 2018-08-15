@@ -1,12 +1,110 @@
 .chain {
-  background-color: $purple_d;
-  padding: 50px 0px;
+  padding: 50px 0px 70px 0px;
   // height: 320px;
   // overflow: hidden;
   // transition: height .3s;
   // &.open{
   //   height: 700px;
   // }
+  &.default {
+    background-color: $purple_d;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken($purple_d,5%);
+        .percentage_bar {
+          background-color: lighten($purple_d,15%);
+        }
+      }
+    }
+  }
+  &.eth {
+    background-color: #343434;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#343434,5%);
+        .percentage_bar {
+          background-color: lighten(#343434,30%);
+        }
+      }
+    }
+  }
+  &.wan {
+    background-color: #1269AB;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#1269AB,5%);
+        .percentage_bar {
+          background-color: lighten(#1269AB,30%);
+        }
+      }
+    }
+  }
+  &.etc {
+    background-color: #669073;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#669073,5%);
+        .percentage_bar {
+          background-color: lighten(#669073,30%);
+        }
+      }
+    }
+  }
+  &.icon {
+    background-color: #01C4C8;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#01C4C8,5%);
+        .percentage_bar {
+          background-color: lighten(#01C4C8,30%);
+        }
+      }
+    }
+  }
+  &.qtum {
+    background-color: #2E9AD0;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#2E9AD0,5%);
+        .percentage_bar {
+          background-color: lighten(#2E9AD0,30%);
+        }
+      }
+    }
+  }
+  &.neo {
+    background-color: #52BA00;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#52BA00,5%);
+        .percentage_bar {
+          background-color: lighten(#52BA00,30%);
+        }
+      }
+    }
+  }
+  &.aelf {
+    background-color: #2B5EBA;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#2B5EBA,5%);
+        .percentage_bar {
+          background-color: lighten(#2B5EBA,30%);
+        }
+      }
+    }
+  }
+  &.bch {
+    background-color: #F7941D;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#F7941D,5%);
+        .percentage_bar {
+          background-color: lighten(#F7941D,30%);
+        }
+      }
+    }
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -24,7 +122,7 @@
   @media screen and (max-width: $mob) {
     display: block;
   }
-  .portal{
+  .logo_item{
     width: 32%;
     height: 100%;
     position: relative;
@@ -110,111 +208,113 @@
           display: none;
         }
       }
-      .item_title{
-        width: 100%;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-        @media screen and (max-width: $mob) {
-          padding-top: 0px;
-          float: none;
-          white-space: nowrap;      
-        }
-        >h1{
-          position: relative;
-          font-family: Avenir;
-          font-size: 20px;
-          line-height: 1.3;
-          font-weight: 500;
-          color: #15dacb;
-          padding-left: 30px;
-          padding-top: 4px;
-          float: left;
-          @media screen and (max-width: $mob) {
-            padding-top: 0px;
-          }
-          &::before{
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            content:"";
-            width: 22px;
-            height: 24px;
-            background-image: url("~bullet@2x.png");
-            background-size: 100% 100%;
-          }
-        }
-        >.urlItem {
-          margin-left: 10px;
-          >li {
-            display: inline-block;
-            &+li {
-              margin-left: 10px;
-            }
-            >a {
-              display: block;
-              width: 22px;
-              &:hover {
-                img {
-                  opacity: .7;
-                  transform: translate3d(0px, 0px, 0px);
-                }
-              }
-              img {
-                width: 100%;
-                opacity: 1;
-                transform: translate3d(0px, 3px, 0px);
-                transition: all 0.3s;
-              }
-            }
-          }
-        }
-        >a{
-          display: block;
-          width: 19px;
-          height: 19px;
-          float: left;
-          background-color: red;
-          margin-top: 4px;
-          margin-left: 8px;
-        }
-      }
       p.description{
         color: #fff;
         line-height: 1.3;
         padding-left: 32px;
       }
-      .percentage_box{
-        width: 100%;
-        height: 15px;
-        margin-top: 15px;
-        >.percentage_bg{
-          position: relative;
-          width: 75%;
-          height: 6px;
-          background-color: #0c1346;
-          float: left;
-          margin-left: 34px;
-          margin-top: 4px;
-          @media screen and (max-width: $mob) {
-            width: 70%;
-          }
-          .percentage_bar{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            background-color: #15dacb;
+    }
+  }
+
+  .item_title{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    @media screen and (max-width: $mob) {
+      padding-top: 0px;
+      float: none;
+      white-space: nowrap;      
+    }
+    >h1{
+      position: relative;
+      font-family: Avenir;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 500;
+      color: #fff;
+      padding-left: 30px;
+      padding-top: 4px;
+      float: left;
+      @media screen and (max-width: $mob) {
+        padding-top: 0px;
+      }
+      &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        content:"";
+        width: 22px;
+        height: 24px;
+        background-image: url("~images/index/bullets.png");
+        background-size: 100% 100%;
+      }
+    }
+    >a{
+      display: block;
+      width: 19px;
+      height: 19px;
+      float: left;
+      background-color: red;
+      margin-top: 4px;
+      margin-left: 8px;
+    }
+  }
+
+  .urlItem {
+    margin-left: 10px;
+    >li {
+      display: inline-block;
+      &+li {
+        margin-left: 10px;
+      }
+      >a {
+        display: block;
+        width: 22px;
+        &:hover {
+          img {
+            opacity: .7;
+            transform: translate3d(0px, 0px, 0px);
           }
         }
-        h2{
-          float: right;
-          color: #fff;
+        img {
+          width: 100%;
+          opacity: 1;
+          transform: translate3d(0px, 3px, 0px);
+          transition: all 0.3s;
         }
       }
     }
+  }
+}
+
+.percentage_box{
+  width: 100%;
+  height: 15px;
+  margin-top: 15px;
+  .percentage_bg{
+    position: relative;
+    width: 75%;
+    height: 6px;
+    background-color: #0c1346;
+    float: left;
+    margin-left: 34px;
+    margin-top: 4px;
+    @media screen and (max-width: $mob) {
+      width: 70%;
+    }
+    .percentage_bar{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  h2{
+    float: right;
+    color: #fff;
   }
 }
