@@ -8,8 +8,7 @@ new Vue({
     isheaderFix: false,
     scroll: 0,
     nowIdx: 0,
-    blockchain:[
-    ],
+    blockchain:[],
     detailItem: [],
     logoObj: {
       "title": "PORTAL",
@@ -22,8 +21,24 @@ new Vue({
     isOpenPopMore: false,
     morePhotos: [],
     chainSelectidx: 0,
-    isMediaOpen: false,
-    chainStyle: ["default","eth","wan","etc","icon","qtum","neo","aelf","bch"]
+    isMediaOpen: false
+  },
+  computed: {
+    chainStyle() {
+      return {
+        'chain': true,
+        // 'open': this.isOpenChainHeight,
+        'default': this.chainSelectidx === 0,
+        'eth': this.chainSelectidx === 1,
+        'wan': this.chainSelectidx === 2,
+        'etc': this.chainSelectidx === 3,
+        'icon': this.chainSelectidx === 4,
+        'qtum': this.chainSelectidx === 5,
+        'neo': this.chainSelectidx === 6,
+        'aelf': this.chainSelectidx === 7,
+        'bch': this.chainSelectidx === 8
+      }
+    }
   },
   methods: {
     toggleMenuFn() {
@@ -50,7 +65,6 @@ new Vue({
       }
     },
     resetBlock(){
-      this.chainSelectidx = null;
       alert("coming soon");
       // this.isOpenChainHeight = false;
       // this.detailItem = [];
@@ -121,6 +135,7 @@ new Vue({
     handActive(idx) {
       this.chainSelectidx = idx;
     },
+
   },
   mounted() {
     AOS.init();
