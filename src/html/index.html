@@ -156,7 +156,7 @@
 				<div class="chain_header">
 					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
-						<h3 v-html="logoObj.title"></h3>
+						<h3>{{logoObj.title}}</h3>
 					</div>
 					<ul>
 						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
@@ -206,62 +206,107 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="solution">
 			<h3><img src="images/index/Solution_word.png" alt=""></h3>
-			<div class="left">
-				<div class="section">
-					<h4>Non-technical Users Adoption</h4>
-					<div class="shodo">
-						<h5>shodo</h5>
-						<ul>
-							<li><a href="./showcase.html" target="_blank">Showcase<span class="sh"></span></a></li>
-							<li><a href="https://web.portal.network/" target="_blank">Web builder<span class="we"></span></a></li>
-							<li><a href="https://chrome.google.com/webstore/detail/portal-network/apcnffelpkinnpoapmokieojaffmcpmf" target="_blank">Browser Extension<span class="be"></span></a></li>
-						</ul>
-					</div>
-					<div class="kokuno">
-						<h5>KOKUNO</h5>
-						<ul>
-							<li><a href="https://beta.portal.network/" target="_blank">Marketplace<span class="mp"></span></a></li>
-							<li><a href="javascript:;" target="_blank" @click="openMoreModal('domain')">Domain manager<span class="dm"></span></a></li>
-							<li>
-								<a class="no_link" href="javascript:;" target="_blank">BNS explorer<span class="bnsex"></span></a>
-								<div class="sub_list">
-									<div class="sub_item">
-										<a href="https://ens.portal.network/" target="_blank">ens,</a>
-									</div>
-									<div class="sub_item">
-										<a href="https://ecns.portal.network/" target="_blank">ecns,</a>
-									</div>
-									<div class="sub_item">
-										<a href="http://wns.portal.network/" target="_blank">wns</a>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
+
+			<div class="left_box">
+				<div class="content">
+					<h5>Non-technical Users Adoption</h5>
+					<div class="figure"><img src="images/index/Mumei_logo.svg" alt=""></div>
+					<h4>MUMEI</h4>
+					<p>Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.</p>
+					<ul class="product_list">
+						<li>
+							<a href="./showcase.html" target="_blank">Showcase</a>
+						</li>
+						<li>
+							<a href="https://web.portal.network/" target="_blank">Web builder</a>
+						</li>
+						<li>
+							<a href="https://extension.portal.network/index.html" target="_blank">Browser Extension</a>
+						</li>
+						<li>
+							<a href="javascript:;" @click="openMoreModal('domain')">Domain manager</a>
+						</li>
+						<li>
+							<a href="https://beta.portal.network/" target="_blank">Marketplace</a>
+						</li>
+						<li class="has_sub">
+							<a class="no_link" href="javascript:;" target="_blank">BNS explorer</a>
+							<ul class="sub_product_list">
+								<li><a href="https://ens.portal.network/" target="_blank">ENS</a></li>
+								<li><a href="https://ecns.portal.network/" target="_blank">ECNS</a></li>
+								<li><a href="http://wns.portal.network/" target="_blank">WNS</a></li>
+							</ul>
+						</li>
+						<!-- <li>
+							<a href="javascript:;" target="_blank">BNS Mobile Application</a>
+						</li> -->
+					</ul>
 				</div>
 			</div>
-			<div class="right">
-				<div class="section">
-					<h4>Technical Users Adoption</h4>
-					<div class="kaizen">
-						<h5>Kaizen</h5>
-						<p>Kaizen empowers users to learn, deploy, run and manage decentralized applications utilizing languages and frameworks such as Solidity, LLL, Node.js, IPFS, swarmDB, Golem, orbitDB, and many more. Users can easily deploy and use decentralized applications with Kaizen CLI which includes developer tools like Truffle, Ganache, Web3, open zeppline, git, and Docker.</p>
-						<ul>
-							<li>
-								<a href="javascript:;" @click="openMoreModal('cli')" target="_blank">Command Line Interface (CLI)</a>
-								<div class="github"><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/github_green.png" alt=""></a></div>
-							</li>
-							<li><a href="javascript:;" @click="openModal('deploy')">Deploy Management System</a></li>
-							<li><a href="javascript:;" @click="openModal('toolkits')">Tech Manual & Guideline</a></li>
-						</ul>
-					</div>
+
+			<div class="right_box">
+				<div class="content">
+					<h5>Technical Users Adoption</h5>
+					<div class="figure"><img src="images/index/Kaizen_logo.svg" alt=""></div>
+					<h4>Kaizen</h4>
+					<p>Kaizen empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+					<ul class="introduction_list">
+						<li class="has_sub">
+							<header>BNS</header>
+							<p>cross-chain support, developers are able to contribute to each public chain.</p>
+							<ul class="url_item">
+								<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/github_gre.svg" alt=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<header>Command Line Interface (CLI)</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('cli1')"><img src="images/index/cli_s1.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('cli2')"><img src="images/index/cli_s2.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Deploy Management System</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('kb')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Tech Manual & Guideline</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('to')"><img src="images/index/toolkits_s.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Hackathon</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('ha1')"><img src="images/index/ha_s1.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('ha2')"><img src="images/index/ha_s2.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('ha3')"><img src="images/index/ha_s3.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-
+	
     <div class="roadmap">
       <div class="roadmap_header">Roadmap</div>
       <div class="big_issues_container">
@@ -381,10 +426,22 @@
 							<p>ICON</p>
 						</a>
 					</li>
+					<li>
+						<a href="https://bluzelle.com/" target="_blank">
+							<div class="figure"><img src="images/index/e_bluzelle.png" alt=""></div>
+							<p>Bluzelle</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.coingecko.com/en" target="_blank">
+							<div class="figure"><img src="images/index/e_coingecko.png" alt=""></div>
+							<p>CoinGecko</p>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-
+		<!--
 		<div class="partnership">
 			<div class="content">
 				<h3>PARTNERSHIP</h3>
@@ -413,7 +470,7 @@
 				</ul>
 			</div>
 		</div>
-
+		-->
 		<div class="footer">
 			<div class="footer_content">
 				<div class="subscribe_box">
