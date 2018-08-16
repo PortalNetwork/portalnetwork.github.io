@@ -52,56 +52,10 @@ body {
   overflow: hidden;
   position: relative;
 }
-/*
-.mob_social_media {
-  display: none;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 4;
-  @media screen and (max-width: $pad) {
-    display: block;
-  }
-  .media_list {
-    width: 40px;
-    background-color: $purple_d;
-    padding: 20px 0px;
-    position: fixed;
-    right: 20px;
-    bottom: 60px;
-  }
-}
 
-.media_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: $purple_d;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 4;
-  .open {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url('~images/index/squared_menu.png') center center no-repeat;
-    background-size: 80% auto;
-  }
-  .close {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background: url('~images/index/multiply.png') center center no-repeat;
-    background-size: 80% auto;
-  }
-}
-*/
 .social_media {
   width: 80px;
-  background-color: #141E6A;
+  background-color: $purple_d;
   position: fixed;
   left: 0px;
   top: 50%;
@@ -165,20 +119,18 @@ body {
   ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     @media screen and (max-width: $mob) {
       display: block;
     }
     li {
-      display: inline-block;
-      &+li {
-        @media screen and (max-width: $mob) {
-          margin-top: 30px;
-        }
-      }
+      width: 23.9%;
+      text-align: center;
+      margin-bottom: 40px;
       @media screen and (max-width: $mob) {
-        display: block;
-        text-align: center;
+        width: 100%;
+        margin: 0px auto 40px auto;
       }
       a {
         display: inline-block;

@@ -105,6 +105,17 @@
       }
     }
   }
+  &.qkc {
+    background-color: #2e4978;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#2e4978,5%);
+        .percentage_bar {
+          background-color: lighten(#2e4978,30%);
+        }
+      }
+    }
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -158,18 +169,24 @@
       width: 100%;
     }
     >li{
-      width: 20%;
+      width: 16.6%;
       height: 76px;
       float: left;
       display: flex;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: $mob) {
+        width: 25%;
+      }
       >a{
         display: block;
         width: 52px;
         height: 57px;
         opacity: 0.4;
         transition: opacity .5s;
+        &:hover {
+          opacity: 1;
+        }
         &.active {
           opacity: 1;
         }
