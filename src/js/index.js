@@ -36,7 +36,8 @@ new Vue({
         'qtum': this.chainSelectidx === 5,
         'neo': this.chainSelectidx === 6,
         'aelf': this.chainSelectidx === 7,
-        'bch': this.chainSelectidx === 8
+        'bch': this.chainSelectidx === 8,
+        'qkc': this.chainSelectidx === 9
       }
     }
   },
@@ -78,11 +79,26 @@ new Vue({
       this.isOpenPop = true;
       let photo = [];
       switch(name){
-        case "deploy":
+        case "cli1":
+          photo = ["./images/index/CLI_11.png"];
+          break;
+        case "cli2":
+          photo = ["./images/index/CLI_22.png"];
+          break;
+        case "kb":
           photo = ["./images/index/kaizen_bitcoincash.png"];
           break;
-        case "toolkits":
-          photo = ["./images/index/toolkits.png"];
+        case "to":
+          photo = ["./images/index/toolkit.png"];
+          break;
+        case "ha1":
+          photo = ["./images/index/ha_b1.png"];
+          break;
+        case "ha2":
+          photo = ["./images/index/ha_b2.png"];
+          break;
+        case "ha3":
+          photo = ["./images/index/ha_b3.png"];
           break;
       }
       this.onePhotos = photo;
