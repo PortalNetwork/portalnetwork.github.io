@@ -12,7 +12,7 @@ new Vue({
     detailItem: [],
     logoObj: {
       "title": "PORTAL",
-      "icon": "./images/icon/portal@2x.png",
+      "icon": "./images/icon/portal1.svg",
       "url": "https://www.portal.network/"
     },
     isOpenChainHeight: true,
