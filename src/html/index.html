@@ -43,7 +43,8 @@
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
@@ -436,6 +437,34 @@
 						</a>
 					</li>
 				</ul>
+			</div>
+		</div>
+
+		<div class="feed">
+			<div class="content">
+				<div class="feed_box">
+					<h4>Twitter Feed</h4>
+					<div class="feed_item">
+						<a class="twitter-timeline" data-height="306" data-theme="light" data-chrome="nofooter noheader noborders" href="https://twitter.com/itisportal?ref_src=twsrc%5Etfw"></a>
+					</div>
+				</div>
+				<div class="feed_box">
+					<h4>News Feed</h4>
+					<div class="feed_item">
+						<ul class="feed_item_list">
+							<li v-for="feed in feeds">
+								<a :href="feed.url" target="_blank">
+									<header><div class="figure"><img :src="feed.company" alt=""></div></header>
+									<div class="article">
+										<h5>{{feed.title}}</h5>
+										<p v-html="feed.article"></p>
+										<div class="author">{{feed.author}}</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 

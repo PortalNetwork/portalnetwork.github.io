@@ -21,7 +21,8 @@ new Vue({
     isOpenPopMore: false,
     morePhotos: [],
     chainSelectidx: 0,
-    isMediaOpen: false
+    isMediaOpen: false,
+    feeds: []
   },
   computed: {
     chainStyle() {
@@ -157,7 +158,12 @@ new Vue({
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
-
+    axios.get("assets/json/news_list.json")
+      .then((res)=>{
+        console.log(res,12);
+        this.feeds = res.data;
+      })
+      .catch(err=> console.log(err));
     this.swipers = new Swiper('.swiper-container', {
       loop: false,
       pagination: {
