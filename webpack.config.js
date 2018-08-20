@@ -1,9 +1,24 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 function GetRandom(minNum, maxNum) {
 	return Math.floor( Math.random() * (maxNum - minNum + 1) ) + minNum;
 }
+
+let pathsToClean = [
+  'assets',
+  'js',
+  'scss',
+  'images',
+  '*.html',
+];
+
+let cleanOptions = {
+  verbose:  true
+}
+
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
@@ -116,6 +131,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new CopyWebpackPlugin([
       { from: 'assets', to: 'assets' },
       { from: 'images', to: 'images' }

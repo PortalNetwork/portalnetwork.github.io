@@ -15,19 +15,18 @@ new Vue({
       "icon": "./images/icon/portal1.svg",
       "url": "https://www.portal.network/"
     },
-    isOpenChainHeight: true,
     onePhotos: [],
     isOpenPop: false,
     isOpenPopMore: false,
     morePhotos: [],
     chainSelectidx: 0,
-    isMediaOpen: false
+    isMediaOpen: false,
+    feeds: []
   },
   computed: {
     chainStyle() {
       return {
         'chain': true,
-        // 'open': this.isOpenChainHeight,
         'default': this.chainSelectidx === 0,
         'eth': this.chainSelectidx === 1,
         'wan': this.chainSelectidx === 2,
@@ -58,7 +57,6 @@ new Vue({
     },
     onChaeckBlock(obj){
       this.detailItem = obj.detail;
-      this.isOpenChainHeight = true;
       this.logoObj = {
         "title": obj.title,
         "icon": obj.icon,
@@ -67,7 +65,6 @@ new Vue({
     },
     resetBlock(){
       alert("coming soon");
-      // this.isOpenChainHeight = false;
       // this.detailItem = [];
       // this.logoObj = {
       //   "title": "PORTAL",
@@ -150,16 +147,20 @@ new Vue({
     },
     handActive(idx) {
       this.chainSelectidx = idx;
-    },
-
+    }
   },
   mounted() {
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
-
+    axios.get("assets/json/news_list.json")
+      .then((res)=>{
+        this.feeds = res.data;
+      })
+      .catch(err=> console.log(err));
     this.swipers = new Swiper('.swiper-container', {
       loop: false,
+      watchOverflow: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
