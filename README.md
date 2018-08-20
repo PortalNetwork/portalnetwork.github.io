@@ -20,9 +20,11 @@ npm run dev
 ```
 npm run deploy
 ```
+#### News Feed
+- `index.html` 讀取 `assets/json/news_list.json`
 
 #### Blog
- - `blog.html`的資料是讀取 `assets/json/blog_list.json`這支 json 檔
+ - `blog.html` 讀取 `assets/json/blog_list.json`這支 json 檔
  - 結構如下
  ```
 {
