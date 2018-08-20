@@ -20,7 +20,7 @@ new Vue({
         icon: 'images/roadmap/documentation.png',
         flags: [
           {
-            title: 'Propose a full request for MetaMask to integrate ENS with IPFS',
+            title: 'Submit a pull request for MetaMask to integrate ENS with IPFS',
             content: 'MetaMask browser extension is a great project which helps users to interact with Ethereum. It can be more powerful by adding contents resolved by ENS. Portal Network builds a way to resolve ENS domains (.eth) to IPFS hash and redirect to url content.',
             photos: null,
             location: '',
