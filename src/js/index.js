@@ -1,5 +1,6 @@
 import '../scss/index.scss';
 import axios from 'axios';
+import animateScrollTo from 'animated-scroll-to';
 new Vue({
   el: '#app',
   data: {
@@ -97,6 +98,9 @@ new Vue({
     },
     handActive(idx) {
       this.chainSelectidx = idx;
+    },
+    goToBns(){
+      animateScrollTo(document.querySelector('#bns'));
     }
   },
   mounted() {
