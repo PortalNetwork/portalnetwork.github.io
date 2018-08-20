@@ -15,19 +15,18 @@ new Vue({
       "icon": "./images/icon/portal1.svg",
       "url": "https://www.portal.network/"
     },
-    isOpenChainHeight: true,
-    onePhotos: [],
     isOpenPop: false,
     isOpenPopMore: false,
     morePhotos: [],
     chainSelectidx: 0,
-    isMediaOpen: false
+    isMediaOpen: false,
+    feeds: [],
+    photoItems: [],
   },
   computed: {
     chainStyle() {
       return {
         'chain': true,
-        // 'open': this.isOpenChainHeight,
         'default': this.chainSelectidx === 0,
         'eth': this.chainSelectidx === 1,
         'wan': this.chainSelectidx === 2,
@@ -58,7 +57,6 @@ new Vue({
     },
     onChaeckBlock(obj){
       this.detailItem = obj.detail;
-      this.isOpenChainHeight = true;
       this.logoObj = {
         "title": obj.title,
         "icon": obj.icon,
@@ -67,7 +65,6 @@ new Vue({
     },
     resetBlock(){
       alert("coming soon");
-      // this.isOpenChainHeight = false;
       // this.detailItem = [];
       // this.logoObj = {
       //   "title": "PORTAL",
@@ -75,74 +72,24 @@ new Vue({
       //   "url": "https://www.portal.network/"
       // }
     },
-    openModal(name) {
+    openModal(name,...more) {
       this.isOpenPop = true;
-      let photo = [];
-      switch(name){
-        case "cli1":
-          photo = ["./images/index/CLI_11.png"];
-          break;
-        case "cli2":
-          photo = ["./images/index/CLI_22.png"];
-          break;
-        case "kb":
-          photo = ["./images/index/kaizen_bitcoincash.png"];
-          break;
-        case "to":
-          photo = ["./images/index/toolkit.png"];
-          break;
-        case "ha1":
-          photo = ["./images/index/ha_b1.png"];
-          break;
-        case "ha2":
-          photo = ["./images/index/ha_b2.png"];
-          break;
-        case "ha3":
-          photo = ["./images/index/ha_b3.png"];
-          break;
+      let imgUrl = `./images/index/${name}.png`;
+      let morePhoto = [...more];
+      if(morePhoto !== undefined){
+        morePhoto.forEach((elem)=>{
+          this.photoItems.push(`./images/index/${elem}.png`);
+        });
       }
-      this.onePhotos = photo;
+      this.photoItems.push(imgUrl);  
+      setTimeout(() => {
+        this.swipers.update();
+      }, 500);    
       $("body").addClass("fixBody");
     },
     closeModal() {
       this.isOpenPop = false;
-      this.onePhotos = [];
-      $("body").removeClass("fixBody");
-    },
-    openMoreModal(name) {
-      this.isOpenPopMore = true;
-      let photo = [];
-      switch(name){
-        case "cli":
-          photo = [
-            "./images/index/CLI_1.png",
-            "./images/index/CLI_2.png",
-            "./images/index/CLI_3.png",
-            "./images/index/CLI_4.png",
-          ];
-          break;
-        case "domain":
-          photo = [
-            "./images/index/dom_01.png",
-            "./images/index/dom_02.png",
-            "./images/index/dom_03.png",
-            "./images/index/dom_04.png",
-            "./images/index/dom_05.png",
-          ];
-          break;
-      }
-      this.morePhotos = photo;
-
-      setTimeout(() => {
-        this.swipers[0].update();
-        this.swipers[1].update();
-      }, 500);
-
-      $("body").addClass("fixBody");
-    },
-    closeModalMore() {
-      this.isOpenPopMore = false;
-      this.morePhotos = [];
+      this.photoItems = [];
       $("body").removeClass("fixBody");
     },
     coming () {
@@ -150,16 +97,20 @@ new Vue({
     },
     handActive(idx) {
       this.chainSelectidx = idx;
-    },
-
+    }
   },
   mounted() {
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
-
+    axios.get("assets/json/news_list.json")
+      .then((res)=>{
+        this.feeds = res.data;
+      })
+      .catch(err=> console.log(err));
     this.swipers = new Swiper('.swiper-container', {
       loop: false,
+      watchOverflow: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',

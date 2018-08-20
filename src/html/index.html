@@ -43,7 +43,8 @@
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
@@ -111,7 +112,7 @@
 		</div>
 
 		<div class="hero">
-			<div class="content">
+			<div class="content" data-aos="fade-up">
 				<div class="hero_info">
 					<h2>Connect, Enhance<span>Existing Blockchain</span><span>Technologies.</span></h2>
 					<p>Decentralized Domain Name for the New Internet.</p>
@@ -128,7 +129,7 @@
 		</div>
 
 		<div class="summary what">
-			<div class="content">
+			<div class="content" data-aos="fade-up">
 				<h3>What is Portal Network</h3>
 				<p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying <a href="#bns">BNS</a> standard across multiple blockchain protocols.</p>
 			</div>
@@ -137,19 +138,54 @@
 		<div class="summary bns">
 			<span class="anchor" id="bns"></span>
 			<div class="content">
-				<div class="left">
+				<div class="left" data-aos="fade-up">
 					<h3>BNS</h3>
 					<p><span>B</span>lockchain <span>N</span>ame <span>S</span>ervice</p>
 				</div>
-				<div class="right">
+				<div class="right" data-aos="fade-up" data-aos-duration="500">
 					<h4>What is BNS?</h4>
 					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
 				</div>
 			</div>
 		</div>
 
+		<div class="identity">
+			<div class="content" data-aos="fade-up">
+				<div class="left">
+					<h3>human-readable identity</h3>
+					<p>The concise universal gateway to your crypto assets, branding and business logic in the decentralized world.</p>
+					<div class="domain"><span>yourname.eth</span></div>
+				</div>
+				<div class="right">
+					<ul>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity01.png" alt=""></div>
+							<div class="section"> 
+								<h4>IPFS Address</h4>
+								<p>0xd1640e2d0d820f942471cd98040be9f810e85…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity02.png" alt=""></div>
+							<div class="section">
+								<h4>Smart Contract</h4>
+								<p>0x5FfC014343cd971B7eb70732021E26C35B744…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity03.png" alt=""></div>
+							<div class="section">
+								<h4>Wallet Address</h4>
+								<p>0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		<div :class="chainStyle">
-			<div class="content">
+			<div class="content" data-aos="fade-up">
 				<div class="chain_header">
 					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
@@ -191,7 +227,7 @@
 		</div>
 
 		<div class="summary proof">
-			<div class="content">
+			<div class="content" data-aos="fade-up">
 				<div class="left">
 					<h3>Proof of Adoption</h3>
 					<p>Portal Network’s mission is to enable both technical & non-technical users to easily deploy/host/connect/use ÐWebs & ÐApps so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.</p>
@@ -208,7 +244,7 @@
 			<h3><img src="images/index/Solution_word.png" alt=""></h3>
 
 			<div class="left_box">
-				<div class="content">
+				<div class="content" data-aos="fade-up">
 					<h5>Non-technical Users Adoption</h5>
 					<div class="figure"><img src="images/index/Mumei_logo.svg" alt=""></div>
 					<h4>MUMEI</h4>
@@ -224,7 +260,7 @@
 							<a href="https://extension.portal.network/index.html" target="_blank">Browser Extension</a>
 						</li>
 						<li>
-							<a href="javascript:;" @click="openMoreModal('domain')">Domain manager</a>
+							<a href="javascript:;" @click="openModal('dom_01','dom_02','dom_03','dom_04')">Domain manager</a>
 						</li>
 						<li>
 							<a href="https://beta.portal.network/" target="_blank">Marketplace</a>
@@ -245,7 +281,7 @@
 			</div>
 
 			<div class="right_box">
-				<div class="content">
+				<div class="content" data-aos="fade-up" data-aos-duration="500">
 					<h5>Technical Users Adoption</h5>
 					<div class="figure"><img src="images/index/Kaizen_logo.svg" alt=""></div>
 					<h4>Kaizen</h4>
@@ -262,10 +298,10 @@
 							<header>Command Line Interface (CLI)</header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('cli1')"><img src="images/index/cli_s1.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('CLI_11','CLI_22')"><img src="images/index/cli_s1.png" alt=""></a>
 								</li>
 								<li>
-									<a href="javascript:;" @click="openModal('cli2')"><img src="images/index/cli_s2.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('CLI_22','CLI_11')"><img src="images/index/cli_s2.png" alt=""></a>
 								</li>
 							</ul>
 						</li>
@@ -273,7 +309,7 @@
 							<header>Deploy Management System</header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('kb')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('kaizen_bitcoincash')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
 								</li>
 							</ul>
 						</li>
@@ -281,7 +317,7 @@
 							<header>Tech Manual & Guideline</header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('to')"><img src="images/index/toolkits_s.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('toolkit')"><img src="images/index/toolkits_s.png" alt=""></a>
 								</li>
 							</ul>
 						</li>
@@ -289,13 +325,13 @@
 							<header>Hackathon</header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('ha1')"><img src="images/index/ha_s1.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('ha_b1','ha_b2','ha_b3')"><img src="images/index/ha_s1.png" alt=""></a>
 								</li>
 								<li>
-									<a href="javascript:;" @click="openModal('ha2')"><img src="images/index/ha_s2.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('ha_b2','ha_b1','ha_b3')"><img src="images/index/ha_s2.png" alt=""></a>
 								</li>
 								<li>
-									<a href="javascript:;" @click="openModal('ha3')"><img src="images/index/ha_s3.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('ha_b3','ha_b2','ha_b1')"><img src="images/index/ha_s3.png" alt=""></a>
 								</li>
 							</ul>
 						</li>
@@ -439,6 +475,34 @@
 			</div>
 		</div>
 
+		<div class="feed">
+			<div class="content">
+				<div class="feed_box">
+					<h4>Twitter Feed</h4>
+					<div class="feed_item">
+						<a class="twitter-timeline" data-height="306" data-theme="light" data-chrome="nofooter noheader noborders" href="https://twitter.com/itisportal?ref_src=twsrc%5Etfw"></a>
+					</div>
+				</div>
+				<div class="feed_box">
+					<h4>News Feed</h4>
+					<div class="feed_item">
+						<ul class="feed_item_list">
+							<li v-for="feed in feeds">
+								<a :href="feed.url" target="_blank">
+									<header><div class="figure"><img :src="feed.company" alt=""></div></header>
+									<div class="article">
+										<h5>{{feed.title}}</h5>
+										<p v-html="feed.article"></p>
+										<div class="author">{{feed.author}}</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="footer">
 			<div class="footer_content">
 				<div class="subscribe_box">
@@ -485,30 +549,18 @@
 		<div v-show="isOpenPop" class="photoPop">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(photo, photoIdx) in onePhotos">
+					<div class="swiper-slide" v-for="(photo, photoIdx) in photoItems">
 						<img :src="photo" alt="" />
 					</div>
 				</div>
+				<div class="swiper-button-prev swiper-button-white" v-show="photoItems.length > 1"></div>
+				<div class="swiper-button-next swiper-button-white" v-show="photoItems.length > 1"></div>
 			</div>
 			<a @click="closeModal" class="closeBtn">
 				<img src="images/index/multiply.png" alt="">
 			</a>
 		</div>
 
-		<div v-show="isOpenPopMore" class="photoPop">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(morePhoto, photoIdx) in morePhotos">
-						<img :src="morePhoto" alt="" />
-					</div>
-				</div>
-				<div class="swiper-button-prev swiper-button-white"></div>
-				<div class="swiper-button-next swiper-button-white"></div>
-			</div>
-			<a @click="closeModalMore" class="closeBtn">
-				<img src="images/index/multiply.png" alt="">
-			</a>
-		</div>
 	</div>
 
 	

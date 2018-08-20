@@ -2,13 +2,13 @@ $container: 960px;
 $pad: 960px;
 $mob: 720px;
 $smob: 340px;
-$blue_d: #0027EC;
-$blue_l: rgb(107, 173, 226);
 $indigo: #3442b0;
-// $green: #00D5BF;
-/*product*/
-$green_text: #23D6A3;
-$gray_text: #616161;
+$blue: #2436B9;
+$green: #15DACB;
+$green_text: #19F4E4;
+$purple: #232F88;
+$purple_d: #141E6A;
+$gray_l:#f7f6f4;
 
 %clear {
 	&:after {
@@ -17,9 +17,3 @@ $gray_text: #616161;
 		clear: both;
 	}
 }
-
-$green: #15DACB;
-$green_text: #19F4E4;
-$purple: #232F88;
-$purple_d: #141E6A;
-$gray_l:#f7f6f4;
