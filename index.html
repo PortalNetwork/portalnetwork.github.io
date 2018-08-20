@@ -43,7 +43,8 @@
 	<script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+	crossorigin="anonymous"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script>
@@ -144,6 +145,41 @@
 				<div class="right">
 					<h4>What is BNS?</h4>
 					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="identity">
+			<div class="content">
+				<div class="left">
+					<h3>human-readable identity</h3>
+					<p>The concise universal gateway to your crypto assets, branding and business logic in the decentralized world.</p>
+					<div class="domain"><span>yourname.eth</span></div>
+				</div>
+				<div class="right">
+					<ul>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity01.png" alt=""></div>
+							<div class="section"> 
+								<h4>IPFS Address</h4>
+								<p>0xd1640e2d0d820f942471cd98040be9f810e85…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity02.png" alt=""></div>
+							<div class="section">
+								<h4>Smart Contract</h4>
+								<p>0x5FfC014343cd971B7eb70732021E26C35B744…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity03.png" alt=""></div>
+							<div class="section">
+								<h4>Wallet Address</h4>
+								<p>0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -439,6 +475,34 @@
 			</div>
 		</div>
 
+		<div class="feed">
+			<div class="content">
+				<div class="feed_box">
+					<h4>Twitter Feed</h4>
+					<div class="feed_item">
+						<a class="twitter-timeline" data-height="306" data-theme="light" data-chrome="nofooter noheader noborders" href="https://twitter.com/itisportal?ref_src=twsrc%5Etfw"></a>
+					</div>
+				</div>
+				<div class="feed_box">
+					<h4>News Feed</h4>
+					<div class="feed_item">
+						<ul class="feed_item_list">
+							<li v-for="feed in feeds">
+								<a :href="feed.url" target="_blank">
+									<header><div class="figure"><img :src="feed.company" alt=""></div></header>
+									<div class="article">
+										<h5>{{feed.title}}</h5>
+										<p v-html="feed.article"></p>
+										<div class="author">{{feed.author}}</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="footer">
 			<div class="footer_content">
 				<div class="subscribe_box">
@@ -512,6 +576,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?4570ec40&4570ec40ed2feb08bd18"></script><script type="text/javascript" src="./js/index.js?4570ec40&4570ec40ed2feb08bd18"></script></body>
+<script type="text/javascript" src="./js/vendor.js?2fa9a7f4&2fa9a7f4d8a00bc10c68"></script><script type="text/javascript" src="./js/index.js?2fa9a7f4&2fa9a7f4d8a00bc10c68"></script></body>
 
 </html>
