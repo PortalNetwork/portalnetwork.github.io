@@ -115,10 +115,35 @@
   }
   h3 {
     width: 121px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $purple_d;
+    text-align: center;
+    background-color: #F7F6F4;
+    text-transform: uppercase;
     position: absolute;
-    top: 43px;
+    top: 110px;
     left: 50%;
     transform: translateX(-50%);
+    &:before {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-width: 0 60.5px 30px 60.5px;
+      border-color: transparent transparent #F7F6F4 transparent;
+      position: absolute;
+      top: -30px;
+    }
+    &:after {
+      content: "";
+      display: block;
+      border-style: solid;
+      border-width: 30px 60.5px 0 60.5px;
+      border-color: #F7F6F4 transparent transparent transparent;
+      bottom: 30px;
+    }
     @media screen and (max-width: $mob) {
       position: relative;
       top: 0px;

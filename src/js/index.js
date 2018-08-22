@@ -1,8 +1,22 @@
 import '../scss/index.scss';
 import axios from 'axios';
 import animateScrollTo from 'animated-scroll-to';
+import en from '../assets/json/i18n_en.json';
+import tw from '../assets/json/i18n_tw.json';
+
+const messages = {
+  en,
+  tw
+};
+
+const i18n = new VueI18n({
+  locale: 'en',
+  messages,
+});
+
 new Vue({
   el: '#app',
+  i18n,
   data: {
     swipers: null,
     isMenuOpen: false,
@@ -23,6 +37,7 @@ new Vue({
     isMediaOpen: false,
     feeds: [],
     photoItems: [],
+    selectedMultiLang: "en"
   },
   computed: {
     chainStyle() {
@@ -101,17 +116,26 @@ new Vue({
     },
     goToBns(){
       animateScrollTo(document.querySelector('#bns'));
+    },
+    onChangeMultiLang(){
+      i18n.locale = this.selectedMultiLang;
+      axios.get("assets/json/blockchain_tw.json")
+        .then(this.blockchainData)
+        .catch(err=> console.log(err));
+      axios.get("assets/json/landing_news_tw.json")
+        .then((res)=>{
+          this.feeds = res.data;
+        }).catch(err=> console.log(err));
     }
   },
   mounted() {
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
-    axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
-    axios.get("assets/json/news_list.json")
+    axios.get("assets/json/blockchain_en.json").then(this.blockchainData).catch(err=> console.log(err));
+    axios.get("assets/json/landing_news_en.json")
       .then((res)=>{
         this.feeds = res.data;
-      })
-      .catch(err=> console.log(err));
+      }).catch(err=> console.log(err));
     this.swipers = new Swiper('.swiper-container', {
       loop: false,
       watchOverflow: true,

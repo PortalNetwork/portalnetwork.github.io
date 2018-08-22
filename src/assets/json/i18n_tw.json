@@ -1,0 +1,171 @@
+{
+  "menu": [
+    "Blog",
+    "Roadmap",
+    "Showcase",
+    "Hackathon"
+  ],
+  "hero": {
+    "title": "Connect, Enhance<br/>Existing Blockchain<br/>Technologies.",
+    "introduction": "Decentralized Domain Name for the New Internet.",
+    "join": "Join Us On Telegram"
+  },
+  "what": {
+    "title": "What is Portal Network",
+    "introduction": [
+      "Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying ",
+      " standard across multiple blockchain protocols."
+    ]
+  },
+  "bns": {
+    "shortName": "BNS",
+    "fullName": "<span>B</span>lockchain <span>N</span>ame <span>S</span>ervice",
+    "title": "What is BNS?",
+    "introduction": "BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines."
+  },
+  "identity": {
+    "title": "human-readable identity",
+    "introduction": "The concise universal gateway to your crypto assets, branding and business logic in the decentralized world.",
+    "chapter": [
+      "IPFS Address",
+      "Smart Contract",
+      "Wallet Address"
+    ]
+  },
+  "proof": {
+    "title": "Proof of Adoption",
+    "introduction": [
+      "Portal Network’s mission is to enable both technical & non-technical users to easily deploy/host/connect/use ÐWebs & ÐApps so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.",
+      "Proof of Adoption provides both blockchain and crypto community a series of tools to effortlessly interact and contribute their unique talents to the decentralized world."
+    ],
+    "link": "Learn More"
+  },
+  "solution": {
+    "title": "solution",
+    "chapter": [
+      {
+        "title": "Non-technical Users Adoption",
+        "productName": "MUMEI",
+        "introduction": "Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.",
+        "items": [
+          "Showcase",
+          "Web builder",
+          "Browser Extension",
+          "Domain manager",
+          "Marketplace",
+          "BNS explorer"
+        ]
+      },
+      {
+        "title": "Technical Users Adoption",
+        "productName": "Kaizen",
+        "introduction": "Kaizen empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.",
+        "flag": [
+          {
+            "introduction": "cross-chain support, developers are able to contribute to each public chain."
+          },
+          {
+            "title": "Command Line Interface (CLI)"
+          },
+          {
+            "title": "Deploy Management System"
+          },
+          {
+            "title": "Tech Manual & Guideline"
+          },
+          {
+            "title": "Hackathon"
+          }
+        ]
+      }
+    ]
+
+  },
+  "roadmap": {
+    "title": "Roadmap",
+    "chapter": [
+      {
+        "date": "MAY 2018",
+        "info": ["EIP 1062, ECIP 1044 MetaMask Contribution."]
+      },
+      {
+        "date": "JUN 2018",
+        "info": ["WNS standard launch Development WNS surrounding Ecosystem."]
+      },
+      {
+        "date": "JUL 2018",
+        "info": [
+          "Host Korea Hackathon with Wanchain, Bluzelle, and Noia.",
+          "Wanchain Wallet Development.",
+          "ÐWeb game framework."
+        ]
+      },
+      {
+        "date": "AUG 2018",
+        "info": [
+          "Proposed IIP-6 on ICON Multi-chains BNS.",
+          "Marketplace Beta Launch."
+        ]
+      },
+      {
+        "date": "Q4 2018",
+        "info": [
+          "Cross-chains Universal Wallet.",
+          "Kaizen CLI beta release."
+        ]
+      },
+      {
+        "date": "Q1 2019",
+        "info": [
+          "Search Engine for Decentralized Content.",
+          "Resource Datacenter for ÐWebs and ÐApps.",
+          "IDE integration / Developer Environment."
+        ]
+      }
+    ]
+  },
+  "request": {
+    "introduction": "White Paper and Technical Paper request form.",
+    "link": "Request"
+  },
+  "ecosystem": {
+    "title": "ECOSYSTEM"
+  },
+  "news": [
+    {
+      "title": "Twitter Feed"
+    },
+    {
+      "title": "News Feed"
+    }
+  ],
+  "mail": {
+    "placeholder": "請輸入你的郵件地址",
+    "introduction": "Subscribe now and get our latest updates.",
+    "btn": "訂閱"
+  },
+  "footerMap": [
+    {
+      "title": "News",
+      "items": [
+        "部落格",
+        "活動",
+        "Press"
+      ]
+    },
+    {
+      "title": "Legal",
+      "items": [
+        "Privacy & Policy",
+        "Terms of use"
+      ]
+    },
+    {
+      "title": "Help Center",
+      "items": [
+        "FAQ",
+        "Contact Us"
+      ]
+    }
+  ]
+}
