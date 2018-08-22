@@ -189,7 +189,7 @@
 				<div class="chain_header">
 					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
-						<h3>{{logoObj.title}}</h3>
+						<h3><a :href="logoObj.url" target="_blank">{{logoObj.title}}</a></h3>
 					</div>
 					<ul>
 						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
