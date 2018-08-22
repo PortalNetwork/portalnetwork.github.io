@@ -73,7 +73,7 @@
         ]
     },
     {
-        "title": "Ethereum",
+        "title": "Ethereum (ENS)",
         "icon": "./images/icon/eth1.svg",
         "url": "https://www.ethereum.org",
         "detail": [
@@ -161,7 +161,7 @@
         ]
     },
     {
-        "title": "Wanchain",
+        "title": "Wanchain (WNS)",
         "icon": "./images/icon/wan1.svg",
         "url": "https://wanchain.org",
         "detail": [
@@ -249,7 +249,7 @@
         ]
     },
     {
-        "title": "Ethereum Classic",
+        "title": "Ethereum Classic (ECNS)",
         "icon": "./images/icon/etc1.svg",
         "url": "https://ethereumclassic.org/",
         "detail": [
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "title": "ICON",
+        "title": "ICON (INS)",
         "icon": "./images/icon/icon1.svg",
         "url": "https://icon.foundation/?lang=en",
         "detail": [
@@ -420,7 +420,7 @@
         ]
     },
     {
-        "title": "Qtum",
+        "title": "Qtum (QNS)",
         "icon": "./images/icon/qtum1.svg",
         "url": "https://qtum.org/en",
         "detail": [
@@ -504,7 +504,7 @@
         ]
     },
     {
-        "title": "Neo",
+        "title": "Neo (NNS)",
         "icon": "./images/icon/neo1.svg",
         "url": "https://neo.org",
         "detail": [
@@ -588,7 +588,7 @@
         ]
     },
     {
-        "title": "Aelf",
+        "title": "Aelf (AENS)",
         "icon": "./images/icon/aelf12.svg",
         "url": "https://aelf.io",
         "detail": [
@@ -616,12 +616,12 @@
             },
             {
                 "name": "AENS",
-                "percentage": 0,
+                "percentage": 25,
                 "description": "Aelf name service",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/aens"
                     }
                 ]
             },
@@ -672,7 +672,7 @@
         ]
     },
     {
-        "title": "Bitcoin Cash",
+        "title": "Bitcoin Cash (BCNS)",
         "icon": "./images/icon/bc1.svg",
         "url": "https://explorer.bitcoin.com/bch",
         "detail": [
@@ -756,7 +756,7 @@
         ]
     },
     {
-        "title": "Quark",
+        "title": "Quarkchain (QCNS)",
         "icon": "./images/icon/quark.svg",
         "url": "https://quarkchain.io/",
         "detail": [
@@ -784,12 +784,12 @@
             },
             {
                 "name": "QCNS",
-                "percentage": 0,
-                "description": "Quark name service",
+                "percentage": 25,
+                "description": "Quarkchain name service",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/qcns"
                     }
                 ]
             },
