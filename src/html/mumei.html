@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta name="description" content="">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="" />
+	<!-- Twitter Card data --> 
+	<meta name="twitter:card" content="summary_large_image"> 
+	<meta name="twitter:site" content="@itisportal"> 
+	<meta name="twitter:title" content="Portal Network"> 
+	<meta name="twitter:description" content=""> 
+	<meta name="twitter:creator" content="@itisportal">
+	<!-- Open Graph data --> 
+	<meta property="og:title" content="Portal Network" /> 
+	<meta property="og:type" content="website" /> 
+	<meta property="og:url" content=" https://www.portal.network/" />
+	<meta property="og:image" content=" ./assets/meta_share.png" />
+	<meta property="og:image:url" content="./assets/meta_share.png" />
+	<meta property="og:description" content="" /> 
+	<meta property="og:site_name" content="Portal Network" /> 
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+	
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,500,600,400,700" rel="stylesheet">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+  <div id="app" v-cloak>
+    <!-- <a class="menu_btn" href="javascript:;" @click="toggleMenuFn">
+      <span></span>
+    </a> -->
+    <div class="header">
+			<ul class="chapter_nav">
+				<li><a :class="{active: selectIdx === 0}" href="#c1" @click="scrollTo('c1');onActive(0)" title="Showcase"></a></li>
+				<li><a :class="{active: selectIdx === 1}" href="#c2" @click="scrollTo('c2');onActive(1)" title="Web builder"></a></li>
+				<li><a :class="{active: selectIdx === 2}" href="#c3" @click="scrollTo('c3');onActive(2)" title="Browser Extension"></a></li>
+				<li><a :class="{active: selectIdx === 3}" href="#c4" @click="scrollTo('c4');onActive(3)" title="Domain manager"></a></li>
+				<li><a :class="{active: selectIdx === 4}" href="#c5" @click="scrollTo('c5');onActive(4)" title="Marketplace"></a></li>
+				<li><a :class="{active: selectIdx === 5}" href="#c6" @click="scrollTo('c6');onActive(5)" title="BNS explorer"></a></li>
+			</ul>
+      <div class="content">
+        <h1><img src="images/logo/logo_w.png" alt=""></h1>
+        <div class="telegram"><a href="https://t.me/portalnetworkofficial" target="_blank">Join Us On Telegram</a></div>
+      </div>
+    </div>
+    <div class="hero">
+      <div class="content">
+        <nav>
+					<ul class="menu">
+						<li>
+							<a href="javascript:;" target="_blank">Kaizen</a>
+						</li>
+						<li>
+							<a class="active" href="./mumei.html" target="_blank">Mumei</a>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">Proof of User Adoption</a>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">Domian Maneger</a>
+						</li>
+						<li>
+							<a href="javascript:;" target="_blank">Search Engine</a>
+						</li>
+					</ul>
+        </nav>
+        <div class="info">
+					<div class="figure"><img src="images/mumei/mumei_logo.svg" alt=""></div>
+          <h2>MUMEI</h2>
+					<p>Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.</p>
+					<ul class="chapter_list">
+						<li>
+							<a href="#c1" @click="scrollTo('c1');onActive(0)">Showcase</a>
+						</li>
+						<li>
+							<a href="#c2" @click="scrollTo('c2');onActive(1)">Web builder</a>
+						</li>
+						<li>
+							<a href="#c3" @click="scrollTo('c3');onActive(2)">Browser Extension</a>
+						</li>
+						<li>
+							<a href="#c4" @click="scrollTo('c4');onActive(3)">Domain manager</a>
+						</li>
+						<li>
+							<a href="#c5" @click="scrollTo('c5');onActive(4)">Marketplace</a>
+						</li>
+						<li>
+							<a href="#c6" @click="scrollTo('c6');onActive(5)">BNS explorer</a>
+						</li>
+					</ul>
+        </div>
+      </div>
+    </div>
+
+		<div class="chapter orange text_left">
+			<span id="c1" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>Showcase</h3>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quae fuga tempora quam perspiciatis a delectus sunt architecto reprehenderit labore? Ipsum ut corporis tempore ipsa consectetur. Nesciunt eligendi minus quisquam?</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="chapter darken">
+			<span id="c2" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>Web builder</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis, hic beatae blanditiis earum veritatis rerum et doloribus similique amet autem deserunt incidunt voluptatem sed qui temporibus possimus. Doloremque, rerum.</p>
+				</div>
+			</div>
+		</div>
+    
+		<div class="chapter blue text_left">
+			<span id="c3" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>Browser Extension</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda odio facilis id dolorem obcaecati nostrum sit at quam fugit, nobis eum. Modi eum aperiam magnam reiciendis veniam nemo. Dolor, cupiditate.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="chapter darken">
+			<span id="c4" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>Domain manager</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ipsam iusto neque optio laborum nulla, minus explicabo voluptatum adipisci quia, eius dolor aliquam a similique, cumque provident! Eius, quidem aliquam.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="chapter purple text_left">
+			<span id="c5" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>Marketplace</h3>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora delectus sunt sit distinctio suscipit rem magni a beatae temporibus nobis illum deserunt ducimus ab blanditiis expedita, laborum maxime sed sint?</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="chapter darken">
+			<span id="c6" class="anchor"></span>
+			<div class="content">
+				<div class="figure"><img src="https://fakeimg.pl/610x400/?text=Hello" alt=""></div>
+				<div class="info">
+					<h3>BNS Explorer</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed dolores nostrum quia iusto cum nisi aperiam quibusdam inventore sequi, earum tenetur eos atque facilis sunt totam mollitia provident ut consectetur?</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="content">
+				<ul class="social_media">
+					<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+					<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+					<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+					<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+					<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+					<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+				</ul>
+				<div class="footer_map">
+					<div class="map_item">
+						<h4>News</h4>
+						<ul>
+							<li><a href="./blog.html" target="_blank">Blog</a></li>
+							<li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
+							<li><a href="https://projects.invisionapp.com/boards/K53P6SNW843/" target="_blank">Press</a></li>
+						</ul>
+					</div>
+					<div class="map_item">
+						<h4>Legal</h4>
+						<ul>
+							<li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+							<li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="map_item">
+						<h4>Help Center</h4>
+						<ul>
+							<li><a href="javascript:;" target="_blank">FAQ</a></li>
+							<li><a href="mailto:support@portal.network" target="_blank">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="copyright">© 2018 Portal.Network.</p>
+		</div>
+
+	</div>
+	
+</body>
+
+</html>
