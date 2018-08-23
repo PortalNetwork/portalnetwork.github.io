@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>Portal Network</title>
+	<meta name="description" content="Portal Network is connecting and enhancing existing blockchain technologies.">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Blockchain technology company that connect, enhance existing blockchain technology." />
+	<!-- Twitter Card data --> 
+	<meta name="twitter:card" content="summary_large_image"> 
+	<meta name="twitter:site" content="@itisportal"> 
+	<meta name="twitter:title" content="Portal Network"> 
+	<meta name="twitter:description" content="Portal Network is connecting and enhancing existing blockchain technologies."> 
+	<meta name="twitter:creator" content="@itisportal">
+
+	<!-- Open Graph data --> 
+	<meta property="og:title" content="Portal Network" /> 
+	<meta property="og:type" content="website" /> 
+	<meta property="og:url" content=" https://www.portal.network/" />
+	<meta property="og:image" content=" ./assets/meta_share.png" />
+	<meta property="og:image:url" content="./assets/meta_share.png" />
+	<meta property="og:description" content="Blockchain technology that connecting and enhancing existing blockchain technology." /> 
+	<meta property="og:site_name" content="Portal Network" /> 
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+	
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,500,600,400,700" rel="stylesheet">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.min.js"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script>
+    (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/an50zjec'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
+  </script>
+  <script>(function (w, d, s, l, i) {
+    w[l] = w[l] || []; w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    }); var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KKLX3T6');
+	</script>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <div id="app" :class="{active: isMenuOpen}" v-cloak>
+		<a class="menu_btn" href="javascript:;" @click="toggleMenuFn">
+			<span></span>
+		</a>
+		<div class="social_media">
+			<ul>
+				<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+				<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+				<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+				<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+				<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+				<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div :class="{header: true, fixed: isheaderFix}">
+			<div class="header_content">
+				<h1><a href="./index.html" class="logo"></a></h1>
+				<nav>
+					<ul class="menu">
+						<li>
+							<a id="nav_blog" href="./blog.html" target="_blank">Blog</a>
+						</li>
+						<li>
+							<a id="nav_roadmap" href="./roadmap.html" target="_blank">Roadmap</a>
+						</li>
+						<li>
+							<a id="nav_showcase" href="./showcase.html" target="_blank">Showcase</a>
+						</li>
+						<li>
+							<a id="nav_hackthon" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+						</li>
+					</ul>
+					<ul class="media_list">
+						<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
+						<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/s_g.png" alt=""></a></li>
+						<li><a href="https://medium.com/portalnetworkofficial" target="_blank"><img src="images/index/s_M.png" alt=""></a></li>
+						<li><a href="https://twitter.com/itisportal" target="_blank"><img src="images/index/s_t.png" alt=""></a></li>
+						<li><a href="https://www.facebook.com/portalnetworkofficial" target="_blank"><img src="images/index/s_fb.png" alt=""></a></li>
+						<li><a href="https://www.reddit.com/r/portalnetwork" target="_blank"><img src="images/index/s_reddit.png" alt=""></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div class="hero">
+			<div class="content" data-aos="fade-up">
+				<div class="hero_info">
+					<h2>Connect, Enhance<span>Existing Blockchain</span><span>Technologies.</span></h2>
+					<p>Decentralized Domain Name for the New Internet.</p>
+				</div>
+				<div class="hero_img">
+					<img src="images/index/hero.png" alt="">
+				</div>
+				<div class="btn_list">
+					<a id="hero_jointelegram" href="https://t.me/portalnetworkofficial" class="telegram_btn" target="_blank">
+						<span><img src="images/index/join_telegram.png" alt=""></span><p>Join Us On Telegram</p></a>
+					<a class="play_video" href="https://www.youtube.com/watch?v=ja5QtbHVM7U" target="_blank"><img src="images/index/play.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="summary what">
+			<div class="content" data-aos="fade-up">
+				<h3>What is Portal Network</h3>
+				<p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying <a href="javascript:;" @click="goToBns">BNS</a> standard across multiple blockchain protocols.</p>
+			</div>
+		</div>
+
+		<div class="summary bns">
+			<span class="anchor" id="bns"></span>
+			<div class="content" data-aos="fade-up">
+				<div class="left">
+					<h3>BNS</h3>
+					<p><span>B</span>lockchain <span>N</span>ame <span>S</span>ervice</p>
+				</div>
+				<div class="right">
+					<h4>What is BNS?</h4>
+					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="identity">
+			<div class="content" data-aos="fade-up">
+				<div class="left">
+					<h3>human-readable identity</h3>
+					<p>The concise universal gateway to your crypto assets, branding and business logic in the decentralized world.</p>
+					<div class="domain"><span>yourname.eth</span></div>
+				</div>
+				<div class="right">
+					<ul>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity01.png" alt=""></div>
+							<div class="section"> 
+								<h4>IPFS Address</h4>
+								<p>QmYUXKQG86g2bJi6W32eT31C8h5PWkVQNpo…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity02.png" alt=""></div>
+							<div class="section">
+								<h4>Smart Contract</h4>
+								<p>0x5FfC014343cd971B7eb70732021E26C35B744…</p>
+							</div>
+						</li>
+						<li class="identity_item">
+							<div class="figure"><img src="images/index/identity03.png" alt=""></div>
+							<div class="section">
+								<h4>Wallet Address</h4>
+								<p>0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div :class="chainStyle">
+			<div class="content" data-aos="fade-up">
+				<div class="chain_header">
+					<div class="logo_item">
+						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
+						<h3><a :href="logoObj.url" target="_blank">{{logoObj.title}}</a></h3>
+					</div>
+					<ul>
+						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
+						<li><a @click="resetBlock"><img src="./images/icon/vote1.svg" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="item_schedule">
+					<ul>
+						<li></li>
+						<li v-for="(obj, idx) in detailItem">
+							<div class="item_title">
+								<h1>{{obj.name}}</h1>
+								<ul class="urlItem">
+									<li v-for="(url, idx) in obj.urlItem">
+										<a class="light" :href="url.link" target="_blank">
+											<img :src="url.img" alt="" v-if="url.img !== ''">
+										</a>
+									</li>
+								</ul>
+							</div>
+
+							<p class="description">{{obj.description}}</p>
+
+							<div class="percentage_box" v-if="obj.percentage !== null">
+								<div class="percentage_bg">
+									<div class="percentage_bar" v-bind:style="{width: obj.percentage + '%' }"></div>
+								</div>
+								<h2>{{obj.percentage}}%</h2>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="summary proof">
+			<div class="content" data-aos="fade-up">
+				<div class="left">
+					<h3>Proof of Adoption</h3>
+					<p>Portal Network’s mission is to enable both technical & non-technical users to easily deploy/host/connect/use ÐWebs & ÐApps so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.</p>
+					<p>Proof of Adoption provides both blockchain and crypto community a series of tools to effortlessly interact and contribute their unique talents to the decentralized world.</p>
+				</div>
+				<div class="right">
+					<div class="figure"><img src="images/index/poa.png" alt=""></div>
+					<a class="link" href="javascript:;" target="_blank" @click="coming">Learn More</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="solution">
+			<h3><img src="images/index/Solution_word.png" alt=""></h3>
+
+			<div class="left_box">
+				<div class="content" data-aos="fade-up">
+					<h5>Non-technical Users Adoption</h5>
+					<div class="figure"><img src="images/index/Mumei_logo.svg" alt=""></div>
+					<h4>MUMEI</h4>
+					<p>Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.</p>
+					<ul class="product_list">
+						<li>
+							<a href="./showcase.html" target="_blank">Showcase</a>
+						</li>
+						<li>
+							<a href="https://web.portal.network/" target="_blank">Web builder</a>
+						</li>
+						<li>
+							<a href="https://extension.portal.network/index.html" target="_blank">Browser Extension</a>
+						</li>
+						<li>
+							<a href="javascript:;" @click="openModal('dom_01','dom_02','dom_03','dom_04')">Domain manager</a>
+						</li>
+						<li>
+							<a href="https://beta.portal.network/" target="_blank">Marketplace</a>
+						</li>
+						<li class="has_sub">
+							<a class="no_link" href="javascript:;" target="_blank">BNS explorer</a>
+							<ul class="sub_product_list">
+								<li><a href="https://ens.portal.network/" target="_blank">ENS</a></li>
+								<li><a href="https://ecns.portal.network/" target="_blank">ECNS</a></li>
+								<li><a href="http://wns.portal.network/" target="_blank">WNS</a></li>
+							</ul>
+						</li>
+						<!-- <li>
+							<a href="javascript:;" target="_blank">BNS Mobile Application</a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+
+			<div class="right_box">
+				<div class="content" data-aos="fade-up" data-aos-duration="500">
+					<h5>Technical Users Adoption</h5>
+					<div class="figure"><img src="images/index/Kaizen_logo.svg" alt=""></div>
+					<h4>Kaizen</h4>
+					<p>Kaizen empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+					<ul class="introduction_list">
+						<li class="has_sub">
+							<header>BNS</header>
+							<p>cross-chain support, developers are able to contribute to each public chain.</p>
+							<ul class="url_item">
+								<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/github_gre.svg" alt=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<header>Command Line Interface (CLI)</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('CLI_11','CLI_22')"><img src="images/index/cli_s1.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('CLI_22','CLI_11')"><img src="images/index/cli_s2.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Deploy Management System</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('kaizen_bitcoincash')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Tech Manual & Guideline</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('toolkit')"><img src="images/index/toolkits_s.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>Hackathon</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('ha_b1','ha_b2','ha_b3')"><img src="images/index/ha_s1.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('ha_b2','ha_b1','ha_b3')"><img src="images/index/ha_s2.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('ha_b3','ha_b2','ha_b1')"><img src="images/index/ha_s3.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+    <div class="roadmap">
+      <div class="roadmap_header">Roadmap</div>
+      <div class="big_issues_container">
+
+        <div class="big_issue">
+          <span class="date">MAY 2018</span>
+          <span class="sign_container">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+            <p>EIP 1062, ECIP 1044 MetaMask Contribution.</p>
+          </div>
+        </div>
+
+        <div class="big_issue">
+          <span class="date">JUN 2018</span>
+          <span class="sign_container long">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+            <p>WNS standard launch Development WNS surrounding Ecosystem.</p>
+          </div>
+        </div>
+
+        <div class="big_issue">
+          <span class="date">JUL 2018</span>
+          <span class="sign_container short">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+              <p>Host Korea Hackathon with Wanchain, Bluzelle, and Noia.</p>
+							<p>Wanchain Wallet Development.</p>
+							<p>ÐWeb game framework.</p>
+          </div>
+        </div>
+
+        <div class="big_issue">
+          <span class="date">AUG 2018</span>
+          <span class="sign_container long">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+						<p>Proposed IIP-6 on ICON Multi-chains BNS.</p>
+						<p>Marketplace Beta Launch.</p>
+          </div>
+        </div>
+
+        <div class="big_issue">
+          <span class="date">Q4 2018</span>
+          <span class="sign_container short">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+            <p>Cross-chains Universal Wallet.</p>
+            <p>Kaizen CLI beta release.</p>
+          </div>
+        </div>
+
+        <div class="big_issue">
+          <span class="date">Q1 2019</span>
+          <span class="sign_container long">
+            <a class="hexagon"></a>
+            <a class="hexagon small"></a>
+          </span>
+          <div class="content">
+						<p>Search Engine for Decentralized Content.</p>
+						<p>Resource Datacenter for ÐWebs and ÐApps.</p>
+						<p>IDE integration / Developer Environment.</p>
+          </div>
+        </div>
+      </div>
+		</div>
+		
+		<div class="summary request">
+			<div class="content">
+				<p>White Paper and Technical Paper request form.</p>
+				<a href="./tp.html" target="_blank">Request</a>
+			</div>
+		</div>
+
+		<div class="ecosystem">
+			<div class="content">
+				<h3>ECOSYSTEM</h3>
+				<ul>
+					<li>
+						<a href="https://www.ethereum.org/" target="_blank">
+							<div class="figure"><img src="images/index/e_eth.png" alt=""></div>
+							<p>Ethereum</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://ethereumclassic.org/" target="_blank">
+							<div class="figure"><img src="images/index/e_ethclassic.png" alt=""></div>
+							<p>Ethereum Classic</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://wanchain.org/" target="_blank">
+							<div class="figure"><img src="images/index/e_wan.png" alt=""></div>
+							<p>Wanchain</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://qtum.org/en/" target="_blank">
+							<div class="figure"><img src="images/index/e_qtum.png" alt=""></div>
+							<p>Qtum</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://icon.foundation/?lang=en" target="_blank">
+							<div class="figure"><img src="images/index/e_icon.png" alt=""></div>
+							<p>ICON</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://bluzelle.com/" target="_blank">
+							<div class="figure"><img src="images/index/e_bluzelle.png" alt=""></div>
+							<p>Bluzelle</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.coingecko.com/en" target="_blank">
+							<div class="figure"><img src="images/index/e_coingecko.png" alt=""></div>
+							<p>CoinGecko</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="feed">
+			<div class="content">
+				<div class="feed_box">
+					<h4>Twitter Feed</h4>
+					<div class="feed_item">
+						<a class="twitter-timeline" data-height="306" data-theme="light" data-chrome="nofooter noheader noborders" href="https://twitter.com/itisportal?ref_src=twsrc%5Etfw"></a>
+					</div>
+				</div>
+				<div class="feed_box">
+					<h4>News Feed</h4>
+					<div class="feed_item">
+						<ul class="feed_item_list">
+							<li v-for="feed in feeds">
+								<a :href="feed.url" target="_blank">
+									<header><div class="figure"><img :src="feed.company" alt=""></div></header>
+									<div class="article">
+										<h5>{{feed.title}}</h5>
+										<p v-html="feed.article"></p>
+										<div class="author">{{feed.author}}</div>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="footer_content">
+				<div class="subscribe_box">
+					<form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post"
+					id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+							<input type="email" value="" name="EMAIL" class="input_email" id="mce-EMAIL" placeholder="Your Email Address" required>
+							<input type="hidden" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1" value="">
+							<div class="submit_btn">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe learn" class="button">
+							</div>
+						</div>
+					</form>
+					<p>Subscribe now and get our latest updates.</p>
+				</div>
+				<div class="footer_map">
+					<div class="map_item">
+						<h4>News</h4>
+						<ul>
+							<li><a href="./blog.html" target="_blank">Blog</a></li>
+							<li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
+							<li><a href="https://projects.invisionapp.com/boards/K53P6SNW843/" target="_blank">Press</a></li>
+						</ul>
+					</div>
+					<div class="map_item">
+						<h4>Legal</h4>
+						<ul>
+							<li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+							<li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+						</ul>
+					</div>
+					<div class="map_item">
+						<h4>Help Center</h4>
+						<ul>
+							<li><a href="javascript:;" target="_blank" @click="coming">FAQ</a></li>
+							<li><a href="mailto:support@portal.network" target="_blank">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<p class="copyright">© 2018 Portal.Network.</p>
+		</div>
+
+		<div v-show="isOpenPop" class="photoPop">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="(photo, photoIdx) in photoItems">
+						<img :src="photo" alt="" />
+					</div>
+				</div>
+				<div class="swiper-button-prev swiper-button-white" v-show="photoItems.length > 1"></div>
+				<div class="swiper-button-next swiper-button-white" v-show="photoItems.length > 1"></div>
+			</div>
+			<a @click="closeModal" class="closeBtn">
+				<img src="images/index/multiply.png" alt="">
+			</a>
+		</div>
+
+	</div>
+
+	
+<script type="text/javascript" src="./js/vendor.js?2fe5e2a9&2fe5e2a97fabafc27c19"></script><script type="text/javascript" src="./js/index.js?2fe5e2a9&2fe5e2a97fabafc27c19"></script></body>
+
+</html>

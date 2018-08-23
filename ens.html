@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>What is ENS & What problem it solved? – Portal Network | Blog</title>
+	<meta name="description" content="Portal Network Blog">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Blog" />
+	<meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Portal Network Blog" />
+  <meta property="og:url" content="https://www.portal.network/blogs/what-is-ens.html" />
+  <meta property="og:image" content="../assets/meta_share.png" />
+  <meta property="og:image:url" content="../assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="header_content">
+        <h1 class="logo">
+          <a href="../index.html"><img src="../images/logo/logo_w.png" alt=""></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="./roadmap.html" target="_blank">Roadmap</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+            <ul>
+              <li>
+                <a href="../blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=event" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=tech" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=guide" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5>Portal Network</h5>
+          <div class="date">Jul 6</div>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_title">
+          <h3>What is ENS & What problem it solved?</h3>
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/1000/1*cE2smQ6JuBrVxrLzV06Qfg.jpeg" alt="">
+          </figure>
+        </section>
+
+        <section class="article_content">
+          <p>Ever since blockchain and cryptocurrency become a trending topic, people began transferring their digital assets through their crypto wallets. However, one of the biggest challenges crypto market faces is to achieve easy-to-use interface. One of the most specific problem users are facing is the long public key consisting of 32 digits. And this is where ENS comes in.</p>
+        </section>
+
+        <section class="article_content">
+          <h4>What is ENS?</h4>
+
+          <p>ENS is the abbreviation for Ethereum Name Service. By registering this open, extensible decentralized Domain Name Service based on Ethereum blockchain, users can interact with smart contract and buy a unique, customized, human-readable domain name for their crypto wallet address.</p>
+
+          <p>The goal of DNS, the centralized Internet Domain Name Service, is to provide human-readable identifiers that can be used to specify servers. DNS is like a phonebook for the Internet. People access the information online through domain name, like “<a class="text_link" href="https://www.portal.network" target="_blank" title="">www.portal.network</a>” or “<a class="text_link" href="https://web.portal.network" target="_blank" title="">https://web.portal.network</a>”.Then browsers interact through Internet Protocol addresses (IP address) such as “69.89.31.226” (in IPv4) or “2001:0db8:85a3:0000:0000:8a2e:0370:7334” (in IPv6).</p>
+
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/800/1*OLle6F0J_xbNiYdDub1oRQ.jpeg" alt="">
+            <figcaption class="figure_text">DNS translates domain names to IP addresses.</figcaption>
+          </figure>
+
+          <p>DNS translates domain names to IP addresses so browsers can reach and load Internet resources. Each device connected to the Internet has unique IP address that machines use to locate the device. The main evolution of DNS servers is that eliminating the need of memorizing IP addresses.</p>
+
+          <p>Just like DNS, ENS has similar goal to DNS, but with obvious difference in architecture: the properties of Ethereum Blockchain. The primary goal of ENS is to provide human-readable decentralized domain names, like “protalnetwork.eth”,and translate this decentralized domain name into machine-readable identifiers composed of 32 digits such as</p>
+
+          <p>Ethereum addresses, IPFS, Swarm content hashes, and so on. The second goal of ENS is to provide metadata about names and whois information for user to find domain name’s owner. More concisely, ENS is the Ethereum-based smart contract.</p>
+
+          <p>According to <a class="text_link" href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md" target="_blank" title="">EIP137</a> by <a class="text_link" href="https://medium.com/@weka" target="_blank" title="">Nick Johnson</a>, ENS has two principles components: the registry and the resolvers.</p>
+
+          <p>The ENS registry consist of a single central contract that maintains domains and subdomains. It also stores three essential pieces: the owner of the domain, the resolver for the domain,and the time-to-live for all records under the domain.</p>
+
+          <p>The owner of the a domain may be either a user’s account or a smart contract. A registrar is a smart contract that owns a domain and a list of subdomains that follow a set of rules defined in the contract.</p>
+
+          <p>The resolver for domain is responsible for translating Ethereum domain names into addresses. Each smart contract that follows related rules may act as a resolver in ENS.</p>
+          
+          <p>Conforming to the <a class="text_link" href="https://www.linkedin.com/pulse/collision-resistance-cryptographic-hash-functions-brent-michel" target="_blank" title="">Collision resistance</a>, Ethereum domain name is designed in 32 byte hashes. It simplifies processing and storage. The algorithm translating domain names into hashes is called namehash, defined in <a class="text_link" href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md" target="_blank" title="">EIP137</a>.</p>
+        </section>
+
+      </article>
+    </main>
+    <div class="footer">
+      <ul>
+        <li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+        <li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+      </ul>
+      <p class="copyRight">© 2018 Portal Network</p>
+    </div>
+  </div>
+<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/blog.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/vendor.js?2fe5e2a9&2fe5e2a97fabafc27c19"></script><script type="text/javascript" src="./js/blog.js?2fe5e2a9&2fe5e2a97fabafc27c19"></script></body>
+
+</html>
