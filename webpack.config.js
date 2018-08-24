@@ -28,7 +28,6 @@ module.exports = {
     blog: 'blog',
     roadmap: 'roadmap',
     privacy: 'privacy',
-    mumei: 'mumei'
   },
   output: {
     path: path.resolve(__dirname),
@@ -142,13 +141,6 @@ module.exports = {
       filename: 'index.html',
       template: 'html/index.html',
       chunks: [ 'vendor', 'index' ],
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Portal Network | Mumei',
-      filename: 'mumei.html',
-      template: 'html/mumei.html',
-      chunks: [ 'vendor', 'mumei' ],
       hash: true,
     }),
     new HtmlWebpackPlugin({

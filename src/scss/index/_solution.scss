@@ -142,10 +142,14 @@
     max-width: 480px;
     width: 100%;
     .figure {
-      width: 100px;
       margin: 0px auto 15px auto;
-      img {
-        width: 100%;
+      a {
+        display: block;
+        width: 100px;
+        margin: 0px auto;
+        img {
+          width: 100%;
+        }
       }
     }
     >p {

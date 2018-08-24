@@ -112,19 +112,19 @@
       width: 400px;
       height: 400px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
       justify-content: center;
       border-radius: 50%;
       background-color: #fff;
       position: relative;
       z-index: 2;
-      padding-left: 150px;
+      padding-left: 69px;
       @media screen and (max-width: $mob) {
         width: 280px;
         height: 280px;
         margin: 0px auto;
-        padding-left: 160px;
+        padding-left: 54px;
       }
     }
     .identity_item {
