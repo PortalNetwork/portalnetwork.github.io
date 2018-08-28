@@ -838,5 +838,173 @@
                 ]
             }
         ]
+    },
+    {
+        "title": "Perlin (PNS)",
+        "icon": "./images/icon/perlin.svg",
+        "url": "https://www.perlin.net/",
+        "detail": [
+            {
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": ".perl",
+                "percentage": null,
+                "description": ".perl is the top level domain of PNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "PNS",
+                "percentage": 25,
+                "description": "Perlin name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/pns"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://beta.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS Wallet & Domain Manager on phone",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Tomochain (TNS)",
+        "icon": "./images/icon/tomo.svg",
+        "url": "https://tomochain.com/",
+        "detail": [
+            {
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "EWHOIS for domain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": ".zil",
+                "percentage": null,
+                "description": ".zil is the top level domain of TNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "TNS",
+                "percentage": 25,
+                "description": "Tomochain name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/tns"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://beta.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS Wallet & Domain Manager on phone",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            }
+        ]
     }
 ]
