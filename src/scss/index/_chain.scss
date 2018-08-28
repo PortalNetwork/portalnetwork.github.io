@@ -117,12 +117,12 @@
     }
   }
   &.perl {
-    background-color: #9116C6;
+    background: linear-gradient(0deg, #21374A 0%, #3A606E 100%);;
     .percentage_box {
       .percentage_bg {
-        background-color: darken(#9116C6,5%);
+        background-color: darken(#21374A,5%);
         .percentage_bar {
-          background-color: lighten(#9116C6,30%);
+          background-color: lighten(#21374A,30%);
         }
       }
     }
