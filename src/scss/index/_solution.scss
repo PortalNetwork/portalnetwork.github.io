@@ -91,7 +91,6 @@
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
-  margin-bottom: 25px;
 }
 
 @mixin box($bg) {
@@ -135,7 +134,12 @@
   }
 
   h4 {
-    @extend %h4;
+    margin-bottom: 10px;
+    text-align: center;
+    a {
+      display: inline-block;
+      @extend %h4;
+    }
   }
 
   .content {
@@ -256,19 +260,6 @@
       color: #fff;
       text-align: center;
     }
-    .url_item {
-      margin-top: 10px;
-      >li {
-        >a {
-          display: block;
-          width: 20px;
-          img {
-            width: 100%;
-            margin: 0px auto;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -347,6 +338,7 @@
     }
     a {
       display: block;
+      width: 20px;
       &:hover {
         img {
           opacity: .7;
