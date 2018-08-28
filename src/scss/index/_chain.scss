@@ -116,6 +116,28 @@
       }
     }
   }
+  &.perl {
+    background-color: #9880cf;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#9880cf,5%);
+        .percentage_bar {
+          background-color: lighten(#9880cf,30%);
+        }
+      }
+    }
+  }
+  &.zil {
+    background-color: #ec8b60;
+    .percentage_box {
+      .percentage_bg {
+        background-color: darken(#ec8b60,5%);
+        .percentage_bar {
+          background-color: lighten(#ec8b60,30%);
+        }
+      }
+    }
+  }
   .content {
     max-width: $container;
     width: 100%;
