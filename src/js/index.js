@@ -23,6 +23,7 @@ new Vue({
     isMediaOpen: false,
     feeds: [],
     photoItems: [],
+    githubItems: []
   },
   computed: {
     chainStyle() {
@@ -114,6 +115,73 @@ new Vue({
         this.feeds = res.data;
       })
       .catch(err=> console.log(err));
+    axios.get("https://api.github.com/orgs/PortalNetwork/repos")
+    .then((res)=>{
+      
+      // const type = ['ens', 'wns', 'ECNS', 'ins', 'qns', 'nns', 'aens', 'bcns', 'qcns', 'pns', 'tns'];
+      // const type = ['ens', 'wns', 'ECNS', 'ins', 'qns', 'nns'];
+      // let typeArr = {};
+      // debugger;
+      // let result = [];
+      // result.push(res.data);
+      // type.map((obj, idx)=>{
+      //   typeArr[obj] = result[0].filters((elem)=>{
+      //     return elem.name === obj;
+      //   });
+      //   this.githubItems.push(typeArr[obj]);
+      // });
+      // debugger;
+      let aaa = Object.values(res.data);
+      this.githubItems.push(aaa[24]);
+      this.githubItems.push(aaa[19]);
+      this.githubItems.push(aaa[26]);
+      this.githubItems.push(aaa[15]);
+      this.githubItems.push(aaa[20]);
+      this.githubItems.push(aaa[28]);
+    
+
+
+      // const ens = res.data.filters((elem)=>{
+      //   return elem.name === 'ens';
+      // });
+    //   const wns = res.data.filters((elem)=>{
+    //     return elem.name === 'wns';
+    //   });
+    //   const ecns = res.data.filters((elem)=>{
+    //     return elem.name === 'ECNS';
+    //   });
+    //   const ins = res.data.filters((elem)=>{
+    //     return elem.name === 'ins';
+    //   });
+    //   const qns = res.data.filters((elem)=>{
+    //     return elem.name === 'qns';
+    //   });
+    //   const nns = res.data.filters((elem)=>{
+    //     return elem.name === 'nns';
+    //   });
+    //   const aens = res.data.filters((elem)=>{
+    //     return elem.name === 'aens';
+    //   });
+    //   const bcns = res.data.filters((elem)=>{
+    //     return elem.name === 'bcns';
+    //   });
+    //   const qcns = res.data.filters((elem)=>{
+    //     return elem.name === 'qcns';
+    //   });
+    //   const pns = res.data.filters((elem)=>{
+    //     return elem.name === 'pns';
+    //   });
+    //   const tns = res.data.filters((elem)=>{
+    //     return elem.name === 'tns';
+    //   });
+
+
+      // this.githubItems.push(ens);
+      
+    }).catch(err=> console.log(err));
+
+
+
     this.swipers = new Swiper('.swiper-container', {
       loop: false,
       watchOverflow: true,

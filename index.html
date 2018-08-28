@@ -140,11 +140,25 @@
 			<div class="content" data-aos="fade-up">
 				<div class="left">
 					<h3>BNS</h3>
-					<p><span>B</span>lockchain <span>N</span>ame <span>S</span>ervice</p>
-				</div>
-				<div class="right">
+					<p class="spc"><span>B</span>lockchain <span>N</span>ame <span>S</span>ervice</p>
 					<h4>What is BNS?</h4>
 					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘yourwebsite.bch’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
+				</div>
+				<div class="right">
+					<ul class="github_list">
+						<li v-for="github in githubItems">
+							<a class="github_item" :href="github.html_url" target="_blank">
+								<h4>{{github.name}}</h4>
+								<p>{{github.description}}</p>
+								<ul>
+									<li class="lan" v-if="github.language !== null">{{github.language}}</li>
+									<li class="start">{{github.stargazers_count}}</li>
+									<li class="bar">{{github.stargazers_count}}</li>
+								</ul>
+							</a>
+						</li>
+					</ul>
+					<div class="more"><a href="https://github.com/orgs/PortalNetwork/dashboard" target="_blank"><img src="images/index/github_green.png" alt="">+ More</a></div>
 				</div>
 			</div>
 		</div>
@@ -273,9 +287,9 @@
 								<li><a href="http://wns.portal.network/" target="_blank">WNS</a></li>
 							</ul>
 						</li>
-						<!-- <li>
-							<a href="javascript:;" target="_blank">BNS Mobile Application</a>
-						</li> -->
+						<li>
+							<a href="https://resolver.portal.network/" target="_blank">Resolver</a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -287,18 +301,12 @@
 					<h4><a href="http://kaizen.portal.network/" target="_blank">Kaizen</a></h4>
 					<p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
 					<ul class="introduction_list">
-						<li class="has_sub">
-							<header>BNS</header>
-							<p>cross-chain support, developers are able to contribute to each public chain.</p>
-							<ul class="url_item">
-								<li><a href="https://github.com/portalnetwork" target="_blank"><img src="images/index/github_gre.svg" alt=""></a></li>
-							</ul>
-						</li>
 						<li>
-							<header>Command Line Interface (CLI)</header>
-							<ul class="url_item">
-								<li><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/link_green.png" alt=""></a></li>
-							</ul>
+							<header>Command Line Interface (CLI)
+								<ul class="url_item">
+									<li><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/github_green.png" alt=""></a></li>
+								</ul>
+							</header>
 							<ul class="photo_item">
 								<li>
 									<a href="javascript:;" @click="openModal('CLI_11','CLI_22')"><img src="images/index/cli_s1.png" alt=""></a>
@@ -306,13 +314,6 @@
 								<li>
 									<a href="javascript:;" @click="openModal('CLI_22','CLI_11')"><img src="images/index/cli_s2.png" alt=""></a>
 								</li>
-							</ul>
-						</li>
-						<li>
-							<header>Faucet</header>
-							<p>A one stop solution for ÐApp developers to claim testnet tokens and focus on buidl.</p>
-							<ul class="url_item">
-								<li><a href="https://faucet.portal.network/" target="_blank"><img src="images/index/link_green.png" alt=""></a></li>
 							</ul>
 						</li>
 						<li>
@@ -332,10 +333,7 @@
 							</ul>
 						</li>
 						<li>
-							<header>Hackathon</header>
-							<ul class="url_item">
-								<li><a href="https://hackathon.portal.network/" target="_blank"><img src="images/index/link_green.png" alt=""></a></li>
-							</ul>
+							<header><a href="https://hackathon.portal.network/" target="_blank">Hackathon</a></header>
 							<ul class="photo_item">
 								<li>
 									<a href="javascript:;" @click="openModal('ha_b1','ha_b2','ha_b3')"><img src="images/index/ha_s1.png" alt=""></a>
@@ -347,6 +345,15 @@
 									<a href="javascript:;" @click="openModal('ha_b3','ha_b2','ha_b1')"><img src="images/index/ha_s3.png" alt=""></a>
 								</li>
 							</ul>
+						</li>
+						<li>
+							<header>Cross-chain Infrastructure</header>
+						</li>
+						<li>
+							<header>API</header>
+						</li>
+						<li>
+							<header><a href="https://faucet.portal.network/" target="_blank">Faucet Pool</a></header>
 						</li>
 					</ul>
 				</div>
@@ -562,7 +569,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="copyright">© 2018 Portal.Network.</p>
+			<p class="copyright">© 2018 Portal.Network</p>
 		</div>
 
 		<div v-show="isOpenPop" class="photoPop">
@@ -583,6 +590,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?83a49d4d&83a49d4db87611783721"></script><script type="text/javascript" src="./js/index.js?83a49d4d&83a49d4db87611783721"></script></body>
+<script type="text/javascript" src="./js/vendor.js?b0505f84&b0505f84f3e1697df8c8"></script><script type="text/javascript" src="./js/index.js?b0505f84&b0505f84f3e1697df8c8"></script></body>
 
 </html>
