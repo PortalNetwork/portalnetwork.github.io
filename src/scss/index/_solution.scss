@@ -234,20 +234,38 @@
       font-weight: 400;
       color: #fff;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 5px;
       background-color: transparent;
       margin: 0px auto;
       border: solid 1px #fff;
       transition: all .5s;
+      position: relative;
+      &:before {
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        border-width: 3px 0 3px 6px;
+        border-color: transparent transparent transparent #19F4E4;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-50%);
+      }
       &:hover {
         background-color: #F06158;
         border: solid 1px #F06158;
+        &:before {
+          border-color: transparent transparent transparent #fff;
+        }
       }
       &.no_link {
         cursor: default;
         &:hover {
           background-color: transparent;
           border: solid 1px #fff;
+          &:before {
+            border-color: transparent transparent transparent #19F4E4;
+          }
         }
       }
     }
@@ -300,32 +318,58 @@
     padding-left: 0px;
   }
   >li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    &+li {
+      border-top: 1px #fff dashed;
+      padding-top: 20px;
+    }
     header {
-      font-size: 20px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
       font-weight: 400;
       line-height: 1.3;
       color: #fff;
+      position: relative;
       @media screen and (max-width: $mob) {
-        text-align: center;
+        justify-content: center;
       }
-    }
-    p {
-      width: 80%;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #fff;
-      @media screen and (max-width: $mob) {
-        width: 100%;
-        text-align: center;
+      &:before {
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        border-width: 3px 0 3px 6px;
+        border-color: transparent transparent transparent #19F4E4;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        transform: translateY(-50%);
+        @media screen and (max-width: $mob) {
+          position: relative;
+          top: auto;
+          left: auto;
+          transform: none;
+          margin-right: 10px;
+        }
+      }
+      a {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #fff;
+        transition: color .5s;
+        &:hover {
+          color: #19F4E4;
+        }
       }
     }
   }
 }
 
 .url_item {
-  margin-top: 10px;
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -342,13 +386,13 @@
       &:hover {
         img {
           opacity: .7;
-          transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, -3px, 0px);
         }
       }
       img {
         width: 100%;
         opacity: 1;
-        transform: translate3d(0px, 3px, 0px);
+        transform: translate3d(0px, 0px, 0px);
         transition: all 0.3s;
       }
     }

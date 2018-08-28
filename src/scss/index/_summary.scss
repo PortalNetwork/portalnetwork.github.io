@@ -42,15 +42,16 @@
     .content {
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      @media screen and (max-width: $mob) {
+      justify-content: space-between;
+      @media screen and (max-width: $pad) {
         display: block;
       }
     }
     .left {
-      width: 23.4%;
+      width: 30%;
       @media screen and (max-width: $pad) {
-        width: 28%;
+        width: 100%;
+        margin-bottom: 30px;
       }
       @media screen and (max-width: $mob) {
         width: 100%;
@@ -65,31 +66,6 @@
           margin-bottom: 0px;
         }
       }
-      p {
-        font-size: 16px;
-        font-weight: 400;
-        color: #fff;
-        letter-spacing: 1.2px;
-        text-align: left;
-        @media screen and (max-width: $mob) {
-          margin-bottom: 10px;
-        }
-        span {
-          font-size: 16px;
-          font-weight: 400;
-          color: $green;
-          letter-spacing: 1.2px;
-        }
-      }
-    }
-    .right {
-      width: 49.2%;
-      @media screen and (max-width: $pad) {
-        width: 65%;
-      }
-      @media screen and (max-width: $mob) {
-        width: 100%;
-      }
       h4 {
         font-size: 20px;
         font-weight: 400;
@@ -103,7 +79,138 @@
         font-size: 16px;
         font-weight: 400;
         color: #fff;
+        letter-spacing: 1.2px;
         text-align: left;
+        &.spc {
+          margin-bottom: 30px;
+        }
+        @media screen and (max-width: $mob) {
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: $green;
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+    .right {
+      width: 68%;
+      @media screen and (max-width: $pad) {
+        width: 100%;
+      }
+      .github_list {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        >li {
+          width: 32%;
+          height: 175px;
+          margin-bottom: 25px;
+          @media screen and (max-width: $mob) {
+            width: 100%;
+          }
+        }
+      }
+      .github_item {
+        display: block;
+        text-decoration: none;
+        background-color: #fff;
+        border-radius: 4px;
+        height: 100%;
+        padding: 15px;
+        position: relative;
+        h4 {
+          display: flex;
+          line-height: 1.3;
+          font-size: 16px;
+          font-weight: 600;
+          color: #27347f;
+          margin-bottom: 10px;
+          word-break: break-all;
+          &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 3px;
+            width: 14px;
+            height: 17px;
+            background: url('~images/index/github_pu.png')top left no-repeat;
+            background-size: 100% auto;
+            margin-top: 3px;
+          }
+        }
+        p {
+          color: #000;
+          font-size: 12px;
+          line-height: 1.3;
+          text-align: left;
+        }
+        ul {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          li {
+            display: inline-block;
+            &+li {
+              margin-left: 10px;
+            }
+          }
+          .lan {
+            font-size: 12px;
+            color: #000;
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background-color: #eab4af;
+              border-radius: 50%;
+              margin-right: 3px;
+            }
+          }
+          .start {
+            font-size: 12px;
+            color: #000;
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background: url('~images/index/star.png') top left no-repeat;
+              background-size: 100% auto;
+              margin-right: 3px;
+            }
+          }
+          .bar {
+            font-size: 12px;
+            color: #000;
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 10px;
+              height: 10px;
+              background: url('~images/index/bar.png') top left no-repeat;
+              background-size: 100% auto;
+              margin-right: 3px;
+            }
+          }
+        }
+      }
+      .more {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          font-size: 12px;
+          color: #fff;
+          img {
+            width: 18px;
+            margin-right: 5px;
+          }
+        }
       }
     }
   }
