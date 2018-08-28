@@ -37,7 +37,9 @@ new Vue({
         'neo': this.chainSelectidx === 6,
         'aelf': this.chainSelectidx === 7,
         'bch': this.chainSelectidx === 8,
-        'qkc': this.chainSelectidx === 9
+        'qkc': this.chainSelectidx === 9,
+        'perl': this.chainSelectidx === 10,
+        'zil': this.chainSelectidx === 11
       }
     }
   },
