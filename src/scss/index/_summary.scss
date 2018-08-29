@@ -122,6 +122,12 @@
         height: 100%;
         padding: 15px;
         position: relative;
+        border: solid 3px transparent;
+        transition: all .3s;
+        &:hover {
+          border: solid 3px #15DACB;
+          box-shadow: 6px 6px 3px rgba(20, 31, 107,0.9);
+        }
         h4 {
           display: flex;
           line-height: 1.3;
