@@ -146,7 +146,7 @@
 				</div>
 				<div class="right">
 					<div class="github_header">
-						<p>Repositories<span>{{repositorieCount}}</span></p>
+						<a href="https://github.com/PortalNetwork/" target="_blank"><p>Repositories<span>{{repositorieCount}}</span></p></a>
 					</div>
 					<ul class="github_list">
 						<li v-for="github in githubItems">
@@ -305,6 +305,14 @@
 					<p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
 					<ul class="introduction_list">
 						<li>
+							<header>Deploy Management System</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('kaizen_bitcoincash')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+								</li>
+							</ul>
+						</li>
+						<li>
 							<header>Command Line Interface (CLI)
 								<ul class="url_item">
 									<li><a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank"><img src="images/index/github_green.png" alt=""></a></li>
@@ -320,10 +328,18 @@
 							</ul>
 						</li>
 						<li>
-							<header>Deploy Management System</header>
+							<header>Cross-chain Infrastructure</header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('kaizen_bitcoincash')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('crosschain_infrastructure')"><img src="images/index/crosschain_infrastructure.png" alt=""/></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<header>API</header>
+							<ul class="photo_item">
+								<li>
+									<a href="javascript:;" @click="openModal('api')"><img src="images/index/api.png" alt=""/></a>
 								</li>
 							</ul>
 						</li>
@@ -334,6 +350,9 @@
 									<a href="javascript:;" @click="openModal('toolkit')"><img src="images/index/toolkits_s.png" alt=""></a>
 								</li>
 							</ul>
+						</li>
+						<li>
+							<header><a href="https://faucet.portal.network/" target="_blank">Faucet Pool</a></header>
 						</li>
 						<li>
 							<header><a href="https://hackathon.portal.network/" target="_blank">Hackathon</a></header>
@@ -349,15 +368,7 @@
 								</li>
 							</ul>
 						</li>
-						<li>
-							<header>Cross-chain Infrastructure</header>
-						</li>
-						<li>
-							<header>API</header>
-						</li>
-						<li>
-							<header><a href="https://faucet.portal.network/" target="_blank">Faucet Pool</a></header>
-						</li>
+						
 					</ul>
 				</div>
 			</div>
