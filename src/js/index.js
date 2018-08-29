@@ -23,7 +23,8 @@ new Vue({
     isMediaOpen: false,
     feeds: [],
     photoItems: [],
-    githubItems: []
+    githubItems: [],
+    repositorieCount: 0
   },
   computed: {
     chainStyle() {
@@ -119,7 +120,7 @@ new Vue({
     .then((res)=>{
       const type = ['ens', 'wns', 'bcns', 'ins', 'qcns', 'nns'];
       let typeArr = {};
-    
+      this.repositorieCount = res.data.length;
       type.map((obj, idx)=>{
         typeArr[obj] = res.data.filter((elem)=>{
           return elem.name === obj;
@@ -132,8 +133,7 @@ new Vue({
       loop: false,
       watchOverflow: true,
       pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
+        el: '.swiper-pagination'
       },
       navigation: {
         nextEl: '.swiper-button-next',
