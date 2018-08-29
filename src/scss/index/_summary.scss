@@ -100,6 +100,30 @@
       @media screen and (max-width: $pad) {
         width: 100%;
       }
+      .github_header {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        background-color: #15DACB;
+        p {
+          color: #27347f;
+          display: flex;
+          align-items: center;
+          span {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #2436B9;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
       .github_list {
         display: flex;
         align-items: stretch;
