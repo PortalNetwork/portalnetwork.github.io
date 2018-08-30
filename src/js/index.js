@@ -118,7 +118,7 @@ new Vue({
       .catch(err=> console.log(err));
     axios.get("https://api.github.com/orgs/PortalNetwork/repos")
     .then((res)=>{
-      const type = ['ens', 'wns', 'bcns', 'ins', 'qcns', 'nns'];
+      const type = ['ens','wns','ECNS','ins','qns','nns','aens','bcns','qcns'];
       let typeArr = {};
       this.repositorieCount = res.data.length;
       type.map((obj, idx)=>{
@@ -126,6 +126,9 @@ new Vue({
           return elem.name === obj;
         });
         this.githubItems.push(typeArr[obj][0]);
+        setTimeout(() => {
+          this.swipers.update();
+        }, 500);
       });
     }).catch(err=> console.log(err));
 
@@ -139,6 +142,30 @@ new Vue({
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+    });
+    this.swipers = new Swiper('.swiper-github', {
+      loop: false,
+      watchOverflow: true,
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 15,
+      width: 644,
+      slidesPerColumnFill : 'row',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+      breakpoints: {
+        720: {
+          width: 280,
+          slidesPerView: 1,
+          slidesPerColumn: 1,
+        }
+      }
     });
   }
 });
