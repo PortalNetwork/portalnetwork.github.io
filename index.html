@@ -148,22 +148,42 @@
 					<p>BNS – or blockchain name system – is the protocol on the internet that turns human-comprehensible decentralized website names such as ‘website.icx’ or ‘mywebsite.eth’ into addresses understandable by decentralized network machines.</p>
 				</div>
 				<div class="right">
-					<div class="github_header">
-						<a href="https://github.com/PortalNetwork/" target="_blank"><p>Repositories<span>{{repositorieCount}}</span></p></a>
+					<div class="github">
+						<div class="github_header">
+							<a href="https://github.com/PortalNetwork/" target="_blank"><p>Repositories<span>{{repositorieCount}}</span></p></a>
+						</div>
+						<div class="swiper-github">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" v-for="github in githubItems">
+									<a class="github_item" :href="github.html_url" target="_blank">
+										<h4>{{github.name}}</h4>
+										<p>{{github.description}}</p>
+										<ul>
+											<li class="lan" v-if="github.language !== null">{{github.language}}</li>
+											<li class="start">{{github.stargazers_count}}</li>
+											<li class="bar">{{github.forks_count}}</li>
+										</ul>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<!-- <a class="swiper-prev" href="javascript:;"></a>
+						<a class="swiper-next" href="javascript:;"></a> -->
+						<!-- <ul class="github_list">
+							<li v-for="github in githubItems">
+								<a class="github_item" :href="github.html_url" target="_blank">
+									<h4>{{github.name}}</h4>
+									<p>{{github.description}}</p>
+									<ul>
+										<li class="lan" v-if="github.language !== null">{{github.language}}</li>
+										<li class="start">{{github.stargazers_count}}</li>
+										<li class="bar">{{github.forks_count}}</li>
+									</ul>
+								</a>
+							</li>
+						</ul> -->
 					</div>
-					<ul class="github_list">
-						<li v-for="github in githubItems">
-							<a class="github_item" :href="github.html_url" target="_blank">
-								<h4>{{github.name}}</h4>
-								<p>{{github.description}}</p>
-								<ul>
-									<li class="lan" v-if="github.language !== null">{{github.language}}</li>
-									<li class="start">{{github.stargazers_count}}</li>
-									<li class="bar">{{github.forks_count}}</li>
-								</ul>
-							</a>
-						</li>
-					</ul>
 					<div class="more"><a href="https://github.com/PortalNetwork/" target="_blank"><img src="images/index/github_green.png" alt="">+ More</a></div>
 				</div>
 			</div>
@@ -607,6 +627,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?e83c9d73&e83c9d7370f8a4c12a5c"></script><script type="text/javascript" src="./js/index.js?e83c9d73&e83c9d7370f8a4c12a5c"></script></body>
+<script type="text/javascript" src="./js/vendor.js?9e21b305&9e21b3056dbc614d49ea"></script><script type="text/javascript" src="./js/index.js?9e21b305&9e21b3056dbc614d49ea"></script></body>
 
 </html>
