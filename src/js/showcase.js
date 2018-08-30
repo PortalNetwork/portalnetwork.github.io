@@ -134,7 +134,7 @@ new Vue({
       const target = document.querySelector('#copyedVal');
       target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
       copy(target.value);
-      alert('The share link has copied in clipboard');
+      swal('The share link has copied in clipboard');
     },
     shareFb(e, tag) {
       const url = `https://www.portal.network/showcase.html?tag=${tag[0]}&id=${Math.random() * 1000000 | 0}`;

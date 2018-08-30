@@ -69,7 +69,7 @@ new Vue({
       }
     },
     resetBlock(){
-      alert("coming soon");
+      swal("Coming Soon");
       // this.detailItem = [];
       // this.logoObj = {
       //   "title": "PORTAL",
@@ -98,7 +98,7 @@ new Vue({
       $("body").removeClass("fixBody");
     },
     coming () {
-      alert('coming soon');
+      swal("Coming Soon");
     },
     handActive(idx) {
       this.chainSelectidx = idx;
