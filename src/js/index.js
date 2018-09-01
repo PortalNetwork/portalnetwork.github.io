@@ -149,7 +149,7 @@ new Vue({
       slidesPerView: 3,
       slidesPerColumn: 2,
       spaceBetween: 15,
-      width: 644,
+      width: 560,
       slidesPerColumnFill : 'row',
       pagination: {
         el: '.swiper-pagination',

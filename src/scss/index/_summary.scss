@@ -230,7 +230,7 @@
     }
   }
   .left {
-    width: 26%;
+    width: 35%;
     @media screen and (max-width: $pad) {
       width: 100%;
       margin-bottom: 30px;
@@ -282,7 +282,7 @@
     }
   }
   .right {
-    width: 70%;
+    width: 61%;
     @media screen and (max-width: $pad) {
       width: 100%;
     }
@@ -334,7 +334,7 @@
   @media screen and (max-width: $pad) {
     margin: 0px auto;
     width: 100%;
-    max-width: 644px;
+    max-width: 560px;
   }
   .github_item {
     display: block;

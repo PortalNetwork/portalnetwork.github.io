@@ -5,20 +5,20 @@
         "url": "https://www.portal.network/",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": null,
-                "description": "EWHOIS for BNS",
+                "description": "Simply deploy your ÐWeb on blockchain",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
             {
-                "name": "BNS Deployment",
+                "name": ".portal",
                 "percentage": null,
-                "description": "Blockchain Name Service",
+                "description": "The top level domain of BNS",
                 "urlItem": [
                     {
                         "img": "",
@@ -34,6 +34,28 @@
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "BNS Deployment",
+                "percentage": null,
+                "description": "Blockchain Name Service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": null,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -51,22 +73,11 @@
             {
                 "name": "Mobile App",
                 "percentage": null,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": null,
-                "description": "Simply deploy your ÐWeb on blockchain",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -78,17 +89,13 @@
         "url": "https://www.ethereum.org",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 100,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "https://ens.portal.network/"
-                    },
-                    {
-                        "img": "./images/index/github1.svg",
-                        "link": "https://github.com/PortalNetwork/ethereum-explorer"
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -104,9 +111,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "ENS",
                 "percentage": 100,
-                "description": "Ethereum name service",
+                "description": "Ethereum Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -115,13 +133,17 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 100,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "link": "https://ens.portal.network/"
+                    },
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ethereum-explorer"
                     }
                 ]
             },
@@ -139,22 +161,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 50,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 100,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -166,17 +177,13 @@
         "url": "https://wanchain.org",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 100,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "http://wns.portal.network/"
-                    },
-                    {
-                        "img": "./images/index/github1.svg",
-                        "link": "https://github.com/PortalNetwork/wanchain-explorer"
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -192,9 +199,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "WNS",
                 "percentage": 100,
-                "description": "Wanchain name service",
+                "description": "Wanchain Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -203,13 +221,17 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 100,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "link": "http://wns.portal.network/"
+                    },
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/wanchain-explorer"
                     }
                 ]
             },
@@ -227,22 +249,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 50,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://wan.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 100,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -254,16 +265,13 @@
         "url": "https://ethereumclassic.org/",
         "detail": [
             {
-                "name": "Explorer",
-                "percentage": 100,
-                "description": "EWHOIS for domain name service",
+                "name": "Web Builder",
+                "percentage": 50,
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "https://ecns.portal.network/"
-                    },{
-                        "img": "./images/index/github1.svg",
-                        "link": "https://github.com/PortalNetwork/ethereum-classic-explorer"
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -279,9 +287,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "ECNS",
                 "percentage": 100,
-                "description": "Ethereum Classic name service",
+                "description": "Ethereum Classic Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -290,13 +309,16 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 100,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for domain name service",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "link": "https://ecns.portal.network/"
+                    },{
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ethereum-classic-explorer"
                     }
                 ]
             },
@@ -314,22 +336,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 25,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://etc.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 50,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -341,13 +352,13 @@
         "url": "https://icon.foundation/?lang=en",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -363,9 +374,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "INS",
                 "percentage": 50,
-                "description": "Icon name service",
+                "description": "Icon Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -374,13 +396,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -398,22 +420,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 0,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -425,13 +436,13 @@
         "url": "https://qtum.org/en",
         "detail": [
             {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "name": "Web Builder",
+                "percentage": 5,
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -447,9 +458,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "QNS",
                 "percentage": 100,
-                "description": "Qtum name service",
+                "description": "Qtum Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -458,13 +480,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -482,40 +504,29 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 5,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
         ]
     },
     {
-        "title": "Neo (NNS)",
+        "title": "NEO (NNS)",
         "icon": "./images/icon/neo1.svg",
         "url": "https://neo.org",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -531,9 +542,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "NNS",
                 "percentage": 50,
-                "description": "Neo name service",
+                "description": "NEO Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -542,13 +564,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -566,22 +588,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://neo.portal.network/"
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 0,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -593,13 +604,13 @@
         "url": "https://aelf.io",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -615,9 +626,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "AENS",
                 "percentage": 25,
-                "description": "Aelf name service",
+                "description": "Aelf Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -626,13 +648,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -650,22 +672,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 0,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -677,13 +688,13 @@
         "url": "https://explorer.bitcoin.com/bch",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -699,9 +710,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "BCNS",
                 "percentage": 25,
-                "description": "Bitcoin Cash name service",
+                "description": "Bitcoin Cash Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -710,13 +732,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for domain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -734,14 +756,21 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "title": "QuarkChain (QCNS)",
+        "icon": "./images/icon/quark.svg",
+        "url": "https://quarkchain.io/",
+        "detail": [
             {
                 "name": "Web Builder",
                 "percentage": 0,
@@ -750,24 +779,6 @@
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://web.portal.network/"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "title": "Quarkchain (QCNS)",
-        "icon": "./images/icon/quark.svg",
-        "url": "https://quarkchain.io/",
-        "detail": [
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
                     }
                 ]
             },
@@ -783,9 +794,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "QCNS",
                 "percentage": 25,
-                "description": "Quarkchain name service",
+                "description": "QuarkChain Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -794,13 +816,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -818,22 +840,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 0,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
@@ -845,13 +856,13 @@
         "url": "https://www.perlin.net/",
         "detail": [
             {
-                "name": "Explorer",
+                "name": "Web Builder",
                 "percentage": 0,
-                "description": "EWHOIS for domain name service",
+                "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
                     }
                 ]
             },
@@ -867,9 +878,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "PNS",
                 "percentage": 25,
-                "description": "Perlin name service",
+                "description": "Perlin Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -878,13 +900,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -902,14 +924,21 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "title": "TomoChain (TNS)",
+        "icon": "./images/icon/tomo.svg",
+        "url": "https://tomochain.com/",
+        "detail": [
             {
                 "name": "Web Builder",
                 "percentage": 0,
@@ -918,24 +947,6 @@
                     {
                         "img": "./images/index/link1.svg",
                         "link": "https://web.portal.network/"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "title": "Tomochain (TNS)",
-        "icon": "./images/icon/tomo.svg",
-        "url": "https://tomochain.com/",
-        "detail": [
-            {
-                "name": "Explorer",
-                "percentage": 0,
-                "description": "EWHOIS for domain name service",
-                "urlItem": [
-                    {
-                        "img": "",
-                        "link": ""
                     }
                 ]
             },
@@ -951,9 +962,20 @@
                 ]
             },
             {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
                 "name": "TNS",
                 "percentage": 25,
-                "description": "Tomochain name service",
+                "description": "TomoChain Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -962,13 +984,13 @@
                 ]
             },
             {
-                "name": "Browser Extension",
+                "name": "Explorer",
                 "percentage": 0,
-                "description": "Turn your browser into ÐWeb browser",
+                "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://extension.portal.network/index.html"
+                        "img": "",
+                        "link": ""
                     }
                 ]
             },
@@ -986,22 +1008,11 @@
             {
                 "name": "Mobile App",
                 "percentage": 0,
-                "description": "BNS Wallet & Domain Manager on phone",
+                "description": "BNS wallet & domain manager on phone",
                 "urlItem": [
                     {
                         "img": "",
                         "link": ""
-                    }
-                ]
-            },
-            {
-                "name": "Web Builder",
-                "percentage": 0,
-                "description": "Building your brand on ÐWeb",
-                "urlItem": [
-                    {
-                        "img": "./images/index/link1.svg",
-                        "link": "https://web.portal.network/"
                     }
                 ]
             }
