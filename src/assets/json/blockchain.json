@@ -940,9 +940,9 @@
                 ]
             },
             {
-                "name": ".zil",
+                "name": ".tomo",
                 "percentage": null,
-                "description": ".zil is the top level domain of TNS",
+                "description": ".tomo is the top level domain of TNS",
                 "urlItem": [
                     {
                         "img": "",
