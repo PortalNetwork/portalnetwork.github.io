@@ -181,6 +181,12 @@ $MAIN_WIDTH: 1051px;
     margin: 0px;
     padding: 108px 20px 0px 20px;
   }
+  @media screen and (max-width: 720px) {
+    padding: 148px 20px 0px 20px;
+  }
+  @media screen and (max-width: 374px) {
+    padding: 168px 20px 0px 20px;
+  }
 }
 
 .chapter {
