@@ -5,6 +5,7 @@
   @media screen and (max-width: $mob) {
     padding: 40px 0px;
   }
+  
   &.what {
     width: 100%;
     height: 100%;
@@ -186,6 +187,7 @@
       color: $purple_d;
       line-height: 1.5;
       margin: 0 auto;
+      text-align: justify;
       @media screen and (max-width: $pad) {
         text-align: center;
       }
@@ -261,6 +263,10 @@
       color: #fff;
       letter-spacing: 1.2px;
       text-align: left;
+      &.justify {
+        text-align: justify;
+        text-justify: inter-ideograph;
+      }
       &.spc {
         margin-bottom: 30px;
       }
