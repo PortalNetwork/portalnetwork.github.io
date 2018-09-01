@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>Key Findings of Our Data Analysis of ENS | Blog</title>
+	<meta name="description" content="Portal Network Blog">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Blog" />
+	<meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Portal Network Blog" />
+  <meta property="og:url" content="https://www.portal.network/blogs/data-analysis-of-ens.html" />
+  <meta property="og:image" content="../assets/meta_share.png" />
+  <meta property="og:image:url" content="../assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="header_content">
+        <h1 class="logo">
+          <a href="../index.html"><img src="../images/logo/logo_w.png" alt=""></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('roadmap')" href="./roadmap.html" target="_blank">Roadmap</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="./showcase.html" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+            <ul>
+              <li>
+                <a href="../blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=event" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=tech" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
+              </li>
+              <li>
+                <a href="../blog.html?tag=guide" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5>Portal Network</h5>
+          <div class="date">May 25</div>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_title">
+          <h3 style="margin-bottom: 0px;">Key Findings of Our Data Analysis of ENS</h3>
+          <p class="mg_b30 text_center">By <a class="text_star" href="https://medium.com/@johnnyhsieh" target="_blank" title="">Johnny Hsieh</a> & <a class="text_star" href="https://medium.com/@johnnyhsieh" target="_blank" title="">Monica M</a> on <a class="text_link" href="https://www.portal.network/" target="_blank" title="">Portal Network</a></p>
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/800/0*RLiCvY1ReZaACvCr." alt="">
+          </figure>
+        </section>
+
+        <section class="article_content">
+          <p>As a data scientist in the Portal Network team, I thought it would be valuable for myself and my fellow co-founders to come to a better understanding of the Ethereum Naming Service (ENS) domain data we engage with on a daily basis.</p>
+
+          <p>In order to achieve this, I collected all of the domain data from the Ethereum Naming Service (ENS) system, and used several data visualization methods to uncover some interesting findings about ENS domains. Namely, I was able to analyze the data to build a powerful domain price prediction system.</p>
+
+          <div class="article_box">
+            <p>In order to begin my analysis, there were three things I first needed to identify:</p>
+
+            <p class="mg_b10">1. The <strong>price</strong> of the domain,</p>
+
+            <p class="mg_b10">2. The <strong>character length</strong> of the domain, and</p>
+
+            <p>3. <strong>The last the registrant</strong> of the domain.</p>
+
+            <p>I then began to make some plots to figure out the relationship between each of these three criteria.</p>
+
+            <figure class="figure">
+              <img src="https://cdn-images-1.medium.com/max/800/0*K6Nd6rmtBOwAUBJ-." alt="">
+            </figure>
+          </div>
+
+        </section>
+
+        <section class="article_content">
+          <p><strong>Scatter Plot:</strong></p>
+
+          <p><strong>A scatter plot (otherwise known as a scatterplot or scatter graph) is a type of mathematical diagram which uses Cartesian coordinates to display values for two variables for a set of data.</strong></p>
+          
+          <P>The first plot method I used was a very simple method called a scatter plot. I used the scatter plot to map the domain prices and domain character lengths in relation to one another.</P>
+
+          <P>On the graph above, the X axis represents the character length of the domains, and the Y axis represents the price of the domains.</P>
+
+          <p>I discovered that domains with a length between 7 and 10 characters occupy the majority of all registered ENS domains (over 70%).</p>
+
+          <p>Another interesting finding was that most people (over 74%) paid 0.01 ether to purchase a single ENS domain. That being said, it was identified that there were also people who spent over 100 ether to invest in a single ENS domain.</p>
+
+          <figure class="figure img_xl_full">
+            <img src="https://cdn-images-1.medium.com/max/800/0*Xd1eDcUKuc8-pyxp." alt="">
+          </figure>
+
+        </section>
+
+        <section class="article_content">
+          <p><strong>Convex hull:</strong></p>
+          <p><strong>In mathematics, the <a class="text_link" href="https://en.wikipedia.org/wiki/Convex_hull" target="_blank" title="">convex hull</a> is the smallest convex shape containing a set of points. Applied to a scatterplot, it is useful for identifying points belonging to the same category.</strong></p>
+          
+          <p>In an effort to gain deeper insights into the purchasing behavior of ENS domain registrants, I used a convex hull to plot all three criteria that I first identified — the domain registrants, domain character lengths, and domain prices.</p>
+
+          <p>Once again, the X axis represents the character length of the domains, and the Y axis represents the price of the domains. Each colored block represents a different domain registrant.</p>
+
+          <p>Looking at the data here, I was able to pinpoint that there are a number of individual Ethereum addresses responsible for buying many of the ENS domains — from low-value domains to high-value domains.</p>
+
+          <p>The convex hull also reflected the finding from the scatter plot that the majority of ENS domain registrants are interested in domains with a length between 7 to 13 characters.</p>
+
+        </section>
+
+        <section class="article_content">
+          <p><strong>Conclusion</strong></p>
+
+          <p>In summary, it was discovered that there is a very clear association between the value of ENS domains and their character length. Moreover, it was shown that there are already many big players in ENS market.</p>
+
+          <p>With the popularity of ENS domains likely to increase as more people become aware of the benefits of registering an ENS domain, it will be interesting to refer back to these these findings to see if they remain the same, or change.</p>
+        </section>
+      </article>
+
+    </main>
+    <div class="footer">
+      <ul>
+        <li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+        <li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+      </ul>
+      <p class="copyRight">© 2018 Portal Network</p>
+    </div>
+  </div>
+<script type="text/javascript" src="./js/vendor.js?0940b094&0940b0945816f5053005"></script><script type="text/javascript" src="./js/blog.js?0940b094&0940b0945816f5053005"></script></body>
+
+</html>
