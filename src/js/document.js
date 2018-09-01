@@ -16,12 +16,12 @@ new Vue({
     nowPhotos: null,
     roadmapData: [
       {
-        title: 'Documentation',
+        title: 'Community Contribution',
         icon: 'images/roadmap/documentation.png',
         flags: [
           {
-            title: 'Submit a pull request for MetaMask to integrate ENS with IPFS',
-            content: 'MetaMask browser extension is a great project which helps users to interact with Ethereum. It can be more powerful by adding contents resolved by ENS. Portal Network builds a way to resolve ENS domains (.eth) to IPFS hash and redirect to url content.',
+            title: 'Contribute the integration ENS with IPFS to MetaMask',
+            content: 'MetaMask browser extension is a great project which helps millions of users to interact with Ethereum. Portal Network develop the feature translating ENS domains (.eth) to IPFS hash.',
             photos: null,
             location: '',
             time: '5/29',
@@ -37,8 +37,8 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Propose multihash functions to support ECNS Public Resolver smart contracts',
-            content: 'Propose multihash functions to support ECNS Public Resolver smart contracts Implementation of ECIP - 1044',
+            title: 'Ethereum Classic Name Service(ECNS) Smart Contract Enhancement',
+            content: 'Portal Network has contributed the mutlihash methods to the public resolver contract. That enables ECNS to set and view the multihash information, and this can extend the ability of ECNS mapping to content resources such as files stores on IPFS, or swarm',
             photos: null,
             location: '',
             time: '5/12',
@@ -55,7 +55,7 @@ new Vue({
           },
           {
             title: 'Ethereum Classic Improvement Proposal, ECIP-1044',
-            content: '1. Create an ECIP to “Formalize IPFS hash into ECNS resolver”<br>2. Propose functions to convert between IPFS and Ethereum Classic',
+            content: 'Propose the standard and specification about how to combine the IPFS cryptographic hash unique fingerprint with ECNS public resolver contract.',
             photos: null,
             location: '',
             time: '5/12',
@@ -71,8 +71,8 @@ new Vue({
             videos: [],
           },
           {
-            title: 'ENS public resolver smart contracts contribution',
-            content: 'Propose multihash functions to support ENS Public Resolver smart contracts Implementation of EIP - 1062',
+            title: 'Ethereum Name Service(ENS) Smart Contract Enhancement',
+            content: 'Portal Network has contributed the mutlihash methods to the public resolver contract. That enables ENS can resolve the files, website, information stores on IPFS or swarm.',
             photos: null,
             location: '',
             time: '5/10',
@@ -80,7 +80,7 @@ new Vue({
             links: [
               {
                 title: '',
-                url: 'https://eips.ethereum.org/',
+                url: 'https://eips.ethereum.org/EIPS/eip-1062',
               }
             ],
             githubs: [
@@ -94,7 +94,7 @@ new Vue({
           },
           {
             title: 'Ethereum Improvement Proposal, EIP-1062',
-            content: '1. Create an EIP to “Formalize IPFS hash into ENS resolver”<br>2. Propose functions to convert between IPFS and Ethereum',
+            content: 'Propose the standard and specification about using multihash methods to combine the IPFS cryptographic hash unique fingerprint with ECNS public resolver contract.',
             photos: null,
             location: '',
             time: '5/7',
@@ -102,7 +102,7 @@ new Vue({
             links: [
               {
                 title: '',
-                url: 'https://eips.ethereum.org',
+                url: 'https://eips.ethereum.org/EIPS/eip-1062',
               }
             ],
             githubs: [
@@ -118,56 +118,20 @@ new Vue({
       },
 
       {
-        title: 'Application',
+        title: 'Development Progress',
         icon: 'images/roadmap/documentation.png',
         flags: [
           {
             title: 'Portal Network Marketplace',
-            content: 'In addition to ENS, ECNS, Portal Network now supports WNS as well.',
+            content: 'Portal Network Marketplace is a BNS(Blockchain Name Service) domain name trading platform. The user-friendly interface of the platform can let users can easily buy, sell, and bid the BNS domain, and users do not need to worry about the complexity of interaction with smart contract. <br/> 1. Update ENS, ECNS, and WNS wallet features. <br/> 2. Update buy, bid, and sell BNS domains. <br/> 3. Users can view the related information in their dashboard <br/> 4. Search domains and show the related information.',
             photos: null,
             location: '',
-            time: '7/12',
-            progress: 60,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network Decentralized Webuilder',
-            content: '1. “blog” functions added<br>2. Gnosis & DappCon template implemented',
-            photos: null,
-            location: '',
-            time: '7/12',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network Marketplace',
-            content: '1. Support domain bidding',
-            photos: null,
-            location: '',
-            time: '6/22',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network intergration with Wanchain',
-            content: '1. Deploy wanchain public resolver <a href="https://explorer.wanchain.org/block/addr/0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014" target="_blank" class="link_text">0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014</span>',
-            photos: null,
-            location: '',
-            time: '6/20',
-            progress: 100,
+            time: 'Latest Update',
+            progress: 70,
             links: [
               {
                 title: '',
-                url: 'https://explorer.wanchain.org/block/addr/0xd5bbfe34585bdb92107ad5808dd1a3df1d4d3014',
+                url: ' https://market.portal.network',
               }
             ],
             githubs: [],
@@ -175,40 +139,11 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Portal Network Marketplace',
-            content: '1. Support wanchain domain name searching',
-            photos: null,
-            location: '',
-            time: '6/13',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network intergration with Wanchain',
-            content: '1. Deploy wanchain infura <a href="http://wanchain.portal.network/" target="_blank" class="link_text">wanchain.portal.network</a>',
-            photos: null,
-            location: '',
-            time: '6/12',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: 'http://wanchain.portal.network/',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network Decetentralized Web Builder',
+            title: 'Portal Network Decentralized Website Builder',
             content: '1. User registration flow.<br>2. Personal profile builder.<br>3. Decentralized websites deploy history.',
             photos: null,
             location: '',
-            time: '5/30',
+            time: 'Latest Update',
             progress: 100,
             links: [
               {
@@ -221,28 +156,11 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Portal Network Marketplace',
-            content: 'Design an user dashboard for user settings, domain manager, domain purchase history',
-            photos: null,
-            location: '',
-            time: '5/30',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: ' https://beta.portal.network',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
             title: 'Protal Network Chrome Extension Enhancement',
             content: '1. Support .eth and .etc domains, .wan is under development<br>2. Use multihash functions to convert ENS, ECNS, WNS Public Resolver data<br/>3. Assure users can visit directly decentralized websites',
             photos: null,
             location: '',
-            time: '5/12',
+            time: 'Latest Update',
             progress: 100,
             links: [
             ],
@@ -260,7 +178,7 @@ new Vue({
             content: 'Enhance MetaMask to integrate with ENS resolver and redirect to decentralized webs',
             photos: null,
             location: '',
-            time: '5/9',
+            time: 'Latest Update',
             progress: 100,
             links: [
             ],
@@ -272,72 +190,12 @@ new Vue({
             ],
             files: [],
             videos: [],
-          },
-          {
-            title: 'Deep learning model',
-            content: '1. Enhance trading matching rate <br>2. We collect over 1m top value domains from both centralized and Ethereum Domain Name Systems. Through deeping learning, we were able to establish an AI system which can predict domain value. There are currenlty two systems: one for targeting valuable domains, the other for possible price perdiction.',
-            photos: null,
-            location: '',
-            time: '5/2',
-            progress: 100,
-            links: [
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'WHOIS',
-            content: '1. Pairing and cleaning all the domains on Ethereum.<br>2. Begin to build up Ethereum Classic WHOIS system and collect data on it.',
-            photos: null,
-            location: '',
-            time: '5/2',
-            progress: 100,
-            links: [
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Online Decentralized Website Builder',
-            content: '1. Personal profile builder<br>2. Customized websites deployment<br>3. Backend construction',
-            photos: null,
-            location: '',
-            time: '4/19',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: ' http://h1.portal.network',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Portal Network Marketplace',
-            content: '1. User registration improvement Refactoring the usability and Integration with ethereum.<br/> UI/UX design enhancement.<br/> Construct the backend architecture and Security Enhancement<br/>2. Construct user profile dashboard',
-            photos: null,
-            location: '',
-            time: '4/16',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: ' https://beta.portal.network',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
+          }
         ],
       },
       
       {
-        title: 'Education',
+        title: 'Education & Partnership',
         icon: 'images/roadmap/education.png',
         flags: [
           {
