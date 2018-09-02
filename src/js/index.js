@@ -162,7 +162,7 @@ new Vue({
       },
       breakpoints: {
         720: {
-          width: 300,
+          width: 320,
           slidesPerView: 1,
           slidesPerColumn: 1,
           slidesPerGroup: 1,
