@@ -375,18 +375,15 @@ $MAIN_WIDTH: 1051px;
     align-items: center;
     justify-content: center;
     @media screen and (max-width: 720px) {
-      display: block;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
     &+.icon_list {
       margin-left: 10px;
     }
     li {
       @media screen and (max-width: 720px) {
-        display: inline-block;
         margin-bottom: 10px;
-      }
-      &+li {
-        margin-left: 10px;
       }
       .icon {
         display: block;
@@ -398,6 +395,9 @@ $MAIN_WIDTH: 1051px;
         font-size: 12px;
         font-weight: 400;
         color: #000;
+        @media screen and (max-width: 720px) {
+          margin-left: 10px;
+        }
         &.link {
           background-image: url('~images/roadmap/link.png');
           background-repeat: no-repeat;

@@ -756,7 +756,7 @@ new Vue({
             title: 'eToro X Mr. Block',
             content: "Johnny Hsieh, developer at Portal Network, shared his experience as a Phython developer at NEO. Blockchain developers are very limited in the current market, and Johnny's experience provided an insight on the current development environment of blockchain.",
             photos: null,
-            location: ' Taipei',
+            location: ' Taipei, Taiwan',
             time: '2/24',
             progress: 100,
             links: [
