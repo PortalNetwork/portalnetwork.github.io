@@ -385,6 +385,12 @@ $MAIN_WIDTH: 1051px;
       @media screen and (max-width: 720px) {
         margin-bottom: 10px;
       }
+      &+ li {
+        margin-left: 10px;
+        @media screen and (max-width: 720px) {
+          margin-left: 0px;
+        }
+      }
       .icon {
         display: block;
         width: 34px;
