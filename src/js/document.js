@@ -131,7 +131,7 @@ new Vue({
             links: [
               {
                 title: '',
-                url: 'https://beta.portal.network',
+                url: 'https://market.portal.network',
               }
             ],
             githubs: [],

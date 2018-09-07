@@ -1,16 +1,16 @@
 [
   {
+    "company": "images/index/ether-logo.svg",
+    "url": "https://ethereumworldnews.com/icon-icx-partners-portal-network-to-build-icon-name-service/",
+    "title": "ICON (ICX) Partners Portal Network To Build ICON Name Service",
+    "article": "ICON (ICX) Foundation has announced it partnered with Portal Network, a platform that aims to provide users with an unprecedented…",
+    "author": "Yusuff Olayode Supoto"
+  },
+  {
     "company": "images/index/cryptoticker.png",
     "url": "https://cryptoticker.io/portal-network/",
     "title": "The GoDaddy of the crypto world: Portal Network",
     "article": "Portal Network aims to be a one-stop solution for creators and businesses interested in creating decentralized websites…",
     "author": "cryptoticker.io"
-  },
-  {
-    "company": "images/index/coindesk_w.png",
-    "url": "https://www.coindesk.com/8-blockchain-projects-enlist-early-to-test-secret-enigma-contracts/",
-    "title": "8 Blockchain Projects Enlist Early to Test Secret Enigma Contracts",
-    "article": "Revealed exclusively to CoinDesk, Enigma’s “secret contracts” privacy protocol has eight partners gearing up for its launch later…",
-    "author": "coindesk"
   }
 ]
