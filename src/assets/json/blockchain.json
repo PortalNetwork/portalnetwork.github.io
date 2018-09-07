@@ -387,7 +387,7 @@
             {
                 "name": "INS",
                 "percentage": 50,
-                "description": "Icon Name Service",
+                "description": "ICON Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
