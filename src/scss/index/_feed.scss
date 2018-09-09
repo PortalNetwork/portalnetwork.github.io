@@ -41,7 +41,8 @@
 .feed_item {
   background-color: #fff;
   padding: 20px;
-  min-height: 349px;
+  max-height: 349px;
+  overflow: scroll;
 }
 
 .feed_item_list {
