@@ -38,11 +38,17 @@
   }
 }
 
+.service_item {
+  background-color: #fff;
+  padding: 20px;
+  max-height: 349px;
+}
+
 .feed_item {
   background-color: #fff;
   padding: 20px;
   max-height: 349px;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 .feed_item_list {
