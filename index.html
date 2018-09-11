@@ -255,9 +255,9 @@
 		<div class="summary proof">
 			<div class="content" data-aos="fade-up">
 				<div class="left">
-					<h3>Proof of Adoption</h3>
+					<h3>Proof of User Adoption</h3>
 					<p>Portal Network’s mission is to enable both technical & non-technical users to easily deploy/host/connect/use ÐWebs & ÐApps so that blockchain technology can achieve its full potential. Your support and adoption is essential to the execution of this vision.</p>
-					<p>Proof of Adoption provides both blockchain and crypto community a series of tools to effortlessly interact and contribute their unique talents to the decentralized world.</p>
+					<p>Proof of User Adoption provides both blockchain and crypto community a series of tools to effortlessly interact and contribute their unique talents to the decentralized world.</p>
 				</div>
 				<div class="right">
 					<div class="figure"><img src="images/index/poa.png" alt=""></div>
@@ -291,8 +291,8 @@
 						<li>
 							<a href="https://search.portal.network/" target="_blank">Showcase</a>
 						</li>
-						<li class="has_sub">
-							<a class="no_link" href="javascript:;" target="_blank">BNS explorer</a>
+						<li :class="{has_sub: openSubArea}" @click="openArea">
+							<a href="javascript:;" target="_blank">BNS explorer</a>
 							<ul class="sub_product_list">
 								<li><a href="https://ens.portal.network/" target="_blank">ENS</a></li>
 								<li><a href="https://ecns.portal.network/" target="_blank">ECNS</a></li>
@@ -314,10 +314,19 @@
 					<p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
 					<ul class="introduction_list">
 						<li>
-							<header><a href="https://deploy.portal.network/">Management System</a></header>
+							<header><a href="https://deploy.portal.network/" target="_blank">Management System</a></header>
 							<ul class="photo_item">
 								<li>
-									<a href="javascript:;" @click="openModal('kaizen_bitcoincash')"><img src="images/index/kaizen_bitcoincash_s.png" alt=""></a>
+									<a href="javascript:;" @click="openModal('system01','system02','system03','system04')"><img src="images/index/system01_s.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('system02','system01','system03','system04')"><img src="images/index/system02_s.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('system03','system01','system02','system04')"><img src="images/index/system03_s.png" alt=""></a>
+								</li>
+								<li>
+									<a href="javascript:;" @click="openModal('system04','system01','system02','system03')"><img src="images/index/system04_s.png" alt=""></a>
 								</li>
 							</ul>
 						</li>
@@ -476,7 +485,7 @@
 
 		<div class="ecosystem">
 			<div class="content">
-				<h3>ECOSYSTEM</h3>
+				<h3>ECOSYSTEM<span> & </span><span>partnership</span></h3>
 				<ul>
 					<li>
 						<a href="https://www.ethereum.org/" target="_blank">
@@ -524,6 +533,12 @@
 						<a href="https://kenetic.capital/" target="_blank">
 							<div class="figure"><img src="images/index/kenetic2.png" alt=""></div>
 							<p>Kenetic</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://enigma.co/" target="_blank">
+							<div class="figure"><img src="images/index/enigma.png" alt=""></div>
+							<p>Enigma</p>
 						</a>
 					</li>
 				</ul>
@@ -619,6 +634,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?454ce244&454ce2445daa506820aa"></script><script type="text/javascript" src="./js/index.js?454ce244&454ce2445daa506820aa"></script></body>
+<script type="text/javascript" src="./js/vendor.js?3dc91188&3dc911889d3a9d05f45a"></script><script type="text/javascript" src="./js/index.js?3dc91188&3dc911889d3a9d05f45a"></script></body>
 
 </html>

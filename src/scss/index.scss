@@ -121,11 +121,24 @@ body {
   }
   h3 {
     @extend %h3;
+    text-transform: uppercase;
+    span {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: 7px;
+      text-align: center;
+      color: #000;
+      @media screen and (max-width: $mob) {
+        display: block;
+        font-size: 20px;
+      }
+    }
   }
   ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     @media screen and (max-width: $mob) {
       display: block;

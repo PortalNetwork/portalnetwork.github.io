@@ -233,11 +233,12 @@
     width: 35%;
     @media screen and (max-width: $pad) {
       width: 100%;
-      margin-bottom: 30px;
+      max-width: 560px;
+      margin: 0px auto 30px auto;
     }
     @media screen and (max-width: $mob) {
-      width: 100%;
-      margin-bottom: 20px;
+      max-width: auto;
+      margin: 0px auto 20px auto;
     }
     h3 {
       font-size: 36px;
@@ -311,9 +312,14 @@
     }
   }
   .more {
-    margin-top: 15px;
+    margin: 15px 0px 0px 0px;
+    @media screen and (max-width: $pad) {
+      max-width: 560px;
+      margin: 30px auto 0px auto;
+    }
     @media screen and (max-width: $mob) {
-      margin-top: 46px;
+      max-width: 100%;
+      margin: 50px 0px 0px 0px;
     }
     a {
       display: flex;
@@ -321,7 +327,6 @@
       justify-content: flex-end;
       font-size: 12px;
       color: #fff;
-      padding-top:12px;
       img {
         width: 18px;
         margin-right: 5px;
@@ -446,32 +451,4 @@
   .swiper-pagination-bullet-active {
     background: #15DACB;
   }
-  // .swiper-prev {
-  //   display: inline-block;
-  //   width: 26px;
-  //   height: 38px;
-  //   background: url('~images/index/slider_arrow.png') top left no-repeat;
-  //   transform: translateY(-50%) rotate(180deg);
-  //   position: absolute;
-  //   left: 0px;
-  //   top: 50%;
-  //   &.swiper-button-disabled {
-  //     opacity: .7;
-  //     cursor: default;
-  //   }
-  // }
-  // .swiper-next {
-  //   display: inline-block;
-  //   width: 26px;
-  //   height: 38px;
-  //   background: url('~images/index/slider_arrow.png') top left no-repeat;
-  //   position: absolute;
-  //   right: 0px;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   &.swiper-button-disabled {
-  //     opacity: .7;
-  //     cursor: default;
-  //   }
-  // }
 }

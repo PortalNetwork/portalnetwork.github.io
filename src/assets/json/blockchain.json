@@ -368,8 +368,8 @@
                 "description": ".icon is the top level domain of INS",
                 "urlItem": [
                     {
-                        "img": "",
-                        "link": ""
+                        "img": "./images/index/link1.svg",
+                        "link": "https://iconick.portal.network/"
                     }
                 ]
             },
