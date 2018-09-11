@@ -59,14 +59,15 @@ new Vue({
     },
     blockchainData(res){
       this.blockchain = res.data;
-      this.onChaeckBlock(res.data[0]);
+      this.onCheckBlock(res.data[0]);
     },
-    onChaeckBlock(obj){
+    onCheckBlock(obj){
       this.detailItem = obj.detail;
       this.logoObj = {
         "title": obj.title,
         "icon": obj.icon,
-        "url": obj.url
+        "url": obj.url,
+        "description": obj.description
       }
     },
     resetBlock(){

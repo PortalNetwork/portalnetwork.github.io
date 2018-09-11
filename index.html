@@ -216,9 +216,10 @@
 					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
 						<h3><a :href="logoObj.url" target="_blank">{{logoObj.title}}</a></h3>
+						<p>{{logoObj.description}}</p>
 					</div>
 					<ul>
-						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onChaeckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
+						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onCheckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
 						<li><a @click="resetBlock"><img src="./images/icon/vote1.svg" alt=""></a></li>
 					</ul>
 				</div>
@@ -634,6 +635,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?b55ba949&b55ba949b64ab3e58fde"></script><script type="text/javascript" src="./js/index.js?b55ba949&b55ba949b64ab3e58fde"></script></body>
+<script type="text/javascript" src="./js/vendor.js?d9ef322c&d9ef322cddd8fb6201de"></script><script type="text/javascript" src="./js/index.js?d9ef322c&d9ef322cddd8fb6201de"></script></body>
 
 </html>

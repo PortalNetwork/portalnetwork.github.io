@@ -3,6 +3,7 @@
         "title": "Blockchain Name Service",
         "icon": "./images/icon/portal1.svg",
         "url": "https://www.portal.network/",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -87,6 +88,7 @@
         "title": "Ethereum (ENS)",
         "icon": "./images/icon/eth1.svg",
         "url": "https://www.ethereum.org",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -175,6 +177,7 @@
         "title": "Wanchain (WNS)",
         "icon": "./images/icon/wan1.svg",
         "url": "https://wanchain.org",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -263,6 +266,7 @@
         "title": "Ethereum Classic (ECNS)",
         "icon": "./images/icon/etc1.svg",
         "url": "https://ethereumclassic.org/",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -350,10 +354,11 @@
         "title": "ICON (INS)",
         "icon": "./images/icon/icon1.svg",
         "url": "https://icon.foundation/?lang=en",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -375,7 +380,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -397,7 +402,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -408,7 +413,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -419,7 +424,7 @@
             },
             {
                 "name": "Mobile App",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "BNS wallet & domain manager on the go",
                 "urlItem": [
                     {
@@ -434,10 +439,11 @@
         "title": "Qtum (QNS)",
         "icon": "./images/icon/qtum1.svg",
         "url": "https://qtum.org/en",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 5,
+                "percentage": 15,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -459,7 +465,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -481,7 +487,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -518,6 +524,7 @@
         "title": "NEO (NNS)",
         "icon": "./images/icon/neo1.svg",
         "url": "https://neo.org",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -602,6 +609,7 @@
         "title": "Aelf (AENS)",
         "icon": "./images/icon/aelf12.svg",
         "url": "https://aelf.io",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -686,6 +694,7 @@
         "title": "Bitcoin Cash (BCNS)",
         "icon": "./images/icon/bc1.svg",
         "url": "https://explorer.bitcoin.com/bch",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
@@ -770,10 +779,11 @@
         "title": "QuarkChain (QCNS)",
         "icon": "./images/icon/quark.svg",
         "url": "https://quarkchain.io/",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -795,7 +805,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -806,7 +816,7 @@
             },
             {
                 "name": "QCNS",
-                "percentage": 25,
+                "percentage": 35,
                 "description": "QuarkChain Name Service",
                 "urlItem": [
                     {
@@ -817,7 +827,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -828,7 +838,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 0,
+                "percentage": 10,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -854,10 +864,11 @@
         "title": "Perlin (PNS)",
         "icon": "./images/icon/perlin.svg",
         "url": "https://www.perlin.net/",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -879,7 +890,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -890,7 +901,7 @@
             },
             {
                 "name": "PNS",
-                "percentage": 25,
+                "percentage": 35,
                 "description": "Perlin Name Service",
                 "urlItem": [
                     {
@@ -901,7 +912,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -912,7 +923,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -938,10 +949,11 @@
         "title": "TomoChain (TNS)",
         "icon": "./images/icon/tomo.svg",
         "url": "https://tomochain.com/",
+        "description": "",
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -963,7 +975,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -974,7 +986,7 @@
             },
             {
                 "name": "TNS",
-                "percentage": 25,
+                "percentage": 35,
                 "description": "TomoChain Name Service",
                 "urlItem": [
                     {
@@ -985,7 +997,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -996,7 +1008,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 0,
+                "percentage": 5,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
