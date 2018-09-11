@@ -24,7 +24,8 @@ new Vue({
     feeds: [],
     photoItems: [],
     githubItems: [],
-    repositorieCount: 0
+    repositorieCount: 0,
+    openSubArea: false
   },
   computed: {
     chainStyle() {
@@ -70,12 +71,6 @@ new Vue({
     },
     resetBlock(){
       swal("Coming Soon");
-      // this.detailItem = [];
-      // this.logoObj = {
-      //   "title": "PORTAL",
-      //   "icon": "./images/icon/portal@2x.png",
-      //   "url": "https://www.portal.network/"
-      // }
     },
     openModal(name,...more) {
       this.isOpenPop = true;
@@ -105,6 +100,9 @@ new Vue({
     },
     goToBns(){
       animateScrollTo(document.querySelector('#bns'));
+    },
+    openArea(){
+      this.openSubArea = !this.openSubArea;
     }
   },
   mounted() {
@@ -162,7 +160,7 @@ new Vue({
       },
       breakpoints: {
         720: {
-          width: 320,
+          width: 330,
           slidesPerView: 1,
           slidesPerColumn: 1,
           slidesPerGroup: 1,

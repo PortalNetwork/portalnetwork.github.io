@@ -221,6 +221,9 @@
       &+li {
         margin-top: 20px;
       }
+      .sub_product_list {
+        display: block;
+      }
     }
     &+li {
       margin-top: 47px;
@@ -258,16 +261,6 @@
           border-color: transparent transparent transparent #fff;
         }
       }
-      &.no_link {
-        cursor: default;
-        &:hover {
-          background-color: transparent;
-          border: solid 1px #fff;
-          &:before {
-            border-color: transparent transparent transparent #19F4E4;
-          }
-        }
-      }
     }
     >p {
       width: 70%;
@@ -282,6 +275,7 @@
 }
 
 .sub_product_list {
+  display: none;
   font-size: 0;
   margin-top: 20px;
   >li {
