@@ -5,6 +5,7 @@ new Vue({
   el: '#app',
   data: {
     swipers: null,
+    swiper: null,
     isMenuOpen: false,
     isheaderFix: false,
     scroll: 0,
@@ -167,8 +168,8 @@ new Vue({
       }
       this.photoItems.push(imgUrl);  
       setTimeout(() => {
-        this.swipers.update();
-      }, 500);    
+        this.swiper.update();
+      }, 100);    
       $("body").addClass("fixBody");
     },
     closeModal() {
@@ -214,7 +215,7 @@ new Vue({
       });
     }).catch(err=> console.log(err));
 
-    this.swipers = new Swiper('.swiper-container', {
+    this.swiper = new Swiper('.swiper-container', {
       loop: false,
       watchOverflow: true,
       pagination: {
