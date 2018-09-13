@@ -30,7 +30,8 @@ new Vue({
     isformPopupOpen: false,
     email: "",
     currentSelectedVote: "",
-    votes: []
+    votes: [],
+    isPopupLoading: true
   },
   computed: {
     chainStyle() {
@@ -78,43 +79,19 @@ new Vue({
     formPopupOpen(){
       this.isformPopupOpen = true;
       $("body").addClass("fixBody");
-      this.votes = [
-        {
-          id: 1,
-          name: "Eosio",
-          url: "images/index/eos.png",
-          count: 0
-        },
-        {
-          id: 2,
-          name: "Cardano",
-          url: "images/index/cardano.png",
-          count: 0
-        },
-        {
-          id: 3,
-          name: "TRON",
-          url: "images/index/tron.png",
-          count: 0
-        },
-        {
-          id: 4,
-          name: "AION",
-          url: "images/index/aion.png",
-          count: 0
+      axios.get("https://faucet-server.herokuapp.com/faucet/options")
+      .then((res)=>{
+        console.log(res,"res");
+        this.votes = res.data;
+        this.isPopupLoading = false;
+      })
+      .catch((error)=> {
+        if(error && error.message){
+          swal(error.message);
+        }else {
+          swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
         }
-      ];
-      // axios.get("")
-      // .then((res)=>{
-      //   this.votes = res.data;
-      // })
-      // .catch(function (error) {
-      //   if(error && error.message){
-      //     swal(error.message);
-      //   }else {
-      //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
-      //   }
-      // });
+      });
     },
     toggleSelected(event,params){
       this.currentSelectedVote = params;
@@ -135,26 +112,29 @@ new Vue({
         let currentChain = this.votes.filter((elem)=>{
           return elem.name === this.currentSelectedVote;
         });
-        const data = {
+        let data = {
           email: this.email,
           id: currentChain[0].id
         };
-        console.log(data,1);
-        swal("Coming Soon");
-        this.isformPopupOpen = false;
-        $("body").removeClass("fixBody");
-        // axios.post('', data)
-        // .then(function () {
-        //   swal('Thank you for your participation');
-        //   this.isformPopupOpen = false;
-        //   $("body").removeClass("fixBody");
-        // }).catch(function (error) {
-        //   if(error && error.message){
-        //     swal(error.message);
-        //   }else {
-        //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
-        //   }
-        // });
+       
+        axios.post('https://faucet-server.herokuapp.com/faucet/options', data)
+        .then(res=>{
+          if(res.data && res.data.message){
+            swal(res.data.message);
+          }else {
+            swal('Thank you for your participation');
+            this.email = "";
+            this.currentSelectedVote = "";
+          }
+          this.isformPopupOpen = false;
+          $("body").removeClass("fixBody");
+        }).catch(error=>{
+          if(error && error.message){
+            swal(error.message);
+          }else {
+            swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+          }
+        });
       }
     },
     openModal(name,...more) {
