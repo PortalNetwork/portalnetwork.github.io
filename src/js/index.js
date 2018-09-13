@@ -107,8 +107,12 @@ new Vue({
       // .then((res)=>{
       //   this.votes = res.data;
       // })
-      // .catch(()=>{
-      //   swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+      // .catch(function (error) {
+      //   if(error && error.message){
+      //     swal(error.message);
+      //   }else {
+      //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+      //   }
       // });
     },
     toggleSelected(event,params){
@@ -123,7 +127,7 @@ new Vue({
       let errorMsg = "";
 
       if(!(isText).test(this.email)) errorMsg = "Incorrect Email.";
-      if(this.currentSelectedVote === "") errorMsg = "Incorrect Select.";
+      if(this.currentSelectedVote === "") errorMsg = "Please select a chain.";
       if(errorMsg !== "") swal(errorMsg);
 
       if(errorMsg === ""){
@@ -134,13 +138,21 @@ new Vue({
           email: this.email,
           id: currentChain[0].id
         };
+        console.log(data,1);
+        swal("Coming Soon");
+        this.isformPopupOpen = false;
+        $("body").removeClass("fixBody");
         // axios.post('', data)
         // .then(function () {
         //   swal('Thank you for your participation');
         //   this.isformPopupOpen = false;
         //   $("body").removeClass("fixBody");
-        // }).catch(function () {
-        //   swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        // }).catch(function (error) {
+        //   if(error && error.message){
+        //     swal(error.message);
+        //   }else {
+        //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        //   }
         // });
       }
     },
