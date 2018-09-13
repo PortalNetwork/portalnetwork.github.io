@@ -9,6 +9,7 @@
 @import "./index/_roadmap.scss";
 @import "./index/_feed.scss";
 @import "./index/_identity.scss";
+@import "./index/_formPopup.scss";
 * {
   padding: 0px;
   margin: 0px;
@@ -57,6 +58,19 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+  &.mask {
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 7;
+    }
+  }
 }
 
 .social_media {

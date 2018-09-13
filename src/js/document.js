@@ -9,7 +9,7 @@ function GetOffset(el) {
 }
 
 new Vue({
-  el: '#roadmap',
+  el: '#document',
   data: {
     swiper: null,
     isOpenPop: false,
@@ -830,4 +830,4 @@ new Vue({
         },
       }); 
   }
-})
+});

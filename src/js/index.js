@@ -25,7 +25,11 @@ new Vue({
     photoItems: [],
     githubItems: [],
     repositorieCount: 0,
-    openSubArea: false
+    openSubArea: false,
+    isformPopupOpen: false,
+    email: "",
+    currentSelectedVote: "",
+    votes: []
   },
   computed: {
     chainStyle() {
@@ -70,8 +74,87 @@ new Vue({
         "description": obj.description
       }
     },
-    resetBlock(){
-      swal("Coming Soon");
+    formPopupOpen(){
+      this.isformPopupOpen = true;
+      $("body").addClass("fixBody");
+      this.votes = [
+        {
+          id: 1,
+          name: "Eosio",
+          url: "images/index/eos.png",
+          count: 0
+        },
+        {
+          id: 2,
+          name: "Cardano",
+          url: "images/index/cardano.png",
+          count: 0
+        },
+        {
+          id: 3,
+          name: "TRON",
+          url: "images/index/tron.png",
+          count: 0
+        },
+        {
+          id: 4,
+          name: "AION",
+          url: "images/index/aion.png",
+          count: 0
+        }
+      ];
+      // axios.get("")
+      // .then((res)=>{
+      //   this.votes = res.data;
+      // })
+      // .catch(function (error) {
+      //   if(error && error.message){
+      //     swal(error.message);
+      //   }else {
+      //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+      //   }
+      // });
+    },
+    toggleSelected(event,params){
+      this.currentSelectedVote = params;
+    },
+    formPopupClose(){
+      this.isformPopupOpen = false;
+      $("body").removeClass("fixBody");
+    },
+    onSubmit(){
+      const isText = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+      let errorMsg = "";
+
+      if(!(isText).test(this.email)) errorMsg = "Incorrect Email.";
+      if(this.currentSelectedVote === "") errorMsg = "Please select a chain.";
+      if(errorMsg !== "") swal(errorMsg);
+
+      if(errorMsg === ""){
+        let currentChain = this.votes.filter((elem)=>{
+          return elem.name === this.currentSelectedVote;
+        });
+        const data = {
+          email: this.email,
+          id: currentChain[0].id
+        };
+        console.log(data,1);
+        swal("Coming Soon");
+        this.isformPopupOpen = false;
+        $("body").removeClass("fixBody");
+        // axios.post('', data)
+        // .then(function () {
+        //   swal('Thank you for your participation');
+        //   this.isformPopupOpen = false;
+        //   $("body").removeClass("fixBody");
+        // }).catch(function (error) {
+        //   if(error && error.message){
+        //     swal(error.message);
+        //   }else {
+        //     swal('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        //   }
+        // });
+      }
     },
     openModal(name,...more) {
       this.isOpenPop = true;
@@ -104,7 +187,7 @@ new Vue({
     },
     openArea(){
       this.openSubArea = !this.openSubArea;
-    }
+    },
   },
   mounted() {
     AOS.init();

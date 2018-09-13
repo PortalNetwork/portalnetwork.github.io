@@ -68,10 +68,28 @@
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKLX3T6" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <div id="app" :class="{active: isMenuOpen}" v-cloak>
+  <div id="app" :class="{active: isMenuOpen, mask: isformPopupOpen}" v-cloak>
 		<a class="menu_btn" href="javascript:;" @click="toggleMenuFn">
 			<span></span>
 		</a>
+		<div :class="{form_popup: true, open: isformPopupOpen}">
+			<p>Please select a chain that you are interested in.</p>
+			<a href="javascript:;" class="close_btn" @click="formPopupClose"><img src="images/index/close.png" alt=""></a>
+			<div class="vote_list">
+				<div class="vote_box" v-for="(vote, idx) in votes" :key="idx">
+					<a href="javascript:;" :class="{active: currentSelectedVote === vote.name}" @click="toggleSelected($event,vote.name)">
+						<div class="figure"><img :src="vote.url" alt=""></div>
+						<p>{{vote.name}}</p>
+						<p>Count: <span>{{vote.count}}</span></p>
+					</a>
+				</div>
+			</div>
+			<div class="popup_box">
+				<label>Email</label>
+				<input type="text" placeholder="Your email" v-model.trim="email">
+			</div>
+			<button type="button" @click="onSubmit">Submit</button>
+		</div>
 		<div class="social_media">
 			<ul>
 				<li><a href="https://t.me/portalnetworkofficial" target="_blank"><img src="images/index/s_Te.png" alt=""></a></li>
@@ -220,7 +238,7 @@
 					</div>
 					<ul>
 						<li v-for="(obj, idx) in blockchain" :key="idx"><a @click="onCheckBlock(obj);handActive(idx)" :class="{active: chainSelectidx === idx}"><img :src="obj.icon"></a></li>
-						<li><a @click="resetBlock"><img src="./images/icon/vote1.svg" alt=""></a></li>
+						<li><a @click="formPopupOpen"><img src="./images/icon/vote1.svg" alt=""></a></li>
 					</ul>
 				</div>
 				<div class="item_schedule">
@@ -635,6 +653,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?d9ef322c&d9ef322cddd8fb6201de"></script><script type="text/javascript" src="./js/index.js?d9ef322c&d9ef322cddd8fb6201de"></script></body>
+<script type="text/javascript" src="./js/vendor.js?61042616&61042616c11342d6c15d"></script><script type="text/javascript" src="./js/index.js?61042616&61042616c11342d6c15d"></script></body>
 
 </html>
