@@ -20,6 +20,9 @@
   &.open {
     display: block;
   }
+  p {
+    text-align: center;
+  }
   .close_btn {
     display: block;
     width: 20px;
@@ -32,7 +35,7 @@
       margin: 0px auto;
     }
   }
-  >p {
+  .text {
     margin-bottom: 20px;
     font-weight: 400;
     line-height: 1.3;

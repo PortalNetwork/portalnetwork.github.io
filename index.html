@@ -73,22 +73,25 @@
 			<span></span>
 		</a>
 		<div :class="{form_popup: true, open: isformPopupOpen}">
-			<p>Please select a chain that you are interested in.</p>
-			<a href="javascript:;" class="close_btn" @click="formPopupClose"><img src="images/index/close.png" alt=""></a>
-			<div class="vote_list">
-				<div class="vote_box" v-for="(vote, idx) in votes" :key="idx">
-					<a href="javascript:;" :class="{active: currentSelectedVote === vote.name}" @click="toggleSelected($event,vote.name)">
-						<div class="figure"><img :src="vote.url" alt=""></div>
-						<p>{{vote.name}}</p>
-						<p>Count: <span>{{vote.count}}</span></p>
-					</a>
+			<p v-if="isPopupLoading">Loading ...</p>
+			<template v-if="!isPopupLoading">
+				<p class="text">Please select a chain that you are interested in.</p>
+				<a href="javascript:;" class="close_btn" @click="formPopupClose"><img src="images/index/close.png" alt=""></a>
+				<div class="vote_list">
+					<div class="vote_box" v-for="(vote, idx) in votes" :key="idx">
+						<a href="javascript:;" :class="{active: currentSelectedVote === vote.name}" @click="toggleSelected($event,vote.name)">
+							<div class="figure"><img :src="vote.url" alt=""></div>
+							<p>{{vote.name}}</p>
+							<p>Count: <span>{{vote.count}}</span></p>
+						</a>
+					</div>
 				</div>
-			</div>
-			<div class="popup_box">
-				<label>Email</label>
-				<input type="text" placeholder="Your email" v-model.trim="email">
-			</div>
-			<button type="button" @click="onSubmit">Submit</button>
+				<div class="popup_box">
+					<label>Email</label>
+					<input type="text" placeholder="Your email" v-model.trim="email">
+				</div>
+				<button type="button" @click="onSubmit">Submit</button>
+			</template>
 		</div>
 		<div class="social_media">
 			<ul>
@@ -653,6 +656,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?1d64a4a6&1d64a4a6928ebbee4084"></script><script type="text/javascript" src="./js/index.js?1d64a4a6&1d64a4a6928ebbee4084"></script></body>
+<script type="text/javascript" src="./js/vendor.js?dce8d78f&dce8d78ffb68fda1e3ce"></script><script type="text/javascript" src="./js/index.js?dce8d78f&dce8d78ffb68fda1e3ce"></script></body>
 
 </html>
