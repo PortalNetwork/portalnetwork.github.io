@@ -205,9 +205,7 @@ new Vue({
 
     this.swiper = new Swiper('.swiper-container', {
       loop: false,
-      initialSlide: 0,
       watchOverflow: true,
-      history: false,
       pagination: {
         el: '.swiper-pagination'
       },
