@@ -137,20 +137,28 @@ new Vue({
         });
       }
     },
-    openModal(name,...more) {
+    /**
+     * Image swiper
+     * @param idx index
+     * @param name first image name
+     * @param more image other than the first one
+     */
+    openModal(idx,name,...more) {
       this.isOpenPop = true;
       let imgUrl = `./images/index/${name}.png`;
+      this.photoItems.push(imgUrl);
+
       let morePhoto = [...more];
       if(morePhoto !== undefined){
         morePhoto.forEach((elem)=>{
           this.photoItems.push(`./images/index/${elem}.png`);
         });
-      }
-      this.photoItems.push(imgUrl);  
+      }  
       setTimeout(() => {
         this.swiper.update();
-      }, 100);    
+      }, 100);
       $("body").addClass("fixBody");
+      this.swiper.slideTo(idx);
     },
     closeModal() {
       this.isOpenPop = false;
