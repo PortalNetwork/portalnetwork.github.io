@@ -191,7 +191,7 @@ new Vue({
       .catch(err=> console.log(err));
     axios.get("https://api.github.com/orgs/PortalNetwork/repos?per_page=100")
     .then((res)=>{
-      const type = ['ens','wns','ecns','ins','qns','nns','aens','bcns','qcns','pns','enigma-ns','nem-ns'];
+      const type = ['ens','wns','ecns','aens','bcns','qcns','pns','enigma-ns','nem-ns','ins','qns','nns','nkn-ns','mns','dfns','tns','pai-ns','zns'];
       let typeArr = {};
       this.repositorieCount = res.data.length;
       type.map((obj, idx)=>{
@@ -221,7 +221,7 @@ new Vue({
       watchOverflow: true,
       slidesPerView: 3,
       slidesPerColumn: 2,
-      slidesPerGroup: 6,
+      slidesPerGroup: 3,
       spaceBetween: 15,
       width: 560,
       slidesPerColumnFill : 'row',
