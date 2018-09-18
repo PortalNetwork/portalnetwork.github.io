@@ -88,7 +88,7 @@
         "title": "Ethereum (ENS)",
         "icon": "./images/icon/eth1.svg",
         "url": "https://www.ethereum.org",
-        "description": "",
+        "description": "Ethereum is an open blockchain platform that lets anyone build and use decentralized applications that run on blockchain technology.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -177,7 +177,7 @@
         "title": "Wanchain (WNS)",
         "icon": "./images/icon/wan1.svg",
         "url": "https://wanchain.org",
-        "description": "",
+        "description": "Wanchain is creating a new financial market of digital assets by implementing cross-chain transfers across different blockchains. With the number of various coins, tokens, and blockchains currently in the ecosystem, there’s not currently an efficient, decentralized way to exchange value between them. As an independent blockchain, Wanchain connects the accounts of independent chains to provide a framework to exchange these assets.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -266,7 +266,7 @@
         "title": "Ethereum Classic (ECNS)",
         "icon": "./images/icon/etc1.svg",
         "url": "https://ethereumclassic.org/",
-        "description": "",
+        "description": "Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract (scripting) functionality. It provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -354,7 +354,7 @@
         "title": "ICON (INS)",
         "icon": "./images/icon/icon1.svg",
         "url": "https://icon.foundation/?lang=en",
-        "description": "",
+        "description": "ICON is building a massive platform that will allow various blockchains to interact with each other via smart contracts. Existing within what developers brand the ICON Republic, communities will connect with each other using ICON’s loopchain technology.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -436,10 +436,10 @@
         ]
     },
     {
-        "title": "Qtum (QNS)",
+        "title": "QTUM (QNS)",
         "icon": "./images/icon/qtum1.svg",
         "url": "https://qtum.org/en",
-        "description": "",
+        "description": "QTUM is a Ethereum-Bitcoin Hybrid blockchain, which integration smart contract layer into Bitcoin. And aims to be the bridge between the Bitcoin and Ethereum communities, the real world and blockchain world.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -477,7 +477,7 @@
             {
                 "name": "QNS",
                 "percentage": 100,
-                "description": "Qtum Name Service",
+                "description": "QTUM Name Service",
                 "urlItem": [
                     {
                         "img": "./images/index/github1.svg",
@@ -524,7 +524,7 @@
         "title": "NEO (NNS)",
         "icon": "./images/icon/neo1.svg",
         "url": "https://neo.org",
-        "description": "",
+        "description": "NEO is an open network economy focus on digital asset, it utilizes blockchain technology to digitize assets by using smart contracts.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -609,7 +609,7 @@
         "title": "Aelf (AENS)",
         "icon": "./images/icon/aelf12.svg",
         "url": "https://aelf.io",
-        "description": "",
+        "description": "Aelf is a customizable operating system for blockchains, and the project attempting to be the “Linux” of the blockchain community. Aelf is poised to be the Blockchain network with a decentralized cloud computing platform to facilitate the commercial needs of businesses and mainstream institutions.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -694,7 +694,7 @@
         "title": "Bitcoin Cash (BCNS)",
         "icon": "./images/icon/bc1.svg",
         "url": "https://explorer.bitcoin.com/bch",
-        "description": "",
+        "description": "Bitcoin Cash is an experimental digital currency that enables instant payments to anyone, anywhere in the world. It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitcoin Cash is a descendant of Bitcoin. It became a separate currency from the version supported by Bitcoin Core when the two split on August 1, 2017. Bitcoin Cash and the Bitcoin Core version of Bitcoin share the same transaction history up until the split.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -779,7 +779,7 @@
         "title": "QuarkChain (QCNS)",
         "icon": "./images/icon/quark.svg",
         "url": "https://quarkchain.io/",
-        "description": "",
+        "description": "QuarkChain is a secure, permission-less, scalable, and decentralized blockchain. One of the goals of QuarkChain is to utilize sharding technology to deliver over 1 million transactions per second (tps). Essentially, QuarkChain markets itself as a peer-to-peer blockchain with a high capacity throughput to help deliver fast and secure decentralized applications.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -864,7 +864,7 @@
         "title": "TomoChain (TNS)",
         "icon": "./images/icon/tomo.svg",
         "url": "https://tomochain.com/",
-        "description": "",
+        "description": "TomoChain is a public blockchain for dApps. The mission is to be a leading force in building the Internet of Value, designing its infrastructure and working to create an alternative financial system which is more secure, transparent, efficient, inclusive and equitable for everyone.",
         "detail": [
             {
                 "name": "Web Builder",
@@ -949,7 +949,7 @@
         "title": "NKN (NNS)",
         "icon": "./images/icon/nkn.svg",
         "url": "https://nkn.org/",
-        "description": "",
+        "description": "NKN is a new kind of network connectivity protocol & ecosystem powered by blockchain for an open, decentralized, and shared Internet.",
         "detail": [
             {
                 "name": "Web Builder",
