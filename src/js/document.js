@@ -327,6 +327,35 @@ new Vue({
         icon: 'images/roadmap/education.png',
         flags: [
           {
+            title: 'Partnership Announcement with Enigma Project',
+            content: 'Portal Network and Enigma to put a combined work on deploying the Enigma Name Service (ENGNS). We will be utilizing the secret contract auction to provide ENGNS and mutiple related products.',
+            photos: [""],
+            location: ' Taipei, Taiwan',
+            time: '9/10',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Partnership Announcement with ICON Foundation',
+            content: 'Portal Network and ICON Foundation signed a strategic partnership agreement to build the next generation domain name service on top of ICON blockchain. The partnership signifies the dedication on deploying ICONick and other related products such as marketplace, extension and more.',
+            photos: [""],
+            location: ' Seoul, Korea',
+            time: '9/5',
+            progress: 100,
+            links: [
+              {
+                title: '',
+                url: "https://iconick.portal.network",
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'IT Seed',
             content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Portal Network talked about the basic concept, application, and the future development of blockchain.',
             photos: [
@@ -383,6 +412,40 @@ new Vue({
         title: 'Event',
         icon: 'images/roadmap/event.png',
         flags: [
+          {
+            title: 'Ethereum Classic Summit',
+            content: 'Portal Network attended the ETHIS Hong Kong to discuss the vision and importance of Web 3.0. We also talked about our 2 product suites - MUMEI and KAIZEN - that will support and enhance the growth of future Internet.',
+            photos: [""],
+            location: ' Seoul, Korea',
+            time: '9/12 - 13',
+            progress: 100,
+            links: [
+              {
+                title: '',
+                url: "https://medium.com/portalnetworkofficial/ethereum-classic-summit-2018-56074c1483bc",
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
+            title: 'Ethereum Industry Summit',
+            content: 'Portal Network attended the ETHIS Hong Kong to discuss the vision and importance of Web 3.0. We also talked about our 2 product suites - MUMEI and KAIZEN - that will support and enhance the growth of future Internet.',
+            photos: [""],
+            location: ' Hong Kong',
+            time: '9/8',
+            progress: 100,
+            links: [
+              {
+                title: '',
+                url: "https://medium.com/portalnetworkofficial/ethis-ethereum-industry-summit-74f6c0af76ae",
+              }
+            ],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
           {
             title: 'World Blockchain Conference',
             content: 'Portal Network attended the World Blockchain Conference (WBC) hosted in Singapore. We explored the latest blockchain market by talking with different industry leaders including Ankr Network, Huobi Pro, Baidu Financial and more.',
