@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title><%= htmlWebpackPlugin.options.title %></title>
+	<meta name="description" content="Portal Network Blog">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Blog" />
+	<meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Portal Network Blog" />
+  <meta property="og:url" content="https://www.portal.network/blogs/tutorial_ens_and_ens_manager.html" />
+  <meta property="og:image" content="../assets/meta_share.png" />
+  <meta property="og:image:url" content="../assets/meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="header_content">
+        <h1 class="logo">
+          <a href="https://www.portal.network/"><img src="../images/logo/logo_w.png" alt=""></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('document')" href="https://www.portal.network/document.html" target="_blank">Documentation</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="https://search.portal.network/" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('forum')" href="https://forum.portal.network/" target="_blank">Forum</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+            <ul>
+              <li>
+                <a href="https://www.portal.network/blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html?tag=event" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html?tag=tech" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
+              </li>
+              <li>
+                <a href="https://www.portal.network/blog.html?tag=guide" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5>Portal Network</h5>
+          <div class="date">Sep 4</div>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_title">
+          <h3>[Tutorial] ENS and ENS Manager by Portal Network</h3>
+
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*mCwcevrLcJr4OGjurya8oA.png" alt="">
+          </figure>
+        </section>
+
+        <section class="article_content">
+          <p>Portal Network has been striving to ease the use of blockchain by constantly contributing to different projects and products. One of the core establishments of Portal Network is the Blockchain Name Service (BNS), which enhance users’ experience when using the blockchain services. Recently, we have launched our ENS (Ethereum Name Service) Manager to let users easily connect their wallet address to the resolver. In this article, we will examine the different features that we have released on this ENS Manager. But first, let’s start with ENS.</p>
+        </section>
+
+        <section class="article_content">
+          <h4>What is Ethereum Name Service (ENS)</h4>
+          <p>ENS is a naming service that changes a complicated hash into human-readable name. It can be considered as something similar to DNS (Domain Name Service), which changes the IP addresses into “google.com”, “facebook.com”. In Blockchain however, ENS could be used for several purposes.</p>
+
+          <div class="article_box">
+            <p>．Set as wallet address : Changes the default wallet address to “yourname.eth”</p>
+          </div>
+
+          <div class="article_box">
+            <p>．DWebs / DApps : Replace the IPFS hash address</p>
+          </div>
+
+          <div class="article_box">
+            <p>．Interact with several smart contracts</p>
+          </div>
+
+          <div class="article_box">
+            <p>．Create Sub-domains</p>
+          </div>
+          
+          <p>According to <a class="text_link" href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md" target="_blank" target="_blank">EIP137</a> by <a class="text_link" href="https://medium.com/@weka" target="_blank" target="_blank">Nick Johnson</a>, ENS has two principles components: the registry and the resolvers.</p>
+
+          <p>The ENS registry consists of a single central contract that maintains domains and subdomains. It also stores three essential pieces: the owner of the domain, the resolver for the domain,and the time-to-live for all records under the domain.</p>
+
+          <p>The owner of the a domain may be either a user’s account or a smart contract. A registrar is a smart contract that owns a domain and a list of subdomains that follow a set of rules defined in the contract.</p>
+
+          <p>The resolver for domain is responsible for translating Ethereum domain names into addresses. Each smart contract that follows related rules may act as a resolver in ENS.</p>
+
+          <p>So in order to execute the functions mentioned above, users will need to set up an ENS resolver that can execute the mapping between addresses and the ENS.</p>
+        </section>
+
+        <section class="article_content">
+          <h4>ENS Manager Tutorial</h4>
+          <p>In this article, we will show you how to:</p>
+
+          <div class="article_box">
+            <p>．Set up your resolver</p>
+          </div>
+
+          <div class="article_box">
+            <p>．Set up your address with your ENS</p>
+          </div>
+
+          <div class="article_box">
+            <p>．Set up your IPFS hash with your ENS</p>
+          </div>
+
+          <div class="article_box">
+            <p>．Set up your subdomain</p>
+          </div>
+        </section>
+
+        <section class="article_content">
+          <div class="article_box">
+            <header>STEP 1. Get an ENS at MyEtherWallet</header>
+            <figure class="figure img_xl_full">
+              <img src="https://cdn-images-1.medium.com/max/1600/0*vDwF4rQeFjr4Tj9l" alt="">
+            </figure>
+            <p>Before setting up an ENS resolver, you must own an ENS. If you don’t have one yet, read this <a class="text_link" href="https://medium.com/portalnetworkofficial/tutorial-buying-ens-at-myetherwallet-mew-35203745c5ca" target="_blank">tutorial</a> to find out more.</p>
+          </div>
+
+          <div class="article_box">
+            <header>STEP 2. Go to <a class="text_link" href="https://resolver.portal.network/" target="_blank">ENS Manager by Portal Network</a></header>
+            <figure class="figure img_xl_full">
+              <img src="https://cdn-images-1.medium.com/max/1600/0*xVwz89f_jWlkNxjy" alt="">
+            </figure>
+            <p>Once you own an ENS, go to the ENS Manager by Portal Network. Unlock and connect to your Metamask.</p>
+          </div>
+
+          <div class="article_box">
+            <header>STEP 3. Setup Default Resolver</header>
+            <figure class="figure img_xl_full">
+              <img src="https://cdn-images-1.medium.com/max/1600/0*KO3-jyO7kMDuGJNY" alt="">
+            </figure>
+            <p>Enter your ENS in the search bar and set up a default resolver. This action is considered a transaction on Ethereum, so it will cost you a small amount of transaction fee.</p>
+
+            <p class="text_italic">*Note* Only the owner of the ENS could set up a resolver. If you cannot set the resolver, double check if your Metamask account owns the ENS.</p>
+          </div>
+
+          <div class="article_box">
+            <header>STEP 4. Setup Other Functions</header>
+            <figure class="figure img_xl_full">
+              <img src="https://cdn-images-1.medium.com/max/1600/0*y7PoYkFrDgVlfnTS" alt="">
+            </figure>
+            <figure class="figure img_xl_full">
+              <img src="https://cdn-images-1.medium.com/max/1600/0*fzCgBzyn9JykeuDE" alt="">
+            </figure>
+            <p>Once you successfully setup your resolver, you can now setup the following functions:</p>
+            <div class="article_box">
+              <p>．Bind with your wallet address : Enter your wallet address and you will be able to receive with your ENS.</p>
+            </div>
+            <div class="article_box">
+              <p>．Create Subdomains : You can setup subdomains and give ownership to any address.</p>
+            </div>
+            <div class="article_box">
+              <p>．Connect to your Dwebs : You can setup an IPFS Hash generated from you dWebs to your ENS. This means that anyone will be able to access your dWeb by simply typing in your ENS. If you don’t know how to build your own dWeb, check out <a class="text_link" href="https://web.portal.network/" target="_blank">Portal Network’s Web Builder</a>.</p>
+            </div>
+            <p class="text_italic">Be mindful that all of these functions requires small amount of transaction fee (Gas) as any interaction with the smart contract on Ethereum requires sending a transaction.</p>
+          </div>
+        </section>
+        
+        <section class="article_content">
+          <h4>Why Use ENS and Why Setup these Features</h4>
+          <p>The primary purpose of ENS is to provide more effective solutions in Ethereum. Even if Ethereum has basic functionality, it suffers in several shortcomings that will limit its long-term usefulness. In the basic functions that Ethereum provides, users and developers can’t register the subdomain, like “blog.protalnetwork.com”. With ENS, developers can host multiple services under a single domain, such as a DApp hosted in Swarm, a Whisper address, or a email server. Hence, create a much more powerful commercial usage.</p>
+          <p>One of the obvious and mainstream user-case that ENS permits is that users’ decentralized domain address can be used as a human-readable alternative to a standard hexadecimal cryptocurrency address.</p>
+          <p>But the ambition for ENS is far more than that. By providing an identity in a decentralized world, ENS will shape the long-term usage on the Ethereum platform, just like how DNS has shaped the internet we use nowadays.</p>
+        </section>
+
+        <section class="article_content">
+          <h4><a class="text_link" href="https://resolver.portal.network/" target="_blank">ENS Manager</a> by Portal Network</h4>
+          <p>Portal Network has been constantly putting efforts in the user adoption problem that blockchain is facing. It is truly unfortunate that many of the users are kept away from accessing this innovative technology due to insufficient tools and materials that can educate and raise awareness to the crowd.</p>
+          <p>We hope that with the tools and materials developed by Portal Network, we can close the gap between users and the technology, ease the process of using blockchain, and eventually bring mass adoption of blockchain and cryptocurrency.</p>
+          <p>Thank you for reading.</p>
+        </section>
+      </article>
+
+    </main>
+    <div class="footer">
+      <ul>
+        <li><a href="https://www.portal.network/privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+        <li><a href="https://www.portal.network/terms_coditions.html" target="_blank">Terms of use</a></li>
+      </ul>
+      <p class="copyRight">© 2018 PORTAL.NETWORK</p>
+    </div>
+  </div>
+</body>
+
+</html>
