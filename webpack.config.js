@@ -127,12 +127,6 @@ module.exports = {
         ],
         include: path.resolve('src/images'),
         exclude: path.resolve('./node_modules'),
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-          'file-loader',
-        ]
       }
     ]
   },
@@ -244,13 +238,6 @@ module.exports = {
       title: 'Decentralized Database Hackathon Takeaways : Bluzelle X Portal Network | Blog',
       filename: 'decentralized.html',
       template: 'html/decentralized.html',
-      chunks: [ 'vendor', 'blog' ],
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      title: '[Tutorial] ENS and ENS Manager by Portal Network | Blog',
-      filename: 'blogs/tutorial_ens_and_ens_manager.html',
-      template: 'html/blogs/tutorial_ens_and_ens_manager.html',
       chunks: [ 'vendor', 'blog' ],
       hash: true,
     }),
