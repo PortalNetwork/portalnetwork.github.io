@@ -259,7 +259,6 @@ module.exports = {
         "metaMask",
         "wanchain",
         "ens",
-        "vendor",
         "submitdweb"
       ]
     })
