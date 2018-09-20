@@ -11,7 +11,7 @@
 .article_author {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
   .figure {
     width: 40px;
     img {
@@ -74,11 +74,14 @@
 .article_title {
   h3 {
     font-size: 42px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: $a_h3;
-    font-weight: 700;
-    text-align: center;
-    margin: 0px auto 40px auto;
+    font-weight: 600;
+    margin-bottom: 40px;
+    @media screen and (max-width: $mob) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
   }
   .figure {
     margin-bottom: 40px;
@@ -102,37 +105,49 @@
   width: 100%;
   h3 {
     font-size: 34px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: $article-text;
     margin-bottom: 20px;
+    @media screen and (max-width: $mob) {
+      font-size: 20px;
+    }
   }
   h4 {
     font-size: 26px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
     color: $article-text;
     margin-bottom: 10px;
+    @media screen and (max-width: $mob) {
+      font-size: 18px;
+    }
     a {
       display: inline;
       font-size: 26px;
-      font-weight: 700;
+      font-weight: 600;
       color: $article-text;
+      @media screen and (max-width: $mob) {
+        font-size: 18px;
+      }
     }
   }
   .figure {
     margin-bottom: 35px;
   }
   p {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @media screen and (max-width: $mob) {
+      font-size: 14px;
+    }
     strong {
       .text_link {
-        font-weight: 700;
+        font-weight: 600;
       }
     }
   }
@@ -141,28 +156,34 @@
 .article_blockquote {
   border-left: solid 3px $article-text;
   padding-left: 20px;
-  margin-left: -35px;
+  margin-left: -25px;
   @media screen and (max-width: $pad) {
     margin-left: 0px;
   }
   p {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     font-style: italic;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
     margin-bottom: 30px;
+    @media screen and (max-width: $mob) {
+      font-size: 14px;
+    }
   }
 }
 
 .article_box {
   header {
-    font-size: 21px;
+    font-size: 20px;
     color: $article-text;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    @media screen and (max-width: $mob) {
+      font-size: 16px;
+    }
   }
   .figure {
     img {
@@ -171,12 +192,15 @@
     }
   }
   p {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    @media screen and (max-width: $mob) {
+      font-size: 14px;
+    }
   }
 }
 

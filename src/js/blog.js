@@ -7,7 +7,7 @@ window.onload = ()=>{
       isMenuOpen: false,
       blogInfo: [],
       selectidx: 0,
-      selectedTag: ["all", "event", "tech", "guide"]
+      selectedTag: ["all", "partnership", "weekly", "bns","kaizen","mumei","tutorial"]
     },
     computed: {
       blogList() {

@@ -237,6 +237,7 @@ nav {
   ul {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     @media screen and (max-width: $mob) {
       display: block;
@@ -244,8 +245,7 @@ nav {
       margin: 0 auto;
     }
     li {
-      display: inline-block;
-      width: 33%;
+      width: 31%;
       height: auto;
       overflow: hidden;
       @media screen and (max-width: $pad) {
@@ -299,12 +299,12 @@ nav {
 }
 
 .author {
-  margin: 35px auto 40px auto;
+  margin: 0px auto 40px auto;
   max-width: 800px;
   width: 100%;
   @extend %clear;
   .figure {
-    width: 72px;
+    width: 50px;
     float: left;
     img {
       max-width: 100%;

@@ -19,10 +19,10 @@
 	<meta property="og:title" content="Portal Network Blog" />
   <meta property="og:type" content="website" />
   <meta property="og:description" content="Portal Network Blog" />
-  <meta property="og:url" content="https://www.portal.network/blogs/what-is-ens.html" />
-  <meta property="og:image" content="../assets/meta_share.png" />
-  <meta property="og:image:url" content="../assets/meta_share.png" />
-  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+  <meta property="og:url" content="https://www.portal.network/assets/blogs/what_is_ens.html" />
+  <meta property="og:image" content="../meta_share.png" />
+  <meta property="og:image:url" content="../meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
   <style>
@@ -40,12 +40,12 @@
       </a>
       <div class="header_content">
         <h1 class="logo">
-          <a href="../index.html"><img src="../images/logo/logo_w.png" alt=""></a>
+          <a href="https://www.portal.network/"><img src="../../images/logo/logo_w.png" alt=""></a>
         </h1>
         <nav>
           <ul class="menu">
             <li>
-              <a @click="gaSeedPageView('document')" href="./document.html" target="_blank">Documentation</a>
+              <a @click="gaSeedPageView('document')" href="https://www.portal.network/document.html" target="_blank">Documentation</a>
             </li>
             <li>
               <a @click="gaSeedPageView('showcase')" href="https://search.portal.network/" target="_blank">Showcase</a>
@@ -59,20 +59,29 @@
           </ul>
         </nav>
         <div class="bar">
-            <ul>
-              <li>
-                <a href="../blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
-              </li>
-              <li>
-                <a href="../blog.html?tag=event" :class="{active: selectidx === 1}" @click="currentActive(1)">event</a>
-              </li>
-              <li>
-                <a href="../blog.html?tag=tech" :class="{active: selectidx === 2}" @click="currentActive(2)">tech</a>
-              </li>
-              <li>
-                <a href="../blog.html?tag=guide" :class="{active: selectidx === 3}" @click="currentActive(3)">guide</a>
-              </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=partnership" :class="{active: selectidx === 1}" @click="currentActive(1)">partnership</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=weekly" :class="{active: selectidx === 2}" @click="currentActive(2)">weekly</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=bns" :class="{active: selectidx === 3}" @click="currentActive(3)">bns</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=kaizen" :class="{active: selectidx === 4}" @click="currentActive(3)">kaizen</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=mumei" :class="{active: selectidx === 5}" @click="currentActive(3)">mumei</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=tutorial" :class="{active: selectidx === 6}" @click="currentActive(3)">tutorial</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -132,12 +141,14 @@
     </main>
     <div class="footer">
       <ul>
-        <li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
-        <li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+        <li><a href="https://www.portal.network/privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+        <li><a href="https://www.portal.network/terms_coditions.html" target="_blank">Terms of use</a></li>
       </ul>
-      <p class="copyRight">© 2018 Portal Network</p>
+      <p class="copyRight">© 2018 PORTAL.NETWORK</p>
     </div>
   </div>
-<script type="text/javascript" src="./js/vendor.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/blog.js?1e656d20&1e656d20673d77616bdc"></script><script type="text/javascript" src="./js/vendor.js?1e386d43&1e386d434d4814dd55bc"></script><script type="text/javascript" src="./js/blog.js?1e386d43&1e386d434d4814dd55bc"></script></body>
+  <script src="../../js/vendor.js"></script>
+  <script src="../../js/blog.js"></script>
+</body>
 
 </html>
