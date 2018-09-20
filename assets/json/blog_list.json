@@ -1,5 +1,45 @@
 [
   {
+    "url": "https://www.portal.network/assets/blogs/contribution_to_metaMask.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*67-VElK-lnlacMlkHG-HXQ.png",
+    "title": "Portal Network’s contribution to MetaMask",
+    "content": "A few days ago, MetaMask has announced its newest update 4.9.0, which included the integration with the ENS…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Aug 16"
+  },
+  {
+    "url": "https://www.portal.network/assets/blogs/nifty_hong_kong_takeaway.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*zRBJ3dl1POjV9_UyvujX2w.jpeg",
+    "title": "NIFTY Hong Kong Takeaway: “Why Blockchain Games Are Trending.”",
+    "content": "During the NIFTY Hong Kong conference and hackathon which took place on July 24 to 26, Portal Network delivered a speech and held a workshop about…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Aug 16"
+  },
+  {
+    "url": "https://www.portal.network/assets/blogs/dappcon_recap.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*qKI1MvR_342DxXVS9XpUKg.jpeg",
+    "title": "DAPPCON Recap, July 19th–20th",
+    "content": "Last month on July 19th — 20th, Portal Network joined a Developer Conference for Ethereum Dapps & Infrastructure along with numerous…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Aug 15"
+  },
+  {
+    "url": "https://www.portal.network/assets/blogs/portal_network_hackathon_korea.html",
+    "img": "https://cdn-images-1.medium.com/max/2000/1*sgWV_qFwyEPj8U62BqxgNw.jpeg",
+    "title": "Portal Network Hackathon Korea, July 14th — 15th",
+    "content": "On July 14th and 15th, Portal Network organized its first hackathon oversea in South Korea, inviting more than 50 participants, including its partners…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jul 23"
+  },
+  {
     "url": "https://www.portal.network/assets/blogs/nifty_hackathon_conference_hong_kong.html",
     "img": "https://cdn-images-1.medium.com/max/2000/1*sjB0f6uTUbP-b264szWUfw.jpeg",
     "title": "Portal Network at NIFTY Hackathon & Conference — Hong Kong",
@@ -8,6 +48,26 @@
     "author": "Portal Network",
     "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
     "date": "Jul 23"
+  },
+  {
+    "url": "https://www.portal.network/assets/blogs/wns_revealed_and_the_potential_of_blockchain_name_service.html",
+    "img": "https://cdn-images-1.medium.com/max/1600/1*NxEO0h27-STpv7Ful2xHoA.jpeg",
+    "title": "WNS revealed and the potential of Blockchain Name Service explained",
+    "content": "Jakarta, the capital of Indonesia, was where the first Wanchain Partners Asia Tour took place. Portal Network joined the journey…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jul 20"
+  },
+  {
+    "url": "https://www.portal.network/assets/blogs/a_developer_conference_for_ethereum_dapps.html",
+    "img": "https://cdn-images-1.medium.com/max/2000/1*-S-BfwNKjFIMPngV3-f4NA.jpeg",
+    "title": "DappCon 2018 –A Developer Conference for Ethereum Dapps & Infrastructure.",
+    "content": "Portal Network is glad to announce that we will have one of the workshops in DappCon — Developer Conference for Ethereum Dapps & Infrastructure…",
+    "tag": ["all","partnership"],
+    "author": "Portal Network",
+    "authorImg": "https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg",
+    "date": "Jul 18"
   },
   {
     "url": "https://www.portal.network/assets/blogs/what_is_ens.html",

@@ -22,7 +22,6 @@
     padding-left: 10px;
     box-sizing: border-box;
     h5 {
-      font-weight: 400;
       margin-bottom: 5px;
     }
     .date {
@@ -43,6 +42,9 @@
       width: 100%;
     }
   }
+  img {
+    margin: 0px auto;
+  }
 }
 
 .figure_text {
@@ -56,8 +58,7 @@
 .text_link {
   display: inline;
   text-decoration: underline;
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 18px;
   line-height: 1.5;
   color: $article-text;
 }
@@ -65,16 +66,17 @@
 .text_star {
   display: inline-block;
   text-decoration: none;
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1.5;
   color: #07847A;
 }
 
 .article_title {
   h3 {
-    font-size: 42px;
+    font-size: 36px;
     line-height: 1.2;
+    text-align: center;
     color: $a_h3;
     font-weight: 600;
     margin-bottom: 40px;
@@ -82,6 +84,14 @@
       font-size: 20px;
       margin-bottom: 20px;
     }
+  }
+  h5 {
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+    color: $article-text;
+    font-weight: 600;
+    margin-bottom: 40px;
   }
   .figure {
     margin-bottom: 40px;
@@ -91,8 +101,7 @@
     }
   }
   p {
-    font-size: 21px;
-    font-weight: 400;
+    font-size: 18px;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
@@ -114,7 +123,7 @@
     }
   }
   h4 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.5;
     color: $article-text;
@@ -137,7 +146,6 @@
   }
   p {
     font-size: 18px;
-    font-weight: 400;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
@@ -146,6 +154,7 @@
       font-size: 14px;
     }
     strong {
+      font-weight: 600;
       .text_link {
         font-weight: 600;
       }
@@ -162,7 +171,6 @@
   }
   p {
     font-size: 18px;
-    font-weight: 400;
     font-style: italic;
     line-height: 1.5;
     color: $article-text;
@@ -178,9 +186,9 @@
   header {
     font-size: 20px;
     color: $article-text;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.5;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     @media screen and (max-width: $mob) {
       font-size: 16px;
     }
@@ -193,13 +201,21 @@
   }
   p {
     font-size: 18px;
-    font-weight: 400;
     line-height: 1.5;
     color: $article-text;
     word-break: break-word;
     margin-bottom: 20px;
     @media screen and (max-width: $mob) {
       font-size: 14px;
+    }
+    strong {
+      font-weight: 600;
+      color: $article-text;
+    }
+    a {
+      display: inline;
+      font-size: 18px;
+      color: $article-text;
     }
   }
 }
