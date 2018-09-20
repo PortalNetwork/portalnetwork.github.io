@@ -17,8 +17,9 @@ label,
 button,
 div,
 span {
-	font-family: 'Avenir', 'Nunito Sans', sans-serif, 'Arial', 'Microsoft JhengHei';
-	font-size: 14px;
+	font-family: 'Open Sans', sans-serif, 'Arial', 'Microsoft JhengHei';
+  font-size: 14px;
+  font-weight: 400;
 	line-height: 1;
 	color: #000;
 }
@@ -261,14 +262,6 @@ nav {
 
 .blog_box {
   display: block;
-  width: 300px;
-  margin: 0 auto;
-  @media screen and (max-width: $pad) {
-    width: 330px;
-  }
-  @media screen and (max-width: $mob) {
-    width: 100%;
-  }
   >.figure {
     width: 100%;
     height: 180px;
@@ -283,15 +276,16 @@ nav {
   }
   .info {
     h4 {
-      font-size: 26px;
+      font-size: 20px;
+      font-weight: 600;
       color: #000000;
-      line-height: 1.2;
+      line-height: 1.3;
       margin-bottom: 15px;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
       color: #7b7b7b;
-      line-height: 1.5;
+      line-height: 1.3;
       letter-spacing: 0.8px;
       margin-bottom: 20px;
     }
