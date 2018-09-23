@@ -239,6 +239,10 @@ new Vue({
               },
               {
                 title: '',
+                url: 'https://ecns.portal.network'
+              },
+              {
+                title: '',
                 url: 'https://wns.portal.network'
               }
             ],
@@ -329,7 +333,7 @@ new Vue({
           {
             title: 'Partnership Announcement with Enigma Project',
             content: 'Portal Network and Enigma to put a combined work on deploying the Enigma Name Service (ENGNS). We will be utilizing the secret contract auction to provide ENGNS and mutiple related products.',
-            photos: [""],
+            photos: ["images/roadmap/partnership/enigma-partnership.png"],
             location: ' Taipei, Taiwan',
             time: '9/10',
             progress: 100,
@@ -341,7 +345,7 @@ new Vue({
           {
             title: 'Partnership Announcement with ICON Foundation',
             content: 'Portal Network and ICON Foundation signed a strategic partnership agreement to build the next generation domain name service on top of ICON blockchain. The partnership signifies the dedication on deploying ICONick and other related products such as marketplace, extension and more.',
-            photos: [""],
+            photos: ["images/roadmap/partnership/icon-partnership.jpeg"],
             location: ' Seoul, Korea',
             time: '9/5',
             progress: 100,
@@ -351,56 +355,6 @@ new Vue({
                 url: "https://iconick.portal.network",
               }
             ],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'IT Seed',
-            content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Portal Network talked about the basic concept, application, and the future development of blockchain.',
-            photos: [
-              'images/roadmap/event/ITSeed/IMG_0939.jpg',
-              'images/roadmap/event/ITSeed/IMG_0941.jpg',
-              'images/roadmap/event/ITSeed/IMG_0943.jpg',
-              'images/roadmap/event/ITSeed/IMG_0944.jpg',
-              'images/roadmap/event/ITSeed/IMG_0945.jpg',
-              'images/roadmap/event/ITSeed/IMG_0946.jpg',
-              'images/roadmap/event/ITSeed/IMG_0948.jpg',
-              'images/roadmap/event/ITSeed/IMG_0949.jpg',
-              'images/roadmap/event/ITSeed/IMG_0950.jpg',
-              'images/roadmap/event/ITSeed/IMG_0951.jpg',
-              'images/roadmap/event/ITSeed/IMG_0954.jpg',
-              'images/roadmap/event/ITSeed/IMG_0958.jpg',
-              'images/roadmap/event/ITSeed/IMG_0961.jpg',
-              'images/roadmap/event/ITSeed/IMG_0965.jpg',
-              'images/roadmap/event/ITSeed/IMG_0967.jpg',
-              'images/roadmap/event/ITSeed/IMG_0969.jpg',
-              'images/roadmap/event/ITSeed/IMG_0971.jpg',
-              'images/roadmap/event/ITSeed/IMG_0974.jpg',
-              'images/roadmap/event/ITSeed/IMG_0980.jpg',
-              'images/roadmap/event/ITSeed/IMG_0983.jpg',
-            ],
-            location: ' Taipei, Taiwan',
-            time: '5/19',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Education Platform',
-            content: 'Christopher Shen, Co-founder of Portal Network, gave a speech at the "Young Entrepreneur" panel during the event. Portal Nework is honored to assist university students for international SUSS event, as it is our goal to cultivate more blockchain developers and to thrive the whole community.',
-            photos: [
-              'images/roadmap/event/education/1.jpg', 'images/roadmap/event/education/2.jpg', 'images/roadmap/event/education/3.jpg', 'images/roadmap/event/education/4.jpg', 
-              'images/roadmap/event/education/5.jpg', 'images/roadmap/event/education/6.jpg', 'images/roadmap/event/education/7.jpg', 'images/roadmap/event/education/8.jpg', 
-              'images/roadmap/event/education/9.jpg', 'images/roadmap/event/education/10.jpg', 'images/roadmap/event/education/11.jpg', 'images/roadmap/event/education/12.jpg', 
-              'images/roadmap/event/education/13.jpg',
-            ],
-            location: ' Singapore',
-            time: '4/17 - 18',
-            progress: 100,
-            links: [],
             githubs: [],
             files: [],
             videos: [],
@@ -607,6 +561,39 @@ new Vue({
             ],
           },
           {
+            title: 'IT Seed',
+            content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Portal Network talked about the basic concept, application, and the future development of blockchain.',
+            photos: [
+              'images/roadmap/event/ITSeed/IMG_0939.jpg',
+              'images/roadmap/event/ITSeed/IMG_0941.jpg',
+              'images/roadmap/event/ITSeed/IMG_0943.jpg',
+              'images/roadmap/event/ITSeed/IMG_0944.jpg',
+              'images/roadmap/event/ITSeed/IMG_0945.jpg',
+              'images/roadmap/event/ITSeed/IMG_0946.jpg',
+              'images/roadmap/event/ITSeed/IMG_0948.jpg',
+              'images/roadmap/event/ITSeed/IMG_0949.jpg',
+              'images/roadmap/event/ITSeed/IMG_0950.jpg',
+              'images/roadmap/event/ITSeed/IMG_0951.jpg',
+              'images/roadmap/event/ITSeed/IMG_0954.jpg',
+              'images/roadmap/event/ITSeed/IMG_0958.jpg',
+              'images/roadmap/event/ITSeed/IMG_0961.jpg',
+              'images/roadmap/event/ITSeed/IMG_0965.jpg',
+              'images/roadmap/event/ITSeed/IMG_0967.jpg',
+              'images/roadmap/event/ITSeed/IMG_0969.jpg',
+              'images/roadmap/event/ITSeed/IMG_0971.jpg',
+              'images/roadmap/event/ITSeed/IMG_0974.jpg',
+              'images/roadmap/event/ITSeed/IMG_0980.jpg',
+              'images/roadmap/event/ITSeed/IMG_0983.jpg',
+            ],
+            location: ' Taipei, Taiwan',
+            time: '5/19',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'BBS - Korea meet-up ',
             content: 'BBS stands for Blockchain Business Study group. The event is organized by Foundation X and incublock in order to provide a networking opportunity for blockchain and crypto evangelist. Christopher Shen, founder of Portal Network, is honored to be one of the speakers to talk about the necessity of BNS (Blockchain Name Service).',
             photos: [
@@ -652,29 +639,7 @@ new Vue({
               },
             ],
             videos: [],
-          },
-          {
-            title: 'Mr.Block X Malaysia',
-            content: 'Portal Network went to Mr. Block meetup in Malaysia. Phyrex Tsai, founder of Portal Network, talked about the products and services we are building in our team. We met different projects there and realized the potential of blockchain market in Malaysia.',
-            photos: null,
-            location: ' Kuala Lumpur, Malaysia',
-            time: '4/29',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [
-              {
-                title: '',
-                url: 'https://drive.google.com/file/d/1IjiDTu8vXqWUjbjICllfz_Lf-97Vgiwq/view',
-              },
-            ],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1877831622235293/',
-              }
-            ],
-          },  
+          }, 
           {
             title: 'Blockchain Universe',
             content: 'Portal Network co-hosted Blockchain Universe in Taipei, Taiwan. We invited some of the leading companies including Kenetic Capital, Hashed, Carry Protocol, Content Protocol, TTC and more. More than 200 people attended the event, showing the passion people have towards blockchain.',
@@ -700,6 +665,23 @@ new Vue({
                 url: 'https://www.facebook.com/mrblock.tw/videos/1875961702422285/',
               }
             ],
+          },
+          {
+            title: 'Education Platform',
+            content: 'Christopher Shen, Co-founder of Portal Network, gave a speech at the "Young Entrepreneur" panel during the event. Portal Nework is honored to assist university students for international SUSS event, as it is our goal to cultivate more blockchain developers and to thrive the whole community.',
+            photos: [
+              'images/roadmap/event/education/1.jpg', 'images/roadmap/event/education/2.jpg', 'images/roadmap/event/education/3.jpg', 'images/roadmap/event/education/4.jpg', 
+              'images/roadmap/event/education/5.jpg', 'images/roadmap/event/education/6.jpg', 'images/roadmap/event/education/7.jpg', 'images/roadmap/event/education/8.jpg', 
+              'images/roadmap/event/education/9.jpg', 'images/roadmap/event/education/10.jpg', 'images/roadmap/event/education/11.jpg', 'images/roadmap/event/education/12.jpg', 
+              'images/roadmap/event/education/13.jpg',
+            ],
+            location: ' Singapore',
+            time: '4/17 - 18',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
           },
           {
             title: 'Beyond Block Tokyo Summit',
@@ -741,24 +723,7 @@ new Vue({
             githubs: [],
             files: [],
             videos: [],
-          },
-          {
-            title: 'Cafe & Crypto',
-            content: 'Portal Network attended the crypto meetup hosted in a crypto cafe. Location was a perfect fit as it is one of the first cafes in Taiwan that accepts cryptocurrency as payment. It shows the real usecase of crypto and Portal Network was there to discuss the current crypto and blockchain market in Taiwan.',
-            photos: null,
-            location: ' Taipei, Taiwan',
-            time: '3/30',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1846505082034614/',
-              }
-            ],
-          },    
+          }, 
           {
             title: 'Token2049',
             content: 'Christopher Shen, founder of Portal Network, joined Token 2049 as one of the sponsored media teams. Portal Network met numerous funds such as Kenetic Capital, Hashed to learn about the opportunity to grow blockchain startups in Asia.',
@@ -791,54 +756,6 @@ new Vue({
                 title: '',
                 url: 'https://www.youtube.com/watch?v=Ubd09OoVP0M&list=PLh7yM-DPEDYisiTsCAWhDFN_0TgXasg39',
               }
-            ],
-          },
-          {
-            title: 'Blockshow Cointelegraph x Mr.Block',
-            content: "Vincent Tu, developer at Portal Network, presented the vision of creating a domain market that can empower users to easily buy their favorite domain names. More than 400 people gathered for the event and it was great opportunity to grow Portal Network's community.",
-            photos: null,
-            location: ' Taipei, Taiwan',
-            time: '3/9',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: 'https://www.accupass.com/event/1802251255491941418397',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1822744367744019/',
-              }
-            ],
-          },
-          {
-            title: 'eToro X Mr. Block',
-            content: "Johnny Hsieh, developer at Portal Network, shared his experience as a Phython developer at NEO. Blockchain developers are very limited in the current market, and Johnny's experience provided an insight on the current development environment of blockchain.",
-            photos: null,
-            location: ' Taipei, Taiwan',
-            time: '2/24',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: 'https://www.accupass.com/event/1802080453545695696800',
-              },
-            ],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: 'video 1',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1807825282569261/',
-              },
-              {
-                title: 'video 2',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1808005792551210/',
-              },
             ],
           },
         ],
