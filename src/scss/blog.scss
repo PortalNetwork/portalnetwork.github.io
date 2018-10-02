@@ -270,6 +270,7 @@ nav {
     background-size: cover;
     margin-bottom: 15px;
     border: solid 1px #bebebe;
+    box-sizing: border-box;
     @media screen and (max-width: $pad) {
       height: 220px;
     }
