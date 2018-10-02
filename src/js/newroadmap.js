@@ -333,64 +333,6 @@ new Vue({
       },
       
       {
-        tag: ['all','education'],
-        chapterName: 'Education',
-        icon: 'images/newroadmap/education.png',
-        flags: [
-          {
-            title: 'IT Seed',
-            content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Basic concept of Blockchain & Application of Blockchain & Future development of Blockchain.',
-            photos: [
-              'images/newroadmap/event/ITSeed/IMG_0939.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0941.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0943.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0944.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0945.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0946.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0948.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0949.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0950.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0951.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0954.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0958.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0961.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0965.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0967.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0969.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0971.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0974.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0980.jpg',
-              'images/newroadmap/event/ITSeed/IMG_0983.jpg',
-            ],
-            location: ' Taipei, Taiwan',
-            time: '5/19',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-          {
-            title: 'Education Platform',
-            content: 'Our co-founder, Christopher Shen, gave a speech at the "Young Entrepreneur" Panel during the event. Portal Nework is honored to assist university students for international SUSS events. It’s our goal to cultivate more blockchain developers, to thrive the whole community, and we start this mission from Taiwan.',
-            photos: [
-              'images/newroadmap/event/education/1.jpg', 'images/newroadmap/event/education/2.jpg', 'images/newroadmap/event/education/3.jpg', 'images/newroadmap/event/education/4.jpg', 
-              'images/newroadmap/event/education/5.jpg', 'images/newroadmap/event/education/6.jpg', 'images/newroadmap/event/education/7.jpg', 'images/newroadmap/event/education/8.jpg', 
-              'images/newroadmap/event/education/9.jpg', 'images/newroadmap/event/education/10.jpg', 'images/newroadmap/event/education/11.jpg', 'images/newroadmap/event/education/12.jpg', 
-              'images/newroadmap/event/education/13.jpg',
-            ],
-            location: ' Singapore',
-            time: '4/17 - 18',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [],
-          },
-        ],
-      },
-
-      {
         tag: ['all','event'],
         chapterName: 'Event',
         icon: 'images/newroadmap/event.png',
@@ -551,6 +493,39 @@ new Vue({
             ],
           },
           {
+            title: 'IT Seed',
+            content: 'Portal Network and Mr. Block team were very honored to be invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community where graduate students learn various trends around the world, and to be prepared for the future. Basic concept of Blockchain & Application of Blockchain & Future development of Blockchain.',
+            photos: [
+              'images/newroadmap/event/ITSeed/IMG_0939.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0941.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0943.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0944.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0945.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0946.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0948.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0949.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0950.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0951.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0954.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0958.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0961.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0965.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0967.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0969.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0971.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0974.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0980.jpg',
+              'images/newroadmap/event/ITSeed/IMG_0983.jpg',
+            ],
+            location: ' Taipei, Taiwan',
+            time: '5/19',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'BBS - Korea meet-up ',
             content: 'Portal Network and Mr. Block team were very honored to get invited by New Taipei City Computer Associate to speak at IT Seed x Technology training program. IT Seed is an education community that let graduating students learn various trends around the world, so they can be well prepared for their career path in the future.',
             photos: [
@@ -597,28 +572,6 @@ new Vue({
             ],
             videos: [],
           },
-          {
-            title: 'Mr.Block X Malaysia',
-            content: 'Portal Network pitch - Phyrex',
-            photos: null,
-            location: ' Malaysia',
-            time: '4/29',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [
-              {
-                title: '',
-                url: 'https://drive.google.com/file/d/1IjiDTu8vXqWUjbjICllfz_Lf-97Vgiwq/view',
-              },
-            ],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1877831622235293/',
-              }
-            ],
-          },  
           {
             title: 'Blockchain Universe',
             content: 'Co-hosted Blockchain Universe Event with Mr. Block',
@@ -685,24 +638,7 @@ new Vue({
             githubs: [],
             files: [],
             videos: [],
-          },
-          {
-            title: 'Cafe & Crypto',
-            content: 'Portal Network pitch - Phyrex Tsai, Founder of Portal Network',
-            photos: null,
-            location: ' Taipei, Taiwan',
-            time: '3/30',
-            progress: 100,
-            links: [],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1846505082034614/',
-              }
-            ],
-          },    
+          },  
           {
             title: 'Token2049',
             content: 'Media Team Sponsor',
@@ -735,54 +671,6 @@ new Vue({
                 title: '',
                 url: 'https://www.youtube.com/watch?v=Ubd09OoVP0M&list=PLh7yM-DPEDYisiTsCAWhDFN_0TgXasg39',
               }
-            ],
-          },
-          {
-            title: 'Blockshow Cointelegraph x Mr.Block',
-            content: 'Portal Network pitch - Vincent Tu, Co-founder of Portal Network',
-            photos: null,
-            location: ' Taipei, Taiwan',
-            time: '3/9',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: 'https://www.accupass.com/event/1802251255491941418397',
-              }
-            ],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: '',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1822744367744019/',
-              }
-            ],
-          },
-          {
-            title: 'eToro X Mr. Block',
-            content: 'NEO development experience as a Python Developer Johnny Hsieh, Co-founder of Portal Network, Python Developer',
-            photos: null,
-            location: ' Taipei',
-            time: '2/24',
-            progress: 100,
-            links: [
-              {
-                title: '',
-                url: 'https://www.accupass.com/event/1802080453545695696800',
-              },
-            ],
-            githubs: [],
-            files: [],
-            videos: [
-              {
-                title: 'video 1',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1807825282569261/',
-              },
-              {
-                title: 'video 2',
-                url: 'https://www.facebook.com/mrblock.tw/videos/1808005792551210/',
-              },
             ],
           },
         ],
