@@ -48,7 +48,8 @@ new Vue({
         'bch': this.chainSelectidx === 8,
         'qkc': this.chainSelectidx === 9,
         'tomo': this.chainSelectidx === 10,
-        'nkn': this.chainSelectidx === 11
+        'nkn': this.chainSelectidx === 11,
+        'nem': this.chainSelectidx === 12
       }
     }
   },

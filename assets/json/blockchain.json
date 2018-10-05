@@ -1029,5 +1029,90 @@
                 ]
             }
         ]
+    },
+    {
+        "title": "NEM (NNS)",
+        "icon": "./images/icon/nem.svg",
+        "url": "https://nem.io",
+        "description": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".xem",
+                "percentage": null,
+                "description": ".xem is the top level domain of NEM",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "NEM",
+                "percentage": 25,
+                "description": "NEM Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/nem-ns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 0,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 0,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
     }
 ]
