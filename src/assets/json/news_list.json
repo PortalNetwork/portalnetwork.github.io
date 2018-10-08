@@ -1,5 +1,26 @@
 [
   {
+    "company": "images/index/cropped-logo.png",
+    "url": "https://usethebitcoin.com/nem-price-spikes-17-after-strategic-partnership-agreement-with-portal-network",
+    "title": "NEM Price Spikes 17% After Strategic Partnership Agreement with Portal Network",
+    "article": "The famous cryptocurrency network NEM has experienced a price increase on its cryptocurrency XEM. October started very positively.…",
+    "author": "Use The Bitcoin"
+  },
+  {
+    "company": "images/index/Bitcoin.com.png",
+    "url": "https://news.bitcoin.com/portal-network-developers-announce-bitcoin-cash-name-service/",
+    "title": "Portal Network Developers Announce Bitcoin Cash Name Service",
+    "article": "A development team called the Portal Network has announced the creation of a new platform called the Bitcoin Cash Name Service (BCNS)…",
+    "author": "Bitcoin"
+  },
+  {
+    "company": "images/index/jinse.png",
+    "url": "https://www.jinse.com/lives/55684.htm",
+    "title": "Portal Network公司開發團隊推出比特幣現金名稱服務平台",
+    "article": "Portal Network公司宣布開發團隊正在推出一個名爲比特幣現金名稱服務（BCNS）的平台。基本上，BCNS是一種名稱服務，它使用Omni Layer版本連接到智能合約，該版本也與IPFS散列…",
+    "author": "金色財經"
+  },
+  {
     "company": "images/index/ether-logo.svg",
     "url": "https://ethereumworldnews.com/icon-icx-partners-portal-network-to-build-icon-name-service/",
     "title": "ICON (ICX) Partners Portal Network To Build ICON Name Service",
