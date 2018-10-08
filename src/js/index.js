@@ -27,6 +27,7 @@ new Vue({
     githubItems: [],
     repositorieCount: 0,
     openSubArea: false,
+    openSubArea2: false,
     isformPopupOpen: false,
     email: "",
     currentSelectedVote: "",
@@ -177,6 +178,9 @@ new Vue({
     openArea(){
       this.openSubArea = !this.openSubArea;
     },
+    openArea2(){
+      this.openSubArea2 = !this.openSubArea2;
+    }
   },
   mounted() {
     AOS.init();

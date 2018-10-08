@@ -321,8 +321,12 @@
 								<li><a href="http://wns.portal.network/" target="_blank">WNS</a></li>
 							</ul>
 						</li>
-						<li>
-							<a href="https://resolver.portal.network/" target="_blank">Resolver</a>
+						<li :class="{has_sub: openSubArea2}" @click="openArea2">
+							<a href="javascript:;" target="_blank">Resolver</a>
+							<ul class="sub_product_list">
+								<li><a href="https://resolver.portal.network/" target="_blank">ENS</a></li>
+								<li><a href="https://bcns-sdk.portal.network/" target="_blank">BCNS</a></li>
+							</ul>
 						</li>
 						<li>
 							<a href="https://usecase.portal.network/" target="_blank">Use Case</a>
