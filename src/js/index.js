@@ -82,7 +82,6 @@ new Vue({
       $("body").addClass("fixBody");
       axios.get("https://faucet-server.herokuapp.com/faucet/options")
       .then((res)=>{
-        console.log(res,"res");
         this.votes = res.data;
         this.isPopupLoading = false;
       })
