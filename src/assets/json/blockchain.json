@@ -698,7 +698,7 @@
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 5,
+                "percentage": 0,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -720,7 +720,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 5,
+                "percentage": 0,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -742,7 +742,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 5,
+                "percentage": 15,
                 "description": "BWHOIS for domain name service",
                 "urlItem": [
                     {
@@ -753,7 +753,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 5,
+                "percentage": 15,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -783,7 +783,7 @@
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 10,
+                "percentage": 0,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -805,7 +805,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 10,
+                "percentage": 0,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -827,7 +827,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 10,
+                "percentage": 15,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -838,7 +838,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 10,
+                "percentage": 15,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -868,7 +868,7 @@
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 5,
+                "percentage": 0,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -890,7 +890,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 5,
+                "percentage": 0,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -912,7 +912,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 5,
+                "percentage": 15,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -923,7 +923,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 5,
+                "percentage": 15,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -953,7 +953,7 @@
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 2,
+                "percentage": 0,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -975,7 +975,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 2,
+                "percentage": 0,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -997,7 +997,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 2,
+                "percentage": 10,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -1008,7 +1008,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 2,
+                "percentage": 10,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
@@ -1038,7 +1038,7 @@
         "detail": [
             {
                 "name": "Web Builder",
-                "percentage": 2,
+                "percentage": 0,
                 "description": "Building your brand on ÐWeb",
                 "urlItem": [
                     {
@@ -1060,7 +1060,7 @@
             },
             {
                 "name": "Browser Extension",
-                "percentage": 2,
+                "percentage": 0,
                 "description": "Turn your browser into ÐWeb browser",
                 "urlItem": [
                     {
@@ -1071,7 +1071,7 @@
             },
             {
                 "name": "NEM",
-                "percentage": 25,
+                "percentage": 10,
                 "description": "NEM Name Service",
                 "urlItem": [
                     {
@@ -1082,7 +1082,7 @@
             },
             {
                 "name": "Explorer",
-                "percentage": 2,
+                "percentage": 10,
                 "description": "BWHOIS for blockchain name service",
                 "urlItem": [
                     {
@@ -1093,7 +1093,7 @@
             },
             {
                 "name": "Marketplace",
-                "percentage": 2,
+                "percentage": 10,
                 "description": "Buy / sell / bid domain name easily ",
                 "urlItem": [
                     {
