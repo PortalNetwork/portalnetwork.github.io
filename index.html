@@ -236,7 +236,11 @@
 				<div class="chain_header">
 					<div class="logo_item">
 						<a :href="logoObj.url" target="_blank"><img :src="logoObj.icon" alt=""></a>
-						<h3><a :href="logoObj.url" target="_blank">{{logoObj.title}}</a></h3>
+						<h3>
+							<a class="title" :href="logoObj.url" target="_blank">{{logoObj.title}}</a>
+							<a class="twitter" :href="logoObj.twitter" target="_blank" v-if="logoObj.twitter !== ''"><img src="./images/index/s_t.png" alt=""></a>
+							<a class="medium" :href="logoObj.medium" target="_blank" v-if="logoObj.medium !== ''"><img src="./images/index/s_M.png" alt=""></a>
+						</h3>
 						<p>{{logoObj.description}}</p>
 					</div>
 					<ul>
@@ -723,6 +727,6 @@
 	</div>
 
 	
-<script type="text/javascript" src="./js/vendor.js?4d035d49&4d035d49227c79490e4b"></script><script type="text/javascript" src="./js/index.js?4d035d49&4d035d49227c79490e4b"></script></body>
+<script type="text/javascript" src="./js/vendor.js?b7f3de72&b7f3de720f9c6b101e1f"></script><script type="text/javascript" src="./js/index.js?b7f3de72&b7f3de720f9c6b101e1f"></script></body>
 
 </html>

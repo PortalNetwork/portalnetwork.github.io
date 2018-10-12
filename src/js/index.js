@@ -75,7 +75,8 @@ new Vue({
         "title": obj.title,
         "icon": obj.icon,
         "url": obj.url,
-        "description": obj.description
+        "twitter": obj.twitter,
+        "medium": obj.medium
       }
     },
     formPopupOpen(){
