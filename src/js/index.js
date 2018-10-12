@@ -74,6 +74,7 @@ new Vue({
       this.logoObj = {
         "title": obj.title,
         "icon": obj.icon,
+        "description": obj.description,
         "url": obj.url,
         "twitter": obj.twitter,
         "medium": obj.medium
