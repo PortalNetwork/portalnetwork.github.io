@@ -196,8 +196,9 @@ new Vue({
     //偵測捲軸是否超過一半
     $(".big_issues_container").on("mousewheel DOMMouseScroll", (e)=>{
       let LeftPos = $(".big_issues_container")[0].scrollLeft;
-      let WidthPos = $(".big_issues_container")[0].scrollWidth / 2.5;
+      let WidthPos = $(".big_issues_container")[0].scrollWidth / 4.5;
       this.isRoadmapBtn = LeftPos > WidthPos;
+      console.log('this.isRoadmapBtn:', this.isRoadmapBtn);
     });
 
     AOS.init();
