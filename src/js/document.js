@@ -331,6 +331,18 @@ new Vue({
         icon: 'images/roadmap/education.png',
         flags: [
           {
+            title: 'Portal Network x QuarkChain',
+            content: 'Portal Network is pleased to announce our partnership with QuarkChain, a decentralized blockchain network that aims to scale via its sharding technology. We will be taking part in the QuarkChain ecosystem to build the QuarkChain Name Service (QCNS).',
+            photos: ["images/roadmap/partnership/quarkchain-partnership.png"],
+            location: ' Taipei, Taiwan',
+            time: '10/12',
+            progress: 100,
+            links: [],
+            githubs: [],
+            files: [],
+            videos: [],
+          },
+          {
             title: 'Portal Network x NKN',
             content: 'Portal Network and NKN (New Kind of Network) have signed a strategic partnership agreement to build the NKN Name Service (NKN).',
             photos: ["images/roadmap/partnership/nkn-partnership.jpeg"],

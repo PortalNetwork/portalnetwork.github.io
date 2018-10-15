@@ -798,8 +798,8 @@
         "icon": "./images/icon/quark.svg",
         "url": "https://quarkchain.io/",
         "description": "QuarkChain is a secure, permission-less, scalable, and decentralized blockchain. One of the goals of QuarkChain is to utilize sharding technology to deliver over 1 million transactions per second (tps). Essentially, QuarkChain markets itself as a peer-to-peer blockchain with a high capacity throughput to help deliver fast and secure decentralized applications.",
-        "twitter": "",
-        "medium": "",
+        "twitter": "https://twitter.com/Quark_Chain/status/1050807129668341761?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aitisportal%7Ctwcon%5Etimelinechrome&ref_url=http%3A%2F%2Flocalhost%3A3419%2F",
+        "medium": "https://medium.com/portalnetworkofficial/partnership-portal-network-x-quarkchain-86a3b57819b2",
         "detail": [
             {
                 "name": "Web Builder",
