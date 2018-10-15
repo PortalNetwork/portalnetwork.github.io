@@ -1,4 +1,5 @@
 .roadmap {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 55px 0px;
@@ -6,6 +7,23 @@
   background-color: #f7f6f4;
   @media screen and (max-width: $mob) {
     padding: 40px 0px;
+  }
+
+  >a{
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 21px;
+    height: 42px;
+    margin-top: -21px;
+    &.angle_left_btn{
+      top: 50%;
+      left: 10%;
+    } 
+    &.angle_right_btn{
+      top: 50%;
+      right: 10%;
+    }
   }
 
   & .roadmap_header {
@@ -20,7 +38,6 @@
     text-align: center;
     color: #141e6a;
   }
-
   & .big_issues_container {
     width: 71%;
     margin: 0 auto;

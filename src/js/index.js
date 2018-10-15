@@ -32,7 +32,8 @@ new Vue({
     email: "",
     currentSelectedVote: "",
     votes: [],
-    isPopupLoading: true
+    isPopupLoading: true,
+    isRoadmapBtn: false,
   },
   computed: {
     chainStyle() {
@@ -182,9 +183,23 @@ new Vue({
     },
     openArea2(){
       this.openSubArea2 = !this.openSubArea2;
+    },
+    slidRoadmap(){
+      //點擊 Roadmap 滑動
+      this.isRoadmapBtn = !this.isRoadmapBtn;
+      let posX = this.isRoadmapBtn ? $(".big_issues_container").width() : 0;
+      TweenMax.to($(".big_issues_container"), 0.5, { scrollTo : { x: posX }, ease: Power1.easeOut });
     }
   },
   mounted() {
+
+    //偵測捲軸是否超過一半
+    $(".big_issues_container").on("mousewheel DOMMouseScroll", (e)=>{
+      let LeftPos = $(".big_issues_container")[0].scrollLeft;
+      let WidthPos = $(".big_issues_container")[0].scrollWidth / 2.5;
+      this.isRoadmapBtn = LeftPos > WidthPos;
+    });
+
     AOS.init();
     window.addEventListener('scroll', this.scrollFn);
     axios.get("assets/json/blockchain.json").then(this.blockchainData).catch(err=> console.log(err));
