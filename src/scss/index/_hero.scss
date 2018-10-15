@@ -1,0 +1,176 @@
+@import "_var.scss";
+
+.hero {
+	background-color: #2436B9;
+  position: relative;
+  margin-top: 114px;
+  padding: 60px 0px 200px 0px;
+	box-sizing: border-box;
+	@media screen and (max-width: $pad) {
+		margin-top: 0px;
+		padding: 20px 0px 60px 0px;
+	}
+	.content {
+		@extend %clear;
+		max-width: $container;
+    margin: 0px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+		position: relative;
+	}
+}
+
+.hero_info {
+	max-width: 546px;
+	float: left;
+	position: relative;
+	margin-top: 20px;
+	@media screen and (max-width: $pad) {
+		float: none;
+		margin: 0px auto;
+		padding-bottom: 20px;
+    text-align: center;
+	}
+	h2 {
+		font-size: 50px;
+    line-height: 1.2;
+		font-weight: 500;
+		letter-spacing: 1px;
+		color: #fff;
+		margin-bottom: 20px;
+		white-space: nowrap;
+		@media screen and (max-width: $mob) {
+			font-size: 30px;
+		}
+		span {
+			display: block;
+      font-size: 50px;
+      font-weight: 500;
+			line-height: 1.2;
+			color: #fff;
+			@media screen and (max-width: $mob) {
+				font-size: 30px;
+			}
+		}
+	}
+	>p {
+		font-size: 20px;
+		line-height: 30px;
+		color: #fff;
+		margin-bottom: 35px;
+		white-space: nowrap;
+		@media screen and (max-width: $mob) {
+			white-space: normal;
+			width: 92%;
+			margin: 0px auto;
+		}
+	}
+}
+
+.hero_img {
+	position: absolute;
+	top: -40px;
+	right: 0px;
+	@media screen and (max-width: $pad) {
+		width: 60%;
+		position: relative;
+    top: 0px;
+    left: 50%;
+		transform: translateX(-50%);
+		margin: 0px 0px 30px 0px;
+	}
+	img {
+		width: 400px;
+		transform: translate3d(0px, -10px, 0px);
+		animation: run 4s infinite alternate;
+		@media screen and (max-width: $pad) {
+			margin: 0px auto;
+		}
+		@media screen and (max-width: $mob) {
+			width: 100%;
+		}
+	}
+}
+
+@keyframes run {
+  0% {
+    transform: translate3d(0px, -10px, 0px);
+	}
+	50% {
+		transform: translate3d(0px, 6px, 0px);
+	}
+}
+
+.btn_list {
+	display: flex;
+	width: 100%;
+	@media screen and (max-width: $pad) {
+		justify-content: center;
+		margin: 0px auto;
+	}
+}
+
+.telegram_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 286px;
+  height: 60px;
+  background-color: $green;
+	border-radius: 30px;
+	margin-right: 20px;
+	@media screen and (max-width: $mob) {
+		height: 40px;
+		line-height: 40px;
+		border-radius: 20px;
+	}
+  &:hover {
+    span {
+      img {
+        animation: fly 1s infinite alternate;
+      }
+    }
+  }
+  span {
+    display: inline-block;
+		padding-right: 15px;
+		@media screen and (max-width: $mob) {
+			padding-right: 8px;
+		}
+    img {
+      width: 27px;
+      transform: translate3d(-5px, 0px, 0px);
+    }
+  }
+  p {
+		font-size: 18px;
+		font-weight: 500;
+    line-height: 60px;
+		color: #141E6A;
+		@media screen and (max-width: $mob) {
+			font-size: 14px;
+		}
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translate3d(-5px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(6px, 0px, 0px);
+  }
+}
+
+.play_video {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 61px;
+	@media screen and (max-width: $mob) {
+		width: 40px;
+	}
+	img {
+		width: 100%;
+	}
+}

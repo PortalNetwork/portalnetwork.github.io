@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<title>WNS revealed and the potential of Blockchain Name Service explained | Blog</title>
+	<meta name="description" content="Portal Network Blog">
+	<meta name="author" content="Portal Network">
+	<meta name="keywords" content="Portal Network Blog" />
+	<meta property="og:title" content="Portal Network Blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Portal Network Blog" />
+  <meta property="og:url" content="https://www.portal.network/assets/blogs/wns_revealed_and_the_potential_of_blockchain_name_service.html" />
+  <meta property="og:image" content="../meta_share.png" />
+  <meta property="og:image:url" content="../meta_share.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blog" :class="{active: isMenuOpen}" v-cloak>
+    <div class="header">
+      <a class="menu_btn" @click="toggleMenuFn">
+        <span></span>
+      </a>
+      <div class="header_content">
+        <h1 class="logo">
+          <a href="https://www.portal.network/"><img src="../../images/logo/logo_w.png" alt=""></a>
+        </h1>
+        <nav>
+          <ul class="menu">
+            <li>
+              <a @click="gaSeedPageView('document')" href="https://www.portal.network/document.html" target="_blank">Documentation</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('showcase')" href="https://search.portal.network/" target="_blank">Showcase</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+            </li>
+            <li>
+              <a @click="gaSeedPageView('forum')" href="https://forum.portal.network/" target="_blank">Forum</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="bar">
+          <ul>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=all" :class="{active: selectidx === 0}" @click="currentActive(0)">all</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=partnership" :class="{active: selectidx === 1}" @click="currentActive(1)">partnership</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=weekly" :class="{active: selectidx === 2}" @click="currentActive(2)">weekly</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=bns" :class="{active: selectidx === 3}" @click="currentActive(3)">bns</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=kaizen" :class="{active: selectidx === 4}" @click="currentActive(3)">kaizen</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=mumei" :class="{active: selectidx === 5}" @click="currentActive(3)">mumei</a>
+            </li>
+            <li>
+              <a href="https://www.portal.network/blog.html?tag=tutorial" :class="{active: selectidx === 6}" @click="currentActive(3)">tutorial</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="article">
+      <header class="article_author">
+        <div class="figure">
+          <img src="https://cdn-images-1.medium.com/fit/c/72/72/1*ycLsUD0epFCrf2HXHIL-xA.jpeg" alt="">
+        </div>
+        <div class="author_content">
+          <h5>Portal Network</h5>
+          <div class="date">Jul 20</div>
+        </div>
+      </header>
+
+      <article>
+        <section class="article_title">
+          <h3>WNS revealed and the potential of<br/>Blockchain Name Service explained</h3>
+
+          <figure class="figure">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*NxEO0h27-STpv7Ful2xHoA.jpeg" alt="">
+          </figure>
+        </section>
+        
+        <section class="article_content">
+          <p>Jakarta, the capital of Indonesia, was where the first <a class="text_link" href="https://wanchain.org/" target="_blank">Wanchain</a> Partners Asia Tour took place. <a class="text_link" href="https://www.portal.network/" target="_blank">Portal Network</a> joined the journey along with <a class="text_link" href="https://pundix.com/" target="_blank">PundiX</a>, Theia, <a class="text_link" href="https://www.litex.io/" target="_blank">Litex</a>, <a class="text_link" href="https://tokenloan.info/" target="_blank">Tokenloan</a>, <a class="text_link" href="https://www.bitrue.com/" target="_blank">Bitrue</a>, and <a class="text_link" href="https://allsparkchain.com/" target="_blank">Allspark</a> to meet passionate people in the industry and more importantly, revealed its WNS (Wanchain Name Service) to the Wanchain community.</p>
+
+          <p>The second stop was Kuala Lumpur, Malaysia, where NEM foundation and MW Partner joined the journey and shared their experience and opinions on Blockchain and crypto industry. And finally, we stopped in Seoul, Korea, one of countries that is enthusiastic about blockchain and cryptocurrency.</p>
+
+          <p>During the Asia tour, Wanchain announced the 2.0 cross-chain which has been released in the beginning of May. Jack Lu, the CEO and the founder of Wanchain, explained that 2.0 means the new beginning for Wanchain in 2018.</p>
+
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*XZRZpGe6-2ZrR1Tdp3XAXA.jpeg" alt="">
+            <figcaption class="figure_text">Christopher Shen, Founder at Portal Network</figcaption>
+          </figure>
+        </section>
+
+        <section class="article_content">
+          <h4>WNS (Wanchain Name Service)</h4>
+          <p>Throughout the journey, Portal Network has been dedicating on promoting the service we have proposed and implemented for the Wanchain platform: WNS.</p>
+          <p class="text_italic">So what is WNS? What value does it possess?</p>
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*DTaAtkP2xc4qrszNjMUjLQ.png" alt="">
+            <figcaption class="figure_text">Wallet address to WNS</figcaption>
+          </figure>
+          <p>WNS is one of the blockchain name services. You can think of it as centralized domain name service such as .com, .org or Ethereum Name Service (ENS). To simply put it, WNS could be used to replace the 20 bytes long Wanchain addresses. For instance, you will be able to use <strong>“yourname.wan”</strong> instead of something like <strong>0xF922A9BadCD655CD1995F43251AB56B40bcEF1c9</strong>, which not only gives identity to each users, but also eliminates the gap that users are experiencing on blockchain at the moment.</p>
+          <p class="text_italic">But the value that WNS can bring is much more than that.</p>
+          <p>Anyone will be able to build a decentralized website that is hosted on IPFS, a decentralized file storage. So instead of using the IPFS hash, users can directly browse the website with WNS. Furthermore, the same WNS could be used to interact with multiple kinds of smart contracts, which could eventually result in commercial use in the future.</p>
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*MVhL0AJWwn9RC1GWpDcyyw.png" alt="">
+            <figcaption class="figure_text">IPFS hash to Blockchain Name Service (BNS)</figcaption>
+          </figure>
+          <p>Imagine you want to build a decentralized website, say a small online store, and people will be able to visit your website easily through WNS. When they see something they want to purchase, they can simply send the token to the same WNS you used for the website, which will then interact with the smart contract and automatically ship out the products to the buyers.</p>
+          <p class="text_italic">ONE blockchain domain name,</p>
+          <p class="text_italic">THREE different usages,</p>
+          <p class="text_italic">ENDLESS possibilities.</p>
+          <p>By proposing and implementing WNS to the Wanchain platform, everyone within Wanchain will be able to enjoy this service. Portal Network deeply believes that this is the correct way to grow a healthy blockchain ecosystem and to solve the user scalability problem that blockchain is facing right now.</p>
+          <figure class="figure img_full">
+            <img src="https://cdn-images-1.medium.com/max/1600/1*SWZBVYDSI-OFZV87eytwIg.jpeg" alt="">
+            <figcaption class="figure_text">Wanchain & Partners Asia Tour 2018 in Seoul</figcaption>
+          </figure>
+          <p>Domain name has shaped the internet that we are using nowadays, and it is one of the fastest growing commodities. Without domain names, we will be memorizing IP addresses instead of wanchain.org or google.com. So if one truly believes that decentralization and blockchains will become the new internet, the underlying value in BNS (Blockchain Name Service) will be tremendous.</p>
+        </section>
+      
+      </article>
+
+    </main>
+    <div class="footer">
+      <ul>
+        <li><a href="https://www.portal.network/privacy_policy.html" target="_blank">Privacy & Policy</a></li>
+        <li><a href="https://www.portal.network/terms_coditions.html" target="_blank">Terms of use</a></li>
+      </ul>
+      <p class="copyRight">© 2018 PORTAL.NETWORK</p>
+    </div>
+  </div>
+  <script src="../../js/vendor.js"></script>
+  <script src="../../js/blog.js"></script>
+</body>
+
+</html>

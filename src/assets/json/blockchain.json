@@ -1,0 +1,1144 @@
+[
+    {
+        "title": "Blockchain Name Service",
+        "icon": "./images/icon/portal1.svg",
+        "url": "https://www.portal.network/",
+        "description": "",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": null,
+                "description": "Easily deploy your ÐWeb on blockchain",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".portal",
+                "percentage": null,
+                "description": "The top level domain of BNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": null,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "BNS Deployment",
+                "percentage": null,
+                "description": "Blockchain Name Service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": null,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": null,
+                "description": "Buy/sell/bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": null,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Ethereum (ENS)",
+        "icon": "./images/icon/eth1.svg",
+        "url": "https://www.ethereum.org",
+        "description": "Ethereum is an open blockchain platform that lets anyone build and use decentralized applications that run on blockchain technology.",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 100,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".eth",
+                "percentage": null,
+                "description": ".eth is the top level domain of ENS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "ENS",
+                "percentage": 100,
+                "description": "Ethereum Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ens"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 100,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://ens.portal.network/"
+                    },
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ethereum-explorer"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 50,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Wanchain (WNS)",
+        "icon": "./images/icon/wan1.svg",
+        "url": "https://wanchain.org",
+        "description": "Wanchain is creating a new financial market of digital assets by implementing cross-chain transfers across different blockchains. With the number of various coins, tokens, and blockchains currently in the ecosystem, there’s not currently an efficient, decentralized way to exchange value between them. As an independent blockchain, Wanchain connects the accounts of independent chains to provide a framework to exchange these assets.",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 100,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".wan",
+                "percentage": null,
+                "description": ".wan is the top level domain of WNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "WNS",
+                "percentage": 100,
+                "description": "Wanchain Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/wns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 100,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "http://wns.portal.network/"
+                    },
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/wanchain-explorer"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 50,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://wan.portal.network/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Ethereum Classic (ECNS)",
+        "icon": "./images/icon/etc1.svg",
+        "url": "https://ethereumclassic.org/",
+        "description": "Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract (scripting) functionality. It provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes.",
+        "twitter": "https://twitter.com/itisportal/status/1049697630849138694",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 50,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".etc",
+                "percentage": null,
+                "description": ".etc is the top level domain of ECNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 100,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "ECNS",
+                "percentage": 100,
+                "description": "Ethereum Classic Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ECNS"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 100,
+                "description": "BWHOIS for domain name service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://ecns.portal.network/"
+                    },{
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ethereum-classic-explorer"
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 100,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 25,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://etc.portal.network/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "ICON (INS)",
+        "icon": "./images/icon/icon1.svg",
+        "url": "https://icon.foundation/?lang=en",
+        "description": "ICON is building a massive platform that will allow various blockchains to interact with each other via smart contracts. Existing within what developers brand the ICON Republic, communities will connect with each other using ICON’s loopchain technology.",
+        "twitter": "https://twitter.com/helloiconworld/status/1037151550483750913",
+        "medium": "https://medium.com/portalnetworkofficial/partnership-portal-network-x-icon-foundation-f97ba7924651",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 10,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".icon",
+                "percentage": null,
+                "description": ".icon is the top level domain of INS",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://iconick.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 10,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "INS",
+                "percentage": 50,
+                "description": "ICON Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/ins"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 10,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 10,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 10,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "QTUM (QNS)",
+        "icon": "./images/icon/qtum1.svg",
+        "url": "https://qtum.org/en",
+        "description": "QTUM is a Ethereum-Bitcoin Hybrid blockchain, which integration smart contract layer into Bitcoin. And aims to be the bridge between the Bitcoin and Ethereum communities, the real world and blockchain world.",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 15,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".qtum",
+                "percentage": null,
+                "description": ".qtum is the top level domain of QNS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 10,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "QNS",
+                "percentage": 100,
+                "description": "QTUM Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/qns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 10,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 25,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "NEO (NNS)",
+        "icon": "./images/icon/neo1.svg",
+        "url": "https://neo.org",
+        "description": "NEO is an open network economy focus on digital asset, it utilizes blockchain technology to digitize assets by using smart contracts.",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 7,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".neo",
+                "percentage": null,
+                "description": ".neo is the top level domain of NNS",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://neo.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 7,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "NNS",
+                "percentage": 50,
+                "description": "NEO Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/nns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 7,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 7,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://neo.portal.network/"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Aelf (AENS)",
+        "icon": "./images/icon/aelf12.svg",
+        "url": "https://aelf.io",
+        "description": "Aelf is a customizable operating system for blockchains, and the project attempting to be the “Linux” of the blockchain community. Aelf is poised to be the Blockchain network with a decentralized cloud computing platform to facilitate the commercial needs of businesses and mainstream institutions.",
+        "twitter": "",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 2,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".aelf",
+                "percentage": null,
+                "description": ".aelf is the top level domain of AENS",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 2,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "AENS",
+                "percentage": 25,
+                "description": "Aelf Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/aens"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 2,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 2,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Bitcoin Cash (BCNS)",
+        "icon": "./images/icon/bc1.svg",
+        "url": "https://explorer.bitcoin.com/bch",
+        "description": "Bitcoin Cash is an experimental digital currency that enables instant payments to anyone, anywhere in the world. It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitcoin Cash is a descendant of Bitcoin. It became a separate currency from the version supported by Bitcoin Core when the two split on August 1, 2017. Bitcoin Cash and the Bitcoin Core version of Bitcoin share the same transaction history up until the split.",
+        "twitter": "https://twitter.com/BTCTN/status/1046774429571780608",
+        "medium": "",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".bch",
+                "percentage": null,
+                "description": ".bch is the top level domain of BCNS",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://bcns.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "BCNS",
+                "percentage": 25,
+                "description": "Bitcoin Cash Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/bcns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 15,
+                "description": "BWHOIS for domain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 15,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "QuarkChain (QCNS)",
+        "icon": "./images/icon/quark.svg",
+        "url": "https://quarkchain.io/",
+        "description": "QuarkChain is a secure, permission-less, scalable, and decentralized blockchain. One of the goals of QuarkChain is to utilize sharding technology to deliver over 1 million transactions per second (tps). Essentially, QuarkChain markets itself as a peer-to-peer blockchain with a high capacity throughput to help deliver fast and secure decentralized applications.",
+        "twitter": "https://twitter.com/Quark_Chain/status/1050807129668341761?ref_src=twsrc%5Etfw%7Ctwcamp%5Eembeddedtimeline%7Ctwterm%5Eprofile%3Aitisportal%7Ctwcon%5Etimelinechrome&ref_url=http%3A%2F%2Flocalhost%3A3419%2F",
+        "medium": "https://medium.com/portalnetworkofficial/partnership-portal-network-x-quarkchain-86a3b57819b2",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".qkc",
+                "percentage": null,
+                "description": ".qkc is the top level domain of QCNS",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://quarkchain.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "QCNS",
+                "percentage": 35,
+                "description": "QuarkChain Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/qcns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 15,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 15,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "TomoChain (TNS)",
+        "icon": "./images/icon/tomo.svg",
+        "url": "https://tomochain.com/",
+        "description": "TomoChain is a public blockchain for dApps. The mission is to be a leading force in building the Internet of Value, designing its infrastructure and working to create an alternative financial system which is more secure, transparent, efficient, inclusive and equitable for everyone.",
+        "twitter": "https://twitter.com/TomoChainANN/status/1049145174310305792",
+        "medium": "https://medium.com/portalnetworkofficial/portal-network-x-tomochain-9def43ba71ef",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".tomo",
+                "percentage": null,
+                "description": ".tomo is the top level domain of TNS",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://tomochain.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "TNS",
+                "percentage": 35,
+                "description": "TomoChain Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/tns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 15,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 15,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "NKN (NNS)",
+        "icon": "./images/icon/nkn.svg",
+        "url": "https://nkn.org/",
+        "description": "NKN is a new kind of network connectivity protocol & ecosystem powered by blockchain for an open, decentralized, and shared Internet.",
+        "twitter": "https://twitter.com/NKN_ORG/status/1049885909817135104",
+        "medium": "https://medium.com/portalnetworkofficial/portal-network-x-nkn-cc7d4ad22ec3",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".nkn",
+                "percentage": null,
+                "description": ".nkn is the top level domain of NKN",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://nkn.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "NKN",
+                "percentage": 25,
+                "description": "NKN Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/nkn-ns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 10,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 10,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "NEM (NNS)",
+        "icon": "./images/icon/nem.svg",
+        "url": "https://nem.io",
+        "description": "",
+        "twitter": "https://twitter.com/itisportal/status/1048964898670096384",
+        "medium": "https://medium.com/portalnetworkofficial/partnership-portal-network-x-nem-c4cc32f36a1f",
+        "detail": [
+            {
+                "name": "Web Builder",
+                "percentage": 0,
+                "description": "Building your brand on ÐWeb",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://web.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": ".xem",
+                "percentage": null,
+                "description": ".xem is the top level domain of NEM",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://nem.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Browser Extension",
+                "percentage": 0,
+                "description": "Turn your browser into ÐWeb browser",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://extension.portal.network/index.html"
+                    }
+                ]
+            },
+            {
+                "name": "NEM",
+                "percentage": 10,
+                "description": "NEM Name Service",
+                "urlItem": [
+                    {
+                        "img": "./images/index/github1.svg",
+                        "link": "https://github.com/PortalNetwork/nem-ns"
+                    }
+                ]
+            },
+            {
+                "name": "Explorer",
+                "percentage": 10,
+                "description": "BWHOIS for blockchain name service",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Marketplace",
+                "percentage": 10,
+                "description": "Buy / sell / bid domain name easily ",
+                "urlItem": [
+                    {
+                        "img": "./images/index/link1.svg",
+                        "link": "https://market.portal.network/"
+                    }
+                ]
+            },
+            {
+                "name": "Mobile App",
+                "percentage": 0,
+                "description": "BNS wallet & domain manager on the go",
+                "urlItem": [
+                    {
+                        "img": "",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    }
+]

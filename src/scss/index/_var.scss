@@ -1,0 +1,19 @@
+$container: 960px;
+$pad: 960px;
+$mob: 720px;
+$smob: 340px;
+$indigo: #3442b0;
+$blue: #2436B9;
+$green: #15DACB;
+$green_text: #19F4E4;
+$purple: #232F88;
+$purple_d: #141E6A;
+$gray_l:#f7f6f4;
+
+%clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

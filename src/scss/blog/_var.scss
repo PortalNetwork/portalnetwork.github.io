@@ -1,0 +1,17 @@
+$container: 960px;
+$pad: 980px;
+$mob: 720px;
+$smob: 340px;
+$green: #00A89D;
+$article-h4: #3c3c3c;
+$article-text: #616161;
+$article-width: 870px;
+$a_h3: rgba(0,0,0,.84);
+
+%clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

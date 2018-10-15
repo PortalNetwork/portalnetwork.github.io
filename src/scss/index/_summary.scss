@@ -1,0 +1,449 @@
+@import "_var.scss";
+.summary {
+  background-color: #F7F6F4;
+  padding: 80px 0px;
+  @media screen and (max-width: $mob) {
+    padding: 40px 0px;
+  }
+  
+  &.what {
+    width: 100%;
+    height: 100%;
+    background: url("~images/index/whatIs_bg.png") 75% center no-repeat;
+    background-size: auto 100%;
+    padding: 100px 0px;
+    background-color: #F7F6F4;
+    .content {
+      width: 100%;
+      height: 100%;
+      h3 {
+        text-align: center;
+      }
+      p {
+        width: 60%;
+        @media screen and (max-width: $pad) {
+          width: 100%;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &.proof {
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (max-width: $mob) {
+        display: block;
+        position: relative;
+      }
+    }
+    .left {
+      width: 59.3%;
+      @media screen and (max-width: $pad) {
+        width: 58%;
+      }
+      @media screen and (max-width: $mob) {
+        width: 100%;
+        padding-top: 78%;
+        margin-bottom: 30px;
+      }
+      h3 {
+        @media screen and (max-width: $pad) {
+          font-size: 36px;
+        }
+        @media screen and (max-width: $mob) {
+          font-size: 26px;
+          text-align: center;
+        }
+      }
+    }
+    .right {
+      width: 27.5%;
+      @media screen and (max-width: $pad) {
+        width: 38%;
+      }
+      @media screen and (max-width: $mob) {
+        width: 100%;
+      }
+      .figure {
+        width: 263px;
+        margin-bottom: 25px;
+        @media screen and (max-width: $pad) {
+          width: auto;
+          margin: 0px auto 25px auto;
+        }
+        @media screen and (max-width: $mob) {
+          width: 80%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          margin: auto;
+        }
+        img {
+          width: 100%;
+          margin: 0px auto;
+        }
+      }
+    }
+    .link {
+      display: block;
+      width: 242px;
+      height: 68px;
+      line-height: 68px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $purple_d;
+      letter-spacing: 1px;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #fff;
+      border-right: solid 2px #141E6A;
+      border-bottom: solid 2px #141E6A;
+      @media screen and (max-width: $pad) {
+        width: 100%;
+      }
+      @media screen and (max-width: $mob) {
+          height: 48px;
+          line-height: 48px;
+      }
+    }
+  }
+  &.request {
+    background-color: $purple_d;
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      @media screen and (max-width: $mob) {
+        display: block;
+        text-align: center;
+      }
+      p {
+        display: inline-block;
+        color: $gray_l;
+        letter-spacing: 1px;
+        margin: 0px;
+        @media screen and (max-width: $mob) {
+          margin: 0px 0px 20px 0px;
+        }
+      }
+      a {
+        display: block;
+        width: 243px;
+        height: 68px;
+        line-height: 68px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $purple_d;
+        border-radius: 5px;
+        text-align: center;
+        background-color: #fff;
+        border-right: solid 2px $green;
+        border-bottom: solid 2px $green;
+        @media screen and (max-width: $mob) {
+          width: 130px;
+          font-size: 16px;
+          height: 38px;
+          line-height: 38px;
+          margin: 0px auto;
+        }
+        &:before {
+          content: "";
+          display: inline-block;
+          vertical-align: middle;
+          width: 21px;
+          height: 25px;
+          background: url('~images/index/Whitepaper_icon.png') top left no-repeat;
+          background-size: 100% auto;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .content {
+    max-width: $container;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    h3 {
+      font-size: 40px;
+      line-height: 1.3;
+      font-weight: 500;
+      color: $purple_d;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+      @media screen and (max-width: $mob) {
+        font-size: 26px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 500;
+      color: $purple_d;
+      line-height: 1.5;
+      margin: 0 auto;
+      @media screen and (max-width: $pad) {
+        text-align: center;
+      }
+      &+p {
+        margin-top: 20px;
+        @media screen and (max-width: $mob) {
+          margin-top: 10px;
+        }
+      }
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: $purple_d;
+        line-height: 1.5;
+        transition: color .5s;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
+
+.summary.bns {
+  background-color: $purple;
+  position: relative;
+  .anchor {
+    position: absolute;
+    top: -100px;
+    @media screen and (max-width: $mob) {
+      top: -10px;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: $pad) {
+      display: block;
+    }
+  }
+  .left {
+    width: 35%;
+    @media screen and (max-width: $pad) {
+      width: 100%;
+      max-width: 560px;
+      margin: 0px auto 30px auto;
+    }
+    @media screen and (max-width: $mob) {
+      max-width: auto;
+      margin: 0px auto 20px auto;
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 500;
+      color: $green;
+      text-align: left;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 0px;
+      }
+    }
+    h4 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 20px;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 1.2px;
+      text-align: left;
+      &.spc {
+        margin-bottom: 30px;
+      }
+      @media screen and (max-width: $mob) {
+        margin-bottom: 10px;
+      }
+      span {
+        font-size: 16px;
+        font-weight: 400;
+        color: $green;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+  .right {
+    width: 61%;
+    @media screen and (max-width: $pad) {
+      width: 100%;
+    }
+  }
+  .github_header {
+    padding: 5px 10px;
+    background-color: #15DACB;
+    border-radius: 4px;
+    margin: 0px auto 10px auto;
+    p {
+      color: #27347f;
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #2436B9;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .more {
+    margin: 15px 0px 0px 0px;
+    @media screen and (max-width: $pad) {
+      max-width: 560px;
+      margin: 30px auto 0px auto;
+    }
+    @media screen and (max-width: $mob) {
+      max-width: 100%;
+      margin: 50px 0px 0px 0px;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 12px;
+      color: #fff;
+      img {
+        width: 18px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.github {
+  position: relative;
+  @media screen and (max-width: $pad) {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 560px;
+  }
+  .github_item {
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    width: 100%;
+    height: 175px;
+    position: relative;
+    border: solid 3px transparent;
+    transition: all .3s;
+    &:hover {
+      border: solid 3px #15DACB;
+      box-shadow: 6px 6px 3px rgba(20, 31, 107,0.9);
+    }
+    h4 {
+      display: flex;
+      line-height: 1.3;
+      font-size: 16px;
+      font-weight: 600;
+      color: #27347f;
+      margin-bottom: 10px;
+      word-break: break-all;
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 3px;
+        width: 14px;
+        height: 17px;
+        background: url('~images/index/github_pu.png')top left no-repeat;
+        background-size: 100% auto;
+        margin-top: 3px;
+      }
+    }
+    p {
+      color: #000;
+      font-size: 12px;
+      line-height: 1.3;
+      text-align: left;
+    }
+    ul {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      li {
+        display: inline-block;
+        &+li {
+          margin-left: 10px;
+        }
+      }
+      .lan {
+        font-size: 12px;
+        color: #000;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-color: #eab4af;
+          border-radius: 50%;
+          margin-right: 3px;
+        }
+      }
+      .start {
+        font-size: 12px;
+        color: #000;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: url('~images/index/star.png') top left no-repeat;
+          background-size: 100% auto;
+          margin-right: 3px;
+        }
+      }
+      .bar {
+        font-size: 12px;
+        color: #000;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background: url('~images/index/bar.png') top left no-repeat;
+          background-size: 100% auto;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  .swiper-github {
+    width: 100%;
+    margin: 0px auto;
+    overflow: hidden;
+  }
+  .swiper-pagination {
+    bottom: -33px !important;
+  }
+  .swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    margin: 0px 8px !important;
+    outline: none;
+  }
+  .swiper-pagination-bullet-active {
+    background: #15DACB;
+  }
+}

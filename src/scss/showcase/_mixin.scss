@@ -1,0 +1,41 @@
+
+@function pxtovw($number, $width : 1366){ 
+    @return $number * 100 / $width + vw;
+}
+@function pxtovh($number, $height : 540){ 
+    @return $number * 100 / $height + vh;
+}
+
+// @function pxtopercent($number, $baseline){ 
+//     @return ($number / $baseline) * 100 + %;
+// }
+@mixin media-1366() {
+    @media screen and (max-width: 1366px){
+        @content;
+    }  
+}
+@mixin media-980() {
+    @media screen and (max-width: 980px){
+        @content;
+    }  
+}
+@mixin media-740() {
+    @media screen and (max-width: 740px){
+        @content;
+    }  
+}
+@mixin media-414() {
+    @media screen and (max-width: 414px){
+        @content;
+    }  
+}
+@mixin media-375() {
+    @media screen and (max-width: 375px){
+        @content;
+    }  
+}
+@mixin media-320() {
+    @media screen and (max-width: 320px){
+        @content;
+    }  
+}

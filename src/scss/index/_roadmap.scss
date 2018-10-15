@@ -1,0 +1,200 @@
+.roadmap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 55px 0px;
+  // min-height: 500px;
+  background-color: #f7f6f4;
+  @media screen and (max-width: $mob) {
+    padding: 40px 0px;
+  }
+
+  >a{
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    width: 21px;
+    height: 42px;
+    margin-top: -21px;
+    &.angle_left_btn{
+      top: 50%;
+      left: 10%;
+    } 
+    &.angle_right_btn{
+      top: 50%;
+      right: 10%;
+    }
+  }
+
+  & .roadmap_header {
+    margin-bottom: 32px;
+    font-family: 'Avenir';
+    font-size: 40px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: 1.3px;
+    text-align: center;
+    color: #141e6a;
+  }
+  & .big_issues_container {
+    width: 71%;
+    margin: 0 auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 20px;
+
+    /* road map issue */
+    & .big_issue {
+      position: relative;
+      display: inline-flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      width: 170px;
+      // min-height: 200px;
+
+      /* 虛線 */
+      &:before {
+        position: absolute;
+        top: 48px;
+        right: -38%;
+        width: 127px;
+        border-top: 1px dashed #141e6a;
+        content: '';
+      }
+
+      // issue date
+      & .date {
+        margin-bottom: 13px;
+        font-family: 'Avenir';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.56;
+        letter-spacing: 0.5px;
+        color: #141e6a;
+      }
+
+      // 六角形容器
+      & .sign_container {
+        position: relative;
+        display: inline-flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        
+        &.long, &.short {
+          & .hexagon.small {
+            display: inline-block;
+          }
+        }
+
+        &.long {
+          min-height: 85px;
+
+          &:before {
+            position: absolute;
+            left: 50%;
+            height: 70px;
+            border-right: 1px solid #15dacb;
+            content: '';
+          }
+        }
+
+        &.short {
+          min-height: 65px;
+
+          &:before {
+            position: absolute;
+            left: 50%;
+            height: 50px;
+            border-right: 1px solid #15dacb;
+            content: '';
+          }
+        }
+      }
+
+      & .content {
+        display: inline-block;
+        margin-top: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: inherit;
+        // min-height: 200px;
+        font-family: 'Avenir';
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.56;
+        letter-spacing: 0.5px;
+        color: #141e6a;
+        text-align: left;
+        white-space: normal;
+
+        & p {
+          font-size: 12px;
+          line-height: 1.66;
+          color: #141e6a;
+          &+p {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  & .buttons_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    padding-right: 300px;
+    padding-left: 300px;
+    min-height: 100px;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: left;
+      color: #141E6A;
+    }
+
+    & img {
+      width: 21px;
+      height: 25px;
+      margin-right: 18px;
+    }
+  }
+
+  & .hexagon {
+    position: relative;
+    display: inline-block;
+    width: 20px; 
+    height: 11.55px;
+    background-color: #15dacb;
+    margin: 5.77px 0;
+  
+    &:before, &:after {
+      position: absolute;
+      width: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      content: '';
+    }
+  
+    &:before {
+      bottom: 100%;
+      border-bottom: 5.77px solid #15dacb;
+    }
+    
+    &:after {
+      top: 100%;
+      width: 0;
+      border-top: 5.77px solid #15dacb;
+    }
+
+    &.small {
+      display: none;          // small hexagon default hidden
+      transform: scale(.5);
+    }
+  }
+}
