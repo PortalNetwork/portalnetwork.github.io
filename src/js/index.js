@@ -198,7 +198,6 @@ new Vue({
       let LeftPos = $(".big_issues_container")[0].scrollLeft;
       let WidthPos = $(".big_issues_container")[0].scrollWidth / 4.5;
       this.isRoadmapBtn = LeftPos > WidthPos;
-      console.log('this.isRoadmapBtn:', this.isRoadmapBtn);
     });
 
     AOS.init();
