@@ -1,5 +1,19 @@
 [
   {
+    "company": "images/index/cryptoninjas.png",
+    "url": "https://www.cryptoninjas.net/2018/10/08/tomochain-partners-with-portal-network-to-establish-blockchain-name-service-standard/",
+    "title": "TomoChain partners with Portal Network to establish blockchain name service standard",
+    "article": "Tomochain, the blockchain application ecosystem announced that it has partnered with Portal Network, the decentralized domain name service…",
+    "author": "CryptoDigest"
+  },
+  {
+    "company": "images/index/cryptodigest.png",
+    "url": "https://www.cryptodigest.com/featured/portal-network-partners-with-nkn/",
+    "title": "Portal Network Partners with NKN",
+    "article": "Domain naming service Portal Network has announced a partnership with NKN, working with the platform to…",
+    "author": "CryptoDigest"
+  },
+  {
     "company": "images/index/neonewstoday.png",
     "url": "https://neonewstoday.com/general/nkn-partners-with-portal-network-to-deliver-domain-name-service-for-nkn/",
     "title": "NKN partners with Portal Network to deliver domain name service for NKN",
