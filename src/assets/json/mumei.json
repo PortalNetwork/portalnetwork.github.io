@@ -1,0 +1,80 @@
+[
+  {
+    "itemName": "Marketplace",
+    "url": "https://market.portal.network",
+    "subItems": [],
+    "logo": "src/images/mu_icon05.png",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Domain Manager",
+    "url": "https://manager.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Web Builder",
+    "url": "https://web.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Browser Extension",
+    "url": "https://extension.portal.network/index.html",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Showcase",
+    "url": "https://search.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "BNS Explorer",
+    "url": "",
+    "subItems": [
+      {
+        "name": "ENS",
+        "subUrl": "https://ens.portal.network"
+      },
+      {
+        "name": "ECNS",
+        "subUrl": "https://ecns.portal.network"
+      },
+      {
+        "name": "WNS",
+        "subUrl": "http://wns.portal.network"
+      }
+    ],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Resolver",
+    "url": "https://extension.portal.network/index.html",
+    "subItems": [
+      {
+        "name": "ENS",
+        "subUrl": "https://resolver.portal.network"
+      },
+      {
+        "name": "BCNS",
+        "subUrl": "https://bcns-sdk.portal.network"
+      }
+    ],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Use Case",
+    "url": "https://usecase.portal.network/",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  }
+]

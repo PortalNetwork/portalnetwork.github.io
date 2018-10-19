@@ -1,0 +1,150 @@
+[
+  {
+    "title": "Ethereum (ENS)",
+    "icon": "src/images/chain_eth.png",
+    "iconh": "src/images/chain_eth_h.png",
+    "description": "Ethereum is an open blockchain platform that lets anyone build and use decentralized applications that run on blockchain technology.",
+    "detail": [
+      {
+        "name": "BNS deployment",
+        "description": "Blockchain Name Service",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "../images/link.png",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Marketplace",
+        "description": "Buy/sell/bid domain name easily",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Web Builder",
+        "description": "Easily deploy your ÐWeb on blockchain",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Browser Extension",
+        "description": "Turn your browser into ÐWeb browser",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Explorer",
+        "description": "BWHOIS for blockchain name service",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Mobile App",
+        "description": "BNS wallet & domain manager on the go",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Wanchain (WNS)",
+    "icon": "src/images/chain_wan.png",
+    "iconh": "src/images/chain_wan_h.png",
+    "description": "Wanchain is creating a new financial market of digital assets by implementing cross-chain transfers across different blockchains. With the number of various coins, tokens, and blockchains currently in the ecosystem, there’s not currently an efficient, decentralized way to exchange value between them. As an independent blockchain, Wanchain connects the accounts of independent chains to provide a framework to exchange these assets.",
+    "detail": [
+      {
+        "name": "BNS deployment",
+        "description": "Blockchain Name Service",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "../images/link.png",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Marketplace",
+        "description": "Buy/sell/bid domain name easily",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Web Builder",
+        "description": "Easily deploy your ÐWeb on blockchain",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Browser Extension",
+        "description": "Turn your browser into ÐWeb browser",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Explorer",
+        "description": "BWHOIS for blockchain name service",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Mobile App",
+        "description": "BNS wallet & domain manager on the go",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "img": "",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  }
+]

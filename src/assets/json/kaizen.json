@@ -1,0 +1,51 @@
+[
+  {
+    "itemName": "Management System",
+    "url": "https://deploy.portal.network",
+    "subItems": [],
+    "logo": "../images/mu_icon05.png",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "CLI",
+    "url": "https://github.com/PortalNetwork/kaizen-cli",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Cross-chain Infrastructure",
+    "url": "https://developer.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "API",
+    "url": "https://www.portal.network/api/#introduction",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Tech Guideline",
+    "url": "",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Faucet Pool",
+    "url": "https://faucet.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  },
+  {
+    "itemName": "Hackathon",
+    "url": "https://hackathon.portal.network",
+    "subItems": [],
+    "logo": "",
+    "description": "補介紹"
+  }
+]

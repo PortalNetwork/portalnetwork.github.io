@@ -1,0 +1,144 @@
+<script>
+  export default {
+
+  }
+</script>
+
+<template>
+  <div class="partnership">
+    <h3>ECOSYSTEM & PARTNERSHIP</h3>
+    <ul class="list">
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/eth.png" alt=""/>
+          <p>Ethereum</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/etc.png" alt=""/>
+          <p>Ethereum Classic</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/wan.png" alt=""/>
+          <p>Wanchain</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/qtum.png" alt=""/>
+          <p>QTUM</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/icon.png" alt=""/>
+          <p>ICON</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/blu.png" alt=""/>
+          <p>Bluzelle</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/coingecko.png" alt=""/>
+          <p>CoinGecko</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/kenetic.png" alt=""/>
+          <p>Kenetic</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/enigma.png" alt=""/>
+          <p>Enigma</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/nem.png" alt=""/>
+          <p>NEM</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/nkn.png" alt=""/>
+          <p>NKN</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/tomochain.png" alt=""/>
+          <p>TomoChain</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;" target="_blank">
+          <img src="../images/quarkchain.png" alt=""/>
+          <p>QuarkChain</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+$container : 960px;
+.partnership {
+  max-width: $container;
+  width: 100%;
+  margin: 0px auto;
+  padding: 132px 0px 55px 0px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  h3 {
+    width: 24.3%;
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 800;
+    color: #979797;
+  }
+  .list {
+    width: 66.6%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    li {
+      width: 25%;
+      min-height: 113px;
+      text-align: center;
+      margin-bottom: 45px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    a {
+      display: inline-block;
+      transform: scale(0.97);
+      transition: transform .5s;
+      &:hover {
+        transform: scale(1);
+      }
+      img {
+        width: 70px;
+        margin: 0px auto 20px auto;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+        color: #979797;
+      }
+    }
+  }
+}
+</style>
