@@ -9,79 +9,79 @@
     <h3>ECOSYSTEM & PARTNERSHIP</h3>
     <ul class="list">
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://www.ethereum.org" target="_blank">
           <img src="../images/eth.png" alt=""/>
           <p>Ethereum</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://ethereumclassic.org" target="_blank">
           <img src="../images/etc.png" alt=""/>
           <p>Ethereum Classic</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://wanchain.org" target="_blank">
           <img src="../images/wan.png" alt=""/>
           <p>Wanchain</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://qtum.org/en" target="_blank">
           <img src="../images/qtum.png" alt=""/>
           <p>QTUM</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://icon.foundation/?lang=en" target="_blank">
           <img src="../images/icon.png" alt=""/>
           <p>ICON</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://bluzelle.com" target="_blank">
           <img src="../images/blu.png" alt=""/>
           <p>Bluzelle</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://www.coingecko.com/en" target="_blank">
           <img src="../images/coingecko.png" alt=""/>
           <p>CoinGecko</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://kenetic.capital" target="_blank">
           <img src="../images/kenetic.png" alt=""/>
           <p>Kenetic</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://enigma.co" target="_blank">
           <img src="../images/enigma.png" alt=""/>
           <p>Enigma</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://nem.io" target="_blank">
           <img src="../images/nem.png" alt=""/>
           <p>NEM</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://nkn.org" target="_blank">
           <img src="../images/nkn.png" alt=""/>
           <p>NKN</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://tomochain.com" target="_blank">
           <img src="../images/tomochain.png" alt=""/>
           <p>TomoChain</p>
         </a>
       </li>
       <li>
-        <a href="javascript:;" target="_blank">
+        <a href="https://quarkchain.io" target="_blank">
           <img src="../images/quarkchain.png" alt=""/>
           <p>QuarkChain</p>
         </a>
@@ -124,14 +124,16 @@ $container : 960px;
     }
     a {
       display: inline-block;
-      transform: scale(0.97);
-      transition: transform .5s;
       &:hover {
-        transform: scale(1);
+        img {
+          transform: scale(1);
+        }
       }
       img {
         width: 70px;
         margin: 0px auto 20px auto;
+        transform: scale(0.97);
+        transition: transform .5s;
       }
       p {
         font-size: 16px;

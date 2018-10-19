@@ -110,7 +110,7 @@ h3 {
 }
 .left {
   width: 37.5%;
-  min-height: 544px;
+  min-height: 626px;
   margin-left: 63px;
   position: relative;
   .chain_list {
@@ -176,7 +176,7 @@ h3 {
   padding-right: 58px;
   .about_box {
     height: 100%;
-    max-height: 180px;
+    height: 180px;
     overflow: hidden;
     padding-top: 10px;
     margin-bottom: 34px;
