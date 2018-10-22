@@ -61,8 +61,10 @@
             <p>Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.</p>
           </div>
           <div class="right">
-            <div class="figure"><img src="../images/mumei.png" alt=""/></div>
-            <h4>mumei</h4>
+            <a href="https://mumei.portal.network" target="_blank">
+              <figure class="figure"><img src="../images/mumei.png" alt=""/></figure>
+              <h4>mumei</h4>
+            </a>
           </div>
         </div>
         <div class="item_box">
@@ -77,7 +79,7 @@
             </li>
           </ul>
           <div class="item_info">
-            <img :src="mumeiInfo.logo" alt=""/>
+            <div class="figure" v-if="mumeiInfo.logo.length > 0"><img :src="mumeiInfo.logo" alt=""/></div>
             <p>{{mumeiInfo.description}}</p>
           </div>
         </div>
@@ -89,8 +91,10 @@
             <p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
           </div>
           <div class="right">
-            <div class="figure"><img src="../images/kaizen.png" alt=""/></div>
-            <h4>kaizen</h4>
+            <a href="http://kaizen.portal.network/" target="_blank">
+              <div class="figure"><img src="../images/kaizen.png" alt=""/></div>
+              <h4>kaizen</h4>
+            </a>
           </div>
         </div>
         <div class="item_box">
@@ -105,7 +109,7 @@
             </li>
           </ul>
           <div class="item_info">
-            <img :src="kaizenInfo.logo" alt=""/>
+            <div class="figure" v-if="kaizenInfo.logo.length > 0"><img :src="kaizenInfo.logo" alt=""/></div>
             <p>{{kaizenInfo.description}}</p>
           </div>
         </div>
@@ -150,20 +154,38 @@ $bg_gray: #f7f6f4;
       }
     }
     .right {
-      width: 31.2%;
-      padding-right: 76px;
-      .figure {
-        width: 151px;
-        margin: 0px auto 24px auto;
-        img {
-          width: 100%;
+      width: 15.6%;
+      margin-right: 76px;
+      a {
+        display: block;
+        text-decoration: none;
+        &:hover {
+          .figure {
+            img {
+              transform: scale(1.05);
+            }
+          }
+          h4 {
+            color: $item_bg;
+          }
         }
-      }
-      h4 {
-        font-size: 30px;
-        font-weight: 800;
-        text-transform: uppercase;
-        text-align: center;
+        .figure {
+          width: 151px;
+          margin: 0px auto 24px auto;
+          img {
+            width: 100%;
+            transform: scale(1);
+            transition: transform .5s;
+          }
+        }
+        h4 {
+          font-size: 30px;
+          font-weight: 800;
+          text-transform: uppercase;
+          text-align: center;
+          color: #000;
+          transition: color .5s;
+        }
       }
     }
   }
@@ -238,9 +260,12 @@ $bg_gray: #f7f6f4;
     .item_info {
       width: 31.2%;
       padding-right: 76px;
-      img {
+      .figure {
         width: 70px;
-        margin-bottom: 26px;
+        margin-bottom: 24px;
+        img {
+          width: 100%;
+        }
       }
       p {
         font-size: 16px;

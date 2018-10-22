@@ -15,12 +15,16 @@
 </template>
 
 <style lang="scss" scoped>
+$mob: 720px;
 .social_media {
   display: flex;
   flex-direction: column;
   position: absolute;
   right: -60px;
   bottom: -100px;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
   li {
     &+li {
       margin-top: 10px;

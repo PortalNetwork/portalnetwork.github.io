@@ -20,11 +20,7 @@ export default {
     },
     setChainData(obj){
       this.chains = obj;
-      this.chainInfo = {
-        "title": obj[0].title,
-        "description": obj[0].description
-      };
-      this.detailItem = obj[0].detail;
+      this.onActive(this.selectIdx);
     },
     onActive(idx){
       this.selectIdx = idx;
@@ -32,6 +28,10 @@ export default {
         "title": this.chains[idx].title,
         "description": this.chains[idx].description
       };
+      this.detailItem = this.chains[idx].detail;
+    },
+    coming(){
+      alert('Coming Soon');
     }
   },
   mounted() {
@@ -46,14 +46,10 @@ export default {
     <div class="content">
       <div class="left">
         <ul class="chain_list">
-          <li v-for="(chain,idx) in chains" :key="idx">
-            <a :class="{active: selectIdx === idx}" :style="{ backgroundImage: 'url(' + (selectIdx === idx ? chain.iconh : chain.icon) + ')' }" href="javascript:;" @click="onActive(idx)"></a>
+          <li v-for="(chain,idx) in chains" :key="idx" :class="{active: selectIdx === idx}">
+            <a :style="{ backgroundImage: 'url(' + (selectIdx === idx ? chain.iconh : chain.icon) + ')' }" href="javascript:;" @click="onActive(idx)"></a>
           </li>
         </ul>
-        <div class="wish_box">
-          <a href="javascript:;" target="_blank"><img src="../images/plus.png" alt=""/></a>
-          <p>MAKE A WISH</p>
-        </div>
       </div>
       <div class="right">
         <div class="about_box">
@@ -69,13 +65,17 @@ export default {
                 <div class="percentage_bar" :style="{width: detail.percentage + '%' }"></div>
               </div>
               <ul class="link_box">
-                <li v-for="(url,idx) in detail.linkItem" :key="idx">
-                  <a :href="url.link" target="_blank"><img :src="url.img" alt=""/></a>
+                <li v-for="(url,idx) in detail.linkItem" :key="idx" v-if="url.imgStyle !== ''">
+                  <a :class="{link: url.imgStyle === 'link',github: url.imgStyle === 'github'}" :href="url.link" target="_blank"></a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
+      </div>
+      <div class="wish_box">
+        <a href="javascript:;" target="_blank" @click="coming"><img src="../images/plus.png" alt=""/></a>
+        <p>MAKE A WISH</p>
       </div>
     </div>
   </div>
@@ -83,6 +83,8 @@ export default {
 
 <style lang="scss" scoped>
 $container: 960px;
+$pad: 940px;
+$mob: 720px;
 .chain {
   max-width: 1100px;
   width: 100%;
@@ -99,6 +101,12 @@ h3 {
   color: #f7f6f4;
   text-align: center;
   margin-bottom: 50px;
+  @media screen and (max-width: $mob) {
+    max-width: 214px;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 26px;
+  }
 }
 .content {
   max-width: $container;
@@ -107,17 +115,30 @@ h3 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
+  @media screen and (max-width: $mob) {
+    display: block;
+    padding: 0px 45px;
+  }
 }
 .left {
   width: 37.5%;
-  min-height: 626px;
   margin-left: 63px;
+  min-height: 757px;
   position: relative;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+    margin-left: 0px;
+    min-height: auto;
+  }
   .chain_list {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 38px;
+    }
     li {
       width: 80px;
       height: 80px;
@@ -125,6 +146,11 @@ h3 {
       margin-bottom: 10px;
       &.active {
         background-color: #fff;
+        &:hover {
+          a {
+            opacity: 1;
+          }
+        }
       }
       a {
         display: block;
@@ -145,35 +171,14 @@ h3 {
       }
     }
   }
-  .wish_box {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0px;
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 80px;
-      height: 80px;
-      background-color: rgba(256,256,256,.1);
-      img {
-        width: 40px;
-        opacity: .4;
-      }
-    }
-    p {
-      font-size: 18px;
-      line-height: 24px;
-      color: #F7F6F4;
-      position: relative;
-      margin-left: 16px;
-    }
-  }
 } 
 .right {
   width: 45.8%;
   padding-right: 58px;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+    padding-right: 0px;
+  }
   .about_box {
     height: 100%;
     height: 180px;
@@ -198,6 +203,9 @@ h3 {
   }
   .item_box {
     margin-bottom: 22px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
     h5 {
       font-size: 18px;
       font-weight: 800;
@@ -215,7 +223,7 @@ h3 {
     align-items: center;
     justify-content: flex-start;
     .percentage_bg {
-      max-width: 288px;
+      max-width: 225px;
       width: 100%;
       height: 5px;
       background-color: rgba(256,256,256,0.2);
@@ -226,6 +234,8 @@ h3 {
       }
     }
     .link_box {
+      display: flex;
+      align-items: center;
       margin-left: 10px;
       li {
         &+li {
@@ -234,12 +244,63 @@ h3 {
         a {
           display: block;
           width: 20px;
-          img {
-            width: 100%;
+          height: 20px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-image: url('~images/link.png');
+          transition: background-image .5s;
+          &.link {
+            background-image: url('~images/link.png');
+            &:hover {
+              background-image: url('~images/link_h.png');
+            }
+          }
+          &.github {
+            background-image: url('~images/github.png');
+            &:hover {
+              background-image: url('~images/github_h.png');
+            }
           }
         }
       }
     }
+  }
+}
+.wish_box {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  @media screen and (max-width: $pad) {
+    left: 20px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(256,256,256,.1);
+    &:hover {
+      img {
+        transform: scale(1.3);
+      }
+    }
+    img {
+      width: 40px;
+      opacity: .4;
+      transform: scale(1);
+      transition: transform .5s;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #F7F6F4;
+    position: relative;
+    margin-left: 16px;
   }
 }
 </style>

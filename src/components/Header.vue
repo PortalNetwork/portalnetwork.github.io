@@ -62,10 +62,16 @@ export default {
 
 <style lang="scss" scoped>
 $container: 960px;
+$pad: 940px;
+$mob: 720px;
 $blue: #231abe;
 $green: #19F4E4;
 .header {
   background-color: #231abe;
+  padding-top: 40px;
+  @media screen and (max-width: $mob) {
+    padding-top: 30px;
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -73,15 +79,27 @@ $green: #19F4E4;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 38px 0px 0px 0px;
     position: relative;
+    @media screen and (max-width: $pad) {
+      padding: 0px 20px;
+    }
+    @media screen and (max-width: $mob) {
+      display: block;
+    }
     >div {
       display: flex;
       align-items: center;
+      @media screen and (max-width: $mob) {
+        justify-content: center;
+      }
     }
   }
   h1 {
     width: 300px;
+    @media screen and (max-width: $mob) {
+      width: 224px;
+      margin: 0px auto 40px auto;
+    }
     img {
       width: 100%;
     }
@@ -90,10 +108,18 @@ $green: #19F4E4;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
     border-radius: 20px;
-    padding: 10px 15px;
+    padding: 0px 15px;
     background-color: #141e6a;
     transition: all .5s;
+    @media screen and (max-width: $mob) {
+      width: 204px;
+      height: 44px;
+      line-height: 44px;
+      padding: 0px 23px;
+    }
     &:hover {
       background-color: $green;
       span {
@@ -128,6 +154,12 @@ $green: #19F4E4;
   margin-left: 25px;
   align-items: flex-end;
   flex-direction: column;
+  @media screen and (max-width: $mob) {
+    position: fixed;
+    top: 35px;
+    right: 20px;
+    width: 25px;
+  }
   &:hover {
     &:before {
       width: 100%;
@@ -156,6 +188,9 @@ $green: #19F4E4;
     margin: 9px 0px;
     background-color: #fff;
     transition: width 0.5s;
+    @media screen and (max-width: $mob) {
+      margin: 7px 0px;
+    }
   }
 }
 nav {

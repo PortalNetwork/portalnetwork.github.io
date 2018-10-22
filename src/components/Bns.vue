@@ -77,6 +77,8 @@
 
 <style lang="scss" scoped>
 $container : 960px;
+$pad: 940px;
+$mob: 720px;
 $blue: #231ABE; 
 $gray: #979797;
 $bg_gray: #F7F6F4;
@@ -101,6 +103,9 @@ $bg_gray: #F7F6F4;
   left: 50%;
   transform: translateX(-50%);
   top: 0px;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
   .block01 {
     width: 103px;
     position: absolute;

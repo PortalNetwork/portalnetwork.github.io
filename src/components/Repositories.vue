@@ -45,6 +45,14 @@ import axios from 'axios';
             el: '.fraction_pagination',
             type: 'fraction'
           },
+          breakpoints: { 
+            720: {
+              slidesPerView: 1,
+              slidesPerColumn: 1,
+              slidesPerGroup: 1,
+              spaceBetween: 0,
+            }
+          }
           // pagination: {
           //   el: '.progressbar_pagination',
           //   type: 'progressbar'
@@ -96,6 +104,8 @@ import axios from 'axios';
 $container: 960px;
 $blue: #231abe;
 $bg_gray: #f7f6f4;
+$pad: 940px;
+$mob: 720px;
 %bar_text {
   font-size: 12px;
   font-weight: 600;
@@ -110,20 +120,36 @@ $bg_gray: #f7f6f4;
 .repositories {
   background-color: $bg_gray;
   padding: 0px 0px 190px 0px;
+  @media screen and (max-width: $mob) {
+    padding: 0px 0px 60px 0px;
+  }
 }
 .content {
   max-width: $container;
   width: 100%;
   margin: 0px auto;
+  @media screen and (max-width: $pad) {
+    padding: 0px 20px;
+  }
+  @media screen and (max-width: $mob) {
+    position: relative;
+    padding: 0px 43px 50px 43px;
+  }
 }
 header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 52px;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 30px;
+  }
   h3 {
     font-size: 30px;
     font-weight: 800;
+    @media screen and (max-width: $mob) {
+      margin: 0px auto;
+    }
     &:after {
       content: "";
       display: inline-block;
@@ -142,6 +168,13 @@ header {
     justify-content: center;
     border-bottom: solid 2px $blue;
     padding-bottom: 10px;
+    @media screen and (max-width: $mob) {
+      border-bottom: none;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
   }
   .button_box {
     display: flex;
@@ -172,6 +205,10 @@ header {
   display: block;
   background-color: #fff;
   padding: 22px 15px;
+  @media screen and (max-width: $mob) {
+    padding: 16px 25px;
+    min-height: 157px;
+  }
   h4 {
     font-size: 18px;
     font-weight: 800;
@@ -233,6 +270,7 @@ header {
 </style>
 <style lang="scss">
 $blue: #231abe;
+$mob: 720px;
 .swiper-pagination-progressbar-fill {
   background: $blue !important;
 }
@@ -240,6 +278,9 @@ $blue: #231abe;
   font-size: 16px;
   font-weight: 800;
   color: $blue;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
   .swiper-pagination-current {
     font-size: 28px;
     font-weight: 800;

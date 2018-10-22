@@ -1,51 +1,51 @@
 [
   {
-    "itemName": "Management System",
-    "url": "https://deploy.portal.network",
+    "itemName": "KAIZEN Management System",
+    "url": "https://kaizen.portal.network",
     "subItems": [],
-    "logo": "../images/mu_icon05.png",
-    "description": "補介紹"
+    "logo": "assets/images/ka01.svg",
+    "description": "User friendly interface allowing easy deployment, monitoring, and scaling of decentralized applications. The backbone system that manages and resolves integration and compatibility details among desired services. Includes multi-lingual documentation and guidelines for the various decentralized service integrations."
   },
   {
     "itemName": "CLI",
     "url": "https://github.com/PortalNetwork/kaizen-cli",
     "subItems": [],
-    "logo": "",
-    "description": "補介紹"
+    "logo": "assets/images/ka02.svg",
+    "description": "The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize centralized and decentralized services."
   },
   {
     "itemName": "Cross-chain Infrastructure",
     "url": "https://developer.portal.network",
     "subItems": [],
-    "logo": "",
-    "description": "補介紹"
+    "logo": "assets/images/ka03.svg",
+    "description": "Provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. Users can access these RPC endpoints to interact directly with the blockchain protocol of their choosing. It eliminates the need to install, configure, and maintain costly infrastructure of different protocols (full nodes). Access IPFS and other decentralized components seamlessly without the hassle of managing the infrastructure."
   },
   {
     "itemName": "API",
     "url": "https://www.portal.network/api/#introduction",
     "subItems": [],
-    "logo": "",
-    "description": "補介紹"
+    "logo": "assets/images/ka04.svg",
+    "description": "A consolidated API inclusive of all endpoints for protocols and tools within the Portal Network. The API provides secure, reliable, and scalable access to multiple blockchain protocols information: resolve hexadecimal into human-readable text, transaction hash, address balance, resolution, and more. It helps abstract complexity and make all functions more readable."
   },
   {
     "itemName": "Tech Guideline",
     "url": "",
     "subItems": [],
     "logo": "",
-    "description": "補介紹"
+    "description": ""
   },
   {
     "itemName": "Faucet Pool",
     "url": "https://faucet.portal.network",
     "subItems": [],
     "logo": "",
-    "description": "補介紹"
+    "description": "A pool of testnet tokens of various blockchain protocols for developers to use to test smart contracts and interact with different chains."
   },
   {
     "itemName": "Hackathon",
     "url": "https://hackathon.portal.network",
     "subItems": [],
     "logo": "",
-    "description": "補介紹"
+    "description": ""
   }
 ]

@@ -28,9 +28,17 @@ export default {
 
 <style lang="scss" scoped>
 $container : 960px;
+$pad: 940px;
+$mob: 720px;
 .hero {
   background-color: #231ABE;
   padding: 144px 0px 328px 0px;
+  @media screen and (max-width: $pad) {
+    padding: 70px 0px 260px 0px;
+  }
+  @media screen and (max-width: $mob) {
+    padding: 20px 0px 90px 0px;
+  }
   .content {
     max-width: $container;
     width: 100%;
@@ -39,27 +47,56 @@ $container : 960px;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    @media screen and (max-width: $pad) {
+      display: block;
+      padding: 0px 20px;
+    }
   }
   .text_box {
     width: 57.5%;
+    @media screen and (max-width: $pad) {
+      width: 80%;
+      margin: 0px auto 92px auto;
+      text-align: center;
+    }
+    @media screen and (max-width: $mob) {
+      width: 100%;
+    }
     h2 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 72px;
-    color: #fff;
-    margin-bottom: 20px;
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 72px;
+      color: #fff;
+      margin-bottom: 20px;
+      @media screen and (max-width: $mob) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
     }
     p {
       font-size: 20px;
       line-height: 50px;
       font-weight: 600;
       color: #fff;
+      @media screen and (max-width: $mob) {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
     }
   }
   .figure {
     width: 36.6%;
     position: relative;
     // animation: run 4s infinite alternate;
+    @media screen and (max-width: $pad) {
+      width: 50%;
+      margin: 0px auto;
+    }
+    @media screen and (max-width: $mob) {
+      width: 70%;
+    }
     img {
       width: 100%;
     }
