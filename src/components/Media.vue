@@ -15,19 +15,29 @@
 </template>
 
 <style lang="scss" scoped>
+$pad: 940px;
 $mob: 720px;
 .social_media {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  right: -60px;
-  bottom: -100px;
-  @media screen and (max-width: $mob) {
-    display: none;
+  position: fixed;
+  right: 50px;
+  bottom: 20px;
+  @media screen and (max-width: $pad) {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 52px;
   }
   li {
     &+li {
       margin-top: 10px;
+      @media screen and (max-width: $pad) {
+        margin-top: 0px;
+        margin-left: 18px;
+      }
     }
     a {
       display: block;
@@ -37,6 +47,10 @@ $mob: 720px;
       background-repeat: no-repeat;
       background-size: 100% auto;
       transition: background-image .5s;
+      @media screen and (max-width: $pad) {
+        width: 43px;
+        height: 43px;
+      }
       &:hover {
         &.twitter {
           background-image: url('~images/m_t_h.png');

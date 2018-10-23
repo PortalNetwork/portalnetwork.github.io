@@ -88,9 +88,12 @@ $mob: 720px;
 .chain {
   max-width: 1100px;
   width: 100%;
-  margin: 0px auto 110px auto;
+  margin: 0px auto;
   background-color: #0c1346;
   padding: 64px 0px; 
+  @media screen and (max-width: $mob) {
+    padding: 26px 0px 0px 0px;
+  }
 }
 h3 {
   max-width: $container;
@@ -118,7 +121,7 @@ h3 {
   position: relative;
   @media screen and (max-width: $mob) {
     display: block;
-    padding: 0px 45px;
+    padding: 0px 45px 168px 45px;
   }
 }
 .left {
@@ -137,7 +140,7 @@ h3 {
     justify-content: flex-start;
     flex-wrap: wrap;
     @media screen and (max-width: $mob) {
-      margin-bottom: 38px;
+      margin-bottom: 48px;
     }
     li {
       width: 80px;
@@ -274,7 +277,11 @@ h3 {
   left: 0px;
   bottom: 0px;
   @media screen and (max-width: $pad) {
-    left: 20px;
+    left: 63px;
+  }
+  @media screen and (max-width: $mob) {
+    left: 45px;
+    bottom: 40px;
   }
   a {
     display: flex;

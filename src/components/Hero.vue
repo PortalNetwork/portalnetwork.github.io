@@ -1,9 +1,6 @@
 <script>
-import Media from './Media.vue';
 export default {
-	components : {
-		Media
-	}
+
 }
 </script>
 
@@ -21,7 +18,6 @@ export default {
         <div class="block d"><img src="../images/hero_block.png" alt=""/></div>
         <img src="../images/hero.png" alt=""/>
       </div>
-      <Media></Media>
     </div>
   </div>
 </template>
@@ -46,7 +42,6 @@ $mob: 720px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
     @media screen and (max-width: $pad) {
       display: block;
       padding: 0px 20px;
@@ -103,6 +98,7 @@ $mob: 720px;
     .block {
       width: 60px;
       position: absolute;
+      display: none;
       &.a {
         transform: translate3d(-3px, -33px, 0px);
         // animation: block_a 4s infinite alternate;

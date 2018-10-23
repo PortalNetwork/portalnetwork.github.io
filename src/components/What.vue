@@ -29,7 +29,7 @@ $mob: 720px;
 .content {
   max-width: $container;
   width: 100%;
-  margin: 0px auto 62px auto;
+  margin: 0px auto;
   >div {
     max-width: 630px;
     width: 100%;

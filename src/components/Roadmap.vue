@@ -106,6 +106,11 @@ export default {
         nextEl: '.roadmapNext',
         prevEl: '.roadmapPrev',
       },
+      breakpoints: { 
+        720: {
+          slidesPerView: 2,
+        }
+      }
     });
   }
 };
@@ -114,13 +119,7 @@ export default {
 <template>
   <div class="roadmap">
     <div class="content">
-      <header>
-        <h3>Roadmap</h3>
-        <div class="button_box">
-          <div class="roadmapPrev"></div>
-          <div class="roadmapNext"></div>
-        </div>
-      </header>
+      <h3>Roadmap</h3>
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(roadmap,idx) in roadmaps" :key="idx">
@@ -133,6 +132,10 @@ export default {
             </ul>
           </div>
         </div>
+      </div>
+      <div class="button_box">
+        <div class="roadmapPrev"></div>
+        <div class="roadmapNext"></div>
       </div>
     </div>
     <div class="paper">
@@ -147,6 +150,8 @@ export default {
 
 <style lang="scss" scoped>
 $container: 960px;
+$pad: 940px;
+$mob: 720px;
 $blue: #231abe;
 $bg_gray: #f7f6f4;
 %date {
@@ -154,50 +159,88 @@ $bg_gray: #f7f6f4;
   font-weight: 800;
   color: #e0e0e0;
   text-align: left;
+  @media screen and (max-width: $mob) {
+    font-size: 20px;
+  }
 }
 %button {
+  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  @media screen and (max-width: $mob) {
+    width: 10px;
+    height: 10px;
+  }
 }
 .roadmap {
   background-color: $bg_gray;
-  padding: 0px 0px 125px 0px;
+  padding: 125px 0px 125px 0px;
+  @media screen and (max-width: $pad) {
+    padding: 66px 0px 44px 0px;
+  }
 }
 .content {
   max-width: $container;
   width: 100%;
   margin: 0px auto 60px auto;
-}
-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 68px;
-  h3 {
-    font-size: 70px;
-    font-weight: 800;
+  position: relative;
+  @media screen and (max-width: $pad) {
+    padding: 0px 20px;
   }
-  .button_box {
-    display: flex;
-    align-items: center;
-    .roadmapPrev {
-      @extend %button;
-      background-color: rgba(35, 26, 190, 0.2);
-    }
-    .roadmapNext {
-      @extend %button;
-      background-color: $blue;
-      margin-left: 20px;
-    }
+  @media screen and (max-width: $mob) {
+    padding: 0px 0px 42px 0px;
+  }
+}
+h3 {
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 77px;
+  text-align: center;
+  @media screen and (max-width: $mob) {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width: $mob) {
+    text-align: center;
+  }
+}
+.button_box {
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  @media screen and (max-width: $pad) {
+    right: 20px;
+  }
+  @media screen and (max-width: $mob) {
+    top: auto;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+  }
+  .roadmapPrev {
+    @extend %button;
+    background-color: rgba(35, 26, 190, 0.2);
+  }
+  .roadmapNext {
+    @extend %button;
+    background-color: $blue;
+    margin-left: 20px;
   }
 }
 .paper {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  @media screen and (max-width: $mob) {
+    display: block;
+    padding: 0px 20px;
+    text-align: center;
+  }
   >p {
     width: 50%;
     font-size: 30px;
@@ -205,14 +248,30 @@ header {
     text-align: right;
     padding-bottom: 10px;
     border-bottom: solid 2px $blue;
+    @media screen and (max-width: $pad) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: $mob) {
+      display: inline-block;
+      width: auto;
+      text-align: center;
+      margin: 0px auto 24px auto;
+    }
   }
   .read_box {
     width: 50%;
     padding-left: 30px;
+    @media screen and (max-width: $mob) {
+      width: 100%;
+      padding-left: 0px;
+    }
     .btn {
       display: inline-block;
       width: 98px;
       margin: 0px 0px 18px 42px;
+      @media screen and (max-width: $mob) {
+        margin: 0px 0px 22px 0px;
+      }
       img {
         width: 100%;
       }
@@ -222,15 +281,23 @@ header {
       font-weight: 600;
       text-align: left;
       color: $blue;
+      @media screen and (max-width: $mob) {
+        text-align: center;
+      }
     }
   }
 }
 .swiper {
   overflow: hidden;
   .swiper-slide {
+    padding: 0px 20px;
     .roadmap_date {
       text-align: right;
       margin-bottom: 20px;
+      position: relative;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 10px;
+      }
       &:after {
         content: "";
         display: inline-block;
@@ -238,7 +305,13 @@ header {
         height: 20px;
         background-color: $blue;
         border-radius: 50%;
-        margin-right: 80px;
+        position: absolute;
+        right: 0px;
+        bottom: 5px;
+        @media screen and (max-width: $mob) {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
     .month {
@@ -249,7 +322,6 @@ header {
       @extend %date;
     }
     > ul {
-      padding-right: 20px;
       > li {
         font-weight: 600;
         line-height: 19px;

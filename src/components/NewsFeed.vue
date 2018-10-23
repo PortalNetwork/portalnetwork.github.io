@@ -136,42 +136,62 @@
 
 <style lang="scss" scoped>
 $container : 960px;
+$pad: 940px;
+$mob: 720px;
 $blue: #231ABE;
 $blue_d1: #141E6A;
 %box {
-  width: 50%;
+  width: 48%;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+  }
 }
 %h3 {
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
+  @media screen and (max-width: $mob) {
+    text-align: center;
+  }
 }
 .news {
   background-color: #E9E6E2;
+  padding-top: 50px;
+  @media screen and (max-width: $mob) {
+    padding-top: 28px;
+  }
   .content {
     max-width: $container;
     width: 100%;
     margin: 0px auto;
-    padding: 50px 0px 0px 0px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @media screen and (max-width: $pad) {
+      padding: 0px 20px;
+    }
+    @media screen and (max-width: $mob) {
+      display: block;
+    }
   }
 }
 .twitter_box {
   @extend %box;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 40px;
+  }
   h3 {
     @extend %h3;
     color: $blue;
   }
 }
 .news_box {
+  @extend %box;
   h3 {
     @extend %h3;
     color: $blue_d1;
   }
   ul {
-    width: 400px;
     height: 295px;
     overflow-y: auto;
     margin: 0px auto;

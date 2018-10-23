@@ -1,20 +1,15 @@
 <script>
+  import Media from './Media.vue';
   export default {
-
+    components : {
+      Media
+    }
   }
 </script>
 
 <template>
   <div class="footer">
     <div class="content">
-      <form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" class="subscribe_box">
-          <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email" required>
-          <input type="hidden" value="" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1">
-          <button type="submit" id="mc-embedded-subscribe learn" name="subscribe">Subscribe</button>
-        </div>
-        <p>Subscribe and get our latest updates.</p>
-      </form>
       <div class="footer_map">
         <div class="map_item">
           <h4>News</h4>
@@ -39,14 +34,23 @@
           </ul>
         </div>
       </div>
+      <form action="https://network.us18.list-manage.com/subscribe/post?u=26478e3fe9ba26cbcfc9d42b9&amp;id=6078efde3c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll" class="subscribe_box">
+          <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email" required>
+          <input type="hidden" value="" name="b_26478e3fe9ba26cbcfc9d42b9_6078efde3c" tabindex="-1">
+          <button type="submit" id="mc-embedded-subscribe learn" name="subscribe">Subscribe</button>
+        </div>
+        <p>Subscribe and get our latest updates.</p>
+      </form>
     </div>
+    <Media></Media>
     <div class="content tool">
       <div class="left">
-        <p>© 2018 Portal.Network</p>
         <ul>
           <li><a href="https://www.portal.network/privacy_policy.html" target="_blank">Privacy & Policy</a></li>
           <li><a href="https://www.portal.network/terms_coditions.html" target="_blank">Terms of use</a></li>
         </ul>
+        <p>© 2018 Portal.Network</p>
       </div>
       <div class="select">
         <select>
@@ -62,19 +66,30 @@
 
 <style lang="scss" scoped>
 $container : 960px;
+$pad: 940px;
+$mob: 720px;
 .footer {
   background-color: #141E6A;
   padding: 56px 0px 66px 0px;
   .content {
     max-width: $container;
     width: 100%;
-    margin: 0px auto 210px auto;
+    margin: 0px auto;
+    padding: 0px 0px 210px 0px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @media screen and (max-width: $pad) {
+      display: block;
+      padding: 0px 45px 50px 45px;
+      text-align: center;
+    }
     &.tool {
       align-items: center;
-      margin: 0px auto;
+      padding: 0px;
+      @media screen and (max-width: $pad) {
+        padding: 0px 45px;
+      }
     }
   }
   form {
@@ -90,6 +105,7 @@ $container : 960px;
         font-size: 16px;
         font-weight: 600;
         line-height: 58px;
+        border-radius: 5px;
         color: #B8B8B8;
         padding: 20px 128px 20px 20px;
         &::-webkit-input-placeholder {
@@ -97,6 +113,11 @@ $container : 960px;
         }
         &::-moz-placeholder{
           color: #B8B8B8;
+        }
+        @media screen and (max-width: $mob) {
+          height: 50px;
+          line-height: 50px;
+          width: 100%;
         }
       }
       button {
@@ -113,6 +134,9 @@ $container : 960px;
         margin: auto;
         opacity: 1;
         transition: opacity .5s;
+        @media screen and (max-width: $mob) {
+          font-size: 16px;
+        }
         &:hover {
           opacity: 0.7;
         }
@@ -129,13 +153,31 @@ $container : 960px;
     width: 37.9%;
     display: flex;
     justify-content: space-between;
+    order: 1;
+    @media screen and (max-width: $pad) {
+      width: 80%;
+      margin: 0px auto;
+      padding-bottom: 70px;
+    }
+    @media screen and (max-width: $mob) {
+      width: 100%;
+    }
   }
   .map_item {
+    @media screen and (max-width: $pad) {
+      text-align: left;
+    }
     h4 {
       font-size: 20px;
       font-weight: 600;
       color: #fff;
       margin-bottom: 38px;
+      @media screen and (max-width: $pad) {
+        margin-bottom: 28px;
+      }
+      @media screen and (max-width: $mob) {
+        font-size: 16px;
+      }
     }
     ul {
       li {
@@ -149,6 +191,9 @@ $container : 960px;
           color: #fff;
           opacity: 1;
           transition: opacity .5s;
+          @media screen and (max-width: $pad) {
+            font-weight: 400;
+          }
           &:hover {
             opacity: 0.7;
           }
@@ -159,13 +204,28 @@ $container : 960px;
   .left {
     display: flex;
     align-items: center;
+    @media screen and (max-width: $pad) {
+      display: block;
+    }
     ul {
       display: flex;
       justify-content: center;
       margin-left: 36px;
+      @media screen and (max-width: $pad) {
+        margin-left: 0px;
+        margin-bottom: 12px;
+      }
+      @media screen and (max-width: $mob) {
+        justify-content: flex-start;
+      }
       li {
         &+li {
           margin-left: 22px;
+          @media screen and (max-width: $pad) {
+            border-left: solid 1px #fff;
+            margin-left: 12px;
+            padding-left: 12px;
+          }
         }
         a {
           display: inline-block;
@@ -185,12 +245,23 @@ $container : 960px;
       font-weight: 300;
       color: #fff;
       text-transform: uppercase;
+      order: -1;
+      @media screen and (max-width: $pad) {
+        order: 1;
+        margin-bottom: 28px;
+      }
+      @media screen and (max-width: $mob) {
+        text-align: left;
+      }
     }
   }
   .select {
     display: flex;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: $mob) {
+      justify-content: flex-start;
+    }
     select {
       font-size: 16px;
       line-height: 22px;

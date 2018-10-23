@@ -74,7 +74,7 @@
     "itemName": "Mobile Applications",
     "url": "https://eth.portal.network",
     "subItems": [],
-    "logo": "",
+    "logo": "assets/images/mu08.svg",
     "description": "Mobile applications that allow users to manage their BNS on the go. This includes mobile implementations of the Domain Manager, Marketplace, and BNS Explorer "
   }
 ]

@@ -92,20 +92,31 @@
 
 <style lang="scss" scoped>
 $container : 960px;
+$pad: 940px;
+$mob: 720px;
 .partnership {
   max-width: $container;
   width: 100%;
   margin: 0px auto;
-  padding: 132px 0px 55px 0px;
+  padding: 132px 0px 60px 0px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  @media screen and (max-width: $pad) {
+    display: block;
+    padding: 50px 45px 60px 45px;
+  }
   h3 {
     width: 24.3%;
     font-size: 30px;
     line-height: 42px;
     font-weight: 800;
     color: #979797;
+    @media screen and (max-width: $pad) {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
   }
   .list {
     width: 66.6%;
@@ -113,6 +124,13 @@ $container : 960px;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    @media screen and (max-width: $pad) {
+      width: 90%;
+      margin: 0px auto;
+    }
+    @media screen and (max-width: $mob) {
+      width: 100%;
+    }
     li {
       width: 25%;
       min-height: 113px;
@@ -121,6 +139,9 @@ $container : 960px;
       display: flex;
       align-items: flex-end;
       justify-content: center;
+      @media screen and (max-width: $mob) {
+        width: 33.3%;
+      }
     }
     a {
       display: inline-block;
@@ -139,6 +160,10 @@ $container : 960px;
         font-size: 16px;
         font-weight: 600;
         color: #979797;
+        white-space: nowrap;
+        @media screen and (max-width: $mob) {
+          font-size: 12px;
+        }
       }
     }
   }

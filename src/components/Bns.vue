@@ -27,7 +27,8 @@
         <div class="block02"><img src="../images/block02.png" alt=""/></div>
         <div class="block03"><img src="../images/block03.png" alt=""/></div>
       </div>
-      <div class="liner">
+
+      <!-- <div class="liner">
         <div class="left">
           <img src="../images/bns.png" alt=""/>
           <h3>BNS</h3>
@@ -43,7 +44,28 @@
           <p>BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
           <p>Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>      
         </div>
+      </div> -->
+
+      <div class="summary">
+        <div class="bns_box">
+          <img src="../images/bns.png" alt=""/>
+          <h3>BNS</h3>
+          <div class="special">
+            <p><span>B</span>lockchain</p>
+            <p><span>N</span>ame</p>
+            <p><span>S</span>ervice</p>
+          </div>
+        </div>
+        <div class="summary_box">
+          <h4>What is BNS?</h4>
+          <p>BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
+        </div>
+        <div class="summary_box">
+          <h4>Human-readable Identity</h4>
+          <p>Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>
+        </div>
       </div>
+
       <div class="domain_box">
         <p>yourname.eth</p>
         <span><img src="../images/search.png" alt=""/></span>
@@ -84,7 +106,7 @@ $gray: #979797;
 $bg_gray: #F7F6F4;
 .bns {
   background-color: $bg_gray;
-  padding: 0px 0px 152px 0px;
+  padding: 62px 0px 152px 0px;
 }
 .content {
   max-width: $container;
@@ -99,13 +121,8 @@ $bg_gray: #F7F6F4;
 }
 .parallax_box {
   position: absolute;
-  width: 103px;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0px;
-  @media screen and (max-width: $mob) {
-    display: none;
-  }
+  margin-left: -51px;
   .block01 {
     width: 103px;
     position: absolute;
@@ -134,10 +151,102 @@ $bg_gray: #F7F6F4;
     }
   }
 }
-.left {
-  width: 50%;
-  padding: 0px 82px 0px 76px;
-  border-right: solid 1px $blue;
+// .left {
+//   width: 50%;
+//   padding: 0px 82px 0px 76px;
+//   border-right: solid 1px $blue;
+//   @media screen and (max-width: $pad) {
+//     width: 100%;
+//     border-right: none;
+//     padding: 0px 45px;
+//   }
+//   >img {
+//     width: 60px;
+//     margin-bottom: 15px;
+//   }
+//   h3 {
+//     font-size: 70px;
+//     font-weight: 800;
+//     margin-bottom: 24px;
+//   }
+//   .special {
+//     margin-bottom: 158px;
+//     p {
+//       font-size: 55px;
+//       font-weight: 800;
+//       line-height: 1.09;
+//       color: $gray;
+//       span {
+//         font-size: 55px;
+//         font-weight: 800;
+//         line-height: 1.09;
+//         color: $blue;
+//       }
+//     }
+//   }
+//   h4 {
+//     max-width: 138px;
+//     width: 100%;
+//     font-size: 30px;
+//     font-weight: 800;
+//     line-height: 1.25;
+//     margin-left: 142px;
+//     padding-bottom: 30px;
+//   }
+// }
+// .right {
+//   width: 50%;
+//   padding: 0px 69px 0px 138px;
+//   position: relative;
+//   h4 {
+//     font-size: 20px;
+//     font-weight: 800;
+//     margin-bottom: 15px;
+//     padding-top: 42px;
+//   }
+//   p {
+//     font-size: 16px;
+//     line-height: 25px;
+//     &:last-child {
+//       position: absolute;
+//       bottom: 52px;
+//     }
+//   }
+// }
+.summary {
+  max-width: 726px;
+  margin: 0px auto;
+  padding-bottom: 28px;
+  position: relative;
+  @media screen and (max-width: $pad) {
+    max-width: 100%;
+    padding: 0px 45px 28px 45px;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 700px;
+    background-color: rgba(20, 30, 106, 0.8);
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    @media screen and (max-width: $pad) {
+      left: 20%;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.bns_box {
+  float: left;
+  @media screen and (max-width: $pad) {
+    float: none;
+    padding-left: 165px;
+  }
   >img {
     width: 60px;
     margin-bottom: 15px;
@@ -149,6 +258,9 @@ $bg_gray: #F7F6F4;
   }
   .special {
     margin-bottom: 158px;
+    @media screen and (max-width: $pad) {
+      margin-bottom: 45px;
+    }
     p {
       font-size: 55px;
       font-weight: 800;
@@ -162,33 +274,30 @@ $bg_gray: #F7F6F4;
       }
     }
   }
+}
+.summary_box {
+  padding-top: 133px;
+  float: right;
+  max-width: 260px;
+  @media screen and (max-width: $pad) {
+    float: none;
+    padding: 0px 0px 0px 165px;
+    max-width: 100%;
+  }
+  &+.summary_box {
+    @media screen and (max-width: $pad) {
+      margin-top: 50px;
+    }
+  }
   h4 {
-    max-width: 138px;
-    width: 100%;
     font-size: 30px;
     font-weight: 800;
     line-height: 1.25;
-    margin-left: 142px;
-    padding-bottom: 30px;
-  }
-}
-.right {
-  width: 50%;
-  padding: 0px 69px 0px 138px;
-  position: relative;
-  h4 {
-    font-size: 20px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    padding-top: 42px;
+    margin-bottom: 10px;
   }
   p {
     font-size: 16px;
     line-height: 25px;
-    &:last-child {
-      position: absolute;
-      bottom: 52px;
-    }
   }
 }
 .domain_box {
@@ -217,6 +326,7 @@ $bg_gray: #F7F6F4;
   }
 }
 .identity {
+  padding: 0px 45px;
   li {
     display: flex;
     justify-content: center;
@@ -249,6 +359,11 @@ $bg_gray: #F7F6F4;
         font-size: 14px;
         line-height: 19px;
         color: $gray;
+        @media screen and (max-width: $pad) {
+          overflow : hidden;
+          text-overflow : ellipsis;
+          white-space : nowrap;
+        }
       }
     }
   }
