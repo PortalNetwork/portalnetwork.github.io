@@ -129,7 +129,7 @@ $mob: 720px;
   width: 100%;
   margin: 0px auto;
   @media screen and (max-width: $pad) {
-    padding: 0px 20px;
+    padding: 0px 45px;
   }
   @media screen and (max-width: $mob) {
     position: relative;

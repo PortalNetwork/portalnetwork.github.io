@@ -72,12 +72,10 @@ $mob: 720px;
     p {
       font-size: 20px;
       line-height: 50px;
-      font-weight: 600;
       color: #fff;
       @media screen and (max-width: $mob) {
         font-size: 16px;
         line-height: 1.5;
-        font-weight: 400;
       }
     }
   }

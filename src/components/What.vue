@@ -73,7 +73,7 @@ $mob: 720px;
       @media screen and (max-width: $mob) {
         margin-left: 0px;
         text-align: center;
-        font-weight: 400;
+        font-weight: 300;
       }
     }
   }

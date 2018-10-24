@@ -3,35 +3,35 @@
     "itemName": "Marketplace",
     "url": "https://market.portal.network",
     "subItems": [],
-    "logo": "assets/images/mu01.svg",
+    "logo": "assets/images/solution/mu01.svg",
     "description": "A website that allows any user to easily search for domain names across Portal Network’s supported protocols, and check each domain’s availability status and asking price denominated in the protocol’s currency. Users can place bids on domains they are interested in, purchase domains, or sell domains they control for prices they specify."
   },
   {
     "itemName": "Domain Manager",
     "url": "https://manager.portal.network",
     "subItems": [],
-    "logo": "assets/images/mu02.svg",
+    "logo": "assets/images/solution/mu02.svg",
     "description": "Users can easily manage their domains here. Users can view all of the domains they have purchased through Portal Network’s Marketplace. Users have the option to bind their owned domain names to a corresponding protocol address of their choosing. Users can update their existing domains to address mappings as they wish."
   },
   {
     "itemName": "Web Builder",
     "url": "https://web.portal.network",
     "subItems": [],
-    "logo": "assets/images/mu03.svg",
+    "logo": "assets/images/solution/mu03.svg",
     "description": "A tool whereby non-technical users can build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS."
   },
   {
     "itemName": "Browser Extension",
     "url": "https://extension.portal.network/index.html",
     "subItems": [],
-    "logo": "assets/images/mu04.svg",
+    "logo": "assets/images/solution/mu04.svg",
     "description": "The Portal Network browser extensions transforms regular browsers into BNS-compatible browsers. If users have the extension installed, BNS domains will be automatically resolved and will direct users to the appropriate ÐWeb site. For example, a user may type in “portalnetwork.eth”, and they will be redirected automatically to an IPFS-hosted page, as if they were accessing a standard web page."
   },
   {
     "itemName": "Showcase",
     "url": "https://search.portal.network",
     "subItems": [],
-    "logo": "assets/images/mu05.svg",
+    "logo": "assets/images/solution/mu05.svg",
     "description": "A database where users can find decentralized websites and applications."
   },
   {
@@ -51,7 +51,7 @@
         "subUrl": "http://wns.portal.network"
       }
     ],
-    "logo": "assets/images/mu06.svg",
+    "logo": "assets/images/solution/mu06.svg",
     "description": "A website where users can easily search information about different BNS without having to login. Information includes data points such as the ownership of the BNS, resolver contract, registrar details, bidding price, the ÐWeb hash, and transaction records."
   },
   {
@@ -67,14 +67,14 @@
         "subUrl": "https://bcns-sdk.portal.network"
       }
     ],
-    "logo": "assets/images/mu07.svg",
+    "logo": "assets/images/solution/mu07.svg",
     "description": "This allows user to easily connect BNS with an IPFS hash, wallet, and smart contract directly with blockchain by using metamask and Coinbase Wallet (Toshi)."
   },
   {
     "itemName": "Mobile Applications",
     "url": "https://eth.portal.network",
     "subItems": [],
-    "logo": "assets/images/mu08.svg",
+    "logo": "assets/images/solution/mu08.svg",
     "description": "Mobile applications that allow users to manage their BNS on the go. This includes mobile implementations of the Domain Manager, Marketplace, and BNS Explorer "
   }
 ]

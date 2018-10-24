@@ -16,7 +16,20 @@ export default {
 <template>
   <div class="header">
 		<nav v-if="isMenuOpen">
-			<div class="left">
+			<div class="right">
+				<ul class="menu">
+					<li><a href="javascript:;" target="_blank">Blog</a></li>
+					<li><a href="javascript:;" target="_blank">Documentation</a></li>
+					<li><a href="javascript:;" target="_blank">Forum</a></li>
+					<li><a class="article" href="javascript:;" target="_blank">What is BNS</a></li>
+					<li><a class="article" href="javascript:;" target="_blank">Solution</a></li>
+					<li><a class="article" href="javascript:;" target="_blank">Roadmap</a></li>
+				</ul>
+				<a href="javascript:;" class="cancel" @click="isMenuOpen = false">
+					<img src="../images/cancel.png" alt=""/>
+				</a>
+			</div>
+      <div class="left">
 				<h1><img src="../images/logo.png" alt=""/></h1>
 				<div>
 					<div class="btn">
@@ -30,19 +43,6 @@ export default {
 						<li><a class="fb" href="https://www.facebook.com/portalnetworkofficial" target="_blank"></a></li>
 					</ul>
 				</div>
-			</div>
-			<div class="right">
-				<ul class="menu">
-					<li><a href="javascript:;" target="_blank">Blog</a></li>
-					<li><a href="javascript:;" target="_blank">Documentation</a></li>
-					<li><a href="javascript:;" target="_blank">Forum</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">What is BNS</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">Solution</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">Roadmap</a></li>
-				</ul>
-				<a href="javascript:;" class="cancel" @click="isMenuOpen = false">
-					<img src="../images/cancel.png" alt=""/>
-				</a>
 			</div>
 		</nav>
     <div class="content">
@@ -65,7 +65,7 @@ $container: 960px;
 $pad: 940px;
 $mob: 720px;
 $blue: #231abe;
-$green: #19F4E4;
+$green: #19f4e4;
 .header {
   background-color: #231abe;
   padding-top: 40px;
@@ -197,13 +197,30 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: #231abe;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
+  background-color: $blue;
+  @media screen and (max-width: $mob) {
+    display: block;
+    background-color: #0c1346;
+    padding: 27px 45px 27px 45px;
+  }
+  &:before{
+    content: "";
+    display: none;
+    width: 224px;
+    height: 28px;
+    background: url('~images/logo.png') center center no-repeat;
+    background-size: 100% auto;
+    @media screen and (max-width: $mob) {
+      display: block;
+      margin-bottom: 80px;
+    }
+  }
 }
 .left {
   width: 50%;
@@ -212,9 +229,20 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: $blue;
+  order: -1;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+    min-height: auto;
+    order: 1;
+    background-color: #0c1346;
+  }
   h1 {
     width: 300px;
     margin-bottom: 298px;
+    @media screen and (max-width: $mob) {
+      display: none;
+    }
     img {
       width: 100%;
     }
@@ -222,9 +250,13 @@ nav {
   .btn {
     width: 100%;
     margin-bottom: 54px;
+    @media screen and (max-width: $mob) {
+      margin-bottom: 45px;
+    }
     a {
       display: inline-block;
       font-size: 21px;
+      font-weight: 600;
       height: 60px;
       line-height: 60px;
       border-radius: 30px;
@@ -232,6 +264,14 @@ nav {
       color: #fff;
       background-color: #141e6a;
       transition: all 0.5s;
+      @media screen and (max-width: $mob) {
+        background-color: $green;
+        color: $blue;
+        font-size: 14px;
+        height: 44px;
+        line-height: 44px;
+        border-radius: 22px;
+      }
       &:before {
         content: "";
         display: inline-block;
@@ -244,6 +284,9 @@ nav {
         background-repeat: no-repeat;
         background-size: 100% auto;
         transition: background-image 0.5s;
+        @media screen and (max-width: $mob) {
+          background-image: url("~images/telegram_h.png");
+        }
       }
       &:hover {
         background-color: #fff;
@@ -313,18 +356,31 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+    min-height: auto;
+  }
 }
 .menu {
   display: inline-block;
+  @media screen and (max-width: $mob) {
+    margin-bottom: 76px;
+  }
   li {
     & + li {
       margin-top: 40px;
+      @media screen and (max-width: $mob) {
+        margin-top: 28px;
+      }
     }
     a {
       font-size: 30px;
       font-weight: 600;
       color: #fff;
       transition: color 0.5s;
+      @media screen and (max-width: $mob) {
+        font-size: 20px;
+      }
       &:hover {
         color: #2894ff;
         &.article {
@@ -342,9 +398,9 @@ nav {
   display: block;
   width: 25px;
   height: 25px;
-  position: absolute;
-  right: 120px;
-  top: 30px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
   z-index: 3;
   cursor: pointer;
   img {

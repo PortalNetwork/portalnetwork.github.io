@@ -192,7 +192,7 @@ $mob: 720px;
           opacity: 1;
           transition: opacity .5s;
           @media screen and (max-width: $pad) {
-            font-weight: 400;
+            font-weight: 300;
           }
           &:hover {
             opacity: 0.7;

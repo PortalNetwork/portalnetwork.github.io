@@ -3,35 +3,35 @@
     "itemName": "Management System",
     "url": "https://kaizen.portal.network",
     "subItems": [],
-    "logo": "assets/images/ka01.svg",
+    "logo": "assets/images/solution/ka01.svg",
     "description": "User friendly interface allowing easy deployment, monitoring, and scaling of decentralized applications. The backbone system that manages and resolves integration and compatibility details among desired services. Includes multi-lingual documentation and guidelines for the various decentralized service integrations."
   },
   {
     "itemName": "CLI",
     "url": "https://github.com/PortalNetwork/kaizen-cli",
     "subItems": [],
-    "logo": "assets/images/ka02.svg",
+    "logo": "assets/images/solution/ka02.svg",
     "description": "The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize centralized and decentralized services."
   },
   {
     "itemName": "Cross-chain Infrastructure",
     "url": "https://developer.portal.network",
     "subItems": [],
-    "logo": "assets/images/ka03.svg",
-    "description": "Provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. Users can access these RPC endpoints to interact directly with the blockchain protocol of their choosing. It eliminates the need to install, configure, and maintain costly infrastructure of different protocols (full nodes). Access IPFS and other decentralized components seamlessly without the hassle of managing the infrastructure."
+    "logo": "assets/images/solution/ka03.svg",
+    "description": "Portal Network provides easy-to-use, secure, and reliable cross-chains infrastructures accessing multiple public chains information for cross-chains decentralized applications and web services, thus, developers can focus on the features."
   },
   {
     "itemName": "API",
     "url": "https://www.portal.network/api/#introduction",
     "subItems": [],
-    "logo": "assets/images/ka04.svg",
+    "logo": "assets/images/solution/ka04.svg",
     "description": "A consolidated API inclusive of all endpoints for protocols and tools within the Portal Network. The API provides secure, reliable, and scalable access to multiple blockchain protocols information: resolve hexadecimal into human-readable text, transaction hash, address balance, resolution, and more. It helps abstract complexity and make all functions more readable."
   },
   {
     "itemName": "Tech Guideline",
     "url": "",
     "subItems": [],
-    "logo": "",
+    "logo": "assets/images/solution/ka05.svg",
     "description": ""
   },
   {
@@ -46,6 +46,6 @@
     "url": "https://hackathon.portal.network",
     "subItems": [],
     "logo": "",
-    "description": ""
+    "description": "Gloabl Hackathon connects blockchain projects, local communities and developers together to hack real problems via tools provided by KAIZEN."
   }
 ]
