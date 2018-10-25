@@ -1,4 +1,5 @@
 <script>
+import animateScrollTo from 'animated-scroll-to';
 export default {
   data() {
     return {
@@ -61,7 +62,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
 $pad: 940px;
 $mob: 720px;
 $blue: #231abe;
@@ -73,7 +73,7 @@ $green: #19f4e4;
     padding-top: 30px;
   }
   .content {
-    max-width: $container;
+    max-width: 1100px;
     width: 100%;
     margin: 0px auto;
     display: flex;

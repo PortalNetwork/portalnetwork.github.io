@@ -18,7 +18,7 @@
     "url": "https://developer.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka03.svg",
-    "description": "Portal Network provides easy-to-use, secure, and reliable cross-chains infrastructures accessing multiple public chains information for cross-chains decentralized applications and web services, thus, developers can focus on the features."
+    "description": "Provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. Users can access these RPC endpoints to interact directly with the blockchain protocol of their choosing. It eliminates the need to install, configure, and maintain costly infrastructure of different protocols (full nodes). Access IPFS and other decentralized components seamlessly without the hassle of managing the infrastructure."
   },
   {
     "itemName": "API",

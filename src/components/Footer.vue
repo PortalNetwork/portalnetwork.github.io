@@ -52,7 +52,7 @@
         </ul>
         <p>© 2018 Portal.Network</p>
       </div>
-      <div class="select">
+      <div class="select" v-if="false">
         <select>
           <option value="en">English</option>
           <option value="tw">中文</option>

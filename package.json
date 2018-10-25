@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "animated-scroll-to": "^1.2.2",
     "autoprefixer": "^9.0.0",
     "axios": "^0.18.0",
     "babel-core": "^6.26.3",

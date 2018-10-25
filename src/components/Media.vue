@@ -22,7 +22,7 @@ $mob: 720px;
   flex-direction: column;
   position: fixed;
   right: 50px;
-  bottom: 20px;
+  bottom: 30px;
   @media screen and (max-width: $pad) {
     position: relative;
     bottom: auto;

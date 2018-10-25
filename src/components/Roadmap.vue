@@ -72,14 +72,16 @@ export default {
           description: [
             "Release: BTC Name Service & LTC Name Service",
             "Release: Cross-chain universal wallet (.portal)",
-            "Release: Kaizen SDK & API."
+            "Release: Kaizen SDK."
           ]
         },
         {
           month: "DEC",
           year: "2018",
           description: [
-            "Release: Ripple (XRP) & Stellar Lumen (XLM) Name Service"
+            "Release: Ripple (XRP) & Stellar Lumen (XLM) Name Service",
+            "Release: Cross-chain universal wallet (.portal)",
+            "Release: Kaizen API."
           ]
         },
         {

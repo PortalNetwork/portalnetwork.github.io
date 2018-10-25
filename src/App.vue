@@ -1,47 +1,20 @@
 <script>
-import Header from './components/Header.vue';
-import Hero from './components/Hero.vue';
-import What from './components/What.vue';
-import Bns from './components/Bns.vue';
-import Repositories from './components/Repositories.vue';
-import Chain from './components/Chain.vue';
-import Solution from './components/Solution.vue';
-import Roadmap from './components/Roadmap.vue';
-import NewsFeed from './components/NewsFeed.vue';
-import Partnership from './components/Partnership';
-import Footer from './components/Footer.vue';
-import Telegram from './images/telegram.svg';
+import { mapGetters } from "vuex";
 export default {
-	components : {
-		Header,
-		Hero,
-		What,
-		Bns,
-		Repositories,
-		Chain,
-		Solution,
-		Roadmap,
-		NewsFeed,
-		Partnership,
-		Footer,
-		Telegram
-	}
-}
+  computed: {
+    ...mapGetters(["routerState"])
+  }
+};
 </script>
 
 <template>
 	<div id="app">
-		<Header></Header>
-		<Hero></Hero>
-		<What></What>
-		<Bns></Bns>
-		<Repositories></Repositories>
-		<Chain></Chain>
-		<Solution></Solution>
-		<Roadmap></Roadmap>
-		<NewsFeed></NewsFeed>
-		<Partnership></Partnership>
-		<Footer></Footer>
+		<router-link v-for="(item, i) in routerState" :to='item.url' :key='i'>
+			{{ item.link }}
+		</router-link>
+		<transition mode='out-in'>
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
