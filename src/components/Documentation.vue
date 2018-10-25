@@ -63,23 +63,23 @@ export default {};
               <h1 class="headline">{{ flag.title }}</h1>
               <div class="icons-container">
                 <ul class="icon_list" v-if="flag.links.length > 0">
-                  <li v-for="(link, linkIdx) in flag.links" :key="link.url">
+                  <li v-for="(link, linkIdx) in flag.links" :key="linkIdx">
                     <a :href="link.url" :class="{icon: true, link: true }" target="_blank">{{ flag.links.length >= 2 ? link.title: '' }}</a>
                   </li>
                 </ul>
 
                 <ul class="icon_list">
-                  <li v-for="(video, videoIdx) in flag.videos" :key="video.url">
+                  <li v-for="(video, videoIdx) in flag.videos" :key="videoIdx">
                     <a :href="video.url" :class="{icon: true, video: true, expand: flag.videos.length >= 2 }" target="_blank">{{ flag.videos.length >= 2 ? video.title: '' }}</a>
                   </li>
                 </ul>
 
-                <a v-for="(file, fileIdx) in flag.files" :key="file.url" :href="file.url" :class="{icon: true, file: true, expand: flag.files.length >= 2 }"
+                <a v-for="(file, fileIdx) in flag.files" :key="fileIdx" :href="file.url" :class="{icon: true, file: true, expand: flag.files.length >= 2 }"
                   target="_blank">
                   {{ flag.files.length >= 2 ? file.title: '' }}
                 </a>
 
-                <a v-for="(github, githubIdx) in flag.githubs" :key="github.url" :href="github.url" :class="{icon: true, github: true, expand: flag.githubs.length >= 2 }"
+                <a v-for="(github, githubIdx) in flag.githubs" :key="githubIdx" :href="github.url" :class="{icon: true, github: true, expand: flag.githubs.length >= 2 }"
                   target="_blank">
                   {{ flag.githubs.length >= 2 ? github.title: '' }}
                 </a>
