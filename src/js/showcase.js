@@ -1,6 +1,6 @@
 import axios from "axios";
 import animateScrollTo from "animated-scroll-to";
-import copy from "copy-text-to-clipboard";
+// import copy from "copy-text-to-clipboard";
 const PAGE_NUMBER = 20; // items per page
 import '../scss/showcase.scss';
 
@@ -133,7 +133,7 @@ new Vue({
       e.stopPropagation();
       const target = document.querySelector('#copyedVal');
       target.value = `${window.location.origin}${window.location.pathname}?tag=${tag[0]}&domain=${domain}`;
-      copy(target.value);
+      // copy(target.value);
       swal('The share link has copied in clipboard');
     },
     shareFb(e, tag) {
