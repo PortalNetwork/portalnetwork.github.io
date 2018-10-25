@@ -203,7 +203,7 @@
 			<div class="content" data-aos="fade-up">
 				<div class="left">
 					<h3>human-readable identity</h3>
-					<p>Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>
+					<p>Blockchain Name Service enables connections with <a href="https://ipfs.io" target="_blank">IPFS</a> hash, smart contract, and wallet address.</p>
 					<div class="domain"><span>yourname.eth</span></div>
 				</div>
 				<div class="right">
@@ -300,18 +300,23 @@
 					<ul class="product_list">
 						<li>
 							<a href="https://market.portal.network/" target="_blank">Marketplace</a>
+							<p>A website that allows any user to easily search for domain names across Portal Network’s supported protocols, and check each domain’s availability status and asking price denominated in the protocol’s currency. Users can place bids on domains they are interested in, purchase domains, or sell domains they control for prices they specify.</p>
 						</li>
 						<li>
 							<a href="https://manager.portal.network/">Domain manager</a>
+							<p>Users can easily manage their domains here. Users can view all of the domains they have purchased through Portal Network’s Marketplace. Users have the option to bind their owned domain names to a corresponding protocol address of their choosing. Users can update their existing domains to address mappings as they wish.</p>
 						</li>
 						<li>
 							<a href="https://web.portal.network/" target="_blank">Web builder</a>
+							<p>A tool whereby non-technical users can build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS.</p>
 						</li>
 						<li>
 							<a href="https://extension.portal.network/index.html" target="_blank">Browser Extension</a>
+							<p>The Portal Network browser extensions transforms regular browsers into BNS-compatible browsers. If users have the extension installed, BNS domains will be automatically resolved and will direct users to the appropriate ÐWeb site. For example, a user may type in “portalnetwork.eth”, and they will be redirected automatically to an IPFS-hosted page, as if they were accessing a standard web page.</p>
 						</li>
 						<li>
 							<a href="https://search.portal.network/" target="_blank">Showcase</a>
+							<p>A database where users can find decentralized websites and applications.</p>
 						</li>
 						<li :class="{has_sub: openSubArea}" @click="openArea">
 							<a href="javascript:;" target="_blank">BNS explorer</a>
@@ -320,6 +325,7 @@
 								<li><a href="https://ecns.portal.network/" target="_blank">ECNS</a></li>
 								<li><a href="http://wns.portal.network/" target="_blank">WNS</a></li>
 							</ul>
+							<p>A website where users can easily search information about different BNS without having to login. Information includes data points such as the ownership of the BNS, resolver contract, registrar details, bidding price, the ÐWeb hash, and transaction records.</p>
 						</li>
 						<li :class="{has_sub: openSubArea2}" @click="openArea2">
 							<a href="javascript:;" target="_blank">Resolver</a>
@@ -327,9 +333,11 @@
 								<li><a href="https://resolver.portal.network/" target="_blank">ENS</a></li>
 								<li><a href="https://bcns-sdk.portal.network/" target="_blank">BCNS</a></li>
 							</ul>
+							<p>This allows user to easily connect BNS with an IPFS hash, wallet, and smart contract directly with blockchain by using metamask and Coinbase Wallet (Toshi).</p>
 						</li>
 						<li>
 							<a href="https://usecase.portal.network/" target="_blank">Use Case</a>
+							<p>Usecase shows by using BNS infrastructure, different decentralized assets and resources can have their own unique name and identity, which is essential to frictionless experience of blockchain projects.</p>
 						</li>
 					</ul>
 				</div>
@@ -341,8 +349,7 @@
 					<div class="figure"><a href="http://kaizen.portal.network/" target="_blank"><img src="images/index/Kaizen_logo.svg"
 							 alt=""></a></div>
 					<h4><a href="http://kaizen.portal.network/" target="_blank">Kaizen</a></h4>
-					<p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web
-						services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+					<p>KAIZEN empowers users to learn, deploy, run, and manage decentralized applications utilizing languages and frameworks such as Solidity, LLL, Vyper, IPFS, SwarmDB, Golem, OrbitDB, and many more. Users can easily deploy and use decentralized application codes with KAIZEN CLI via developer tools like Truffle, Ganache, Solc, Solium, Web3.js, Node.js, OpenZeppelin, Git, and Docker.</p>
 					<ul class="introduction_list">
 						<li>
 							<header><a href="https://deploy.portal.network/" target="_blank">Management System</a></header>
@@ -364,6 +371,7 @@
 										<img src="images/index/management4_s.png" alt=""/></a>
 								</li>
 							</ul>
+							<p>User friendly interface allowing easy deployment, monitoring, and scaling of decentralized applications. The backbone system that manages and resolves integration and compatibility details among desired services. Includes multi-lingual documentation and guidelines for the various decentralized service integrations.</p>
 						</li>
 						<li>
 							<header>
@@ -374,7 +382,8 @@
 									<li>
 										<a href="https://github.com/PortalNetwork/kaizen-cli" target="_blank">
 											<img src="images/index/github_green.png" alt=""/>
-										</a></li>
+										</a>
+									</li>
 								</ul>
 							</header>
 							<ul class="photo_item">
@@ -395,6 +404,7 @@
 										 alt=""/></a>
 								</li>
 							</ul>
+							<p>The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize centralized and decentralized services.</p>
 						</li>
 						<li>
 							<header><a href="https://developer.portal.network/" target="_blank">Cross-chain Infrastructure</a></header>
@@ -404,6 +414,7 @@
 										 alt="" /></a>
 								</li>
 							</ul>
+							<p>Provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. Users can access these RPC endpoints to interact directly with the blockchain protocol of their choosing. It eliminates the need to install, configure, and maintain costly infrastructure of different protocols (full nodes). Access IPFS and other decentralized components seamlessly without the hassle of managing the infrastructure.</p>
 						</li>
 						<li>
 							<header><a href="https://www.portal.network/api/" target="_blank">API</a></header>
@@ -412,6 +423,7 @@
 									<a href="javascript:;" @click="openModal(0,'api')"><img src="images/index/api.png" alt="" /></a>
 								</li>
 							</ul>
+							<p>A consolidated API inclusive of all endpoints for protocols and tools within the Portal Network. The API provides secure, reliable, and scalable access to multiple blockchain protocols information: resolve hexadecimal into human-readable text, transaction hash, address balance, resolution, and more. It helps abstract complexity and make all functions more readable.</p>
 						</li>
 						<li>
 							<header>Tech Guideline</header>
@@ -423,6 +435,7 @@
 						</li>
 						<li>
 							<header><a href="https://faucet.portal.network/" target="_blank">Faucet Pool</a></header>
+							<p>A pool of testnet tokens of various blockchain protocols for developers to use to test smart contracts and interact with different chains.</p>
 						</li>
 						<li>
 							<header><a href="https://hackathon.portal.network/" target="_blank">Hackathon</a></header>
@@ -437,8 +450,8 @@
 									<a href="javascript:;" @click="openModal(2,'ha_b1','ha_b2','ha_b3')"><img src="images/index/ha_s3.png" alt=""/></a>
 								</li>
 							</ul>
+							<p>Gloabl Hackathon connects blockchain projects, local communities and developers together to hack real problems via tools provided by KAIZEN.</p>
 						</li>
-
 					</ul>
 				</div>
 			</div>

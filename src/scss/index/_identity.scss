@@ -85,6 +85,13 @@
         order: 0;
         margin-bottom: 30px;
       }
+      a {
+        display: inline;
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 400;
+        color: $purple_d;
+      }
     }
   }
   
