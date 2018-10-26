@@ -1,5 +1,5 @@
 export default{
   routerState : state => {
-      return state.router;
+    return state.router;
   }
 }

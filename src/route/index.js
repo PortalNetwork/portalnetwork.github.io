@@ -1,6 +1,5 @@
-import Privacy from "../components/Privacy";
-// import about from "../components/About";
-// import contact from "../components/Contact";
+import home from "../components/Home";
+import privacy from "../components/Privacy";
 export default {
   mode: 'hash',
   routes: [{
@@ -8,12 +7,8 @@ export default {
       component: home
     },
     {
-      path: '/about',
+      path: '/privacy',
       component: privacy
-    },
-    {
-      path: '/contact',
-      component: contact
-    },
+    }
   ]
 }

@@ -9,9 +9,9 @@ export default {
 
 <template>
 	<div id="app">
-		<router-link v-for="(item, i) in routerState" :to='item.url' :key='i'>
+		<!-- <router-link v-for="(item, i) in routerState" :to='item.url' :key='i'>
 			{{ item.link }}
-		</router-link>
+		</router-link> -->
 		<transition mode='out-in'>
 			<router-view></router-view>
 		</transition>
