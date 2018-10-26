@@ -1058,7 +1058,7 @@
         "title": "NEM (NNS)",
         "icon": "./images/icon/nem.svg",
         "url": "https://nem.io",
-        "description": "",
+        "description": "NEM blockchain is composed of nodes that run the center server software from NEM. These nodes implement a compelling, stable and secure program where NEM’s Smart Asset transactions can be conducted, explored and immutably stored in the blockchain ledger.",
         "twitter": "https://twitter.com/itisportal/status/1048964898670096384",
         "medium": "https://medium.com/portalnetworkofficial/partnership-portal-network-x-nem-c4cc32f36a1f",
         "detail": [
