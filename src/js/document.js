@@ -191,7 +191,7 @@ new Vue({
           },
           {
             title: 'Kaizen CLI',
-            content: 'KAIZEN CLI is a tool and list of commands for developers to simplify the process of developing dApps, dWebs. It is the professional UI for cross-chain integration and service management between various technology such as IPFS and swarmDB.<br/>New command list',
+            content: 'KAIZEN CLI is a tool and list of commands for developers to simplify the process of developing dApps, dWebs. It is the professional UI for Multi-chain integration and service management between various technology such as IPFS and swarmDB.<br/>New command list',
             photos: null,
             location: '',
             time: 'Latest Update',
@@ -209,7 +209,7 @@ new Vue({
           },
           {
             title: 'Domain Manager',
-            content: 'Domain Manager is a tool that enables users to manage / transfer / connect / deploy cross-chain BNS.<br/>Set address',
+            content: 'Domain Manager is a tool that enables users to manage / transfer / connect / deploy Multi-chain BNS.<br/>Set address',
             photos: null,
             location: '',
             time: 'Latest Update',
@@ -252,8 +252,8 @@ new Vue({
             videos: [],
           },
           {
-            title: 'Cross-chain Infrastructure',
-            content: 'Portal Network provides easy-to-use, secure and reliable cross-chains infrastructures accessing multiple public chains information for all decentralized applications and web services, thus, developers can focus on the feature.<br/>Product introduction page',
+            title: 'Multi-chain Infrastructure',
+            content: 'Portal Network provides easy-to-use, secure and reliable Multi-chains infrastructures accessing multiple public chains information for all decentralized applications and web services, thus, developers can focus on the feature.<br/>Product introduction page',
             photos: null,
             location: '',
             time: 'Latest Update',
