@@ -62,6 +62,7 @@
 
 <template>
   <div class="solution">
+    <span id="solution" class="anchor"></span>
     <div class="content">
       <h3>Solution</h3>
       <div class="mumei">
@@ -74,7 +75,7 @@
           </div>
           <div class="left">
             <h5>Non-technical Users Adoption</h5>
-            <p>Mumei is designed for users to have seamless experience when using decentralized solutions such as BNS management, digital asset management, and decentralized websites utilization.</p>
+            <p>MUMEI is a platform with a series of tools that empowers both technical & non-technical users to easily interact with and deploy ÐWebs or ÐApps.</p>
           </div>
         </div>
         <div class="item_box">
@@ -415,8 +416,13 @@ $bg_gray: #f7f6f4;
 .solution {
   padding: 110px 0px 0px 0px;
   background-color: $bg_gray;
+  position: relative;
   @media screen and (max-width: $pad) {
     padding: 37px 0px 0px 0px;
+  }
+  .anchor {
+    position: absolute;
+    top: 40px;
   }
 }
 .content {

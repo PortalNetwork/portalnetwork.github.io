@@ -54,6 +54,7 @@
         <div id="b3" class="block3"><img src="../images/block03.png" alt=""/></div>
       </div>
       <div class="summary">
+        <span id="bns" class="anchor"></span>
         <div class="bns_box">
           <img src="../images/bns.png" alt=""/>
           <h3>BNS</h3>
@@ -219,6 +220,10 @@ $bg_gray: #F7F6F4;
       left: 46px;
       top: 284px;
     }
+  }
+  .anchor {
+    position: absolute;
+    top: -10px;
   }
 }
 .bns_box {

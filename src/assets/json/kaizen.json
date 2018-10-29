@@ -4,48 +4,48 @@
     "url": "https://kaizen.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka01.svg",
-    "description": "User friendly interface allowing easy deployment, monitoring, and scaling of decentralized applications. The backbone system that manages and resolves integration and compatibility details among desired services. Includes multi-lingual documentation and guidelines for the various decentralized service integrations."
+    "description": "A user friendly interface that allows easy deployment, monitoring, and scaling of decentralized applications. It is the backbone system that manages and resolves integration and compatibility details among desired services."
   },
   {
     "itemName": "CLI",
     "url": "https://github.com/PortalNetwork/kaizen-cli",
     "subItems": [],
     "logo": "assets/images/solution/ka02.svg",
-    "description": "The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize centralized and decentralized services."
+    "description": "The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize both centralized and decentralized services."
   },
   {
-    "itemName": "Cross-chain Infrastructure",
+    "itemName": "Multi-chain Infrastructure",
     "url": "https://developer.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka03.svg",
-    "description": "Provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. Users can access these RPC endpoints to interact directly with the blockchain protocol of their choosing. It eliminates the need to install, configure, and maintain costly infrastructure of different protocols (full nodes). Access IPFS and other decentralized components seamlessly without the hassle of managing the infrastructure."
+    "description": "It provides Remote Procedure Call (RPC) endpoints and TLS-enabled gateway for all protocols within the Portal Network ecosystem. By eliminating the need to install, configure, and maintain costly infrastructure of different protocols (full nodes), users can efficiently access these RPC endpoints to interact directly with the blockchain protocol of their choosing."
   },
   {
     "itemName": "API",
     "url": "https://www.portal.network/api/#introduction",
     "subItems": [],
     "logo": "assets/images/solution/ka04.svg",
-    "description": "A consolidated API inclusive of all endpoints for protocols and tools within the Portal Network. The API provides secure, reliable, and scalable access to multiple blockchain protocols information: resolve hexadecimal into human-readable text, transaction hash, address balance, resolution, and more. It helps abstract complexity and make all functions more readable."
+    "description": "A consolidated API inclusive of all endpoints for protocols and tools within the Portal Network. The API provides secure, reliable, and scalable access to multiple blockchain protocols information; and make all functions more readable by resolving alphanumeric addresses into human-readable text."
   },
   {
     "itemName": "Tech Guideline",
     "url": "",
     "subItems": [],
     "logo": "assets/images/solution/ka05.svg",
-    "description": ""
+    "description": "The multilingual live documents that contain various blockchain technical instructions, practices, and current dependencies with issue resolving guidelines."
   },
   {
     "itemName": "Faucet Pool",
     "url": "https://faucet.portal.network",
     "subItems": [],
     "logo": "",
-    "description": "A pool of testnet tokens of various blockchain protocols for developers to use to test smart contracts and interact with different chains."
+    "description": "A pool of testnet tokens of various blockchain protocols for developers to use for test smart contracts and interact with different chains."
   },
   {
     "itemName": "Hackathon",
     "url": "https://hackathon.portal.network",
     "subItems": [],
     "logo": "",
-    "description": "Gloabl Hackathon connects blockchain projects, local communities and developers together to hack real problems via tools provided by KAIZEN."
+    "description": "Gloabl Hackathon that connects blockchain projects, local communities and developers together to hack real problems via tools provided by KAIZEN."
   }
 ]

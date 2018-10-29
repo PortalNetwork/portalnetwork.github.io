@@ -120,6 +120,7 @@ export default {
 
 <template>
   <div class="roadmap">
+    <span id="roadmap" class="anchor"></span>
     <div class="content">
       <h3>Roadmap</h3>
       <div class="swiper">
@@ -180,8 +181,13 @@ $bg_gray: #f7f6f4;
 .roadmap {
   background-color: $bg_gray;
   padding: 125px 0px 125px 0px;
+  position: relative;
   @media screen and (max-width: $pad) {
     padding: 66px 0px 44px 0px;
+  }
+  .anchor {
+    position: absolute;
+    top: 50px;
   }
 }
 .content {

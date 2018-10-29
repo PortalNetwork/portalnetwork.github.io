@@ -1,17 +1,9 @@
 <script>
-import { mapGetters } from "vuex";
-export default {
-  computed: {
-    ...mapGetters(["routerState"])
-  }
-};
+export default {};
 </script>
 
 <template>
 	<div id="app">
-		<!-- <router-link v-for="(item, i) in routerState" :to='item.url' :key='i'>
-			{{ item.link }}
-		</router-link> -->
 		<transition mode='out-in'>
 			<router-view></router-view>
 		</transition>

@@ -9,6 +9,10 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    scrollTo(componentName){
+      this.isMenuOpen = false;
+      animateScrollTo(document.querySelector(`#${componentName}`));
     }
   }
 };
@@ -19,12 +23,11 @@ export default {
 		<nav v-if="isMenuOpen">
 			<div class="right">
 				<ul class="menu">
-					<li><a href="javascript:;" target="_blank">Blog</a></li>
-					<li><a href="javascript:;" target="_blank">Documentation</a></li>
-					<li><a href="javascript:;" target="_blank">Forum</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">What is BNS</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">Solution</a></li>
-					<li><a class="article" href="javascript:;" target="_blank">Roadmap</a></li>
+					<li><router-link to="/documentation">Documentation</router-link></li>
+					<li><a href="https://forum.portal.network" target="_blank">Forum</a></li>
+					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('bns')">What is BNS</a></li>
+					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('solution')">Solution</a></li>
+					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('roadmap')">Roadmap</a></li>
 				</ul>
 				<a href="javascript:;" class="cancel" @click="isMenuOpen = false">
 					<img src="../images/cancel.png" alt=""/>

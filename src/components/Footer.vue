@@ -14,7 +14,7 @@
         <div class="map_item">
           <h4>News</h4>
           <ul>
-            <li><a href="./blog.html" target="_blank">Blog</a></li>
+            <!-- <li><a href="./blog.html" target="_blank">Blog</a></li> -->
             <li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
             <li><a href="https://projects.invisionapp.com/boards/K53P6SNW843/" target="_blank">Press</a></li>
           </ul>
@@ -47,8 +47,8 @@
     <div class="content tool">
       <div class="left">
         <ul>
-          <li><a href="https://www.portal.network/privacy_policy.html" target="_blank">Privacy & Policy</a></li>
-          <li><a href="https://www.portal.network/terms_coditions.html" target="_blank">Terms of use</a></li>
+          <li><router-link to="/privacy">Privacy & Policy</router-link></li>
+          <li><router-link to="/terms">Terms of use</router-link></li>
         </ul>
         <p>© 2018 Portal.Network</p>
       </div>

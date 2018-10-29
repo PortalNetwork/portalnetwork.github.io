@@ -4,21 +4,21 @@
     "url": "https://market.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu01.svg",
-    "description": "A website that allows any user to easily search for domain names across Portal Network’s supported protocols, and check each domain’s availability status and asking price denominated in the protocol’s currency. Users can place bids on domains they are interested in, purchase domains, or sell domains they control for prices they specify."
+    "description": "A platform that allows any users to sell, buy, bid and manage domain names of protocols supported by Portal Network. Users can search and retrieve the status of all BNS domains and control the domains they own."
   },
   {
     "itemName": "Domain Manager",
     "url": "https://manager.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu02.svg",
-    "description": "Users can easily manage their domains here. Users can view all of the domains they have purchased through Portal Network’s Marketplace. Users have the option to bind their owned domain names to a corresponding protocol address of their choosing. Users can update their existing domains to address mappings as they wish."
+    "description": "Users can easily manage their domains with the built-in tools. For instance, users can view domains they have purchased, bind their domain names to different addresses, and update their existing domains to address mappings as they wish."
   },
   {
     "itemName": "Web Builder",
     "url": "https://web.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu03.svg",
-    "description": "A tool whereby non-technical users can build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS."
+    "description": "A tool for non-technical users to build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS."
   },
   {
     "itemName": "Browser Extension",
@@ -52,10 +52,10 @@
       }
     ],
     "logo": "assets/images/solution/mu06.svg",
-    "description": "A website where users can easily search information about different BNS without having to login. Information includes data points such as the ownership of the BNS, resolver contract, registrar details, bidding price, the ÐWeb hash, and transaction records."
+    "description": "A website where users can easily retrieve information about different BNS. Information includes data points such as the ownership of the BNS, resolver contract, registrar details, bidding price, the ÐWeb hash, and transaction records."
   },
   {
-    "itemName": "Resolver",
+    "itemName": "BNS Resolver",
     "url": "https://resolver.portal.network",
     "subItems": [
       {
@@ -68,7 +68,7 @@
       }
     ],
     "logo": "assets/images/solution/mu07.svg",
-    "description": "This allows user to easily connect BNS with an IPFS hash, wallet, and smart contract directly with blockchain by using metamask and Coinbase Wallet (Toshi)."
+    "description": "A tool that enables users to easily connect BNS with an IPFS hash, wallet address, and smart contract directly through wallets like Metamask and Coinbase Wallet (Toshi)."
   },
   {
     "itemName": "Mobile Applications",
