@@ -10,79 +10,79 @@
     <ul class="list">
       <li>
         <a href="https://www.ethereum.org" target="_blank">
-          <img src="../images/eth.png" alt=""/>
+          <img src="../../images/eth.png" alt=""/>
           <p>Ethereum</p>
         </a>
       </li>
       <li>
         <a href="https://ethereumclassic.org" target="_blank">
-          <img src="../images/etc.png" alt=""/>
+          <img src="../../images/etc.png" alt=""/>
           <p>Ethereum Classic</p>
         </a>
       </li>
       <li>
         <a href="https://wanchain.org" target="_blank">
-          <img src="../images/wan.png" alt=""/>
+          <img src="../../images/wan.png" alt=""/>
           <p>Wanchain</p>
         </a>
       </li>
       <li>
         <a href="https://qtum.org/en" target="_blank">
-          <img src="../images/qtum.png" alt=""/>
+          <img src="../../images/qtum.png" alt=""/>
           <p>QTUM</p>
         </a>
       </li>
       <li>
         <a href="https://icon.foundation/?lang=en" target="_blank">
-          <img src="../images/icon.png" alt=""/>
+          <img src="../../images/icon.png" alt=""/>
           <p>ICON</p>
         </a>
       </li>
       <li>
         <a href="https://bluzelle.com" target="_blank">
-          <img src="../images/blu.png" alt=""/>
+          <img src="../../images/blu.png" alt=""/>
           <p>Bluzelle</p>
         </a>
       </li>
       <li>
         <a href="https://www.coingecko.com/en" target="_blank">
-          <img src="../images/coingecko.png" alt=""/>
+          <img src="../../images/coingecko.png" alt=""/>
           <p>CoinGecko</p>
         </a>
       </li>
       <li>
         <a href="https://kenetic.capital" target="_blank">
-          <img src="../images/kenetic.png" alt=""/>
+          <img src="../../images/kenetic.png" alt=""/>
           <p>Kenetic</p>
         </a>
       </li>
       <li>
         <a href="https://enigma.co" target="_blank">
-          <img src="../images/enigma.png" alt=""/>
+          <img src="../../images/enigma.png" alt=""/>
           <p>Enigma</p>
         </a>
       </li>
       <li>
         <a href="https://nem.io" target="_blank">
-          <img src="../images/nem.png" alt=""/>
+          <img src="../../images/nem.png" alt=""/>
           <p>NEM</p>
         </a>
       </li>
       <li>
         <a href="https://nkn.org" target="_blank">
-          <img src="../images/nkn.png" alt=""/>
+          <img src="../../images/nkn.png" alt=""/>
           <p>NKN</p>
         </a>
       </li>
       <li>
         <a href="https://tomochain.com" target="_blank">
-          <img src="../images/tomochain.png" alt=""/>
+          <img src="../../images/tomochain.png" alt=""/>
           <p>TomoChain</p>
         </a>
       </li>
       <li>
         <a href="https://quarkchain.io" target="_blank">
-          <img src="../images/quarkchain.png" alt=""/>
+          <img src="../../images/quarkchain.png" alt=""/>
           <p>QuarkChain</p>
         </a>
       </li>

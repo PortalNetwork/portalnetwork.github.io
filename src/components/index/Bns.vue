@@ -49,14 +49,14 @@
   <div class="bns">
     <div class="content">
       <div class="parallax_box">
-        <div id="b1" class="block1"><img src="../images/block01.png" alt=""/></div>
-        <div id="b2" class="block2"><img src="../images/block02.png" alt=""/></div>
-        <div id="b3" class="block3"><img src="../images/block03.png" alt=""/></div>
+        <div id="b1" class="block1"><img src="../../images/block01.png" alt=""/></div>
+        <div id="b2" class="block2"><img src="../../images/block02.png" alt=""/></div>
+        <div id="b3" class="block3"><img src="../../images/block03.png" alt=""/></div>
       </div>
       <div class="summary">
         <span id="bns" class="anchor"></span>
         <div class="bns_box">
-          <img src="../images/bns.png" alt=""/>
+          <img src="../../images/bns.png" alt=""/>
           <h3>BNS</h3>
           <div class="special">
             <p><span>B</span>lockchain</p>
@@ -75,25 +75,25 @@
       </div>
       <div class="domain_box">
         <p>yourname.eth</p>
-        <span><img src="../images/search.png" alt=""/></span>
+        <span><img src="../../images/search.png" alt=""/></span>
       </div>
       <ul class="identity">
         <li>
-          <div class="figure"><img src="../images/ipfs.png" alt=""/></div>
+          <div class="figure"><img src="../../images/ipfs.png" alt=""/></div>
           <div class="text_box">
             <h5>IPFS Address</h5>
             <p>0xd1640e2d0d820f942471cd98040be9f810e85…</p>
           </div>
         </li>
         <li>
-          <div class="figure"><img src="../images/contract.png" alt=""/></div>
+          <div class="figure"><img src="../../images/contract.png" alt=""/></div>
           <div class="text_box">
             <h5>Smart Contract</h5>
             <p>0x5FfC014343cd971B7eb70732021E26C35B744…</p>
           </div>
         </li>
         <li>
-          <div class="figure"><img src="../images/wallet.png" alt=""/></div>
+          <div class="figure"><img src="../../images/wallet.png" alt=""/></div>
           <div class="text_box">
             <h5>Wallet Address</h5>
             <p>0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>

@@ -69,7 +69,7 @@
         <div class="about">
           <div class="right">
             <a href="https://mumei.portal.network" target="_blank">
-              <figure class="figure"><img src="../images/mumei.png" alt=""/></figure>
+              <figure class="figure"><img src="../../images/mumei.png" alt=""/></figure>
               <h4>mumei</h4>
             </a>
           </div>
@@ -104,7 +104,7 @@
         <div class="about">
           <div class="right">
             <a href="http://kaizen.portal.network/" target="_blank">
-              <div class="figure"><img src="../images/kaizen.png" alt=""/></div>
+              <div class="figure"><img src="../../images/kaizen.png" alt=""/></div>
               <h4>kaizen</h4>
             </a>
           </div>

@@ -67,20 +67,10 @@ const config = {
           'css-loader',
           'postcss-loader',
           {
-            loader: 'sass-loader',
-            'options': {
-              // data: `@import "./src/scss/global/global.scss";`
-            }
+            loader: 'sass-loader'
           }
 
         ]
-      },
-      {
-        test: /\.(woff|woff2|ttf|eot)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]?[hash:8]'
-        }
       },
       {
         test: /\.svg$/,

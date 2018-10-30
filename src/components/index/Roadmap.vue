@@ -144,7 +144,7 @@ export default {
     <div class="paper">
       <p>White Paper Request Form.</p>
       <div class="read_box">
-        <a class="btn" href="javascript:;" target="_blank"><img src="../images/whitepaper_h.png" alt=""></a>
+        <a class="btn" href="javascript:;" target="_blank"><img src="../../images/whitepaper_h.png" alt=""></a>
         <p>Read Our White Paper</p>
       </div>
     </div>

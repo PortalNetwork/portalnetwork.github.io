@@ -74,7 +74,7 @@ export default {
         </div>
       </div>
       <div class="wish_box">
-        <a href="javascript:;" target="_blank" @click="coming"><img src="../images/plus.png" alt=""/></a>
+        <a href="javascript:;" target="_blank" @click="coming"><img src="../../images/plus.png" alt=""/></a>
         <p>MAKE A WISH</p>
       </div>
     </div>

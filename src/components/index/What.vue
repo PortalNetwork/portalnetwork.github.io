@@ -14,9 +14,8 @@
 </template>
 
 <style lang="scss" scoped>
-$container : 960px;
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
+
 .what {
   margin-top: -224px;
   @media screen and (max-width: $pad) {

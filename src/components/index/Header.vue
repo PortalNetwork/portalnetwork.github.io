@@ -29,12 +29,12 @@ export default {
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('solution')">Solution</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('roadmap')">Roadmap</a></li>
 				</ul>
-				<a href="javascript:;" class="cancel" @click="isMenuOpen = false">
-					<img src="../images/cancel.png" alt=""/>
-				</a>
+				<!-- <a href="javascript:;" class="cancel" @click="isMenuOpen = false">
+					<img src="../../images/cancel.png" alt=""/>
+				</a> -->
 			</div>
       <div class="left">
-				<h1><img src="../images/logo.png" alt=""/></h1>
+				<h1><img src="../../images/logo.png" alt=""/></h1>
 				<div>
 					<div class="btn">
 						<a href="https://t.me/portalnetworkofficial" target="_blank">Join Us On Telegram</a>
@@ -50,13 +50,13 @@ export default {
 			</div>
 		</nav>
     <div class="content">
-      <h1><img src="../images/logo.png" alt=""/></h1>
+      <h1><img src="../../images/logo.png" alt=""/></h1>
       <div>
         <a class="telegram" href="https://t.me/portalnetworkofficial" target="_blank">
           <span></span>
           <p>Join Us On Telegram</p>
         </a>
-        <a class="menu_btn" href="javascript:;" @click="toggleMenu">
+        <a :class="{menu_btn: true,active: isMenuOpen}" href="javascript:;" @click="toggleMenu">
           <span></span>
         </a>
       </div>
@@ -65,98 +65,95 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$pad: 940px;
-$mob: 720px;
-$blue: #231abe;
-$green: #19f4e4;
+@import "./src/scss/_var.scss";
 .header {
-  background-color: #231abe;
-  padding-top: 40px;
+  background-color: $blue;
+  padding: 40px 0px 84px 0px;
   @media screen and (max-width: $mob) {
-    padding-top: 30px;
+    padding: 32px 0px 25px 0px;
   }
-  .content {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0px auto;
+}
+.content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  @media screen and (max-width: $pad) {
+    padding: 0px 20px;
+  }
+  @media screen and (max-width: $mob) {
+    display: block;
+  }
+  >div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    @media screen and (max-width: $pad) {
-      padding: 0px 20px;
-    }
     @media screen and (max-width: $mob) {
-      display: block;
-    }
-    >div {
-      display: flex;
-      align-items: center;
-      @media screen and (max-width: $mob) {
-        justify-content: center;
-      }
+      justify-content: center;
     }
   }
-  h1 {
-    width: 300px;
-    @media screen and (max-width: $mob) {
-      width: 224px;
-      margin: 0px auto 40px auto;
+}
+h1 {
+  width: 300px;
+  @media screen and (max-width: $mob) {
+    width: 224px;
+    margin: 0px auto 40px auto;
+  }
+  img {
+    width: 100%;
+  }
+}
+.telegram {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  padding: 0px 15px;
+  background-color: $blue_d1;
+  transition: all .5s;
+  @media screen and (max-width: $mob) {
+    width: 204px;
+    height: 44px;
+    line-height: 44px;
+    padding: 0px 23px;
+  }
+  &:hover {
+    background-color: $green;
+    span {
+      background-image: url('~images/telegram_h.png');
     }
+    p {
+      color: $blue;
+    }
+  }
+  span {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url('~images/telegram.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+    margin-right: 8px;
     img {
       width: 100%;
     }
   }
-  .telegram {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 20px;
-    padding: 0px 15px;
-    background-color: #141e6a;
-    transition: all .5s;
-    @media screen and (max-width: $mob) {
-      width: 204px;
-      height: 44px;
-      line-height: 44px;
-      padding: 0px 23px;
-    }
-    &:hover {
-      background-color: $green;
-      span {
-        background-image: url('~images/telegram_h.png');
-      }
-      p {
-        color: $blue;
-      }
-    }
-    span {
-      display: block;
-      width: 18px;
-      height: 18px;
-      background-image: url('~images/telegram.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 100% auto;
-      margin-right: 8px;
-      img {
-        width: 100%;
-      }
-    }
-    p {
-      color: #fff;
-    }
+  p {
+    color: #fff;
   }
 }
-
 .menu_btn {
   display: flex;
   width: 35px;
-  margin-left: 25px;
+  margin-left: 28px;
   align-items: flex-end;
   flex-direction: column;
+  z-index: 3;
   @media screen and (max-width: $mob) {
     position: fixed;
     top: 35px;
@@ -174,7 +171,8 @@ $green: #19f4e4;
     width: 60%;
     height: 1px;
     background-color: #fff;
-    transition: width 0.5s;
+    transform: translateY(0px) rotate(0deg);
+    transition: all 0.5s;
   }
   &:after {
     content: "";
@@ -182,7 +180,28 @@ $green: #19f4e4;
     width: 100%;
     height: 1px;
     background-color: #fff;
-    transition: width 0.5s;
+    transform: translateY(0px) rotate(0deg);
+    transition: all 0.5s;
+  }
+  &.active {
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+    &:before {
+      width: 100%;
+      transform: translateY(13px) rotate(45deg);
+      @media screen and (max-width: $mob) {
+        transform: translateY(10px) rotate(45deg);
+      }
+    }
+    &:after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    span {
+      background-color: transparent;
+    }
   }
   span {
     display: block;
@@ -209,7 +228,7 @@ nav {
   background-color: $blue;
   @media screen and (max-width: $mob) {
     display: block;
-    background-color: #0c1346;
+    background-color: $blue_d2;
     padding: 27px 45px 27px 45px;
   }
   &:before{
@@ -238,7 +257,7 @@ nav {
     width: 100%;
     min-height: auto;
     order: 1;
-    background-color: #0c1346;
+    background-color: $blue_d2;
   }
   h1 {
     width: 300px;
@@ -265,7 +284,7 @@ nav {
       border-radius: 30px;
       padding: 0px 22px;
       color: #fff;
-      background-color: #141e6a;
+      background-color: $blue_d1;
       transition: all 0.5s;
       @media screen and (max-width: $mob) {
         background-color: $green;
@@ -353,7 +372,7 @@ nav {
 }
 .right {
   width: 50%;
-  background-color: #0c1346;
+  background-color: $blue_d2;
   min-height: 100%;
   display: flex;
   align-items: center;
@@ -387,27 +406,13 @@ nav {
       &:hover {
         color: #2894ff;
         &.article {
-          color: #ff675c;
+          color: $red;
         }
       }
       &.article {
-        color: #00d5bf;
+        color: $green;
       }
     }
-  }
-}
-
-.cancel {
-  display: block;
-  width: 25px;
-  height: 25px;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 3;
-  cursor: pointer;
-  img {
-    width: 100%;
   }
 }
 </style>
