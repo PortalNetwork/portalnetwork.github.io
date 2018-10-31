@@ -1,17 +1,13 @@
 <script>
-export default {
-  created(){
-    AOS.init();
-  }
-};
+export default {};
 </script>
 
 <template>
   <div class="hero">
     <div class="content">
-      <div class="text_box" data-aos="fade-down">
-        <h2>Connect, Enhance Existing Blockchain Technologies.</h2>
-        <p>Decentralized Domain Name for the New Internet.</p>
+      <div class="text_box">
+        <h2 data-aos="fade-right" data-aos-duration="1000">Connect, Enhance Existing Blockchain Technologies.</h2>
+        <p data-aos="fade-right" data-aos-duration="1500">Decentralized Domain Name for the New Internet.</p>
       </div>
       <div class="figure">
         <div class="block a"><img src="../../images/hero_block.png" alt=""/></div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>faucet pool</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="77.9957606%" y1="-39.6259857%" x2="26.4845162%" y2="83.4407869%" id="linearGradient-1">
+            <stop stop-color="#FFC900" offset="0%"></stop>
+            <stop stop-color="#FF6A00" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="83.7053925%" y1="2.56886361%" x2="-19.6865486%" y2="131.829136%" id="linearGradient-2">
+            <stop stop-color="#FCFBFA" stop-opacity="0.6" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.835541214" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="faucet-pool" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Faucet-Pool" transform="translate(3.281250, 0.000000)">
+            <path d="M5.58293757,14.0833959 C2.64343792,15.7810598 0.831957863,18.9177657 0.831957863,22.31253 L0.831957863,47.317716 C0.831957863,50.7124803 2.64343792,53.8491862 5.58293757,55.54685 L27.238435,68.0491612 C30.1784981,69.7468255 33.8003313,69.7468255 36.7403944,68.0491612 L58.3953284,55.54685 C61.3353915,53.8491862 63.1463081,50.7124803 63.1463081,47.317716 L63.1463081,22.31253 C63.1463081,18.9177657 61.3353915,15.7810598 58.3953284,14.0833959 L36.7403944,1.58108458 C33.8003313,-0.116579301 30.1784981,-0.116579301 27.238435,1.58108458 L5.58293757,14.0833959 Z" id="Fill-1" fill="url(#linearGradient-1)"></path>
+            <g id="Group-27" transform="translate(6.832883, 17.500000)" fill="url(#linearGradient-2)" fill-rule="nonzero">
+                <circle id="Oval-Copy-3" cx="34.3746118" cy="17.315123" r="15.4743195"></circle>
+                <circle id="Oval-Copy-4" fill-opacity="0.8" cx="16.5267837" cy="17.315123" r="15.4743195"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

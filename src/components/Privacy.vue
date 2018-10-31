@@ -246,7 +246,7 @@ export default {};
   }
   p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     color: #222;
     line-height: 1.5;
     &+p {

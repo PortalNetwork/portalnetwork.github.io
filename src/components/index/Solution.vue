@@ -14,8 +14,8 @@
           "description": ""
         },
         isMobileItemOpen: false,
-        mumeiClickIdx: 0,
-        kaizenClickIdx: 0
+        mumeiClickIdx: null,
+        kaizenClickIdx: null
       }
     },
     methods: {
@@ -29,22 +29,39 @@
       },
       setMumeiData(obj){
         this.mumeiItems = obj;
-        this.onMumeiHover(0);
       },
       setKaizenData(obj){
         this.kaizenItems = obj;
-        this.onKaizenHover(0);
       },
-      onMumeiHover(idexOf){
+      onMumeiHover(event,idexOf){
+        let el = event.target.querySelector(".sub_item");
+        el.classList.add("active");
         this.mumeiInfo = {
           "logo": this.mumeiItems[idexOf].logo,
           "description": this.mumeiItems[idexOf].description
+        };
+      },
+      leaveMumeiHover(event){
+        let el = event.target.querySelector(".sub_item");
+        if(Object.values(el.classList).indexOf("active") > 0){
+          el.classList.remove("active");
+        }
+
+        this.mumeiInfo = {
+          "logo": "",
+          "description": ""
         };
       },
       onKaizenHover(idexOf){
         this.kaizenInfo = {
           "logo": this.kaizenItems[idexOf].logo,
           "description": this.kaizenItems[idexOf].description
+        };
+      },
+      leaveKaizenHover(){
+        this.kaizenInfo = {
+          "logo": "",
+          "description": ""
         };
       },
       onMumeiClick(idx){
@@ -64,24 +81,24 @@
   <div class="solution">
     <span id="solution" class="anchor"></span>
     <div class="content">
-      <h3>Solution</h3>
+      <h3 data-aos="fade-right">Solution</h3>
       <div class="mumei">
         <div class="about">
-          <div class="right">
+          <div class="right" data-aos="fade-right" data-aos-duration="1800">
             <a href="https://mumei.portal.network" target="_blank">
               <figure class="figure"><img src="../../images/mumei.png" alt=""/></figure>
               <h4>mumei</h4>
             </a>
           </div>
           <div class="left">
-            <h5>Non-technical Users Adoption</h5>
-            <p>MUMEI is a platform with a series of tools that empowers both technical & non-technical users to easily interact with and deploy ÐWebs or ÐApps.</p>
+            <h5 data-aos="fade-right" data-aos-duration="1000">Non-technical Users Adoption</h5>
+            <p data-aos="fade-right" data-aos-duration="1200">MUMEI is a platform with a series of tools that empowers both technical & non-technical users to easily interact with and deploy ÐWebs or ÐApps.</p>
           </div>
         </div>
         <div class="item_box">
           <ul class="item">
-            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover(mumeiIdx)" @click="onMumeiClick(mumeiIdx)">
-              <ul class="sub_item" v-if="item.subItems.length > 0">
+            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover($event,mumeiIdx)" @mouseleave="leaveMumeiHover($event)" @click="onMumeiClick(mumeiIdx)">
+              <ul class="sub_item">
                 <li v-for="(subItem,idx) in item.subItems" :key="idx">
                   <a :href="subItem.subUrl" target="_blank">{{subItem.name}}</a>
                 </li>
@@ -102,20 +119,20 @@
       </div>
       <div class="kaizen">
         <div class="about">
-          <div class="right">
+          <div class="right" data-aos="fade-right" data-aos-duration="2400">
             <a href="http://kaizen.portal.network/" target="_blank">
               <div class="figure"><img src="../../images/kaizen.png" alt=""/></div>
               <h4>kaizen</h4>
             </a>
           </div>
           <div class="left">
-            <h5>Technical Users Adoption</h5>
-            <p>KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+            <h5 data-aos="fade-right" data-aos-duration="2200">Technical Users Adoption</h5>
+            <p data-aos="fade-right" data-aos-duration="2800">KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
           </div>
         </div>
         <div class="item_box">
           <ul class="item">
-            <li v-for="(item,kaizenIdx) in kaizenItems" :key="kaizenIdx" :class="{open: kaizenClickIdx === kaizenIdx}" @mouseenter="onKaizenHover(kaizenIdx)" @click="onKaizenClick(kaizenIdx)">
+            <li v-for="(item,kaizenIdx) in kaizenItems" :key="kaizenIdx" :class="{open: kaizenClickIdx === kaizenIdx}" @mouseenter="onKaizenHover(kaizenIdx)" @mouseleave="leaveKaizenHover()" @click="onKaizenClick(kaizenIdx)">
               <ul class="sub_item" v-if="item.subItems.length > 0">
                 <li v-for="(subItem,idx) in item.subItems" :key="idx">
                   <a :href="subItem.subUrl" target="_blank">{{subItem.name}}</a>
@@ -140,20 +157,7 @@
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
-$pad: 940px;
-$mob: 720px;
-$gray: #979797;
-$blue_d: #0c1346;
-$bg_gray: #f7f6f4;
-
-%clear {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
+@import "./src/scss/_var.scss";
 
 @mixin solution($item_bg) {
   .about {
@@ -266,7 +270,7 @@ $bg_gray: #f7f6f4;
         position: relative;
       }
       &:hover {
-        background-color: $blue_d;
+        background-color: $blue_d2;
         padding: 0px 56px 0px 30px;
         margin-left: 45px;
         @media screen and (max-width: $pad) {
@@ -278,7 +282,7 @@ $bg_gray: #f7f6f4;
           color: $item_bg;
           @media screen and (max-width: $pad) {
             padding: 0px 48px;
-            background-color: $blue_d;
+            background-color: $blue_d2;
             pointer-events: none;
           }
         }
@@ -317,6 +321,11 @@ $bg_gray: #f7f6f4;
     margin-bottom: 3px;
     text-align: left;
     float: left;
+    opacity: 0;
+    transition: opacity .5s;
+    &.active {
+      opacity: 1;
+    }
     @media screen and (max-width: $pad) {
       display: none;
       max-width: 100%;
@@ -336,6 +345,7 @@ $bg_gray: #f7f6f4;
       >a {
         display: inline-block;
         font-size: 12px;
+        font-weight: bold;
         height: 60px;
         line-height: 60px;
         color: #fff;
@@ -433,7 +443,7 @@ $bg_gray: #f7f6f4;
 h3 {
   font-size: 80px;
   font-weight: 900;
-  color: $blue_d;
+  color: $blue_d2;
   text-align: right;
   margin-bottom: 109px;
   @media screen and (max-width: $pad) {

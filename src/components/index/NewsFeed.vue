@@ -47,11 +47,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
-$pad: 940px;
-$mob: 720px;
-$blue: #231abe;
-$blue_d1: #141e6a;
+@import "./src/scss/_var.scss";
+
 %box {
   width: 48%;
   @media screen and (max-width: $mob) {

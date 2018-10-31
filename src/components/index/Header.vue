@@ -72,6 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 .header {
   background-color: $blue;
   padding: 40px 0px 84px 0px;

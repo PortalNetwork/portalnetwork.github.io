@@ -66,6 +66,7 @@
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 .footer {
   background-color: $blue_d1;
   padding: 56px 0px 66px 0px;

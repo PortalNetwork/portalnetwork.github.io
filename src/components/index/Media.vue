@@ -15,8 +15,8 @@
 </template>
 
 <style lang="scss" scoped>
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
+
 .social_media {
   display: flex;
   flex-direction: column;

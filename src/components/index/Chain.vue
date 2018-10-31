@@ -83,6 +83,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 .chain {
   max-width: 1100px;
   width: 100%;
@@ -103,21 +104,21 @@ export default {
     position: absolute;
     left: -90px;
     top: -83px;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
       display: none;
     }
   }
   &:after {
     content: "";
     display: block;
-    width: 105px;
-    height: 151px;
+    width: 206px;
+    height: 150px;
     background: url('~images/block_bpns2.png') center center no-repeat;
     background-size: 100% auto;
     position: absolute;
-    right: -130px;
+    right: -228px;
     top: 318px;
-    @media screen and (max-width: $mob) {
+    @media screen and (max-width: $pad) {
       display: none;
     }
   }

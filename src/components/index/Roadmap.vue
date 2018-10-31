@@ -80,6 +80,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 %date {
   font-size: 40px;
   font-weight: 800;

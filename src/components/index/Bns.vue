@@ -40,20 +40,20 @@
         <span id="bns" class="anchor"></span>
         <div class="bns_box">
           <img src="../../images/bns.png" alt=""/>
-          <h3>BNS</h3>
+          <h3 data-aos="fade-right" data-aos-duration="1000">BNS</h3>
           <div class="special">
-            <p><span>B</span>lockchain</p>
-            <p><span>N</span>ame</p>
-            <p><span>S</span>ervice</p>
+            <p data-aos="fade-right" data-aos-duration="1500"><span>B</span>lockchain</p>
+            <p data-aos="fade-right" data-aos-duration="2000"><span>N</span>ame</p>
+            <p data-aos="fade-right" data-aos-duration="2500"><span>S</span>ervice</p>
           </div>
         </div>
         <div class="summary_box">
-          <h4>What is BNS?</h4>
-          <p>BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
+          <h4 data-aos="fade-right" data-aos-duration="3000">What is BNS?</h4>
+          <p data-aos="fade-right" data-aos-duration="3000">BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
         </div>
         <div class="summary_box identity">
-          <h4>Human-readable Identity</h4>
-          <p>Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>
+          <h4 data-aos="fade-right" data-aos-duration="4000">Human-readable Identity</h4>
+          <p data-aos="fade-right" data-aos-duration="4800">Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>
         </div>
       </div>
       <div class="domain_box">
@@ -89,6 +89,7 @@
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 .bns {
   background-color: $bg_gray;
   padding: 62px 0px 152px 0px;

@@ -68,8 +68,15 @@ import axios from 'axios';
 </script>
 
 <template>
-  <div class="repositories" v-show="isReady">
-    <div class="content">
+  <div class="repositories">
+    <div class="loading" v-show="!isReady">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="content" v-show="isReady">
       <header>
         <h3>REPOSITORIES</h3>
         <div class="pagination_box">
@@ -102,6 +109,7 @@ import axios from 'axios';
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
+
 %bar_text {
   font-size: 12px;
   font-weight: 600;
@@ -131,6 +139,49 @@ import axios from 'axios';
   @media screen and (max-width: $mob) {
     position: relative;
     padding: 0px 43px 50px 43px;
+    min-height: 100%;
+  }
+}
+.loading {
+  min-height: 559px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: $blue;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 6px;
+      height: 51px;
+    }
+    50%, 100% {
+      top: 19px;
+      height: 26px;
+    }
   }
 }
 header {

@@ -366,7 +366,7 @@ nav {
       a {
         display: block;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         text-decoration: none;
         color: #222;
         &:hover {
@@ -377,7 +377,7 @@ nav {
   }
   .copyright {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     color: #222;
   }
 }

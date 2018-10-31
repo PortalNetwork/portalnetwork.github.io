@@ -91,9 +91,8 @@
 </template>
 
 <style lang="scss" scoped>
-$container : 960px;
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
+
 .partnership {
   max-width: $container;
   width: 100%;

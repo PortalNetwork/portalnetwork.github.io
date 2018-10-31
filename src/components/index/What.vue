@@ -6,8 +6,8 @@
   <div class="what">
     <div class="content">
       <div>
-        <h3>What is Portal Network</h3>
-        <p>Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
+        <h3 data-aos="fade-right" data-aos-duration="1000">What is Portal Network</h3>
+        <p data-aos="fade-right" data-aos-duration="1500">Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
       </div>
     </div>
   </div>
