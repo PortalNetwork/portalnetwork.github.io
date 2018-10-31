@@ -9,9 +9,15 @@ export default {
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+      if(this.isMenuOpen){
+        document.querySelector("body").classList.add("active");
+      }else {
+        document.querySelector("body").classList.remove("active");
+      }
     },
     scrollTo(componentName){
       this.isMenuOpen = false;
+      document.querySelector("body").classList.remove("active");
       animateScrollTo(document.querySelector(`#${componentName}`));
     }
   }

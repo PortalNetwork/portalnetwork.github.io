@@ -116,7 +116,7 @@ $blue_d1: #141e6a;
           width: 100%;
           height: 35px;
           background-color: $blue;
-          padding: 5px 20px;
+          padding: 10px 20px;
           img {
             height: 100%;
           }

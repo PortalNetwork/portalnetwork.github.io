@@ -61,8 +61,8 @@ import axios from 'axios';
       }
     },
     mounted(){
-      this.swiperInit();
       this.getRepositoryData();
+      this.swiperInit();
     }
   }
 </script>
@@ -101,14 +101,11 @@ import axios from 'axios';
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
-$blue: #231abe;
-$bg_gray: #f7f6f4;
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
 %bar_text {
   font-size: 12px;
   font-weight: 600;
+  transition: color .5s;
 }
 %repository_button {
   width: 8px;
@@ -119,7 +116,7 @@ $mob: 720px;
 }
 .repositories {
   background-color: $bg_gray;
-  padding: 0px 0px 190px 0px;
+  padding: 0px 0px 152px 0px;
   @media screen and (max-width: $mob) {
     padding: 0px 0px 60px 0px;
   }
@@ -204,20 +201,35 @@ header {
 .repository_box {
   display: block;
   background-color: #fff;
+  transition: background-color .5s;
   padding: 22px 15px;
   @media screen and (max-width: $mob) {
     padding: 16px 25px;
     min-height: 157px;
   }
+  &:hover {
+    background-color: $blue;
+    h4,p,.lang,.star,.share {
+      color: #fff;
+    }
+    .star:before {
+      background-image: url('~images/star_w.png');
+    }
+    .share:before {
+      background-image: url('~images/share_w.png');
+    }
+  }
   h4 {
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 20px;
+    transition: color .5s;
   }
   >p {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 18px;
+    transition: color .5s;
   }
   >ul {
     display: flex;
@@ -249,9 +261,12 @@ header {
       display: inline-block;
       width: 10px;
       height: 10px;
-      background: url('~images/star.png') center center no-repeat;
+      background-image: url('~images/star.png');
+      background-position: center center;
+      background-repeat: no-repeat;
       background-size: 100% auto;
       margin-right: 4px;
+      transition: background-image .5s;
     }
   }
   .share {
@@ -261,9 +276,12 @@ header {
       display: inline-block;
       width: 10px;
       height: 10px;
-      background: url('~images/share.png') center center no-repeat;
+      background-image: url('~images/share.png');
+      background-position: center center;
+      background-repeat: no-repeat;
       background-size: 100% auto;
       margin-right: 4px;
+      transition: background-image .5s;
     }
   }
 }

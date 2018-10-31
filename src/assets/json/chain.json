@@ -3,11 +3,12 @@
     "title": "Ethereum (ENS)",
     "icon": "assets/images/chain/chain_eth.png",
     "iconh": "assets/images/chain/chain_eth_h.png",
-    "description": "Ethereum is an open blockchain platform that lets anyone build and use decentralized applications that run on blockchain technology.",
+    "description": "Ethereum is an public blockchain platform that allows anyone build, use and contribute decentralized applications backed by Ethereum blockchain.",
     "detail": [
       {
         "name": ".eth",
         "description": ".eth is the top level domain of ENS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "",
@@ -91,11 +92,12 @@
     "title": "Wanchain (WNS)",
     "icon": "assets/images/chain/chain_wan.png",
     "iconh": "assets/images/chain/chain_wan_h.png",
-    "description": "Wanchain is creating a new financial market of digital assets by implementing cross-chain transfers across different blockchains. With the number of various coins, tokens, and blockchains currently in the ecosystem, there’s not currently an efficient, decentralized way to exchange value between them. As an independent blockchain, Wanchain connects the accounts of independent chains to provide a framework to exchange these assets.",
+    "description": "Wanchain is creating a new financial market of digital assets by implementing cross-chain transfers across different blockchains. By connecting accounts of idependent chains, Wanchain provides an efficient, decentralized way to exchange value between tokens across different protocols.",
     "detail": [
       {
         "name": ".wan",
         "description": ".wan is the top level domain of WNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "",
@@ -179,11 +181,12 @@
     "title": "Ethereum Classic (ECNS)",
     "icon": "assets/images/chain/chain_etc.png",
     "iconh": "assets/images/chain/chain_etc_h.png",
-    "description": "Ethereum Classic is an open-source, public, blockchain-based distributed computing platform featuring smart contract (scripting) functionality. It provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), which can execute scripts using an international network of public nodes.",
+    "description": "Ethereum Classic is an open-source, blockchain-based distributed computing platform featuring smart contract (scripting) functionality. It provides a decentralized Turing-complete virtual machine, the Ethereum Virtual Machine (EVM), that can execute scripts using an international network of public nodes.",
     "detail": [
       {
         "name": ".etc",
         "description": ".etc is the top level domain of ECNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "",
@@ -267,11 +270,12 @@
     "title": "ICON (INS)",
     "icon": "assets/images/chain/chain_icon.png",
     "iconh": "assets/images/chain/chain_icon_h.png",
-    "description": "ICON is building a massive platform that will allow various blockchains to interact with each other via smart contracts. Existing within what developers brand the ICON Republic, communities will connect with each other using ICON’s loopchain technology.",
+    "description": "ICON is building a massive platform that will allow various blockchains to interact with each other via smart contracts. Inside ICON Republic, communities will connect with each other using ICON’s loopchain technology.",
     "detail": [
       {
         "name": ".icon",
         "description": ".icon is the top level domain of INS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -351,11 +355,12 @@
     "title": "QTUM (QNS)",
     "icon": "assets/images/chain/chain_qtum.png",
     "iconh": "assets/images/chain/chain_qtum_h.png",
-    "description": "QTUM is a Ethereum-Bitcoin Hybrid blockchain, which integration smart contract layer into Bitcoin. And aims to be the bridge between the Bitcoin and Ethereum communities, the real world and blockchain world.",
+    "description": "QTUM is a Ethereum-Bitcoin Hybrid blockchain, which integrates smart contract layer into Bitcoin. It also aims to connect Bitcoin and Ethereum communities; and to connect the real world and the blockchain world.",
     "detail": [
       {
         "name": ".qtum",
         "description": ".qtum is the top level domain of QNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "",
@@ -424,11 +429,12 @@
     "title": "NEO (NNS)",
     "icon": "assets/images/chain/chain_neo.png",
     "iconh": "assets/images/chain/chain_neo_h.png",
-    "description": "NEO is an open network economy focus on digital asset, it utilizes blockchain technology to digitize assets by using smart contracts.",
+    "description": "NEO is an open network economy that focuses on digital asset. It utilizes blockchain technology to digitize assets through smart contracts.",
     "detail": [
       {
         "name": ".neo",
         "description": ".neo is the top level domain of NNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -508,11 +514,12 @@
     "title": "Aelf (AENS)",
     "icon": "assets/images/chain/chain_aelf.png",
     "iconh": "assets/images/chain/chain_aelf_h.png",
-    "description": "Aelf is a customizable operating system for blockchains, and the project attempting to be the “Linux” of the blockchain community. Aelf is poised to be the Blockchain network with a decentralized cloud computing platform to facilitate the commercial needs of businesses and mainstream institutions.",
+    "description": "Aelf is a customizable operating system for blockchains, and the project attempting to be the “Linux” of the blockchain community. Aelf is poised to become the blockchain network with a decentralized cloud computing platform to facilitate the commercial needs of businesses and mainstream institutions.",
     "detail": [
       {
         "name": ".aelf",
         "description": ".aelf is the top level domain of AENS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "",
@@ -592,11 +599,12 @@
     "title": "Bitcoin Cash (BCNS)",
     "icon": "assets/images/chain/chain_bc.png",
     "iconh": "assets/images/chain/chain_bc_h.png",
-    "description": "Bitcoin Cash is an experimental digital currency that enables instant payments to anyone, anywhere in the world. It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitcoin Cash is a descendant of Bitcoin. It became a separate currency from the version supported by Bitcoin Core when the two split on August 1, 2017. Bitcoin Cash and the Bitcoin Core version of Bitcoin share the same transaction history up until the split.",
+    "description": "Bitcoin Cash is an experimental digital currency that enables instant payments to anyone, anywhere in the world. It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. Bitcoin Cash is a descendant of Bitcoin which was splited on August 1, 2017.",
     "detail": [
       {
         "name": ".bch",
         "description": ".bch is the top level domain of BCNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -676,11 +684,12 @@
     "title": "QuarkChain (QCNS)",
     "icon": "assets/images/chain/chain_quark.png",
     "iconh": "assets/images/chain/chain_quark_h.png",
-    "description": "QuarkChain is a secure, permission-less, scalable, and decentralized blockchain. One of the goals of QuarkChain is to utilize sharding technology to deliver over 1 million transactions per second (tps). Essentially, QuarkChain markets itself as a peer-to-peer blockchain with a high capacity throughput to help deliver fast and secure decentralized applications.",
+    "description": "QuarkChain is a secure, permission-less, scalable, and decentralized blockchain. One of the goals of QuarkChain is to utilize sharding technology to deliver over 1 million transactions per second (tps). Essentially, QuarkChain is a peer-to-peer blockchain with a high capacity throughput to help deliver fast and secure decentralized applications.",
     "detail": [
       {
         "name": ".qkc",
         "description": ".qkc is the top level domain of QCNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -760,11 +769,12 @@
     "title": "TomoChain (TNS)",
     "icon": "assets/images/chain/chain_tomo.png",
     "iconh": "assets/images/chain/chain_tomo_h.png",
-    "description": "TomoChain is a public blockchain for dApps. The mission is to be a leading force in building the Internet of Value, designing its infrastructure and working to create an alternative financial system which is more secure, transparent, efficient, inclusive and equitable for everyone.",
+    "description": "TomoChain is a public blockchain for dApps. The mission is to become the leading force in building the Internet of Value, designing its infrastructure to create an secure, transparent, efficient alternative financial system.",
     "detail": [
       {
         "name": ".tomo",
         "description": ".tomo is the top level domain of TNS",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -844,11 +854,12 @@
     "title": "NKN (NNS)",
     "icon": "assets/images/chain/chain_nkn.png",
     "iconh": "assets/images/chain/chain_nkn_h.png",
-    "description": "NKN is a new kind of network connectivity protocol & ecosystem powered by blockchain for an open, decentralized, and shared Internet.",
+    "description": "NKN is a new kind of network connectivity protocol & ecosystem powered by blockchain for an open, decentralized, and shared Internet. It aims to utilize blockchain data transmission for a faster and more reliable services.",
     "detail": [
       {
         "name": ".nkn",
         "description": ".nkn is the top level domain of NKN",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",
@@ -928,11 +939,12 @@
     "title": "NEM (NNS)",
     "icon": "assets/images/chain/chain_nem.png",
     "iconh": "assets/images/chain/chain_nem_h.png",
-    "description": "",
+    "description": "NEM blockchain is composed of nodes that run the center server software from NEM. These nodes implement a compelling, stable and secure program where NEM’s Smart Asset transactions can be conducted, explored and immutably stored in the blockchain ledger.",
     "detail": [
       {
         "name": ".xem",
         "description": ".xem is the top level domain of NEM",
+        "percentage": null,
         "linkItem": [
           {
             "imgStyle": "link",

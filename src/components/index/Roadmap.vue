@@ -1,119 +1,46 @@
 <script>
+import axios from 'axios';
 export default {
   data() {
     return {
       swiper: null,
-      roadmaps: [
-        {
-          month: "MAY",
-          year: "2018",
-          description: [
-            "Proposals: EIP-1062 ECIP-1044",
-            "Metamask Integration (Largest chrome wallet)"
-          ]
-        },
-        {
-          month: "JUN",
-          year: "2018",
-          description: [
-            "Partnership: Wanchain Name Service (WNS)",
-            "Development of WNS ecosystem",
-            "Integration: InterPlanetary File Storage (IPFS)"
-          ]
-        },
-        {
-          month: "JUL",
-          year: "2018",
-          description: [
-            "Partnership: Bluzelle (Decentralized Data Storage)",
-            "Deployed: Metamask Integration",
-            "Portal Network Hackathon: Korea",
-            "Deployed: QTUM Name Service (QNS)"
-          ]
-        },
-        {
-          month: "AUG",
-          year: "2018",
-          description: [
-            "Partnership: ICONick Name Service (ICON)",
-            "Partnership: Enigma (Blockchain Secret Auction)",
-            "Partnership: NOIA (Decentralized Content Delivery Network)",
-            "Released: Domain Marketplace (beta)",
-            "Released: dWeb Builder (beta)",
-            "Released: KAIZEN Platform (beta)"
-          ]
-        },
-        {
-          month: "SEP",
-          year: "2018",
-          description: [
-            "Partnership: NEM Name Service (NEM-NS)",
-            "Partnership: QuarkChain Name Service (QCNS)",
-            "Partnership: NKN Name Service (NKN-NS)",
-            "Listed: dApp on Dapp.com",
-            "Integration: Coinbase Wallet",
-            "Intergration: Brave Browser (Largest blockchain browser)"
-          ]
-        },
-        {
-          month: "OCT",
-          year: "2018",
-          description: [
-            "Deployed: BCH Name Service - Testnet",
-            "Partnership: TomoChain Name Service",
-            "Parntership: NEO Name Service (NEO-NS)",
-            "Partnership: Perlin Network (Decentralized Cloud Computing)",
-            "Partnership: Ethereum Classic Name Service (ECNS)"
-          ]
-        },
-        {
-          month: "NOV",
-          year: "2018",
-          description: [
-            "Release: BTC Name Service & LTC Name Service",
-            "Release: Cross-chain universal wallet (.portal)",
-            "Release: Kaizen SDK."
-          ]
-        },
-        {
-          month: "DEC",
-          year: "2018",
-          description: [
-            "Release: Ripple (XRP) & Stellar Lumen (XLM) Name Service",
-            "Release: Cross-chain universal wallet (.portal)",
-            "Release: Kaizen API."
-          ]
-        },
-        {
-          month: "JAN",
-          year: "2019",
-          description: [
-            "Release: Zilliqa Name Service (ZNS)",
-            "Release: Cardano Name Service (CNS)",
-            "Integration: Sia (Decentralized File Storage)"
-          ]
-        }
-      ]
+      roadmaps: []
     };
   },
-  mounted() {
-    this.swiper = new Swiper(".swiper", {
-      loop: false,
-      watchOverflow: true,
-      slidesPerView: 4,
-      slidesPerColumn: 1,
-      slidesPerGroup: 1,
-      slidesPerColumnFill: "row",
-      navigation: {
-        nextEl: '.roadmapNext',
-        prevEl: '.roadmapPrev',
-      },
-      breakpoints: { 
-        720: {
-          slidesPerView: 2,
+  methods: {
+    swiperInit(){
+      this.swiper = new Swiper(".swiper", {
+        loop: false,
+        watchOverflow: true,
+        slidesPerView: 4,
+        slidesPerColumn: 1,
+        slidesPerGroup: 1,
+        slidesPerColumnFill: "row",
+        navigation: {
+          nextEl: '.roadmapNext',
+          prevEl: '.roadmapPrev',
+        },
+        breakpoints: { 
+          720: {
+            slidesPerView: 2,
+          }
         }
-      }
-    });
+      });
+    },
+    getRoadmapData(){
+      axios.get("../assets/json/roadmap.json")
+      .then(res=>{
+        this.roadmaps = res.data;
+        setTimeout(() => {
+          this.swiper.update();
+        }, 500);
+      })
+      .catch(err=> console.log(err));
+    }
+  },
+  mounted() {
+    this.getRoadmapData();
+    this.swiperInit();
   }
 };
 </script>
@@ -152,11 +79,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
-$pad: 940px;
-$mob: 720px;
-$blue: #231abe;
-$bg_gray: #f7f6f4;
+@import "./src/scss/_var.scss";
 %date {
   font-size: 40px;
   font-weight: 800;
@@ -173,6 +96,11 @@ $bg_gray: #f7f6f4;
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  background-color: #d3d1f2;
+  transition: background-color .5s;
+  &:hover {
+    background-color: $blue;
+  }
   @media screen and (max-width: $mob) {
     width: 10px;
     height: 10px;
@@ -232,11 +160,9 @@ h3 {
   }
   .roadmapPrev {
     @extend %button;
-    background-color: rgba(35, 26, 190, 0.2);
   }
   .roadmapNext {
     @extend %button;
-    background-color: $blue;
     margin-left: 20px;
   }
 }

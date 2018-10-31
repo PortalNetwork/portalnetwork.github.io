@@ -21,6 +21,12 @@ html,body{
 	height: 100%;
 }
 
+body {
+  &.active {
+    overflow-y: hidden;
+  }
+}
+
 #app {
   background-color: #F7F6F4;
 }

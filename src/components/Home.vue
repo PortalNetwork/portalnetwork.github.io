@@ -11,21 +11,24 @@ import NewsFeed from './index/NewsFeed.vue';
 import Partnership from './index/Partnership';
 import Footer from './index/Footer.vue';
 import AOS from 'aos';
-AOS.init();
+
 export default {
 	components : {
 		Header,
 		Hero,
 		What,
-		// Bns,
-		// Repositories,
-		// Chain,
-		// Solution,
-		// Roadmap,
-		// NewsFeed,
-		// Partnership,
-		// Footer,
-	}
+		Bns,
+		Repositories,
+		Chain,
+		Solution,
+		Roadmap,
+		NewsFeed,
+		Partnership,
+		Footer,
+	},
+	mounted(){
+    AOS.init();
+  }
 }
 </script>
 
@@ -34,14 +37,14 @@ export default {
     <Header></Header>
 		<Hero></Hero>
 		<What></What>
-		<!-- <Bns></Bns>
+		<Bns></Bns>
 		<Repositories></Repositories>
 		<Chain></Chain>
 		<Solution></Solution>
 		<Roadmap></Roadmap>
 		<NewsFeed></NewsFeed>
 		<Partnership></Partnership>
-		<Footer></Footer> -->
+		<Footer></Footer>
   </div>
 </template>
 

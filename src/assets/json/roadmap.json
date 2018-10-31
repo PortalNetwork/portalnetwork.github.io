@@ -1,0 +1,74 @@
+[
+  {
+    "month": "MAY",
+    "year": "2018",
+    "description": [
+      "Proposals: EIP-1062, ECIP-1044, Metamask Integration"
+    ]
+  },
+  {
+    "month": "JUN",
+    "year": "2018",
+    "description": [
+      "Partnership: Wanchain Name Service (WNS)",
+      "Development: WNS ecosystem",
+      "Integration: InterPlanetary File Storage (IPFS)"
+    ]
+  },
+  {
+    "month": "JUL",
+    "year": "2018",
+    "description": [
+      "Partnership: Bluzelle (Decentralized Data Storage)",
+      "Development: Metamask 4.9.0 integration, Qtum Name Service (QNS) deployment",
+      "Event: Portal Network Hackathon Korea"
+    ]
+  },
+  {
+    "month": "AUG",
+    "year": "2018",
+    "description": [
+      "Partnership: ICON, Enigma, NOIA",
+      "Development: Domain Marketplace (beta), dWeb Builder (beta), KAIZEN platform (beta)"
+    ]
+  },
+  {
+    "month": "SEP",
+    "year": "2018",
+    "description": [
+      "Partnership: NEM, QuarkChain, NKN",
+      "Development: ENS Manager on Dapp.com",
+      "Integration: Coinbase Wallet, Brave Browser"
+    ]
+  },
+  {
+    "month": "OCT",
+    "year": "2018",
+    "description": [
+      "Partnership: TomoChain, NEO, Perlin Network, Ethereum Classic",
+      "Development: BCH Name Service (Testnet)"
+    ]
+  },
+  {
+    "month": "NOV",
+    "year": "2018",
+    "description": [
+      "Release: BTC Name Service, LTC Name Service, Cross-chain universal wallet (.portal), KAIZEN SDK"
+    ]
+  },
+  {
+    "month": "DEC",
+    "year": "2018",
+    "description": [
+      "Release: Ripple Name Service, Stellar Lumen Name Service, Cross-chain universal wallet (.portal), KAIZEN API"
+    ]
+  },
+  {
+    "month": "JAN",
+    "year": "2019",
+    "description": [
+      "Release: Zilliqa Name Service, Cardano Name Service",
+      "Development: Sia (Decentralized File Storage) integration"
+    ]
+  }
+]

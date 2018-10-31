@@ -61,7 +61,7 @@ export default {
             <h5>{{detail.name}}</h5>
             <p>{{detail.description}}</p>
             <div class="percentage">
-              <div class="percentage_bg">
+              <div :class="{percentage_bg: true, no_percentage: detail.percentage === null}">
                 <div class="percentage_bar" :style="{width: detail.percentage + '%' }"></div>
               </div>
               <ul class="link_box">
@@ -82,17 +82,44 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-$container: 960px;
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
 .chain {
   max-width: 1100px;
   width: 100%;
   margin: 0px auto;
-  background-color: #0c1346;
+  background-color: $blue_d2;
   padding: 64px 0px; 
+  position: relative;
   @media screen and (max-width: $mob) {
     padding: 26px 0px 0px 0px;
+  }
+  &:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 87px;
+    background: url('~images/block_bpns.png') center center no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    left: -90px;
+    top: -83px;
+    @media screen and (max-width: $mob) {
+      display: none;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    width: 105px;
+    height: 151px;
+    background: url('~images/block_bpns2.png') center center no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    right: -130px;
+    top: 318px;
+    @media screen and (max-width: $mob) {
+      display: none;
+    }
   }
 }
 h3 {
@@ -182,88 +209,92 @@ h3 {
     width: 100%;
     padding-right: 0px;
   }
-  .about_box {
-    height: 100%;
-    height: 180px;
-    overflow: hidden;
-    padding-top: 10px;
-    margin-bottom: 34px;
-    border-top: solid 5px #fff;
-    h4 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    p {
-      font-size: 14px;
-      line-height: 1.3;
-      color: #fff;
-      &+p {
-        margin-top: 10px;
-      }
+}
+.about_box {
+  height: 100%;
+  height: 180px;
+  overflow: hidden;
+  padding-top: 10px;
+  margin-bottom: 34px;
+  border-top: solid 5px #fff;
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.3;
+    color: #fff;
+    &+p {
+      margin-top: 10px;
     }
   }
-  .item_box {
-    margin-bottom: 22px;
-    &:last-child {
-      margin-bottom: 0px;
+}
+.item_box {
+  margin-bottom: 22px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+}
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .percentage_bg {
+    max-width: 225px;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(256,256,256,0.2);
+    position: relative;
+    &.no_percentage {
+      background-color: transparent;
     }
-    h5 {
-      font-size: 18px;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    p {
-      font-size: 12px;
-      color: #fff;
-      margin-bottom: 5px;
+    .percentage_bar {
+      width: 0%;
+      height: 5px;
+      background-color: rgba(256,256,256,1);
     }
   }
-  .percentage {
+  .link_box {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    .percentage_bg {
-      max-width: 225px;
-      width: 100%;
-      height: 5px;
-      background-color: rgba(256,256,256,0.2);
-      position: relative;
-      .percentage_bar {
-        height: 5px;
-        background-color: rgba(256,256,256,1);
+    margin-left: 10px;
+    li {
+      &+li {
+        margin-left: 10px;
       }
-    }
-    .link_box {
-      display: flex;
-      align-items: center;
-      margin-left: 10px;
-      li {
-        &+li {
-          margin-left: 10px;
-        }
-        a {
-          display: block;
-          width: 20px;
-          height: 20px;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: 100% auto;
+      a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-image: url('~images/link.png');
+        transition: background-image .5s;
+        &.link {
           background-image: url('~images/link.png');
-          transition: background-image .5s;
-          &.link {
-            background-image: url('~images/link.png');
-            &:hover {
-              background-image: url('~images/link_h.png');
-            }
+          &:hover {
+            background-image: url('~images/link_h.png');
           }
-          &.github {
-            background-image: url('~images/github.png');
-            &:hover {
-              background-image: url('~images/github_h.png');
-            }
+        }
+        &.github {
+          background-image: url('~images/github.png');
+          &:hover {
+            background-image: url('~images/github_h.png');
           }
         }
       }

@@ -65,11 +65,9 @@
 </template>
 
 <style lang="scss" scoped>
-$container : 960px;
-$pad: 940px;
-$mob: 720px;
+@import "./src/scss/_var.scss";
 .footer {
-  background-color: #141E6A;
+  background-color: $blue_d1;
   padding: 56px 0px 66px 0px;
   .content {
     max-width: $container;
@@ -123,7 +121,7 @@ $mob: 720px;
       button {
         font-size: 20px;
         font-weight: 600;
-        color: #232F88;
+        color: #232f88;
         background-color: transparent;
         border: none;
         outline: none;
@@ -132,13 +130,12 @@ $mob: 720px;
         bottom: 0px;
         right: 20px;
         margin: auto;
-        opacity: 1;
-        transition: opacity .5s;
+        transition: color .5s;
         @media screen and (max-width: $mob) {
           font-size: 16px;
         }
         &:hover {
-          opacity: 0.7;
+          color: #ff675c;
         }
       }
     }
@@ -189,13 +186,12 @@ $mob: 720px;
           font-size: 14px;
           font-weight: 600;
           color: #fff;
-          opacity: 1;
-          transition: opacity .5s;
+          transition: color .5s;
           @media screen and (max-width: $pad) {
             font-weight: 300;
           }
           &:hover {
-            opacity: 0.7;
+            color: #ff675c;
           }
         }
       }
@@ -232,10 +228,9 @@ $mob: 720px;
           font-size: 14px;
           font-weight: 600;
           color: #fff;
-          opacity: 1;
-          transition: opacity .5s;
+          transition: color .5s;
           &:hover {
-            opacity: .7;
+            color: #ff675c;
           }
         }
       }

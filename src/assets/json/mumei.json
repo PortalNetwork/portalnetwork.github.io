@@ -59,12 +59,8 @@
     "url": "https://resolver.portal.network",
     "subItems": [
       {
-        "name": "ENS",
+        "name": "ENS Manager",
         "subUrl": "https://resolver.portal.network"
-      },
-      {
-        "name": "BCNS",
-        "subUrl": "https://bcns-sdk.portal.network"
       }
     ],
     "logo": "assets/images/solution/mu07.svg",
