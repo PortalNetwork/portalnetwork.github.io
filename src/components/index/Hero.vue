@@ -1,19 +1,38 @@
 <script>
-export default {};
+export default {
+  methods: {
+    animation (){
+      TweenLite.to('.block_a', this.range(8,12), {x:this.range(-80, 80), y:this.range(41, -119), ease:Power1.easeOut});
+      TweenLite.to('.block_b', this.range(8,12), {x:this.range(266, 426), y:this.range(55, 215), ease:Power1.easeOut});
+      TweenLite.to('.block_c', this.range(8,12), {x:this.range(5, -155), y:this.range(327, 487), ease:Power1.easeOut});
+      TweenLite.to('.block_d', this.range(8,12), {x:this.range(132, 292), y:this.range(434, 594), ease:Power1.easeOut});
+    },
+    range (min,max){
+      return Math.floor(Math.random() * (max - min + 1)) + min; 
+    }
+  },
+  mounted(){
+    setInterval(()=>{this.animation()}, 1000);
+  }
+};
 </script>
 
 <template>
   <div class="hero">
     <div class="content">
       <div class="text_box">
-        <h2 data-aos="fade-right" data-aos-duration="1000">Connect, Enhance Existing Blockchain Technologies.</h2>
-        <p data-aos="fade-right" data-aos-duration="1500">Decentralized Domain Name for the New Internet.</p>
+        <h2>
+          <p data-aos="fade-right">Connect, Enhance</p>
+          <p data-aos="fade-right" data-aos-duration="500">Existing Blockchain</p>
+          <p data-aos="fade-right" data-aos-duration="800">Technologies.</p>
+        </h2>
+        <p data-aos="fade-right" data-aos-duration="500">Decentralized Domain Name for the New Internet.</p>
       </div>
       <div class="figure">
-        <div class="block a"><img src="../../images/hero_block.png" alt=""/></div>
-        <div class="block b"><img src="../../images/hero_block.png" alt=""/></div>
-        <div class="block c"><img src="../../images/hero_block.png" alt=""/></div>
-        <div class="block d"><img src="../../images/hero_block.png" alt=""/></div>
+        <div class="block block_a"><img src="../../images/hero_block.png" alt=""/></div>
+        <div class="block block_b"><img src="../../images/hero_block.png" alt=""/></div>
+        <div class="block block_c"><img src="../../images/hero_block.png" alt=""/></div>
+        <div class="block block_d"><img src="../../images/hero_block.png" alt=""/></div>
         <img src="../../images/hero.png" alt=""/>
       </div>
     </div>
@@ -47,6 +66,7 @@ export default {};
 }
 .text_box {
   width: 57.5%;
+  overflow: hidden;
   @media screen and (max-width: $pad) {
     width: 80%;
     margin: 0px auto 92px auto;
@@ -56,18 +76,20 @@ export default {};
     width: 100%;
   }
   h2 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 72px;
-    color: #fff;
     margin-bottom: 20px;
-    @media screen and (max-width: $mob) {
-      font-size: 28px;
-      font-weight: 600;
-      line-height: 1.5;
+    p {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 72px;
+      color: #fff;
+      @media screen and (max-width: $mob) {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.5;
+      }
     }
   }
-  p {
+  >p {
     font-size: 20px;
     line-height: 50px;
     color: #fff;
@@ -76,6 +98,14 @@ export default {};
       line-height: 1.5;
     }
   }
+}
+@keyframes run {
+  0% {
+    transform: translate3d(0px, -10px, 0px);
+	}
+	100% {
+		transform: translate3d(0px, 6px, 0px);
+	}
 }
 .figure {
   width: 36.6%;
@@ -97,138 +127,17 @@ export default {};
     @media screen and (max-width: $mob) {
       width: 40px;
     }
-    &.a {
-      transform: translate3d(0px, -80px, 0px);
-      animation: block_a 7s infinite alternate;
-      @media screen and (max-width: $mob) {
-        transform: translate3d(0px, -33px, 0px);
-      }
+    &.block_a {
+      transform: translate3d(0px, -39px, 0px);
     }
-    &.b {
+    &.block_b {
       transform: translate3d(346px, 135px, 0px);
-      animation: block_b 4s infinite alternate;
-      @media screen and (max-width: $mob) {
-        transform: translate3d(206px, 38px, 0px);
-      }
     }
-    &.c {
+    &.block_c {
       transform: translate3d(-75px, 407px, 0px);
-      animation: block_c 4s infinite alternate;
-      @media screen and (max-width: $mob) {
-        transform: translate3d(-49px, 275px, 0px);
-      }
     }
-    &.d {
+    &.block_d {
       transform: translate3d(212px, 514px, 0px);
-      animation: block_d 4s infinite alternate;
-      @media screen and (max-width: $mob) {
-        transform: translate3d(135px, 353px, 0px);
-      }
-    }
-  }
-}
-
-@keyframes run {
-  0% {
-    transform: translate3d(0px, -10px, 0px);
-	}
-	100% {
-		transform: translate3d(0px, 6px, 0px);
-	}
-}
-
-@keyframes block_a {
-  0% {
-    transform: translate3d(0px, -80px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(0px, -33px, 0px);
-    }   
-	}
-	100% {
-    transform: translate3d(0px,-60px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(0px, -53px, 0px);
-    } 
-  }
-  
-}
-
-@keyframes block_b {
-  0% {
-    transform: translate3d(346px, 135px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(206px, 38px, 0px);
-    }
-	}
-	100% {
-    transform: translate3d(346px, 115px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(206px, 18px, 0px);
-    }
-	}
-}
-
-@keyframes block_c {
-  0% {
-    transform: translate3d(-75px, 407px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(-49px, 275px, 0px);
-    }
-	}
-	100% {
-    transform: translate3d(-75px, 437px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(-49px, 295px, 0px);
-    }
-	}
-}
-
-@keyframes block_d {
-  0% {
-    transform: translate3d(212px, 514px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(135px, 353px, 0px);
-    }
-	}
-	100% {
-    transform: translate3d(212px, 494px, 0px);
-    @media screen and (max-width: $mob) {
-      transform: translate3d(135px, 383px, 0px);
-    }
-	}
-}
-
-@media screen and (max-width: $mob) {
-  @keyframes block_a {
-    0% {
-      transform: translate3d(0px, -33px, 0px);   
-    }
-    100% {
-      transform: translate3d(0px, -53px, 0px); 
-    }
-  }
-  @keyframes block_b {
-    0% {
-      transform: translate3d(206px, 38px, 0px);  
-    }
-    100% {
-      transform: translate3d(206px, 18px, 0px); 
-    }
-  }
-  @keyframes block_c {
-    0% {
-      transform: translate3d(-49px, 275px, 0px);  
-    }
-    100% {
-      transform: translate3d(-49px, 295px, 0px); 
-    }
-  }
-  @keyframes block_d {
-    0% {
-      transform: translate3d(135px, 353px, 0px);  
-    }
-    100% {
-      transform: translate3d(135px, 383px, 0px); 
     }
   }
 }

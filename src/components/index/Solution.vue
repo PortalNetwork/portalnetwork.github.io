@@ -84,20 +84,20 @@
       <h3 data-aos="fade-right">Solution</h3>
       <div class="mumei">
         <div class="about">
-          <div class="right" data-aos="fade-right" data-aos-duration="1800">
+          <div class="right" data-aos="fade-right" data-aos-duration="600">
             <a href="https://mumei.portal.network" target="_blank">
               <figure class="figure"><img src="../../images/mumei.png" alt=""/></figure>
               <h4>mumei</h4>
             </a>
           </div>
           <div class="left">
-            <h5 data-aos="fade-right" data-aos-duration="1000">Non-technical Users Adoption</h5>
-            <p data-aos="fade-right" data-aos-duration="1200">MUMEI is a platform with a series of tools that empowers both technical & non-technical users to easily interact with and deploy ÐWebs or ÐApps.</p>
+            <h5 data-aos="fade-right" data-aos-duration="500">Non-technical Users Adoption</h5>
+            <p data-aos="fade-right" data-aos-duration="600">MUMEI is a platform with a series of tools that empowers both technical & non-technical users to easily interact with and deploy ÐWebs or ÐApps.</p>
           </div>
         </div>
         <div class="item_box">
           <ul class="item">
-            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover($event,mumeiIdx)" @mouseleave="leaveMumeiHover($event)" @click="onMumeiClick(mumeiIdx)">
+            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover($event,mumeiIdx)" @mouseleave="leaveMumeiHover($event)" @click="onMumeiClick(mumeiIdx)" data-aos="fade-right" data-aos-duration="700">
               <ul class="sub_item">
                 <li v-for="(subItem,idx) in item.subItems" :key="idx">
                   <a :href="subItem.subUrl" target="_blank">{{subItem.name}}</a>
@@ -119,15 +119,15 @@
       </div>
       <div class="kaizen">
         <div class="about">
-          <div class="right" data-aos="fade-right" data-aos-duration="2400">
+          <div class="right" data-aos="fade-right" data-aos-duration="1000">
             <a href="http://kaizen.portal.network/" target="_blank">
               <div class="figure"><img src="../../images/kaizen.png" alt=""/></div>
               <h4>kaizen</h4>
             </a>
           </div>
           <div class="left">
-            <h5 data-aos="fade-right" data-aos-duration="2200">Technical Users Adoption</h5>
-            <p data-aos="fade-right" data-aos-duration="2800">KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+            <h5 data-aos="fade-right" data-aos-duration="700">Technical Users <span>Adoption</span></h5>
+            <p data-aos="fade-right" data-aos-duration="1000">KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
           </div>
         </div>
         <div class="item_box">
@@ -173,13 +173,14 @@
     .left {
       width: 56.4%;
       margin-left: 62px;
+      overflow: hidden;
       @media screen and (max-width: $pad) {
         width: 100%;
         margin-left: 0px;
       }
       h5 {
         font-size: 40px;
-        font-weight: 600;
+        font-weight: bold;
         line-height: 55px;
         color: $gray;
         margin-bottom: 42px;
@@ -189,9 +190,24 @@
           margin-bottom: 20px;
           line-height: 1.3;
         }
+        span {
+          display: block;
+          font-size: 40px;
+          font-weight: bold;
+          line-height: 55px;
+          color: $gray;
+          @media screen and (max-width: $pad) {
+            font-size: 20px;
+            text-align: center;
+          }
+          @media screen and (max-width: $mob) {
+            display: inline;
+          }
+        }
       }
       p {
         font-size: 16px;
+        font-weight: 600;
         line-height: 1.69;
         @media screen and (max-width: $pad) {
           text-align: center;

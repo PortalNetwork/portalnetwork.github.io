@@ -29,4 +29,9 @@ body {
 
 #app {
   background-color: #F7F6F4;
+  overflow: hidden;
+}
+
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 1 !important;
 }

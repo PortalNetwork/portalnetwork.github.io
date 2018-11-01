@@ -76,7 +76,7 @@
     margin: 0px auto;
     padding: 0px 0px 210px 0px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     @media screen and (max-width: $pad) {
       display: block;
@@ -99,11 +99,11 @@
         background-color: #fff;
         border: none;
         outline: none;
-        width: 410px;
-        height: 58px;
+        width: 380px;
+        height: 50px;
         font-size: 16px;
         font-weight: 600;
-        line-height: 58px;
+        line-height: 50px;
         border-radius: 5px;
         color: #B8B8B8;
         padding: 20px 128px 20px 20px;
@@ -114,13 +114,11 @@
           color: #B8B8B8;
         }
         @media screen and (max-width: $mob) {
-          height: 50px;
-          line-height: 50px;
           width: 100%;
         }
       }
       button {
-        font-size: 20px;
+        font-size: 16px;
         font-weight: 600;
         color: #232f88;
         background-color: transparent;
@@ -166,7 +164,7 @@
       text-align: left;
     }
     h4 {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 600;
       color: #fff;
       margin-bottom: 38px;

@@ -1,89 +1,73 @@
 <script>
-  export default {
-    data(){
-      return {
-        scrollTop: 0,
-        documentHeight: 0,
-        windowHeight: 0,
-        move: null,
-      }
-    },
-    mounted(){
-      let tl = new TimelineLite();
-      tl.to('#b1', 1, {y: '900px'});
-      tl.to('#b2', 1, {y: '1060px'});
-      tl.to('#b3', 1, {y: '1236px'});
-      tl.pause();
-      window.addEventListener('scroll', ()=>{
-        const parallaxStart = document.querySelector('.parallax_box').getBoundingClientRect();
-        this.scrollTop = document.documentElement.scrollTop;
-        this.documentHeight = document.documentElement.scrollHeight;
-        this.windowHeight = document.documentElement.clientHeight;
-        if(parallaxStart.top < 0){
-          let scrollPercent = this.scrollTop / (this.documentHeight - this.windowHeight);
-          // tl.progress(scrollPercent);
-        }
-      });
-    }
-  }
+  export default {};
 </script>
 
 <template>
   <div class="bns">
-    <div class="content">
-      <div class="parallax_box">
-        <div id="b1" class="block1"><img src="../../images/block01.png" alt=""/></div>
-        <div id="b2" class="block2"><img src="../../images/block02.png" alt=""/></div>
-        <div id="b3" class="block3"><img src="../../images/block03.png" alt=""/></div>
-      </div>
-      <div class="summary">
-        <span id="bns" class="anchor"></span>
+    <span id="bns" class="anchor"></span>
+    <img src="../../images/block-full.png" alt="">
+    <div class="timeline">
+      <div class="left">
         <div class="bns_box">
           <img src="../../images/bns.png" alt=""/>
-          <h3 data-aos="fade-right" data-aos-duration="1000">BNS</h3>
+          <h3 data-aos="fade-right">BNS</h3>
           <div class="special">
-            <p data-aos="fade-right" data-aos-duration="1500"><span>B</span>lockchain</p>
-            <p data-aos="fade-right" data-aos-duration="2000"><span>N</span>ame</p>
-            <p data-aos="fade-right" data-aos-duration="2500"><span>S</span>ervice</p>
+            <p data-aos="fade-right" data-aos-duration="500"><span>B</span>lockchain</p>
+            <p data-aos="fade-right" data-aos-duration="800"><span>N</span>ame</p>
+            <p data-aos="fade-right" data-aos-duration="1100"><span>S</span>ervice</p>
           </div>
-        </div>
-        <div class="summary_box">
-          <h4 data-aos="fade-right" data-aos-duration="3000">What is BNS?</h4>
-          <p data-aos="fade-right" data-aos-duration="3000">BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
-        </div>
-        <div class="summary_box identity">
-          <h4 data-aos="fade-right" data-aos-duration="4000">Human-readable Identity</h4>
-          <p data-aos="fade-right" data-aos-duration="4800">Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</p>
         </div>
       </div>
-      <div class="domain_box">
-        <p>yourname.eth</p>
-        <span><img src="../../images/search.png" alt=""/></span>
+      <div class="right">
+        <div>
+          <div class="text_box what">
+            <h4 data-aos="fade-right">What is BNS?</h4>
+            <p data-aos="fade-right" data-aos-duration="500">BNS (Blockchain Name System) is the protocol on the internet that turns human-readable decentralized website names, Such as “yourwebsite.bch” or “mywebsite.eth” into addresses understandable by decentralized network machines.</p>
+          </div>
+          <div class="text_box identity">
+            <h4 data-aos="fade-right">Human-readable Identity</h4>
+            <p><span data-aos="fade-right" data-aos-duration="500">Blockchain Name Service enables connections with IPFS hash, smart contract, and wallet address.</span></p>
+          </div>
+        </div>
       </div>
-      <ul class="identity">
-        <li>
-          <div class="figure ipfs"><img src="../../images/ipfs.png" alt=""/></div>
-          <div class="text_box">
-            <h5>IPFS Address</h5>
-            <p>0xd1640e2d0d820f942471cd98040be9f810e85…</p>
-          </div>
-        </li>
-        <li>
-          <div class="figure contract"><img src="../../images/contract.png" alt=""/></div>
-          <div class="text_box">
-            <h5>Smart Contract</h5>
-            <p>0x5FfC014343cd971B7eb70732021E26C35B744…</p>
-          </div>
-        </li>
-        <li>
-          <div class="figure wallet"><img src="../../images/wallet.png" alt=""/></div>
-          <div class="text_box">
-            <h5>Wallet Address</h5>
-            <p>0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
-          </div>
-        </li>
-      </ul>
     </div>
+    <div class="domain">
+      <div>
+        <p>yourname</p>
+        <ul class="top">
+          <li>.eth</li>
+          <li>.wan</li>
+          <li>.etc</li>
+        </ul>
+      </div>
+      <span class="icon"><img src="../../images/search.png" alt=""/></span>
+    </div>
+    <ul class="identity_box">
+      <li>
+        <div class="figure ipfs" data-aos="fade-down"><img src="../../images/ipfs.png" alt=""/></div>
+        <img src="../../images/block01.png" alt="">
+        <div class="text_box">
+          <h5 data-aos="fade-right">IPFS Address</h5>
+          <p data-aos="fade-right">QmYUXKQG86g2i6W32eT31C5PWq23kQNpo…</p>
+        </div>
+      </li>
+      <li>
+        <div class="figure contract" data-aos="fade-down" data-aos-duration="500"><img src="../../images/contract.png" alt=""/></div>
+        <img src="../../images/block02.png" alt="">
+        <div class="text_box">
+          <h5 data-aos="fade-right">Smart Contract</h5>
+          <p data-aos="fade-right">0x5FfC014343cd971B7eb70732021E26C35744…</p>
+        </div>
+      </li>
+      <li>
+        <div class="figure wallet" data-aos="fade-down" data-aos-duration="600"><img src="../../images/wallet.png" alt=""/></div>
+        <img src="../../images/block03.png" alt="">
+        <div class="text_box">
+          <h5 data-aos="fade-right">Wallet Address</h5>
+          <p data-aos="fade-right">0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -93,240 +77,183 @@
 .bns {
   background-color: $bg_gray;
   padding: 62px 0px 152px 0px;
+  position: relative;
   @media screen and (max-width: $mob) {
     padding: 30px 0px 83px 0px;
   }
+  >img {
+    width: 104px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
-.content {
+.anchor {
+  position: absolute;
+  top: 30px;
+}
+.timeline {
   max-width: $container;
   width: 100%;
   margin: 0px auto;
   position: relative;
-  @media screen and (max-width: $pad) {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @media screen and (max-width: $mob) {
+    display: block;
     padding: 0px 45px;
   }
 }
-.parallax_box {
-  position: absolute;
-  left: 50%;
-  margin-left: -51px;
-  height: 100%;
-  @media screen and (max-width: $pad) {
-    top: 395px;
-    left: 57px;
-    margin-left: 0px;
-  }
+.left {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
   @media screen and (max-width: $mob) {
-    top: 283px;
+    width: 100%;
+    justify-content: flex-start;
   }
-  .block1 {
-    width: 103px;
-    position: absolute;
-    top: 0px;
-    z-index: 3;
-    // @media screen and (max-width: $pad) {
-    //   top: 526px;
-    // }
-    @media screen and (max-width: $mob) {
-      width: 70px;
-      // top: 424px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  .block2 {
-    width: 103px;
-    position: absolute;
-    top: 20px;
-    z-index: 2;
-    // @media screen and (max-width: $pad) {
-    //   top: 782px;
-    // }
-    @media screen and (max-width: $mob) {
-      width: 70px;
-      top: 13px;
-      // top: 602px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  .block3 {
-    width: 103px;
-    position: absolute;
-    top: 40px;
-    z-index: 1;
-    // @media screen and (max-width: $pad) {
-    //   top: 1035px;
-    // }
-    @media screen and (max-width: $mob) {
-      width: 70px;
-      top: 26px;
-      // top: 778px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-}
-.summary {
-  max-width: 726px;
-  margin: 0px auto 52px auto;
-  position: relative;
-  @extend %clear;
-  @media screen and (max-width: $pad) {
-    max-width: 100%;
-    margin: 0px auto 44px auto;
-  }
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 1px;
-    height: 830px;
-    background-color: rgba(20, 30, 106, 0.8);
-    position: absolute;
-    left: 50%;
-    top: 0px;
+  .bns_box {
+    padding-right: 80px;
+    overflow: hidden;
     @media screen and (max-width: $pad) {
-      top: 396px;
-      left: 62px;
-      height: 400px;
+      padding-right: 40px;
     }
-    @media screen and (max-width: $mob) {
-      left: 46px;
-      top: 284px;
-    }
-  }
-  .anchor {
-    position: absolute;
-    top: -10px;
-  }
-}
-.bns_box {
-  float: left;
-  @media screen and (max-width: $pad) {
-    float: none;
-  }
-  >img {
-    width: 60px;
-    margin-bottom: 15px;
-    @media screen and (max-width: $mob) {
-      width: 40px;
-    }
-  }
-  h3 {
-    font-size: 70px;
-    font-weight: 800;
-    margin-bottom: 24px;
-    @media screen and (max-width: $mob) {
-      font-size: 44px;
-      margin-bottom: 19px;
-    }
-  }
-  .special {
-    margin-bottom: 158px;
-    @media screen and (max-width: $pad) {
-      margin-bottom: 53px;
-    }
-    p {
-      font-size: 55px;
-      font-weight: 800;
-      line-height: 1.09;
-      color: $gray;
+    >img {
+      width: 60px;
+      margin-bottom: 15px;
       @media screen and (max-width: $mob) {
-        font-size: 35px;
+        width: 40px;
       }
-      span {
+    }
+    h3 {
+      font-size: 70px;
+      font-weight: 800;
+      margin-bottom: 24px;
+      overflow: hidden;
+      @media screen and (max-width: $mob) {
+        font-size: 44px;
+        margin-bottom: 19px;
+      }
+    }
+    .special {
+      p {
         font-size: 55px;
         font-weight: 800;
         line-height: 1.09;
-        color: $blue;
+        color: $gray;
+        overflow: hidden;
         @media screen and (max-width: $mob) {
           font-size: 35px;
+        }
+        span {
+          font-size: 55px;
+          font-weight: 800;
+          line-height: 1.09;
+          color: $blue;
+          @media screen and (max-width: $mob) {
+            font-size: 35px;
+          }
         }
       }
     }
   }
 }
-.summary_box {
-  padding-top: 133px;
-  float: right;
-  max-width: 260px;
-  @media screen and (max-width: $pad) {
-    float: none;
-    padding: 0px 0px 0px 150px;
-    max-width: 100%;
-  }
+.right {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: solid 1px rgba(20, 30, 106, 0.8);
+  padding-bottom: 55px;
   @media screen and (max-width: $mob) {
-    padding: 0px 0px 0px 120px;
+    width: 100%;
   }
-  &+.summary_box {
+  .text_box {
+    max-width: 260px;
     @media screen and (max-width: $pad) {
-      margin-top: 58px;
+      padding-left: 40px;
     }
-  }
-  &.identity {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    width: 800px;
-    float: none;
-    margin: 0px auto;
-    @media screen and (max-width: $pad) {
-      width: 100%;
-      display: block;
+    @media screen and (max-width: $mob) {
+      padding: 0px 0px 0px 120px;
+    }
+    &.what {
+      margin: 136px 0px 0px 80px;
+      overflow: hidden;
+    }
+    &.identity {
+      max-width: 100%;
+      width: 580px;
+      display: flex;
+      justify-content: space-between;
+      transform: translateX(-40%);
+      overflow: hidden;
+      h4 {
+        margin-right: 109px;
+        overflow: hidden;
+      }
+      p {
+        margin-left: 67px;
+        overflow: hidden;
+        span {
+          display: block;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 25px;
+          @media screen and (max-width: $mob) {
+            font-size: 12px;
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+    &+.text_box {
+      margin-top: 116px;
     }
     h4 {
-      width: 200px;
-      padding-left: 150px;
-      @media screen and (max-width: $pad) {
-        width: 100%;
-        padding-left: 0px;
-        margin-top: 40px;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      @media screen and (max-width: $mob) {
+        font-size: 16px;
+        margin-bottom: 15px;
       }
     }
     p {
-      width: 260px;
-      @media screen and (max-width: $pad) {
-        width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 25px;
+      @media screen and (max-width: $mob) {
+        font-size: 12px;
+        line-height: 1.3;
       }
     }
   }
-  h4 {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 1.25;
-    margin-bottom: 10px;
-    @media screen and (max-width: $mob) {
-      font-size: 16px;
-      margin-bottom: 15px;
-    }
-  }
-  p {
-    font-size: 16px;
-    line-height: 25px;
-    @media screen and (max-width: $mob) {
-      font-size: 12px;
-      line-height: 1.3;
-    }
-  }
 }
-.domain_box {
-  width: 518px;
+@keyframes change {
+  0%, 12.66%, 100% {transform: translate3d(0,0,0);}
+  16.66%, 29.32% {transform: translate3d(0,-33%,0);}
+  33.32%,45.98% {transform: translate3d(0,-66%,0);}
+  49.98%,62.64% {transform: translate3d(0,-33%,0);}
+  66.64%,79.3% {transform: translate3d(0,-66%,0);}
+  83.3%,95.96% {transform: translate3d(0,-33%,0);}
+}
+.domain {
+  width: 480px;
   height: 80px;
   background-color: #000000;
-  padding: 0px 20px 0px 40px;
+  padding: 0px 36px;
+  margin: 0px auto 53px auto;
   position: relative;
-  margin: 0px auto 72px auto;
-  @media screen and (max-width: $pad) {
-    width: 100%;
-    margin: 0px auto 55px auto;
-    padding: 0px 40px 0px 40px;
-  }
+  overflow: hidden;
   @media screen and (max-width: $mob) {
     height: 55px;
     padding: 0px 18px 0px 18px;
+  }
+  >div {
+    display: flex;
+    align-items: flex-start;
   }
   p {
     font-size: 40px;
@@ -338,7 +265,20 @@
       line-height: 55px;
     }
   }
-  span {
+  .top {
+    animation: change 10s infinite;
+    li {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 80px;
+      color: #fff;
+      @media screen and (max-width: $mob) {
+        font-size: 25px;
+        line-height: 55px;
+      }
+    }
+  }
+  .icon {
     display: block;
     position: absolute;
     top: 50%;
@@ -353,106 +293,50 @@
     }
   }
 }
-.identity {
-  max-width: 726px;
-  margin: 0px auto;
-  @media screen and (max-width: $pad) {
-    width: 60%;
-  }
-  @media screen and (max-width: $mob) {
-    width: 100%;
-  }
+.identity_box {
+  width: 837px;
+  margin: 0px auto 53px auto;
+  padding-left: 179px;
   li {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: $pad) {
-      display: block;
-    }
+    overflow: hidden;
     &+li {
       margin-top: 60px;
-      @media screen and (max-width: $mob) {
-        margin-top: 32px;
-      }
     }
     .figure {
-      width: 50%;
-      height: 120px;
-      padding: 0px 110px 0px 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      @media screen and (max-width: $pad) {
-        padding: 0px;
-        height: auto;
-        margin: 0px 0px 24px auto;
+      width: 140px;
+      margin-right: 60px;
+      >img {
         width: 140px;
-      }
-      @media screen and (max-width: $mob) {
-        width: 86px;
-      }
-      &:before {
-        content: "";
-        display: block;
-        width: 103px;
-        height: 75px;
-        background-position: center center;
-        background-size: 100% auto;
-        position: absolute;
-        right: -40px;
-        top: 25px;
-        @media screen and (max-width: $pad) {
-          right: auto;
-          left: -200px;
-        }
-        @media screen and (max-width: $mob) {
-          width: 70px;
-          height: 51px;
-          top: 22px;
-        }
-      }
-      &.ipfs:before {
-        background-image: url('~images/block01.png');
-      }
-      &.contract:before {
-        background-image: url('~images/block02.png');
-      }
-      &.wallet:before {
-        background-image: url('~images/block03.png');
-      }
-      img {
-        width: 140px;
-        margin: 0px 0px 0px auto;
-        @media screen and (max-width: $pad) {
-          width: 100%;
-        }
       }
     }
+    >img {
+      width: 103px;
+    }
     .text_box {
-      width: 50%;
-      padding-left: 88px;
-      @media screen and (max-width: $pad) {
-        width: 100%;
-        padding-left: 62px;
-      }
-      @media screen and (max-width: $mob) {
-        padding-left: 33px;
-      }
+      overflow: hidden;
+      margin-left: 36px;
       h5 {
         font-size: 18px;
         font-weight: 800;
         color: #000000;
         margin-bottom: 12px;
+        white-space: nowrap;
+        overflow: hidden;
         @media screen and (max-width: $mob) {
           font-size: 16px;
         }
       }
       p {
         font-size: 14px;
+        font-weight: 600;
         line-height: 19px;
         color: $gray;
+        overflow: hidden;
         @media screen and (max-width: $pad) {
+          width: 226px;
           overflow : hidden;
           text-overflow : ellipsis;
           white-space : nowrap;

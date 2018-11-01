@@ -71,7 +71,7 @@ export default {
     <div class="paper">
       <p>White Paper Request Form.</p>
       <div class="read_box">
-        <a class="btn" href="javascript:;" target="_blank"><img src="../../images/whitepaper_h.png" alt=""></a>
+        <a class="btn" href="javascript:;" target="_blank"></a>
         <p>Read Our White Paper</p>
       </div>
     </div>
@@ -202,13 +202,20 @@ h3 {
     }
     .btn {
       display: inline-block;
-      width: 98px;
+      width: 100px;
+      height: 64px;
+      background-image: url('~images/whitepaper.png');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
       margin: 0px 0px 18px 42px;
+      padding-left: 50px;
+      transition: background-image .2s;
       @media screen and (max-width: $mob) {
         margin: 0px 0px 22px 0px;
       }
-      img {
-        width: 100%;
+      &:hover {
+        background-image: url('~images/whitepaper_h.png');
       }
     }
     p {

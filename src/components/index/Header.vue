@@ -151,6 +151,8 @@ h1 {
     }
   }
   p {
+    font-size: 12px;
+    font-weight: 600;
     color: #fff;
   }
 }

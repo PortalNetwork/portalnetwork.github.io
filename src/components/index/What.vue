@@ -6,8 +6,11 @@
   <div class="what">
     <div class="content">
       <div>
-        <h3 data-aos="fade-right" data-aos-duration="1000">What is Portal Network</h3>
-        <p data-aos="fade-right" data-aos-duration="1500">Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
+        <h3>
+          <span data-aos="fade-right"><img src="../../images/what.png" alt=""></span>
+          <p data-aos="fade-right" data-aos-duration="500">What is Portal Network</p>
+        </h3>
+        <p data-aos="fade-right">Portal Network solves the problem of user adoption, complexity, human error and lack of interoperability by deploying BNS standard across multiple blockchain protocols.</p>
       </div>
     </div>
   </div>
@@ -39,36 +42,38 @@
       padding: 30px 44px 43px 44px;
     }
     h3 {
-      font-size: 30px;
-      font-weight: 800;
-      color: #fff;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
       margin-bottom: 10px;
       @media screen and (max-width: $mob) {
         font-size: 20px;
         margin-bottom: 20px;
       }
-      &:before {
-        content: "";
-        display: inline-block;
-        vertical-align: middle;
-        background: url("~images/what.png") top left no-repeat;
-        background-size: 100% auto;
+      span {
+        display: block;
         width: 42px;
-        height: 52px;
-        margin-right: 48px;
+        margin-right: 46px;
+        img {
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 30px;
+        font-weight: 800;
+        color: #fff;
         @media screen and (max-width: $mob) {
-          display: block;
-          width: 40px;
-          margin: 0px auto 23px auto;
+          font-size: 20px;
         }
       }
     }
-    p {
+    >p {
       margin-left: 90px;
       font-size: 16px;
       font-weight: 600;
       line-height: 25px;
       color: #fff;
+      overflow: hidden;
       @media screen and (max-width: $mob) {
         margin-left: 0px;
         text-align: center;
