@@ -97,7 +97,7 @@
         </div>
         <div class="item_box">
           <ul class="item">
-            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover($event,mumeiIdx)" @mouseleave="leaveMumeiHover($event)" @click="onMumeiClick(mumeiIdx)" data-aos="fade-right" data-aos-duration="700">
+            <li v-for="(item,mumeiIdx) in mumeiItems" :key="mumeiIdx" :class="{open: mumeiClickIdx === mumeiIdx}" @mouseenter="onMumeiHover($event,mumeiIdx)" @mouseleave="leaveMumeiHover($event)" @click="onMumeiClick(mumeiIdx)">
               <ul class="sub_item">
                 <li v-for="(subItem,idx) in item.subItems" :key="idx">
                   <a :href="subItem.subUrl" target="_blank">{{subItem.name}}</a>
@@ -158,7 +158,14 @@
 
 <style lang="scss" scoped>
 @import "./src/scss/_var.scss";
-
+@keyframes scroll {
+  0% {
+    transform: translate3d(0px,0%,0px);
+	}
+	100% {
+		transform: translate3d(0px, -100%, 0px);
+	}
+}
 @mixin solution($item_bg) {
   .about {
     display: flex;
@@ -242,8 +249,24 @@
         .figure {
           width: 150px;
           margin: 0px auto 24px auto;
+          position: relative;
           @media screen and (max-width: $pad) {
             margin: 0px auto 15px auto;
+          }
+          &.animation {
+            &:before {
+              content: "";
+              display: block;
+              width: 100%;
+              min-height: 100%;
+              background-color: #f7f6f4;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              z-index: 1;
+              transform: translate3d(0px,-100%,0px);
+              animation: scroll .5s linear;
+            }
           }
           img {
             width: 100%;
@@ -271,6 +294,7 @@
     width: 56.4%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     @media screen and (max-width: $pad) {
       width: 100%;
     }

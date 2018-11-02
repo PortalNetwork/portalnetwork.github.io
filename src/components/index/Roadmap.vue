@@ -36,6 +36,9 @@ export default {
         }, 500);
       })
       .catch(err=> console.log(err));
+    },
+    coming(){
+      alert('Coming Soon');
     }
   },
   mounted() {
@@ -71,7 +74,7 @@ export default {
     <div class="paper">
       <p>White Paper Request Form.</p>
       <div class="read_box">
-        <a class="btn" href="javascript:;" target="_blank"></a>
+        <a class="btn" href="javascript:;" target="_blank" @click="coming"></a>
         <p>Read Our White Paper</p>
       </div>
     </div>

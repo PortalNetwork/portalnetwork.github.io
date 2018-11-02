@@ -57,11 +57,11 @@ export default {
           <p>{{chainInfo.description}}</p>
         </div>
         <div class="item_list">
-          <div class="item_box" v-for="(detail,idx) in detailItem" :key="idx">
+          <div :class="{item_box: true, no_percentage: detail.percentage === null}" v-for="(detail,idx) in detailItem" :key="idx">
             <h5>{{detail.name}}</h5>
             <p>{{detail.description}}</p>
             <div class="percentage">
-              <div :class="{percentage_bg: true, no_percentage: detail.percentage === null}">
+              <div class="percentage_bg">
                 <div class="percentage_bar" :style="{width: detail.percentage + '%' }"></div>
               </div>
               <ul class="link_box">
@@ -238,6 +238,19 @@ h3 {
   &:last-child {
     margin-bottom: 0px;
   }
+  &.no_percentage {
+    p {
+      display: inline-block;
+      min-width: 220px;
+    }
+    .percentage {
+      display: inline-block;
+      vertical-align: text-bottom;
+      .percentage_bg {
+        background-color: transparent;
+      }
+    }
+  }
   h5 {
     font-size: 18px;
     font-weight: 800;
@@ -249,53 +262,50 @@ h3 {
     color: #fff;
     margin-bottom: 5px;
   }
-}
-.percentage {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  .percentage_bg {
-    max-width: 225px;
-    width: 100%;
-    height: 5px;
-    background-color: rgba(256,256,256,0.2);
-    position: relative;
-    &.no_percentage {
-      background-color: transparent;
-    }
-    .percentage_bar {
-      width: 0%;
-      height: 5px;
-      background-color: rgba(256,256,256,1);
-    }
-  }
-  .link_box {
+  .percentage {
     display: flex;
     align-items: center;
-    margin-left: 10px;
-    li {
-      &+li {
-        margin-left: 10px;
+    justify-content: flex-start;
+    .percentage_bg {
+      max-width: 225px;
+      width: 100%;
+      height: 5px;
+      background-color: rgba(256,256,256,0.2);
+      position: relative;
+      .percentage_bar {
+        width: 0%;
+        height: 5px;
+        background-color: rgba(256,256,256,1);
       }
-      a {
-        display: block;
-        width: 20px;
-        height: 20px;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-image: url('~images/link.png');
-        transition: background-image .5s;
-        &.link {
-          background-image: url('~images/link.png');
-          &:hover {
-            background-image: url('~images/link_h.png');
-          }
+    }
+    .link_box {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      li {
+        &+li {
+          margin-left: 10px;
         }
-        &.github {
-          background-image: url('~images/github.png');
-          &:hover {
-            background-image: url('~images/github_h.png');
+        a {
+          display: block;
+          width: 20px;
+          height: 20px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          background-image: url('~images/link.png');
+          transition: background-image .5s;
+          &.link {
+            background-image: url('~images/link.png');
+            &:hover {
+              background-image: url('~images/link_h.png');
+            }
+          }
+          &.github {
+            background-image: url('~images/github.png');
+            &:hover {
+              background-image: url('~images/github_h.png');
+            }
           }
         }
       }
