@@ -12,7 +12,7 @@ export default {
     }
   },
   mounted(){
-    setInterval(()=>{this.animation()}, 1000);
+    setInterval(()=>{this.animation()}, 500);
   }
 };
 </script>

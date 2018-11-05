@@ -21,8 +21,10 @@
 
 .what {
   margin-top: -224px;
+  padding-bottom: 62px;
   @media screen and (max-width: $pad) {
     margin-top: -175px;
+    padding-bottom: 30px;
   }
   @media screen and (max-width: $mob) {
     margin-top: 0px;

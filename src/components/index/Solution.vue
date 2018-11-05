@@ -204,6 +204,7 @@
           line-height: 55px;
           color: $gray;
           @media screen and (max-width: $pad) {
+            display: inline;
             font-size: 20px;
             text-align: center;
           }

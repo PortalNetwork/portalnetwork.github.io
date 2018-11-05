@@ -1,11 +1,58 @@
 <script>
-  export default {};
+  export default {
+    computed: {
+      scrollTop() {
+        return document.documentElement.scrollTop;
+      },
+      documentHeight() {
+        return document.documentElement.scrollHeight;
+      },
+      getHeight(){
+        let repositoriesHeight = document.querySelector(".repositories").offsetHeight;
+        let chainHeight = document.querySelector(".chain").offsetHeight;
+        let solutionHeight = document.querySelector(".solution").offsetHeight;
+        let roadmapHeight = document.querySelector(".roadmap").offsetHeight;
+        let newsHeight = document.querySelector(".news").offsetHeight;
+        let partnershipHeight = document.querySelector(".partnership").offsetHeight;
+        let footerHeight = document.querySelector(".footer").offsetHeight;
+        return repositoriesHeight + chainHeight + solutionHeight + roadmapHeight + newsHeight + partnershipHeight + footerHeight;
+      },
+      parallaxStart(){
+        // 224 = css what 區塊往上推的距離
+        return document.querySelector(".header").offsetHeight + 
+      (document.querySelector(".hero").offsetHeight + document.querySelector(".what").offsetHeight - 224);
+      },
+    },
+    mounted(){
+      let t1 = new TimelineLite();
+      t1.to('.parallax_a', 1, {"top": 830});
+      // tl.to(".parallax_b", 1, {"top": 1010});
+      // tl.to(".parallax_c", 1, {"top": 1190});
+      t1.pause();
+      //830
+      //1010
+      //1190
+      window.addEventListener('scroll',()=>{
+        let percentA = this.scrollTop / (this.documentHeight - (this.documentHeight - this.parallaxStart - this.getHeight - document.querySelector(".identity_box").offsetHeight));
+        let scrollStart = document.querySelector(".bns").getClientRects();
+        console.log(scrollStart,"scrollStart");
+        if(scrollStart[0].top < 0){
+          t1.progress(percentA);
+        }
+      });
+    }
+  };
 </script>
 
 <template>
   <div class="bns">
     <span id="bns" class="anchor"></span>
-    <img src="../../images/block-full.png" alt="">
+    <div class="parallax">
+      <div class="figure parallax_a"><img src="../../images/block01.png" alt=""></div>
+      <div class="figure parallax_b"><img src="../../images/block02.png" alt=""></div>
+      <div class="figure parallax_c"><img src="../../images/block03.png" alt=""></div>
+    </div>
+    <!-- <img src="../../images/block-full.png" alt=""> -->
     <div class="timeline">
       <div class="left">
         <div class="bns_box">
@@ -76,10 +123,10 @@
 
 .bns {
   background-color: $bg_gray;
-  padding: 62px 0px 152px 0px;
+  padding: 0px 0px 152px 0px;
   position: relative;
   @media screen and (max-width: $mob) {
-    padding: 30px 0px 83px 0px;
+    padding: 0px 0px 83px 0px;
   }
   >img {
     width: 104px;
@@ -91,6 +138,33 @@
 .anchor {
   position: absolute;
   top: 30px;
+}
+.parallax {
+  transform: translateX(50%);
+  margin-left: -102px;
+  position: relative;
+  .figure {
+    width: 103px;
+    position: absolute;
+    img {
+      width: 100%;
+    }
+    &.parallax_a {
+      // top: 830px;
+      top: 0px;
+      z-index: 3;
+    }
+    &.parallax_b {
+      // top: 1010px;
+      top: 20px;
+      z-index: 2;
+    }
+    &.parallax_c {
+      // top: 1190px;
+      top: 40px;
+      z-index: 1;
+    }
+  }
 }
 .timeline {
   max-width: $container;
@@ -171,9 +245,6 @@
   }
   .text_box {
     max-width: 260px;
-    @media screen and (max-width: $pad) {
-      padding-left: 40px;
-    }
     @media screen and (max-width: $mob) {
       padding: 0px 0px 0px 120px;
     }
@@ -244,7 +315,7 @@
   height: 80px;
   background-color: #000000;
   padding: 0px 36px;
-  margin: 0px auto 53px auto;
+  margin: 0px auto;
   position: relative;
   overflow: hidden;
   @media screen and (max-width: $mob) {
@@ -282,7 +353,7 @@
     display: block;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 36px;
     transform: translateY(-50%);
     width: 27px;
     @media screen and (max-width: $mob) {
@@ -296,7 +367,11 @@
 .identity_box {
   width: 837px;
   margin: 0px auto 53px auto;
-  padding-left: 179px;
+  padding: 53px 0px 0px 179px;
+  @media screen and (max-width: $pad) {
+    width: 80%;
+    padding-left: 0px;
+  }
   li {
     display: flex;
     justify-content: space-between;
