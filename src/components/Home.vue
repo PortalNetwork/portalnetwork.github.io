@@ -10,7 +10,6 @@ import Roadmap from './index/Roadmap.vue';
 import NewsFeed from './index/NewsFeed.vue';
 import Partnership from './index/Partnership';
 import Footer from './index/Footer.vue';
-import AOS from 'aos';
 
 export default {
 	components : {
@@ -24,11 +23,8 @@ export default {
 		Roadmap,
 		NewsFeed,
 		Partnership,
-		Footer,
-	},
-	mounted(){
-    AOS.init();
-  }
+		Footer
+	}
 }
 </script>
 
@@ -47,8 +43,4 @@ export default {
 		<Footer></Footer>
   </div>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
 

@@ -53,10 +53,6 @@ import axios from 'axios';
               spaceBetween: 0,
             }
           }
-          // pagination: {
-          //   el: '.progressbar_pagination',
-          //   type: 'progressbar'
-          // },
         });
       }
     },
@@ -124,9 +120,9 @@ import axios from 'axios';
 }
 .repositories {
   background-color: $bg_gray;
-  padding: 0px 0px 152px 0px;
+  padding: 152px 0px 152px 0px;
   @media screen and (max-width: $mob) {
-    padding: 0px 0px 60px 0px;
+    padding: 50px 0px 60px 0px;
   }
 }
 .content {
@@ -147,6 +143,9 @@ import axios from 'axios';
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: $mob) {
+    min-height: 386px;
+  }
   .lds-facebook {
     display: inline-block;
     position: relative;

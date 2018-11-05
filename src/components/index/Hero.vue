@@ -2,10 +2,10 @@
 export default {
   methods: {
     animation (){
-      TweenLite.to('.block_a', this.range(8,12), {x:this.range(-80, 80), y:this.range(41, -119), ease:Power1.easeOut});
-      TweenLite.to('.block_b', this.range(8,12), {x:this.range(266, 426), y:this.range(55, 215), ease:Power1.easeOut});
-      TweenLite.to('.block_c', this.range(8,12), {x:this.range(5, -155), y:this.range(327, 487), ease:Power1.easeOut});
-      TweenLite.to('.block_d', this.range(8,12), {x:this.range(132, 292), y:this.range(434, 594), ease:Power1.easeOut});
+      // TweenLite.to('.block_a', this.range(8,12), {x:this.range(-80, 80), y:this.range(41, -119), ease:Power1.easeOut});
+      // TweenLite.to('.block_b', this.range(8,12), {x:this.range(266, 426), y:this.range(55, 215), ease:Power1.easeOut});
+      // TweenLite.to('.block_c', this.range(8,12), {x:this.range(5, -155), y:this.range(327, 487), ease:Power1.easeOut});
+      // TweenLite.to('.block_d', this.range(8,12), {x:this.range(132, 292), y:this.range(434, 594), ease:Power1.easeOut});
     },
     range (min,max){
       return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -132,12 +132,21 @@ export default {
     }
     &.block_b {
       transform: translate3d(346px, 135px, 0px);
+      @media screen and (max-width: $mob) {
+        transform: translate3d(204px, 30px, 0px);
+      }
     }
     &.block_c {
       transform: translate3d(-75px, 407px, 0px);
+      @media screen and (max-width: $mob) {
+        transform: translate3d(-51px, 269px, 0px);
+      }
     }
     &.block_d {
       transform: translate3d(212px, 514px, 0px);
+      @media screen and (max-width: $mob) {
+        transform: translate3d(143px, 353px, 0px);
+      }
     }
   }
 }

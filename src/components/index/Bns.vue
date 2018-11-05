@@ -7,6 +7,9 @@
       documentHeight() {
         return document.documentElement.scrollHeight;
       },
+      windowHeight() {
+        return window.screen.height;
+      },
       getHeight(){
         let repositoriesHeight = document.querySelector(".repositories").offsetHeight;
         let chainHeight = document.querySelector(".chain").offsetHeight;
@@ -33,10 +36,11 @@
       //1010
       //1190
       window.addEventListener('scroll',()=>{
-        let percentA = this.scrollTop / (this.documentHeight - (this.documentHeight - this.parallaxStart - this.getHeight - document.querySelector(".identity_box").offsetHeight));
+        let domain = document.querySelector(".domain").offsetHeight;
+        let percentA = (this.scrollTop + this.parallaxStart) / ((this.documentHeight - this.parallaxStart - this.getHeight - domain) - this.windowHeight);
         let scrollStart = document.querySelector(".bns").getClientRects();
-        console.log(scrollStart,"scrollStart");
         if(scrollStart[0].top < 0){
+          console.log(percentA,"percentA");
           t1.progress(percentA);
         }
       });
@@ -47,12 +51,12 @@
 <template>
   <div class="bns">
     <span id="bns" class="anchor"></span>
-    <div class="parallax">
-      <div class="figure parallax_a"><img src="../../images/block01.png" alt=""></div>
-      <div class="figure parallax_b"><img src="../../images/block02.png" alt=""></div>
-      <div class="figure parallax_c"><img src="../../images/block03.png" alt=""></div>
-    </div>
     <!-- <img src="../../images/block-full.png" alt=""> -->
+    <div class="parallax">
+      <div class="figure parallax_a"><img src="../../images/block01.png" alt=""/></div>
+      <div class="figure parallax_b"><img src="../../images/block02.png" alt=""/></div>
+      <div class="figure parallax_c"><img src="../../images/block03.png" alt=""/></div>
+    </div>
     <div class="timeline">
       <div class="left">
         <div class="bns_box">
@@ -91,24 +95,24 @@
     </div>
     <ul class="identity_box">
       <li>
+        <img src="../../images/block01.png" alt=""/>
         <div class="figure ipfs" data-aos="fade-down"><img src="../../images/ipfs.png" alt=""/></div>
-        <img src="../../images/block01.png" alt="">
         <div class="text_box">
           <h5 data-aos="fade-right">IPFS Address</h5>
           <p data-aos="fade-right">QmYUXKQG86g2i6W32eT31C5PWq23kQNpo…</p>
         </div>
       </li>
       <li>
+        <img src="../../images/block02.png" alt=""/>
         <div class="figure contract" data-aos="fade-down" data-aos-duration="500"><img src="../../images/contract.png" alt=""/></div>
-        <img src="../../images/block02.png" alt="">
         <div class="text_box">
           <h5 data-aos="fade-right">Smart Contract</h5>
           <p data-aos="fade-right">0x5FfC014343cd971B7eb70732021E26C35744…</p>
         </div>
       </li>
       <li>
+        <img src="../../images/block03.png" alt=""/>
         <div class="figure wallet" data-aos="fade-down" data-aos-duration="600"><img src="../../images/wallet.png" alt=""/></div>
-        <img src="../../images/block03.png" alt="">
         <div class="text_box">
           <h5 data-aos="fade-right">Wallet Address</h5>
           <p data-aos="fade-right">0x5d681d62da63d9ccc46e9e512c30081c4165a…</p>
@@ -123,11 +127,7 @@
 
 .bns {
   background-color: $bg_gray;
-  padding: 0px 0px 152px 0px;
   position: relative;
-  @media screen and (max-width: $mob) {
-    padding: 0px 0px 83px 0px;
-  }
   >img {
     width: 104px;
     position: absolute;
@@ -143,6 +143,9 @@
   transform: translateX(50%);
   margin-left: -102px;
   position: relative;
+  @media screen and (max-width: $mob) {
+    display: none;
+  }
   .figure {
     width: 103px;
     position: absolute;
@@ -186,6 +189,7 @@
   @media screen and (max-width: $mob) {
     width: 100%;
     justify-content: flex-start;
+    margin-bottom: 50px;
   }
   .bns_box {
     padding-right: 80px;
@@ -245,12 +249,13 @@
   }
   .text_box {
     max-width: 260px;
-    @media screen and (max-width: $mob) {
-      padding: 0px 0px 0px 120px;
-    }
     &.what {
       margin: 136px 0px 0px 80px;
       overflow: hidden;
+      @media screen and (max-width: $mob) {
+        margin: 0px 0px 0px 62px;
+        max-width: 188px;
+      }
     }
     &.identity {
       max-width: 100%;
@@ -259,13 +264,26 @@
       justify-content: space-between;
       transform: translateX(-40%);
       overflow: hidden;
+      @media screen and (max-width: $mob) {
+        width: 100%;
+        display: block;
+        transform: translateX(0px);
+        max-width: 188px;
+        margin: 0px 0px 0px 62px;
+      }
       h4 {
         margin-right: 109px;
         overflow: hidden;
+        @media screen and (max-width: $mob) {
+          margin-right: 0px;
+        }
       }
       p {
         margin-left: 67px;
         overflow: hidden;
+        @media screen and (max-width: $mob) {
+          margin-left: 0px;
+        }
         span {
           display: block;
           font-size: 16px;
@@ -280,6 +298,9 @@
     }
     &+.text_box {
       margin-top: 116px;
+      @media screen and (max-width: $mob) {
+        margin-top: 50px;
+      }
     }
     h4 {
       font-size: 30px;
@@ -319,6 +340,7 @@
   position: relative;
   overflow: hidden;
   @media screen and (max-width: $mob) {
+    width: 80%;
     height: 55px;
     padding: 0px 18px 0px 18px;
   }
@@ -372,27 +394,51 @@
     width: 80%;
     padding-left: 0px;
   }
+  @media screen and (max-width: $mob) {
+    width: 100%;
+    padding: 53px 45px 0px 45px;
+    margin: 0px;
+  }
   li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    @media screen and (max-width: $mob) {
+      flex-wrap: wrap;
+    }
     &+li {
       margin-top: 60px;
     }
     .figure {
       width: 140px;
       margin-right: 60px;
+      @media screen and (max-width: $mob) {
+        width: auto;
+        margin-right: 0px;
+        margin-left: auto;
+      }
       >img {
         width: 140px;
+        @media screen and (max-width: $mob) {
+          width: 83px;
+        }
       }
     }
     >img {
+      display: none;
       width: 103px;
+      @media screen and (max-width: $mob) {
+        display: block;
+        width: 70px;
+      }
     }
     .text_box {
       overflow: hidden;
       margin-left: 36px;
+      @media screen and (max-width: $mob) {
+        padding-top: 20px;
+      }
       h5 {
         font-size: 18px;
         font-weight: 800;
