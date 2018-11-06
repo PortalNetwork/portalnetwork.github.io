@@ -11,6 +11,7 @@
         return window.screen.height;
       },
       getHeight(){
+        // return this.GetOffset(document.querySelector(".repositories")).top - window.screen.height;
         let repositoriesHeight = document.querySelector(".repositories").offsetHeight;
         let chainHeight = document.querySelector(".chain").offsetHeight;
         let solutionHeight = document.querySelector(".solution").offsetHeight;
@@ -18,31 +19,53 @@
         let newsHeight = document.querySelector(".news").offsetHeight;
         let partnershipHeight = document.querySelector(".partnership").offsetHeight;
         let footerHeight = document.querySelector(".footer").offsetHeight;
-        return repositoriesHeight + chainHeight + solutionHeight + roadmapHeight + newsHeight + partnershipHeight + footerHeight;
+        return 1990 + repositoriesHeight + chainHeight + solutionHeight + roadmapHeight + newsHeight + partnershipHeight + footerHeight;
       },
       parallaxStart(){
         // 224 = css what 區塊往上推的距離
         return document.querySelector(".header").offsetHeight + 
       (document.querySelector(".hero").offsetHeight + document.querySelector(".what").offsetHeight - 224);
-      },
+      }
+    },
+    methods: {
+      GetOffset(el) {
+        const box = el.getBoundingClientRect();
+        return {
+            top: box.top + window.pageYOffset - document.documentElement.clientTop,
+            left: box.left + window.pageXOffset - document.documentElement.clientLeft
+        }
+      }
     },
     mounted(){
-      let t1 = new TimelineLite();
-      t1.to('.parallax_a', 1, {"top": 830});
-      // tl.to(".parallax_b", 1, {"top": 1010});
-      // tl.to(".parallax_c", 1, {"top": 1190});
-      t1.pause();
       //830
       //1010
       //1190
+      let t1 = new TimelineLite();
+      t1.to(this.$refs.parallax_a, 1, {top:830})
+      t1.to(this.$refs.parallax_b, 1, {top:1010})
+      t1.to(this.$refs.parallax_c, 1, {top:1190})
+      t1.pause();
+
       window.addEventListener('scroll',()=>{
+        const {scrollTop, scrollHeight} = document.documentElement;
+        const parallaxStart = document.querySelector(".header").offsetHeight + (document.querySelector(".hero").offsetHeight + document.querySelector(".what").offsetHeight - 224)
+        const windowHeight = window.screen.height;
+        
+        const docH = document.documentElement.scrollHeight - this.getHeight;
+
         let domain = document.querySelector(".domain").offsetHeight;
-        let percentA = (this.scrollTop + this.parallaxStart) / ((this.documentHeight - this.parallaxStart - this.getHeight - domain) - this.windowHeight);
-        let scrollStart = document.querySelector(".bns").getClientRects();
-        if(scrollStart[0].top < 0){
-          console.log(percentA,"percentA");
-          t1.progress(percentA);
-        }
+
+        // if(scrollTop < 1069) return;
+
+        let percentA = (scrollTop - this.GetOffset(document.querySelector(".bns")).top) / (docH - windowHeight);
+
+        if(percentA < 0) percentA = 0;
+        if(percentA > 1) percentA = 1;
+        
+        console.log(percentA);
+        t1.progress(percentA);
+        // if(scrollStart[0].top < 0 && Math.abs(scrollStart[0].top) < document.querySelector(".bns").offsetHeight){
+        // }
       });
     }
   };
@@ -51,11 +74,10 @@
 <template>
   <div class="bns">
     <span id="bns" class="anchor"></span>
-    <!-- <img src="../../images/block-full.png" alt=""> -->
     <div class="parallax">
-      <div class="figure parallax_a"><img src="../../images/block01.png" alt=""/></div>
-      <div class="figure parallax_b"><img src="../../images/block02.png" alt=""/></div>
-      <div class="figure parallax_c"><img src="../../images/block03.png" alt=""/></div>
+      <div class="figure parallax_a" ref="parallax_a"><img src="../../images/block01.png" alt=""/></div>
+      <div class="figure parallax_b" ref="parallax_b"><img src="../../images/block02.png" alt=""/></div>
+      <div class="figure parallax_c" ref="parallax_c"><img src="../../images/block03.png" alt=""/></div>
     </div>
     <div class="timeline">
       <div class="left">
@@ -246,6 +268,21 @@
   padding-bottom: 55px;
   @media screen and (max-width: $mob) {
     width: 100%;
+    margin-left: 34px;
+    position: relative;
+  }
+  &:before {
+    @media screen and (max-width: $mob) {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 76px;
+      background: url('~images/block-full.png') center center no-repeat;
+      background-size: 100% auto;
+      position: absolute;
+      left: -35px;
+      top: 0px;
+    }
   }
   .text_box {
     max-width: 260px;
@@ -388,7 +425,7 @@
 }
 .identity_box {
   width: 837px;
-  margin: 0px auto 53px auto;
+  margin: 0px auto;
   padding: 53px 0px 0px 179px;
   @media screen and (max-width: $pad) {
     width: 80%;
@@ -397,7 +434,6 @@
   @media screen and (max-width: $mob) {
     width: 100%;
     padding: 53px 45px 0px 45px;
-    margin: 0px;
   }
   li {
     display: flex;

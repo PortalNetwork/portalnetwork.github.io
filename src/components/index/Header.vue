@@ -19,6 +19,9 @@ export default {
       this.isMenuOpen = false;
       document.querySelector("body").classList.remove("active");
       animateScrollTo(document.querySelector(`#${componentName}`));
+    },
+    removeClass(){
+      document.querySelector("body").classList.remove("active");
     }
   }
 };
@@ -29,15 +32,12 @@ export default {
 		<nav v-if="isMenuOpen">
 			<div class="right">
 				<ul class="menu">
-					<li><router-link to="/documentation">Documentation</router-link></li>
+					<li @click="removeClass"><router-link to="/documentation">Documentation</router-link></li>
 					<li><a href="https://forum.portal.network" target="_blank">Forum</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('bns')">What is BNS</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('solution')">Solution</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('roadmap')">Roadmap</a></li>
 				</ul>
-				<!-- <a href="javascript:;" class="cancel" @click="isMenuOpen = false">
-					<img src="../../images/cancel.png" alt=""/>
-				</a> -->
 			</div>
       <div class="left">
 				<h1><img src="../../images/logo.png" alt=""/></h1>

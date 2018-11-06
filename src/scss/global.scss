@@ -22,14 +22,22 @@ html,body{
 }
 
 body {
+  overflow-x: hidden;
   &.active {
     overflow-y: hidden;
   }
 }
 
 #app {
-  background-color: #F7F6F4;
-  overflow: hidden;
+  &.mask {
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(256,256,256,.4);
+    }
+  }
 }
 
 // [data-aos^=fade][data-aos^=fade] {

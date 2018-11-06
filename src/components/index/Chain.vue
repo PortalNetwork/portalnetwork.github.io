@@ -9,7 +9,12 @@ export default {
         "description": ""
       },
       detailItem: [],
-      selectIdx: 0
+      selectIdx: 0,
+      email: '',
+      currentSelectedVote: '',
+      votes: [],
+      isLoading: false,
+      isOpen: false
     };
   },
   methods: {
@@ -30,12 +35,73 @@ export default {
       };
       this.detailItem = this.chains[idx].detail;
     },
-    coming(){
-      alert('Coming Soon');
-    }
+    toggleSelected(event,params){
+      this.currentSelectedVote = params;
+    },
+    openPopup(){
+      this.isLoading = true;
+      this.isOpen = true;
+      document.querySelector("body").classList.add("active");
+      document.querySelector(".wrap").classList.add("mask");
+      axios.get("https://faucet-server.herokuapp.com/faucet/options")
+      .then((res)=>{
+        this.votes = res.data;
+        this.isLoading = false;
+      })
+      .catch((error)=> {
+        if(error && error.message){
+          alert(error.message);
+        }else {
+          alert('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        }
+      });
+    },
+    closePopup(){
+      this.isOpen = false;
+      document.querySelector("body").classList.remove("active");
+      document.querySelector(".wrap").classList.remove("mask");
+    },
+    onSubmit(){
+      const isText = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+      let errorMsg = "";
+
+      if(!(isText).test(this.email)) errorMsg = "Incorrect Email.";
+      if(this.currentSelectedVote === "") errorMsg = "Please select a chain.";
+      if(errorMsg !== "") alert(errorMsg);
+
+      if(errorMsg === ""){
+        let currentChain = this.votes.filter((elem)=>{
+          return elem.name === this.currentSelectedVote;
+        });
+        let data = {
+          email: this.email,
+          id: currentChain[0].id
+        };
+       
+        axios.post('https://faucet-server.herokuapp.com/faucet/options', data)
+        .then(res=>{
+          if(res.data && res.data.message){
+            alert(res.data.message);
+          }else {
+            alert('Thank you for your participation');
+            this.email = "";
+            this.currentSelectedVote = "";
+          }
+          this.isOpen = false;
+          document.querySelector("body").classList.remove("active");
+        }).catch(error=>{
+          if(error && error.message){
+            alert(error.message);
+          }else {
+            alert('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+          }
+        });
+      }
+    },
   },
   mounted() {
     this.getChainData();
+    
   }
 };
 </script>
@@ -74,8 +140,29 @@ export default {
         </div>
       </div>
       <div class="wish_box">
-        <a href="javascript:;" target="_blank" @click="coming"><img src="../../images/plus.png" alt=""/></a>
+        <a href="javascript:;" target="_blank" @click="openPopup"><img src="../../images/plus.png" alt=""/></a>
         <p>MAKE A WISH</p>
+      </div>
+    </div>
+    <div :class="{form_popup: true, open: isOpen}">
+      <p v-if="isLoading">Loading ...</p>
+      <div v-if="!isLoading">
+        <p class="text">Please select a chain that you are interested in.</p>
+        <a href="javascript:;" class="close_btn" @click="closePopup"><img src="../../images/close.png" alt=""/></a>
+        <div class="vote_list">
+          <div class="vote_box" v-for="(vote, idx) in votes" :key="idx">
+            <a href="javascript:;" :class="{active: currentSelectedVote === vote.name}" @click="toggleSelected($event,vote.name)">
+              <div class="figure"><img :src="vote.url" alt=""/></div>
+              <p>{{vote.name}}</p>
+              <p>Count: <span>{{vote.count}}</span></p>
+            </a>
+          </div>
+        </div>
+        <div class="popup_box">
+          <label>Email</label>
+          <input type="text" placeholder="Your email" v-model.trim="email"/>
+        </div>
+        <button class="popup_btn" type="button" @click="onSubmit">Submit</button>
       </div>
     </div>
   </div>
@@ -87,7 +174,7 @@ export default {
 .chain {
   max-width: 1100px;
   width: 100%;
-  margin: 0px auto;
+  margin: 100px auto 0px auto;
   background-color: $blue_d2;
   padding: 64px 0px; 
   position: relative;
@@ -350,6 +437,129 @@ h3 {
     color: #F7F6F4;
     position: relative;
     margin-left: 16px;
+  }
+}
+.form_popup {
+  display: none;
+  min-width: 300px;
+  max-width: 600px;
+  height: 500px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
+  padding: 50px 20px 20px 20px;
+  border-radius: 4px;
+  z-index: 8;
+  background-color: #fff;
+  @media screen and (max-width: $mob) {
+    width: 300px;
+    overflow-y: auto;
+  }
+  &.open {
+    display: block;
+  }
+  p {
+    text-align: center;
+  }
+  .close_btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    img {
+      width: 100%;
+      margin: 0px auto;
+    }
+  }
+  .text {
+    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  .popup_box {
+    margin-bottom: 20px;
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      height: 38px;
+      line-height: 38px;
+      padding: 5px 10px;
+      border: 1px solid #E1DED9;
+      border-radius: 4px;
+      outline: none;
+    }
+    select {
+      outline: none;
+    }
+  }
+  .popup_btn {
+    width: 200px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #15DACB;
+    color: $blue_d1;
+    padding: 10px 20px;
+    outline: none;
+    border: solid 1px $blue_d1;
+    border-top: none;
+    border-left: none;
+    border-radius: 4px;
+    @media screen and (max-width: $mob) {
+      width: 100%;
+    }
+  }
+}
+.vote_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  @media screen and (max-width: $mob) {
+    display: block;
+  }
+}
+.vote_box {
+  width: 24%;
+  @media screen and (max-width: $mob) {
+    width: 100%;
+  }
+  &+.vote_box {
+    @media screen and (max-width: $mob) {
+      margin-top: 20px;
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid #E1DED9;
+    padding: 10px;
+    &.active {
+      border-color: #000;
+    }
+    &:hover {
+      border-color: #000;
+    }
+    .figure {
+      width: 80px;
+      margin: 0px auto 10px auto;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      &+p {
+        margin-top: 5px;
+      }
+    }
   }
 }
 </style>

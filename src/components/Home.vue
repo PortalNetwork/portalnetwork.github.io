@@ -44,3 +44,21 @@ export default {
   </div>
 </template>
 
+<style lang="scss" scoped>
+.wrap {
+	background-color: #F7F6F4;
+	&.mask:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.6);
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 2;
+	}
+}
+</style>
+
+

@@ -2,17 +2,19 @@
 export default {
   methods: {
     animation (){
-      // TweenLite.to('.block_a', this.range(8,12), {x:this.range(-80, 80), y:this.range(41, -119), ease:Power1.easeOut});
-      // TweenLite.to('.block_b', this.range(8,12), {x:this.range(266, 426), y:this.range(55, 215), ease:Power1.easeOut});
-      // TweenLite.to('.block_c', this.range(8,12), {x:this.range(5, -155), y:this.range(327, 487), ease:Power1.easeOut});
-      // TweenLite.to('.block_d', this.range(8,12), {x:this.range(132, 292), y:this.range(434, 594), ease:Power1.easeOut});
+        TweenLite.to('.block_a', this.range(8,12), {x:this.range(-80, 80), y:this.range(41, -119), ease:Power1.easeOut});
+        TweenLite.to('.block_b', this.range(8,12), {x:this.range(266, 426), y:this.range(55, 215), ease:Power1.easeOut});
+        TweenLite.to('.block_c', this.range(8,12), {x:this.range(5, -155), y:this.range(327, 487), ease:Power1.easeOut});
+        TweenLite.to('.block_d', this.range(8,12), {x:this.range(132, 292), y:this.range(434, 594), ease:Power1.easeOut});
     },
     range (min,max){
       return Math.floor(Math.random() * (max - min + 1)) + min; 
     }
   },
   mounted(){
-    setInterval(()=>{this.animation()}, 500);
+    if(window.screen.width > 720){
+      setInterval(()=>{this.animation()}, 500);
+    }
   }
 };
 </script>

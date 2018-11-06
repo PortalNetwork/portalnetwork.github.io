@@ -120,7 +120,7 @@ import axios from 'axios';
 }
 .repositories {
   background-color: $bg_gray;
-  padding: 152px 0px 152px 0px;
+  padding: 152px 0px 52px 0px;
   @media screen and (max-width: $mob) {
     padding: 50px 0px 60px 0px;
   }
@@ -139,7 +139,7 @@ import axios from 'axios';
   }
 }
 .loading {
-  min-height: 559px;
+  min-height: 611px;
   display: flex;
   align-items: center;
   justify-content: center;
