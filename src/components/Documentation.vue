@@ -6,7 +6,7 @@ export default {
     return {
       swiper: null,
       isOpenPop: false,
-      nowPhotos: null,
+      nowPhotos: [],
       roadmapData: []
     }
   },
@@ -19,6 +19,9 @@ export default {
     openModal: function(photoArr) {
       this.isOpenPop = true;
       this.nowPhotos = photoArr;
+      setTimeout(() => {
+        this.swiper.update();
+      }, 100);
     },
     closeModal: function() {
       this.isOpenPop = false;
@@ -36,9 +39,24 @@ export default {
       const targetChapter = chapters[idx];
       const elementTop = this.getOffset(targetChapter);
       animateScrollTo(elementTop.top - 100);
+    },
+    swiperInit(){
+      this.swiper = new Swiper('.swiper-container', {
+        loop: false,
+        watchOverflow: true,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      }); 
     }
   },
   mounted(){
+    this.swiperInit();
     this.getRoadmapData();
   }
 };
@@ -287,7 +305,7 @@ $MAIN_WIDTH: 1051px;
   padding: 24px 12px;
   border-bottom: solid 1px rgba(147, 147, 147, 0.4);
   cursor: pointer;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 940px) {
       width: 28%;
       border-right: solid 1px rgba(147, 147, 147, 0.4);
       border-bottom: none;
@@ -312,7 +330,7 @@ $MAIN_WIDTH: 1051px;
     line-height: 1.3;
     font-weight: 600;
     color: #fff;
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 940px) {
       color: #000;
     }
     @media screen and (max-width: 720px) {
@@ -329,16 +347,10 @@ $MAIN_WIDTH: 1051px;
   width: 893px;
   border-left: solid 1px rgba(#fff,0.3);
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 940px) {
     width: 100%;
     margin: 0px;
-    padding: 169px 20px 0px 20px;
-  }
-  @media screen and (max-width: 720px) {
-    padding: 148px 20px 0px 20px;
-  }
-  @media screen and (max-width: 374px) {
-    padding: 168px 20px 0px 20px;
+    padding: 188px 20px 0px 20px;
   }
 }
 
@@ -356,7 +368,7 @@ $MAIN_WIDTH: 1051px;
   align-items: center;
   margin-bottom: 40px;
   height: 218px;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 940px) {
     margin-bottom: 30px;
     width: 100%;
     height: auto;
@@ -372,7 +384,7 @@ $MAIN_WIDTH: 1051px;
     background-color: $blue_l;
     margin-right: 46px;
     margin-left: 92px;
-    @media screen and (max-width: 960px) {
+    @media screen and (max-width: 940px) {
       margin-left: 0px;
     }
     @media screen and (max-width: 720px) {

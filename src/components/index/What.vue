@@ -40,6 +40,7 @@
     background-color: #000;
     padding: 65px 56px 65px 47px;
     @media screen and (max-width: $pad) {
+      max-width: 100%;
       margin: 0px auto;
       padding: 30px 44px 43px 44px;
     }
@@ -49,6 +50,7 @@
       overflow: hidden;
       margin-bottom: 10px;
       @media screen and (max-width: $mob) {
+        display: block;
         font-size: 20px;
         margin-bottom: 20px;
       }
@@ -56,6 +58,10 @@
         display: block;
         width: 42px;
         margin-right: 46px;
+        @media screen and (max-width: $mob) {
+          width: 40px;
+          margin: 0px auto 30px auto;
+        }
         img {
           width: 100%;
         }
@@ -66,6 +72,7 @@
         color: #fff;
         @media screen and (max-width: $mob) {
           font-size: 20px;
+          text-align: center;
         }
       }
     }

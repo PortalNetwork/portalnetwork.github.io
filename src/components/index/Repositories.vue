@@ -122,7 +122,7 @@ import axios from 'axios';
   background-color: $bg_gray;
   padding: 152px 0px 52px 0px;
   @media screen and (max-width: $mob) {
-    padding: 50px 0px 60px 0px;
+    padding: 60px 0px 60px 0px;
   }
 }
 .content {
@@ -144,7 +144,7 @@ import axios from 'axios';
   align-items: center;
   justify-content: center;
   @media screen and (max-width: $mob) {
-    min-height: 386px;
+    min-height: 276px;
   }
   .lds-facebook {
     display: inline-block;

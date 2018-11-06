@@ -11,7 +11,6 @@
         return window.screen.height;
       },
       getHeight(){
-        // return this.GetOffset(document.querySelector(".repositories")).top - window.screen.height;
         let repositoriesHeight = document.querySelector(".repositories").offsetHeight;
         let chainHeight = document.querySelector(".chain").offsetHeight;
         let solutionHeight = document.querySelector(".solution").offsetHeight;
@@ -31,41 +30,32 @@
       GetOffset(el) {
         const box = el.getBoundingClientRect();
         return {
-            top: box.top + window.pageYOffset - document.documentElement.clientTop,
-            left: box.left + window.pageXOffset - document.documentElement.clientLeft
+          top: box.top + window.pageYOffset - document.documentElement.clientTop,
+          left: box.left + window.pageXOffset - document.documentElement.clientLeft
         }
       }
     },
     mounted(){
-      //830
-      //1010
-      //1190
       let t1 = new TimelineLite();
-      t1.to(this.$refs.parallax_a, 1, {top:830})
-      t1.to(this.$refs.parallax_b, 1, {top:1010})
-      t1.to(this.$refs.parallax_c, 1, {top:1190})
+      t1.to(this.$refs.parallax_a, 1, {top:830});
+      t1.to(this.$refs.parallax_b, 1, {top:1010});
+      t1.to(this.$refs.parallax_c, 1, {top:1190});
       t1.pause();
 
       window.addEventListener('scroll',()=>{
         const {scrollTop, scrollHeight} = document.documentElement;
         const parallaxStart = document.querySelector(".header").offsetHeight + (document.querySelector(".hero").offsetHeight + document.querySelector(".what").offsetHeight - 224)
         const windowHeight = window.screen.height;
-        
         const docH = document.documentElement.scrollHeight - this.getHeight;
-
-        let domain = document.querySelector(".domain").offsetHeight;
 
         // if(scrollTop < 1069) return;
 
-        let percentA = (scrollTop - this.GetOffset(document.querySelector(".bns")).top) / (docH - windowHeight);
+        let percent = (scrollTop - this.GetOffset(document.querySelector(".bns")).top) / (docH - windowHeight);
 
-        if(percentA < 0) percentA = 0;
-        if(percentA > 1) percentA = 1;
+        if(percent < 0) percent = 0;
+        if(percent > 1) percent = 1;
         
-        console.log(percentA);
-        t1.progress(percentA);
-        // if(scrollStart[0].top < 0 && Math.abs(scrollStart[0].top) < document.querySelector(".bns").offsetHeight){
-        // }
+        t1.progress(percent);
       });
     }
   };
@@ -150,6 +140,9 @@
 .bns {
   background-color: $bg_gray;
   position: relative;
+  @media screen and (max-width: $mob) {
+    padding: 0px 45px;
+  }
   >img {
     width: 104px;
     position: absolute;
@@ -165,27 +158,30 @@
   transform: translateX(50%);
   margin-left: -102px;
   position: relative;
+  @media screen and (max-width: $pad) {
+    margin-left: -69px;
+  }
   @media screen and (max-width: $mob) {
     display: none;
   }
   .figure {
     width: 103px;
     position: absolute;
+    @media screen and (max-width: $pad) {
+      width: 70px;
+    }
     img {
       width: 100%;
     }
     &.parallax_a {
-      // top: 830px;
       top: 0px;
       z-index: 3;
     }
     &.parallax_b {
-      // top: 1010px;
       top: 20px;
       z-index: 2;
     }
     &.parallax_c {
-      // top: 1190px;
       top: 40px;
       z-index: 1;
     }
@@ -201,7 +197,6 @@
   justify-content: center;
   @media screen and (max-width: $mob) {
     display: block;
-    padding: 0px 45px;
   }
 }
 .left {
@@ -214,10 +209,10 @@
     margin-bottom: 50px;
   }
   .bns_box {
-    padding-right: 80px;
+    margin-right: 80px;
     overflow: hidden;
     @media screen and (max-width: $pad) {
-      padding-right: 40px;
+      margin-right: 40px;
     }
     >img {
       width: 60px;
@@ -267,8 +262,10 @@
   border-left: solid 1px rgba(20, 30, 106, 0.8);
   padding-bottom: 55px;
   @media screen and (max-width: $mob) {
+    display: block;
     width: 100%;
     margin-left: 34px;
+    padding-right: 34px;
     position: relative;
   }
   &:before {
@@ -286,40 +283,48 @@
   }
   .text_box {
     max-width: 260px;
+    overflow: hidden;
+    @media screen and (max-width: $mob) {
+      max-width: 100%; 
+    }
     &.what {
       margin: 136px 0px 0px 80px;
-      overflow: hidden;
+      @media screen and (max-width: $pad) {
+        margin: 136px 0px 0px 40px;
+      }
       @media screen and (max-width: $mob) {
         margin: 0px 0px 0px 62px;
-        max-width: 188px;
       }
     }
     &.identity {
       max-width: 100%;
-      width: 580px;
+      width: 731px;
       display: flex;
-      justify-content: space-between;
-      transform: translateX(-40%);
-      overflow: hidden;
+      transform: translateX(-44%);
+      justify-content: center;
       @media screen and (max-width: $mob) {
-        width: 100%;
         display: block;
+        width: 100%;
         transform: translateX(0px);
-        max-width: 188px;
-        margin: 0px 0px 0px 62px;
+        margin-left: 62px;
       }
       h4 {
-        margin-right: 109px;
+        max-width: 178px;
+        margin-right: 160px;
         overflow: hidden;
+        margin-right: 80px;
         @media screen and (max-width: $mob) {
+          max-width: 96%;
           margin-right: 0px;
+          padding-right: 62px;
         }
       }
       p {
-        margin-left: 67px;
+        max-width: 260px;
         overflow: hidden;
         @media screen and (max-width: $mob) {
-          margin-left: 0px;
+          max-width: 96%;
+          padding-right: 62px;
         }
         span {
           display: block;
@@ -377,7 +382,7 @@
   position: relative;
   overflow: hidden;
   @media screen and (max-width: $mob) {
-    width: 80%;
+    width: 100%;
     height: 55px;
     padding: 0px 18px 0px 18px;
   }
@@ -417,6 +422,7 @@
     width: 27px;
     @media screen and (max-width: $mob) {
       width: 18px;
+      right: 18px;
     }
     img {
       width: 100%;
@@ -428,12 +434,11 @@
   margin: 0px auto;
   padding: 53px 0px 0px 179px;
   @media screen and (max-width: $pad) {
-    width: 80%;
-    padding-left: 0px;
-  }
-  @media screen and (max-width: $mob) {
     width: 100%;
     padding: 53px 45px 0px 45px;
+  }
+  @media screen and (max-width: $mob) {
+    padding: 53px 0px 0px 0px;
   }
   li {
     display: flex;
@@ -442,16 +447,18 @@
     overflow: hidden;
     @media screen and (max-width: $mob) {
       flex-wrap: wrap;
+      padding-right: 35px;
     }
     &+li {
       margin-top: 60px;
+      @media screen and (max-width: $mob) {
+        margin-top: 30px;
+      }
     }
     .figure {
       width: 140px;
-      margin-right: 60px;
       @media screen and (max-width: $mob) {
         width: auto;
-        margin-right: 0px;
         margin-left: auto;
       }
       >img {
@@ -471,9 +478,10 @@
     }
     .text_box {
       overflow: hidden;
-      margin-left: 36px;
       @media screen and (max-width: $mob) {
-        padding-top: 20px;
+        width: 100%;
+        margin-top: 20px;
+        padding-left: 35px;
       }
       h5 {
         font-size: 18px;
@@ -499,6 +507,7 @@
           white-space : nowrap;
         }
         @media screen and (max-width: $mob) {
+          width: 100%;
           font-size: 12px;
         }
       }

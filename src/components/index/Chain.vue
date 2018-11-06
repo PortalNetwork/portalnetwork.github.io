@@ -101,7 +101,6 @@ export default {
   },
   mounted() {
     this.getChainData();
-    
   }
 };
 </script>
@@ -179,6 +178,7 @@ export default {
   padding: 64px 0px; 
   position: relative;
   @media screen and (max-width: $mob) {
+    margin: 0px auto;
     padding: 26px 0px 0px 0px;
   }
   &:before {
