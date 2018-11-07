@@ -1,14 +1,117 @@
 <script>
-export default {};
+import axios from "axios";
+export default {
+  data(){
+    return {
+      isMenuOpen: false,
+      name: '',
+      email: '',
+      domain: '',
+      hash: '',
+      tag: '',
+      description: '',
+      emailError: false,
+      hashError: false,
+      hashRequiredError: false,
+      tagRequiredError: false,
+      domainRequiredError: false
+    }
+  },
+  methods: {
+    toggleMenuFn() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    gaSeedPageView(name) {
+      ga('send', 'event', name, 'click', );
+      let debug = getUrl();
+      if (debug["debug"] == "true") console.log("GA PageView -> ", name);
+    },
+    validator() {
+      this.hashRequiredError = this.hash === "";
+      this.tagRequiredError = this.tag === "";
+      this.domainRequiredError = this.domain === "";
+
+      if(this.hashRequiredError === false && this.tagRequiredError === false && this.domainRequiredError === false){
+        this.onSubmit();
+      }
+    },
+    onSubmit(){
+      const data = {
+        name: this.name,
+        hash: this.hash,
+        description: this.description,
+        domain: this.domain,
+        tag: this.tag,
+        email: this.email
+      };
+
+      axios.post('https://ip41ye507l.execute-api.us-east-1.amazonaws.com/dev/v1/proxy/insert-shortcase', data)
+      .then(function (response) {
+        alert('Successful');
+      }).catch(function (error) {
+        if(error.response && error.response.status){
+          alert(error.response.data.message);
+        }else{
+          alert('Oops! Something went wrong, please try it again.\nPlease visit our telegram group for further assistance if you need more help.');
+        }
+      });
+    }
+  },
+  watch: {
+    email(){
+      const isText = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+      this.emailError = !isText.test(this.email);
+    },
+    hash(){
+      const isQm = /^Qm/;
+      const hasText = /0|O|I|l|\/|\+/;
+      if(this.hash.length !== 46){
+        this.hashError = true;
+      }else if(isQm.test(this.hash) === false){
+        this.hashError = true;
+      }else if(hasText.test(this.hash)){
+        this.hashError = true;
+      }else {
+        this.hashError = false;
+      }
+    }
+  }
+};
 </script>
 
 <template>
-  <div class="wrap">
+  <div id="submitdweb" :class="{active: isMenuOpen}">
+    <a class="menu_btn" @click="toggleMenuFn">
+      <span></span>
+    </a>
+    <div class="header">
+      <h1 class="logo"><router-link to="/home"><img src="../images/logo_b.png" alt=""></router-link></h1>
+      <nav>
+        <ul class="menu">
+          <li>
+            <router-link to="/documentation">Documentation</router-link>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('showcase')" href="https://search.portal.network/" target="_blank">Showcase</a>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
+          </li>
+          <li>
+            <a @click="gaSeedPageView('forum')" href="https://forum.portal.network/" target="_blank">Forum</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div class="main">
+      <div class="text_box">
+        <h2>What is DWeb ? (Decentralized website)</h2>
+        <p>One of the most significant characteristics for a DWeb is that there is no central server hosting the website, meaning there is no central authority that can shut down the website, except for its owner.</p>
+      </div>
       <div class="form_box">
         <div class="content">
-            <h3>Submit a ÐWEB</h3>
-            <p>Fill in this form in order to build a ÐWEB and be on our showcase.</p>
+          <h3>Submit a ÐWEB</h3>
+          <p>Fill in this form in order to build a ÐWEB and be on our showcase.</p>
         </div>
         <ul>
           <li class="row">
@@ -67,12 +170,13 @@ export default {};
     </div>
     <div class="footer">
       <ul>
-        <li><a href="./privacy_policy.html" target="_blank">Privacy & Policy</a></li>
-        <li><a href="./terms_coditions.html" target="_blank">Terms of use</a></li>
+        <li><router-link to="/privacy">Privacy & Policy</router-link></li>
+        <li><router-link to="/terms">Terms of use</router-link></li>
       </ul>
       <p class="copyRight">© 2018 PORTAL.NETWORK</p>
     </div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -83,6 +187,47 @@ $smob: 340px;
 $blue: #00D5BF;
 $input_width: 450px;
 $border: #d6d6d6;
+
+%clear {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+.menu_btn {
+  display: none;
+  position: absolute;
+  top: 64px;
+  right: 20px;
+  z-index: 99;
+  color: #fff;
+  transition: right .5s;
+  cursor: pointer;
+  @media screen and (max-width: $mob) {
+    top: 42px;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333333;
+    transition: all .5s;
+  }
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: transparent;
+    margin: 3px 0;
+  }
+  @media screen and (max-width: $pad) {
+    display: inline-block;
+  }
+}
+
 .header {
   max-width: $container;
   width: 100%;
@@ -174,7 +319,7 @@ nav {
         display: block;
         width: 200px;
         height: 26px;
-        background: url('~images/logo/logo_w.png') left top no-repeat;
+        background: url('~images/logo.png') left top no-repeat;
         background-size: 100% auto;
         margin: 44px 0 0 20px;
       }
@@ -212,6 +357,22 @@ nav {
   @media screen and (max-width: $smob) {
     padding: 0px;
   }
+  .text_box {
+    max-width: 450px;
+    width: 100%;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    h2 {
+      font-size: 20px;
+      line-height: 1.3;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.3;
+    }
+  }
 }
 
 .form_box {
@@ -223,7 +384,7 @@ nav {
   .content {
     margin-bottom: 40px;
     h3 {
-      font-size: 22px;
+      font-size: 18px;
       margin-bottom: 10px;
     }
     p {
@@ -366,7 +527,7 @@ nav {
       a {
         display: block;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 400;
         text-decoration: none;
         color: #222;
         &:hover {
@@ -377,7 +538,7 @@ nav {
   }
   .copyright {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     color: #222;
   }
 }

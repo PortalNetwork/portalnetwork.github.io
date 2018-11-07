@@ -14,7 +14,6 @@
         <div class="map_item">
           <h4>News</h4>
           <ul>
-            <!-- <li><a href="./blog.html" target="_blank">Blog</a></li> -->
             <li><a href="https://hackathon.portal.network/" target="_blank">Event</a></li>
             <li><a href="https://projects.invisionapp.com/boards/K53P6SNW843/" target="_blank">Press</a></li>
           </ul>
