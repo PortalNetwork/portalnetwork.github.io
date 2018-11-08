@@ -42,6 +42,11 @@
   background-color: #fff;
   padding: 20px;
   max-height: 349px;
+  >iframe{
+    width: 1px !important;
+    min-width: 100% !important;
+    *width: 100% !important;
+  }
 }
 
 .feed_item {
