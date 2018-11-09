@@ -37,9 +37,9 @@
     },
     mounted(){
       let t1 = new TimelineLite();
-      t1.to(this.$refs.parallax_a, 1, {top:830});
-      t1.to(this.$refs.parallax_b, 1, {top:1010});
-      t1.to(this.$refs.parallax_c, 1, {top:1190});
+      t1.to(this.$refs.parallax_a, 1, {top:730});
+      t1.to(this.$refs.parallax_b, 1, {top:910});
+      t1.to(this.$refs.parallax_c, 1, {top:1090});
       t1.pause();
 
       window.addEventListener('scroll',()=>{
