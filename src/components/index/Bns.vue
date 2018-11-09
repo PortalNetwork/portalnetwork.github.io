@@ -110,7 +110,7 @@
         <img src="../../images/block01.png" alt=""/>
         <div class="figure ipfs" data-aos="fade-down"><img src="../../images/ipfs.png" alt=""/></div>
         <div class="text_box">
-          <h5 data-aos="fade-right">IPFS Address</h5>
+          <h5 data-aos="fade-right">IPFS Hash</h5>
           <p data-aos="fade-right">QmYUXKQG86g2i6W32eT31C5PWq23kQNpo…</p>
         </div>
       </li>
@@ -312,7 +312,10 @@
         max-width: 178px;
         margin-right: 160px;
         overflow: hidden;
-        margin-right: 80px;
+        font-size: 20px;
+        @media screen and (max-width: $pad) {
+          margin-right: 80px;
+        }
         @media screen and (max-width: $mob) {
           max-width: 96%;
           margin-right: 0px;
@@ -322,13 +325,14 @@
       p {
         max-width: 260px;
         overflow: hidden;
+        font-size: 12px;
         @media screen and (max-width: $mob) {
           max-width: 96%;
           padding-right: 62px;
         }
         span {
           display: block;
-          font-size: 16px;
+          font-size: 12px;
           font-weight: 600;
           line-height: 25px;
           @media screen and (max-width: $mob) {
@@ -355,7 +359,7 @@
       }
     }
     p {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 600;
       line-height: 25px;
       @media screen and (max-width: $mob) {

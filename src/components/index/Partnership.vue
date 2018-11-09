@@ -45,18 +45,6 @@
         </a>
       </li>
       <li>
-        <a href="https://www.coingecko.com/en" target="_blank">
-          <img src="../../images/coingecko.png" alt=""/>
-          <p>CoinGecko</p>
-        </a>
-      </li>
-      <li>
-        <a href="https://kenetic.capital" target="_blank">
-          <img src="../../images/kenetic.png" alt=""/>
-          <p>Kenetic</p>
-        </a>
-      </li>
-      <li>
         <a href="https://enigma.co" target="_blank">
           <img src="../../images/enigma.png" alt=""/>
           <p>Enigma</p>
@@ -86,6 +74,45 @@
           <p>QuarkChain</p>
         </a>
       </li>
+      <li>
+        <a href="https://www.coingecko.com/en" target="_blank">
+          <img src="../../images/coingecko.png" alt=""/>
+          <p>CoinGecko</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://kenetic.capital" target="_blank">
+          <img src="../../images/kenetic.png" alt=""/>
+          <p>Kenetic</p>
+        </a>
+      </li>
+    </ul>
+    <h3>SUPPORTED WALLETS</h3>
+    <ul class="list">
+      <li>
+        <a href="https://www.cipherbrowser.com/" target="_blank">
+          <img src="../../images/cipher.png" alt=""/>
+          <p>Cipher</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://myetherwallet.com" target="_blank">
+          <img src="../../images/myetherwallet.png" alt=""/>
+          <p>Myetherwallet</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://metamask.io" target="_blank">
+          <img src="../../images/metamask.png" alt=""/>
+          <p>MetaMask</p>
+        </a>
+      </li>
+      <li>
+        <a href="https://wallet.coinbase.com/" target="_blank">
+          <img src="../../images/coinbase.png" alt=""/>
+          <p>Coinbase</p>
+        </a>
+      </li>
     </ul>
   </div>
 </template>
@@ -97,20 +124,23 @@
   max-width: $container;
   width: 100%;
   margin: 0px auto;
-  padding: 132px 0px 60px 0px;
+  padding: 50px 0px 50px 0px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   @media screen and (max-width: $pad) {
     display: block;
-    padding: 50px 45px 60px 45px;
+    padding: 50px 45px 50px 45px;
   }
   h3 {
-    width: 24.3%;
+    width: 100%;
     font-size: 30px;
     line-height: 42px;
     font-weight: 800;
     color: #979797;
+    padding-bottom: 30px;
+    padding-top: 20px;
     @media screen and (max-width: $pad) {
       width: 100%;
       text-align: center;
@@ -118,7 +148,7 @@
     }
   }
   .list {
-    width: 66.6%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -131,7 +161,7 @@
       width: 100%;
     }
     li {
-      width: 25%;
+      width: 13.5%;
       min-height: 113px;
       text-align: center;
       margin-bottom: 45px;

@@ -126,7 +126,7 @@
             </a>
           </div>
           <div class="left">
-            <h5 data-aos="fade-right" data-aos-duration="700">Technical Users <span>Adoption</span></h5>
+            <h5 data-aos="fade-right" data-aos-duration="700">Technical Users Adoption</h5>
             <p data-aos="fade-right" data-aos-duration="1000">KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
           </div>
         </div>
@@ -186,7 +186,7 @@
         margin-left: 0px;
       }
       h5 {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
         line-height: 55px;
         color: $gray;
@@ -214,7 +214,7 @@
         }
       }
       p {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 600;
         line-height: 1.69;
         @media screen and (max-width: $pad) {
@@ -288,7 +288,7 @@
   }
   .item_box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
   }
   .item {

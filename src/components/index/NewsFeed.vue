@@ -67,6 +67,7 @@ export default {
 .news {
   background-color: #e9e6e2;
   padding-top: 50px;
+  padding-bottom: 30px;
   @media screen and (max-width: $mob) {
     padding-top: 28px;
   }
