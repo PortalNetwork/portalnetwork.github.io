@@ -128,16 +128,22 @@ const config = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: 'assets', to: 'assets' },
-      { from: 'images', to: 'images' }
-    ]),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'Portal Network',
       filename: 'index.html',
       template: 'template/template.html'
     }),
+    new CopyWebpackPlugin(
+      [
+        {
+          from: 'assets', to: 'assets'
+        }, 
+        {
+          from: 'images', to: 'images'
+        }, 
+      ]
+    ),
     new webpack.LoaderOptionsPlugin({
       vue: {
         postcss: [require('autoprefixer')({

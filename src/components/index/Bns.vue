@@ -2,10 +2,6 @@
   let t1 = new TimelineLite();
   let t2 = new TimelineLite();
   let t3 = new TimelineLite();
-
-  let a = {}
-  let b = {}
-  let c = {}
   export default {
     computed: {
     },
@@ -61,36 +57,17 @@
         let percent3 = (scrollTop - this.GetOffset(document.querySelector(".bns")).top) / (docH3 - windowHeight);
         if(percent3 < 0) percent3 = 0;
         if(percent3 > 1) percent3 = 1;
-        // c.percent = percent3;
-
-        TweenMax.to(a, 1, {percent: percent,
-            ease: Sine.easeOut,
-            onUpdate: ()=> {
-              t1.progress(1 - a.percent);
-            }
-        })
-        TweenMax.to(b, 1, {percent: percent2,
-            ease: Sine.easeOut,
-            onUpdate: ()=> {
-              t2.progress(1 - b.percent);
-            }
-        })
-        TweenMax.to(c, 1, {percent: percent3,
-            ease: Sine.easeOut,
-            onUpdate: ()=> {
-              t3.progress(1 - c.percent);
-            }
-        })
+        
+        t1.progress(1 - percent);
+        t2.progress(1 - percent2);
+        t3.progress(1 - percent3);
 
       }
     },
     mounted(){
-      t1.to(this.$refs.parallax_a, 5, {top:730});
-
-      t2.to(this.$refs.parallax_b, 3, {top:910});
-
-      t3.to(this.$refs.parallax_c, 1, {top:1090});
-
+      t1.to(this.$refs.parallax_a, 5, {top:730, ease: Sine.easeOut});
+      t2.to(this.$refs.parallax_b, 5, {top:910, ease: Sine.easeOut});
+      t3.to(this.$refs.parallax_c, 5, {top:1090, ease: Sine.easeOut});
 
       t1.pause();
       t2.pause();
