@@ -1,17 +1,8 @@
+
 {
-  "presets": [
-    "stage-2",
-    [
-      "env", {
-        "targets": {
-        "browsers": ["> 1%", "last 5 versions", "Firefox >= 45", "iOS >=8", "Safari >=8","ie >= 10"]
-        }
-      }
-    ]
-  ],
+  "presets": ["env","stage-2"],
   "plugins": [
-    [
-      "transform-runtime", { "polyfill": false,  "regenerator": true }
-    ]
+    "babel-plugin-transform-class-properties",
+    "transform-async-to-generator"
   ]
 }
