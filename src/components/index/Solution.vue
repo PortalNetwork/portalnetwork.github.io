@@ -127,7 +127,9 @@
           </div>
           <div class="left">
             <h5 data-aos="fade-right" data-aos-duration="700">Technical Users Adoption</h5>
-            <p data-aos="fade-right" data-aos-duration="1000">KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, participation of hackathons, CLI, frameworks, and monitoring systems.</p>
+            <p data-aos="fade-right" data-aos-duration="1000">
+              KAIZEN empowers users to learn, build, deploy, and manage decentralized applications or decentralized web services with their native languages, the participation of hackathons, CLI, frameworks, and monitoring systems.
+            </p>
           </div>
         </div>
         <div class="item_box">

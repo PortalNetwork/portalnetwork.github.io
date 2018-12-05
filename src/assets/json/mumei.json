@@ -4,28 +4,28 @@
     "url": "https://market.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu01.svg",
-    "description": "A platform that allows any users to sell, buy, bid and manage domain names of protocols supported by Portal Network. Users can search and retrieve the status of all BNS domains and control the domains they own."
+    "description": "A platform which allows any users to sell, buy, bid and manage domain names of Portal Network's supported protocols. Users can search and retrieve the status of all BNS domains and control the domains they own."
   },
   {
     "itemName": "Domain Manager",
     "url": "https://manager.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu02.svg",
-    "description": "Users can easily manage their domains with the built-in tools. For instance, users can view domains they have purchased, bind their domain names to different addresses, and update their existing domains to address mappings as they wish."
+    "description": "Users can effortlessly manage their domains with built-in tools. For instance, users can view domains they have purchased, bind their domain names to different addresses, and update their existing domains to address mappings as they wish."
   },
   {
     "itemName": "Web Builder",
     "url": "https://web.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu03.svg",
-    "description": "A tool for non-technical users to build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS."
+    "description": "It's a tool for non-technical users to build decentralized websites using point and click actions. Users can easily publish their decentralized websites on IPFS with their chosen BNS."
   },
   {
     "itemName": "Browser Extension",
     "url": "https://extension.portal.network/index.html",
     "subItems": [],
     "logo": "assets/images/solution/mu04.svg",
-    "description": "The Portal Network browser extensions transforms regular browsers into BNS-compatible browsers. If users have the extension installed, BNS domains will be automatically resolved and will direct users to the appropriate ÐWeb site. For example, a user may type in “portalnetwork.eth”, and they will be redirected automatically to an IPFS-hosted page, as if they were accessing a standard web page."
+    "description": "The Portal Network browser extension transforms regular browsers into BNS-compatible browsers. If users have the extension installed, BNS domains will be automatically resolved and will direct users to the appropriate ÐWeb site. For example, a user may type in “portalnetwork.eth”, and they will be redirected automatically to an IPFS-hosted page as if they were accessing a standard web page."
   },
   {
     "itemName": "Showcase",
@@ -37,20 +37,7 @@
   {
     "itemName": "BNS Explorer",
     "url": "https://explorer.portal.network",
-    "subItems": [
-      {
-        "name": "ENS",
-        "subUrl": "https://ens.portal.network"
-      },
-      {
-        "name": "ECNS",
-        "subUrl": "https://ecns.portal.network"
-      },
-      {
-        "name": "WNS",
-        "subUrl": "http://wns.portal.network"
-      }
-    ],
+    "subItems": [],
     "logo": "assets/images/solution/mu06.svg",
     "description": "A website where users can easily retrieve information about different BNS. Information includes data points such as the ownership of the BNS, resolver contract, registrar details, bidding price, the ÐWeb hash, and transaction records."
   },
@@ -71,6 +58,6 @@
     "url": "https://eth.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu08.svg",
-    "description": "Mobile applications that allow users to manage their BNS on the go."
+    "description": "Mobile applications allow users to manage their BNS on the go."
   }
 ]

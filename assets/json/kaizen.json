@@ -4,7 +4,7 @@
     "url": "https://kaizen.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka01.svg",
-    "description": "A user friendly interface that allows easy deployment, monitoring, and scaling of decentralized applications. It is the backbone system that manages and resolves integration and compatibility details among desired services."
+    "description": "A user-friendly interface which allows for easy deployment, monitoring, and scaling of decentralized applications. It is the backbone system that manages and resolves integration and compatibility details among desired services."
   },
   {
     "itemName": "CLI",
@@ -14,7 +14,7 @@
     "description": "The developer interface for cross-chain integration and service management between various technologies, such as Ethereum, IPFS, and SwarmDB. Users can create automated code testing, customize library integration, and optionally create ‘hybrid’ applications which utilize both centralized and decentralized services."
   },
   {
-    "itemName": "Multi-chain Infrastructure",
+    "itemName": "Universal Infrastructure",
     "url": "https://developer.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka03.svg",
@@ -39,13 +39,13 @@
     "url": "https://faucet.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka06.svg",
-    "description": "A pool of testnet tokens of various blockchain protocols for developers to use for test smart contracts and interact with different chains."
+    "description": "A pool of various blockchain protocols' testnet tokens, enables developers to use for test smart contracts and interact with different chains."
   },
   {
     "itemName": "Hackathon",
     "url": "https://hackathon.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/ka07.svg",
-    "description": "Gloabl Hackathon that connects blockchain projects, local communities and developers together to hack real problems via tools provided by KAIZEN."
+    "description": "Global Hackathon that connects blockchain projects, local communities, and developers, together to hack real problems via tools provided by KAIZEN."
   }
 ]
