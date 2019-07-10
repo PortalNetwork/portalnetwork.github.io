@@ -1019,5 +1019,90 @@
         ]
       }
     ]
+  },
+  {
+    "title": "TRON (TNS)",
+    "icon": "assets/images/chain/chain_tron.png",
+    "iconh": "assets/images/chain/chain_tron_h.png",
+    "description": "Tron is a blockchain platform launched as the foundation for a decentralized entertainment ecosystem.",
+    "detail": [
+      {
+        "name": ".trx",
+        "description": ".trx is the top level domain of TRON",
+        "percentage": null,
+        "linkItem": [
+          {
+            "imgStyle": "link",
+            "link": "https://tron.portal.network"
+          }
+        ]
+      },
+      {
+        "name": "TRON",
+        "description": "TRON Name Service",
+        "percentage": 10,
+        "linkItem": [
+          {
+            "imgStyle": "github",
+            "link": "https://github.com/PortalNetwork/trxns"
+          }
+        ]
+      },
+      {
+        "name": "Marketplace",
+        "description": "Buy/sell/bid domain name easily",
+        "percentage": 10,
+        "linkItem": [
+          {
+            "imgStyle": "link",
+            "link": "https://market.portal.network"
+          }
+        ]
+      },
+      {
+        "name": "Web Builder",
+        "description": "Easily deploy your ÐWeb on blockchain",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "imgStyle": "link",
+            "link": "https://web.portal.network"
+          }
+        ]
+      },
+      {
+        "name": "Browser Extension",
+        "description": "Turn your browser into ÐWeb browser",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "imgStyle": "link",
+            "link": "https://extension.portal.network/index.html"
+          }
+        ]
+      },
+      {
+        "name": "Explorer",
+        "description": "BWHOIS for blockchain name service",
+        "percentage": 10,
+        "linkItem": [
+          {
+            "imgStyle": "",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "name": "Mobile App",
+        "description": "BNS wallet & domain manager on the go",
+        "percentage": 0,
+        "linkItem": [
+          {
+            "imgStyle": "",
+            "link": ""
+          }
+        ]
+      }
+    ]
   }
 ]
