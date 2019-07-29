@@ -97,9 +97,6 @@ export default {
           <li>
             <a @click="gaSeedPageView('hackathon')" href="https://hackathon.portal.network/" target="_blank">Hackathon</a>
           </li>
-          <li>
-            <a @click="gaSeedPageView('forum')" href="https://forum.portal.network/" target="_blank">Forum</a>
-          </li>
         </ul>
       </nav>
     </div>

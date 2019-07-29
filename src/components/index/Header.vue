@@ -33,7 +33,6 @@ export default {
 			<div class="right">
 				<ul class="menu">
 					<li @click="removeClass"><router-link to="/documentation">Documentation</router-link></li>
-					<li><a href="https://forum.portal.network" target="_blank">Forum</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('bns')">What is BNS</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('solution')">Solution</a></li>
 					<li><a class="article" href="javascript:;" target="_blank" @click="scrollTo('roadmap')">Roadmap</a></li>
