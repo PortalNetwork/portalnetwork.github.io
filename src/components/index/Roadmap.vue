@@ -53,7 +53,7 @@ export default {
     <span id="roadmap" class="anchor"></span>
     <div class="content">
       <h3>Roadmap</h3>
-      <div class="swiper">
+      <!--<div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(roadmap,idx) in roadmaps" :key="idx">
             <div class="roadmap_date">
@@ -65,10 +65,17 @@ export default {
             </ul>
           </div>
         </div>
-      </div>
-      <div class="button_box">
+      </div>-->
+      <!--<div class="button_box">
         <div class="roadmapPrev"></div>
         <div class="roadmapNext"></div>
+      </div>-->
+      <div class="content-info">
+        <p>Designed by you, For you.</p>
+        <p>Join in to co-create Portal Network with any suggestions and comments.</p>
+        <div class="btn">
+          <a href="http://bit.ly/2s55q4z" target="_blank">View Roadmap</a>
+        </div>
       </div>
     </div>
     <div class="paper">
@@ -132,6 +139,68 @@ export default {
   }
   @media screen and (max-width: $mob) {
     padding: 0px 0px 42px 0px;
+  }
+  >div {
+    text-align: center;
+    >p {
+      width: 100%;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      padding-bottom: 10px;
+      @media screen and (max-width: $pad) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: $mob) {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: 0px auto 24px auto;
+      }
+    }
+    .btn {
+      text-align: center;
+      width: 100%;
+      margin-top: 28px;
+      margin-bottom: 54px;
+      @media screen and (max-width: $mob) {
+        margin-bottom: 45px;
+      }
+      a {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 30px;
+        padding: 0px 22px;
+        color: #fff;
+        background-color: $blue_d1;
+        transition: all 0.5s;
+        @media screen and (max-width: $mob) {
+          background-color: $green;
+          color: $blue;
+          font-size: 14px;
+          height: 44px;
+          line-height: 44px;
+          border-radius: 22px;
+        }
+        &:before {
+          display: inline-block;
+          vertical-align: middle;
+          width: 28px;
+          height: 28px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+          transition: background-image 0.5s;
+        }
+        &:hover {
+          background-color: #fff;
+          color: $blue;
+        }
+      }
+    }
   }
 }
 h3 {
