@@ -78,13 +78,13 @@ export default {
         </div>
       </div>
     </div>
-    <div class="paper">
+    <!--<div class="paper">
       <p>White Paper Request Form.</p>
       <div class="read_box">
         <a class="btn" href="javascript:;" target="_blank" @click="coming"></a>
         <p>Read Our White Paper</p>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
