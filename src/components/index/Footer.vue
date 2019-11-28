@@ -21,7 +21,7 @@
         <div class="map_item">
           <h4>Help Center</h4>
           <ul>
-            <li><a href="javascript:;">FAQ</a></li>
+            <li><a href="https://docs.portal.network/" target="_blank">FAQ</a></li>
             <li><a href="mailto:support@portal.network" target="_blank">Contact us</a></li>
           </ul>
         </div>
@@ -49,7 +49,7 @@
           <li><router-link to="/privacy">Privacy & Policy</router-link></li>
           <li><router-link to="/terms">Terms of use</router-link></li>
         </ul>
-        <p>© 2018 Portal.Network</p>
+        <p>© 2019 Portal.Network</p>
       </div>
       <div class="select" v-if="false">
         <select>
