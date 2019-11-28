@@ -32,7 +32,7 @@ export default {
 		<nav v-if="isMenuOpen">
 			<div class="right">
 				<ul class="menu">
-					<li @click="removeClass"><router-link to="https://docs.portal.network/">Documentation</router-link></li>
+					<li @click="removeClass"><a href="https://docs.portal.network/" target="_blank">Documentation</a></li>
 					<li><a class="article" href="javascript:;" @click="scrollTo('bns')">What is BNS</a></li>
 					<li><a class="article" href="javascript:;" @click="scrollTo('solution')">Solution</a></li>
 					<li><a class="article" href="http://bit.ly/2s55q4z" target="_blank">Roadmap</a></li>
