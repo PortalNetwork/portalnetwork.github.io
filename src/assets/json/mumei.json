@@ -1,7 +1,7 @@
 [
   {
     "itemName": "Marketplace",
-    "url": "https://market.portal.network",
+    "url": "https://domain.portal.network",
     "subItems": [],
     "logo": "assets/images/solution/mu01.svg",
     "description": "A platform which allows any users to sell, buy, bid and manage domain names of Portal Network's supported protocols. Users can search and retrieve the status of all BNS domains and control the domains they own."
