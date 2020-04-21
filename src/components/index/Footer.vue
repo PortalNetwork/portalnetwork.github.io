@@ -40,6 +40,7 @@
           <button type="submit" id="mc-embedded-subscribe learn" name="subscribe">Subscribe</button>
         </div>
         <p>Subscribe and get our latest updates.</p>
+        <a href="https://www.producthunt.com/posts/kaizen-cli?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-kaizen-cli" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=194141&theme=light" alt="KAIZEN-CLI - All-in-one decentralized solution platform | Product Hunt Embed" style="width: 250px; height: 54px; margin-top:16px;" width="250px" height="54px" /></a>
       </form>
     </div>
     <Media></Media>
