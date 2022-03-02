@@ -50,7 +50,7 @@
           <li><router-link to="/privacy">Privacy & Policy</router-link></li>
           <li><router-link to="/terms">Terms of use</router-link></li>
         </ul>
-        <p>© 2019 Portal.Network</p>
+        <p>© 2022 Portal.Network</p>
       </div>
       <div class="select" v-if="false">
         <select>

@@ -41,9 +41,9 @@ export default {
       <div class="left">
 				<h1><img src="../../images/logo.png" alt=""/></h1>
 				<div>
-					<div class="btn">
+					<!-- <div class="btn">
 						<a href="https://t.me/portalnetworkofficial" target="_blank">Join Us On Telegram</a>
-					</div>
+					</div> -->
 					<ul class="social_media">
 						<li><a class="twitter" href="https://twitter.com/itisportal" target="_blank"></a></li>
 						<li><a class="github" href="https://github.com/portalnetwork" target="_blank"></a></li>
@@ -57,10 +57,10 @@ export default {
     <div class="content">
       <h1><img src="../../images/logo.png" alt=""/></h1>
       <div>
-        <a class="telegram" href="https://t.me/portalnetworkofficial" target="_blank">
+        <!-- <a class="telegram" href="https://t.me/portalnetworkofficial" target="_blank">
           <span></span>
           <p>Join Us On Telegram</p>
-        </a>
+        </a> -->
         <a :class="{menu_btn: true,active: isMenuOpen}" href="javascript:;" @click="toggleMenu">
           <span></span>
         </a>
