@@ -42,7 +42,7 @@
     "imagemin-gifsicle": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
     "imagemin-pngquant": "^6.0.0",
-    "loader-utils": "^1.1.0",
+    "loader-utils": "^1.4.2",
     "node-sass": "^4.9.2",
     "npm": "^6.2.0",
     "npm-run-all": "^4.1.3",
